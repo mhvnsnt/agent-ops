@@ -1,0 +1,162 @@
+#!/usr/bin/env python3
+"""Supervisor: scan agent checkpoints, flag stale/dead work, print a re-spawn report.
+
+Usage:
+  supervisor [--stale-minutes N] [--json] [--checkpoints DIR]
+
+Verdicts per checkpoint:
+  alive   - status=running and heartbeat fresh
+  STALE   - status=running but heartbeat older than --stale-minutes (likely dead)
+  paused  - status=paused (re-spawn when ready, no alarm)
+  done    - terminal, no action
+  failed  - terminal, needs human review (not auto re-spawn)
+
+The re-spawn report prints a filled resume brief for every STALE task so the
+parent agent can re-dispatch with one copy/paste. See RESUME_BRIEF_TEMPLATE.md.
+"""
+import argparse
+import datetime
+import json
+import os
+import sys
+
+DEFAULT_DIR = os.path.expanduser("~/workspace/agent-ops/checkpoints")
+DEFAULT_STALE_MIN = 45
+
+
+def parse_iso(s):
+    try:
+        return datetime.datetime.strptime(s, "%Y-%m-%dT%H:%M:%SZ").replace(
+            tzinfo=datetime.timezone.utc)
+    except (TypeError, ValueError):
+        return None
+
+
+def age_str(dt):
+    if dt is None:
+        return "unknown"
+    mins = int((datetime.datetime.now(datetime.timezone.utc) - dt).total_seconds() // 60)
+    if mins < 1:
+        return "just now"
+    if mins < 60:
+        return f"{mins}m ago"
+    return f"{mins // 60}h{mins % 60:02d}m ago"
+
+
+def load_all(d):
+    out = []
+    if not os.path.isdir(d):
+        return out
+    for fn in sorted(os.listdir(d)):
+        if not fn.endswith(".json") or fn.startswith("_"):
+            continue
+        try:
+            with open(os.path.join(d, fn), encoding="utf-8") as f:
+                out.append(json.load(f))
+        except (OSError, json.JSONDecodeError) as e:
+            out.append({"task_id": fn, "_corrupt": str(e)})
+    return out
+
+
+def verdict(d, stale_min):
+    if d.get("_corrupt"):
+        return "CORRUPT"
+    status = d.get("status", "?")
+    if status in ("done", "failed"):
+        return status.upper()
+    if status == "paused":
+        return "paused"
+    hb = parse_iso(d.get("heartbeat_at"))
+    if hb is None:
+        return "STALE (no heartbeat)"
+    age_min = (datetime.datetime.now(datetime.timezone.utc) - hb).total_seconds() / 60
+    if age_min > stale_min:
+        return "STALE"
+    return "alive"
+
+
+def resume_brief(d):
+    lines = [
+        f"Task: {d.get('label', d.get('task_id'))}  (checkpoint: {d.get('task_id')})",
+        f"Workdir: {d.get('workdir') or '(none)'}",
+    ]
+    if d.get("repo"):
+        lines.append(f"Repo: {d['repo']}" + (f"  branch: {d['branch']}" if d.get("branch") else ""))
+    if d.get("done"):
+        lines.append("Already done:")
+        lines += [f"  - {x}" for x in d["done"]]
+    if d.get("next"):
+        lines.append("Next steps:")
+        lines += [f"  - {x}" for x in d["next"]]
+    if d.get("key_files"):
+        lines.append("Key files:")
+        lines += [f"  - {x}" for x in d["key_files"]]
+    if d.get("decisions"):
+        lines.append("Decisions (do not re-litigate):")
+        for dec in d["decisions"]:
+            w = f" — {dec['why']}" if dec.get("why") else ""
+            lines.append(f"  - {dec.get('decision')}{w}")
+    if d.get("blockers"):
+        lines.append("Known blockers:")
+        lines += [f"  - {x}" for x in d["blockers"]]
+    if d.get("resume_hint"):
+        lines.append(f"Resume hint: {d['resume_hint']}")
+    lines.append("FIRST ACTION: run `ckpt show {tid}` (or read the JSON directly) and continue "
+                 "from 'Next steps'. Do NOT redo items under 'Already done'.".format(tid=d.get("task_id")))
+    return "\n".join(lines)
+
+
+def main():
+    ap = argparse.ArgumentParser(description="Agent checkpoint supervisor")
+    ap.add_argument("--stale-minutes", type=int, default=DEFAULT_STALE_MIN)
+    ap.add_argument("--json", action="store_true")
+    ap.add_argument("--checkpoints", default=DEFAULT_DIR)
+    a = ap.parse_args()
+
+    items = load_all(a.checkpoints)
+    rows = []
+    for d in items:
+        v = verdict(d, a.stale_minutes)
+        hb = parse_iso(d.get("heartbeat_at")) if not d.get("_corrupt") else None
+        rows.append({"task_id": d.get("task_id"), "label": d.get("label", ""),
+                     "status": d.get("status", "?"), "heartbeat_age": age_str(hb),
+                     "verdict": v, "_d": d})
+
+    if a.json:
+        print(json.dumps([{k: r[k] for k in ("task_id", "label", "status",
+                                             "heartbeat_age", "verdict")} for r in rows], indent=2))
+        return
+
+    print(f"Checkpoint supervisor — {len(rows)} task(s), stale threshold {a.stale_minutes}m")
+    print("=" * 78)
+    if not rows:
+        print("(no checkpoints found)")
+        return
+    for r in rows:
+        mark = "!!" if r["verdict"].startswith("STALE") else "  "
+        print(f"{mark} [{r['verdict']:16s}] {r['task_id']}")
+        print(f"      {r['label']}  (status={r['status']}, heartbeat {r['heartbeat_age']})")
+
+    stale = [r for r in rows if r["verdict"].startswith("STALE")]
+    failed = [r for r in rows if r["verdict"] == "FAILED"]
+    if stale:
+        print()
+        print("=" * 78)
+        print(f"RE-SPAWN REPORT — {len(stale)} stale task(s). Suggested resume briefs:")
+        print("=" * 78)
+        for r in stale:
+            print()
+            print("-" * 78)
+            print(resume_brief(r["_d"]))
+    if failed:
+        print()
+        print(f"NOTE: {len(failed)} task(s) ended FAILED — review before re-spawning:")
+        for r in failed:
+            print(f"  - {r['task_id']}: {r['label']}")
+    if not stale and not failed:
+        print()
+        print("All clear — nothing needs re-spawning.")
+
+
+if __name__ == "__main__":
+    main()

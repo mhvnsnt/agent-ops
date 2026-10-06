@@ -1,0 +1,1 @@
+{"completed":["voice-bibles.ts","generator.ts (core banks + seeded generator)"],"current_step":"write samples.ts (hand-written showcase pack)","notes":"Generator bug fixed ({opponent] typo). Next: samples, director wiring, index, docs, then test + commit."}

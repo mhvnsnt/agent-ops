@@ -1,0 +1,48 @@
+{
+  "task_id": "resilience",
+  "agent_id": null,
+  "repo": null,
+  "branch": "main",
+  "goal": "Build restart-resilience system: checkpoint protocol, resume brief template, supervisor, idempotency rules",
+  "status": "running",
+  "spawned_at": "2026-10-06T10:13:31Z",
+  "last_heartbeat": "2026-10-06T10:19:10Z",
+  "steps_completed": [
+    {
+      "at": "2026-10-06T10:13:31Z",
+      "step": "assessed previous worker's files: checkpoint.sh, supervisor.sh, ckpt, supervisor, IDEMPOTENCY.md, RESUME_BRIEF_TEMPLATE.md all present; identified gaps"
+    },
+    {
+      "at": "2026-10-06T10:18:25Z",
+      "step": "tested both toolsets; chose checkpoint.sh/supervisor.sh as canonical"
+    },
+    {
+      "at": "2026-10-06T10:18:25Z",
+      "step": "added block/unblock commands + blockers field to checkpoint.sh"
+    },
+    {
+      "at": "2026-10-06T10:18:25Z",
+      "step": "hardened checkpoint.sh list and supervisor.sh against mixed/ad-hoc checkpoint schemas; verified end-to-end"
+    },
+    {
+      "at": "2026-10-06T10:18:37Z",
+      "step": "moved duplicate python tools to attic/ as deprecated; checkpoint.sh/supervisor.sh are canonical"
+    },
+    {
+      "at": "2026-10-06T10:19:10Z",
+      "step": "wrote CHECKPOINT_PROTOCOL.md and README.md operator guide"
+    }
+  ],
+  "next_steps": [
+    "test both checkpoint toolsets",
+    "consolidate to one canonical tool and schema",
+    "write CHECKPOINT_PROTOCOL.md",
+    "write README.md operator guide",
+    "fix exec bits, final verification, report",
+    "move duplicate python tools to attic/ as deprecated"
+  ],
+  "key_paths": [],
+  "decisions": [],
+  "resume_prompt": "Continue building the agent-ops restart-resilience system. Read checkpoints/resilience.json first, then RESUME_BRIEF_TEMPLATE.md.",
+  "blockers": []
+}

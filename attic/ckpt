@@ -1,0 +1,218 @@
+#!/usr/bin/env python3
+"""Checkpoint helper for agent restart-resilience.
+
+Usage:
+  ckpt init <task_id> --label "..." [--workdir DIR] [--repo REPO] [--branch BR]
+  ckpt heartbeat <task_id>                 # refresh heartbeat (call every ~10 min)
+  ckpt status <task_id> <running|paused|done|failed>
+  ckpt add <task_id> <done|next|key_files|blockers> "<item>"
+  ckpt decide <task_id> "<decision>" [--why "..."]
+  ckpt set <task_id> <field> <value>        # scalar fields: label, workdir, repo,
+                                           #   branch, resume_hint (JSON-parsed if possible)
+  ckpt show <task_id>
+  ckpt list [--json]
+
+See CHECKPOINT_PROTOCOL.md for the full contract.
+"""
+import argparse
+import datetime
+import json
+import os
+import sys
+
+ROOT = os.path.expanduser("~/workspace/agent-ops/checkpoints")
+LIST_FIELDS = ("done", "next", "key_files", "blockers")
+STATUSES = ("running", "paused", "done", "failed")
+
+
+def now_iso():
+    return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def path_for(task_id):
+    safe = "".join(c if (c.isalnum() or c in "-_.") else "_" for c in task_id).strip("._")
+    if not safe:
+        sys.exit("error: task_id produced an empty filename")
+    return os.path.join(ROOT, safe + ".json")
+
+
+def load(task_id):
+    p = path_for(task_id)
+    if not os.path.exists(p):
+        sys.exit(f"error: no checkpoint for task '{task_id}'")
+    with open(p, encoding="utf-8") as f:
+        return json.load(f), p
+
+
+def save(data, p):
+    tmp = p + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+        f.write("\n")
+    os.replace(tmp, p)  # atomic: readers never see a half-written file
+
+
+def blank(task_id, label, workdir, repo, branch):
+    t = now_iso()
+    return {
+        "task_id": task_id,
+        "label": label,
+        "status": "running",
+        "agent_id": os.environ.get("HATCH_AGENT_ID", ""),
+        "started_at": t,
+        "updated_at": t,
+        "heartbeat_at": t,
+        "workdir": workdir or "",
+        "repo": repo or "",
+        "branch": branch or "",
+        "done": [],
+        "next": [],
+        "key_files": [],
+        "decisions": [],   # list of {"decision": str, "why": str}
+        "blockers": [],
+        "resume_hint": "",
+    }
+
+
+def cmd_init(a):
+    p = path_for(a.task_id)
+    if os.path.exists(p):
+        sys.exit(f"error: checkpoint '{a.task_id}' already exists; use subcommands to update it")
+    os.makedirs(ROOT, exist_ok=True)
+    data = blank(a.task_id, a.label, a.workdir, a.repo, a.branch)
+    save(data, p)
+    print(f"checkpoint created: {p}")
+
+
+def cmd_heartbeat(a):
+    data, p = load(a.task_id)
+    data["heartbeat_at"] = now_iso()
+    data["updated_at"] = data["heartbeat_at"]
+    if data.get("status") not in STATUSES:
+        data["status"] = "running"
+    save(data, p)
+    print(f"heartbeat: {a.task_id}")
+
+
+def cmd_status(a):
+    if a.status not in STATUSES:
+        sys.exit(f"error: status must be one of {STATUSES}")
+    data, p = load(a.task_id)
+    data["status"] = a.status
+    t = now_iso()
+    data["heartbeat_at"] = t
+    data["updated_at"] = t
+    save(data, p)
+    print(f"status: {a.task_id} -> {a.status}")
+
+
+def cmd_add(a):
+    if a.field not in LIST_FIELDS:
+        sys.exit(f"error: field must be one of {LIST_FIELDS}")
+    data, p = load(a.task_id)
+    if a.item not in data[a.field]:
+        data[a.field].append(a.item)
+    data["updated_at"] = now_iso()
+    save(data, p)
+    print(f"added to {a.field}: {a.item[:80]}")
+
+
+def cmd_decide(a):
+    data, p = load(a.task_id)
+    data["decisions"].append({"decision": a.decision, "why": a.why or ""})
+    data["updated_at"] = now_iso()
+    save(data, p)
+    print("decision recorded")
+
+
+def cmd_set(a):
+    data, p = load(a.task_id)
+    if a.field in LIST_FIELDS or a.field in ("done", "next", "key_files", "blockers",
+                                             "decisions", "task_id", "started_at"):
+        sys.exit(f"error: '{a.field}' is managed via add/decide or is immutable")
+    try:
+        value = json.loads(a.value)
+    except (json.JSONDecodeError, ValueError):
+        value = a.value
+    data[a.field] = value
+    data["updated_at"] = now_iso()
+    save(data, p)
+    print(f"set {a.field}")
+
+
+def cmd_show(a):
+    data, _ = load(a.task_id)
+    print(json.dumps(data, indent=2))
+
+
+def cmd_list(a):
+    out = []
+    if os.path.isdir(ROOT):
+        for fn in sorted(os.listdir(ROOT)):
+            if not fn.endswith(".json") or fn.startswith("_"):
+                continue
+            with open(os.path.join(ROOT, fn), encoding="utf-8") as f:
+                d = json.load(f)
+            out.append({
+                "task_id": d.get("task_id"),
+                "label": d.get("label"),
+                "status": d.get("status"),
+                "heartbeat_at": d.get("heartbeat_at"),
+            })
+    if a.json:
+        print(json.dumps(out, indent=2))
+    else:
+        if not out:
+            print("(no checkpoints)")
+            return
+        for e in out:
+            print(f"{e['task_id']:36s} {e['status']:8s} heartbeat {e['heartbeat_at']}  {e['label']}")
+
+
+def main():
+    ap = argparse.ArgumentParser(prog="ckpt", description="Agent checkpoint helper")
+    sub = ap.add_subparsers(dest="cmd", required=True)
+
+    p = sub.add_parser("init")
+    p.add_argument("task_id")
+    p.add_argument("--label", required=True)
+    p.add_argument("--workdir", default="")
+    p.add_argument("--repo", default="")
+    p.add_argument("--branch", default="")
+
+    p = sub.add_parser("heartbeat")
+    p.add_argument("task_id")
+
+    p = sub.add_parser("status")
+    p.add_argument("task_id")
+    p.add_argument("status")
+
+    p = sub.add_parser("add")
+    p.add_argument("task_id")
+    p.add_argument("field")
+    p.add_argument("item")
+
+    p = sub.add_parser("decide")
+    p.add_argument("task_id")
+    p.add_argument("decision")
+    p.add_argument("--why", default="")
+
+    p = sub.add_parser("set")
+    p.add_argument("task_id")
+    p.add_argument("field")
+    p.add_argument("value")
+
+    p = sub.add_parser("show")
+    p.add_argument("task_id")
+
+    p = sub.add_parser("list")
+    p.add_argument("--json", action="store_true")
+
+    a = ap.parse_args()
+    {"init": cmd_init, "heartbeat": cmd_heartbeat, "status": cmd_status,
+     "add": cmd_add, "decide": cmd_decide, "set": cmd_set,
+     "show": cmd_show, "list": cmd_list}[a.cmd](a)
+
+
+if __name__ == "__main__":
+    main()

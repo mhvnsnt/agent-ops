@@ -1,0 +1,30 @@
+{
+  "task_id": "demo-task",
+  "agent_id": null,
+  "repo": "mhvnsnt/AshLanev2",
+  "branch": "main",
+  "goal": "demo: verify checkpoint tooling",
+  "status": "running",
+  "spawned_at": "2026-10-06T09:59:33Z",
+  "last_heartbeat": "2026-10-06T10:15:07Z",
+  "steps_completed": [
+    {
+      "at": "2026-10-06T09:59:34Z",
+      "step": "wrote checkpoint script"
+    }
+  ],
+  "next_steps": [
+    "write supervisor script"
+  ],
+  "key_paths": [
+    "~/workspace/agent-ops/checkpoint.sh"
+  ],
+  "decisions": [
+    {
+      "at": "2026-10-06T09:59:36Z",
+      "decision": "use python3 not jq for JSON"
+    }
+  ],
+  "resume_prompt": "Read the checkpoint, then continue.",
+  "blockers": []
+}
