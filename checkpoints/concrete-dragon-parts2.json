@@ -1,0 +1,10 @@
+{
+ "attempts": 0,
+ "repo": "~/workspace/street-brawl-cicd",
+ "resume_brief": "CONCRETE DRAGON \u2014 PART PACKS WAVE 2 (owner directive 2026-10-06). Hunt open-source packs (CC0 or permissive ONLY) for: (1) beast/animal-headed fighters (tiger/lion heads, lizard/reptile people, dinosaur anthropomorphs, wolf heads, bear bodies), (2) animal-head masks (wearable), (3) vampires/werewolves/zombies undead variety, (4) sports outfits (football pads/jerseys, boxing gloves/robes, baseball uniforms, basketball kits), (5) street civilian variety. Sources: Quaternius animal packs (CC0), KayKit animals (CC0), Kenney (CC0), OpenGameArt CC0. For EACH pack: verify license from source page (NO GPL/AGPL, NO Mixamo/Adobe-restricted), download, stage in ~/workspace/street-brawl-cicd/game/assets/staging/parts/<pack>/ with LICENSE note, log in staging log. Update docs/PART_ATTACH_SPEC.md with new packs. Binding: painted multi-piece textures (tint-multiply look law); IP rule \u2014 inspired-by archetypes only, NEVER copy named characters from existing franchises. Checkpoint-first, heartbeat after every pack, mark done at end, report pack list + licenses.",
+ "status": "done",
+ "task": "part packs wave 2",
+ "updated_at": "2026-10-06T23:17:28.809873+00:00",
+ "watchdog": true,
+ "notes": "DONE 2026-10-06. 4 new packs staged (all CC0, license-verified, LICENSE.md each): kenney-cube-pets (24 animated GLB animals: tiger/lion/polar/fox/dog/monkey \u2014 heads as animal masks); quaternius-animated-animals/wolf.glb (rigged animated wolf); quaternius-monsters (9 GLB: dino, dragon-evolved, yeti, zombie, demon, blue-demon, ghost, orc, ghost-skull); quaternius-humanoids (4 GLB: man/ninja/adventurer/king \u2014 civilians/crowd). Drive folders quota-blocked; pulled identical CC0 content via Poly Pizza mirrors. Spec updated: docs/PART_ATTACH_SPEC.md \u00a7\u00a73,7,8 (mask approach, sports via texture variants, IP rule). Log: staging/PULL_INS_LOG.md wave-2 section. Commit f876a07 pushed to origin/main. Gaps logged honestly: no CC0 3D sports-character pack exists; no CC0 wearable-mask pack exists."
+}

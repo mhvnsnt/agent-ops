@@ -1,0 +1,11 @@
+{
+  "attempts": 3,
+  "repo": "~/workspace/ConcreteDragon/game-3d",
+  "resume_brief": "Subagent building infinite character + customization system for Concrete Dragon 3D (~/workspace/ConcreteDragon/game-3d/src/main.js). Must: (1) modular visual parts attached to skeleton bones (slots: head/torso/arms/legs/boots/shoulders/back/accessory, built from Three.js primitives), (2) color zones (skin/primary/secondary/accent/metal) with locked per-fighter palettes, (3) seeded procedural infinite fighter generation with street-style name generator, (4) SCOUT unlock system (cash/milestones), (5) CUSTOMIZE UI in character select with part+color pickers on live 3D turntable. Owner direction: keep Lego-piece color-blocked aesthetic, colors stick to character identity+body area, parts = Gundam/mech/Street Fighter clothing variance. Style-not-power law: cosmetics never affect stats. Verify: node build.mjs succeeds, headless Chromium boot -> select -> customize -> mission -> combat with no JS errors, screenshots of select/customize/combat opened and confirmed, parts attached and following animation. Push to main, mark checkpoint done. If resuming mid-task: check git log for what landed, inspect main.js and the part system files, continue remaining build steps, then verify.",
+  "status": "done",
+  "task": "infinite character + customization system",
+  "updated_at": "2026-10-07T13:27:58.824089+00:00",
+  "watchdog": true,
+  "note": "Two workers died to daemon restarts before doing work (22:36Z, 22:40Z). No code landed. Watchdog should resume from resume_brief.",
+  "notes": "WATCHDOG 2026-10-07: verified repo state (git log shows waves/parts/A5 work landed by other workers; main.js 4000 lines; NO character-customization system code landed yet \u2014 task untouched). Resuming via dedicated worker subagent (checkpoint cd-characters-w1.json, own watchdog+heartbeat, incremental commits). Prior attempts=2 were daemon-restart kills before any work was done; this is the first substantive attempt. | 2026-10-07: parent completed \u2014 committed leftovers (f94f826), pushed acffce6..f94f826 to origin/main. Infinite character + customization system live. Stash (modular-gear/scout-recruit WIP) preserved for parent lane."
+}

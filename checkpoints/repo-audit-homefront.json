@@ -1,0 +1,10 @@
+{
+  "attempts": 0,
+  "repo": "/home/hatch",
+  "resume_brief": "Audit mhvnsnt GitHub repos: list via `gh repo list mhvnsnt --limit 50`, check each repo's README and grep file trees for case keywords (deed, quitclaim, Dooly, Vienna, court, evict, dispossessory, affidavit, mother, mama, house, land, property, title, lawyer) and assess money/portfolio value (working app code usable as proof for a paid 'AI app rescue' service). Update the checkpoint's updated_at at least every 10 min. Mark status done at the end.",
+  "status": "done",
+  "task": "audit mhvnsnt repos for homefront case+money material",
+  "updated_at": "2026-10-07T12:50:00-04:00",
+  "watchdog": true,
+  "progress": "complete: 55 repos swept; report delivered"
+}

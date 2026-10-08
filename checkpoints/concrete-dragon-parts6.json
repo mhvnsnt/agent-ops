@@ -1,0 +1,10 @@
+{
+ "task": "part packs wave 6 (universe models + animations)",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/street-brawl-cicd",
+ "resume_brief": "CONCRETE DRAGON / ASHLANE \u2014 PART PACKS WAVE 6: MORE UNIVERSE-FIT MODELS + ANIMATIONS (owner directive 2026-10-07). Hunt open-source packs (CC0 or CC-BY ONLY \u2014 verify license from source page; NO GPL/AGPL, NO Mixamo/Adobe-restricted, NO non-commercial).\n\nUNIVERSE = urban street brawler + wrestling + Halloween/monsters + sports + street culture. PRIORITIZE:\n1. STREET CULTURE: boomboxes, graffiti walls, lowriders, basketball hoops, chain-link fences, fire escapes, subway cars, food carts, street lamps.\n2. MORE FIGHTERS: humanoids with real animation clips (punches, kicks, grapples, taunts, dances, hit reactions, knockdowns).\n3. MORE CREATURES/MONSTERS fitting Halloween/seasonal roster.\n4. MORE WEAPONS: bats, chains, pipes, bottles, 2x4s.\n5. ANIMATION PACKS: CC0 fight-animation libraries. KayKit Character Animations (CC0, https://kaylousberg.itch.io/kaykit-character-animations) \u2014 free itch.io download is JS-driven; try itch.io page deep-dive or find clips inside KayKit-Character-Pack-Adventures-1.0 / Skeletons-1.0 GitHub repos. Also hunt other CC0 animation sources (NOT Mixamo).\n\nSOURCES: OpenGameArt, Sketchfab CC (list finds with URLs for browser pull \u2014 session signed in as MHVNSNT), Kenney, Quaternius, Poly Pizza, itch.io, GitHub CC0 repos.\n\nSTAGE in ~/workspace/street-brawl-cicd/game/assets/staging/parts/<pack>/ with per-pack LICENSE.md; update docs/PART_ATTACH_SPEC.md (\u00a713) + PULL_INS_LOG.md. Track counts per category.\n\nIP LAW: inspired-by archetypes only; in-game names original. Heartbeat after every pack (restarts frequent). Mark done at end; report pack list + licenses + gap log.",
+ "updated_at": "2026-10-07T05:12:44.234277+00:00",
+ "attempts": 0,
+ "notes": "2026-10-07: DONE \u2014 8 packs, 382 models staged. KayKit animation retrieval SOLVED via GitHub (itch.io JS-blocked). Docs: PART_ATTACH_SPEC.md \u00a713 + PULL_INS_LOG.md wave 6. Browser-pull candidates listed (boxing gloves, crowbar)."
+}

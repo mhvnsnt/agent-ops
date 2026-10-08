@@ -1,0 +1,27 @@
+{
+  "attempts": 0,
+  "lanes": [
+    "keyed_apis",
+    "keyless_apis",
+    "game_dev_oss",
+    "agent_tooling_oss",
+    "public_domain_assets",
+    "money_path_apis"
+  ],
+  "repo": "~/workspace",
+  "resume_brief": "You are the thousands-scale acquisition coordinator. Resume: check ~/workspace/api-catalog/raw/v2_lane*_*.md for completed lane files not yet merged into ~/workspace/API_CATALOG.md; merge completed lanes as new '## Tranche 2' sections (append-only, never rewrite existing content); re-spawn any missing lane workers with the original lane briefs; update this checkpoint; deliver final report to parent.",
+  "status": "done",
+  "task": "Thousands-scale free-resource acquisition: 6 discovery lanes -> 1000+ catalog entries, feeds for harvester/wiring/integration workers",
+  "updated_at": "2026-10-06T15:45:00-05:00",
+  "watchdog": true,
+  "lanes_done": [
+    "public_domain_assets (159, merged)",
+    "money_path_apis (164, merged)",
+    "game_dev_oss (154, merged)",
+    "agent_tooling_oss (160, merged)",
+    "keyed_apis (154, merged)",
+    "keyless_apis (125, merged \u2014 coordinator-written after 2 worker deaths)"
+  ],
+  "lanes_running": [],
+  "catalog_entries_total": 1075
+}

@@ -1,0 +1,9 @@
+{
+  "attempts": 9,
+  "repo": "~/workspace/forge3d",
+  "resume_brief": "Subagent resuming AshLane grunt/goon/minion batch generation: workdir ~/workspace/forge3d (mhvnsnt/Forge3D). Read docs/CAST_INTAKE.md FIRST for faction context \u2014 grounded street-brawler world (Urban Reign/Def Jam), NOT cyberpunk. Owner accepted trellis hooded fighter + muscular brawler as FACTIONLESS LOW-LEVELS (do NOT regenerate them). Define 6-8 grunt archetypes (factionless street thug, corner hustler, bouncer-type + faction-oriented enforcers per actual factions in intake doc), distinct silhouettes. Generate concept images via keyless text\u2192image stage; 3D free-first: keyless HF Spaces (TripoSplat flagged in docs/RESOURCE_CATALOG.md), local TripoSR/SF3D fallback; pollen budget ~0.54 Quest Pollen (source ~/.config/forge3d/api_keys.env, NEVER print/log/commit; trellis-2-high=0.35/gen \u2014 spend on at most 1-2 best concepts, NEVER exceed, NEVER touch Paid Pollen). 4-angle white-void previews full framing (forge3d/tools/render_preview.py), commit GLBs+PNGs+stats under docs/stage-evidence/grunt-batch/, measure each (pipelines/measure.py), note backbone. Heartbeat \u226410 min, git pull --rebase before push (siblings active), mark done at end. DELIVERABLE VERIFICATION LAW: read every preview, proof per grunt, no fakes, errors loud.",
+  "status": "done",
+  "task": "AshLane grunt batch generation",
+  "updated_at": "2026-10-07T06:53:31Z",
+  "watchdog": true
+}

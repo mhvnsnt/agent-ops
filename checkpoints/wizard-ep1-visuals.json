@@ -1,0 +1,10 @@
+{
+  "attempts": 4,
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "You are the VISUALS worker for WIZARD GANG Episode 1 ('THE SUMMIT'). Resume state: read ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/STORYBOARD.md (scenes S10-S29, GAP list, asset map), ~/workspace/trippedd-studio/docs/series/WIZARD-GANG.md (canon guards), ~/workspace/trippedd-studio/assets/wizard-gang-style-refs/README.md. Remaining work: (1) Generate 5 GAP stills via media.generate_image using owner images in assets/wizard-gang-style-refs/cartoonier/ as style anchors (GAP-1: two cartoonier summit angles; GAP-2: 9-wizard group cartoon WITH orange Hollow; GAP-3: Kiko alone at foggy pier; GAP-4: Sombra holding carnival plushie variant; GAP-5: 'WIZARD GANG / EP. 1 / TRIPPEDD' title cards in locked wavy trippy treatment). (2) Animate shot videos via media.generate_video (image-animation) for scenes S10-S29 per storyboard asset map; cold open 0:00-0:50 reuses existing pilot \u2014 do NOT regenerate. STYLE LAW: cartoonier base, night palettes, black-void faces with colored eye glints, gold chains, name pendants; robe colors LOCKED (Ashes scarlet, Onyx green, Theory purple, Cipher yellow, Echo pink, Static deep blue, Hollow orange, Sombra black/purple-trim, Kiko white fur); Ashes KEEPS diamond-grill grin; all other faces eye-glints only. CANON GUARDS: never 'Shadow Wizard Money Gang' as text; Narrator voice-only, no purple figure; no invented characters/names. Output to production/WIZARD_GANG_EP01/stills/ (+manifest) and production/WIZARD_GANG_EP01/shots/. QC every visual with your own eyes (read images/sample video frames) before counting it done. Commit incrementally to trippedd-studio, push at end. Update updated_at after every step; mark status done at end.",
+  "status": "done",
+  "task": "Wizard Gang Ep1 visuals",
+  "updated_at": "2026-10-07T05:54:43.117371-04:00",
+  "watchdog": true,
+  "result": "27 shots + 6 GAP stills committed and pushed; GAP-1a/GAP-3 unfilled-flagged"
+}

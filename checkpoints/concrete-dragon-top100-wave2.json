@@ -1,0 +1,41 @@
+{
+  "attempts": 0,
+  "repo": "none-staging-only",
+  "resume_brief": "TOP-100 HEART-AND-SOUL RESEARCH \u2014 WAVE 2 (owner directive 2026-10-06). For EACH of 10 games (PUBG Mobile, Candy Crush Saga, Clash of Clans, Pokemon GO, Call of Duty: Mobile, Clash Royale, Coin Master, Royal Match, Honkai: Star Rail, Subway Surfers): find what devs/staff SAY keeps players coming back, playing, paying, supporting \u2014 via browser.search text queries (e.g. '<game> producer interview design philosophy players love') and browser.open fetch of returned links (developer interviews, GDC talks/postmortems, studio blogs, reputable games-press interviews). NO live browser. OUTPUT: write /home/hatch/workspace/agent-ops/top100-staging/wave-2/<slug>.md per game (slugs: pubg-mobile, candy-crush-saga, clash-of-clans, pokemon-go, call-of-duty-mobile, clash-royale, coin-master, royal-match, honkai-star-rail, subway-surfers) with EXACT structure: '# <Game> \u2014 Heart and Soul' + bullets: Developer/studio; Genre/platforms; Why players come back (in the devs' view); Key quotes (2-4, format: 'quote' \u2014 Name, Role, Publication/Event, Year; append [unverified] if from search snippet not fetched page); Why players love/support it; Monetization philosophy (devs' words, if any); Lesson for our games (1-2 lines, concrete); Sources (URLs); Coverage note (state 'No on-record statement found' where nothing found; press analysis labeled ANALYSIS, never quotes). RULES: sourced quotes ONLY, never invent dev statements; if unverifiable don't include; mark snippet quotes [unverified]. Do NOT commit to git; write ONLY to staging dir; write each file as finished; SKIP games whose file already exists. Heartbeat updated_at after each file; mark done at end and report completed games.",
+  "status": "done",
+  "task": "top100 wave 2 resume (remaining: call-of-duty-mobile, clash-royale, coin-master, royal-match, honkai-star-rail, subway-surfers)",
+  "updated_at": "2026-10-06T22:10:38Z",
+  "watchdog": true,
+  "completed": [
+    "pubg-mobile",
+    "candy-crush-saga",
+    "clash-of-clans",
+    "pokemon-go"
+  ],
+  "completed2": [
+    {
+      "slug": "call-of-duty-mobile",
+      "completed_at": "2026-10-06T22:10:11Z"
+    },
+    {
+      "slug": "clash-royale",
+      "completed_at": "2026-10-06T22:10:11Z"
+    },
+    {
+      "slug": "royal-match",
+      "completed_at": "2026-10-06T22:10:11Z"
+    },
+    {
+      "slug": "coin-master",
+      "completed_at": "2026-10-06T22:10:38Z"
+    },
+    {
+      "slug": "honkai-star-rail",
+      "completed_at": "2026-10-06T22:10:38Z"
+    },
+    {
+      "slug": "subway-surfers",
+      "completed_at": "2026-10-06T22:10:38Z"
+    }
+  ]
+}

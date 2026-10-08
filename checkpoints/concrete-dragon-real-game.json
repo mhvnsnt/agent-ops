@@ -1,0 +1,17 @@
+{
+  "task": "stub-to-real-game swap",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/street-brawl-cicd",
+  "resume_brief": "URGENT FIX \u2014 the ConcreteDragon repo is deploying a STUB, not the real game.\n\nVerified facts (I checked myself):\n- ~/workspace/street-brawl-cicd/game/main.gd is 8 lines and literally says \"Concrete Dragon \u2014 CI pipeline stub scene. The M1 game build (separate worker) replaces this with the real game.\"\n- The REAL M1 Godot game project lives at ~/workspace/money-machine-hq/tracks/street-brawl/m1/ (has scripts/, assets/, main.tscn, project.godot, export_presets.cfg, .godot/). It was never copied into the repo.\n- The repo remote is now https://github.com/mhvnsnt/ConcreteDragon.git (renamed GitHub-side). Branch main, clean, in sync.\n\nTask: replace the stub game/ in the repo with the real M1 project.\n- Copy m1/'s full Godot project content (scripts, assets, scenes, project.godot settings, export_presets.cfg if it has the right presets) into ~/workspace/street-brawl-cicd/game/, REPLACING the stub files.\n- MUST PRESERVE from the repo's current game/: config/name=\"Concrete Dragon\" (m1's project.godot likely still says Street Brawl \u2014 fix it), the export preset names \"Web\", \"Android APK\", \"Android AAB\" exactly (the workflow calls them by name), version.txt at 0.1.1 (keep the newer version), and anything tools/ci/set_version.py expects (keystore config keys in export_presets.cfg).\n- Sanity check: the merged project must be structurally valid \u2014 project.godot parses, main scene exists, all script paths referenced exist. If godot binary is available locally, run `godot --headless --import`; if not, do a careful manual consistency pass (no missing .gd files, no broken ext_resource paths).\n- Commit as \"Wire real M1 game into repo \u2014 replace CI stub (2026-10-06)\" and push to main. CI rebuilds web + APK + AAB and redeploys Pages.\n\nVerification (this is the part that matters \u2014 the last \"verified\" claim was wrong):\n- After the Actions run goes green, fetch https://mhvnsnt.github.io/ConcreteDragon/ and confirm it is NOT the stub. Check the deployed JS/wasm for game markers (e.g. absence of the \"[ConcreteDragon] stub scene running\" string, presence of real game script identifiers). Do NOT report success until you have evidence the deployed build is the real game.\n- Checkpoint to ~/workspace/agent-ops/checkpoints/concrete-dragon-real-game.json. Return: what was merged, commit hash, Actions run status, and your deployment verification evidence.",
+  "updated_at": "2026-10-06T19:45:53.880623+00:00",
+  "attempts": 0,
+  "progress": {
+    "merge_done": true,
+    "commit": "f0f53e3",
+    "pushed": true,
+    "ci_status": "green: run 37520553003 success, pages deploy 37521052596 success",
+    "deploy_verified": true,
+    "verification": "Parent verified 2026-10-06: downloaded deployed index.pck (287KB); 0 hits for \"stub scene running\"; contains real-game script identifiers (result_screen, juice, save_data, select_screen). Deployed build is the real M1 game."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "attempts": 0,
+  "repo": "~/workspace/forge3d",
+  "resume_brief": "Resume the Forge3D RAM/disk hardening worker. Repo: mhvnsnt/Forge3D, workdir ~/workspace/forge3d. Context: TripoSR inference OOMs on this VM (needs ~2.5GB sustained; VM RAM swings 0.8-5GB with parallel agents); owner wants open-source fixes for space/RAM blockers. Done so far: TBD from checkpoint progress notes. Remaining: (1) DISK audit: what's eating space (venv at ~/workspace/forge3d-venv, weights at ~/.forge3d/weights/triposr, pip/HF caches); clean safely; document footprint in docs/FREE_RUNNER_GUIDE.md. (2) SWAP: try fallocate+mkswap+swapon for 4-8GB swap; if not permitted record why. (3) MEMORY-EFFICIENT INFERENCE: (a) ONNX export of TripoSR via optimum/onnxruntime, measure peak RAM vs torch; (b) quantization (dynamic int8/fp16), measure quality delta; (c) chunked/tiled marching-cubes so full 256^3 grid never in RAM; (d) thread limits (OMP_NUM_THREADS=1, torch.set_num_threads(1)). (4) SCHEDULER: add `forge3d generate --wait-for-ram` gate: check free RAM, wait/retry with backoff, single inference at a time via file lock. (5) PROVE: 3 consecutive end-to-end TripoSR generations (concept->GLB) at best stable resolution, no OOM, peak-RAM logged; commit GLBs + preview renders as evidence. Update LICENSES.md for anything new (onnxruntime etc.). No secrets in repo. Verification law: 3 GLBs + renders + RAM/timing table in report or it didn't happen. Read README/docs first (providers/triposr.py, bf16 work, docs/FREE_RUNNER_GUIDE.md) \u2014 extend, don't duplicate. Commit incrementally, git pull --rebase before push, mark status done at end.",
+  "status": "done",
+  "task": "Forge3D RAM/disk hardening",
+  "updated_at": "2026-10-07T01:00:00-05:00",
+  "watchdog": true,
+  "progress": "DONE. 3/3 proofs complete at 256^3 with no OOM. Root cause (transformers 5.x) fixed. RAM gate + lock + thread caps + component filter implemented. Docs updated. triposr.py working-tree changes (chunk/thread knobs + component filter) ride on sibling in-flight weight-loader refactor - DO NOT commit without them."
+}

@@ -1,0 +1,15 @@
+{
+  "task": "interactive-environments",
+  "status": "complete",
+  "commits": ["bd49120", "d206f68"],
+  "branch": "round6/generative-art",
+  "teardown": "docs/teardowns/STAGE_DESTRUCTION.md",
+  "build": {
+    "breakable_floor": "VERIFIED - weak plat at Foundry (30-36, 8-14, y=3), slam breaks it, fighter drops to y=0; gentle landing intact",
+    "sign_placement": "DONE - wallFace() helper, all arena signs on wall faces, ASHLANE sign centered",
+    "door": "DONE - mesh and proximity centered in opening (z=-5.0); open-on-approach already in sim",
+    "arena_design_doc": "DONE - section 5 of STAGE_DESTRUCTION.md (Foundry, Rookery Ruins, Tenement, Docks, Subway)"
+  },
+  "tests": "headless esbuild harness: TEST1 floor broke=true, fighter y=0.00; TEST2 floor intact, grounded at y=3.00",
+  "notes": "Shared-worktree hazard: uncommitted work was wiped once by another worker's branch op; recommitted as d206f68 (includes UR-feel WIP)"
+}

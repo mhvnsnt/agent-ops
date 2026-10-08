@@ -1,0 +1,67 @@
+{
+  "task": "PROMO/CHARACTER STEP 2 \u2014 three defects",
+  "completed": "2026-10-06T16:30:00Z",
+  "branch": "round6/generative-art",
+  "pushed": "8340957",
+  "defect1_roster_orientation": {
+    "status": "COMPLETE",
+    "rigged_models": 47,
+    "frames": 94,
+    "proof": "tools/promo-video/proof-roster-full/ (94 PNGs + PROOF_STEP2.md with verification table)",
+    "unrigged": 21,
+    "unrigged_decision": "EXCLUDE from walk-test (0 bones), flag for rigging queue. Can appear in static poses.",
+    "result": "All 47 rigged models verified: chest faces travel direction, feet grounded, no crab-walk."
+  },
+  "defect2_procedural_animation": {
+    "status": "COMPLETE",
+    "commit": "5b594d4",
+    "root_cause": "Travel speed 0.79-1.43 m/s vs clip natural 0.55 m/s \u2192 foot skating. Clip is real CMU mocap (PASS retarget), same as owner-approved El Toro video.",
+    "fix": "Speed-matched to 0.55 m/s in walk-test.html",
+    "note": "Arm swing (97deg max) is in the mocap itself, not a retarget artifact. Acceptable as it's the reference clip."
+  },
+  "defect3_mesh_stretching": {
+    "status": "COMPLETE",
+    "commit": "1421b00",
+    "root_cause": "SHADOW ARTIFACT, not mesh deformation. Shadow pass ran before skeleton.update(), using stale bind-pose bone matrices. With broken weights, stale matrices \u2192 cone-shaped garbage shadow. Mesh was always fine (proven: hidemesh, nocast, vertMotion tests).",
+    "fix": "skeleton.update() before renderer.render() in cinematic.html, cinematic-faction.html, walk-test.html",
+    "additional": "Roster-wide weight audit found 30-63% stray weights (leg verts bound to Head/Neck/Arms). Built cleanStrayWeights + autoSkinByDistance repair tools in reskin.js. Weights are broken but were NOT the visible defect."
+  },
+  "commits": [
+    "1421b00",
+    "5b594d4",
+    "47dd827",
+    "633f2a1",
+    "8340957"
+  ],
+  "promo_status": "DO NOT ASSEMBLE until owner signs off on all three defects.",
+  "defect4_hip_pivot": {
+    "status": "COMPLETE",
+    "commit": "8340957",
+    "root_cause": "Stray skin weights: verts bound to anatomically-impossible bones. MAIME: waist verts (Y~0.1) bound 100% to LeftForeArm \u2192 0.56m fan when arm rotates. BANNON: hip verts bound to Arm \u2192 spike; 63.7% stray transfer. Inverse bind matrices verified correct (0.00 error); bones positioned correctly. Pure weight assignment bug.",
+    "fix": "cleanStrayWeights() at load time via NEEDS_WEIGHT_REPAIR set in reskin.js. Applied in walk-test.html, cinematic.html, cinematic-faction.html.",
+    "verified": "MAIME fan eliminated; BANNON spike eliminated; rest pose intact (pixel-identical); walk-test frames clean for both. BANNON still twists at extreme (>60\u00b0) angles \u2014 acceptable for promo motions.",
+    "models": [
+      "BANNON_muscular_skinned.glb",
+      "MAIME_skinned.glb",
+      "MAIME_tattered_skinned.glb"
+    ]
+  },
+  "wwe_do_not_touch": {
+    "status": "ENFORCED",
+    "directive": "Owner 2026-10-06: WWE models are already reskinned canon versions. Never remove, flag, or exclude.",
+    "implementation": "DO_NOT_TOUCH_WEIGHTS set in reskin.js (BILL_DOZER, JUDAS x7, MARKS, SOMBRA_NEGRA). Weight repair skips these explicitly. QA gates treat flags as false positives.",
+    "note": "John Ford (Cena) filename not identified \u2014 not in cast/ under obvious name. Does not affect the skip logic."
+  },
+  "portability": {
+    "status": "DOCUMENTED",
+    "directive": "Owner 2026-10-06: fixes must apply to Brutal Fist and Bannon, not just AshLane.",
+    "staging_js": "Game-agnostic: no hardcoded paths, handles Mixamo+C4D skeletons via FAMILY_ALIASES, auto-detects forward. Port by copying staging.js + reskin.js.",
+    "reskin_js": "cleanStrayWeights scale-invariant (derives regions from model's own bones). NEEDS_* sets are per-roster; replace for target game.",
+    "qa_gates": "qa/video-qa.py is game-agnostic (ground/crabwalk/geometry/frozen). No hardcoded game logic.",
+    "game_differences": {
+      "brutal_fist": "PS1 low-poly INTENTIONAL \u2014 do NOT run weight repair; QA geometry gate (2.5x spike) may false-positive on long low-poly tris, tune per game.",
+      "bannon": "Same XFER transfer pipeline as AshLane \u2014 NEEDS_WEIGHT_REPAIR applies; maintain per-roster DO_NOT_TOUCH list.",
+      "ashlane": "1.85m height normalization in walk-test.html is AshLane-specific (Bannon uses per-character scale metadata)."
+    }
+  }
+}

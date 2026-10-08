@@ -1,0 +1,10 @@
+{
+ "attempts": 1,
+ "repo": "~/workspace/forge3d",
+ "resume_brief": "Resumed close-out worker (session f286fa80). Repo mhvnsnt/Forge3D at ~/workspace/forge3d. Remaining: (1) forge3d/body/attach_head.py GNM-head-to-body merge with neck-seam blending, proven on Forge3D-generated model, evidence in docs/stage-evidence/. (2) Donor weight transfer: search ~/workspace clones + Bannon git history all branches for donor-transfer script; port or implement nearest-surface-point weight copy; prove on generated model. (3) COLMAP/pycolmap scan stage with HARD no-GPU gate + docs/SCAN_PATH.md Kaggle path + CPU smoke test only. (4) TODO/FIXME sweep: close closable, list rest. Update LICENSES.md + docs/PROVENANCE.md. No secrets. Verification law. Heartbeat checkpoint <=10min, incremental commits, git pull --rebase before push, mark done.",
+ "status": "done",
+ "task": "Forge3D close-out: head attach, donor transfer, scan, TODO sweep",
+ "updated_at": "2026-10-07T02:02:52.887150+00:00",
+ "watchdog": true,
+ "result": "ALL 4 ITEMS CLOSED: (1) attach_head proven on Forge3D-generated TripoSR body w/ before/after renders+GLB; (2) donor transfer proven (weights sum exactly 1.0, verified); (3) scan stage wired w/ hard GPU gate + Kaggle docs; (4) TODO sweep done (3 closed, rest documented). Selftest 13/13. Commits pushed to mhvnsnt/Forge3D."
+}

@@ -1,0 +1,1 @@
+{"attempts":0,"entries":41,"quarantine_additions":0,"repo":"/home/hatch/workspace/trippedd-studio","status":"done","task":"Wave 12 Lane C: captions tooling/resources","tools_wired":["faster_whisper_tool.py","ttconv_tool.py"],"updated_at":"2026-10-07T19:36:30Z","wired":"2 (ttconv SRT/VTT/TTML roundtrip + faster-whisper tiny word-level, both with real proof artifacts)"}

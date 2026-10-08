@@ -1,0 +1,9 @@
+{
+  "attempts": 1,
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "Spot-check quarantine rows 146-159 plus ~10 older unaudited rows against upstream, write docs/wave16/lane-d-quarantine.md with findings and proposed corrections, branch wave16-lane-d, commit+push branch. Workdir: ~/workspace/trippedd-studio.",
+  "status": "done",
+  "task": "Wave 16 Lane D: quarantine spot-check rows 146-159 + older unaudited rows; Speaches Docker attempt",
+  "updated_at": "2026-10-07T20:52:00Z",
+  "watchdog": true
+}

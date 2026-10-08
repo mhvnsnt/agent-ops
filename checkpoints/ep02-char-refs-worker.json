@@ -1,0 +1,9 @@
+{
+  "attempts": 1,
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "DONE. All renders + likeness notes committed on main (commits d2db204, c770215, 8d3c92a). Note: a concurrent Wave17 coordinator switched branches mid-task; recovered cleanly; stale branch ep02-char-refs still exists with superseded commits cbb1610/82017ac (safe to delete).",
+  "status": "done",
+  "task": "EP02 char refs: render all canon GLBs + likeness study",
+  "updated_at": "2026-10-07T21:25:04.831140+00:00",
+  "watchdog": true
+}

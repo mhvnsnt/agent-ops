@@ -1,0 +1,10 @@
+{
+  "task": "brotato+hades teardown",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/street-brawl-cicd",
+  "resume_brief": "BROTATO + HADES SYSTEMS TEARDOWN (owner directive 2026-10-06 \u2014 he names these as the retention gold standard). Deep research, ALL aspects, of: Brotato (wave-based arena roguelite) and Hades + Hades II (Supergiant). Cover: builds (weapons/items/boons, synergies), variance/RNG systems, wave/run structure, difficulty systems (Brotato danger levels, Hades pact/heat), meta-progression (mirror, unlocks), narrative-through-death, shop/economy between runs, menu and UX design, and WHAT keeps people playing hundreds of runs. For EACH system: how it works, why it retains players (sourced dev/community insight), and how to adapt it ADDITIVELY to Concrete Dragon \u2014 a 3D beat-em-up with infinite missions, infinite bosses, infinite unlockable characters. Concrete adaptation sketches, not vague ideas. Write docs/ROGUELITE_TEARDOWN.md in ~/workspace/street-brawl-cicd, commit incrementally. The beat-em-up builder pulls from this doc. CHECKPOINT-FIRST: heartbeat after every section. Mark done at end; report top systems to steal.",
+  "updated_at": "2026-10-06T17:44:00-05:00",
+  "attempts": 0,
+  "notes": "All 3 parts written and committed. Doc: docs/ROGUELITE_TEARDOWN.md"
+}

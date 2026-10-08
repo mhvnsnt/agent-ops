@@ -1,0 +1,15 @@
+{
+  "attempts": 0,
+  "commits": [
+    "45b08e5 (Wave 8 Lane A: 49 SFX/foley entries)",
+    "be0d725 (Wave 8 Lane A: +58 BG-plates/backgrounds entries)"
+  ],
+  "count_headings": 900,
+  "push_blocker": "GH001: production/WIZARD_GANG_EP01/wizard-gang-ep01-16x9.mp4 (160MB) committed as regular git object in 2986174 (Wizard Gang lane) exceeds GitHub 100MB limit; repo has no LFS/.gitattributes. Pre-receive hook declines entire push. Fix: Wizard Gang lane should LFS-track the MP4 or re-encode <100MB, then push. Did NOT rewrite other lanes' history.",
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "Resume Wave 8 Lane A: 107 catalog entries done locally (commits 45b08e5 SFX + be0d725 BG, count 900). Push blocked by another lane's 160MB MP4 (GH001). To resume: verify/fix push, then mark done.",
+  "status": "done",
+  "task": "Wave 8 Lane A: catalog deepening (SFX/foley, BG-plates)",
+  "updated_at": "2026-10-07T13:55:00-04:00",
+  "watchdog": true
+}

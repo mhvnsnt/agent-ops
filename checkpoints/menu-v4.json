@@ -1,0 +1,22 @@
+{
+  "task": "menu-v4",
+  "branch": "menu/v4",
+  "worktree": "/home/hatch/workspace/menu-v4-work",
+  "remote": "origin/menu/v4 @ 2cab397",
+  "status": "complete",
+  "steps": [
+    {"id": "tagline", "status": "done", "note": "'concrete jungle' restored, same SpellbookTag treatment"},
+    {"id": "identity-text", "status": "done", "note": "Throw down / Block taken / arrivalShots; committed"},
+    {"id": "reference-research", "status": "done", "note": "Def Jam FFNY + Urban Reign menu study via web"},
+    {"id": "character-art", "status": "done", "note": "fighter-art.ts maps 27/30 fighters to public/portraits/*.webp; FighterSelectCard with real art; procedural fallback for bannon/quaternius"},
+    {"id": "swmg-backgrounds", "status": "done", "note": "StreetScene SVG: 3 hooded void-face figures with eye glints, hanging gold chain, MISSING wizard poster"},
+    {"id": "rich-environments", "status": "done", "note": "StreetScene: brick wall, chain-link, wheatpaste posters, spray tags, neon OPEN sign, fire escape, wet asphalt reflections"},
+    {"id": "detail-density", "status": "done", "note": "custom crosshair cursor, ChainDivider, Sticker badges, SwatchBar, TapeCorners, MenuHero rotation, layered card depth"},
+    {"id": "screenshot-qa", "status": "done", "note": "SSR harness screenshots verified: scene, fighters, hero. Full-app dev server OOM-killed repeatedly; integrated menu not screenshot-verified"}
+  ],
+  "caveats": [
+    "Integrated full-menu screenshots not captured — vite dev server OOM-killed 3x on loaded machine. Components verified in isolation via SSR harness.",
+    "Pre-existing tsc error in menu-art.tsx (onyx_gang) untouched.",
+    "Branch menu/v4 based on origin/main (has v3). Identity-audit text manually applied. Needs merge to main for Pages deploy."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+ "attempts": 1,
+ "repo": "~/workspace/ConcreteDragon",
+ "resume_brief": "Subagent task (parent orchestrator): Concrete Dragon (mhvnsnt/ConcreteDragon, local ~/workspace/ConcreteDragon) monetization worker. Owner cannot pay $25 Play fee. Research+prepare only. Research done so far: itch.io (free publish, open revshare 0-100% default 10%, 2.9%+$0.30 processing, payouts: 7-day hold, $5 min, tax interview, PayPal/Payoneer, OR 'Direct to you' instant to own PayPal/Stripe), CrazyGames (official docs: SDK required for Full Launch/monetization, Godot supported, no exclusivity, QA->Basic Launch(no ads)->Full Launch(ads), E100 min monthly payout via Tipalti, revshare % not published), Poki (preferred deal = web exclusive 5yrs default OR one-time flat license fee no revshare; Poki SDK required; payout schedule/% not published; conflicts with itch.io browser page), Ko-fi (0% on one-off tips free plan, 5% memberships/shop waived with Gold; money straight to own PayPal/Stripe). Remaining: capture screenshots from https://mhvnsnt.github.io/ConcreteDragon/ (Xvfb+Chromium via ffmpeg x11grab; :99 Xvfb already running), write docs/monetization/itch-page-draft.md + monetization-plan.md, update docs/PUBLISHING.md (no-store primary, Play section 'UNLOCKS AT $25 EARNINGS'), git commit+push. Sources: https://docs.crazygames.com/faq/, https://itch.io/docs/creators/payments, ko-fi pricing sources.",
+ "status": "done",
+ "task": "Concrete Dragon monetization worker: research no-store money paths (itch.io, CrazyGames, Poki, APK sideload, Ko-fi), capture live-build screenshots, write docs/monetization/ (itch page draft + ranked plan + milestone ladder), update docs/PUBLISHING.md for the no-store pivot, push to repo. No publishing, no account creation, no platform contact.",
+ "updated_at": "2026-10-06T20:25:00-05:00",
+ "watchdog": true,
+ "result": "Pushed f186f82 to origin/main: docs/monetization/ (plan + itch draft + 3 screenshots), PUBLISHING.md no-store pivot merged with sibling worker rewrite, README links fixed. Nothing published, no accounts created, no platform contact."
+}

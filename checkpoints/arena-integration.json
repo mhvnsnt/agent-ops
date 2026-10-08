@@ -1,0 +1,10 @@
+{
+  "attempts": 0,
+  "repo": "/home/hatch/workspace/game-sweep/AshLanev2",
+  "resume_brief": "Wire all AshLane arenas into AshLanev2: selectable versus stages, selectable arenas, open-world district/story integration per CROSS-GAME-ARENA-BRIEF.md. Working area: ~/workspace/ashlane-art/arenas/. Explore repo stage conventions first, build manifest, implement UI + open-world anchors, test, commit.",
+  "status": "done",
+  "task": "arena stage-select + open-world integration",
+  "updated_at": "2026-10-07T04:45:00Z",
+  "watchdog": true,
+  "notes": "Branch arena-integration pushed to origin. Typecheck clean (1 pre-existing main error in menu-art.tsx onyx_gang). 8/8 manifest tests pass. Production build OOM-killed on this VM (exit 137, 8GB RAM) \u2014 needs CI/bigger machine. NOT merged to main per build-verify condition."
+}

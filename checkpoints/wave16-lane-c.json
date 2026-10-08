@@ -1,0 +1,11 @@
+{
+  "attempts": 0,
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "Research caption/subtitle PACKAGING and post-processing tools (not more ASR engines). Read docs/wave15,14,13,12 lane-c-captions.md + grep docs/RESOURCE_CATALOG.md to avoid duplicates. Write docs/wave16/lane-c-captions.md with ~25-30 full #### entries each license-verified from upstream (badge: commercial-safe / attribution / NC / unverifiable). GPL/AGPL/LGPL tools go in QUARANTINE CANDIDATES section at end \u2014 do NOT edit docs/LICENSE_QUARANTINE.md. Wire strongest finds with real proof artifacts under tools/captions/ (format-conversion or QC smoke tests with real input/output proof, no fake artifacts, no binaries >100MB, do not commit parent's untracked Wizard Gang mp4s). Commit incrementally on branch wave16-lane-c, push (no force-push), do not touch main.",
+  "status": "done",
+  "task": "Wave 16 Lane C: caption packaging tools (target ~25-30 honest #### entries)",
+  "updated_at": "2026-10-07T20:33:50.682237+00:00",
+  "watchdog": true,
+  "note": "7 proof tools wired+verified (pycaption, srt, webvtt-py, textstat, fonttools, ass-compiler, libass burn-in frame checked visually); writing lane doc next",
+  "result": "Pushed origin/wave16-lane-c: docs/wave16/lane-c-captions.md (26 main + 10 quarantine), 7 wired tools with real proofs under tools/captions/, README updated."
+}

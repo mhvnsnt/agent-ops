@@ -1,0 +1,10 @@
+{
+  "task": "Concrete Dragon ads + video (real gameplay only)",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/street-brawl-cicd/",
+  "resume_brief": "You are the Concrete Dragon ads+video worker. Capture REAL gameplay from mhvnsnt/ConcreteDragon (checkout ~/workspace/street-brawl-cicd/), cut a 15-30s hype trailer + 3-5 vertical clips + 3 static ad images with royalty-free audio, into ~/workspace/concrete-dragon-ads/. NO fake gameplay. Owner reviews everything before publish.",
+  "updated_at": "2026-10-07T15:06:33.183728+00:00",
+  "attempts": 3,
+  "notes": "DONE 2026-10-07: fixed-timestep capture (capture8.mjs) solved SwiftShader ~1fps problem \u2014 1134 landscape + 709 portrait real gameplay frames. Deliverables in ~/workspace/concrete-dragon-ads/: concrete-dragon-trailer.mp4 (25s 720p, royalty-free beat, title cards), 4x vertical clips 720x1280, 3x ad stills 1280x720. All visually verified. Capture pipeline committed to street-brawl-cicd/tools/ads-capture/ (71d1cf0). Owner reviews before publish."
+}

@@ -1,0 +1,14 @@
+{
+  "task": "faction-hierarchy",
+  "status": "complete",
+  "doc": "docs/FACTION_HIERARCHY.md",
+  "branch": "round6/generative-art",
+  "commits": ["24776a2", "be093ef", "7d85af5", "1395662"],
+  "remote_tip_verified": "1395662 (via ls-remote)",
+  "parts": {
+    "part1_research": "street gangs, yakuza, bikers, mafia/cartels, police, military/PMC, corporate security, Tekken dan flavor",
+    "part2_ladders": "8 factions x 30 ranks x 10 Tekken-style color tiers, original titles, universal mechanical curve",
+    "part3_ai_spec": "rank delta bands, cower rung, morale checks, desperate fights, fear overrides, story gates, anti-failure rules"
+  },
+  "open_questions": 5
+}

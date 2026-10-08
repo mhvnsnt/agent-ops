@@ -1,0 +1,10 @@
+{
+ "attempts": 3,
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "Wave 3 Worker B (voice/transcription lane) in trippedd-studio repo: (1) try HF download of whisper tiny/base via curl/wget (NOT httpx); run real transcription on a real speech WAV; save proof as tools/captions/PROOFS_WAVE3.md. (2) retry edge-tts synthesis; document exact failure if it fails. (3) wire new TTS/lip-sync tools (Coqui XTTS v2 attempt, extra Piper voices, Gentle/aeneas forced aligners, other Apache/MIT TTS with real smoke tests); each gets README + PROOFS.md + real artifact; commit locally, DO NOT push. (4) new lane entries to /tmp/wave3_catalog_B.md and GPL/AGPL flags to /tmp/wave3_quarantine_B.md.",
+ "status": "done",
+ "task": "Wave 3 Worker B: WhisperX proof, edge-tts retry, TTS/lip-sync wiring",
+ "updated_at": "2026-10-07T08:07:14.195435-04:00",
+ "watchdog": true,
+ "commit": "061ef67"
+}

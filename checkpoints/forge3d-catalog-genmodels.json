@@ -1,0 +1,11 @@
+{
+  "attempts": 1,
+  "repo": "~/workspace/forge3d",
+  "resume_brief": "Research task: build ranked candidate list of 25+ open-weight/free-tier image\u21923D and text\u21923D generative models for Forge3D (free open-source 3D character generation). Output JSON array to ~/workspace/forge3d/docs/catalog-parts/genmodels.json, each entry: name, url, what, license, license_verified, free_tier, impact (1-5), difficulty (1-5), notes. Verify EACH candidate exists (live repo URL + recent activity) and read each repo's LICENSE/README License section \u2014 never guess. Known verdicts to reuse: Hunyuan3D-2.x = Tencent Hunyuan 3D 2.0 Community License (NOT recommended); SMPL-family = research-only; nvdiffrast = NVIDIA non-commercial; GPL/AGPL = quarantine-only. Do NOT re-list: TripoSR, Stable Fast 3D, TRELLIS.2, Unique3D, Shap-E, Hunyuan3D-2 variants, FLUX.1. Candidate pool (43): CRM, LGM, GRM, Wonder3D, Era3D, Point-E, Michelangelo, OpenLRM, SPAR3D, Rodin/Hyper3D, Clay, DreamGaussian, SV3D, MVDream, Zero-1-to-3, SyncDreamer, Magic123, One-2-3-45, Consistent123, Make-It-3D, ImageDream, TriplaneGaussian, Splatter Image, DMV3D, LN3Diff, ATT3D, GET3D, EG3D, PIFu, ICON, ECON, CharacterGen, CraftsMan, Hunyuan3D-2mv, V3D, IM-3D, AssetGen, Hunyuan3D-2.5, Step1X-3D, Dora, PartCrafter. No wiring, no fake entries, no secrets. Heartbeat while working; mark done at end; report entry count + top-5 commercial-safe picks.",
+  "status": "done",
+  "task": "catalog: 3D generative models",
+  "updated_at": "2026-10-07T05:02:00Z",
+  "watchdog": true,
+  "progress": "All 34 candidates verified (repo live + pushed_at + LICENSE/README license read). Writing genmodels.json next.",
+  "result": "34 verified entries written to ~/workspace/forge3d/docs/catalog-parts/genmodels.json"
+}

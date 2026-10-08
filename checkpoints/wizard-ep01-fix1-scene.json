@@ -1,0 +1,9 @@
+{
+  "attempts": 0,
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "You are WORKER A for WIZARD GANG EP01 FIX #1. Task: generate a replacement 22.0s cookout scene segment at production/WIZARD_GANG_EP01/shots/fix1/s13-tail-new.mp4 (1920x1080), with source stills in production/WIZARD_GANG_EP01/shots/fix1/stills/. Repo root: /home/hatch/workspace/trippedd-studio. Style anchors: ~/workspace/trippedd-studio/assets/wizard-gang-style-refs/cartoonier/Group 13 - rooftop BBQ.webp (primary, rooftop setting) and ~/workspace/trippedd-studio/assets/wizard-gang-style-refs/cartoonier/SWMG group - cartoon 2.webp (character designs). Quality gates: ~/workspace/trippedd-studio/docs/AI_SLOP_CHECKLIST.md. 4 beats, ~5-7s each: 1) GRILL CLOSE-UP (lit grill, war-plan map under it as placemat, flames, burgers); 2) THEORY (purple robe) sketching the grill in her meeting notes; 3) SOMBRA NEGRA (black robe, purple trim, skull pendant) checking his watch + ONYX (green robe) silently taking a burger; 4) ASHES (scarlet robe, diamond-grill grin, gold chains) tending grill with tongs, STATIC (deep blue robe) beside him mid-yap gesturing. Canon locks: robe colors (Ashes scarlet, Onyx green, Theory purple, Static deep blue, Sombra black/purple trim); faces black void + eye glints only, except Ashes keeps diamond-grill grin; pendants THEORY/purple, ONYX/green, STATIC/blue, ASHES $/scarlet, skull/Sombra; no hallucinated text, no cropped heads/feet, no invented canon. Workflow: media.generate_image per beat (16:9, anchors attached), inspect every still visually, media.generate_video per still ~5-7s, assemble with ffmpeg to exactly 22.0s (single clean encode, no -c copy joins). Report: 4 beat descriptions, per-item checklist with frames checked, paths, regenerations.",
+  "status": "done",
+  "task": "EP01 fix #1: generate new 22s S13-tail cookout scene",
+  "updated_at": "2026-10-07T20:26:41Z",
+  "watchdog": true
+}

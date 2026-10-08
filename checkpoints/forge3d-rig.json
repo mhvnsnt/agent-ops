@@ -1,0 +1,9 @@
+{
+  "attempts": 2,
+  "repo": "~/workspace/forge3d",
+  "resume_brief": "Continue the Forge3D rig/morph/Blender track in ~/workspace/forge3d (repo mhvnsnt/Forge3D). Context: 'Prisma 3D + Blender inside Forge3D' \u2014 port our repo rigging assets (Bannon weight-transfer/auto-rig/retargeters/mesh_doctor, AshLanev2 tools/generative), install bpy (Blender as Python module) headless and build forge3d/blender/ stage (import GLB, scripted remesh/UV/decimate/smooth/transform, weight-paint smoothing hook, export GLB), resolve and wire parametric bodies (owner term 'GNM parametric head' \u2014 find the real repo/paper; evaluate SMPL-X, FLAME, GHUM, STAR \u2014 verify licenses), implement body morphs via shape params + facial rig via expression params as blendshapes/shape keys, skin weights via Bannon weight-transfer + bpy smoothing, rigged GLB export on his 58-bone Mixamo-style skeleton (extend existing pipelines/ rig stage, don't fork), verify Prisma 3D license status (believed commercial Android app, not open source) and replicate its workflow as pipeline stages (sculpt\u2192paint\u2192rig\u2192morph\u2192pose/animate), briefly evaluate phone-photogrammetry (COLMAP) scan path, update LICENSES.md + docs/PROVENANCE.md, GPL/AGPL out of shipped tree, no secrets in repo. Proof required: before/after GLB + render pairs under docs/stage-evidence/, vertex counts + timings in report. Read repo README/docs first, extend don't duplicate, git pull --rebase before pushes (sibling workers active), checkpoint-first discipline, mark done at end.",
+  "status": "done",
+  "task": "Forge3D Blender + parametric rig/morph track",
+  "updated_at": "2026-10-06T19:12:00-05:00",
+  "watchdog": true
+}

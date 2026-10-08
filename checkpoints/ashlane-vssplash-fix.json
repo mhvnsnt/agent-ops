@@ -1,0 +1,9 @@
+{
+  "task": "fix stuck VsSplash overlay",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/game-sweep/AshLanev2",
+  "resume_brief": "Fix P0 regression in AshLane V2 (repo ~/workspace/game-sweep/AshLanev2, branch main, HEAD ~c65ea96): the .al-vs-splash overlay (menu/menu-vs.webp) never dismisses when entering CINDER WARD \u2014 THE PLAZA roam mode; it covers the 3D canvas indefinitely and Escape does not skip. Hypothesis: sim.splash/splashT should clear ~1.6s after warp() (sim.ts step() decrements it), but hud.splash stays truthy \u2014 either step() isn't advancing splashT on this path or something re-arms it. Regressed between 72db9d0 and c65ea96; suspect commits: VsSplash decoupling 89bf514, menu art kit v3 5957a3b. Steps done so far: checkpoint written. Remaining: (1) reproduce in headless Chromium (serve repo, boot PWA at /AshLanev2/, enter CINDER WARD \u2014 THE PLAZA, screenshot at 5s and 15s, confirm splash still covering); (2) find root cause in sim.ts/menu code (grep splashT, sim.splash, hud.splash, warp); (3) fix so splash dismisses ~1.6s after warp in ALL modes and Escape/click skips it; (4) re-verify with screenshots (splash visible briefly then GONE, 3D gameplay visible without manual overlay-hiding); (5) commit + push to main; (6) mark checkpoint done. Heartbeat: update updated_at in this file after each step.",
+  "updated_at": "2026-10-06T19:20:00-05:00",
+  "attempts": 4
+}

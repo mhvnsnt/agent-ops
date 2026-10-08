@@ -1,0 +1,9 @@
+{
+  "task": "Bill $aber voice research + clone (Narrator)",
+  "status": "running",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/voice-clone-work",
+  "resume_brief": "Lane worker: Bill $aber AI voice for Wizard Gang EP02 Narrator. Approved lines: N1 'They got the call. All nine.' N2 'Nothing was resolved.' Work dir: ~/workspace/voice-clone-work/billsaber/. Chatterbox weights at ~/workspace/voice-clone-work/cb_weights/ (used for Static/Enzo clone; weights stay out of git). Steps: (1) research Bill $aber music/socials/presence -> RESEARCH.md; (2) find a PUBLIC lawful audio sample of him SPEAKING (interview/podcast/social), document URL; (3) build clone on Chatterbox (commercial-safe; XTTS v2 is prototype-only); (4) render test line N1 to ~/workspace/voice-clone-work/billsaber/test-n1.wav and verify vs research profile. Honesty rule: if no lawful public speaking sample exists, do NOT synthesize \u2014 report honestly and leave the voice unbuilt.",
+  "updated_at": "2026-10-08T01:40:36Z",
+  "attempts": 0
+}

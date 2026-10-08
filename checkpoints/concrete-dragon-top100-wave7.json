@@ -1,0 +1,9 @@
+{
+  "attempts": 0,
+  "repo": "none-staging-only",
+  "resume_brief": "TOP-100 HEART-AND-SOUL RESEARCH \u2014 WAVE 7 (owner directive 2026-10-06). For EACH of 10 games (Stardew Valley, Terraria, Hades, Hollow Knight, Celeste, Dead Cells, Slay the Spire, Balatro, Lethal Company, Phasmophobia), use browser.search + browser.open to find developer interviews, GDC talks, studio blog posts, reputable games-press interviews about what keeps players coming back/playing/paying/supporting. Write per-game files to /home/hatch/workspace/agent-ops/top100-staging/wave-7/<slug>.md with exact structure (slugs: stardew-valley, terraria, hades, hollow-knight, celeste, dead-cells, slay-the-spire, balatro, lethal-company, phasmophobia). Sourced quotes ONLY, never invent; [unverified] for snippet-sourced. Skip games whose file already exists. Do NOT commit to any git repo. Update checkpoint updated_at after each game file; mark done at end and report completed games.",
+  "status": "done",
+  "task": "top100 wave 7 (Stardew Valley, Terraria, Hades, Hollow Knight, Celeste, Dead Cells, Slay the Spire, Balatro, Lethal Company, Phasmophobia)",
+  "updated_at": "2026-10-06T17:31:00-05:00",
+  "watchdog": true
+}

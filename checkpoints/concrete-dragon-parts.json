@@ -1,0 +1,10 @@
+{
+  "task": "character part packs",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/street-brawl-cicd",
+  "resume_brief": "CONCRETE DRAGON \u2014 CHARACTER PART PACKS (owner directive 2026-10-06). Find 10-20 open-source modular character part/accessory packs (hats, helmets, masks, armor, gloves, vests, belts, boots, weapons, creature parts, cyber parts) from Quaternius (CC0), KayKit (CC0), Kenney (CC0), OpenGameArt CC0. Verify license from source page (NO GPL/AGPL, NO Mixamo/Adobe-restricted). Download each, stage in ~/workspace/street-brawl-cicd/game/assets/staging/parts/<pack>/ with LICENSE note. Log everything in the staging log. Extract bone names from fighter.glb (~/workspace/street-brawl-cicd game-3d assets) for attachment points. Write docs/PART_ATTACH_SPEC.md: parts->bones mapping, scale/orientation guidance, recommended accessory-unlock progression (later characters/bosses = wilder parts). Heartbeat checkpoint after every pack. Mark done at end; report pack list + licenses.",
+  "updated_at": "2026-10-06T18:03:21.936866-05:00",
+  "attempts": 0,
+  "notes": "COMPLETE: 22 packs staged (15 character + 7 env), all CC0. Spec committed as docs/PART_ATTACH_SPEC.md. Dragon/demon pull documented as verified lead (TactileDream CC0 set, opengameart.org/node/143343). 2D-only kenney packs flagged reference-only."
+}

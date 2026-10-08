@@ -1,0 +1,9 @@
+{
+ "attempts": 0,
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "Wave 26 Lane A: Add ~45-55 NEW honest #### entries to docs/RESOURCE_CATALOG.md in /tmp/w26-lane-a worktree (branch wave26-lane-a) across two pockets: (1) PD score-archive continuation (public-domain sheet-music/score archives beyond Wave-17/24 finds), (2) retro-tracker ecosystem depth (chiptune/retro trackers + related tools beyond Waves 12/14/16 finds). Read existing catalog sections first (grep for tracker/score to avoid duplicates). Pre-append dedup greps MANDATORY before every batch append. Verify EVERY license from upstream (GitHub API spdx_id, LICENSE file, official terms). Badges: \u2705 commercial-safe, \u26a0\ufe0f NC/weak-copyleft, \u2753 unverifiable, \ud83d\udeab dead/rip-risk. GPL/AGPL software -> docs/LICENSE_QUARANTINE.md as new rows. Optionally wire 1-2 strongest tools with real proof artifacts (scripts + smoke-test output). Commit on branch wave26-lane-a, push to origin. Report: entry count added, notable finds/catches, quarantine rows, commit hash. DEVIATION: /tmp full (512M tmpfs); worktree at ~/workspace/agent-ops/w26-lane-a (sparse-checkout docs/ only), branch wave26-lane-a exists locally clean at main tip.",
+ "status": "done",
+ "task": "Wave 26 Lane A: PD score-archive continuation + retro-tracker depth",
+ "updated_at": "2026-10-08T02:05:00Z",
+ "watchdog": true
+}

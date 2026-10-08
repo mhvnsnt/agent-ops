@@ -1,0 +1,10 @@
+{
+  "task": "No-key wiring worker: wire all zero-key/zero-signup catalog tools; keyless-default llm_router.py; verified LIVE/FAILED/DORMANT report",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/api-wiring",
+  "resume_brief": "Read ~/workspace/API_CATALOG.md and ~/workspace/api-wiring/. Continue wiring no-key tools: (A) LLM lane keyless router, (B) no-key asset/API live tests, (C) local pip/npm tool installs with TMPDIR=~/workspace/.tmp. Verify every claim with a real call. Update LICENSE-MANIFEST.md. Final report: LIVE/FAILED/DORMANT per item + one-command keyless stack run.",
+  "updated_at": "2026-10-06T21:20:00Z",
+  "attempts": 2,
+  "notes": "Worker C done+verified. Worker B done: 10/11 endpoints LIVE (ambientCG, Poly Haven, Kenney.nl, KayKit, CMU mocap, Common Crawl CDX, OpenGameArt, Poly Pizza, jsDelivr, QRNG); Quaternius STAGED-FAILED (itch.io JS-only download widget needs Playwright/manual). Pollinations text anonymous path FAILED per Worker B note (needs Worker A retest). asset_fetch.sh fixed+extended, 10 client stubs, LICENSE-MANIFEST updated. Worker A (LLM lane) still running."
+}

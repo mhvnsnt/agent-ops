@@ -1,0 +1,31 @@
+{
+  "task": "dialogue-street-expansion",
+  "branch": "round6/physics-vfx",
+  "worktree": "~/workspace/dialogue-street-work",
+  "status": "completed",
+  "steps_completed": [
+    "voice-bibles.ts: 8 street situations, streetVoice field + 12 notes, 4 archetype bibles",
+    "generator.ts: STREET_BANKS (16 voices), lookup order, archetype street fallbacks",
+    "samples.ts: 12 street samples across confront/parley/corpo/hustle/claim/civilian/loyalty/heat",
+    "director.ts: streetEncounter/playStreetEncounter, turfWarBeat, missionBriefing (street register by mission rule)",
+    "index.ts: new exports + two-worlds docstring",
+    "docs/DIALOGUE_SYSTEM.md: street situations, street wiring, game-identity law",
+    "tsc clean, 8 runtime smoke tests PASS, pushed ec34e1d..6ca2b79 to origin round6/physics-vfx",
+    "RATIO CALIBRATION: wrestlingCanon flag on 8 book-canon wrestlers (static, toro, hollow, cipher, echo, edwin, stan, onyx); wrestling bleed into street voice",
+    "Hollow bible added (Onyx's gang general, orange robe, Books 1-6) + wrestling + street banks",
+    "4 new street situations: shakedown, recruit, informant, mourning (12 total street situations)",
+    "STREET_BANKS deepened to ~736 lines across 20 voices; 3 new archetypes (__shopkeeper, __bouncer, __runner)",
+    "ARCHETYPE_BANKS extended with street fallbacks for all 12 street situations",
+    "samples.ts: 20 wave-2 street samples + 6 wave-3 book-port samples (67 total)",
+    "BANNON REPO PORT: 13 bibles enriched with book canon (OTR personas, finishers, verbatim voice)",
+    "Book dialogue ported: Maime liturgy (verbatim), Stick-Up Reverend sermon (verbatim), Cain caregiver contrast, Kennedy/Combs/Toro wrestling voice, Sombra corporate-temptation, Triple X administration enforcer",
+    "Flavor ratio: 85.4% street / 14.6% wrestling (all wrestling = canon-authentic or arena minimums)",
+    "All 21 voices x 12 street situations generate clean; determinism verified"
+  ],
+  "next": "none \u2014 done; merge round6/physics-vfx to main when parent is ready",
+  "decisions": [
+    "Use separate git worktree (~/workspace/dialogue-street-work) to avoid disturbing crowd-ai worker on main worktree",
+    "Commit expansion to round6/physics-vfx (same branch dialogue system lives on)"
+  ],
+  "last_beat": "2026-10-06T11:00:00+00:00"
+}

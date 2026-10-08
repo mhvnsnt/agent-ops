@@ -1,0 +1,10 @@
+{
+ "attempts": 0,
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "Wave 17 Lane C: quarantine spot-check + coordinator merge. Work dir /home/hatch/workspace/trippedd-studio on branch wave17-lane-c. PART 1: read docs/LICENSE_QUARANTINE.md, spot-check quarantine rows 160-169 (Wave 16 additions) plus 5 older unaudited rows upstream (GitHub API spdx_id / LICENSE raw / official license page); fold in Lane A rows 170-184 and Lane B row 170 (renumber Lane B's row to 185, note mapping); Docker smoke-test only if runtime exists else document deferred; LGPL stays PENDING. PART 2: git fetch origin; merge origin/wave17-lane-a then origin/wave17-lane-b into wave17-lane-c (resolve conflicts keeping BOTH sides' appended entries); write lane notes docs/wave17/lane-{a,b,c}.md; push wave17-lane-c to origin (rebase over origin/main if needed, no force-push); update ~/workspace/agent-ops/checkpoints/trippedd-resource-pull-wave17.json to done.",
+ "status": "done",
+ "task": "Wave 17 Lane C: quarantine spot-check + merge",
+ "updated_at": "2026-10-07T17:50:00-04:00",
+ "watchdog": true,
+ "result": "Spot-check 15 rows upstream: 14 confirmed, row 169 Subtitle Edit RELICENSED MIT -> DELISTED. Docker deferred (no runtime). LGPL still pending. Merged lane A then lane B: Lane B row 170 renumbered 170->185 (collision with Lane A row 170); rows 170/171/172 SUPERSEDED by 122/124/125; row 185 SUPERSEDED by 99. Final: 1842 catalog #### entries; quarantine 185 rows / 171 distinct. Branch wave17-lane-c pushed (tip 9681418), merge-ready for main."
+}

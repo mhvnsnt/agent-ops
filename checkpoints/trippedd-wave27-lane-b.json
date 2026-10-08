@@ -1,0 +1,9 @@
+{
+ "attempts": 0,
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "TRIPPEDD Resource Pull Program WAVE 27, Lane B. Repo: ~/workspace/trippedd-studio, branch wave27-lane-b. Tasks: (1) Quarantine spot-check: pick 10 never-audited rows from docs/LICENSE_QUARANTINE.md (identify by absence of 'verified' annotation; cross-check docs/wave* lane notes), verify each license upstream (GitHub API spdx_id, raw LICENSE fetch, or project site), apply corrections/SUPERSEDED/delists, recompute header family counts, annotate 'verified 2026-10-07'. (2) Tool wiring: Speaches Docker smoke-test only if docker runtime exists (check `docker info`); VGMTrans only if Qt dev libs available; otherwise document as deferred. If another catalog tool is wireable with real proof, wire under tools/ with proof artifacts + SHA256. Never commit binaries >100MB. (3) Type Studio vendor URL (typestudio.co) confirmation needs a LIVE BROWSER \u2014 generic subagent cannot do it; report as 'needs parent delegation to live-browser route'. Do NOT touch production/WIZARD_GANG_EP01/ (uncommitted other-worker files). Do NOT push or merge. Commit on wave27-lane-b and report: 10 rows with per-row verdicts, tools wired/deferred, Type Studio note, commit hash.",
+ "status": "done",
+ "task": "Wave 27 Lane B: quarantine spot-check + tool wiring",
+ "updated_at": "2026-10-08T01:38:00Z",
+ "watchdog": true
+}

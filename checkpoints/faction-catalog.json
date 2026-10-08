@@ -1,0 +1,9 @@
+{
+  "attempts": 0,
+  "repo": "/home/hatch/workspace",
+  "resume_brief": "Compile canon faction catalog from AshLanev2 docs + Bannon docs into ~/workspace/ashlane-art/FACTION_CATALOG.md per the brief below",
+  "status": "done",
+  "task": "faction catalog",
+  "updated_at": "2026-10-07T04:02:00Z",
+  "watchdog": true
+}

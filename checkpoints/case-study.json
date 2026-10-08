@@ -1,0 +1,10 @@
+{
+ "attempts": 1,
+ "repo": "~/workspace/money-machine-hq/case-studies/",
+ "resume_brief": "CODE DOCTOR CASE STUDY: find a REAL broken repo (Repo Co Dev rescue or other broken AI-built app in owner's repos), fix it for real, document before/after with screenshots+test evidence in CASE_STUDY.md under ~/workspace/money-machine-hq/case-studies/. Do NOT manufacture a fake broken app. Owner reviews personally. Commit incrementally.",
+ "status": "done",
+ "task": "Code Doctor case study",
+ "updated_at": "2026-10-07T01:10:00-05:00",
+ "watchdog": true,
+ "result": "CASE_STUDY.md complete: CODEDUMMY audit found boot-fail + unauth file read/write + static root exposure; fixed (vendored THREE, admin-token auth, allowlisted static, upload cap, README rewrite); verified with screenshots + re-probes; committed to money-machine-hq"
+}

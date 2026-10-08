@@ -1,0 +1,27 @@
+{
+  "task": "flaps",
+  "status": "fix_prototype_complete_pending_owner_review",
+  "model": "BANNON_muscular_skinned.glb",
+  "branch": "round6/generative-art",
+  "commit": "2f1257e",
+  "diagnosis": {
+    "armpit_webbing": "XFER weight transfer left chaotic blends along full arm chain (e.g. forearm verts 50% bound to static Shoulder bone). Previous repairArmpitWeights only targeted 0.28m radius around shoulder - missed verts 0.5m+ out. Root cause: static Shoulder bone never rotates in mocap; any Shoulder weight on arm verts tears proportionally.",
+    "black_ribbons": "Not hair (verified: persists with Head/Neck hidden). Distinct strip mesh; not affected by arm skinning. Likely clothing strap/accessory with UV issues. Needs separate identification.",
+    "texture_stretching": "Source asset issue - Tripo 2048x2048 texture with stretched UV islands. Not fixable via weights; requires re-UV or repaint.",
+    "unnatural_arm_angles": "Walk-test uses REAL CMU mocap (banks.cmu['walk']), NOT procedural. Unnatural look comes from broken skin weights tearing the mesh, not the animation source."
+  },
+  "fix": {
+    "function": "repairArmSkinningV2 in tools/promo-video/reskin.js",
+    "method": "Full arm-chain re-skin: tube around Shoulder->Elbow->Wrist->Hand polyline for clean segment weights; fold-zone verts moved to Shoulder; strip small static-Shoulder weights from arm-dominated verts; finger verts (Unused17/18/19) untouched.",
+    "metric": "webbing verts (>0.15m displacement on 90° arm raise): 545 -> 198 (64% reduction). Max tear: 0.515m -> 0.336m.",
+    "renders": "tools/promo-video/diag-flaps/ARMSKIN_arm90.png, ARMSKIN_rest.png"
+  },
+  "remaining": [
+    "198 verts still exceed 0.15m (legitimate fold blend band + 4-way messy blends at wrist)",
+    "Black ribbon strip not identified/fixed",
+    "Texture stretching is source-asset limitation",
+    "Owner approval needed before rolling to other models",
+    "DO_NOT_TOUCH_WEIGHTS roster untouched (BILL_DOZER, JUDAS, MARKS, SOMBRA_NEGRA)"
+  ],
+  "updated": "2026-10-06T18:30:00Z"
+}

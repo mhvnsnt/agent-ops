@@ -1,0 +1,11 @@
+{
+ "attempts": 3,
+ "heartbeat_note": "Fresh start after previous worker died with empty staging dir. Pulling repo + checking build artifacts.",
+ "repo": "~/workspace/street-brawl-cicd/",
+ "resume_brief": "You are the itch.io launch worker for Concrete Dragon. Resume: 1) Pull latest mhvnsnt/ConcreteDragon (checkout ~/workspace/street-brawl-cicd/). 2) Get latest working build (web zip + APK), verify it actually runs \u2014 never ship a stub. 3) Write ~/workspace/concrete-dragon-itch/page.md (title Concrete Dragon, tagline, honest description, tags, controls, price $4.99). 4) Cover art 630x500 + banner + REAL gameplay screenshots in ~/workspace/concrete-dragon-itch/art/. 5) Research itch.io CURRENT payout options (web search, no browser): can itch.io pay direct ACH to Cash App routing/account numbers, or is PayPal/intermediate required? Write exact steps in ~/workspace/concrete-dragon-itch/PAYOUT_STEPS.md. 6) Stage builds in ~/workspace/concrete-dragon-itch/builds/. DO NOT publish \u2014 no itch.io account exists yet. Report: staged files, sellability verdict, payout answer, what's blocking publish.",
+ "status": "done",
+ "task": "itch.io launch package for Concrete Dragon ($4.99, sell starting today)",
+ "updated_at": "2026-10-07T12:40:54.155153+00:00",
+ "watchdog": true,
+ "notes": "DONE 2026-10-07 08:40 EDT (watchdog resume, attempt 3): launch package verified complete on disk. Staged: web build concrete-dragon-3d/concrete-dragon.html (1.8MB), Android street-brawl.apk + .aab (~101MB each), 4 real gameplay screenshots (c3-fight1, c4-combat, shot-game2, shot-menu), cover-630x500.png + banner-1062x300.png (verified exact sizes), page.md (title/tagline/honest description/tags/controls/price $4.99), PAYOUT_STEPS.md (itch.io pays PayPal/Payoneer ONLY \u2014 no direct ACH to Cash App; path is itch.io\u2192PayPal\u2192Cash App bank numbers). Publish BLOCKED on owner: no itch.io account exists and account creation (identity/KYC) is the owner action; nothing was published, no accounts created, no platform contact."
+}

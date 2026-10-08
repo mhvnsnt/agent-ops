@@ -1,0 +1,10 @@
+{
+ "attempts": 0,
+ "repo": "none-staging-only",
+ "resume_brief": "TOP-100 HEART-AND-SOUL RESEARCH \u2014 WAVE 3 (owner directive 2026-10-06). Research these 10 games: League of Legends, Dota 2, Counter-Strike 2, Valorant, Apex Legends, Overwatch 2, World of Warcraft, Final Fantasy XIV, Destiny 2, Warframe. METHOD: browser.search (text queries like 'Riot developer interview what keeps League of Legends players') + browser.open (fetch page text from returned links) to find developer interviews, GDC talks/postmortems, studio blog posts, reputable games-press interviews. No live browser. OUTPUT: for each game write /home/hatch/workspace/agent-ops/top100-staging/wave-3/<slug>.md with exact structure: title '# <Game> \u2014 Heart and Soul'; bullets: Developer / studio; Genre / platforms; Why players come back (in the devs' view); Key quotes (2-4, each as: \"quote\" \u2014 Name, Role, Publication/Event, Year; append [unverified] if from search snippet); Why players love/support it; Monetization philosophy (devs' words, if any); Lesson for our games (1-2 lines, concrete); Sources (URLs); Coverage note (say explicitly if no on-record dev statements; label press analysis as ANALYSIS, never quotes). Slugs: league-of-legends, dota-2, counter-strike-2, valorant, apex-legends, overwatch-2, world-of-warcraft, final-fantasy-xiv, destiny-2, warframe. RULES: sourced quotes only, never invent; mark snippet quotes [unverified]; 'No on-record statement found' where devs silent; press analysis labeled ANALYSIS. Do NOT commit to any git repo. Write ONLY to staging dir; write each file as finished; SKIP games whose file already exists.",
+ "status": "done",
+ "task": "top100 wave 3 (League of Legends, Dota 2, CS2, Valorant, Apex Legends, Overwatch 2, WoW, FFXIV, Destiny 2, Warframe)",
+ "updated_at": "2026-10-06T22:30:00Z",
+ "watchdog": true,
+ "progress": "10/10 DONE — all wave-3 files written: league-of-legends, dota-2, counter-strike-2, valorant (pre-existing), apex-legends, overwatch-2, world-of-warcraft, final-fantasy-xiv, destiny-2, warframe (this worker)"
+}

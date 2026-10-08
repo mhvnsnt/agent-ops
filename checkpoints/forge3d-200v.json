@@ -1,0 +1,9 @@
+{
+  "attempts": 0,
+  "repo": "~/workspace/forge3d",
+  "resume_brief": "Forge3D vertical expansion: extend pipelines/ (never duplicate texture.py, densify.py, measure.py) in mhvnsnt/Forge3D workdir ~/workspace/forge3d. (1) Build forge3d/pipelines/upscale.py: real-ESRGAN 2x texture upscaling \u2014 check AshLanev2 clone under ~/workspace for tools/generative ESRGAN wrapper; fallback ~/workspace/api-wiring/bin/realesrgan-ncnn-vulkan. Extract GLB embedded textures, upscale 2x (768->1536), re-embed; prove with before/after renders + texture size numbers in docs/stage-evidence/upscale/. (2) Find Bannon's lod_chain (search ~/workspace clones + Bannon git history); port as forge3d/pipelines/lod.py producing LOD0/1/2 GLBs; prove with face-count table. (3) Normal-map stage: generate normal map from mesh geometry (bpy bake via headless Blender in forge3d/_vendor, or trimesh-based), attach as material normalTexture on a copy of docs/stage-evidence/trellis-first/trellis-concept1.glb; prove with render. (4) Remesh shootout: voxel remesh vs bmesh cleanup on same mesh \u2014 measure faces, watertight, seconds; write docs/REMESH_SHOOTOUT.md with winner. (5) LICENSES.md + docs/PROVENANCE.md. IMPORTANT: another worker has UNSTAGED changes in this tree \u2014 only git add/commit files you created yourself. Push at end: git fetch origin first, push commits; never git pull --rebase on dirty tree. Test subject GLB: docs/stage-evidence/trellis-first/trellis-concept1.glb. Verification law: GLB+PNG evidence pairs committed per stage with measured numbers.",
+  "status": "done",
+  "task": "Forge3D vertical depth stages",
+  "updated_at": "2026-10-07T00:14:53-05:00",
+  "watchdog": true
+}

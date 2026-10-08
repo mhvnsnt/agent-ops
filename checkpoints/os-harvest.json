@@ -1,0 +1,16 @@
+{
+  "integrated": [],
+  "last_update": "2026-10-06T13:35:00-05:00",
+  "program": "os-harvest",
+  "quarantined": [],
+  "started": "2026-10-06T12:01:12-05:00",
+  "status": "sweep1_COMPLETE_all_5_tracks_done",
+  "sweeps": {
+    "game_tech": "completed_16d6d393",
+    "money_tooling": "completed_b43110f4_3rd_attempt",
+    "free_apis_quantum": "3eb0f352-1979-44ec-8dc1-ffb3d6f52a86_redispatch",
+    "general_profitable": "ee0ef9a6-9ff1-4e5d-aecf-a34e18c122b2_redispatch"
+  },
+  "quantum_expansion": "completed_2026-10-06",
+  "backlog_count": 30
+}

@@ -1,0 +1,9 @@
+{
+  "attempts": 0,
+  "repo": "/home/hatch/workspace/game-sweep/AshLanev2",
+  "resume_brief": "You are the MENU ART KIT worker for AshLane (Urban Reign-style street brawler; active repo mhvnsnt/AshLanev2, local clone at ~/workspace/game-sweep/AshLanev2 \u2014 read-only, DO NOT push). Style formula (owner-locked): Shadow Wizard Money Gang + Malakor = underlying world language (dark streets, neon purples, toxic greens, gold chains, spellbook graffiti, hooded void-face figures); Tekken + Urban Reign = overlying presentation (bold fighter cards, combat energy, strong silhouettes). Palette: blood-red / toxic-green / gold / purple. Match existing pieces in ~/workspace/ashlane-art/menu/ and ~/workspace/ashlane-art/emblems/. Deliver 8 pieces under ~/workspace/ashlane-art/menu-kit/: 1) graffiti ASHLANE logo (exactly 'ASHLANE', main color), 2) same logo monochrome gold on dark, 3) menu button/box frame set (normal/hover/pressed side by side), 4) custom cursor: gold-chain boxing-glove pointer on dark, 5) spray-paint stencil decoration sheet (arrows, stars, tags, splatters), 6) street typography specimen A-Z 0-9, 7) gold-chain divider strip + sticker accents, 8) menu background texture: wet asphalt + brick + neon glow (wide, no text). HARD RULES: no third-party game branding (no Tekken/Urban Reign/WWE text); never use unconfirmed faction name 'The Painted'; spell ASHLANE exactly; regenerate any piece with misspelled/gibberish text. VERIFICATION: open and visually read EVERY generated image with the read tool before marking done. Use media.generate_image (already loaded). Do NOT push to any repo. Update this checkpoint file's updated_at after every deliverable; mark status 'done' at the end.",
+  "status": "done",
+  "task": "AshLane menu art kit",
+  "updated_at": "2026-10-06T19:36:00-05:00",
+  "watchdog": true
+}

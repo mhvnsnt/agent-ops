@@ -1,0 +1,10 @@
+{
+  "task": "owner bug-fix + polish wave (facing, sliding, game feel)",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/street-brawl-cicd",
+  "resume_brief": "CONCRETE DRAGON \u2014 OWNER BUG-FIX + POLISH WAVE (owner played the trailer 2026-10-07, verdict: \"game looks bad, not fun to play or watch \u2014 fix these bugs and make the game better\"). Repo ~/workspace/street-brawl-cicd, work on main, Pages must stay green. DO NOT post the trailer \u2014 kept as draft only.\n\nOWNER-REPORTED BUGS (fix first):\n1. FACING BUG: player faces toward enemies ALWAYS, even when walking past. Correct: face MOVEMENT direction while walking/running; only face enemy when attacking or locked on.\n2. SLIDE BUG: character slides around (no walk animation) for a while, then walk anim kicks in. Correct: walk/run animation starts IMMEDIATELY on movement, synced to speed (animation speed matches velocity, no foot sliding).\n\nTHEN GENERAL POLISH:\n3. Game feel: snappy controls, responsive attacks, hit feedback, impact particles.\n4. Visual quality: character readability, better fighter lighting, smooth idle/walk/attack transitions.\n5. Fun factor: combat pacing, pressuring enemy AI, satisfying KOs.\n\nVERIFY WITH YOUR OWN EYES: capture new gameplay footage after fixes, watch it, confirm bugs gone. Compare before/after.\n\nINVIOLABLE: additive fixes where possible; style-not-power; street naming (invented names need owner approval); slow-mo for big moments only; CC0/CC-BY-clean; tip jar paypal.me/MarquisWhitacre stays; commit INCREMENTALLY, pull/rebase, never force-push; zero page errors.",
+  "updated_at": "2026-10-07T17:28:12.512742+00:00",
+  "attempts": 0,
+  "notes": "2026-10-07 DONE: 3 batches pushed (d0b1160 facing+slide fixes, b190409 player follow-light, 5079593 debug+airT fix). Verified: screenshots show Kid Blue facing movement direction (not enemy) with run anim playing; programmatic tests confirm face=-1 walking left past enemy, face=+1 on attack, animMove=true with velocity-synced timeScale. Zero page errors."
+}

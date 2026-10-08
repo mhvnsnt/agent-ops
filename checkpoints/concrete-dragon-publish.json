@@ -1,0 +1,14 @@
+{
+  "task": "Concrete Dragon repo-rename sweep + no-store publishing pivot",
+  "status": "complete",
+  "note": "Previous worker's commit 8b65396 was already on origin/main with all requested changes; verified rather than duplicated. No new commits needed.",
+  "commits": [
+    {"hash": "8b65396", "msg": "Repo rename sweep + no-store publishing plan (2026-10-06)", "actions_run": "37519770866", "actions_status": "success"}
+  ],
+  "files_changed_in_8b65396": [".github/workflows/build.yml", "README.md", "docs/PUBLISHING.md"],
+  "stale_ref_grep": "zero hits for github.com/mhvnsnt/StreetBrawl or mhvnsnt.github.io/StreetBrawl",
+  "intentional_keeps": ["keystore alias 'streetbrawl'", "package ID com.orionenterprises.streetbrawl", "artifact filenames street-brawl.*"],
+  "publishing_plan": "no-store: itch.io first ($0+donations), APK sideload, CrazyGames/Poki revenue share, donations; Play Console returns at $25/$50/$75/$100 earned milestones",
+  "game_dir": "untouched (separate M1 merge worker active; last game/ commit feb62b5)",
+  "verified_at": "2026-10-06T19:36Z"
+}

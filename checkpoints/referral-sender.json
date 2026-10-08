@@ -1,0 +1,10 @@
+{
+ "attempts": 3,
+ "repo": "~/workspace/referral-outreach",
+ "resume_brief": "Resumed referral sender worker. Code KF90JD, link https://muse.ai/join. Read SEND_LOG.md (never re-message anyone listed), VARIANTS.md (10 variants V1-V10), ROTATION_STATE (next variant index). Recipients: expanded_recipients.json (2,019 friends). Resolve each via contacts --search exact FBID match, send with --to + --text-stdin. Rules: one message per person ever, 10-variant rotation never identical twice in a row, max 20-30 sends/day spaced several minutes apart, stop on rate-limit, checkpoint every send to SEND_LOG.md immediately.",
+ "status": "cancelled",
+ "task": "Muse referral outreach sender \u2014 continue DM sends from SEND_LOG state",
+ "updated_at": "2026-10-06T23:45:12.451584+00:00",
+ "watchdog": true,
+ "notes": "led it, no message sent, no log entry. Angel Harris Jr. (100043005796985) restored to queue head unlogged/unmessaged; queue 420, ROTATION_STATE=8. Attempts now 3 with no successful send since 16:27 CDT \u2014 escalating to needs_owner. Blockers for owner: (1) every messenger CLI send in this detached runtime requires a fresh approval that cannot arrive, so watchdog runs can never send; (2) CHECKPOINT.md says recipient-list/variant approval was still pending owner review as of 14:50 CDT. Options: run sends from a live chat session where approvals can be granted, or re-approve the outreach plan first. 420 contacts remain; 17 sent ok today, 8 failed unreachable. | 2026-10-06: OWNER cancelled referral outreach \u2014 stop for now, redirect agent energy to game work. Watchdog must ignore this checkpoint."
+}

@@ -1,0 +1,9 @@
+{
+  "task": "Forge3D quality-100 pull (wave 1 of continuous quality pulling)",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/forge3d",
+  "resume_brief": "Subagent resuming Forge3D quality-100 pull: workdir ~/workspace/forge3d (mhvnsnt/Forge3D). Read docs/RESOURCE_CATALOG.md (texture/mesh/topology subset = starting base), expand to ~100 entries across texture-SR/synthesis, detail synthesis, mesh quality, retopology, UV, baking, multi-view consistency, scan detail, Blender addons (GPL flagged quarantine). Write docs/QUALITY100.md + docs/quality100.json, update LICENSES.md + PROVENANCE.md. Wire top-5 by impact-per-effort (check git log first to avoid duplicating sibling quality worker stages: remesh shootout, Real-ESRGAN, normal maps). Prove wired items with before/after on docs/stage-evidence/trellis2-full/ outputs. Checkpoint-first law: heartbeat <=10min, commit incrementally, git pull --rebase before push, mark done at end. No secrets, GPL/AGPL quarantine-only. STANDING DIRECTIVE: this 100 is WAVE 1 of continuous pulling against the two losing scorecard dimensions (texture resolution, native detail) + mesh/topology. After wave 1 (catalog + top-5 wired + proof), continue wave 2+ from the backlog: keep pulling free/open-source/free-API/PD, wiring the best into the pipeline. Scorecard docs/TRIPO_SCORECARD.md is the compass \u2014 every wave must move a losing cell.",
+  "updated_at": "2026-10-07T06:30:19.291776+00:00",
+  "attempts": 0
+}

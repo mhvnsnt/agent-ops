@@ -1,0 +1,10 @@
+{
+ "task": "concrete dragon build wave 4 (research-grounded)",
+ "status": "done",
+ "watchdog": false,
+ "repo": "~/workspace/street-brawl-cicd",
+ "resume_brief": "CONCRETE DRAGON \u2014 BUILD WAVE 4: RESEARCH-GROUNDED (owner directive 2026-10-06). Repo ~/workspace/street-brawl-cicd, work on main, Pages must stay green.\n\nREAD FIRST (docs/): GAME_SOUL_TOP100.md (10 design laws), monetization/monetization-plan.md, MECHANICS_HARVEST.md, ROGUELITE_TEARDOWN.md, BEATEMUP_TEARDOWN.md, GAME_ANATOMY.md, PART_ATTACH_SPEC.md.\n\nBUILD ORDERS (additive only):\n- Gear tags + merge tiers, charms, gym expansion, branching circuit map.\n- Harvest mechanic pull-ins not yet built.\n- Zone parts 3/4: maze-like, multidirectional, platformer-like layouts.\n- Per-fighter move-set expansion: keep growing unique moves/combos per fighter AND per enemy archetype; work toward hundreds of fighting + special-attack animations via data-driven animation layering where possible.\n- Wire newly staged wave-4 parts (oga-carmilla-vampire, oga-jellylion-halloween, quaternius-witch) as enemies/unlockables (Blender headless .blend->GLB; Carmilla needs CC-BY 4.0 attribution to JellyLion in credits).\n- Owner playtests keep-or-cut.\n\nINVIOLABLE: style-not-power; street naming (invented names need owner approval); slow-mo for big moments only; ADDITIVE ONLY; CC0/CC-BY-clean + license manifest; tip jar paypal.me/MarquisWhitacre stays; commit INCREMENTALLY, pull/rebase, never force-push; verify with screenshots you inspect; zero page errors.\n\nCHECKPOINT: ~/workspace/agent-ops/checkpoints/concrete-dragon-build3.json, watchdog true, heartbeat after every commit, mark done at end.",
+ "updated_at": "2026-10-07T03:24:16.823735+00:00",
+ "attempts": 0,
+ "notes": "2026-10-07 COMPLETE: all 6 batches committed + pushed (6aee253). Wave-4 research-grounded systems live. Zero page errors. Screenshots verified."
+}

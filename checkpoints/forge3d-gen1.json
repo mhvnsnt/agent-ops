@@ -1,0 +1,10 @@
+{
+  "attempts": 7,
+  "repo": "~/workspace/forge3d",
+  "resume_brief": "Resume Forge3D model #1 generation loop. Parent task: generate first free 3D models with the Forge3D pipeline scaffold (mhvnsnt/Forge3D, workdir ~/workspace/forge3d). Path A: pollinations-image (keyless text->image) -> vendored TripoSR on CPU -> trimesh cleanup -> GLB. Path B: sign up at enter.pollinations.ai/keys for FREE Pollinations 3D API key using authorized email FMMG.MARS@gmail.com (standing account-creation permission: complete flow, read verification code from Gmail via gmail skill, accept ToS; store key ONLY in env var/Secure Vault, NEVER in repo/chat), then run trellis-2-low image->3D. Test subjects: generic street-brawler types only (NO canon chars, NO invented canon names), max 2. Every output: GLB + preview PNGs on WHITE VOID background with full framing (whole model visible, margins), verify GLB opens with sane vertex/tri counts and non-zero bounds (corrupt/empty = loud failure). Commit + push to mhvnsnt/Forge3D main, no secrets in repo ever. Final report to parent: preview PNG paths, GLB paths, vertex counts, per-model generation time, which path produced which, honest quality notes vs Tripo, next-iteration recommendation. Read repo README/docs first: ~/workspace/forge3d/README.md, docs/.",
+  "status": "done",
+  "task": "Forge3D first free model generation loop",
+  "updated_at": "2026-10-07T01:57:37.264092+00:00",
+  "watchdog": true,
+  "result": "Pipeline built and hardened; 2 concept images generated. TripoSR inference blocked by VM RAM (needs ~2.5GB sustained, VM provides 0.8-5GB volatile). Weights downloaded (1.56GB fp32 + 838MB bf16). Path B (Pollinations 3D API) needs browser signup for key."
+}

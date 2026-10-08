@@ -1,0 +1,10 @@
+{
+  "attempts": 0,
+  "repo": "none-staging-only",
+  "resume_brief": "TOP-200 HEART-AND-SOUL RESEARCH \u2014 WAVE 12 (owner directive 2026-10-06, top-200 expansion). For EACH of 10 games (Pok\u00e9mon Scarlet/Violet, Super Mario Odyssey, Zelda: Tears of the Kingdom, Splatoon 3, Pikmin 4, Super Mario Party Jamboree, Kirby and the Forgotten Land, Astro Bot, Ratchet & Clank: Rift Apart, LEGO Star Wars: The Skywalker Saga), research what developers and people who work on the game SAY keeps players coming back/playing/paying/supporting. METHOD: browser.search + browser.open only, no live browser. Write /home/hatch/workspace/agent-ops/top100-staging/wave-12/<slug>.md per game with EXACT structure: # <Game> \u2014 Heart and Soul; bullets: Developer/studio, Genre/platforms, Why players come back (in the devs' view), Key quotes (2-4, each: quote \u2014 Name, Role, Publication/Event, Year; [unverified] if snippet-sourced), Why players love/support it, Monetization philosophy (devs' words), Lesson for our games (1-2 lines concrete), Sources (URLs), Coverage note. RULES: sourced quotes only, never invent; unverifiable excluded; snippet-sourced marked [unverified]. Do NOT commit to git. Checkpoint-first; heartbeat after each file; mark done at end.",
+  "status": "done",
+  "task": "top200 wave 12",
+  "updated_at": "2026-10-06T22:44:00Z",
+  "watchdog": true,
+  "progress": "10/10 files done"
+}

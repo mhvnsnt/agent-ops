@@ -1,0 +1,10 @@
+{
+ "attempts": 0,
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "Resume Wave 9 F8 EDGE-BOUNCE tranche for Concrete Dragon (mhvnsnt/ConcreteDragon). Task: wire airborne enemy horizontal knock velocity + arena-wall bounce (Urban Reign style) so launched enemies bounce back into juggle range instead of clamping dead at bounds. Files: game-3d/src/main.js \u2014 (1) landHit launcher branch: set e.kvx/e.kvz (away from player, player.face*7.5, kvz \u00b11.5..3); (2) enemyAI airborne branch: integrate kvx/kvz with air drag, bounce off x:[0.5,maxX] z:[-1.4,1.4] bounds reflecting velocity*0.75, thud sfx('crack',0.55,rate 0.6), grey burst VFX, 'EDGE BOUNCE!' popText, T.bounces counter, ev('edgebounce'), small vy pop to keep juggle alive; set root.position.x/z directly (NOT syncPos \u2014 it would zero airborne y); (3) __cdtest.edgeBounceTest() hook: launches enemy toward left wall with kvx=-30, steps enemyAI at 1/60 until bounce, returns {ok,bounced,frames,stillAirborne,px,kvx}. Playtest game-3d/qa/playtest-edgebounce.mjs (puppeteer, copy playtest-dodgesfx.mjs pattern, shots to game-3d/shots-edgebounce/): boot, m1 start, enemy present, edgeBounceTest bounced=true + kvx reflected >0 + px>=0.5 clamped, zero console/page errors. Build: cd game-3d && node build.mjs -> dist/concrete-dragon.html. Docs: docs/WIRING_QUEUE.md item 7 F8 -> DONE, docs/TRANCHE_WAVE9_EDGEBOUNCE.md decision doc, no new assets (reuse CC0 Kenney crack.mp3 at low pitch + existing grey burst \u2014 note in game/assets/ASSET_MANIFEST.md policy comment if needed). Commit incrementally + PUSH origin/main; watch CI (Build Concrete Dragon), fix if red. Then: log user_goal entry goal_7202f1530a78. Laws: game must actually work, no fake gameplay, Concrete Dragon = street brawler singular, no invented characters/names.",
+ "status": "done",
+ "task": "concrete-dragon-pipeline wave 9 F8 edge-bounce",
+ "updated_at": "2026-10-07T17:25:00-04:00",
+ "watchdog": true,
+ "notes": "Wave 9 complete: commit 355772f, CI 37687732442 green, 12/12 playtest pass, shots eyes-on verified."
+}

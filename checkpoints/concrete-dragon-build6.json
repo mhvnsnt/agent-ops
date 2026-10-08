@@ -1,0 +1,10 @@
+{
+  "task": "build wave 6",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/street-brawl-cicd",
+  "resume_brief": "CONCRETE DRAGON BUILD WAVE 6 (owner directive 2026-10-07: keep working on Concrete Dragon separately). Repo ~/workspace/street-brawl-cicd, work on main, Pages must stay green. Last wave ended at 4b3508e (soul laws: daily login + patch-notes board). Continue additive-only: (1) MOVE-SET EXPANSION DEPTH - per-fighter stance systems from MECHANICS_HARVEST.md, more unique moves/combos per fighter + per enemy archetype; (2) ZONE PARTS 6+ - platformer-style layouts, more maze-like/multidirectional zones; (3) ARENA DRESSING - wire staged Kenney/Poly Pizza props (car-kit, city-kit, furniture-kit) into arenas as decoration + smashables; (4) INFINITE PROGRESSION - deeper endless scaling, more procedural boss variants; (5) GAME_SOUL_TOP100.md laws - generosity/trust-the-player/community mechanics. INVIOLABLE: style-not-power; street naming (invented names need owner approval); slow-mo for big moments only; ADDITIVE ONLY; CC0/CC-BY-clean + license manifest; tip jar paypal.me/MarquisWhitacre stays; commit INCREMENTALLY, pull/rebase, never force-push; verify with screenshots you inspect; zero page errors.",
+  "updated_at": "2026-10-07T08:52:27.038764+00:00",
+  "attempts": 3,
+  "notes": "2026-10-07: DONE \u2014 6 batches committed+pushed. b1 MIXTAPE stances (f479e1c), b2 Zones 6-7 + Foreman/Warden (5b1c311), b3 8 stance finishers (fb59b72), b4 arena dressing (8c179cf), b5 endless mutators + procBoss depth (7c54750), b6 soul laws (a3b50e5). All headless-verified, zero page errors. 2026-10-07 resume subagent confirmed all 6 batches on main (a3b50e5), nothing new to build under wave-6 brief."
+}

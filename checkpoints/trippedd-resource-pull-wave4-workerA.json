@@ -1,0 +1,9 @@
+{
+  "task": "Wave 4 Worker A: wire Zonos + Dia + VibeVoice TTS",
+  "status": "done",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "DONE. Commits: acb7078 (READMEs), edd8827 (proofs+mapping+WAV), pushed 102f6dd..edd8827 to main. Licenses verified: Zonos Apache-2.0, Dia Apache-2.0 (+research-use disclaimer), VibeVoice MIT (+upstream R&D-only intent). No TTS audio from any engine: weights 3.25/6.44/5.41GB exceed free disk (~1.4GB) and free RAM (~2GB) \u2014 exact byte counts in PROOFS_WAVE4_TTS.md. Proven: pip installs (Zonos needed 1-line upstream packaging patch for missing zonos/backbone), model-class imports, HF config downloads, espeak-ng 1.51, DAC codec round-trip WAV (labeled NOT TTS). Dia canonical install pins torch==2.6.0 CUDA (killed at 100%% disk, cleaned). edge-tts: 4th failure, same WSServerHandshakeError:101. No GPL/AGPL in lane.",
+  "updated_at": "2026-10-07T10:00:00-04:00",
+  "attempts": 0
+}

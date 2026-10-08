@@ -1,0 +1,10 @@
+{
+  "task": "Wave 8 Lane C: nijigenerate setup-wizard fix + Static/Kiko battle-pose rigs",
+  "status": "done",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/god-molecule-studio",
+  "resume_brief": "Resume Wave 8 Lane C: (1) live-test the hasDoneQuickSetup setup-wizard fix for nijigenerate headless launch (prior waves: setup wizard not dismissible headless; Xvfb + D-Bus recipe retained); (2) repeat the nijilive puppet-rig recipe for Static and Kiko BATTLE POSES in god-molecule-studio tools/puppet/wizard-rig-proof/ with posed renders + canon comparison, all opened and inspected. Never invent anatomy - document constraints honestly. Commit + push via rebase, never force-push. Mark status done at end.",
+  "updated_at": "2026-10-07T14:25:00-04:00",
+  "attempts": 0,
+  "result": "DONE. Part 1: setup-wizard fix LIVE-TESTED and VERIFIED - hasDoneQuickSetup preseed via INOCHI_CONFIG_PATH skips wizard headless, CLI .inp opens directly. Screenshots prove it. Built nijigenerate from source (LDC 1.36, 3 auto-ref patches). Commit ae3ade5. Part 2: StaticBattle.inp + KikoBattle.inp (9 parts/14 params each), all renders inspected limb-by-limb, RIG_PROOF_WAVE8.md. Commit 12e58bf. Both pushed."
+}

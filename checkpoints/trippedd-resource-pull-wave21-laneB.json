@@ -1,0 +1,13 @@
+{
+ "task": "Wave 21 Lane B: demoscene netlabel operators beyond archive.org mirrors",
+ "status": "done",
+ "watchdog": true,
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "Wave 21 Lane B resource pull. Quota +25 met: catalog 2121 -> 2146. Commits on main: e64474b (catalog +25 + wire-up script + evidence) and c5adbcc (evidence manifest). Remaining: git pull --rebase, push to mhvnsnt/TRIPPEDD-Production-studios- main (no force-push), then mark checkpoint done. No quarantine rows added. Wire-up: tools/music/wave21_laneB_netlabel_wireup.py + tools/music/evidence_wave21_laneB/ (blocsSonic RSS+MP3 with SHA-256; GameChops release list pulled, direct MP3 Bandcamp-gated - recorded honestly).",
+ "updated_at": "2026-10-07T23:20:00-04:00",
+ "attempts": 0,
+ "commits": [
+  "e64474b14eebabce34deadd980b9382231df69fc",
+  "c5adbcc040a9bb410c8faaace41ba515a92abdae"
+ ]
+}

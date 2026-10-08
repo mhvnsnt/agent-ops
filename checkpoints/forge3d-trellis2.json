@@ -1,0 +1,10 @@
+{
+  "task": "Forge3D full-tier trellis-2 generation",
+  "status": "running",
+  "watchdog": true,
+  "repo": "~/workspace/forge3d",
+  "resume_brief": "Subagent resuming Forge3D full-tier trellis-2 generation: workdir ~/workspace/forge3d (mhvnsnt/Forge3D). Source ~/.config/forge3d/api_keys.env for FORGE3D_POLLINATIONS_KEY (never print/log/commit the key). Quest Pollen balance 1.2432, do NOT exceed, do NOT touch Paid Pollen. 1) Query models endpoint for exact pollen prices of trellis-2 (full), trellis-2-large, other 3D models. 2) Generate best affordable full-tier model from runs/gen1/concept1.jpg (hooded fighter) via the verified GET pattern (forge3d/providers/pollinations_3d.py, commit 7cecf1c); image must be a public URL (raw GitHub URL of pushed concept or tmpfiles.org). If budget remains, also do runs/gen1/concept2.jpg. 3) 4-angle white-void previews via forge3d/tools/render_preview.py, commit GLBs+PNGs+stats JSON under docs/stage-evidence/trellis2-full/. 4) Measure with pipelines/measure.py vs Tripo bar and vs -low baseline (96,825 faces). Commit incrementally, git pull --rebase before push (siblings active). Mark checkpoint done at end.",
+  "updated_at": "2026-10-07T04:35:00Z",
+  "attempts": 1,
+  "status": "done"
+}

@@ -1,0 +1,10 @@
+{
+  "attempts": 0,
+  "notes": "DONE 2026-10-06 ~16:35 CDT. Pushed to origin/main as 540a9f8 (cherry-picked from branch commit 62f7d41; local checkout was on stale content/waves-2-4 branch, delivered via clean worktree). Deliverables: docs/GAME_ANATOMY.md (101-item checklist), docs/GAP_AUDIT.md (40 HAVE/24 PARTIAL/37 MISSING), docs/WIRING_QUEUE.md (6 tiers), staged pull-ins (~29MB: Kenney RPG/UI audio, particle pack, 2 city kits, nipplejs MIT, seedrandom MIT) + PULL_INS_LOG.md. Nothing wired into playable build \u2014 beat-em-up worker owns wiring.",
+  "repo": "~/workspace/street-brawl-cicd",
+  "resume_brief": "CONCRETE DRAGON \u2014 GAME-ANATOMY AUDIT + PULL-INS (owner directive 2026-10-06). PHASE 1: research what a complete beat-em-up needs across combat/art/UI/audio/systems/feel/mobile-web; write docs/GAME_ANATOMY.md. PHASE 2: audit current build (~/workspace/money-machine-hq/tracks/playable-ads/kit/src/main.js, repo ~/workspace/street-brawl-cicd) against checklist; mark HAVE/PARTIAL/MISSING. PHASE 3: pull CC0/public-domain/open-source assets/code for gaps; verify licenses (no GPL/AGPL in shipped code, CC0/CC-BY preferred for art, log attribution); stage in ~/workspace/street-brawl-cicd/game/assets/staging/<part>/ with PULL_INS_LOG.md. PHASE 4: write docs/WIRING_QUEUE.md prioritized for the beat-em-up build worker. Do NOT edit the playable build. Constraints: style-not-power; 3D-demo naming style; never invent canon.",
+  "status": "done",
+  "task": "game-anatomy audit + pull-ins",
+  "updated_at": "2026-10-06T16:16:58-05:00",
+  "watchdog": true
+}

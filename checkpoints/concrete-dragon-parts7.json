@@ -1,0 +1,10 @@
+{
+  "task": "part packs wave 7 (AshLane-targeted)",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/street-brawl-cicd",
+  "resume_brief": "CONCRETE DRAGON / ASHLANE \u2014 PART PACKS WAVE 7: KEEP PULLING FOR ASHLANE (owner directive 2026-10-07). This wave is ASHLANE-TARGETED \u2014 stage under for-ashlane/ subdirs. Hunt open-source packs (CC0 or CC-BY ONLY \u2014 verify license from source page; NO GPL/AGPL, NO Mixamo/Adobe-restricted, NO non-commercial). ASHLANE NEEDS: (1) HUMANS/BRAWLERS/CROWD NPCs with animations (fight clips, idle, walk, taunts) \u2014 proper humanoid GLBs, no chibi. (2) STREET CULTURE: boomboxes, graffiti walls, lowriders, basketball hoops, chain-link fences, fire escapes, subway cars, food carts, street lamps, barbershop/bar/gym interiors. (3) ARENA DRESSING: props closing the gap to key art (ashlane-art/districts/) \u2014 neon signs, market stalls, lanterns, industrial details. (4) WEAPONS: bats, chains, pipes, bottles, 2x4s, kendo sticks. (5) CREATURES for Halloween/seasonal roster. SOURCES: OpenGameArt, Sketchfab CC (list finds with URLs for browser pull), Kenney, Quaternius, Poly Pizza, itch.io, GitHub CC0 repos. STAGE in ~/workspace/street-brawl-cicd/game/assets/staging/parts/<pack>/ with per-pack LICENSE.md + AshLane-targeted packs under for-ashlane/; update docs/PART_ATTACH_SPEC.md (\u00a714) + PULL_INS_LOG.md. Track counts per category. Checkpoint: ~/workspace/agent-ops/checkpoints/concrete-dragon-parts7.json \u2014 heartbeat after every pack, mark done at end; report pack list + licenses + gap log.",
+  "updated_at": "2026-10-07T06:17:00.567786+00:00",
+  "attempts": 0,
+  "notes": "2026-10-07T06:30Z: DONE \u2014 196 models across 21 source packs staged under for-ashlane/ (7a: 44 GLB+1 zip brawlers/crowd; 7b: 111 GLB+1 OBJ streets/arena-dressing; 7c: 41 GLB+3 zips weapons/creatures). 7a worker died to restart but work recovered intact from disk. Docs folded: PART_ATTACH_SPEC.md \u00a714 + PULL_INS_LOG.md wave 7, committed 705f723, pushed main f479e1c..705f723."
+}

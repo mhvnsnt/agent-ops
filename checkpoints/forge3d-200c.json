@@ -1,0 +1,9 @@
+{
+  "task": "Forge3D quality/refinement push",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/forge3d",
+  "resume_brief": "Subagent resuming Forge3D quality/refinement push in ~/workspace/forge3d (repo mhvnsnt/Forge3D). Read README + docs/TRIPO_SCORECARD.md + docs/PROVENANCE.md + LICENSES.md first; extend, never duplicate. Owner verdict: trellis2-high outputs still show mesh/vertex/texture topology issues up close; Tripo far ahead; nowhere near 100%. Work IN ORDER: (1) remesh shootout (voxel vs bmesh vs quad remesh) on docs/stage-evidence/trellis2-full/trellis2-concept2-high.glb \u2014 measure topology (non-manifold edges, pole count, triangle quality) + visual, wire winner as default pipeline stage, document; (2) Real-ESRGAN texture upscaler port from AshLanev2 tools/generative (provenance noted) as texture stage, prove on concept2-high textures with before/after; (3) normal-map generation stage from upscaled textures; (4) speckle-noise reduction on trellis outputs (texture-space cleanup and/or geometry smoothing preserving detail), prove before/after; (5) cleanup/densify hardening to make raw API output watertight robustly on trellis2-high GLBs; (6) update docs/TRIPO_SCORECARD.md honestly after each stage; (7) LICENSES.md + PROVENANCE.md updates, GPL/AGPL quarantined, no secrets. VERIFICATION LAW: every stage needs committed proof (GLB+PNG before/after, measured numbers) on REAL trellis2-high outputs. git pull --rebase before push (siblings active: RAM-hardening + catalog sweep). Heartbeat <=10 min. Mark done at end. Report: stages landed w/ proof paths, measured quality deltas, scorecard summary, what is left.",
+  "updated_at": "2026-10-07T05:39:14.628105+00:00",
+  "attempts": 0
+}

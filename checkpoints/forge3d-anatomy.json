@@ -1,0 +1,9 @@
+{
+ "attempts": 0,
+ "repo": "~/workspace/forge3d",
+ "resume_brief": "Subagent resuming Forge3D anatomical defect gates: workdir ~/workspace/forge3d (mhvnsnt/Forge3D). Context: grunt_onyx shipped with horse-shaped lower leg; owner verdict TRASH; generation frozen until pipeline is 400% better. Test corpus: docs/stage-evidence/grunt-batch/grunt_onyx (GLB+preview, MUST FAIL with leg defect named), docs/stage-evidence/trellis2-full/trellis2-concept2-high (MUST PASS). Task: build forge3d/pipelines/anatomy_gates.py (Forge3D-original) with: (1) limb proportion checks from the 58-bone rig (upper/lower leg ratios, arm/leg segments, L/R symmetry); (2) joint-angle sanity (knees/elbows bend anatomically, no digitigrade/horse reverse joints); (3) MediaPipe pose estimation on 4-angle previews (limb counts, foot-on-ground, asymmetries); (4) head/hands/feet presence + rough proportions; (5) single pass/fail verdict naming failed gate + measurements. Proof: run gates on both corpus models (onyx FAIL naming leg defect, concept2 PASS), commit code + docs/ANATOMY_GATES.md with measured numbers, wire gates into generation pipeline path so failed models fail loudly and are quarantined before presentation. Checkpoint law: heartbeat <=10min, commit incrementally, git pull --rebase before push, mark done at end.",
+ "status": "done",
+ "task": "Forge3D anatomical defect gates",
+ "updated_at": "2026-10-07T07:11:52.441624+00:00",
+ "watchdog": true
+}

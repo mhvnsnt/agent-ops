@@ -1,0 +1,10 @@
+{
+  "task": "AshLane research-based build wave",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/game-sweep/AshLanev2",
+  "resume_brief": "ASHLANE V2 RESEARCH-BASED BUILD WAVE (owner 2026-10-07). Repo ~/workspace/game-sweep/AshLanev2, main, push when green. 1) Wire staged AshLane parts (~/workspace/street-brawl-cicd/game/assets/staging/parts/*/for-ashlane/) into game: brawlers/crowd NPCs with fight clips, neon signs/street props, melee weapons. NO monsters/creatures (AshLane humans-only). 2) Seasonal system: calendar-gated decorations (Halloween props Oct-only per SEASONAL.md flags; Christmas/snow around Dec). 3) Combat depth from Urban Reign/Def Jam/Yakuza/Sleeping Dogs research: unique movesets, grapples, environmental takedowns, crowd reactions. 4) Hunt next AshLane part wave for Christmas/snow props. INVIOLABLE: LANE sign on top of wall; NO KayKit chibi; VS overlay ~1s skippable; invented names need owner approval; CC0/CC-BY-clean + credits; incremental commits, pull/rebase, never force-push; tsc clean; npm test document pre-existing failures; verify with screenshots.",
+  "updated_at": "2026-10-07T14:06:45.277942+00:00",
+  "attempts": 0,
+  "notes": "DONE \u2014 3 batches pushed (d6420764..044d436d). b1: staged parts wired (neon/market/industrial/weapons/brawlers/seasonal registries). b2: environmental takedowns + street crowd gather/disperse. b3: seasonal stage hook + 40 Christmas props. tsc clean; npm test 192 pass/11 pre-existing fail."
+}

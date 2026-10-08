@@ -1,0 +1,57 @@
+{
+  "task_id": "narrator",
+  "agent_id": "6b7e1128-8b3b-4eca-973f-49a19b67e4f1",
+  "repo": "mhvnsnt/AshLanev2",
+  "branch": "main",
+  "goal": "Build THE NARRATOR: 4th-wall-breaking purple-robe wizard mascot with 3D model, engine hooks, dialogue, presentation overlay",
+  "status": "completed",
+  "spawned_at": "2026-10-06T10:21:45Z",
+  "last_heartbeat": "2026-10-06T10:45:38Z",
+  "steps_completed": [
+    {
+      "at": "2026-10-06T10:31:13Z",
+      "step": "model.ts: procedural 3D wizard with full animation rig (idle/talk/point/shrug/facepalm/hype/appear/hide)"
+    },
+    {
+      "at": "2026-10-06T10:31:13Z",
+      "step": "lines.ts: story-moment dialogue bank (~12 weighty lines, scarcity design)"
+    },
+    {
+      "at": "2026-10-06T10:31:13Z",
+      "step": "narrator-store.ts + director.ts: zustand presence store, story-state watcher (first_boot/act_transition/rival_down/campaign_complete/level_milestone, 120s cooldown)"
+    },
+    {
+      "at": "2026-10-06T10:31:14Z",
+      "step": "voice.ts: Bill $aber voice plumbing, owner-recorded manifest, NO AI synthesis without owner confirmation"
+    },
+    {
+      "at": "2026-10-06T10:31:14Z",
+      "step": "NarratorOverlay.tsx: PiP 4th-wall stage, own three.js canvas"
+    },
+    {
+      "at": "2026-10-06T10:31:14Z",
+      "step": "wired into ashlane-app.tsx, tsc clean, docs/NARRATOR.md written"
+    },
+    {
+      "at": "2026-10-06T10:45:38Z",
+      "step": "proof renders: 3 iterations, final model verified visually (void face, grill, braids, chains all read correctly)"
+    }
+  ],
+  "next_steps": [
+    "Audit campaign.ts for story-state hooks (territory, chapters, missions, unlocks)",
+    "DONE"
+  ],
+  "key_paths": [],
+  "decisions": [
+    {
+      "at": "2026-10-06T10:24:59Z",
+      "decision": "Owner correction 2026-10-06: Narrator appears SOMETIMES at curated story-progression moments only (gang war shifts, territory changes, chapter transitions, character milestones, major unlocks). NOT a constant commentator \u2014 no mid-match play-by-play, no constant banter. Scarcity = event feel. Triggers tie to campaign/story state, not moment-to-moment gameplay."
+    },
+    {
+      "at": "2026-10-06T10:45:38Z",
+      "decision": "Another worker reverted ashlane-app.tsx mid-task; re-applied wiring and committed immediately. Lesson: commit wiring changes separately and ASAP."
+    }
+  ],
+  "blockers": [],
+  "resume_prompt": "Continue building THE NARRATOR. Read checkpoints/narrator.json, verify repo state, continue from next_steps."
+}

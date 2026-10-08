@@ -1,0 +1,62 @@
+{
+ "task": "part packs wave 5 (arenas/weapons/humans)",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/street-brawl-cicd",
+ "resume_brief": "CONCRETE DRAGON / ASHLANE \u2014 PART PACKS WAVE 5: ARENAS + WEAPONS + HUMANS + ENVIRONMENTS + ANIMATIONS (owner directive 2026-10-06, EXPANDED by parent 2026-10-06). Hunt open-source packs (CC0 or CC-BY ONLY \u2014 verify license from source page; NO GPL/AGPL, NO Mixamo/Adobe-restricted, NO non-commercial). TARGET: 200-500 models total across all categories. Prioritize big CC0/CC-BY packs to hit volume fast, then fill gaps with singles.\nCATEGORIES:\n1. WRESTLING STRUCTURES: rings, steel cages, MMA octagon cages, cell structures, crowd barriers, ring skirts/aprons, turnbuckles. IP law: \"hell in a cell\" is WWE trademark \u2014 in-game names ORIGINAL (e.g. \"steel cell\").\n2. WEAPONS: tables, ladders, chairs, kendo sticks, sledgehammers, baseball bats, trash cans, chains, pipes, bricks. RESEARCH FIRST: document weapon lists from WWE games, Urban Reign, Tekken, Yakuza, Sleeping Dogs in docs/PART_ATTACH_SPEC.md, then hunt FREE 3D models of GENERIC equivalents.\n3. HUMANS FOR ASHLANE: street-wrestler-type humanoids, brawlers, crowd NPCs \u2014 stage in for-ashlane/ subdirectory (AshLane repo, not Concrete Dragon).\n4. CHARACTERS + ANIMATIONS: animated character packs with fight animations (punches, kicks, grapples, taunts, hit reactions, knockdowns, getups) \u2014 prioritize real animation clips.\n5. ENVIRONMENTS: buildings, city pieces (walls, doors, windows, rooftops, alleys), street props (dumpsters, cars, lamps, fences, crates), interiors (furniture, bars, gyms), anything fitting street brawler / wrestling game.\nSOURCES: OpenGameArt deep search, Sketchfab CC (account exists \u2014 downloads need browser session; STAGE WHAT YOU CAN GET WITHOUT LOGIN, list Sketchfab finds with URLs + licenses for browser pull), Kenney, Quaternius, Poly Pizza, itch.io, KayKit GitHub (KayKit-Game-Assets org).\nSTAGE in ~/workspace/street-brawl-cicd/game/assets/staging/parts/<pack>/ with per-pack LICENSE.md; update docs/PART_ATTACH_SPEC.md (\u00a711) + PULL_INS_LOG.md; track count per category in staging log.\nIP LAW: inspired-by archetypes only. Research may name games; IN-GAME content uses original names only.\nHEARTBEAT after every pack. Mark \"done\" at end; report pack list + licenses + gap log + category counts.",
+ "updated_at": "2026-10-07T04:54:59.410285+00:00",
+ "attempts": 1,
+ "notes": "2026-10-07: 4 Kenney packs staged (326 GLBs): car-kit(50), city-kit-commercial(41), city-kit-roads(95), furniture-kit(140). 5 more Kenney packs rate-limited (retry later). Drive quota-blocked for Quaternius. Now: Poly Pizza + OGA hunt.",
+ "result": {
+  "models_staged": 334,
+  "packs": [
+   {
+    "pack": "kenney-car-kit",
+    "models": 50,
+    "license": "CC0"
+   },
+   {
+    "pack": "kenney-city-kit-commercial",
+    "models": 41,
+    "license": "CC0"
+   },
+   {
+    "pack": "kenney-city-kit-roads",
+    "models": 95,
+    "license": "CC0"
+   },
+   {
+    "pack": "kenney-furniture-kit",
+    "models": 140,
+    "license": "CC0"
+   },
+   {
+    "pack": "pp-arenas-weapons",
+    "models": 4,
+    "license": "CC-BY x3 + CC0 x1"
+   },
+   {
+    "pack": "pp-quaternius-brawlers/for-ashlane",
+    "models": 4,
+    "license": "CC0"
+   }
+  ],
+  "category_counts": {
+   "environments": 326,
+   "arenas": 2,
+   "weapons": 6,
+   "humans_ashlane": 4
+  },
+  "gaps": [
+   "MMA octagon (Sketchfab browser pull)",
+   "steel cage (build or browser pull)",
+   "5 Kenney packs rate-limited",
+   "KayKit animations (browser pull)",
+   "Quaternius Drive quota-blocked"
+  ],
+  "docs": [
+   "docs/PART_ATTACH_SPEC.md \u00a712",
+   "game/assets/staging/PULL_INS_LOG.md Wave 5"
+  ]
+ }
+}

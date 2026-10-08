@@ -1,0 +1,11 @@
+{
+ "attempts": 1,
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "Coordinator for WIZARD GANG EP01 FIX #1: the 108-130s stretch (tail of S13 'THE DERAIL BEGINS') replays the same BBQ lineup shot 3-4 times then freezes until 2:10. Replace video 108.0-130.0s with a NEW 22s cookout scene in the locked cartoonier style (grill close-up, war-plan map as placemat, Theory sketching, Sombra checking watch, Onyx taking burger, Ashes tending grill, Static mid-yap). Audio stays untouched. Canon/QC gates: robe colors locked, black-void faces + eye glints (Ashes grill grin), correct stable pendants, no hallucinated text, no cropped heads/feet, check docs/AI_SLOP_CHECKLIST.md per item. Splice with clean full re-encode (never -c copy joins). Verify 100-135s region + full decode scan. Deliver: updated wizard-gang-ep01-16x9.mp4 under 100MB for repo + Drive upload (hatch_gws_cli), record link in PROVENANCE.md, commit + push.",
+ "status": "done",
+ "task": "EP01 fix #1: replace 108-130s repeated BBQ with new scene",
+ "updated_at": "2026-10-07T21:15:00Z",
+ "watchdog": true,
+ "notes": "COMPLETE. Worker A: 22.0s new scene QC-passed (3 regenerations). Worker B: spliced 108-130s, audio untouched, full re-encode 91MB, decode clean, boundaries verified frame-by-frame. Drive: https://drive.google.com/file/d/11r-sGo_ECo0TlWCI1ntLOHwek1kItF0T/view. Commit cfe4ec4 on origin/main. Coordinator independently verified all 8 boundary frames + decode + audio.",
+ "completed": "S13 tail 108-130s replaced with new 22s cookout scene; splice verified independently (frames at 107.9/108.1/115/120/125/129.9/130.1/135 grabbed: clean cuts at both boundaries rms~78, motion present within new scene rms 52-58 = no freeze; t=115 Theory/purple robe/THEORY pendant sketching, t=125 Ashes/red robe/$ pendant grill-grin + Static/blue robe/STATIC pendant = canon gates pass). Commit cfe4ec4 pushed to origin/main. PROVENANCE.md records QC + Drive link https://drive.google.com/file/d/11r-sGo_ECo0TlWCI1ntLOHwek1kItF0T/view"
+}

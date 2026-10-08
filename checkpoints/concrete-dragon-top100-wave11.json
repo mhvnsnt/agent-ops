@@ -1,0 +1,10 @@
+{
+  "attempts": 0,
+  "repo": "none-staging-only",
+  "resume_brief": "TOP-200 HEART-AND-SOUL RESEARCH \u2014 WAVE 11 (owner directive 2026-10-06). For EACH of 10 games (Diablo Immortal, Pok\u00e9mon UNITE, Eggy Party, Lineage M, Royal Kingdom, Travel Town, Gossip Harbor, Dice Dreams, Stumble Guys, Mobile Legends: Bang Bang), find what developers and people who work on it SAY keeps players coming back, playing, paying, and supporting it. METHOD: browser.search (e.g. 'Diablo Immortal developer interview design philosophy') + browser.open to fetch page text from links. NO live browser \u2014 search/fetch text only. OUTPUT: for each game write /home/hatch/workspace/agent-ops/top100-staging/wave-11/<slug>.md with EXACTLY the structure: # <Game> \u2014 Heart and Soul; - Developer / studio:; - Genre / platforms:; - Why players come back (in the devs' view):; - Key quotes: (2-4; each: \"quote\" \u2014 Name, Role, Publication/Event, Year; append [unverified] if from a search snippet not a fetched page); - Why players love/support it:; - Monetization philosophy (devs' words, if any):; - Lesson for our games (1-2 lines, concrete):; - Sources: (URLs); - Coverage note: (if no on-record dev statements found, say so; label press analysis as ANALYSIS, never quotes). Slugs: diablo-immortal, pokemon-unite, eggy-party, lineage-m, royal-kingdom, travel-town, gossip-harbor, dice-dreams, stumble-guys, mobile-legends-bang-bang. RULES: Sourced quotes ONLY \u2014 NEVER invent developer statements. Unverifiable quotes excluded. Snippet-sourced marked [unverified]. Do NOT commit to any git repo \u2014 staging dir ONLY. Write each file as finished (durable progress). Checkpoint: /home/hatch/workspace/agent-ops/checkpoints/concrete-dragon-top100-wave11.json with heartbeat after each file, mark done at end; report games completed.",
+  "status": "done",
+  "task": "top200 wave 11",
+  "updated_at": "2026-10-06T17:50:00-05:00",
+  "watchdog": true,
+  "progress": "10/10 written"
+}

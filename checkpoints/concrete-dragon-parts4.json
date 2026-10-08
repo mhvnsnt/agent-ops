@@ -1,0 +1,10 @@
+{
+ "task": "part packs wave 4 deep hunt (vampires/sports)",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/street-brawl-cicd",
+ "resume_brief": "CONCRETE DRAGON \u2014 PART PACKS WAVE 4: DEEP HUNT (owner directive 2026-10-06). Owner pushed back: previous waves claimed \"no free vampires / sports characters exist\" \u2014 prove him right. Dig DEEPER.\n\nTARGETS:\n1. VAMPIRES (and witches, mummies): real 3D character models, not just composition recipes.\n2. SPORTS CHARACTERS: football players (pads/uniform), basketball players, baseball players \u2014 3D models or at minimum full outfit part sets (jerseys, helmets, pads, gloves).\n\nWHERE TO DIG: OpenGameArt.org deep keyword search (vampire/dracula/nosferatu/baseball/football/basketball/jersey/helmet/sports \u2014 3D art AND collections, paginate); Sketchfab downloadable + CC license search; Kenney.nl full catalog; Quaternius full catalog; itch.io free 3D assets with CC0/CC-BY; Poly Pizza search. Verify 3D vs 2D before staging (2D-only logged, never staged).\n\nLICENSE: CC0 or CC-BY (or equivalent permissive) ONLY. NO GPL/AGPL, NO Mixamo/Adobe-restricted, NO non-commercial. Verify from source page per pack.\n\nDELIVERABLE: download, stage in ~/workspace/street-brawl-cicd/game/assets/staging/parts/<pack>/ with LICENSE note, log it, update docs/PART_ATTACH_SPEC.md. If something truly doesn't exist after honest deep search, document exactly where you looked.\n\nINVIOLABLE: painted multi-piece textures (tint-multiply look law); IP rule \u2014 inspired-by archetypes only, never copy named characters.",
+ "updated_at": "2026-10-07T01:52:55.395113+00:00",
+ "attempts": 3,
+ "notes": "2026-10-07 DONE: staged oga-carmilla-vampire (CC-BY 4.0, real 3D vampire), oga-jellylion-halloween (CC0 skull+ghosts), quaternius-witch (CC-BY, present). Committed+pushed 35d4b8f. Gaps honestly logged: no free 3D mummy anywhere; sports players exist on Sketchfab CC-BY but need login to download; no free American-football player."
+}

@@ -1,0 +1,16 @@
+{
+ "task": "charfix rig repair batch 4: TITAN, TRIPLE_XXX, TYNESHIA, VIPER, WRECK_PATTERSON in ~/workspace/game-sweep/AshLanev2 (branch charfix)",
+ "status": "done",
+ "watchdog": true,
+ "repo": "/home/hatch/workspace/game-sweep/AshLanev2",
+ "resume_brief": "Continue charfix batch for AshLanev2 branch charfix. Models in public/models/cast/: TITAN.glb, TRIPLE_XXX.glb, TYNESHIA.glb, VIPER.glb, WRECK_PATTERSON.glb. For each uncommitted model: run `cd ~/workspace/charfix/tools && timeout 280 node reskin_proximity.mjs <cast-input> /tmp/<name>_fixed.glb`, copy back to public/models/cast/, render via `node _charfix_verify.mjs public/models/cast/<name>.glb ~/workspace/charfix/shots/<name>_v2` from repo root, visually inspect PNGs (fail only for spikes>0.15, detachment, collapsed torso, severe distortion), commit if PASS with `git add` + `git commit` (do NOT push). Skip already-committed models. Report per model: verts fixed, PASS/FAIL, commit hash or defect notes.",
+ "updated_at": "2026-10-07T05:40:00-04:00",
+ "attempts": 0,
+ "done": [
+  "TITAN: 503 fixed, PASS, commit e747e350",
+  "TRIPLE_XXX: 685 fixed but FAIL \u2014 proximity reskin INTRODUCED a thin spike/ribbon at right underarm (visible in armsup + punch; original was clean in both). Reverted working tree to original. NOT committed. Needs weight-paint fix, not proximity reskin.",
+  "TYNESHIA: 611 fixed, PASS, commit 7b44ef0e",
+  "VIPER: 979 fixed but FAIL \u2014 proximity reskin INTRODUCED thin red spike ribbons at underarms (armsup + punch; original clean in both). Reverted working tree to original. NOT committed. Pattern matches TRIPLE_XXX: reskin_proximity is harming these two; needs weight-paint fix instead.",
+  "WRECK_PATTERSON: 741 fixed but FAIL \u2014 proximity reskin INTRODUCED long thin armpit spike (punch) + jagged torn strips along arm side (armsup); original clean in both. Reverted working tree to original. NOT committed."
+ ]
+}

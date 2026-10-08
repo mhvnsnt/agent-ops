@@ -1,0 +1,10 @@
+{
+  "attempts": 1,
+  "repo": "~/workspace/street-brawl-cicd",
+  "resume_brief": "WAVE 7B ASHLANE STREET CULTURE + ARENA DRESSING (part of Concrete Dragon/AshLane part-packs wave 7). Hunt open-source 3D environment/prop packs for AshLane (Urban Reign-style neon-noir urban brawler). Priority: 1) neon signs (BAR, LIQUOR, OPEN, arrows) via Poly Pizza per-model search; 2) street culture (boomboxes, graffiti walls, lowriders, basketball hoops, chain-link fences, fire escapes, subway cars, food carts, street lamps); 3) interiors (barbershop, bar, gym props); 4) arena dressing matching key art (market stalls, hanging lanterns, pipes, vents, crates, waterfront props). LICENSE LAW: CC0 or CC-BY ONLY, verify license from source for EVERY pack. Sketchfab: cannot download, build BROWSER_PULL.md (name, author, license, exact URL). Stage: ~/workspace/street-brawl-cicd/game/assets/staging/parts/w7b-ashlane-streets/for-ashlane/ \u2014 one subdir per source pack + LICENSE.md per pack. game/assets/staging/parts/ is git-ignored \u2014 do NOT commit. Write PACK_README.md in w7b-ashlane-streets/ with pack list, model counts per category, licenses, gap log. Checkpoint file: ~/workspace/agent-ops/checkpoints/concrete-dragon-parts7b.json.",
+  "status": "done",
+  "task": "wave 7b ashlane streets",
+  "updated_at": "2026-10-07T06:15:31Z",
+  "watchdog": true,
+  "progress": "COMPLETE 2026-10-07: 111 GLB + 1 OBJ staged across 10 packs (all CC0/CC-BY, license-verified), LICENSE.md per pack, PACK_README.md + BROWSER_PULL.md written (5 Sketchfab neon signs, itch.io urban props, 7 Quaternius CC0 MegaKits for live-browser pull). Gaps: English worded tube-neon signs, barbershop-specific props. Nothing committed (staging is git-ignored)."
+}

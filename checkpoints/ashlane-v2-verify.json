@@ -1,0 +1,12 @@
+{
+  "attempts": 6,
+  "note": "Fresh full clone died (SIGTERM, 700MB+ repo). Pulled delta via git fetch (instant) and checked out origin/HEAD c65ea96 \u2014 same remote content. Base-path files (vite.config.ts, asset-base.ts) unchanged since fix. Client build OK with 2GB heap (2m32s; SSR env OOM-killed, not needed for static Pages). 34 screenshots in shots/.",
+  "repo": "~/workspace/game-sweep/AshLanev2",
+  "resume_brief": "Repo at ~/workspace/game-sweep/AshLanev2 is on origin/HEAD c65ea96. Build: PAGES_BUILD=1 node scripts/with-app-env.mjs vite build -> .output/public. Serve .output/public statically (e.g. npx serve on port 8081) and drive with Playwright/Chromium using harness in ~/workspace/ashlane-v2-verify/work/ (verify.mjs, roam.mjs etc.). Serve under /AshLanev2/ subpath to match Pages. Screenshots to ~/workspace/ashlane-v2-verify/shots/. Report: boot errors, asset 404s, gameplay pixel evidence, verdict on base-path fix 360096a. Verification only \u2014 do not redesign.",
+  "status": "done",
+  "task": "Pixel-verify AshLane V2 PWA (mhvnsnt/AshLanev2) after base-path fix commit 360096a \u2014 round 2 against latest HEAD c65ea96",
+  "updated_at": "2026-10-06T23:55:00Z",
+  "verdict": "BASE-PATH FIX VERIFIED WORKING on latest HEAD c65ea96. PWA boots clean at /AshLanev2/, 0 asset 404s, real 3D plaza gameplay renders with textured fighters (pixel-proven). NEW REGRESSION FOUND (not base-path): VsSplash overlay never dismisses in plaza mode, hiding the live 3D scene \u2014 game is playable behind it but invisible to the player. See report.",
+  "watchdog": true,
+  "head": "c65ea96"
+}

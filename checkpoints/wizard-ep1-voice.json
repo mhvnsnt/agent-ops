@@ -1,0 +1,10 @@
+{
+ "attempts": 0,
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "Voice-prep worker for Wizard Gang Episode 1 ('THE SUMMIT'). Read ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/DIALOGUE.md and ~/workspace/trippedd-studio/docs/series/WIZARD-GANG.md (voice-cast section). CRITICAL: NO synthesis of any episode dialogue line before owner approval \u2014 prep only. (1) Verify Static genuine-Enzo-Amore clone pipeline at ~/workspace/voice-clone-work/ (cb_weights/, refs/enzo_ref_*.wav, static_cloned_test.wav) \u2014 readiness check only, report exact command to extend to approved lines later. (2) Check Bill $aber Narrator clone status (XTTS v2 research). (3) Per-cast voice status for all 9. (4) Write production/WIZARD_GANG_EP01/VOICE_STATUS.md readiness report + extend commands, commit to trippedd-studio, push.",
+ "status": "done",
+ "task": "Wizard Gang Ep1 voice prep",
+ "updated_at": "2026-10-07T05:28:31.698305-04:00",
+ "watchdog": true,
+ "result": "committed b33d055, pushed to trippedd-studio main"
+}

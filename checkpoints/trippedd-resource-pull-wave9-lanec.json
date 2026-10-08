@@ -1,0 +1,9 @@
+{
+ "task": "Wave 9 Lane C: battle rigs for remaining council members",
+ "status": "done",
+ "watchdog": true,
+ "repo": "/home/hatch/workspace/god-molecule-studio",
+ "resume_brief": "SombraBattle + OnyxBattle DONE (proofs verified). Remaining optional: Theory/Cipher/Hollow battle rigs. Next: setup-wizard re-verify with ~/workspace/nijibuild/nijigenerate/out/nijigenerate, write SETUP_WIZARD_WAVE9.md + RIG_PROOF_WAVE9.md, gitignore .npy intermediates, commit to mhvnsnt/God-Molecule-Show-Studio (rebase, no force-push).",
+ "updated_at": "2026-10-07T19:45:00Z",
+ "attempts": 0
+}

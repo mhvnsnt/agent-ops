@@ -1,0 +1,10 @@
+{
+  "attempts": 0,
+  "repo": "~/workspace/street-brawl-cicd",
+  "resume_brief": "CONCRETE DRAGON \u2014 OPEN-SOURCE UI ART PULL-INS (owner directive 2026-10-06, standing authorized). Hunt and stage free/open-source UI/menu art for the game's menu overhaul; the beat-em-up worker consumes these per its design spec. PULL (all CC0 or similarly permissive for commercial game use \u2014 verify EACH license, no GPL/AGPL): (1) game UI kits \u2014 Kenney UI packs, itch.io CC0 UI packs, OpenGameArt UI collections (buttons, panels, selection boxes, health bars, icons); (2) SVG icon sets \u2014 CC0 game/UI icons (fists, skulls, cash, stars, arrows); (3) 9-slice panel/border packs \u2014 scalable menu frames, borders, dividers; (4) display fonts \u2014 OFL, street/graffiti/urban character, 5-8 candidates (Google Fonts, open foundries); (5) menu backgrounds/textures \u2014 CC0 grunge, concrete, graffiti wall, neon-sign textures fitting street-brawler identity. STAGE (do not wire into playable build): ~/workspace/street-brawl-cicd/game/assets/staging/ui/ with UI_PULL_INS.md logging every asset: what, source URL, license, UI-kit mapping (health bar, button, panel, font, icon). License manifest stays clean; never invent \u2014 log gaps instead of faking. Report what was staged + license log.",
+  "status": "done",
+  "task": "open-source UI art pull-ins",
+  "updated_at": "2026-10-06T16:05:00-05:00",
+  "watchdog": true,
+  "phase": "complete: UI art staged + UI_PULL_INS.md written; 3 itch.io packs + graffiti-wall texture logged as manual-download gaps"
+}

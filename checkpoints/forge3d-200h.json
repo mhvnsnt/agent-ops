@@ -1,0 +1,9 @@
+{
+  "task": "Forge3D horizontal providers",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/forge3d",
+  "resume_brief": "Subagent task: Forge3D horizontal expansion \u2014 more working providers. Repo mhvnsnt/Forge3D, workdir ~/workspace/forge3d. Steps: (1) read forge3d/providers/base.py + registry.py + one working provider; follow existing provider pattern. (2) Verify/finish instantmesh_space.py and trellis2_space.py: run is_available(), attempt ONE live generation each on runs/gen1/concept1.jpg (keyless HF Spaces). Known issue: session_hash 404s on InstantMesh Gradio \u2014 fix via stateless /preprocess + /generate_mvs endpoints, skip stateful /make3d if it needs session state, document. (3) Survey ~/workspace/money-machine-hq/tracks/api-repo-sweep/free-apis.md for more KEYLESS/free-tier image-to-3D and text-to-image APIs; wire viable ones as new providers (no keys, no paid, no quest-grinding). (4) Update LICENSES.md (license per provider) + docs/PROVENANCE.md. No secrets ever. Rules: heartbeat \u226410 min, commit incrementally, NEVER touch/stage/commit files not created by me (RAM-hardening worker has unstaged changes) \u2014 git add only own paths. Push at end; don't git pull --rebase (fails on dirty tree); git fetch origin and rebase only if clean, else just push. Verification law: report must include 'python3 -m forge3d providers' output, live-test results per provider (GLB path + verts/faces or exact failure), and proof paths. Report back: providers added/fixed with licenses, live test evidence, what's left.",
+  "updated_at": "2026-10-07T03:50:25-05:00",
+  "attempts": 0
+}

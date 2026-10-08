@@ -1,0 +1,10 @@
+{
+ "task": "part packs wave 3 (monsters/halloween)",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/street-brawl-cicd",
+ "resume_brief": "CONCRETE DRAGON \u2014 PART PACKS WAVE 3 (owner directive 2026-10-06). Monsters + Halloween-themed open-source packs (CC0 or permissive ONLY): vampires, sea monsters, ghosts, witches, mummies, Frankenstein-type brutes, swamp creatures, giant spiders/bats/rats, jack-o-lanterns + haunted props/decor, spooky environments (graveyards, haunted houses, fog). PRIORITY: a pumpkin-head / jack-o'-lantern-head character and a tall thin faceless suited figure (Slenderman-TYPE archetype \u2014 original design, never the named character).\n\nSources: KayKit Halloween, Kenney (CC0), Quaternius (CC0), OpenGameArt CC0. For EACH pack: verify license from the source page (NO GPL/AGPL, NO Mixamo/Adobe-restricted), download, stage in ~/workspace/street-brawl-cicd/game/assets/staging/parts/<pack>/ with LICENSE note, log in the staging log. Update docs/PART_ATTACH_SPEC.md.\n\nBinding rules: painted multi-piece textures required (tint-multiply look law); IP rule \u2014 inspired-by archetypes only, NEVER copy named characters from existing franchises.\n\nHEARTBEAT after every pack (daemon restarts are frequent \u2014 commit + heartbeat constantly). Mark \"done\" at end; report pack list + licenses.",
+ "updated_at": "2026-10-07T00:16:51.381428+00:00",
+ "attempts": 0,
+ "notes": "2026-10-07T00:21Z: DONE. 4 packs staged, spec section 9 written, committed bfa648b, pushed to origin/main."
+}

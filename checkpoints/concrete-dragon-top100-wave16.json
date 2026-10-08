@@ -1,0 +1,21 @@
+{
+  "attempts": 0,
+  "repo": "none-staging-only",
+  "resume_brief": "TOP-200 HEART-AND-SOUL RESEARCH \u2014 WAVE 16 (owner directive 2026-10-06, top-200 expansion). For EACH game below, find what the developers and people who work on it SAY keeps players coming back, playing, paying, and supporting it. 10 GAMES: Persona 5 Royal | Final Fantasy VII Rebirth | Dragon Quest XI | Xenoblade Chronicles 3 | Fire Emblem: Three Houses | Octopath Traveler | NieR: Automata | Kingdom Hearts III | Tales of Arise | Like a Dragon: Infinite Wealth. METHOD: browser.search + browser.open (fetch page text). NO live browser. OUTPUT: for each game write /home/hatch/workspace/agent-ops/top100-staging/wave-16/<slug>.md with EXACTLY the structure: # <Game> \u2014 Heart and Soul / Developer / studio / Genre / platforms / Why players come back (in the devs' view) / Key quotes (2-4; each: \"quote\" \u2014 Name, Role, Publication/Event, Year; append [unverified] if from a search snippet not a fetched page) / Why players love/support it / Monetization philosophy (devs' words, if any) / Lesson for our games (1-2 lines, concrete) / Sources (URLs) / Coverage note. RULES: Sourced quotes ONLY \u2014 NEVER invent developer statements. Unverifiable quotes excluded. Snippet-sourced marked [unverified]. Do NOT commit to any git repo \u2014 staging dir ONLY. Write each file as finished. Slugs: persona-5-royal, final-fantasy-vii-rebirth, dragon-quest-xi, xenoblade-chronicles-3, fire-emblem-three-houses, octopath-traveler, nier-automata, kingdom-hearts-iii, tales-of-arise, like-a-dragon-infinite-wealth. Report games completed.",
+  "status": "done",
+  "task": "top200 wave 16",
+  "updated_at": "2026-10-06T22:34:45Z",
+  "watchdog": true,
+  "games_done": [
+    "persona-5-royal",
+    "final-fantasy-vii-rebirth",
+    "dragon-quest-xi",
+    "xenoblade-chronicles-3",
+    "fire-emblem-three-houses",
+    "octopath-traveler",
+    "nier-automata",
+    "kingdom-hearts-iii",
+    "tales-of-arise",
+    "like-a-dragon-infinite-wealth"
+  ]
+}

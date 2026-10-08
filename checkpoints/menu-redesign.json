@@ -1,0 +1,23 @@
+{
+  "task": "menu-redesign",
+  "branch": "menu/redesign-v5",
+  "worktree": "~/workspace/menu-v4-work",
+  "updated": "2026-10-06T16:45:00-05:00",
+  "commits": ["d076e35", "993aeea"],
+  "status": "complete pending owner review; tsc clean; main menu screenshot verified",
+  "done": [
+    "UR/Def Jam/WWE2K menu teardown with 3 real reference screenshots (docs/menu-research/)",
+    "Wizard/SWMG scrubbed from all menu on-screen text; 'concrete jungle' kept; backend canon untouched",
+    "FlowMain/FlowMode/FlowFighter/FlowStage/FlowVs components with per-screen art direction",
+    "Wired into ashlane-app with flow state (main/mode/fighter/stage/vs/attire); legacy screens preserved",
+    "27 real roster portraits on main menu (hero rotation + strip)",
+    "tsc clean; committed incrementally to menu/redesign-v5",
+    "Main menu screenshot verified visually (/tmp/mf-main.png)"
+  ],
+  "caveats": [
+    "Playwright headless cannot hydrate TanStack Start app in this sandbox (no React fiber on buttons); click-through screenshots of mode/fighter/stage/vs need real browser",
+    "Production build OOMs on SSR (exit 137); dev server works fine",
+    "onyx.webp portrait 404s (missing file)"
+  ],
+  "next": ["owner reviews branch", "real-browser screenshot of full flow", "merge to main only on owner approval"]
+}

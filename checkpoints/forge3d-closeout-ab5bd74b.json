@@ -1,0 +1,9 @@
+{
+  "attempts": 0,
+  "repo": "~/workspace/forge3d",
+  "resume_brief": "Forge3D close-out: ITEM A donor weight-transfer search (found bannon-repair/tools/model_diag/transfer_weights.cjs @ 95300506b4b2a8be7ee7af54d2e93a2016dd9c4a \u2014 port to forge3d/forge3d/pipelines/ + PROVENANCE.md + LICENSES.md + prove with bannon_15bone.glb donor and perturbed noskin target, render under docs/stage-evidence/donor-transfer/). ITEM B TODO sweep: grep for TODO/FIXME/NOT-WIRED/PENDING/not implemented/XXX/HACK in *.py/*.md, close closable ones, record one-line reasons for the rest. git pull --rebase before push; commit incrementally; never commit secrets.",
+  "status": "done",
+  "task": "Forge3D donor-weight-transfer close-out (ITEM A) + TODO sweep (ITEM B)",
+  "updated_at": "2026-10-06T21:00:00-05:00",
+  "watchdog": true
+}

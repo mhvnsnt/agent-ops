@@ -1,0 +1,9 @@
+{
+  "attempts": 3,
+  "repo": "none-staging-only",
+  "resume_brief": "TOP-200 HEART-AND-SOUL RESEARCH \u2014 WAVE 18 (owner directive 2026-10-06). For each of 10 strategy/management games (Civilization VI, Total War: Warhammer III, Crusader Kings III, Stellaris, Cities: Skylines, Factorio, RimWorld, Oxygen Not Included, Frostpunk, Age of Empires II: Definitive Edition), research via browser.search + browser.open what the developers SAY keeps players coming back, playing, paying, supporting. NO live browser \u2014 search/fetch text only. Output per-game file at /home/hatch/workspace/agent-ops/top100-staging/wave-18/<slug>.md with exact structure: '# <Game> \u2014 Heart and Soul' header; bullet fields: Developer/studio, Genre/platforms, Why players come back (devs' view), Key quotes (2-4, sourced, [unverified] if snippet-only), Why players love/support it, Monetization philosophy (devs' words), Lesson for our games (1-2 lines), Sources (URLs), Coverage note. RULES: sourced quotes only, never invent; unverifiable quotes excluded; press analysis labeled ANALYSIS. Do NOT commit to any git repo \u2014 staging dir only. Slugs: civilization-vi, total-war-warhammer-3, crusader-kings-3, stellaris, cities-skylines, factorio, rimworld, oxygen-not-included, frostpunk, age-of-empires-2-de.",
+  "status": "done",
+  "task": "top200 wave 18",
+  "updated_at": "2026-10-06T17:52:00-05:00",
+  "watchdog": true
+}

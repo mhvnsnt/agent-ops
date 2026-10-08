@@ -1,0 +1,9 @@
+{
+  "attempts": 0,
+  "repo": "~/workspace/forge3d",
+  "resume_brief": "Reinforce Forge3D (~/workspace/forge3d) open-source 3D-generation pipeline. DONE SO FAR: checkpoint written. TODO: (1) read AGENTS.md + docs/INVENTORY.md + docs/GAPS_VS_TRIPO.md + providers/ + runs/gen1 to inventory current state; (2) check local compute (nvidia-smi, RAM/VRAM); (3) pull + wire best 2026-state-of-art open-source image-to-3D tooling (TRELLIS, Hunyuan3D-2, InstantMesh, TripoSR, Stable Fast 3D, SPAR3D, LGM, CRM, Hi3DGen \u2014 wire best 2-3 that run here; multi-view Zero123++/Wonder3D; texturing Hunyuan3D-Paint; cleanup/remesh) as providers behind `forge3d generate --provider auto` with local-first + free-API fallback; (4) mine ~/workspace/api-catalog for free 3D API tiers (keys in Secure Vault/env ONLY, never repo); (5) record licenses in LICENSES.md, quarantine GPL/AGPL per AGENTS.md; (6) update INVENTORY.md + GAPS_VS_TRIPO.md honestly incl. exact image-to-3D command for owner; (7) python -m forge3d selftest green; wiring self-tests per provider, stubs FAIL LOUDLY. Do NOT generate the Echo model yet \u2014 pipeline reinforcement only. Commit incrementally, push when done.",
+  "status": "done",
+  "task": "reinforce Forge3D pipeline with open-source 3D generation tooling",
+  "updated_at": "2026-10-06T19:45:00-05:00",
+  "watchdog": true
+}

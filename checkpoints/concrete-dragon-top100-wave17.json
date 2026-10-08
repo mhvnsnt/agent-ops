@@ -1,0 +1,21 @@
+{
+  "attempts": 0,
+  "repo": "none-staging-only",
+  "resume_brief": "For EACH game find what devs/people who work on it SAY keeps players coming back, playing, paying, supporting. METHOD: browser.search + browser.open (text fetch only, no live browser). OUTPUT: write /home/hatch/workspace/agent-ops/top100-staging/wave-17/<slug>.md with EXACT structure: # <Game> \u2014 Heart and Soul; bullets: Developer/studio, Genre/platforms, Why players come back (in devs' view), Key quotes (2-4; each: \"quote\" \u2014 Name, Role, Publication/Event, Year; append [unverified] if from search snippet not fetched page), Why players love/support it, Monetization philosophy (devs' words, if any), Lesson for our games (1-2 lines, concrete), Sources (URLs), Coverage note. RULES: sourced quotes ONLY \u2014 never invent dev statements; unverifiable quotes excluded; snippet-sourced marked [unverified]. Do NOT commit to any git repo \u2014 staging dir ONLY. Games: Call of Duty: Warzone (cod-warzone), Battlefield 1 (battlefield-1), Titanfall 2 (titanfall-2), DOOM Eternal (doom-eternal), Borderlands 3 (borderlands-3), Rainbow Six Siege (rainbow-six-siege), PUBG: Battlegrounds (pubg-battlegrounds), Hunt: Showdown (hunt-showdown), Deep Rock Galactic (deep-rock-galactic), Left 4 Dead 2 (left-4-dead-2). Update checkpoint file heartbeat after each game file; mark status done at end.",
+  "status": "done",
+  "task": "top200 wave 17 \u2014 heart-and-soul research for 10 games: cod-warzone, battlefield-1, titanfall-2, doom-eternal, borderlands-3, rainbow-six-siege, pubg-battlegrounds, hunt-showdown, deep-rock-galactic, left-4-dead-2",
+  "updated_at": "2026-10-06T17:51:00-05:00",
+  "watchdog": true,
+  "done": [
+    "cod-warzone",
+    "battlefield-1",
+    "titanfall-2",
+    "doom-eternal",
+    "borderlands-3",
+    "rainbow-six-siege",
+    "pubg-battlegrounds",
+    "hunt-showdown",
+    "deep-rock-galactic",
+    "left-4-dead-2"
+  ]
+}

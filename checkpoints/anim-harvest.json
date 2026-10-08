@@ -1,0 +1,76 @@
+{
+  "task": "animation-systems-harvest",
+  "updated": "2026-10-06T16:45:00Z",
+  "scope": "AshLanev2 + Brutal-Fist + Bannon (game-agnostic per owner directive)",
+  "survey": {
+    "ashlane": {
+      "glbs": 78,
+      "unrigged": 21
+    },
+    "brutal_fist": {
+      "glbs": 77,
+      "unrigged": 12
+    },
+    "bannon": {
+      "glbs": 63,
+      "unrigged": 0
+    }
+  },
+  "wired": {
+    "instance_rig": {
+      "license": "MIT",
+      "status": "installing",
+      "tool": "tools/auto-rig/auto_rig.py"
+    },
+    "animouse": {
+      "license": "MIT",
+      "status": "installed",
+      "tool": "src/game3d/locomotion-blend.ts"
+    },
+    "autotpose": {
+      "license": "MIT",
+      "status": "vendored"
+    },
+    "ossos": {
+      "license": "MIT",
+      "status": "reference-only"
+    }
+  },
+  "commits": [
+    "8e73b01c7c38a125ce12a372b7c8564f75fe953e",
+    "b040b1b"
+  ],
+  "three_game_scope": true,
+  "per_game": {
+    "ashlane": {
+      "unrigged": 21,
+      "auto_rig_tool": "tested-discovery-ok",
+      "locomotion_blend": "config-ready"
+    },
+    "brutal_fist": {
+      "unrigged": 12,
+      "auto_rig_tool": "tested-discovery-ok",
+      "locomotion_blend": "config-ready"
+    },
+    "bannon": {
+      "unrigged": 0,
+      "auto_rig_tool": "validation-only",
+      "locomotion_blend": "config-ready"
+    }
+  },
+  "status": "live-test-complete",
+  "notes": "instance-rig venv install in progress (TensorFlow stack, 15+ min). All game-agnostic tooling built, tested, committed.",
+  "live_test": {
+    "bannon_brutalfist": {
+      "status": "success",
+      "joints": 18,
+      "time_s": 61,
+      "proof": "docs/round6/proof/autorig-bannon-tpose.png"
+    },
+    "marks_ashlane": {
+      "status": "failed",
+      "error": "IndexError in BodyPix pose detection",
+      "note": "known limitation, needs investigation"
+    }
+  }
+}

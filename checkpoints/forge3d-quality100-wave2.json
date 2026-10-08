@@ -1,0 +1,10 @@
+{
+  "attempts": 0,
+  "repo": "~/workspace/forge3d",
+  "resume_brief": "Wave-3: wire from the wave-3 shortlist in docs/QUALITY100.md (texutil, pygeogram, autoremesher, mouette, gltf-asset-auditor, Poly Haven/ambientCG ingest). GPU-lane queue needs a CUDA box. Continue catalog expansion with new research legs.",
+  "status": "done",
+  "task": "Forge3D quality-100 WAVE 2 \u2014 wire from wave-2 queue + expand catalog",
+  "updated_at": "2026-10-07T09:00:00-05:00",
+  "watchdog": true,
+  "progress": "WAVE 2 COMPLETE. 6 stages wired+proven+committed+pushed (MikkTSpace d947578, LaMa 8f73ff2, PyMeshLab-mesh_quality 65bacb6, InstantMeshes fe7b886, bake_passes 1610292, xatlas index bugfix). 70 new catalog entries folded (184 total). GPU-lane items (DiffBIR/OSEDiff/CCSR, CaPa, MatFuse/Material Anything, FlashTex, StableNormal, DreamMat, Ouroboros, PASD) queued for CUDA box. Wave-3 shortlist: texutil, Geogram/pygeogram, autoremesher, mouette, gltf-asset-auditor, Poly Haven/ambientCG ingest."
+}

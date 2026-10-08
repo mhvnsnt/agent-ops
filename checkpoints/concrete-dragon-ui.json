@@ -1,0 +1,10 @@
+{
+  "attempts": 0,
+  "phase": "COMPLETE 2026-10-06: UI kit + owner feedback batch + playtest bugs + vision + harvest pulls, all verified, committed and pushed to origin/main. Commits: 5ba47c9 (main batch), b66e255 (wiring queue).",
+  "repo": "~/workspace/street-brawl-cicd",
+  "resume_brief": "CONCRETE DRAGON UI ART PIPELINE + PULL-IN WIRING (owner 2026-10-06). (1) UI ART PIPELINE: build the UI kit like the pros \u2014 9-slice panels (corner/edge/center) implemented in the UI layer (CSS border-image); custom UI art in street style (menu backgrounds, button styles, bar frames, selection boxes, logo treatment) + CC0 kits (Kenney UI packs, itch.io/OpenGameArt CC0), licenses logged; open-licensed display typography (Google Fonts/open foundries, street character); SVG/vector for icons/dividers/frames. No default-looking UI ships. (2) PROCESS CHANGE: wire pull-ins INTO the playable build, not just staging \u2014 staged assets in game/assets/staging/ui/ (Kenney UI, icons, fonts, concrete textures) get wired in as the menu overhaul lands; owner playtests and gives keep/remove verdicts. (3) ANATOMY PULL-INS: wire staged assets per docs/WIRING_QUEUE.md priority T1 controls \u2192 T2 combat depth \u2192 T3 audio \u2192 T4 districts \u2192 T5 systems \u2192 T6 feel. Staged: Kenney RPG Audio + UI Audio (footsteps, whooshes, impacts, unlock fanfare), nipplejs (MIT), seedrandom (MIT), Kenney Particle Pack (197 VFX PNGs), Kenney City Kit Roads + Industrial. 14 items tagged in-progress under this ownership \u2014 no duplication with other workers. Constraints: work on main in ~/workspace/street-brawl-cicd (watch for other workers' branches/commits; pull/rebase, never force-push); keep Pages deploy green; single-file build budget (~2MB); licenses logged, no GPL/AGPL; verify in headless browser with screenshots personally inspected; commit incrementally; mark done at end with report of what was wired + verification evidence.",
+  "status": "done",
+  "task": "ui-art-pipeline + pull-in wiring",
+  "updated_at": "2026-10-06T17:22:10.413264-05:00",
+  "watchdog": true
+}

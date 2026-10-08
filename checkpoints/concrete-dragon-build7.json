@@ -1,0 +1,10 @@
+{
+  "task": "build wave 7 (research-based)",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/street-brawl-cicd",
+  "resume_brief": "CONCRETE DRAGON BUILD WAVE 7 (owner directive 2026-10-07: 'keep working based on research'). Repo ~/workspace/street-brawl-cicd, work on main, Pages must stay green. Last wave ended at a3b50e5 (wave 6: stances, zones 6-7, stance finishers, arena dressing, endless mutators, soul laws). Infinite character + customization system also landed separately. CONTINUE from research docs (docs/MECHANICS_HARVEST.md, docs/GAME_SOUL_TOP100.md, docs/ROGUELITE_TEARDOWN.md, docs/BEATEMUP_TEARDOWN.md, docs/GAME_ANATOMY.md) \u2014 pull next unbuilt high-value mechanics: (1) next mechanics-harvest systems, (2) deeper fighter/enemy moveset expansion, (3) more zones (platformer/maze/multidirectional), (4) infinite progression depth, (5) soul-law systems. INVIOLABLE: style-not-power; street naming (invented names need owner approval); slow-mo for big moments only; ADDITIVE ONLY; CC0/CC-BY-clean + license manifest; tip jar paypal.me/MarquisWhitacre stays; commit INCREMENTALLY, pull/rebase, never force-push; verify with screenshots you inspect; zero page errors.",
+  "updated_at": "2026-10-07T14:27:32.070273+00:00",
+  "attempts": 0,
+  "notes": "DONE \u2014 6 batches committed+pushed (51a1624..329d958). b1 fairness toolkit (17f6690), b2 tag spots (1f96c73), b3 wrestling finishers (ca22251), b4 mascots (4c607e8), b5 dojo shop (33a549a), b6 one-hit (329d958). All headless-verified, zero page errors. Resolved rebase conflict with A5 worker (kept scoutFighter + mascot bonus)."
+}

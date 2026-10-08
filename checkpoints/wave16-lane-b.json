@@ -1,0 +1,9 @@
+{
+  "attempts": 0,
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "Resume Wave 16 Lane B: (1) cd ~/workspace/trippedd-studio, ensure on branch wave16-lane-b tracking origin/main. (2) Research verified-PD archives (municipal/state archives, university special collections, national libraries, museum open-access portals, newspaper morgues, federal agency media beyond NASA/NOAA/USGS/NARA/LOC). Verify rights PER-AGENCY from each archive's own rights page \u2014 never assume public archive = public domain. Check docs/wave15/lane-b-archives.md, docs/wave14/lane-b-archives.md, docs/wave13/lane-b-archives.md and grep docs/RESOURCE_CATALOG.md to avoid duplication. (3) Write docs/wave16/lane-b-archives.md with full #### entries (~25-30), badges: verified PD/CC0/CC-BY (quote rights statement), mixed per-item, commercial-fee/permission-only/NC. One #### per distinct project. QUARANTINE CANDIDATES section at end (do not edit docs/LICENSE_QUARANTINE.md). (4) Wire 1-2 sample plates via tools/bg-plates/ with ffprobe verification + contact sheet proof; never commit binaries >100MB. (5) Commit incrementally to branch wave16-lane-b, push (no force-push), never touch main.",
+  "status": "done",
+  "task": "Wave 16 Lane B: verified-PD archives (target ~25-30 honest #### entries)",
+  "updated_at": "2026-10-07T16:29:55.358640-04:00",
+  "watchdog": true
+}

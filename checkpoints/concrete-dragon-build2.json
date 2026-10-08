@@ -1,0 +1,10 @@
+{
+ "attempts": 1,
+ "notes": "2026-10-07T01:50Z: BUILD COMPLETE \u2014 batches 48bf3dc..ed723c6 pushed. Enemy signatures (9 minion + 6 boss), species creatures (zombie/demon/spider, CONCRETE DRAGON boss), zone arcs + infinite bosses + seasonal events + JACK playable, roguelite blessings + REP tiers. Remaining: gear-tags/charms/gym/branching-map, harvest mechanics, zone parts 3/4, per-fighter move-set expansion.",
+ "repo": "/home/hatch/workspace/street-brawl-cicd",
+ "resume_brief": "RESUME \u2014 CONCRETE DRAGON BUILD WAVE 3 (owner directives 2026-10-06). Checkpoint ~/workspace/agent-ops/checkpoints/concrete-dragon-build2.json (status running, watchdog true). Repo ~/workspace/street-brawl-cicd, work on main, Pages must stay green. CONTINUE: species variation wiring (docs/PART_ATTACH_SPEC.md \u00a78/\u00a79), zone/mission arcs (env packs in game/assets/staging/env/), infinite bosses + unlockable characters, seasonal events (Halloween first), roguelite top-8 + harvest pull-ins additive. INVIOLABLE: style-not-power; street naming; slow-mo big moments only; ADDITIVE ONLY; CC0-clean + license manifest; tip jar paypal.me/MarquisWhitacre; commit incrementally, pull/rebase, never force-push; verify with screenshots; zero page errors. Heartbeat after every commit; mark done at end; report commits + verification evidence.",
+ "status": "done",
+ "task": "CONCRETE DRAGON BUILD WAVE 3: signature attacks per fighter, individual move sets, zone/mission arcs, species variation, infinite bosses/characters, roguelite+harvest pull-ins",
+ "updated_at": "2026-10-07T01:50:10.916790+00:00",
+ "watchdog": true
+}

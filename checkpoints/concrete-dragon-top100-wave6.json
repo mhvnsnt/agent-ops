@@ -1,0 +1,9 @@
+{
+  "attempts": 1,
+  "repo": "none-staging-only",
+  "resume_brief": "TOP-100 HEART-AND-SOUL RESEARCH \u2014 WAVE 6 (RESUME; owner directive 2026-10-06). Continue from /home/hatch/workspace/agent-ops/top100-staging/wave-6/ \u2014 SKIP games whose .md exists (done: fate-grand-order, monster-strike, puzzle-and-dragons). REMAINING 7: AFK Arena (afk-arena) | RAID: Shadow Legends (raid-shadow-legends) | Gardenscapes (gardenscapes) | Homescapes (homescapes) | Township (township) | Hay Day (hay-day) | Boom Beach (boom-beach). Research via browser.search + browser.open (text fetch only, no live browser): dev interviews, GDC talks/postmortems, studio blogs, reputable games-press interviews on what devs say keeps players coming back/playing/paying/supporting. Per-game output to <slug>.md with exact structure: # <Game> \u2014 Heart and Soul; Developer/studio; Genre/platforms; Why players come back (devs' view); Key quotes (2-4, \"quote\" \u2014 Name, Role, Publication/Event, Year; [unverified] if snippet-sourced); Why players love/support it; Monetization philosophy (devs' words); Lesson for our games (1-2 lines, concrete); Sources (URLs); Coverage note ('No on-record statement found' where devs silent; label press analysis as ANALYSIS). RULES: sourced quotes ONLY, never invent; mark snippet quotes [unverified]. Do NOT commit to git. Heartbeat: update updated_at after each file. Mark done at end; report games completed.",
+  "status": "done",
+  "task": "top100 wave 6 resume",
+  "updated_at": "2026-10-06T17:28:00-05:00",
+  "watchdog": true
+}

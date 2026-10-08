@@ -1,0 +1,9 @@
+{
+ "attempts": 1,
+ "repo": "/home/hatch/workspace",
+ "resume_brief": "Generate menu-kit items 28, 29, 30, 31 per the prompts below into workspace/ashlane-art/menu-kit/ as webp; mark done when all 4 report back",
+ "status": "done",
+ "task": "menu kit final 4",
+ "updated_at": "2026-10-07T03:41:00Z",
+ "watchdog": true
+}

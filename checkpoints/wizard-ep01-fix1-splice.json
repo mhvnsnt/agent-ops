@@ -1,0 +1,10 @@
+{
+ "attempts": 0,
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "Continue WORKER B splice task for WIZARD GANG EP01 FIX #1 in ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/. Base video wizard-gang-ep01-16x9-small.mp4 (1920x1080 30fps 300.16s); new scene shots/fix1/s13-tail-new.mp4 (24fps 22s silent QC-passed). Plan: extract 0-108s video re-encoded, conform scene to 30fps, extract 130-end video, concat all three via filter_complex full re-encode (libx264 yuv420p high@4.0 keyint 60 +faststart, <100MB target ~85-95MB, output wizard-gang-ep01-16x9.mp4), mux original audio extracted with -c:a copy. Verify: duration 300.16s, moov-before-mdat, full decode scan clean, frames viewed at t=100/106/110/116/122/128/132/136 (no repeated BBQ lineup, no freeze, pendants correct), audio non-silent. Then: upload to Google Drive via hatch_gws_cli drive +upload and set anyone-with-link reader, append Drive link to PROVENANCE.md under '## 2026-10-07 \u2014 fix #1', git add shots/fix1 stills (no >100MB binaries), commit+push mhvnsnt/TRIPPEDD-Production-studios- main (rebase, never force-push). Mark checkpoint status done when complete.",
+ "status": "done",
+ "task": "EP01 fix #1: splice new scene into 108-130s, re-encode, verify, Drive upload, commit+push",
+ "updated_at": "2026-10-07T17:09:37.500801-04:00",
+ "watchdog": true,
+ "note": "complete: splice verified, Drive uploaded (link set), PROVENANCE updated, committed cfe4ec4 and pushed to origin main"
+}

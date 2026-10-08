@@ -1,0 +1,17 @@
+{
+  "attempts": 2,
+  "repo": "~/workspace/street-brawl-cicd",
+  "resume_brief": "CONCRETE DRAGON roster & replayability expansion (owner: keep improving, keep bringing in, never stop). Game: mhvnsnt/ConcreteDragon (Godot 4.7.2), checkout ~/workspace/street-brawl-cicd/. M1 fighters are 2D paper-doll rigs (torso/head/arm_f/arm_u/leg_s/leg_t + pivots.json) \u2014 new fighters/skins must match that schema (read game/assets/skins/SKINS.md + pivots.json first). Waves: (1) procedural fighters fitting gritty street-dragon world, data-driven via fighter.gd/fight.gd; (2) new district environments matching art style; (3) themed skin packs; (4) replayability systems: endless/survival scaling, daily seeded runs + leaderboard (free-apis modules exist in ~/workspace/os-harvest/free-apis/ \u2014 use them), procedural enemy variation, combo scoring. Constraints: license manifest for every asset (quarantine GPL/AGPL), style-not-power (no pay-to-win), no-store money context. Ledger: append ~/workspace/money-machine-hq/tracks/street-brawl/CONTENT_PIPELINE.md. Commit incrementally, push to main (pull/rebase, never force-push). Heartbeat this checkpoint after every commit. Keep cycling waves until owner says stop.",
+  "status": "done",
+  "task": "roster & replayability expansion",
+  "updated_at": "2026-10-07T11:55:48.012101+00:00",
+  "watchdog": true,
+  "progress": {
+    "wave": 5,
+    "commits": [
+      "833a088 wave 5 (LOCAL ONLY - push blocked: github.com connection reset by peer; retry next run)"
+    ],
+    "next": "push 833a088 when network recovers; then wave 6 (new fighters)"
+  },
+  "notes": "2026-10-07 watchdog: checkpoint's pending work is done and pushed. Wave-5 content (DUST fighter, STRAY family, RUST boss, DOCKSIDE district, m4 RUST BELT) verified present in game-3d/src/main.js on origin/main (44 DUST/RUST/STRAY/DOCKSIDE hits, m4 defined). Local commit 833a088 never pushed but its content was superseded by later pushed waves: wave-6 batches 1-6 (mixstape stances, Zone 6/7, stance finishers, arena dressing, endless mutators, soul laws) are all on origin/main, headless-verified, owner 2026-10-07. Remote also advanced 2 commits (roads wiring, m5 THE OVERPASS); local main fast-forwarded a3b50e5->acffce6, clean. Ongoing wave work now tracked by newer active checkpoints (concrete-dragon-parts7*, build6, wave3-workers)."
+}

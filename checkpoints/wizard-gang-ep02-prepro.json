@@ -1,0 +1,10 @@
+{
+  "task": "Wizard Gang EP02 pre-production: likeness bible + shot pipeline",
+  "status": "done",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "EP02 pre-production coordinator. Resume: (1) build likeness bible(s) from production/WIZARD_GANG_EP01/character-refs/<char>/ for all 9 characters; (2) write EP02_IDENTITY_PROTOCOL.md; (3) draft EP02 shot list from DIALOGUE.md or storyboard; (4) commit to trippedd-studio (rebase clean, no force-push, no >100MB binaries). Mark checkpoint done at end.",
+  "updated_at": "2026-10-08T01:15:00Z",
+  "attempts": 0,
+  "result": "Delivered: EP02_LIKENESS_BIBLE.md, EP02_IDENTITY_PROTOCOL.md, EP02_SHOT_LIST.md \u2014 commit 0f5822c on origin/main. All owner corrections folded in (GLB anchors, stills gate, 2-3 art styles)."
+}

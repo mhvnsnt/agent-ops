@@ -1,0 +1,9 @@
+{
+  "attempts": 0,
+  "repo": "/home/hatch/workspace/money-machine-hq",
+  "resume_brief": "Resume Proving Ground inventory + spec + run order task. Steps: (1) run `gh repo list mhvnsnt --limit 100 --json name,visibility,description,pushedAt,primaryLanguage` to inventory all repos; assess each repo's state (active/broken/stub/archived/unknown) via `gh repo view` and shallow inspection, fanning out to subagents if needed. (2) Draft ~/workspace/money-machine-hq/proving-ground/PROVING-GROUND.md: upgraded gauntlet standard exceeding current scaffolding (agent-ops checkpoints, Forge3D gates, verified-with-evidence law) \u2014 per-repo pass criteria (clean build, tests pass, gitleaks clean, no hardcoded creds, proof attached), agent conduct rules (checkpoint-first, incremental commits, worker proof per done-claim), severity-ranked audit format, rescue-complete vs needs-human-decision definitions. (3) Write proving-ground/INVENTORY.md + RUN-ORDER.md: gauntlet sequence, CODEDUMMY #1 COMPLETE, 1-line justification per repo, exclusion recommendations. (4) Commit and push to money-machine-hq branch proving-ground-spec (NOT main). Constraints: read-only assessment, no publishing, no secrets. If gh auth fails, assess from local clones/workspace instead.",
+  "status": "done",
+  "task": "Proving Ground inventory + spec + run order",
+  "updated_at": "2026-10-07T21:08:00-04:00",
+  "watchdog": true
+}

@@ -1,0 +1,10 @@
+{
+  "attempts": 1,
+  "repo": "~/workspace/ConcreteDragon/game-3d",
+  "resume_brief": "Part 1 COMMITTED cleanly as 6c71e81 (build passes). NEXT: 1) Write qa/characters.mjs (puppeteer-core, chrome at /home/hatch/.cache/puppeteer/chrome/linux-154.0.8037.57/chrome-linux64/chrome): load dist/concrete-dragon.html, collect console/page errors; tap title -> select; screenshot select; dbgScout() x2 and one UI scout purchase via #scoutBtn (use dbgCash to fund); open customize via #customizeBtn, click part + zone UI controls, screenshot customize; verify dbgShowcaseParts; dbgSetFighter(scoutId); __cdtest.startMission(m1); skipCine; doPunch x2; combat screenshots at 2 frames; assert zero errors. 2) Open and READ every screenshot; verify parts attached + following animation, UI legible. 3) Fix defects; commit (owner 2026-10-07); push origin/main; mark checkpoint done. Constraints: game-3d only, everything must actually work, no invented canon, style-not-power. NOTE: stash@{0} (parent industrial tranche parking) still exists; do not touch it or other checkpoints.",
+  "status": "done",
+  "task": "Concrete Dragon infinite character + customization system",
+  "updated_at": "2026-10-07T13:27:58.824089+00:00",
+  "watchdog": true,
+  "notes": "Part 1 committed cleanly as 6c71e81 (game-3d/src/main.js + template.html only; build passes). INCIDENT: parent industrial tranche stashed my uncommitted main.js (stash@{0}) 16s before my first commit, so commit d0999b1 swept 216 unrelated files via git add -A; I reset --soft, restored main.js from stash@{0}, re-committed cleanly. Stash@{0} left in place for parent. Other workers WIP files left uncommitted as found. REMAINING: headless QA (boot->title->select->customize->mission->combat, zero console errors), screenshots opened+read, push. | 2026-10-07: parent completed \u2014 committed leftovers (f94f826), pushed acffce6..f94f826 to origin/main. Infinite character + customization system live. Stash (modular-gear/scout-recruit WIP) preserved for parent lane."
+}

@@ -1,0 +1,17 @@
+{
+ "task": "AshLane faction promo key art",
+ "status": "done",
+ "watchdog": true,
+ "repo": "/home/hatch/workspace/game-sweep/AshLanev2",
+ "resume_brief": "Resume AshLane faction promo key art task. Generate 6 group-composition key art images (2-4 characters each) under ~/workspace/ashlane-art/faction-promos/ using media.generate_image (webp, output_dir workspace/ashlane-art/faction-promos, max 4 calls per response). 1) Ashes: Buffalo Bill unrobed street boss (huge, ram-horn dread braids, BILL $ABER basis), Doc (Atlas Vance, gym owner), Rook (teen runner). Refs: buffalo-bill.webp, doc.webp, rook.webp. 2) Combine: Director Cole Vane, Edwin Kennedy, Stan Combs (corporate heavies, suits). Refs: cole-vane.webp, edwin-kennedy.webp, stan-combs.webp. 3) Hollows: Hollow as general with hooded swarm grunts. Ref: hollow.webp. 4) Dynasty Authority: Captain Silas, Big Dawg Titus, Kiko Tanaka unrobed (detective attire). Refs: silas.webp, titus.webp, kiko-tanaka.webp. 5) Unaffiliated: Sombra Negra, Toro, Finxsse. Refs: sombra-negra.webp, toro.webp, finxsse.webp. 6) Onyx's gang PUBLIC face only: Onyx front and center, Echo, Cipher, Static, Hollow alongside, all in unrobed street forms. Refs: onyx-street.webp, echo.webp, cipher.webp, static.webp, hollow.webp. Style: Shadow Wizard Money Gang + Malakor UNDERLYING (dark neon streets, gold chains, hooded figures, spellbook graffiti); Tekken + Urban Reign OVERLYING (bold group compositions, fight energy). Faction rule: ONE symbol + ONE accent garment + ONE body/head mark per faction, colors as trim only, individualized outfits, NEVER matching uniforms. SECRECY (critical): Buffalo Bill and Theory are SECRET leaders of Onyx's gang - never depict them as its leaders, never do a robed council group shot, never put leadership text about them in the art. Purple robe = the Narrator (outside fiction) - do not use as a faction uniform. HARD RULES: only book-canon or owner-confirmed characters, never invent characters; no third-party branding; spell names correctly (FINXSSE with X, KIKO TANAKA, SOMBRA NEGRA); no invented titles or affiliations in the art. VERIFICATION: open and visually read EVERY output image with the read tool before marking done; regenerate on misspelled text, wrong likeness, or secrecy violations. Do NOT push to any repo (repo is read-only reference). Reference portraits at /home/hatch/workspace/game-sweep/AshLanev2/public/portraits/. Update this checkpoint updated_at after every deliverable; mark status done at end.",
+ "updated_at": "2026-10-06T19:50:00-05:00",
+ "attempts": 1,
+ "verified": [
+  "ashes-promo",
+  "combine-promo",
+  "dynasty-authority-promo",
+  "unaffiliated-promo",
+  "hollows-promo",
+  "onyx-faction-promo"
+ ]
+}

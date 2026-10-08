@@ -1,0 +1,11 @@
+{
+  "task": "LANE sign placement + KayKit character replacement",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/game-sweep/AshLanev2",
+  "resume_brief": "Subagent fixing two owner-flagged visual issues in AshLane V2 (repo ~/workspace/game-sweep/AshLanev2, branch main). FIX 1: LANE neon sign in Cinder Ward plaza is sticking halfway out of the wall, too far right, hanging off the building corner \u2014 find sign placement code (search 'LANE' in scene code), reposition so it sits flush ON TOP of the wall like a real mounted sign. FIX 2: Remove ALL KayKit (KK) chibi character models from NPC fighters and crowd; replace with realistic humanoid GLB models already in the repo (294 GLBs ship; look for Tripo-generated custom humanoids). Keep animation retargeting working \u2014 no T-poses. VERIFY: headless Chromium boot at /AshLanev2/, enter plaza, screenshot (a) LANE sign seated on wall, (b) humanoid NPCs (no KayKit), (c) combat animating. Open every screenshot. No JS errors. Commit incrementally, push to main when verified, mark checkpoint done.",
+  "updated_at": "2026-10-07T13:47:06Z",
+  "attempts": 1,
+  "note": "FIX 1 in progress: ASHLANE sign is at (-6.92,3.4,-4.88), half-hanging off building corner (bldg x1=-7). Moving to sit on wall top (y=4.8).",
+  "notes": "Watchdog 2026-10-07: both fixes were already committed+p pushed in bf4e89a6 (Arena integration, 2026-10-07 04:06 UTC); origin/main == main, nothing unpushed. FIX1 verified by code+math: addSign() at (-12.5,5.55,-4.9) -> board 3.4x1.5, bottom edge y=4.8 = wall top, x centered over bldg1 door (center -12.4), z 0.1 off wall plane; addSign() called in ward dressing path (line 508). FIX2 verified: all rig slots in view.ts load humanoid cast GLBs (EL_TORO_DE_ORO, VIPER, TITAN, HOLLOW, MASTER_SENSEI, drifter, STATIC, ECHO, KOBRA, CODY_gear_skinned) - all 10 files exist on disk; zero KayKit character GLBs loaded anywhere in src; arena-crowd.ts loads no models. Pixel proof skipped: box at 1GB free, prior documented OOM/SwiftShader failures under concurrent lanes; live run deferred to a quieter box. Stale copies: 'KayKit crowd' UI buttons (ashlane-app.tsx:427,775) and view.ts:970 comment are stale names only - slots resolve to humanoid models; cleanup left for a UI lane."
+}

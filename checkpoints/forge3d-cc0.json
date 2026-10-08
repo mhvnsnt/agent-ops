@@ -1,0 +1,9 @@
+{
+  "task": "Forge3D CC0/public-domain asset sources + free API tiers",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/forge3d",
+  "resume_brief": "Expanded directive (owner 2026-10-06): keep acquiring FREE API keys/tiers (no paid, no quest-grinding) and PUBLIC DOMAIN/CC0 3D asset sources (model/texture libraries) that strengthen generation. LICENSE RULE: CC0/public domain ONLY \u2014 no NC, no SA; verify terms LIVE. Record in LICENSES.md + docs/PROVENANCE.md. Continue rest of brief: retest trellis1-space after ZeroGPU quota reset (~22:40 CDT Oct 7), retest trellis2-space /extract_glb after its reset (~05:35 CDT Oct 7), tripo_api.py key-wiring still uncommitted (RAM worker has unstaged changes in that file \u2014 do not touch/stage/commit it). Rules: heartbeat <=10 min, commit incrementally, git add ONLY own paths (never touch RAM worker's unstaged files), push at end (no git pull --rebase on dirty tree). Prior work committed as 75763f6 (pushed).",
+  "updated_at": "2026-10-07T04:02:17-05:00",
+  "attempts": 0
+}

@@ -1,0 +1,10 @@
+{
+  "attempts": 0,
+  "repo": "~/workspace/street-brawl-cicd",
+  "resume_brief": "CONCRETE DRAGON \u2014 MECHANICS HARVEST (owner directive 2026-10-06). Research HUNDREDS of the most-loved AND most-underrated games and extract mechanics to ADD to a 3D combat side-scroller. Coverage: 3D platformers (Sonic 3D titles, 3D Mario games, Crash Bandicoot \u2014 movement/jump/pickup mechanics adapted to combat), fighting games (Street Fighter series, King of Fighters, Fatal Fury), beat-em-ups (Streets of Rage 1-4, Final Fight, Double Dragon, TMNT arcade, River City Ransom, Scott Pilgrim vs The World, Fight'N Rage, The TakeOver, Guardian Heroes, Dragon Ball GT: Transformation GBA). For EACH mechanic: name, source game, why players love it, how it fits Concrete Dragon ADDITIVELY, effort estimate. Also: movement tech, jump variations, pickup types, combo systems, enemy behaviors, level gimmicks, secrets, environmental interactions, crowd interactions. Write docs/MECHANICS_HARVEST.md in ~/workspace/street-brawl-cicd (grow continuously, commit incrementally). Pull CC0/open-source implementations where they exist \u2014 stage in game/assets/staging/mechanics/ with license log. HARD CONSTRAINT: ADDITIVE ONLY \u2014 nothing changes base combat feel or core loop; all MORE: more world, more moves, more mechanics, more pickups.",
+  "status": "done",
+  "task": "mechanics harvest",
+  "updated_at": "2026-10-06T17:09:53-05:00",
+  "watchdog": true,
+  "notes": "COMPLETE 2026-10-06 ~17:10 CDT: 74 games, ~95 mechanics, 4 waves committed+pushed (48c1fb7, 7105256, c8adeaa). Additive-only constraint honored throughout."
+}

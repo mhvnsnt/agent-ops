@@ -1,0 +1,17 @@
+{
+  "attempts": 1,
+  "done": [
+    "hollows.webp",
+    "downtown-rooftops.webp",
+    "projects.webp",
+    "waterfront.webp",
+    "industrial.webp",
+    "downtown-civic.webp"
+  ],
+  "repo": "/home/hatch/workspace/game-sweep/AshLanev2",
+  "resume_brief": "You are the DISTRICT/STAGE ART worker for AshLane (Urban Reign-style street brawler; repo mhvnsnt/AshLanev2, local clone ~/workspace/game-sweep/AshLanev2, read-only, do NOT push). Produce one wide establishing-shot key art image per district under ~/workspace/ashlane-art/districts/ using media.generate_image, in the owner-locked style: SWMG+Malakor underlying world (dark streets, neon, hooded figures, gold chains, spellbook graffiti), Tekken+Urban Reign overlying presentation. Grounded street-level urban default; each district gets its OWN palette/lighting (not all green/purple). No fighting poses (environment art); signage spelled correctly; do NOT invent faction names ('The Painted' unconfirmed, never use); no third-party branding. Verify EVERY image with the read tool; regenerate on defects. Update checkpoint updated_at after each deliverable. Mark status done at end. Final report: file list + per-image check notes (palette, signage, style). DONE so far: hollows.webp (verified: purple Ferris wheel, clown funhouse, castle walls, hooded silhouettes, gold chains, grill mural, cauldron fires, IT SEES/THE HOLLOWS spelled right). downtown-rooftops.webp (verified: rain, lightning, purple/green/blue neon strips, amber sconces, HOTEL + ROOFTOP ACCESS spelled right, no faction tags). Remaining: projects, waterfront, industrial, downtown-civic. Clean filenames: <district>.webp. Delete media-generation-*.json scratch files.",
+  "status": "done",
+  "task": "AshLane district/stage key art",
+  "updated_at": "2026-10-06T19:28:48.790762-05:00",
+  "watchdog": true
+}

@@ -1,0 +1,10 @@
+{
+ "task": "content pipeline waves 2-4",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/street-brawl-cicd",
+ "resume_brief": "CONCRETE DRAGON CONTENT PIPELINE \u2014 Waves 2-4 (continuous autonomous work; Wave 1 done: Boxing Star teardown in TEARDOWN.md, 2 procedural skin packs on branch content/wave-1 + m1/assets/skins/). Each wave = (1) one research finding from the most popular/addictive/profitable mobile games right now with a concrete steal for the tap-brawler; (2) one harvested asset (open-source/free-tier/CC0, licenses recorded in a manifest, GPL/AGPL quarantined out); (3) one real integration into the repo (actual Godot-ready assets). RESKIN POLICY: only WWE/AEW-ripped models get reskinned; never invent canon. Repo: ~/workspace/street-brawl-cicd/ (mhvnsnt/ConcreteDragon, Godot 4.7.2). Before every push: git pull/rebase, NEVER force-push. Ledger: ~/workspace/money-machine-hq/tracks/street-brawl/CONTENT_PIPELINE.md (append each wave). Commit incrementally. Heartbeat updated_at after every commit. Money context: no $25 Play fee \u2014 no-store monetization (itch.io, CrazyGames/Poki revenue share, sideload APK); sell STYLE not power, no pay-to-win. Wave 1: Boxing Star teardown, 2 procedural skin packs on branch content/wave-1 + m1/assets/skins/. Do waves 2, 3, 4 then mark done and report per-wave (commits, licenses, next).",
+ "updated_at": "2026-10-06T23:06:05.062996+00:00",
+ "attempts": 1,
+ "notes": "DONE 2026-10-06: branch content/waves-2-4 fully pushed to origin (13a892a). Wave 3 (bf1d431: Monopoly GO teardown + crowd ambience) and Wave 4 (45e9242: Free Fire teardown + GDScript behavior-tree) cherry-picked from dangling commits onto the branch and pushed. 2D Godot content = archival only, never merged to main; 3D Pages deploy untouched."
+}

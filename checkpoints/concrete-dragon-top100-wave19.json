@@ -1,0 +1,10 @@
+{
+  "attempts": 0,
+  "repo": "none-staging-only",
+  "resume_brief": "TOP-200 HEART-AND-SOUL RESEARCH \u2014 WAVE 19 (owner directive 2026-10-06, top-200 expansion). For EACH of 10 games (Resident Evil 4 2023 remake, Resident Evil Village, Silent Hill 2 2024 remake, Alan Wake 2, The Walking Dead (Telltale), Life is Strange, Detroit: Become Human, Until Dawn, Little Nightmares II, Dead Space 2023 remake), find what the developers and people who work on it SAY keeps players coming back, playing, paying, and supporting it. METHOD: browser.search + browser.open (text only, no live browser). OUTPUT: write /home/hatch/workspace/agent-ops/top100-staging/wave-19/<slug>.md per game with exact structure (# <Game> \u2014 Heart and Soul; Developer/studio; Genre/platforms; Why players come back (devs' view); Key quotes 2-4 with attribution and [unverified] if snippet-only; Why players love/support it; Monetization philosophy (devs' words); Lesson for our games; Sources URLs; Coverage note). RULES: sourced quotes only, never invent; unverifiable excluded; snippet-sourced marked [unverified]. Slugs: resident-evil-4-remake, resident-evil-village, silent-hill-2-remake, alan-wake-2, walking-dead-telltale, life-is-strange, detroit-become-human, until-dawn, little-nightmares-2, dead-space-remake. Do NOT commit to git \u2014 staging dir only. Write each file as finished; heartbeat checkpoint after each file; mark done at end; report games completed.",
+  "status": "done",
+  "task": "top200 wave 19",
+  "updated_at": "2026-10-06T18:20:00-05:00",
+  "watchdog": true,
+  "progress": "10/10 files complete: resident-evil-4-remake, resident-evil-village, silent-hill-2-remake, alan-wake-2, walking-dead-telltale, life-is-strange, detroit-become-human, until-dawn, little-nightmares-2, dead-space-remake"
+}
