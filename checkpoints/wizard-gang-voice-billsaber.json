@@ -4,6 +4,7 @@
   "watchdog": true,
   "repo": "/home/hatch/workspace/voice-clone-work",
   "resume_brief": "Lane worker: Bill $aber AI voice for Wizard Gang EP02 Narrator. Approved lines: N1 'They got the call. All nine.' N2 'Nothing was resolved.' Work dir: ~/workspace/voice-clone-work/billsaber/. Chatterbox weights at ~/workspace/voice-clone-work/cb_weights/ (used for Static/Enzo clone; weights stay out of git). Steps: (1) research Bill $aber music/socials/presence -> RESEARCH.md; (2) find a PUBLIC lawful audio sample of him SPEAKING (interview/podcast/social), document URL; (3) build clone on Chatterbox (commercial-safe; XTTS v2 is prototype-only); (4) render test line N1 to ~/workspace/voice-clone-work/billsaber/test-n1.wav and verify vs research profile. Honesty rule: if no lawful public speaking sample exists, do NOT synthesize \u2014 report honestly and leave the voice unbuilt.",
-  "updated_at": "2026-10-08T01:43:03Z",
-  "attempts": 1
+  "updated_at": "2026-10-08T02:34:57.099191+00:00",
+  "attempts": 2,
+  "notes": "Watchdog 2026-10-07 ~22:35 EDT: RESEARCH.md + billsaber_ref_freestyle.wav (artist's own IG reel excerpt, honest gap noted) existed; no test render. Wrote render_billsaber.py (Chatterbox MIT, cb_weights, approved N1/N2, exaggeration 0.30). 3 render attempts killed silently by machine: two died during from_local model load, third loaded PerthNet OK and died during n1 generation. Box has 8GB, Blender rig-tools batch eating 2.1GB -> only ~0.8GB avail; CPU-only inference OOM-killed. STOPPED: do not retry until Blender batch done and >2GB free. Next watchdog run should retry render_billsaber.py directly (nohup, log render_out2.log pattern). Attempts remain 2 (one watchdog run)."
 }

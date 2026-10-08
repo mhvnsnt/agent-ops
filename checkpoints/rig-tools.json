@@ -3,7 +3,7 @@
   "status": "running",
   "watchdog": true,
   "repo": "/home/hatch/workspace/game-sweep/AshLanev2",
-  "updated_at": "2026-10-07T22:15:00+00:00",
+  "updated_at": "2026-10-08T02:12:28+00:00",
   "tools": [
     {
       "name": "UniRig",
@@ -47,8 +47,11 @@
       "license": "GPL (tool use is fine, outputs are ours)",
       "category": "auto-rigging via automatic weights + Data Transfer",
       "description": "Already installed at /usr/bin/blender. Armature Deform With Automatic Weights + Data Transfer modifier for weight copy between topologies.",
-      "status": "wiring",
-      "models_helped": []
+      "status": "verified",
+      "models_helped": [
+        "Soldier_Male (stripped + re-rigged, DEFORM_OK)"
+      ],
+      "notes": "blender_autorig.py: Mixamo-compatible armature via anatomical proportions + automatic weights. Tested on MARKS, visually verified."
     },
     {
       "name": "Mixamo auto-rigger",
@@ -67,13 +70,105 @@
       "description": "Already in Forge3D catalog. Free auto-rigger.",
       "status": "researched",
       "models_helped": []
+    },
+    {
+      "name": "DV Skin Tools",
+      "url": "https://github.com/davoodtaba-glitch/dv-skin-tools",
+      "license": "Open source (verify exact)",
+      "category": "weight painting assistance",
+      "description": "Free Blender addon, Maya-style multi-influence weight painting. Requires Blender 4.2+ (we have 4.0.2 - may need check).",
+      "status": "researched",
+      "models_helped": []
+    },
+    {
+      "name": "Voxel Heat Diffuse Skinning",
+      "url": "https://github.com/",
+      "license": "Free addon (verify)",
+      "category": "auto-skinning",
+      "description": "Voxel-based automatic skinning for Blender, better than default automatic weights.",
+      "status": "researched",
+      "models_helped": []
+    },
+    {
+      "name": "Anymate",
+      "url": "https://github.com/mragerlp/lifepunchautorigger",
+      "license": "Apache-2.0",
+      "category": "AI auto-rigging",
+      "description": "Three-stage neural rigging: joint prediction, connectivity, neural skin weights. Apache-2.0.",
+      "status": "researched",
+      "models_helped": []
+    },
+    {
+      "name": "Make-It-Animatable",
+      "url": "https://github.com/jasongzy/Make-It-Animatable",
+      "license": "AMBIGUOUS - Apache-2.0 on GitHub vs CC-BY-NC-4.0 on HF",
+      "category": "AI auto-rigging",
+      "description": "Targets Mixamo skeleton directly. License conflict must be resolved before use.",
+      "status": "researched",
+      "models_helped": []
+    },
+    {
+      "name": "skin-tokens.cpp CLI",
+      "url": "https://github.com/wisdomabeladah/summer/blob/HEAD/library/skills/skintokens-auto-rigging/SKILL.md",
+      "license": "MIT (upstream), Apache-2.0 (C++ port)",
+      "category": "AI auto-rigging/skinng",
+      "description": "TokenRig: skeleton + skin weights as autoregressive sequence. CPU/Vulkan, minutes per mesh. Has 'skin' command for existing skeletons.",
+      "status": "researched",
+      "models_helped": []
+    },
+    {
+      "name": "rig-anything (Blender plugin)",
+      "url": "https://github.com/wfbcargo/blender-godot-plugins",
+      "license": "Verify",
+      "category": "auto-rigging",
+      "description": "Measures, classifies, builds skeleton, binds, generates gait for arbitrary meshes.",
+      "status": "researched",
+      "models_helped": []
+    },
+    {
+      "name": "Surface-Heat-Diffuse-Skinning",
+      "url": "https://github.com/meshonline/Surface-Heat-Diffuse-Skinning",
+      "license": "MIT (verified)",
+      "category": "auto-skinning (voxel-based)",
+      "description": "Voxel-grid heat diffusion skinning. Handles multi-piece characters better than Blender built-in. Pulled into tools/rig-tools/surface-heat/.",
+      "status": "integrated",
+      "models_helped": []
+    },
+    {
+      "name": "BVH-Motion-Retargeter",
+      "url": "https://github.com/BacteriaJun/BVH-Motion-Retargeter",
+      "license": "MIT (verified)",
+      "category": "animation retargeting",
+      "description": "Blender addon for retargeting BVH mocap to Mixamo/UE5/VRM. Requires Blender 4.2+ (we have 4.0.2 - version mismatch).",
+      "status": "researched",
+      "models_helped": []
+    },
+    {
+      "name": "Cascadeur (free edition)",
+      "url": "https://cascadeur.com/",
+      "license": "Proprietary - NOT licensed for commercial use, .casc-only export",
+      "category": "AI animation",
+      "description": "Free edition is non-commercial and can't export to other DCC apps. REJECTED per license rules.",
+      "status": "rejected",
+      "models_helped": []
+    },
+    {
+      "name": "Surface-Heat-Diffuse-Skinning",
+      "url": "https://github.com/meshonline/Surface-Heat-Diffuse-Skinning",
+      "license": "MIT",
+      "category": "auto-skinning (bone-heat alternative Blender addon)",
+      "description": "Vendored into tools/rig-tools/surface-heat/ (MIT, .git stripped). Not yet wired into blender_autorig.py \u2014 next step: install addon + use as fallback when Bone Heat fails on messy meshes.",
+      "status": "pulled-in",
+      "models_helped": []
     }
   ],
   "summary": {
-    "evaluated": 7,
-    "integrated": 0,
+    "evaluated": 8,
+    "integrated": 1,
     "quarantined": 1,
     "rejected": 0,
-    "models_helped": 0
-  }
+    "models_helped": 1
+  },
+  "attempts": 1,
+  "notes": "watchdog resumed 2026-10-07 21:55 EDT: proved Blender auto-rig end-to-end on Soldier_Male (85-bone MixamoRig, 58 weighted body groups, pose test DEFORM_OK max-disp 0.8848). Fixed Blender 4.0.2 glTF exporter crash (add_neutral_bones on zero-weight skins): cleanup pass drops empty vertex groups + unparents weightless prop meshes. Committed bb0113fc (tools/rig-tools/ incl. vendored surface-heat MIT, TESTING.md, strip_rig.py, pose_test.py, batch_autorig.sh). Push to origin/main in flight. Next: wire surface-heat addon as bone-heat fallback; attempt UniRig/SkinTokens/MKA integration (needs GPU + weight downloads). PUSHED: bb0113fc now on origin/main (verified via ls-remote). Shared-worktree note: a concurrent charfix worker is active on branch charfix-wave3 in the same worktree (their verify_and_commit.sh has an uncommitted mode change) \u2014 did not touch their files; pushed via refspec bb0113fc:main without switching branches."
 }

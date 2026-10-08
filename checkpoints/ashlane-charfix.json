@@ -3,8 +3,8 @@
   "status": "done",
   "watchdog": true,
   "repo": "/home/hatch/workspace/game-sweep/AshLanev2",
-  "resume_brief": "Character Animation Repair Coordinator for AshLanev2. Branch: charfix. \nPROGRESS: BANNON FIXED+committed (bfc63bb5). 11 more models fixed by workers (weights) but NOT yet committed — awaiting re-verification with fixed test poses.\nKEY LESSON: Synthetic test poses were too extreme (punch had leg lift, armsup 0.5rad). Fixed viewer: punch is now simple arm extension, armsup 0.4rad. QA criteria: PASS if no long spikes (>0.15u), tpose clean. Minor armpit deformation is normal.\nTOOLS: ~/workspace/charfix/tools/reskin_proximity.mjs (validated), _charfix_viewer.html (poses fixed), _charfix_verify.mjs.\nWORKERS: 3 dispatched for P1 batches. Worker1 done (5 models fixed, awaiting QA). Workers 2,3 paused for revised instructions.\nNEXT: QA the 11 fixed models with corrected poses, commit passes, then continue with P2 batches. 23 models blocked (no skeleton).",
-  "updated_at": "2026-10-07T15:08:38.584609+00:00",
+  "resume_brief": "Character Animation Repair Coordinator for AshLanev2. Branch: charfix. \nPROGRESS: BANNON FIXED+committed (bfc63bb5). 11 more models fixed by workers (weights) but NOT yet committed \u2014 awaiting re-verification with fixed test poses.\nKEY LESSON: Synthetic test poses were too extreme (punch had leg lift, armsup 0.5rad). Fixed viewer: punch is now simple arm extension, armsup 0.4rad. QA criteria: PASS if no long spikes (>0.15u), tpose clean. Minor armpit deformation is normal.\nTOOLS: ~/workspace/charfix/tools/reskin_proximity.mjs (validated), _charfix_viewer.html (poses fixed), _charfix_verify.mjs.\nWORKERS: 3 dispatched for P1 batches. Worker1 done (5 models fixed, awaiting QA). Workers 2,3 paused for revised instructions.\nNEXT: QA the 11 fixed models with corrected poses, commit passes, then continue with P2 batches. 23 models blocked (no skeleton).",
+  "updated_at": "2026-10-08T02:35:00+00:00",
   "attempts": 1,
   "stop_requested": false,
   "models": {
@@ -14,7 +14,7 @@
     },
     "ASTRID": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "BANNON_muscular_skinned": {
       "status": "fixed",
@@ -22,7 +22,7 @@
     },
     "BILL_DOZER": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "BRIAN_CAGE_source": {
       "status": "blocked",
@@ -34,19 +34,19 @@
     },
     "CAIN_ELIAS_attire2": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "CAIN_ELIAS_attire3": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "CAIN_ELIAS_attire4": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "CAIN_ELIAS_gear": {
       "status": "blocked",
-      "notes": "2026-10-07: FUNDAMENTAL RIG DEFECT — arms detached in tpose (inverse bind matrices or joint mapping broken). Not a weight issue. Needs full re-rig. Original and fixed versions both broken."
+      "notes": "2026-10-07: FUNDAMENTAL RIG DEFECT \u2014 arms detached in tpose (inverse bind matrices or joint mapping broken). Not a weight issue. Needs full re-rig. Original and fixed versions both broken."
     },
     "CAIN_ELIAS_snakeskin": {
       "status": "fixed",
@@ -78,11 +78,11 @@
     },
     "EDWIN_KENNEDY_attire3": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "EDWIN_KENNEDY_ring1": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "EL_TORO_DE_ORO": {
       "status": "fixed",
@@ -98,47 +98,47 @@
     },
     "JAGER": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "JAGER_model1": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "JAGER_nobeard": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "JAGER_trench": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "JUDAS": {
       "status": "blocked",
-      "notes": "2026-10-07: DO NOT AUTO-FIX — multi-skin model (13 skins), reskin_proximity corrupts (writes skins[0] indices to all meshes). Already clean, 0 valid fixes needed."
+      "notes": "2026-10-07: DO NOT AUTO-FIX \u2014 multi-skin model (13 skins), reskin_proximity corrupts (writes skins[0] indices to all meshes). Already clean, 0 valid fixes needed."
     },
     "JUDAS_alt_source": {
       "status": "blocked",
-      "notes": "2026-10-07 Wave2: DO NOT AUTO-FIX — multi-skin model (13 skins, 13 meshes), same corruption risk as base JUDAS. reskin_proximity writes skins[0] indices to all meshes. Visible portions clean in test renders. Leave as-is."
+      "notes": "2026-10-07 Wave2: DO NOT AUTO-FIX \u2014 multi-skin model (13 skins, 13 meshes), same corruption risk as base JUDAS. reskin_proximity writes skins[0] indices to all meshes. Visible portions clean in test renders. Leave as-is."
     },
     "JUDAS_classic": {
       "status": "blocked",
-      "notes": "2026-10-07 Wave2: DO NOT AUTO-FIX — multi-skin model (13 skins, 13 meshes), same corruption risk as base JUDAS. reskin_proximity writes skins[0] indices to all meshes. Visible portions clean in test renders. Leave as-is."
+      "notes": "2026-10-07 Wave2: DO NOT AUTO-FIX \u2014 multi-skin model (13 skins, 13 meshes), same corruption risk as base JUDAS. reskin_proximity writes skins[0] indices to all meshes. Visible portions clean in test renders. Leave as-is."
     },
     "JUDAS_crow": {
       "status": "blocked",
-      "notes": "2026-10-07 Wave2: DO NOT AUTO-FIX — multi-skin model (13 skins, 13 meshes), same corruption risk as base JUDAS. reskin_proximity writes skins[0] indices to all meshes. Visible portions clean in test renders. Leave as-is."
+      "notes": "2026-10-07 Wave2: DO NOT AUTO-FIX \u2014 multi-skin model (13 skins, 13 meshes), same corruption risk as base JUDAS. reskin_proximity writes skins[0] indices to all meshes. Visible portions clean in test renders. Leave as-is."
     },
     "JUDAS_lionheart": {
       "status": "blocked",
-      "notes": "2026-10-07 Wave2: DO NOT AUTO-FIX — multi-skin model (13 skins, 13 meshes), same corruption risk as base JUDAS. reskin_proximity writes skins[0] indices to all meshes. Visible portions clean in test renders. Leave as-is."
+      "notes": "2026-10-07 Wave2: DO NOT AUTO-FIX \u2014 multi-skin model (13 skins, 13 meshes), same corruption risk as base JUDAS. reskin_proximity writes skins[0] indices to all meshes. Visible portions clean in test renders. Leave as-is."
     },
     "JUDAS_painmaker": {
       "status": "blocked",
-      "notes": "2026-10-07 Wave2: DO NOT AUTO-FIX — multi-skin model (13 skins, 13 meshes), same corruption risk as base JUDAS. reskin_proximity writes skins[0] indices to all meshes. Visible portions clean in test renders. Leave as-is."
+      "notes": "2026-10-07 Wave2: DO NOT AUTO-FIX \u2014 multi-skin model (13 skins, 13 meshes), same corruption risk as base JUDAS. reskin_proximity writes skins[0] indices to all meshes. Visible portions clean in test renders. Leave as-is."
     },
     "JUDAS_y2j": {
       "status": "blocked",
-      "notes": "2026-10-07 Wave2: DO NOT AUTO-FIX — multi-skin model (13 skins, 13 meshes), same corruption risk as base JUDAS. reskin_proximity writes skins[0] indices to all meshes. Visible portions clean in test renders. Leave as-is."
+      "notes": "2026-10-07 Wave2: DO NOT AUTO-FIX \u2014 multi-skin model (13 skins, 13 meshes), same corruption risk as base JUDAS. reskin_proximity writes skins[0] indices to all meshes. Visible portions clean in test renders. Leave as-is."
     },
     "KOBRA": {
       "status": "blocked",
@@ -154,7 +154,7 @@
     },
     "MARKS": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "MASTER_SENSEI": {
       "status": "fixed",
@@ -162,7 +162,7 @@
     },
     "MASTER_SENSEI_gokublack": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "NPC_FINXSSE": {
       "status": "fixed",
@@ -170,7 +170,7 @@
     },
     "ONYX_corset_skinned": {
       "status": "blocked",
-      "notes": "2026-10-07 Wave2: Severe corset/top explosion in armsup, arm spikes in punch. NOT attempted — ONYX family shows 0/3 success with proximity tool (street: ineffective, straightjacket: ineffective). Complex clothing geometry, high regression risk. Needs manual weight painting."
+      "notes": "2026-10-07 Wave2: Severe corset/top explosion in armsup, arm spikes in punch. NOT attempted \u2014 ONYX family shows 0/3 success with proximity tool (street: ineffective, straightjacket: ineffective). Complex clothing geometry, high regression risk. Needs manual weight painting."
     },
     "ONYX_skinned": {
       "status": "fixed",
@@ -190,15 +190,15 @@
     },
     "PABLO_attire2": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "PABLO_attire3": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "SOMBRA_NEGRA": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "STAN_COMBS_gear": {
       "status": "fixed",
@@ -214,11 +214,11 @@
     },
     "TARZANIAN_DEVIL_attire2": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "TARZANIAN_DEVIL_skinned": {
       "status": "blocked",
-      "notes": "2026-10-07: Severe torso distortion when arms move (4137 verts fixed but core shoulder→torso bleed persists). Needs manual weight painting."
+      "notes": "2026-10-07: Severe torso distortion when arms move (4137 verts fixed but core shoulder\u2192torso bleed persists). Needs manual weight painting."
     },
     "TITAN": {
       "status": "fixed",
@@ -226,7 +226,7 @@
     },
     "TITAN_attire1": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "TITAN_unmasked": {
       "status": "fixed",
@@ -234,23 +234,23 @@
     },
     "TITAN_white": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "TRIPLE_XXX": {
       "status": "blocked",
-      "notes": "2026-10-07: DO NOT AUTO-FIX — reskin_proximity introduced spikes (originals were clean). Needs targeted manual weight paint. Reverted to original."
+      "notes": "2026-10-07: DO NOT AUTO-FIX \u2014 reskin_proximity introduced spikes (originals were clean). Needs targeted manual weight paint. Reverted to original."
     },
     "TRIPLE_XXX_suit": {
       "status": "blocked",
-      "notes": "2026-10-07 Wave2: DO NOT AUTO-FIX — reskin_proximity causes severe regressions on TRIPLE_XXX family (base was clean, tool introduced spikes; suit variant: tool INTRODUCED massive jacket explosion in armsup). Needs manual weight painting."
+      "notes": "2026-10-07 Wave2: DO NOT AUTO-FIX \u2014 reskin_proximity causes severe regressions on TRIPLE_XXX family (base was clean, tool introduced spikes; suit variant: tool INTRODUCED massive jacket explosion in armsup). Needs manual weight painting."
     },
     "TRIPLE_XXX_tights": {
       "status": "blocked",
-      "notes": "2026-10-07 Wave2: DO NOT AUTO-FIX — reskin_proximity causes severe regressions on TRIPLE_XXX family (base was clean, tool introduced spikes; suit variant: tool INTRODUCED massive jacket explosion in armsup). Needs manual weight painting."
+      "notes": "2026-10-07 Wave2: DO NOT AUTO-FIX \u2014 reskin_proximity causes severe regressions on TRIPLE_XXX family (base was clean, tool introduced spikes; suit variant: tool INTRODUCED massive jacket explosion in armsup). Needs manual weight painting."
     },
     "TRIPLE_XXX_trunks": {
       "status": "blocked",
-      "notes": "2026-10-07 Wave2: DO NOT AUTO-FIX — reskin_proximity causes severe regressions on TRIPLE_XXX family (base was clean, tool introduced spikes; suit variant: tool INTRODUCED massive jacket explosion in armsup). Needs manual weight painting."
+      "notes": "2026-10-07 Wave2: DO NOT AUTO-FIX \u2014 reskin_proximity causes severe regressions on TRIPLE_XXX family (base was clean, tool introduced spikes; suit variant: tool INTRODUCED massive jacket explosion in armsup). Needs manual weight painting."
     },
     "TYNESHIA": {
       "status": "fixed",
@@ -258,29 +258,29 @@
     },
     "TYNESHIA_street": {
       "status": "blocked",
-      "notes": "2026-10-07 Wave2: REGRESSION — reskin_proximity fixed 664 verts but INTRODUCED severe torso/shirt explosion in armsup (before was clean). Punch leg-spike unchanged. Reverted, not committed. Model needs manual weight painting."
+      "notes": "2026-10-07 Wave2: REGRESSION \u2014 reskin_proximity fixed 664 verts but INTRODUCED severe torso/shirt explosion in armsup (before was clean). Punch leg-spike unchanged. Reverted, not committed. Model needs manual weight painting."
     },
     "VIPER": {
       "status": "blocked",
-      "notes": "2026-10-07: DO NOT AUTO-FIX — reskin_proximity introduced spikes (originals were clean). Needs targeted manual weight paint. Reverted to original."
+      "notes": "2026-10-07: DO NOT AUTO-FIX \u2014 reskin_proximity introduced spikes (originals were clean). Needs targeted manual weight paint. Reverted to original."
     },
     "WRECK_PATTERSON": {
       "status": "blocked",
-      "notes": "2026-10-07: DO NOT AUTO-FIX — reskin_proximity introduced spikes (originals were clean). Needs targeted manual weight paint. Reverted to original."
+      "notes": "2026-10-07: DO NOT AUTO-FIX \u2014 reskin_proximity introduced spikes (originals were clean). Needs targeted manual weight paint. Reverted to original."
     },
     "WRECK_PATTERSON_attire2": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "WRECK_PATTERSON_attire3": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     },
     "WRECK_PATTERSON_attire4": {
       "status": "blocked",
-      "notes": "2026-10-07: No skeleton/skin — cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
+      "notes": "2026-10-07: No skeleton/skin \u2014 cannot animate. Alternate attire or unrigged model. Future phase: weight-transfer from base model skeleton."
     }
   },
   "phase": "complete-automated-scope",
-  "notes": "Watchdog 2026-10-07 ~10:55 EDT resumed this stale checkpoint. Verified: all fixed models committed on main and PUSHED (origin/main == local main 044d436d; charfix and charfix-wave2 branches fully merged, nothing stranded). Reverted 5 uncommitted worker GLB modifications on BLOCKED models (HALL_NIGHTER, KOBRA, MAIME_skinned, MAIME_tattered_skinned, TARZANIAN_DEVIL_skinned) — these were rejected automated attempts (tool ineffective / beyond scope), never approved for commit; tree now clean. Automated repair scope is EXHAUSTED: P1/P2/P3 waves assessed, proximity-tool attempts discontinued (1/14 P3 success). Remaining models are blocked with documented manual-only next steps (manual weight painting, hand-specific repair, full re-rig/re-bind, or future weight-transfer phase for unrigged variants) — not automatable by this pipeline. Untracked repo-root artifacts (docs/round6/*, docs/playtest/*, public/motion/retargeted/, etc.) belong to other workers' tasks and were left untouched."
+  "notes": "Watchdog 2026-10-07 ~10:55 EDT resumed this stale checkpoint. Verified: all fixed models committed on main and PUSHED (origin/main == local main 044d436d; charfix and charfix-wave2 branches fully merged, nothing stranded). Reverted 5 uncommitted worker GLB modifications on BLOCKED models (HALL_NIGHTER, KOBRA, MAIME_skinned, MAIME_tattered_skinned, TARZANIAN_DEVIL_skinned) \u2014 these were rejected automated attempts (tool ineffective / beyond scope), never approved for commit; tree now clean. Automated repair scope is EXHAUSTED: P1/P2/P3 waves assessed, proximity-tool attempts discontinued (1/14 P3 success). Remaining models are blocked with documented manual-only next steps (manual weight painting, hand-specific repair, full re-rig/re-bind, or future weight-transfer phase for unrigged variants) \u2014 not automatable by this pipeline. Untracked repo-root artifacts (docs/round6/*, docs/playtest/*, public/motion/retargeted/, etc.) belong to other workers' tasks and were left untouched. | Rig-tool pull-in active: Blender auto-rig batching 22 unrigged models (charfix-wave3)."
 }
