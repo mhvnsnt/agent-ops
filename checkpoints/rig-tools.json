@@ -1,0 +1,79 @@
+{
+  "task": "open-source rigging tool pull-in program",
+  "status": "running",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/game-sweep/AshLanev2",
+  "updated_at": "2026-10-07T22:15:00+00:00",
+  "tools": [
+    {
+      "name": "UniRig",
+      "url": "https://github.com/VAST-AI-Research/UniRig",
+      "license": "MIT (code + weights)",
+      "category": "auto-rigging (skeleton prediction)",
+      "description": "SIGGRAPH 2025 autoregressive transformer for skeleton tree prediction from mesh. MIT licensed.",
+      "status": "researched",
+      "models_helped": []
+    },
+    {
+      "name": "SkinTokens / TokenRig",
+      "url": "https://github.com/localai-org/skin-tokens.cpp",
+      "license": "MIT (upstream VAST-AI), Apache-2.0 (C++ port)",
+      "category": "auto-skinning (weight generation)",
+      "description": "Skinning model: generates skin weights for existing skeleton. C++ port available.",
+      "status": "researched",
+      "models_helped": []
+    },
+    {
+      "name": "MKA (mka_v3)",
+      "url": "https://github.com/xav13rrr/mka_v3",
+      "license": "Apache-2.0",
+      "category": "full pipeline (rig + skin + animate)",
+      "description": "Universal pipeline bundling UniRig + SkinTokens. Apache-2.0.",
+      "status": "researched",
+      "models_helped": []
+    },
+    {
+      "name": "Pinocchio (Baran & Popovic)",
+      "url": "https://github.com/stnoh/pinocchio",
+      "license": "LGPL (core), MIT (demo)",
+      "category": "auto-rigging",
+      "description": "Classic SIGGRAPH 2007 automatic rigging. LGPL core = quarantine per rules (evaluate only, don't integrate).",
+      "status": "quarantined",
+      "models_helped": []
+    },
+    {
+      "name": "Blender 4.0.2 (installed)",
+      "url": "https://www.blender.org",
+      "license": "GPL (tool use is fine, outputs are ours)",
+      "category": "auto-rigging via automatic weights + Data Transfer",
+      "description": "Already installed at /usr/bin/blender. Armature Deform With Automatic Weights + Data Transfer modifier for weight copy between topologies.",
+      "status": "wiring",
+      "models_helped": []
+    },
+    {
+      "name": "Mixamo auto-rigger",
+      "url": "https://www.mixamo.com",
+      "license": "Adobe ToS (free, commercial use allowed when embedded)",
+      "category": "auto-rigging",
+      "description": "Already in Forge3D catalog. Requires upload via web. Good quality humanoid rigs.",
+      "status": "researched",
+      "models_helped": []
+    },
+    {
+      "name": "AccuRIG (Reallusion)",
+      "url": "https://actorcore.reallusion.com/auto-rig",
+      "license": "Proprietary, free",
+      "category": "auto-rigging",
+      "description": "Already in Forge3D catalog. Free auto-rigger.",
+      "status": "researched",
+      "models_helped": []
+    }
+  ],
+  "summary": {
+    "evaluated": 7,
+    "integrated": 0,
+    "quarantined": 1,
+    "rejected": 0,
+    "models_helped": 0
+  }
+}

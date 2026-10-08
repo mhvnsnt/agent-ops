@@ -1,1 +1,9 @@
-{"attempts":0,"repo":"/home/hatch/workspace/trippedd-studio","resume_brief":"Generate the 7 Act 2a EP02 stills listed below into production/WIZARD_GANG_EP01/ep02-stills/ via media.generate_image, then write /tmp/ep02-stills-batchB.json manifest.","status":"running","task":"EP02 stills Batch B (Act 2a, 7 shots)","updated_at":"2026-10-07T21:39:00-04:00","watchdog":true}
+{
+  "attempts": 1,
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "Generate the 7 Act 2a EP02 stills listed below into production/WIZARD_GANG_EP01/ep02-stills/ via media.generate_image, then write /tmp/ep02-stills-batchB.json manifest.",
+  "status": "done",
+  "task": "EP02 stills Batch B (Act 2a, 7 shots)",
+  "updated_at": "2026-10-07T21:56:00-04:00",
+  "watchdog": true
+}
