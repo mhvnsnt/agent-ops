@@ -83,3 +83,19 @@ Second scheme, run from `/home/box/offload`: branches `backup/box-2026-10-14-<sl
 - mhvnsnt/Brutal-Fist (private) `firebase-applet-config.json:4` and Bannon `godmode/firebase-applet-config.json`: Firebase web key `AIzaSy…` (client key, low risk).
 - 127 generic-api-key hits in bundled HTML/JS (`public/index.html`, `merged_BANNON_v150.html`) and 1 in `/tmp/ashbuild/.vercel` output: false positives (identifiers like brick…/combat…).
 - box-orphans, wh-cs and agent-ops-repo new branches: clean.
+
+## Pass 2 (after interruption, ~4:30 PM CT)
+
+Re-scanned 99 `.git` entries across the box (/workspace, /tmp, /home/box). Refs already on remotes were skipped; WIP trees identical to the pass-1 snapshot were skipped.
+
+| Repo path | New backup | Where |
+|---|---|---|
+| `/workspace/pt-ops` | claims/playtest-2026-10-14 | box-storage `backup/box-2026-10-14/pt-ops/*` |
+| `/tmp/ceh` | feat/private-cloud-console | mhvnsnt/chimera-emulator-hub (private) `backup/box-2026-10-14/tmp_ceh/*` |
+| `/workspace/wh-qa` (new clone) | grok/wh-playtest-qa + WIP (untracked build/) | mhvnsnt/western-heart (private) `backup/box-2026-10-14/wh-qa/*` |
+| `/workspace/wh-cs` | WIP (lab/game/scripts/main.gd) | mhvnsnt/western-heart `backup/box-2026-10-14/wh-cs/wip2` |
+| `/workspace/bn/b` | fix/perf-lazy-clips-debug-flag-version-stamp | mhvnsnt/Bannon (private) `backup/box-2026-10-14/bn_b/*` |
+
+These four box-storage pushes failed (index-pack on full history), so they went to the private origin repos; gitleaks on the new commits reported no leaks.
+
+Final verification: 94 of 99 entries OK. Every unpushed branch tip, stash and dirty tree matched a SHA on a remote. The other 5: 3 were confirmed by `ls-remote origin` SHA match. `/tmp/backend-plugin-bpPnXV` is an empty repo with no commits or files, so there was nothing to back up. `/workspace/mmhq-autoreply` is a broken worktree (its parent `/workspace/mmhq` is gone); its files are in Producerbot's release `box-2026-10-14-folder-mmhq-autoreply`.
