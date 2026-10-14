@@ -18,3 +18,4 @@ Protocol:
 | Repo Co Dev | Brutal-Fist all-character model audit + Tripo intake pipeline | brutalfist/model-audit-tripo | 2026-10-14 15:23 | active |
 | Repo Co Dev | Cloudflare Pages deploys (bannon / brutalfist / ashlane-1aa) | cf-pages-deploys | 2026-10-14 15:23 | active |
 | Repo Co Dev | Playtest + gameplay/animation fixes: AshLane, western-heart Lab, Brutal-Fist (not Kobra models) | playtest/2026-10-14 | 2026-10-14 15:58 | active |
+| Repo Co Dev | Brutal-Fist KOBRA mesh damage + stricter rig audit (FUSED_LIMBS / POSED_TEARING / TEXTURE). Stop point: KOBRA.glb repaired and passing; batch repair of ~40 other failing models not started; npm test red by design. See brutalfistgrokversionten docs/HOW-TO-CONTINUE.md on that branch | grok/kobra-fix (dded502) | 2026-10-14 15:55 | paused (owner order 16:09) |
