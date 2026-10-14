@@ -12,3 +12,8 @@ Protocol:
 | Grok Bot | Goodville postmortem / cutouts / timeline | (see TAG-TEAM #6) | 2026-10-14 | active |
 | Grok Bot | CI fixes (TAG-TEAM #7) | per repo | 2026-10-14 | active |
 | Grok Bot | Fiverr gig 1 (browser) | n/a | 2026-10-14 | active |
+| Repo Co Dev | AshLanev2 PR #38 + #42 (crash fix / visual tests) | ashlanev2/pr-38-42 | 2026-10-14 15:23 | active |
+| Repo Co Dev | western-heart Godot Lab 1v1 + T6/TTT2 importers | western-heart/lab-1v1 | 2026-10-14 15:23 | active |
+| Repo Co Dev | Shared creation suite + jiggle physics (western-heart docs/creation-suite) | western-heart/creation-suite | 2026-10-14 15:23 | active |
+| Repo Co Dev | Brutal-Fist all-character model audit + Tripo intake pipeline | brutalfist/model-audit-tripo | 2026-10-14 15:23 | active |
+| Repo Co Dev | Cloudflare Pages deploys (bannon / brutalfist / ashlane-1aa) | cf-pages-deploys | 2026-10-14 15:23 | active |
