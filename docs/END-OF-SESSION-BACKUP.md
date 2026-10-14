@@ -33,5 +33,9 @@ Large binaries (> ~50 MB, or anything git refuses) go to Release assets instead 
 ## 6. Report
 Post per clone: dirty/unpushed counts, -wip branch names, release tags, verified/bad counts.
 
-## TeraBox
-Status 2026-10-14: no TeraBox connector or credentials; no `rclone` or `terabox` CLI on the box. GitHub (branches + box-storage Release assets) is the only verified backup target. To add TeraBox later the owner must: (1) choose a tool — rclone has no official TeraBox backend; options are a community CLI (e.g. `terabox-cli`/`BaiduPCS-Go`-style tools) or the TeraBox web/desktop app; (2) sign in himself and provide credentials via env/secret store (never pasted in chat); (3) then add a step here that uploads the same manifest + files and verifies sizes/sha256. Agents must not sign in to TeraBox on their own.
+## TeraBox (secondary target)
+Status 2026-10-14: the box browser is signed in to TeraBox as **Mars FMMG** (Premium+, ~5 TB free but only ~30 GB permanent; premium expires ~2026-10-20 — after that only the permanent quota is safe). No connector/API credentials, no `rclone`/`terabox` CLI on the box (rclone has no official TeraBox backend).
+- GitHub (branches + SHA-verified box-storage Release assets) stays the PRIMARY, verified backup. TeraBox is SECONDARY only; never delete anything because it is "on TeraBox".
+- Upload is done through the browser by a **desktop agent** (one with a box desktop/browser), never by a headless/executor agent and never by signing in again — use the existing session only.
+- Procedure: (1) after steps 1-4, stage files in `/workspace/terabox-out/<date>/` with the sha256 manifest from bk.sh; (2) desktop agent opens terabox.com in the box browser, uploads that folder to `/box-backups/<date>/`; (3) checks uploaded file count and sizes match the manifest; (4) logs folder path + counts in `agent-ops/BOX-OFFLOAD-LOG.md`.
+- Keep critical sets under the 30 GB permanent quota; anything above it may vanish when Premium+ lapses (~Oct 20, 2026).
