@@ -18,3 +18,4 @@ Protocol:
 | Repo Co Dev | Brutal-Fist all-character model audit + Tripo intake pipeline | brutalfist/model-audit-tripo | 2026-10-14 15:23 | active |
 | Repo Co Dev | Cloudflare Pages deploys (bannon / brutalfist / ashlane-1aa) | cf-pages-deploys | 2026-10-14 15:23 | active |
 | Repo Co Dev | Playtest + gameplay/animation fixes: AshLane, western-heart Lab, Brutal-Fist (not Kobra models) | playtest/2026-10-14 | 2026-10-14 15:58 | active |
+| Repo Co Dev | Bannon playtest perf/overlay/version fixes + GLB-replacement audit (PAUSED by owner; see Bannon docs/HOW-TO-CONTINUE.md) | Bannon/fix/perf-lazy-clips-debug-flag-version-stamp | 2026-10-14 16:10 | paused |
