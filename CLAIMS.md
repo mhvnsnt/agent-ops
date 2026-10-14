@@ -18,3 +18,4 @@ Protocol:
 | Repo Co Dev | Brutal-Fist all-character model audit + Tripo intake pipeline | brutalfist/model-audit-tripo | 2026-10-14 15:23 | active |
 | Repo Co Dev | Cloudflare Pages deploys (bannon / brutalfist / ashlane-1aa) | cf-pages-deploys | 2026-10-14 15:23 | active |
 | Repo Co Dev | Playtest + gameplay/animation fixes: AshLane, western-heart Lab, Brutal-Fist (not Kobra models) | playtest/2026-10-14 | 2026-10-14 15:58 | active |
+| Repo Co Dev | Bannon playable in western-heart + Bannon mask in all games + MULTIVERSE.md | docs/multiverse-map | 2026-10-14 17:04 | active |
