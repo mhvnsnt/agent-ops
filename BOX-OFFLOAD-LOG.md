@@ -373,3 +373,18 @@ Unpushed>0 rows: each local branch tip was verified on the remote under a backup
 - `western-heart-inventory-western-heart`: RELEASE western-heart-inventory-western-heart-ignored.tar.part00 59M sha256=60cab7ea477dc9dd6c4e2d2eb22bcf08d6a2748da85e72c8f23f5a1e55af7cac https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-western-heart-inventory-western-heart
 - `wh-cs`: RELEASE wh-cs-ignored.tar.part00 12M sha256=1bb69f81b31a43ad0f988f7119445f5603c0c6be01256953aa47e862f7d40b55 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-wh-cs
 - `wh-qa`: RELEASE wh-qa-ignored.tar.part00 12M sha256=2ac84c019181b9f79e5a5093fad4e6c8793700730faba7f145fd8c47102890a4 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-wh-qa
+## Pass 2 (after interruption, ~4:30 PM CT)
+
+Re-scanned 99 `.git` entries across the box (/workspace, /tmp, /home/box). Refs already on remotes were skipped; WIP trees identical to the pass-1 snapshot were skipped.
+
+| Repo path | New backup | Where |
+|---|---|---|
+| `/workspace/pt-ops` | claims/playtest-2026-10-14 | box-storage `backup/box-2026-10-14/pt-ops/*` |
+| `/tmp/ceh` | feat/private-cloud-console | mhvnsnt/chimera-emulator-hub (private) `backup/box-2026-10-14/tmp_ceh/*` |
+| `/workspace/wh-qa` (new clone) | grok/wh-playtest-qa + WIP (untracked build/) | mhvnsnt/western-heart (private) `backup/box-2026-10-14/wh-qa/*` |
+| `/workspace/wh-cs` | WIP (lab/game/scripts/main.gd) | mhvnsnt/western-heart `backup/box-2026-10-14/wh-cs/wip2` |
+| `/workspace/bn/b` | fix/perf-lazy-clips-debug-flag-version-stamp | mhvnsnt/Bannon (private) `backup/box-2026-10-14/bn_b/*` |
+
+These four box-storage pushes failed (index-pack on full history), so they went to the private origin repos; gitleaks on the new commits reported no leaks.
+
+Final verification: 94 of 99 entries OK. Every unpushed branch tip, stash and dirty tree matched a SHA on a remote. The other 5: 3 were confirmed by `ls-remote origin` SHA match. `/tmp/backend-plugin-bpPnXV` is an empty repo with no commits or files, so there was nothing to back up. `/workspace/mmhq-autoreply` is a broken worktree (its parent `/workspace/mmhq` is gone); its files are in Producerbot's release `box-2026-10-14-folder-mmhq-autoreply`.

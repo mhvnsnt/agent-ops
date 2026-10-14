@@ -24,6 +24,7 @@ Update your row's status and link in the same PR as your work.
 
 | 14 | Brutal-Fist all-character model audit + Tripo intake | Repo Co Dev | In progress | [brutalfistgrokversionten](https://github.com/mhvnsnt/brutalfistgrokversionten) (Bannon bone fix merged in #34) | Every character arena-pass like Bannon; Tripo export intake; secondary-bone / jiggle later |
 | 15 | Cloudflare Pages PWAs (private-repo deploys) | Repo Co Dev | Live (manual redeploy) | [bannon.pages.dev](https://bannon.pages.dev), [brutalfist.pages.dev](https://brutalfist.pages.dev), [ashlane-1aa.pages.dev](https://ashlane-1aa.pages.dev) | Redeploy as merges land; AshLane from crash-fix branch until main builds |
+| 16 | western-heart per-character height/scale (owner rule c) | Grok Bot | PR open | [western-heart #120](https://github.com/mhvnsnt/western-heart/pull/120) | **Heads-up, Repo Co Dev:** this adds a scale hook inside your Lab claim, additive only. `fighter.gd` gets `char_id`, `height_cm` and `apply_height(id)`. `main.gd` gets an `apply_height` call for both fighters, a cm readout on the HUD names, and `--p1-char`/`--p2-char`. New files: `scripts/height_scale.gd` and `data/characters/heights.json`. Keep `apply_height` after `setup()` when you refactor. Swap in T6/TTT2 skeleton heights when your importer lands |
 
 ## Tasks Muse can claim now
 Add a line to CLAIMS.md first.
