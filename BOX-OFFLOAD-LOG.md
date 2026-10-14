@@ -58,3 +58,28 @@ The other /workspace folders were tarred by Producerbot to box-storage releases 
 ## Verification
 
 Every local branch tip that isn't on a remote matches a box-storage backup ref SHA or a bundled ref; every stash SHA is on box-storage; every dirty tree has a WIP snapshot. Result: **0 missing**.
+
+## Follow-up pass (bk2.sh / ng.sh run, verified ~5:00 PM CT)
+
+Second scheme, run from `/home/box/offload`: branches `backup/box-2026-10-14-<slug>[-<branch>|-wip|-stash-N]` pushed to each clone's **own origin**, ignored/large files and non-git folders as streamed tar parts on **mhvnsnt/box-storage** releases `box-2026-10-14-*`. Full per-line log: `/home/box/offload/log.tsv` on the box (summarized here).
+
+- Clones processed: 94 roots in `roots.txt`, every one has a final STATUS line. Re-check now: all report `git log --branches --not --remotes` = 0, except the URL-pushed ones below (remote SHA verified with `git ls-remote`).
+- Re-ran after new agent commits: `/workspace/agent-ops-repo` (claims/kobra-paused, claims/bannon-playtest-paused), `/workspace/wh-cs` (pr118 + wip).
+- `/workspace/ig/w-Bannon` feat/instruction-gate: remote backup branch = 7a388cf880 (local tracking ref couldn't be written because the disk was full).
+- Non-git folders: all 44 in `folders.txt` have release parts on box-storage (`box-2026-10-14-folder-*`).
+- Release integrity: all 71 RELEASE lines match the GitHub asset sha256 digest. Re-downloaded and re-hashed: folder-mfluid-audit, folder-code-doctor, and the two retried tmp-build-*Mochiichao* tars — all OK.
+
+### New private repo mhvnsnt/box-orphans
+| Source | Where | Verified |
+|---|---|---|
+| `/workspace/code-doctor/case-neon` (no remote) | branches `case-neon/main` d6a812d2b5, `case-neon/fix/security-hardening` 4ed531cac6; ignored files on release `box-2026-10-14-code-doctor-case-neon-ignored` | ls-remote SHA match; sha256 17bae1de4446… |
+| `/tmp/tgt` (no remote) | branch `tmp-tgt/master` 16b2fec7cd | ls-remote SHA match |
+| `mfluid-audit/Mochiichao-Diamond-Version-2d-` proof/ + tools/ (upstream push 403) | branch `mfluid-mochiichao-proof-tools` 5ac400e84d (9 files) | file list match |
+| `/workspace/mmhq-autoreply` (orphaned worktree, parent /workspace/mmhq gone) | release `box-2026-10-14-folder-mmhq-autoreply` | sha256 97c534ecadd4… |
+
+### gitleaks on backup branches (origin/main..branch)
+124 branches scanned. Findings (values masked to 6 chars, history NOT rewritten):
+- mhvnsnt/Bannon (private) `start-autonomous-agent.ts:15`, `src/services/repoSyncService.ts:213`: github-fine-grained-pat `github…` — **already on Bannon main**, hardcoded fallback token. Recommend revoking/rotating it.
+- mhvnsnt/Brutal-Fist (private) `firebase-applet-config.json:4` and Bannon `godmode/firebase-applet-config.json`: Firebase web key `AIzaSy…` (client key, low risk).
+- 127 generic-api-key hits in bundled HTML/JS (`public/index.html`, `merged_BANNON_v150.html`) and 1 in `/tmp/ashbuild/.vercel` output: false positives (identifiers like brick…/combat…).
+- box-orphans, wh-cs and agent-ops-repo new branches: clean.
