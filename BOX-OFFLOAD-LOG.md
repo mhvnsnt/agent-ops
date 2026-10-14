@@ -388,3 +388,31 @@ Re-scanned 99 `.git` entries across the box (/workspace, /tmp, /home/box). Refs 
 These four box-storage pushes failed (index-pack on full history), so they went to the private origin repos; gitleaks on the new commits reported no leaks.
 
 Final verification: 94 of 99 entries OK. Every unpushed branch tip, stash and dirty tree matched a SHA on a remote. The other 5: 3 were confirmed by `ls-remote origin` SHA match. `/tmp/backend-plugin-bpPnXV` is an empty repo with no commits or files, so there was nothing to back up. `/workspace/mmhq-autoreply` is a broken worktree (its parent `/workspace/mmhq` is gone); its files are in Producerbot's release `box-2026-10-14-folder-mmhq-autoreply`.
+
+## Pass 2 — 2026-10-14 ~4:50 PM CT (Grok Bot / Producerbot, owner order)
+
+Free space before: 609 MB. After clone deletions: ~15.1 GB.
+
+### Clones deleted (porcelain 0, unpushed 0, no stashes, every branch tip reachable from an ls-remote ref, no ignored files, lsof 0, no file changes in 20 min, not under an active claim)
+
+| Path | Size | Backup (remote) | Local HEAD |
+|---|---|---|---|
+| `wa/TRIPPEDD-Production-studios-` | 1489MB | https://github.com/mhvnsnt/TRIPPEDD-Production-studios-/tree/docs/agents-standard | `9ffb635f` |
+| `ig/w-TRIPPEDD-Production-studios-` | 4002MB | https://github.com/mhvnsnt/TRIPPEDD-Production-studios-/tree/feat/instruction-gate | `ef9f5c70` |
+| `ref-repos/Bannon` | 5717MB | https://github.com/mhvnsnt/Bannon/tree/stickup/entrance-v1 | `25c8bf77` |
+| `ig/w-God-Molecule-Show-Studio` | 281MB | https://github.com/mhvnsnt/God-Molecule-Show-Studio/tree/feat/instruction-gate | `7fbc3430` |
+| `mmhq-cd` | 600MB | https://github.com/mhvnsnt/money-machine-hq/tree/main | `f0afec51` |
+| `mtp/mmhq` | 829MB | https://github.com/mhvnsnt/money-machine-hq/tree/docs/muse-training-pack | `ba6a62ab` |
+| `wa/money-machine-hq` | 597MB | https://github.com/mhvnsnt/money-machine-hq/tree/docs/agents-edit-in-place | `a3481988` |
+| `ig/w-money-machine-hq` | 184MB | https://github.com/mhvnsnt/money-machine-hq/tree/feat/instruction-gate | `c9f580ef` |
+| `oss-anim-staging/_raw/git/cmu-mocap` | 434MB | https://github.com/una-dinosauria/cmu-mocap/tree/master | `09a07f54` |
+| `ig/w-BioMechania` | 188MB | https://github.com/mhvnsnt/BioMechania/tree/feat/instruction-gate | `b65dff97` |
+| `ig/w-ConcreteDragon` | 190MB | https://github.com/mhvnsnt/ConcreteDragon/tree/feat/instruction-gate | `e8dababf` |
+
+Note: some head branches no longer exist on the remote (merged and deleted), but each tip commit was confirmed to be an ancestor of a ref on the remote before deletion.
+
+### New backup refs (non-disruptive snapshot commits; working trees and HEAD untouched)
+
+backup/box-2026-10-14b-<clone>-wip / -stashN on: AshLanev2 (ashlane-repo, ashlane-base-wt, originalize-pr-AshLanev2, tmp-ashbuild), Brutal-Fist (wip, stash0, BannonSource-wip), brutalfistgrokversionten (vten-stages, vten-main-wt, vten-intro, vten-intro-base, vten-ci-fix), brutalfistgrokversioneight, western-heart (wh-qa wip + grok/wh-playtest-qa, wh-cs), Bannon (wa-Bannon), M.-Engine- (fix), money-machine-hq (mmhq-entrance wip+2 stashes, mmhq-cdt/money-machine-hq/mmhq-et-v2 2 stashes each).
+
+Not backed up: mfluid-audit/Mochiichao-Diamond-Version-2d- (2 dirty files; push to mfluidmusic denied 403). Kept on disk.
