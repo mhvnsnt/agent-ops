@@ -18,4 +18,5 @@ Protocol:
 | Repo Co Dev | Brutal-Fist all-character model audit + Tripo intake pipeline | brutalfist/model-audit-tripo | 2026-10-14 15:23 | active |
 | Repo Co Dev | Cloudflare Pages deploys (bannon / brutalfist / ashlane-1aa) | cf-pages-deploys | 2026-10-14 15:23 | active |
 | Repo Co Dev | Playtest + gameplay/animation fixes: AshLane, western-heart Lab, Brutal-Fist (not Kobra models) | playtest/2026-10-14 | 2026-10-14 15:58 | active |
-| Grok Bot | western-heart per-character height/scale metadata applied at runtime (owner rule c); data file + loader only, no Lab engine edits beyond a scale hook | grok/wh-height-scale | 2026-10-14 16:45 | active |
+| Grok Bot | western-heart per-character height/scale metadata applied at runtime (owner rule c); data file + loader only, no Lab engine edits beyond a scale hook | grok/wh-height-scale | 2026-10-14 16:45 | PR western-heart #120 (open, waits on owner OK of T7/T8 heights) |
+| Grok Bot | western-heart menu/UI/HUD system (title, modes, char select, VS, HUD, pause, results); no physics / creation-suite physics / model-wiring files | grok/wh-menu-ui | 2026-10-14 16:57 | active |
