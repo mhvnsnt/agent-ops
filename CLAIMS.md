@@ -21,3 +21,4 @@ Protocol:
 | Grok Bot | western-heart per-character height/scale metadata applied at runtime (owner rule c); data file + loader only, no Lab engine edits beyond a scale hook | grok/wh-height-scale | 2026-10-14 16:45 | PR western-heart #120 (open, waits on owner OK of T7/T8 heights) |
 | Grok Bot | western-heart menu/UI/HUD system (title, modes, char select, VS, HUD, pause, results); no physics / creation-suite physics / model-wiring files | grok/wh-menu-ui | 2026-10-14 16:57 | active |
 | Muse | western-heart public collection (TAG-TEAM #18); handoff docs/handoffs/MUSE_FAN_ASSETS_HANDOFF.md | muse/wh-public-collection | 2026-10-14 18:38 | done — 3 PRs merged (#139 stubs, #143 frame data, #145 catalog+refs) |
+| Taxonomy worker (Muse subagent) | MODEL_DEFECT_TAXONOMY.md on western-heart | docs/rig-defect-taxonomy | 2026-10-15 15:30 | active |
