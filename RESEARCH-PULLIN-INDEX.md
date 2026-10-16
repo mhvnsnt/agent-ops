@@ -13,7 +13,7 @@ Owner rule 2026-10-16: a finding without a pull-in is incomplete — track until
 | AI/ML inference | local LLMs, GGUF/quantization, diffusion on T4, LoRA/QLoRA | → cape-jones + western-heart docs/ (pending) | Researching |
 | Procgen + asset pipelines | PCG levels/chars/textures, USD, glTF extensions, material systems | → western-heart docs/ (pending) | Researching |
 | Netcode/multiplayer | rollback (GGPO/Godot), WebRTC, matchmaking, cloud streaming | → western-heart docs/ + game/ (pending) | Researching |
-| Console homebrew + CI | PS2/PSP/GC/N64/Xbox SDKs, emulator debuggers, CI templates | → game-reverse-engineering docs/ (pending) | Researching |
+| Console homebrew + CI | PS2/PSP/GC/N64/Xbox SDKs, emulator debuggers, CI templates | → game-reverse-engineering docs/toolchains/ (9 docs) + tooling/console-toolchains/ ; CI template → agent-ops ci-templates/game-ci/ | ✅ wired 2026-10-16 |
 
 ## Previously pulled (pre-index, from 2026-PULL-SUMMARY + cape-jones PRs #15–#20)
 
@@ -100,3 +100,21 @@ Research on how to manage research across 66 repos. Doc: agent-ops `RESEARCH-CON
 | PKM tools: Logseq (AGPL-3.0, open source, outliner, block-addressable — best for LLM-written content) vs Obsidian (proprietary, 4,500+ plugins, better for long-form); both local-first markdown + git | mehmetgoekce llm-wiki; freshtechtips 2026 | convention: plain markdown + git + [[wikilinks]] (no app needed for agents) |
 | Zettelkasten: atomicity (one idea per note), unique addressing, dense interlinking via [[wikilinks]]; distributed teams = shared workspace + linking conventions + knowledge gardening | jqueiroz notenav; taskade.com; Luhmann 90k cards | [[wikilink]] cross-reference convention in RESEARCH-CONVENTIONS.md |
 | Dedupe lesson: "the URL is an attribute of the copy, not the entity — dedupe on normalized content fields; treat URLs as provenance, not identity" | dev.to imapphelp | research-check.sh + index-first rule (check before researching) |
+
+## Pulled 2026-10-16 — Console homebrew/RE toolchains + build systems/CI
+
+| Tool | Source | License | Landed | Status |
+|---|---|---|---|---|
+| psprecomp (Allegrex→C static recomp) | sp00nznet/psprecomp | MIT | game-reverse-engineering docs/toolchains/psp.md + tooling/console-toolchains/install.sh | ✅ wired (built, 10/10 ctest pass; needs `-lm` — upstream CMake gap) |
+| dolphin-memory-engine-fork (Dolphin live-memory R/W) | PyPI | MIT | pip recipe in install.sh; tooling/console-toolchains/dolphin-memscan.py | ✅ wired (v2.1.3 import + API verified) |
+| game-ci template (Godot export + Blender headless + asset gates) | original (2026 patterns) | ours | agent-ops ci-templates/game-ci/ | ✅ wired (asset_gates + blender_smoke tested on VM) |
+| PS2SDK/ps2toolchain (ps2dev) | ps2dev org | AFL-2.0 / BSD-2-Clause / MIT | install recipe (prebuilt tarball) | 📄 documented (Urban Reign lane) |
+| pspsdk/pspdev | pspdev org | BSD | install recipe (docker pspdev/pspdev:latest) | 📄 documented (Tekken 6 PSP lane) |
+| devkitPPC r50 + libogc 3.1.0 / libogc2 | devkitPro / extremscorner | verify in repo | install recipe (dkp-pacman) | 📄 documented (WMXIX lane) |
+| libdragon (GCC 16, rdpq, n64.mk) | DragonMinded/libdragon | verify in repo | install recipe (toolchain-continuous-prerelease) | 📄 documented (No Mercy lane) |
+| NxDK + ghidra-xbe + extract-xiso | XboxDev org | verify in repo | install recipe | 📄 documented (SCII Xbox lane) |
+| mcp-ppsspp (PPSSPP debugger MCP) | dmang-dev/mcp-ppsspp | verify before wiring | docs/toolchains/emulator-debuggers.md | ⏸️ queued (license unconfirmed) |
+| PSPRecomp | jessicanataliagta/PSPRecomp | verify before wiring | docs/toolchains/psp.md | ⏸️ queued (license unconfirmed) |
+| cth9191/blender-to-web | — | rights reserved | referenced only | ❌ excluded (no reuse license) |
+
+Research docs: game-reverse-engineering `docs/toolchains/` (README + ps2/psp/gamecube-wii/n64/xbox/emulator-debuggers/build-systems-2026/ci-game-repos).
