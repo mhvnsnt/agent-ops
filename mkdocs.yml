@@ -1,0 +1,39 @@
+# Docs site for the agent-ops hub — searchable home for all indexes, conventions, manifests.
+# Built with mkdocs-material (MIT). Deployed to GitHub Pages via .github/workflows/docs.yml.
+# Local preview: mkdocs serve
+site_name: Agent Ops Hub
+site_description: Indexes, conventions, manifests, and handoffs for the agent fleet.
+site_author: Mars FMMG
+
+# Docs live at the repo root (the .md files ARE the hub).
+# mkdocs requires docs_dir to be a child dir, so docs/ holds symlinks to ../*.md.
+docs_dir: docs
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+  - admonition
+  - pymdownx.superfences
+
+# Only the top-level ops docs are the site (docs/ holds symlinks to ../*.md).
+# Transient work dirs are not linked, so nothing to exclude here.

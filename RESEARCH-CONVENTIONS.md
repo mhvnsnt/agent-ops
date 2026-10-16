@@ -28,3 +28,16 @@ Every research pass ends in one of three states, recorded in the index:
 - Before researching: `research-check.sh` + index search. If it exists, extend it — don't start over.
 - Before pulling: check the index's "Previously pulled" tables. If it's there, wire the existing copy.
 - Source trail survives: every index entry links the doc; every doc links its sources.
+
+## Cross-referencing (wikilinks)
+Use `[[DOC-NAME]]` wikilinks when one doc references another (Zettelkasten pattern:
+atomic notes, links over folders). They render as plain text on GitHub but are
+grep-able, so agents and `research-check.sh` can follow the graph:
+`grep -r "\[\[RESEARCH-PULLIN-INDEX\]\]" --include="*.md"`.
+- The master index is `[[RESEARCH-PULLIN-INDEX]]` — link it from every research doc's header.
+- Related docs link each other both ways (A links B, B links A).
+- Searchable docs site: `mkdocs.yml` builds this hub with mkdocs-material
+  (full-text search, phone-friendly). Deploys to GitHub Pages via
+  `.github/workflows/docs.yml` on push to main. Local preview: `mkdocs serve`.
+  When adding a new root `.md`, also add its symlink: `cd docs && ln -s ../NEW.md .`
+  (the CI workflow re-links automatically, but local serve needs it).
