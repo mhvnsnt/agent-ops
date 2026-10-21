@@ -1,0 +1,10 @@
+[0m
+> code · google/gemini-3-pro-image
+[0m
+[91m[1mError: [0mYou need to sign in to use this model.
+EXIT:1
+EXIT:124
+
+--- kilo auth list (30s timeout, no output) ---
+EXIT:124 (timed out)
+--- NOTE: Kilo GATEWAY contribution is in codex-kilo.txt: codex -p kilo-code runs on Kilo Code free gateway (api.kilo.ai) and delivered the full review. ---
