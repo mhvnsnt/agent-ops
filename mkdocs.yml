@@ -37,3 +37,48 @@ markdown_extensions:
 
 # Only the top-level ops docs are the site (docs/ holds symlinks to ../*.md).
 # Transient work dirs are not linked, so nothing to exclude here.
+
+# 41 docs/ symlinks point at root .md files that were never committed (local-only on an agent disk).
+# Excluded so mkdocs build stops crashing (FileNotFoundError docs/BACKUP-MAP.md). Symlinks kept per no-deletion law.
+exclude_docs: |
+  /BACKUP-MAP.md
+  /CLOSE-THE-GAP.md
+  /CN-GIGALEAK-FULL-AUDIT-2026-10-15.md
+  /CONTINUOUS-RESEARCH-PULLIN-WORKFLOW.md
+  /DISK-OFFLOAD-FINAL-REPORT-2026-10-15.md
+  /EP01-TRIP-EDIT-HANDOFF-2026-10-15.md
+  /FIGHTER-MODEL-CENSUS-20261016.md
+  /GAME-FILES-VERIFY-DELETE-WORKSHEET-2026-10-16.md
+  /GROK_CAPABILITY_STUDY.md
+  /LONG-POLE-QUEUE.md
+  /MAT-LEGENDS-RENAME-WORKSHEET.md
+  /SHARED-DISK-INVENTORY.md
+  /TEARDOWN-IDLE-QUEUE.md
+  /TEARDOWN-PERCENTAGES-TERABOX-INVENTORY-2026-10-15.md
+  /TERABOX-SESSION-KEEPER.md
+  /TERABOX-STORE-MANIFEST-20261016.md
+  /TERABOX-WMXIX-BROWSER-SPEC.md
+  /TERABOX-WMXIX-FULL-SPEC.md
+  /UNNAMED-MODELS-INVENTORY.md
+  /ashlane-model-survey.md
+  /char-customization-porting-survey.md
+  /defjam-terabox-handoff.md
+  /deleted-download-sources.md
+  /drive-trash-verify-20261016.md
+  /eastern-mind-teardown-verification-20261016.md
+  /overnight-handoff.md
+  /overnight-log.md
+  /queue-98-tpose-sheets.md
+  /render-lane-briefs.md
+  /render-seen-list.md
+  /studio-pipeline-landscape-2026-10-13.md
+  /teardown-master-tracker.md
+  /tekken7-acquisition-handoff.md
+  /terabox-inventory.md
+  /terabox-session-keeper-cron.md
+  /wh-character-inventory.md
+  /wh-convo-pickup-list.md
+  /why-shortcut-research-2026-10-12.md
+  /wmxix-bonemap-assembly-status-20261016.md
+  /wmxix-bonemap-constructor-trace-20261016.md
+  /wmxix-bonemap-dolphin-findings-20261016.md
