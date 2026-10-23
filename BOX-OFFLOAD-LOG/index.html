@@ -1,0 +1,3491 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Indexes, conventions, manifests, and handoffs for the agent fleet.">
+      
+      
+        <meta name="author" content="Mars FMMG">
+      
+      
+      
+        <link rel="prev" href="../AUDIT-2026-10-14/">
+      
+      
+        <link rel="next" href="../CHECKPOINT_PROTOCOL/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>BOX OFFLOAD LOG — 2026-10-14 - Agent Ops Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#box-offload-log-2026-10-14" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Agent Ops Hub" class="md-header__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agent Ops Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              BOX OFFLOAD LOG — 2026-10-14
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Agent Ops Hub" class="md-nav__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Agent Ops Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    agent-ops — restart resilience for agent work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AGENTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AGENTS.md
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ANTI-CLOBBER-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ANTI-CLOBBER LAW (owner 2026-10-17)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AUDIT-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repo audit — 2026-10-14 (Grok Bot)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BOX OFFLOAD LOG — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BOX OFFLOAD LOG — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#git-repos-with-work-backed-up-by-grok-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git repos with work (backed up by Grok Bot)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-git-folders-release-assets-on-box-backup-2026-10-14-local-size-remote-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non-git folders (release assets on box-backup-2026-10-14, local size == remote size)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#follow-up-pass-bk2sh-ngsh-run-verified-500-pm-ct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Follow-up pass (bk2.sh / ng.sh run, verified ~5:00 PM CT)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Follow-up pass (bk2.sh / ng.sh run, verified ~5:00 PM CT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-private-repo-mhvnsntbox-orphans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New private repo mhvnsnt/box-orphans
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gitleaks-on-backup-branches-originmainbranch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gitleaks on backup branches (origin/main..branch)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#producerbot-grok-bot-pass-2026-10-14-second-independent-sweep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Producerbot (Grok Bot) pass, 2026-10-14 (second, independent sweep)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Producerbot (Grok Bot) pass, 2026-10-14 (second, independent sweep)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#per-clone-audit-porcelain-unpushed-stash-wip-ref-uncovered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per-clone audit (porcelain | unpushed | stash | wip ref | uncovered)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refs-pushed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refs pushed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-assets-on-mhvnsntbox-storage-sha-256-matched-to-api-digest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Release assets on mhvnsnt/box-storage (SHA-256 matched to API digest)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pass-2-after-interruption-430-pm-ct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pass 2 (after interruption, ~4:30 PM CT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pass-2-2026-10-14-450-pm-ct-grok-bot-producerbot-owner-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pass 2 — 2026-10-14 ~4:50 PM CT (Grok Bot / Producerbot, owner order)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pass 2 — 2026-10-14 ~4:50 PM CT (Grok Bot / Producerbot, owner order)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clones-deleted-porcelain-0-unpushed-0-no-stashes-every-branch-tip-reachable-from-an-ls-remote-ref-no-ignored-files-lsof-0-no-file-changes-in-20-min-not-under-an-active-claim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clones deleted (porcelain 0, unpushed 0, no stashes, every branch tip reachable from an ls-remote ref, no ignored files, lsof 0, no file changes in 20 min, not under an active claim)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-backup-refs-non-disruptive-snapshot-commits-working-trees-and-head-untouched" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New backup refs (non-disruptive snapshot commits; working trees and HEAD untouched)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-10-23-cleanup-owner-standing-permission-t126u-257-pm-ct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-10-23 cleanup (owner standing permission, t126u 2:57 PM CT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-10-23-1555-cdt-repo-co-dev-own-clone-cleanup-rule-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-10-23 ~15:55 CDT — Repo Co Dev own-clone cleanup (rule (a))
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHECKPOINT_PROTOCOL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkpoint Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLAIMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAIMS (prevents collisions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CROSS-REPO-STRANDED-AUDIT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CROSS-REPO STRANDED-WORK AUDIT — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../END-OF-SESSION-BACKUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    END-OF-SESSION BACKUP (watchdog procedure)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FRICTION-RESEARCH-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FRICTION RESEARCH LOG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-CANON/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — CANON (where the game's knowledge lives)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF INDEX — fleet state, one place, no "missing"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-REPOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — REPOS (per-repo state + landing order)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-TEARDOWNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — TEARDOWNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-WESTERN-HEART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — WESTERN HEART (mhvnsnt/western-heart)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOW-GROKBOT-WORKS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How Grok Bot works (copy this process)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDEMPOTENCY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idempotency Rules — write work so a re-run can't duplicate or corrupt it
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LANE_GUARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane Guard — crash-resilient + collision-proof lanes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-IT-YOURSELF-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE-IT-YOURSELF LAW (owner 2026-10-15) — canonical copy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-QUEUE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE QUEUE — everything built but not landed, all repos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NO-DATA-LOSS-RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NO-DATA-LOSS RULES (owner law — mhvnsnt)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-CONVENTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Conventions (all repos, all agents)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-PULLIN-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RESEARCH → PULL-IN INDEX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESUME_BRIEF_TEMPLATE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resume Brief Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TAG-TEAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TAG-TEAM board (live)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-ALTERNATIVES-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Alternatives — Free/Open-Source Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-BREAKTHROUGH-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Breakthrough Program — Final Report (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-LANE5-AGENT-REVIEW-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox BAD_TOKEN — Lane 5 All-Agents Review (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-RESEARCH-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Research — 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-SUPPORT-TICKET-DRAFT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Support Ticket — DRAFT (do not send without owner approval)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adr-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-NNNN:
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-cleanup-log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Cleanup Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grokbot-activity-proof-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot / MoneyManBusch activity proof — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-claims-recheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Claims Re-Check — 2026-10-20 evening (coordinator lane, parent-ordered)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane1-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Auth — Lane 1, Round 2 (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane2-debrid-live/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LANE 2 (RETRY) — Debrid-Link + AllDebrid Live Tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane3-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 3 — Alternative Debrid / Seedbox Sweep for a 350 GB Single-File Torrent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane4-compute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 4 — Free compute / cloud-to-cloud transfer layer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane5-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 5 — All-Agents Tooling on TorBox BAD_TOKEN (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane6-oss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Lane 6 — Open-Source Wire-Up + Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane7-seedbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 7 — Free-Trial Seedbox Angle (Seedhost.eu + Pulsed Media + others)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#git-repos-with-work-backed-up-by-grok-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git repos with work (backed up by Grok Bot)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-git-folders-release-assets-on-box-backup-2026-10-14-local-size-remote-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non-git folders (release assets on box-backup-2026-10-14, local size == remote size)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#follow-up-pass-bk2sh-ngsh-run-verified-500-pm-ct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Follow-up pass (bk2.sh / ng.sh run, verified ~5:00 PM CT)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Follow-up pass (bk2.sh / ng.sh run, verified ~5:00 PM CT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-private-repo-mhvnsntbox-orphans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New private repo mhvnsnt/box-orphans
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gitleaks-on-backup-branches-originmainbranch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gitleaks on backup branches (origin/main..branch)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#producerbot-grok-bot-pass-2026-10-14-second-independent-sweep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Producerbot (Grok Bot) pass, 2026-10-14 (second, independent sweep)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Producerbot (Grok Bot) pass, 2026-10-14 (second, independent sweep)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#per-clone-audit-porcelain-unpushed-stash-wip-ref-uncovered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per-clone audit (porcelain | unpushed | stash | wip ref | uncovered)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refs-pushed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refs pushed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-assets-on-mhvnsntbox-storage-sha-256-matched-to-api-digest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Release assets on mhvnsnt/box-storage (SHA-256 matched to API digest)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pass-2-after-interruption-430-pm-ct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pass 2 (after interruption, ~4:30 PM CT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pass-2-2026-10-14-450-pm-ct-grok-bot-producerbot-owner-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pass 2 — 2026-10-14 ~4:50 PM CT (Grok Bot / Producerbot, owner order)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pass 2 — 2026-10-14 ~4:50 PM CT (Grok Bot / Producerbot, owner order)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clones-deleted-porcelain-0-unpushed-0-no-stashes-every-branch-tip-reachable-from-an-ls-remote-ref-no-ignored-files-lsof-0-no-file-changes-in-20-min-not-under-an-active-claim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clones deleted (porcelain 0, unpushed 0, no stashes, every branch tip reachable from an ls-remote ref, no ignored files, lsof 0, no file changes in 20 min, not under an active claim)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-backup-refs-non-disruptive-snapshot-commits-working-trees-and-head-untouched" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New backup refs (non-disruptive snapshot commits; working trees and HEAD untouched)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-10-23-cleanup-owner-standing-permission-t126u-257-pm-ct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-10-23 cleanup (owner standing permission, t126u 2:57 PM CT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-10-23-1555-cdt-repo-co-dev-own-clone-cleanup-rule-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-10-23 ~15:55 CDT — Repo Co Dev own-clone cleanup (rule (a))
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="box-offload-log-2026-10-14">BOX OFFLOAD LOG — 2026-10-14<a class="headerlink" href="#box-offload-log-2026-10-14" title="Permanent link">&para;</a></h1>
+<p>Pre-reset backup of every git repo and work folder on the shared box. Nothing deleted; no main/default branch touched; no force-push.</p>
+<p>Method: WIP snapshot = commit-tree from a temp index (working tree untouched, untracked included, .gitignore respected). Branch refs: <code>backup/box-2026-10-14/&lt;path-slug&gt;/&lt;branch&gt;</code>. gitleaks flagged findings (mostly vendored-code false positives like rcheevos aes.c) in every scanned range, so per the rule ALL ref backups went to private <strong>mhvnsnt/box-storage</strong>, not the origin repos. Pushes that box-storage rejected (index-pack fail on full history) were stored as incremental git bundles (restore: clone origin, then <code>git fetch &lt;bundle&gt; 'refs/*:refs/*'</code>) on release <a href="https://github.com/mhvnsnt/box-storage/releases/tag/box-backup-2026-10-14">box-backup-2026-10-14</a>, size-verified.</p>
+<h2 id="git-repos-with-work-backed-up-by-grok-bot">Git repos with work (backed up by Grok Bot)<a class="headerlink" href="#git-repos-with-work-backed-up-by-grok-bot" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Repo path</th>
+<th>Origin</th>
+<th>Backed up</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/workspace/mmhq-entrance</code></td>
+<td>mhvnsnt/money-machine-hq</td>
+<td>wip stash-0 stash-1</td>
+<td>box-storage branches <code>backup/box-2026-10-14/mmhq-entrance/*</code></td>
+</tr>
+<tr>
+<td><code>/workspace/Brutal-Fist</code></td>
+<td>mhvnsnt/Brutal-Fist</td>
+<td>wip stash-0</td>
+<td>box-storage branches <code>backup/box-2026-10-14/Brutal-Fist/*</code></td>
+</tr>
+<tr>
+<td><code>/workspace/vten-stages</code></td>
+<td>mhvnsnt/brutalfistgrokversionten</td>
+<td>wip</td>
+<td>box-storage branches <code>backup/box-2026-10-14/vten-stages/*</code></td>
+</tr>
+<tr>
+<td><code>/workspace/originalize/pr/AshLanev2</code></td>
+<td>mhvnsnt/AshLanev2</td>
+<td>wip</td>
+<td>box-storage branches <code>backup/box-2026-10-14/originalize_pr_AshLanev2/*</code></td>
+</tr>
+<tr>
+<td><code>/workspace/vten-main-wt</code></td>
+<td>mhvnsnt/brutalfistgrokversionten</td>
+<td>wip</td>
+<td>box-storage branches <code>backup/box-2026-10-14/vten-main-wt/*</code></td>
+</tr>
+<tr>
+<td><code>/workspace/brutalfistgrokversioneight</code></td>
+<td>mhvnsnt/brutalfistgrokversioneight</td>
+<td>wip</td>
+<td>box-storage branches <code>backup/box-2026-10-14/brutalfistgrokversioneight/*</code></td>
+</tr>
+<tr>
+<td><code>/workspace/mfluid-audit/Mochiichao-Diamond-Version-2d-</code></td>
+<td>mfluidmusic/Mochiichao-Diamond-Version-2d-</td>
+<td>wip</td>
+<td>box-storage branches <code>backup/box-2026-10-14/mfluid-audit_Mochiichao-Diamond-Version-2d-/*</code></td>
+</tr>
+<tr>
+<td><code>/workspace/mmhq-cdt</code></td>
+<td>mhvnsnt/money-machine-hq</td>
+<td>stash-0 stash-1</td>
+<td>box-storage branches <code>backup/box-2026-10-14/mmhq-cdt/*</code></td>
+</tr>
+<tr>
+<td><code>/workspace/money-machine-hq</code></td>
+<td>mhvnsnt/money-machine-hq</td>
+<td>stash-0 stash-1</td>
+<td>box-storage branches <code>backup/box-2026-10-14/money-machine-hq/*</code></td>
+</tr>
+<tr>
+<td><code>/workspace/vten-intro-base</code></td>
+<td>mhvnsnt/brutalfistgrokversionten</td>
+<td>wip</td>
+<td>box-storage branches <code>backup/box-2026-10-14/vten-intro-base/*</code></td>
+</tr>
+<tr>
+<td><code>/workspace/vten-intro</code></td>
+<td>mhvnsnt/brutalfistgrokversionten</td>
+<td>wip</td>
+<td>box-storage branches <code>backup/box-2026-10-14/vten-intro/*</code></td>
+</tr>
+<tr>
+<td><code>/workspace/code-doctor/case-neon</code></td>
+<td>none</td>
+<td>fix/security-hardening main</td>
+<td>box-storage branches <code>backup/box-2026-10-14/code-doctor_case-neon/*</code></td>
+</tr>
+<tr>
+<td><code>/workspace/ashlane/base-wt</code></td>
+<td>mhvnsnt/AshLanev2</td>
+<td>wip</td>
+<td>box-storage branches <code>backup/box-2026-10-14/ashlane_base-wt/*</code></td>
+</tr>
+<tr>
+<td><code>/workspace/ashlane/repo</code></td>
+<td>mhvnsnt/AshLanev2</td>
+<td>wip</td>
+<td>box-storage branches <code>backup/box-2026-10-14/ashlane_repo/*</code></td>
+</tr>
+<tr>
+<td><code>/workspace/mmhq-et-v2</code></td>
+<td>mhvnsnt/money-machine-hq</td>
+<td>stash-0 stash-1</td>
+<td>box-storage branches <code>backup/box-2026-10-14/mmhq-et-v2/*</code></td>
+</tr>
+<tr>
+<td><code>/workspace/vten-ci-fix</code></td>
+<td>mhvnsnt/brutalfistgrokversionten</td>
+<td>wip</td>
+<td>box-storage branches <code>backup/box-2026-10-14/vten-ci-fix/*</code></td>
+</tr>
+<tr>
+<td><code>/tmp/ashbuild</code></td>
+<td>mhvnsnt/AshLanev2</td>
+<td>wip</td>
+<td><a href="https://github.com/mhvnsnt/box-storage/releases/download/box-backup-2026-10-14/tmp_ashbuild.bundle">tmp_ashbuild.bundle</a> (bundle)</td>
+</tr>
+<tr>
+<td><code>/workspace/wa/Bannon</code></td>
+<td>mhvnsnt/Bannon</td>
+<td>wip</td>
+<td><a href="https://github.com/mhvnsnt/box-storage/releases/download/box-backup-2026-10-14/wa_Bannon.bundle">wa_Bannon.bundle</a> (bundle)</td>
+</tr>
+<tr>
+<td><code>/workspace/fix/M.-Engine-</code></td>
+<td>mhvnsnt/M.-Engine-</td>
+<td>wip</td>
+<td><a href="https://github.com/mhvnsnt/box-storage/releases/download/box-backup-2026-10-14/fix_M.-Engine-.bundle">fix_M.-Engine-.bundle</a> (bundle)</td>
+</tr>
+<tr>
+<td><code>/workspace/Brutal-Fist/BannonSource</code></td>
+<td>mhvnsnt/Bannon</td>
+<td>wip</td>
+<td><a href="https://github.com/mhvnsnt/box-storage/releases/download/box-backup-2026-10-14/Brutal-Fist_BannonSource.bundle">Brutal-Fist_BannonSource.bundle</a> (bundle)</td>
+</tr>
+<tr>
+<td><code>/workspace/ig/w-Bannon</code></td>
+<td>mhvnsnt/Bannon</td>
+<td>feat/instruction-gate</td>
+<td><a href="https://github.com/mhvnsnt/box-storage/releases/download/box-backup-2026-10-14/ig_w-Bannon.bundle">ig_w-Bannon.bundle</a> (bundle)</td>
+</tr>
+<tr>
+<td><code>/workspace/agent-ops-repo</code> (re-run)</td>
+<td>mhvnsnt/agent-ops</td>
+<td>claims/bannon-playtest-paused, claims/kobra-paused</td>
+<td>box-storage <code>backup/box-2026-10-14/agent-ops-repo/*</code></td>
+</tr>
+</tbody>
+</table>
+<p>Three repos (western-heart-inventory/western-heart, wh-cs, ig/w-TRIPPEDD) failed initially, then their owners pushed the branches to origin; verified 0 unpushed on re-check.
+~40 other repos (mtp/<em>, ig/</em>, bible/*) were pushed by Producerbot/Repo Co Dev (origin <code>backup/box-2026-10-14-*</code> refs) and verified clean.</p>
+<h2 id="non-git-folders-release-assets-on-box-backup-2026-10-14-local-size-remote-size">Non-git folders (release assets on box-backup-2026-10-14, local size == remote size)<a class="headerlink" href="#non-git-folders-release-assets-on-box-backup-2026-10-14-local-size-remote-size" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Bytes</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/mhvnsnt/box-storage/releases/download/box-backup-2026-10-14/folder-bn.tar.part00">folder-bn.tar.part00</a></td>
+<td>1048576000</td>
+<td><code>84e40ed91b2240850888dcc1653940b420380217c4ef4c0358c873fa2b860fe2</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/mhvnsnt/box-storage/releases/download/box-backup-2026-10-14/folder-bn.tar.part01">folder-bn.tar.part01</a></td>
+<td>314798080</td>
+<td><code>611d4bf4afd17ed279da117ac454e8b22d657bff19a95feb8489e65ec8647f2c</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/mhvnsnt/box-storage/releases/download/box-backup-2026-10-14/folder-kobra-diag.tar.part00">folder-kobra-diag.tar.part00</a></td>
+<td>141762560</td>
+<td><code>cfae9f7e6ba0a883f0dc54cf3915e6bcd47720586853ca4db8fe86b31cb4dbf4</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/mhvnsnt/box-storage/releases/download/box-backup-2026-10-14/folder-wh-proof.tar.part00">folder-wh-proof.tar.part00</a></td>
+<td>129208320</td>
+<td><code>b224721d7ca1453013e223abe1fd4872df529361e404b957008252ce499e3361</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/mhvnsnt/box-storage/releases/download/box-backup-2026-10-14/folder-pt.tar.part00">folder-pt.tar.part00</a></td>
+<td>2160640</td>
+<td><code>d74ae22784965954750251371fd050ba35f5652209a7350d6b55817e0601bab9</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/mhvnsnt/box-storage/releases/download/box-backup-2026-10-14/folder-dlwork.tar.part00">folder-dlwork.tar.part00</a></td>
+<td>10240</td>
+<td><code>c48cb8061d424cdb4128d3025b85679b67beb1147309468d5bf361c4be790143</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/mhvnsnt/box-storage/releases/download/box-backup-2026-10-14/folder-gdrive.tar.part00">folder-gdrive.tar.part00</a></td>
+<td>10240</td>
+<td><code>e1c70abfeec527a5093dc3d7460e578811fa582f01f092546d131736e2e88777</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/mhvnsnt/box-storage/releases/download/box-backup-2026-10-14/folder-mfluid.tar.part00">folder-mfluid.tar.part00</a></td>
+<td>10240</td>
+<td><code>ea7c855df8da4e60f208ae0b1b497629d16d691c5577825fc9bfc2f7cad9e555</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/mhvnsnt/box-storage/releases/download/box-backup-2026-10-14/folder-offload-tmp.tar.part00">folder-offload-tmp.tar.part00</a></td>
+<td>10240</td>
+<td><code>b03b299a5d84432a6a3b22b0cd0d79fdbf5c8f0e8569a03098571f50b34429df</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/mhvnsnt/box-storage/releases/download/box-backup-2026-10-14/folder-playtest.tar.part00">folder-playtest.tar.part00</a></td>
+<td>225280</td>
+<td><code>a2135c2a8318aeca29cfb12ed350bcb7cf9764b60ca1f9abe6acb6fd5a3c179b</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/mhvnsnt/box-storage/releases/download/box-backup-2026-10-14/folder-studio-consumers.tar.part00">folder-studio-consumers.tar.part00</a></td>
+<td>10240</td>
+<td><code>0919513c26c488f92551b82c6045e3b1c4c03cf4b06124f9e97973f06e3105e5</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/mhvnsnt/box-storage/releases/download/box-backup-2026-10-14/folder-cc0-assets.tar.part00">folder-cc0-assets.tar.part00</a></td>
+<td>10240</td>
+<td><code>7690dbed4d53a135628939753237ffbd5e623a9cf43a452fcea8e9ff8233076d</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/mhvnsnt/box-storage/releases/download/box-backup-2026-10-14/mmhq-venv-requirements.txt">mmhq-venv-requirements.txt</a></td>
+<td>537</td>
+<td><code>1282af8b6e53aa94e6506dc96250401ee39b06a0a8dfb9c835c8c64fdf0b5f01</code></td>
+</tr>
+<tr>
+<td>mocap-venv-requirements.txt</td>
+<td>1508</td>
+<td>(venv: package list only; rebuildable)</td>
+</tr>
+</tbody>
+</table>
+<p>The other /workspace folders were tarred by Producerbot to box-storage releases <code>box-2026-10-14-folder-&lt;name&gt;</code> (game-kits, oss, rig-repair, tekken-ref, mmhq-autoreply, etc.).</p>
+<h2 id="verification">Verification<a class="headerlink" href="#verification" title="Permanent link">&para;</a></h2>
+<p>Every local branch tip that isn't on a remote matches a box-storage backup ref SHA or a bundled ref; every stash SHA is on box-storage; every dirty tree has a WIP snapshot. Result: <strong>0 missing</strong>.</p>
+<h2 id="follow-up-pass-bk2sh-ngsh-run-verified-500-pm-ct">Follow-up pass (bk2.sh / ng.sh run, verified ~5:00 PM CT)<a class="headerlink" href="#follow-up-pass-bk2sh-ngsh-run-verified-500-pm-ct" title="Permanent link">&para;</a></h2>
+<p>Second scheme, run from <code>/home/box/offload</code>: branches <code>backup/box-2026-10-14-&lt;slug&gt;[-&lt;branch&gt;|-wip|-stash-N]</code> pushed to each clone's <strong>own origin</strong>, ignored/large files and non-git folders as streamed tar parts on <strong>mhvnsnt/box-storage</strong> releases <code>box-2026-10-14-*</code>. Full per-line log: <code>/home/box/offload/log.tsv</code> on the box (summarized here).</p>
+<ul>
+<li>Clones processed: 94 roots in <code>roots.txt</code>, every one has a final STATUS line. Re-check now: all report <code>git log --branches --not --remotes</code> = 0, except the URL-pushed ones below (remote SHA verified with <code>git ls-remote</code>).</li>
+<li>Re-ran after new agent commits: <code>/workspace/agent-ops-repo</code> (claims/kobra-paused, claims/bannon-playtest-paused), <code>/workspace/wh-cs</code> (pr118 + wip).</li>
+<li><code>/workspace/ig/w-Bannon</code> feat/instruction-gate: remote backup branch = 7a388cf880 (local tracking ref couldn't be written because the disk was full).</li>
+<li>Non-git folders: all 44 in <code>folders.txt</code> have release parts on box-storage (<code>box-2026-10-14-folder-*</code>).</li>
+<li>Release integrity: all 71 RELEASE lines match the GitHub asset sha256 digest. Re-downloaded and re-hashed: folder-mfluid-audit, folder-code-doctor, and the two retried tmp-build-<em>Mochiichao</em> tars — all OK.</li>
+</ul>
+<h3 id="new-private-repo-mhvnsntbox-orphans">New private repo mhvnsnt/box-orphans<a class="headerlink" href="#new-private-repo-mhvnsntbox-orphans" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Where</th>
+<th>Verified</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/workspace/code-doctor/case-neon</code> (no remote)</td>
+<td>branches <code>case-neon/main</code> d6a812d2b5, <code>case-neon/fix/security-hardening</code> 4ed531cac6; ignored files on release <code>box-2026-10-14-code-doctor-case-neon-ignored</code></td>
+<td>ls-remote SHA match; sha256 17bae1de4446…</td>
+</tr>
+<tr>
+<td><code>/tmp/tgt</code> (no remote)</td>
+<td>branch <code>tmp-tgt/master</code> 16b2fec7cd</td>
+<td>ls-remote SHA match</td>
+</tr>
+<tr>
+<td><code>mfluid-audit/Mochiichao-Diamond-Version-2d-</code> proof/ + tools/ (upstream push 403)</td>
+<td>branch <code>mfluid-mochiichao-proof-tools</code> 5ac400e84d (9 files)</td>
+<td>file list match</td>
+</tr>
+<tr>
+<td><code>/workspace/mmhq-autoreply</code> (orphaned worktree, parent /workspace/mmhq gone)</td>
+<td>release <code>box-2026-10-14-folder-mmhq-autoreply</code></td>
+<td>sha256 97c534ecadd4…</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gitleaks-on-backup-branches-originmainbranch">gitleaks on backup branches (origin/main..branch)<a class="headerlink" href="#gitleaks-on-backup-branches-originmainbranch" title="Permanent link">&para;</a></h3>
+<p>124 branches scanned. Findings (values masked to 6 chars, history NOT rewritten):
+- mhvnsnt/Bannon (private) <code>start-autonomous-agent.ts:15</code>, <code>src/services/repoSyncService.ts:213</code>: github-fine-grained-pat <code>github…</code> — <strong>already on Bannon main</strong>, hardcoded fallback token. Recommend revoking/rotating it.
+- mhvnsnt/Brutal-Fist (private) <code>firebase-applet-config.json:4</code> and Bannon <code>godmode/firebase-applet-config.json</code>: Firebase web key <code>AIzaSy…</code> (client key, low risk).
+- 127 generic-api-key hits in bundled HTML/JS (<code>public/index.html</code>, <code>merged_BANNON_v150.html</code>) and 1 in <code>/tmp/ashbuild/.vercel</code> output: false positives (identifiers like brick…/combat…).
+- box-orphans, wh-cs and agent-ops-repo new branches: clean.</p>
+<h2 id="producerbot-grok-bot-pass-2026-10-14-second-independent-sweep">Producerbot (Grok Bot) pass, 2026-10-14 (second, independent sweep)<a class="headerlink" href="#producerbot-grok-bot-pass-2026-10-14-second-independent-sweep" title="Permanent link">&para;</a></h2>
+<p>Nothing deleted locally except one clean, fully pushed clone (/workspace/mtp/chimera-emulator-hub, 296K, backed up first). Main was never touched and nothing was force-pushed. Refs are <code>backup/box-2026-10-14-&lt;path-slug&gt;-&lt;branch|wip|stash-N&gt;</code> (hyphenated, so they can't clash with MoneyManBusch's <code>backup/box-2026-10-14/&lt;dir&gt;/...</code> refs). Each one was pushed to the clone's origin and verified with <code>git ls-remote</code>. Repos without a usable origin (no remote, or a 403) were pushed to the private mhvnsnt/box-storage. A WIP snapshot is a commit-tree built from a temp index, so the working tree stays untouched. The two WIP refs on public repos (M.-Engine- gradlew mode change, brutalfistgrokversioneight submodule pointer) contain no file content.</p>
+<h3 id="per-clone-audit-porcelain-unpushed-stash-wip-ref-uncovered">Per-clone audit (porcelain | unpushed | stash | wip ref | uncovered)<a class="headerlink" href="#per-clone-audit-porcelain-unpushed-stash-wip-ref-uncovered" title="Permanent link">&para;</a></h3>
+<p>Unpushed&gt;0 rows: each local branch tip was verified on the remote under a backup ref (ls-remote); the counter is non-zero only because the remote-tracking ref couldn't be written while / was at 100%. Porcelain&gt;0 rows: saved as the <code>-wip</code> ref; working tree left as-is because agents are using them.</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>porcelain</th>
+<th>unpushed</th>
+<th>stash</th>
+<th>wip</th>
+<th>uncovered</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/dev/shm/ao</code></td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/tmp/ashbuild</code></td>
+<td>41</td>
+<td>0</td>
+<td>0</td>
+<td>wip-ref-on-remote</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/tmp/backend-plugin-bpPnXV</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/tmp/backend-plugin-ca8enF</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/tmp/build-M.-OS-Mochiichao-Chrome-Version-</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/tmp/build-Mochiichao-Diamond-Version-2d-</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/tmp/build-Neon-App-Builder</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/tmp/ceh</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/tmp/neonb</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/tmp/tgt</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/Brutal-Fist/BannonSource</code></td>
+<td>33</td>
+<td>0</td>
+<td>0</td>
+<td>wip-ref-on-remote</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/Brutal-Fist</code></td>
+<td>8</td>
+<td>0</td>
+<td>1</td>
+<td>wip-ref-on-remote</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/TRIPPEDD-Production-studios-</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/agent-ops-repo</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/ao-tt</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/arl</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/ashlane/base-wt</code></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>wip-ref-on-remote</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/ashlane/play</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/ashlane/repo</code></td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>wip-ref-on-remote</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/bible/Bannon</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/bible/God-Molecule-Show-Studio</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/bible/TRIPPEDD-Production-studios-</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/bn/b</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/brutalfistgrokversioneight</code></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>wip-ref-on-remote</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/code-doctor/case-neon</code></td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/fix/AshLanev2</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/fix/Bannon</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/fix/Brutal-Fist</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/fix/CODEDUMMY</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/fix/M.-Engine-</code></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>wip-ref-on-remote</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/fix/T</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/fix/brutalfistgrokversion12</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/fix/brutalfistgrokversionten</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/ig/w-AshLanev2</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/ig/w-Bannon</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/ig/w-BioMechania</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/ig/w-ConcreteDragon</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/ig/w-God-Molecule-Show-Studio</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/ig/w-TRIPPEDD-Production-studios-</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/ig/w-agent-ops</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/ig/w-money-machine-hq</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/ig/w-western-heart</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/kobra-fix</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mfluid-audit/Mochiichao-Diamond-Version-2d-</code></td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>wip-ref-on-remote</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mmhq-autoreply</code></td>
+<td>not-a-repo (broken worktree link)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>/workspace/mmhq-cdt</code></td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mmhq-cd</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mmhq-entrance</code></td>
+<td>3</td>
+<td>0</td>
+<td>2</td>
+<td>wip-ref-on-remote (re-verified)</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mmhq-et-v2</code></td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/money-machine-hq</code></td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/AshLane-prototype</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/AshLanev2</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/Bannon</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/BioMechania</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/Brutal-Fist</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/CODEDUMMY</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/Forge3D</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/God-Mode-OS-D3MN-V2</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/M.-Engine-</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/Moneymachine-private</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/Moneymachine</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/M</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/TRIPPEDD-Production-studios-</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/URBAN-MAYHEM-</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/agent-ops</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/brutalfist11</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/brutalfistgrokversion12</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/brutalfistgrokversion9</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/brutalfistgrokversioneight</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/brutalfistgrokversionfive</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/brutalfistgrokversionfour</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/brutalfistgrokversionseven</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/brutalfistgrokversionsix</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/brutalfistgrokversiontenpointfive</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/brutalfistgrokversionten</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/brutalfistgrokversionthree</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/brutalfistgrokversiontwo</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/brutalfistgrokversion</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/mmhq</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/theyard</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/mtp/western-heart</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/originalize/pr/AshLanev2</code></td>
+<td>51</td>
+<td>0</td>
+<td>0</td>
+<td>wip-ref-on-remote</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/oss-anim-staging/_raw/git/bandai</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/oss-anim-staging/_raw/git/cmu-mocap</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/oss-anim-staging/_raw/git/mesh2motion-app</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/oss-anim-staging/_raw/git/mesh2motion-assets</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/pt-ops</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/ref-repos/Bannon</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/studio-pipeline</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/vten-ci-fix</code></td>
+<td>15</td>
+<td>0</td>
+<td>0</td>
+<td>wip-ref-on-remote</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/vten-intro-base</code></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>wip-ref-on-remote</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/vten-intro</code></td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>wip-ref-on-remote</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/vten-main-wt</code></td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>wip-ref-on-remote</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/vten-stages</code></td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>wip-ref-on-remote</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/wa/Bannon</code></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>wip-ref-on-remote</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/wa/TRIPPEDD-Production-studios-</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/wa/money-machine-hq</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/western-heart-inventory/western-heart</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>n/a</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/wh-cs</code></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>wip-ref-on-remote</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>/workspace/wh-qa</code></td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>wip-ref-on-remote</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<h3 id="refs-pushed">Refs pushed<a class="headerlink" href="#refs-pushed" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>Brutal-Fist-BannonSource</code>: PUSHED uncommitted-snapshot(33 paths) -&gt; https://github.com/mhvnsnt/Bannon.git branch backup/box-2026-10-14-Brutal-Fist-BannonSource-wip @ 2859dacbf9</li>
+<li><code>Brutal-Fist</code>: PUSHED branch:grok/anim-euler-gate-wire -&gt; https://github.com/mhvnsnt/Brutal-Fist.git branch backup/box-2026-10-14-Brutal-Fist-grok-anim-euler-gate-wire @ 4b475c6dd8</li>
+<li><code>Brutal-Fist</code>: PUSHED stash@{0} -&gt; https://github.com/mhvnsnt/Brutal-Fist.git branch backup/box-2026-10-14-Brutal-Fist-stash-0 @ 95f3e6827e</li>
+<li><code>Brutal-Fist</code>: PUSHED uncommitted-snapshot(8 paths) -&gt; https://github.com/mhvnsnt/Brutal-Fist.git branch backup/box-2026-10-14-Brutal-Fist-wip @ 61d588cad4</li>
+<li><code>agent-ops-repo</code>: PUSHED branch:claims/bannon-playtest-paused -&gt; https://github.com/mhvnsnt/agent-ops.git branch backup/box-2026-10-14-agent-ops-repo-claims-bannon-playtest-paused @ 61c3a10189</li>
+<li><code>agent-ops-repo</code>: PUSHED branch:claims/kobra-paused -&gt; https://github.com/mhvnsnt/agent-ops.git branch backup/box-2026-10-14-agent-ops-repo-claims-kobra-paused @ 440b0755dc</li>
+<li><code>agent-ops-repo</code>: PUSHED branch:docs/grokbot-activity-proof-2026-10-14 -&gt; https://github.com/mhvnsnt/agent-ops.git branch backup/box-2026-10-14-agent-ops-repo-docs-grokbot-activity-proof-2026-10-14 @ be58f503ab</li>
+<li><code>ashlane-base-wt</code>: PUSHED branch:grok/ashlane-crash-spawn-rig -&gt; https://github.com/mhvnsnt/AshLanev2 branch backup/box-2026-10-14-ashlane-base-wt-grok-ashlane-crash-spawn-rig @ 0d8e091100</li>
+<li><code>ashlane-base-wt</code>: PUSHED branch:grok/cf-pages-base-path -&gt; https://github.com/mhvnsnt/AshLanev2 branch backup/box-2026-10-14-ashlane-base-wt-grok-cf-pages-base-path @ fe6be4ced2</li>
+<li><code>ashlane-base-wt</code>: PUSHED branch:grok/makerig-crash-fix -&gt; https://github.com/mhvnsnt/AshLanev2 branch backup/box-2026-10-14-ashlane-base-wt-grok-makerig-crash-fix @ af2ff5b782</li>
+<li><code>ashlane-base-wt</code>: PUSHED uncommitted-snapshot(1 paths) -&gt; https://github.com/mhvnsnt/AshLanev2 branch backup/box-2026-10-14-ashlane-base-wt-wip @ 6148320033</li>
+<li><code>ashlane-repo</code>: PUSHED uncommitted-snapshot(3 paths) -&gt; https://github.com/mhvnsnt/AshLanev2 branch backup/box-2026-10-14-ashlane-repo-wip @ 12f9417e1a</li>
+<li><code>bible-Bannon</code>: PUSHED branch:ci/pr-clean-merge-and-bible -&gt; https://github.com/mhvnsnt/Bannon.git branch backup/box-2026-10-14-bible-Bannon-ci-pr-clean-merge-and-bible @ 6636ad5432</li>
+<li><code>bible-God-Molecule-Show-Studio</code>: PUSHED branch:ci/pr-validate-latest-check -&gt; https://github.com/mhvnsnt/God-Molecule-Show-Studio.git branch backup/box-2026-10-14-bible-God-Molecule-Show-Studio-ci-pr-validate-latest-check @ 758365de39</li>
+<li><code>bible-TRIPPEDD-Production-studios-</code>: PUSHED branch:ci/pr-clean-merge-and-bible -&gt; https://github.com/mhvnsnt/TRIPPEDD-Production-studios-.git branch backup/box-2026-10-14-bible-TRIPPEDD-Production-studios--ci-pr-clean-merge-and-bible @ 7efcfbdde7</li>
+<li><code>bn-b</code>: PUSHED branch:fix/perf-lazy-clips-debug-flag-version-stamp -&gt; https://github.com/mhvnsnt/Bannon.git branch backup/box-2026-10-14-bn-b-fix-perf-lazy-clips-debug-flag-version-stamp @ 63643c5e65</li>
+<li><code>brutalfistgrokversioneight</code>: PUSHED uncommitted-snapshot(1 paths) -&gt; https://github.com/mhvnsnt/brutalfistgrokversioneight.git branch backup/box-2026-10-14-brutalfistgrokversioneight-wip @ 8607d60a85</li>
+<li><code>code-doctor-case-neon</code>: PUSHED branch:fix/security-hardening -&gt; https://github.com/mhvnsnt/box-storage.git branch backup/box-2026-10-14-code-doctor-case-neon-fix-security-hardening @ 4ed531cac6</li>
+<li><code>code-doctor-case-neon</code>: PUSHED branch:main -&gt; https://github.com/mhvnsnt/box-storage.git branch backup/box-2026-10-14-code-doctor-case-neon-main @ d6a812d2b5</li>
+<li><code>dev-shm-ao</code>: PUSHED branch:grok/box-offload-log-2026-10-14 -&gt; https://github.com/mhvnsnt/agent-ops.git branch backup/box-2026-10-14-dev-shm-ao-grok-box-offload-log-2026-10-14 @ 89107185f8</li>
+<li><code>fix-AshLanev2</code>: PUSHED branch:fix/duplicate-chaindivider -&gt; https://github.com/mhvnsnt/AshLanev2 branch backup/box-2026-10-14-fix-AshLanev2-fix-duplicate-chaindivider @ 8cc2ed0afd</li>
+<li><code>fix-Bannon</code>: PUSHED branch:fix/ci-workflow-yaml-node22 -&gt; https://github.com/mhvnsnt/Bannon branch backup/box-2026-10-14-fix-Bannon-fix-ci-workflow-yaml-node22 @ cf2df913b8</li>
+<li><code>fix-Brutal-Fist</code>: PUSHED branch:fix/ci-submodule-checkout -&gt; https://github.com/mhvnsnt/Brutal-Fist branch backup/box-2026-10-14-fix-Brutal-Fist-fix-ci-submodule-checkout @ 3a816abac4</li>
+<li><code>fix-M.-Engine-</code>: PUSHED uncommitted-snapshot(1 paths) -&gt; https://github.com/mhvnsnt/M.-Engine- branch backup/box-2026-10-14-fix-M.-Engine--wip @ eac8095e76</li>
+<li><code>fix-T</code>: PUSHED branch:fix/typecheck-dup-rubberband -&gt; https://github.com/mhvnsnt/TRIPPEDD-Production-studios- branch backup/box-2026-10-14-fix-T-fix-typecheck-dup-rubberband @ 6a3c8e6b56</li>
+<li><code>fix-brutalfistgrokversion12</code>: PUSHED branch:fix/ci-ground-particle-static-shell -&gt; https://github.com/mhvnsnt/brutalfistgrokversion12 branch backup/box-2026-10-14-fix-brutalfistgrokversion12-fix-ci-ground-particle-static-shell @ 0af523f42d</li>
+<li><code>ig-w-AshLanev2</code>: PUSHED branch:feat/instruction-gate -&gt; https://github.com/mhvnsnt/AshLanev2 branch backup/box-2026-10-14-ig-w-AshLanev2-feat-instruction-gate @ 93e820f2f5</li>
+<li><code>ig-w-Bannon</code>: PUSHED branch:feat/instruction-gate -&gt; https://github.com/mhvnsnt/Bannon branch backup/box-2026-10-14-ig-w-Bannon-feat-instruction-gate @ 7a388cf880</li>
+<li><code>ig-w-BioMechania</code>: PUSHED branch:feat/instruction-gate -&gt; https://github.com/mhvnsnt/BioMechania branch backup/box-2026-10-14-ig-w-BioMechania-feat-instruction-gate @ b65dff97db</li>
+<li><code>ig-w-ConcreteDragon</code>: PUSHED branch:feat/instruction-gate -&gt; https://github.com/mhvnsnt/ConcreteDragon branch backup/box-2026-10-14-ig-w-ConcreteDragon-feat-instruction-gate @ e8dababf8c</li>
+<li><code>ig-w-God-Molecule-Show-Studio</code>: PUSHED branch:feat/instruction-gate -&gt; https://github.com/mhvnsnt/God-Molecule-Show-Studio branch backup/box-2026-10-14-ig-w-God-Molecule-Show-Studio-feat-instruction-gate @ 7fbc3430e0</li>
+<li><code>ig-w-TRIPPEDD-Production-studios-</code>: PUSHED branch:feat/instruction-gate -&gt; https://github.com/mhvnsnt/TRIPPEDD-Production-studios- branch backup/box-2026-10-14-ig-w-TRIPPEDD-Production-studios--feat-instruction-gate @ ef9f5c7081</li>
+<li><code>ig-w-agent-ops</code>: PUSHED branch:feat/instruction-gate -&gt; https://github.com/mhvnsnt/agent-ops branch backup/box-2026-10-14-ig-w-agent-ops-feat-instruction-gate @ ca32c44b98</li>
+<li><code>ig-w-money-machine-hq</code>: PUSHED branch:feat/instruction-gate -&gt; https://github.com/mhvnsnt/money-machine-hq branch backup/box-2026-10-14-ig-w-money-machine-hq-feat-instruction-gate @ c9f580ef0e</li>
+<li><code>ig-w-western-heart</code>: PUSHED branch:feat/instruction-gate -&gt; https://github.com/mhvnsnt/western-heart branch backup/box-2026-10-14-ig-w-western-heart-feat-instruction-gate @ 86f3b51a53</li>
+<li><code>mfluid-audit-Mochiichao-Diamond-Version-2d-</code>: PUSHED uncommitted-snapshot(2 paths) -&gt; https://github.com/mhvnsnt/box-storage.git branch backup/box-2026-10-14-mfluid-audit-Mochiichao-Diamond-Version-2d--wip @ bee108eabb</li>
+<li><code>mmhq-cdt</code>: PUSHED stash@{0} -&gt; https://github.com/mhvnsnt/money-machine-hq.git branch backup/box-2026-10-14-mmhq-cdt-stash-0 @ 739bd69af8</li>
+<li><code>mmhq-cdt</code>: PUSHED stash@{1} -&gt; https://github.com/mhvnsnt/money-machine-hq.git branch backup/box-2026-10-14-mmhq-cdt-stash-1 @ 467cd24829</li>
+<li><code>mmhq-entrance</code>: PUSHED stash@{0} -&gt; https://github.com/mhvnsnt/money-machine-hq.git branch backup/box-2026-10-14-mmhq-entrance-stash-0 @ 739bd69af8</li>
+<li><code>mmhq-entrance</code>: PUSHED stash@{1} -&gt; https://github.com/mhvnsnt/money-machine-hq.git branch backup/box-2026-10-14-mmhq-entrance-stash-1 @ 467cd24829</li>
+<li><code>mmhq-entrance</code>: PUSHED uncommitted-snapshot(3 paths) -&gt; https://github.com/mhvnsnt/money-machine-hq.git branch backup/box-2026-10-14-mmhq-entrance-wip @ bcf96ce9e4</li>
+<li><code>mmhq-et-v2</code>: PUSHED stash@{0} -&gt; https://github.com/mhvnsnt/money-machine-hq.git branch backup/box-2026-10-14-mmhq-et-v2-stash-0 @ 739bd69af8</li>
+<li><code>mmhq-et-v2</code>: PUSHED stash@{1} -&gt; https://github.com/mhvnsnt/money-machine-hq.git branch backup/box-2026-10-14-mmhq-et-v2-stash-1 @ 467cd24829</li>
+<li><code>money-machine-hq</code>: PUSHED stash@{0} -&gt; https://github.com/mhvnsnt/money-machine-hq.git branch backup/box-2026-10-14-money-machine-hq-stash-0 @ 739bd69af8</li>
+<li><code>money-machine-hq</code>: PUSHED stash@{1} -&gt; https://github.com/mhvnsnt/money-machine-hq.git branch backup/box-2026-10-14-money-machine-hq-stash-1 @ 467cd24829</li>
+<li><code>mtp-AshLane-prototype</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/AshLane-prototype branch backup/box-2026-10-14-mtp-AshLane-prototype-docs-muse-training-pack-link @ caaa5607df</li>
+<li><code>mtp-AshLanev2</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/AshLanev2 branch backup/box-2026-10-14-mtp-AshLanev2-docs-muse-training-pack-link @ 8684c81e15</li>
+<li><code>mtp-Bannon</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/Bannon branch backup/box-2026-10-14-mtp-Bannon-docs-muse-training-pack-link @ 2f5c7b4b79</li>
+<li><code>mtp-BioMechania</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/BioMechania branch backup/box-2026-10-14-mtp-BioMechania-docs-muse-training-pack-link @ 0b6f664606</li>
+<li><code>mtp-Brutal-Fist</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/Brutal-Fist branch backup/box-2026-10-14-mtp-Brutal-Fist-docs-muse-training-pack-link @ 2b85cecf65</li>
+<li><code>mtp-CODEDUMMY</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/CODEDUMMY branch backup/box-2026-10-14-mtp-CODEDUMMY-docs-muse-training-pack-link @ ee8d68f552</li>
+<li><code>mtp-Forge3D</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/Forge3D branch backup/box-2026-10-14-mtp-Forge3D-docs-muse-training-pack-link @ 7311bc817e</li>
+<li><code>mtp-God-Mode-OS-D3MN-V2</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/God-Mode-OS-D3MN-V2 branch backup/box-2026-10-14-mtp-God-Mode-OS-D3MN-V2-docs-muse-training-pack-link @ a308712d7f</li>
+<li><code>mtp-M.-Engine-</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/M.-Engine- branch backup/box-2026-10-14-mtp-M.-Engine--docs-muse-training-pack-link @ 8559997194</li>
+<li><code>mtp-M</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/M-Hero-Simulator- branch backup/box-2026-10-14-mtp-M-docs-muse-training-pack-link @ f8eadb9fa1</li>
+<li><code>mtp-Moneymachine-private</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/Moneymachine-private branch backup/box-2026-10-14-mtp-Moneymachine-private-docs-muse-training-pack-link @ adcc14acd6</li>
+<li><code>mtp-Moneymachine</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/Moneymachine branch backup/box-2026-10-14-mtp-Moneymachine-docs-muse-training-pack-link @ 9ad6ecf73a</li>
+<li><code>mtp-TRIPPEDD-Production-studios-</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/TRIPPEDD-Production-studios- branch backup/box-2026-10-14-mtp-TRIPPEDD-Production-studios--docs-muse-training-pack-link @ 6476068d5c</li>
+<li><code>mtp-URBAN-MAYHEM-</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/URBAN-MAYHEM- branch backup/box-2026-10-14-mtp-URBAN-MAYHEM--docs-muse-training-pack-link @ 307feca060</li>
+<li><code>mtp-agent-ops</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/agent-ops branch backup/box-2026-10-14-mtp-agent-ops-docs-muse-training-pack-link @ 68243c6086</li>
+<li><code>mtp-brutalfist11</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/brutalfist11 branch backup/box-2026-10-14-mtp-brutalfist11-docs-muse-training-pack-link @ fcbe5b5a6d</li>
+<li><code>mtp-brutalfistgrokversion12</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/brutalfistgrokversion12 branch backup/box-2026-10-14-mtp-brutalfistgrokversion12-docs-muse-training-pack-link @ 03056c95fa</li>
+<li><code>mtp-brutalfistgrokversion9</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/brutalfistgrokversion9 branch backup/box-2026-10-14-mtp-brutalfistgrokversion9-docs-muse-training-pack-link @ 0ed374f89a</li>
+<li><code>mtp-brutalfistgrokversion</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/brutalfistgrokversion branch backup/box-2026-10-14-mtp-brutalfistgrokversion-docs-muse-training-pack-link @ 49500a9a24</li>
+<li><code>mtp-brutalfistgrokversioneight</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/brutalfistgrokversioneight branch backup/box-2026-10-14-mtp-brutalfistgrokversioneight-docs-muse-training-pack-link @ 6a0cf04615</li>
+<li><code>mtp-brutalfistgrokversionfive</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/brutalfistgrokversionfive branch backup/box-2026-10-14-mtp-brutalfistgrokversionfive-docs-muse-training-pack-link @ a84f6aba43</li>
+<li><code>mtp-brutalfistgrokversionfour</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/brutalfistgrokversionfour branch backup/box-2026-10-14-mtp-brutalfistgrokversionfour-docs-muse-training-pack-link @ 4087676b3d</li>
+<li><code>mtp-brutalfistgrokversionseven</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/brutalfistgrokversionseven branch backup/box-2026-10-14-mtp-brutalfistgrokversionseven-docs-muse-training-pack-link @ 54bc2e676b</li>
+<li><code>mtp-brutalfistgrokversionsix</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/brutalfistgrokversionsix branch backup/box-2026-10-14-mtp-brutalfistgrokversionsix-docs-muse-training-pack-link @ 24baeb0947</li>
+<li><code>mtp-brutalfistgrokversionten</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/brutalfistgrokversionten branch backup/box-2026-10-14-mtp-brutalfistgrokversionten-docs-muse-training-pack-link @ ab5bc88ef3</li>
+<li><code>mtp-brutalfistgrokversiontenpointfive</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/brutalfistgrokversiontenpointfive branch backup/box-2026-10-14-mtp-brutalfistgrokversiontenpointfive-docs-muse-training-pack-link @ 50873b0ece</li>
+<li><code>mtp-brutalfistgrokversionthree</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/brutalfistgrokversionthree branch backup/box-2026-10-14-mtp-brutalfistgrokversionthree-docs-muse-training-pack-link @ 768d024824</li>
+<li><code>mtp-brutalfistgrokversiontwo</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/brutalfistgrokversiontwo branch backup/box-2026-10-14-mtp-brutalfistgrokversiontwo-docs-muse-training-pack-link @ 542d830868</li>
+<li><code>mtp-chimera-emulator-hub</code>: PUSHED docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/chimera-emulator-hub branch backup/box-2026-10-14-mtp-chimera-emulator-hub-docs-muse-training-pack-link @ d3445b745e</li>
+<li><code>mtp-theyard</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/theyard branch backup/box-2026-10-14-mtp-theyard-docs-muse-training-pack-link @ e2892b5663</li>
+<li><code>mtp-western-heart</code>: PUSHED branch:docs/muse-training-pack-link -&gt; https://github.com/mhvnsnt/western-heart branch backup/box-2026-10-14-mtp-western-heart-docs-muse-training-pack-link @ 0f9feee15b</li>
+<li><code>originalize-pr-AshLanev2</code>: PUSHED uncommitted-snapshot(51 paths) -&gt; https://github.com/mhvnsnt/AshLanev2 branch backup/box-2026-10-14-originalize-pr-AshLanev2-wip @ 4b2756c272</li>
+<li><code>pt-ops</code>: PUSHED branch:claims/playtest-2026-10-14 -&gt; https://github.com/mhvnsnt/agent-ops branch backup/box-2026-10-14-pt-ops-claims-playtest-2026-10-14 @ 24e81aabf2</li>
+<li><code>ref-repos-Bannon</code>: PUSHED branch:stickup/entrance-v1 -&gt; https://github.com/mhvnsnt/Bannon.git branch backup/box-2026-10-14-ref-repos-Bannon-stickup-entrance-v1 @ 25c8bf77ed</li>
+<li><code>tmp-ashbuild</code>: PUSHED uncommitted-snapshot(41 paths) -&gt; https://github.com/mhvnsnt/AshLanev2 branch backup/box-2026-10-14-tmp-ashbuild-wip @ d5473c496a</li>
+<li><code>tmp-ceh</code>: PUSHED branch:feat/private-cloud-console -&gt; https://github.com/mhvnsnt/chimera-emulator-hub branch backup/box-2026-10-14-tmp-ceh-feat-private-cloud-console @ 51bdf07cd5</li>
+<li><code>tmp-tgt</code>: PUSHED branch:master -&gt; https://github.com/mhvnsnt/box-storage.git branch backup/box-2026-10-14-tmp-tgt-master @ 16b2fec7cd</li>
+<li><code>vten-ci-fix</code>: PUSHED uncommitted-snapshot(15 paths) -&gt; https://github.com/mhvnsnt/brutalfistgrokversionten.git branch backup/box-2026-10-14-vten-ci-fix-wip @ 416f583443</li>
+<li><code>vten-intro-base</code>: PUSHED uncommitted-snapshot(1 paths) -&gt; https://github.com/mhvnsnt/brutalfistgrokversionten.git branch backup/box-2026-10-14-vten-intro-base-wip @ 325543f99c</li>
+<li><code>vten-intro</code>: PUSHED uncommitted-snapshot(3 paths) -&gt; https://github.com/mhvnsnt/brutalfistgrokversionten.git branch backup/box-2026-10-14-vten-intro-wip @ 3478b754fe</li>
+<li><code>vten-main-wt</code>: PUSHED uncommitted-snapshot(3 paths) -&gt; https://github.com/mhvnsnt/brutalfistgrokversionten branch backup/box-2026-10-14-vten-main-wt-wip @ 439f75eadd</li>
+<li><code>vten-stages</code>: PUSHED uncommitted-snapshot(3 paths) -&gt; https://github.com/mhvnsnt/brutalfistgrokversionten branch backup/box-2026-10-14-vten-stages-wip @ 055cf60fd9</li>
+<li><code>wa-Bannon</code>: PUSHED branch:docs/agents-standard -&gt; https://github.com/mhvnsnt/Bannon branch backup/box-2026-10-14-wa-Bannon-docs-agents-standard @ 82420a8993</li>
+<li><code>wa-Bannon</code>: PUSHED uncommitted-snapshot(1 paths) -&gt; https://github.com/mhvnsnt/Bannon branch backup/box-2026-10-14-wa-Bannon-wip @ e84b7c1fa1</li>
+<li><code>wa-TRIPPEDD-Production-studios-</code>: PUSHED branch:docs/agents-standard -&gt; https://github.com/mhvnsnt/TRIPPEDD-Production-studios- branch backup/box-2026-10-14-wa-TRIPPEDD-Production-studios--docs-agents-standard @ 9ffb635ffb</li>
+<li><code>wa-money-machine-hq</code>: PUSHED branch:docs/agents-edit-in-place -&gt; https://github.com/mhvnsnt/money-machine-hq.git branch backup/box-2026-10-14-wa-money-machine-hq-docs-agents-edit-in-place @ a3481988c3</li>
+<li><code>wa-money-machine-hq</code>: PUSHED branch:docs/agents-standard -&gt; https://github.com/mhvnsnt/money-machine-hq.git branch backup/box-2026-10-14-wa-money-machine-hq-docs-agents-standard @ 9525d1cf30</li>
+<li><code>wa-money-machine-hq</code>: PUSHED branch:docs/western-heart-audit -&gt; https://github.com/mhvnsnt/money-machine-hq.git branch backup/box-2026-10-14-wa-money-machine-hq-docs-western-heart-audit @ e8aa4354ff</li>
+<li><code>western-heart-inventory-western-heart</code>: PUSHED branch:grok/lab-playable-slice -&gt; https://github.com/mhvnsnt/western-heart branch backup/box-2026-10-14-western-heart-inventory-western-heart-grok-lab-playable-slice @ 4a58f1a6c5</li>
+<li><code>wh-cs</code>: PUSHED branch:grok/creation-suite-v0 -&gt; https://github.com/mhvnsnt/western-heart.git branch backup/box-2026-10-14-wh-cs-grok-creation-suite-v0 @ b9fbbc40d6</li>
+<li><code>wh-cs</code>: PUSHED branch:pr118 -&gt; https://github.com/mhvnsnt/western-heart.git branch backup/box-2026-10-14-wh-cs-pr118 @ 7b0cdc5d16</li>
+<li><code>wh-cs</code>: PUSHED uncommitted-snapshot(1 paths) -&gt; https://github.com/mhvnsnt/western-heart.git branch backup/box-2026-10-14-wh-cs-wip @ dc5ca40c09</li>
+<li><code>wh-qa</code>: PUSHED branch:grok/wh-playtest-qa -&gt; https://github.com/mhvnsnt/western-heart.git branch backup/box-2026-10-14-wh-qa-grok-wh-playtest-qa @ 7b0cdc5d16</li>
+<li><code>wh-qa</code>: PUSHED uncommitted-snapshot(1 paths) -&gt; https://github.com/mhvnsnt/western-heart.git branch backup/box-2026-10-14-wh-qa-wip @ b63758e7c1</li>
+</ul>
+<h3 id="release-assets-on-mhvnsntbox-storage-sha-256-matched-to-api-digest">Release assets on mhvnsnt/box-storage (SHA-256 matched to API digest)<a class="headerlink" href="#release-assets-on-mhvnsntbox-storage-sha-256-matched-to-api-digest" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>ashlane-base-wt</code>: RELEASE ashlane-base-wt-ignored.tar.part00 998M sha256=a8207d058437f20a060eec3401d0d1acaa7c217dbaade6a0cd32f1c761c49352 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-ashlane-base-wt</li>
+<li><code>ashlane-repo</code>: RELEASE ashlane-repo-ignored.tar.part00 948M sha256=ab30ae97b0eee0b69f07bb449071ad15637b7bb6fea5e98cc17109331b582a6d https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-ashlane-repo</li>
+<li><code>code-doctor-case-neon</code>: RELEASE code-doctor-case-neon-ignored.tar.part00 12K sha256=d3b00671d395c2619155447274cad0642a83f18f271d370a65d079ee711d791d https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-code-doctor-case-neon</li>
+<li><code>folder-_intake</code>: RELEASE folder-_intake.tar.part00 45M sha256=21be12cac35332052ce54a71ee5895f6bb410ee0dabcbc11570c27f81dbf4573 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-_intake</li>
+<li><code>folder-agent-tools</code>: RELEASE folder-agent-tools.tar.part00 120K sha256=b05014077b6b60aee4a1f9971d466ad7a16010b33919676dfe73e5eb3e9bf6e1 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-agent-tools</li>
+<li><code>folder-ashlane-fix-proof</code>: RELEASE folder-ashlane-fix-proof.tar.part00 7.2M sha256=2ea64962619d9245e6ce68fb0349d9e9a23081024982fd292c2d8e49aa8bb348 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-ashlane-fix-proof</li>
+<li><code>folder-ashlane</code>: RELEASE folder-ashlane.tar.part00 459M sha256=8e174e074e8240566b2d9497967b5febf498ac5646cfcc54b3654359157f2712 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-ashlane</li>
+<li><code>folder-bible</code>: RELEASE folder-bible.tar.part00 437M sha256=49250ef25e2a4ab2fc23f7845fca04c40cb6514e63401ce84b83c07c4f9e901b https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-bible</li>
+<li><code>folder-canon-moves</code>: RELEASE folder-canon-moves.tar.part00 320K sha256=44322657cfba6e4887f8c22094d43374c27c964f57bef00ab7c2e7afef32a8ec https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-canon-moves</li>
+<li><code>folder-cfdeploy</code>: RELEASE folder-cfdeploy.tar.part00 60K sha256=1417a3e7df633595b9068f99fe68fa2f7ba3f76e496b8bb806e62137b5c37f43 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-cfdeploy</li>
+<li><code>folder-code-doctor</code>: RELEASE folder-code-doctor.tar.part00 410M sha256=fbdcc61e0c1659dcf1608f14342c00bfeba5da629d621412f9ff96e4593b6ae3 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-code-doctor</li>
+<li><code>folder-cs-proof</code>: RELEASE folder-cs-proof.tar.part00 14M sha256=03fc0924499f6934e2f478966822bf01ae501f5d5bad01738f0b8342973bb13f https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-cs-proof</li>
+<li><code>folder-fix</code>: RELEASE folder-fix.tar.part00 12K sha256=02b11068ab4bf981a14b4216913ca8d59cda44244a6a79c60d2a2314518078ca https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-fix</li>
+<li><code>folder-fvr</code>: RELEASE folder-fvr.tar.part00 31M sha256=736ab57d81d1d688cd6231836c37e1f4ff9fe08747b9e56c642e70deaa0d1e46 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-fvr</li>
+<li><code>folder-game-kits</code>: RELEASE folder-game-kits.tar.part00 1.9G sha256=56080fa4788241ac4b0aef383882cebade7fd3ffb0e164da82d511216756e705 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-game-kits</li>
+<li><code>folder-game-kits</code>: RELEASE folder-game-kits.tar.part01 1.9G sha256=9afe2802bbd14f75c56458db0081d422d025d6dbd02f2c0f9c9825d40a895e74 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-game-kits</li>
+<li><code>folder-game-kits</code>: RELEASE folder-game-kits.tar.part02 1.9G sha256=32d0fe568ea5ed43f52088208abd1d5e69675137375dbd326527530a23ac9f81 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-game-kits</li>
+<li><code>folder-game-kits</code>: RELEASE folder-game-kits.tar.part03 98M sha256=351d6168fff797e85272063f74da7ea76dde3002318c00d68e67a8f3d13c1be5 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-game-kits</li>
+<li><code>folder-gv</code>: RELEASE folder-gv.tar.part00 259M sha256=cafb412a7cedd3fdd47056657a2c0d97f4d8b398e444510e90c5f9f147ff0313 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-gv</li>
+<li><code>folder-home-box-sand-data</code>: RELEASE folder-home-box-sand-data.tar.part00 128M sha256=b5dabf9e7ccfda929a42fc7af8a5cb9e8ddea23695745c6915c3d5032ee1f0ce https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-home-box-sand-data</li>
+<li><code>folder-home-box-scratch</code>: RELEASE folder-home-box-scratch.tar.part00 1.2G sha256=f2ca4b9886de8ae0cf6d0e9351c0c592b1abdae9f5512cd1dc176956b04a2b36 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-home-box-scratch</li>
+<li><code>folder-ig</code>: RELEASE folder-ig.tar.part00 40K sha256=bb809d6c3de08ab47950efe96f143d79ce12923bb73374dfb2ba41e20aa37bdd https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-ig</li>
+<li><code>folder-intro-movie</code>: RELEASE folder-intro-movie.tar.part00 469M sha256=286bea6db7d835616919d42ac2bd2268ec27d9755588230ff4f82bbf170a0cc7 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-intro-movie</li>
+<li><code>folder-mfluid-audit</code>: RELEASE folder-mfluid-audit.tar.part00 280K sha256=c57fd82522e741e485527f6a926bfa3af3b8501afc5fb3040261f1ab365e2e5b https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-mfluid-audit</li>
+<li><code>folder-mirror</code>: RELEASE folder-mirror.tar.part00 12M sha256=42cee7b9cd3956a610760078831cdaddb83e34391b0bf2f05de325df76d075e7 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-mirror</li>
+<li><code>folder-mmhq-autoreply</code>: RELEASE folder-mmhq-autoreply.tar.part00 60M sha256=19baf4b02736d8409b1b3ca064021294acc013de73adadd9b9af1d99c660b2e8 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-mmhq-autoreply</li>
+<li><code>folder-mocap-src</code>: RELEASE folder-mocap-src.tar.part00 101M sha256=ec3e97683f1fe156b82fe82ed97801deb3243fb88aba84162e8a123e07e1cc7b https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-mocap-src</li>
+<li><code>folder-mtp</code>: RELEASE folder-mtp.tar.part00 12K sha256=715b600e44f74bd766923d77bcf2fff3fca84f5b66e2b6a8595a4f6927327ffd https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-mtp</li>
+<li><code>folder-offers</code>: RELEASE folder-offers.tar.part00 460K sha256=cdd838fe403fee8ee1b3ffead35c1d8f518a04ab95d83ca976e1d6c0a5839a9a https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-offers</li>
+<li><code>folder-originalize</code>: RELEASE folder-originalize.tar.part00 1.9G sha256=e33cc838a9a2dc9dca84f9e7ab253863b879838f5a830bfc86436173bc0187dc https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-originalize</li>
+<li><code>folder-originalize</code>: RELEASE folder-originalize.tar.part01 1.9G sha256=1dff47cb38a1eac2ee4a8b434c5eb7ba61093c196811c32a6557b579f1c61cf2 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-originalize</li>
+<li><code>folder-originalize</code>: RELEASE folder-originalize.tar.part02 799M sha256=7809da7be6f3a1edcf47337e4442f2d2fc625b90bbef7189a9adeaa03bb4281a https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-originalize</li>
+<li><code>folder-oss-anim-staging</code>: RELEASE folder-oss-anim-staging.tar.part00 1.9G sha256=31d87439abe4751b5863282dcb7ef8557850330e9b1e77338349a57dbb67107d https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-oss-anim-staging</li>
+<li><code>folder-oss-anim-staging</code>: RELEASE folder-oss-anim-staging.tar.part01 333M sha256=ae56b324fd7ad072af998e11ccbd184ff14be012bd230d6dd5a669d542cf02f3 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-oss-anim-staging</li>
+<li><code>folder-oss</code>: RELEASE folder-oss.tar.part00 1.6G sha256=6afbc04fa4774a4aef0c6e3e8f778225391b86c5e6ecfd89e467ada770c8b377 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-oss</li>
+<li><code>folder-pa-mkt</code>: RELEASE folder-pa-mkt.tar.part00 23M sha256=5716349162f57c59837d055f5c9038127d579b4e37afef61c6dcaeca2dd5534f https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-pa-mkt</li>
+<li><code>folder-pck</code>: RELEASE folder-pck.tar.part00 3.6M sha256=fe759b5fd68e3fb1948929ec16c65fb28db36889a24eb94bdc82c5d9add38ac9 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-pck</li>
+<li><code>folder-pitch</code>: RELEASE folder-pitch.tar.part00 380K sha256=a1ebfb1396c5d35c6bd49ad75082a623b49e3a271cf5f423f8b79258090a83da https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-pitch</li>
+<li><code>folder-plan</code>: RELEASE folder-plan.tar.part00 240K sha256=fa7a431d9f0a908ac9a29d5ff87e8e7827a44f4c17e39f1d4faffc228b1051a8 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-plan</li>
+<li><code>folder-proof</code>: RELEASE folder-proof.tar.part00 1.4M sha256=2b90a45af491b0d2c7e6a0d85b67d32404ebeb606737290028f89c6f4f0518b0 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-proof</li>
+<li><code>folder-ref-repos</code>: RELEASE folder-ref-repos.tar.part00 12K sha256=6e51d0c70d744f971998e7ba3da9ecc037eaaae6bb63023100e1296d91047b1b https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-ref-repos</li>
+<li><code>folder-rig-repair</code>: RELEASE folder-rig-repair.tar.part00 1.9G sha256=7b0d7a08cc340d59b25b81d035e626019316d13355016d3a7706b06aaae4295d https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-rig-repair</li>
+<li><code>folder-rig-repair</code>: RELEASE folder-rig-repair.tar.part01 534M sha256=5513e33d2440cc561c9d2fdd8375c4da578d29fcc14cf52dcad990c09eda3311 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-rig-repair</li>
+<li><code>folder-rv</code>: RELEASE folder-rv.tar.part00 776M sha256=660345908f73922196a5dbf7c37da28e34b145cbb586143bf82117e66f3a9ffb https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-rv</li>
+<li><code>folder-security</code>: RELEASE folder-security.tar.part00 40K sha256=5b341841713fa962431b5d2cc5de939fa23033affac62aad3df1b6c0ff242416 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-security</li>
+<li><code>folder-share</code>: RELEASE folder-share.tar.part00 1.4M sha256=8356d716acc09adefb0cc7083f348e8f7fbcd60925ad8e9e6ff49e7c7b7732e1 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-share</li>
+<li><code>folder-tekken-ref</code>: RELEASE folder-tekken-ref.tar.part00 1.2G sha256=e427994be946995e7a4c5567eadc87a9cc44c5ac43eb7ad0a12fb566a3da4f5b https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-tekken-ref</li>
+<li><code>folder-tmp-godwithin</code>: RELEASE folder-tmp-godwithin.tar.part00 12M sha256=2875661e54f13a85e390af66551710dad22c8af5f93821fc5393db7139225add https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-tmp-godwithin</li>
+<li><code>folder-tools</code>: RELEASE folder-tools.tar.part00 525M sha256=bf5e16826fd4b7ac20d590884e9659a537ba1ca36dc90581e74b9e5861bf5824 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-tools</li>
+<li><code>folder-tracks</code>: RELEASE folder-tracks.tar.part00 54M sha256=32fbb59eae258770dd38bbdd69ada7a2f1f39249ddacef8ecc0889dd318e65d3 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-tracks</li>
+<li><code>folder-vis</code>: RELEASE folder-vis.tar.part00 4.6M sha256=1afb931817587b2beb4ba4c1a032a057390dbb2ae5dc8ca29794c0eb80ef98c0 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-vis</li>
+<li><code>folder-wa</code>: RELEASE folder-wa.tar.part00 32K sha256=c99867ab45c9bf4778f2d6eb8c155a25cac0a7615e2819fb0ad28eae9d5e4d27 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-wa</li>
+<li><code>folder-western-heart-inventory</code>: RELEASE folder-western-heart-inventory.tar.part00 20K sha256=ce314b944fbcef17a5c7b8d544812344324aa7b29a37bbcb94b3c8542db7f8e9 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-western-heart-inventory</li>
+<li><code>folder-western-heart-lab</code>: RELEASE folder-western-heart-lab.tar.part00 76M sha256=69c6194bc6ce958b2bf6dc2bd044cb3070ff23edfc6f766a45f40f4762d44c4b https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-western-heart-lab</li>
+<li><code>folder-workspace-loose</code>: RELEASE workspace-loose-files.tar sha256=836f312125e9d550293d84e837c462a16a82b20c2ec8a43b8903d45d63f4364b https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-folder-workspace-loose-files</li>
+<li><code>mfluid-audit-Mochiichao-Diamond-Version-2d-</code>: RELEASE mfluid-audit-Mochiichao-Diamond-Version-2d--ignored.tar.part00 652K sha256=579833e9bc35ef6f28a4023734226d8167c3cbc2526979bdc6c10c812d1d4d2d https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-mfluid-audit-Mochiichao-Diamond-Version-2d</li>
+<li><code>mmhq-cdt</code>: RELEASE mmhq-cdt-ignored.tar.part00 1.9G sha256=16c2208a36dc60ec951d96ebed231a3e931ff762785d2ca02edbc2663019a79e https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-mmhq-cdt</li>
+<li><code>mmhq-cdt</code>: RELEASE mmhq-cdt-ignored.tar.part01 298M sha256=bfaa44df524b522d7fbaf2c075a6d1aa2a2912dae8141e800f31ba9a3cb0615b https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-mmhq-cdt</li>
+<li><code>mmhq-entrance</code>: RELEASE mmhq-entrance-ignored.tar.part00 920M sha256=a48733062b7fec32d96558c0b05c82b3a31864f51b7106340c190dc48e3b5981 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-mmhq-entrance</li>
+<li><code>money-machine-hq</code>: RELEASE money-machine-hq-ignored.tar.part00 135M sha256=215f8c6bb1da8c22a2f88226e71e23a49467d2fb5507d026b1037191c9438d5a https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-money-machine-hq</li>
+<li><code>studio-pipeline</code>: RELEASE studio-pipeline-ignored.tar.part00 1.9G sha256=ea66d8e1a2f03eb83b21a2804aa7250c02296131c79043d06b419b280c625d3c https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-studio-pipeline</li>
+<li><code>studio-pipeline</code>: RELEASE studio-pipeline-ignored.tar.part01 1.9G sha256=55e9550a24f73644786650a7b0cc4a0719cc8f90c5dd324ac7856f63b2e9f551 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-studio-pipeline</li>
+<li><code>studio-pipeline</code>: RELEASE studio-pipeline-ignored.tar.part02 1.4G sha256=73ceeb21da8edf609739b8d10770de0339ea3e34842fe2aee8dc47ee006fc4fd https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-studio-pipeline</li>
+<li><code>tmp-build-M.-OS-Mochiichao-Chrome-Version-</code>: RELEASE tmp-build-M.-OS-Mochiichao-Chrome-Version--ignored.tar.part00 4.0M sha256=20febbc3368c3ca5cafef59838b493ba361aea89eca82164777b4604eec1824c https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-tmp-build-M_-OS-Mochiichao-Chrome-Version</li>
+<li><code>tmp-build-Mochiichao-Diamond-Version-2d-</code>: RELEASE tmp-build-Mochiichao-Diamond-Version-2d--ignored.tar.part00 652K sha256=4fd711d3dfc4aed8c8b75da360e9d9457d9d258be39db91fe49e67fa82e53a12 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-tmp-build-Mochiichao-Diamond-Version-2d</li>
+<li><code>tmp-build-Neon-App-Builder</code>: RELEASE tmp-build-Neon-App-Builder-ignored.tar.part00 412K sha256=a85231ca472e1a9b12b4f87f5cb71b8e383a4e4750ea53ae340bd87b5685827d https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-tmp-build-Neon-App-Builder</li>
+<li><code>vten-ci-fix</code>: RELEASE vten-ci-fix-ignored.tar.part00 419M sha256=25053dba6309aafc336e31834da23a9173f7085edc63b7285464bcaea5db0d25 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-vten-ci-fix</li>
+<li><code>vten-intro-base</code>: RELEASE vten-intro-base-ignored.tar.part00 500K sha256=d631bfa1d9d3525bfab0152d9a9fb4224ee00d9393f2f14c8b350b3a370c662b https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-vten-intro-base</li>
+<li><code>vten-intro</code>: RELEASE vten-intro-ignored.tar.part00 242M sha256=160b1b366a65c87a03ec23f90d037cbb14cecdd6956b4dd5f5443a3813b552a2 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-vten-intro</li>
+<li><code>vten-main-wt</code>: RELEASE vten-main-wt-ignored.tar.part00 500K sha256=b88c7924af7cd3abb14313125b7473c979db83c9c8a4c0cc395c0e81ab343de6 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-vten-main-wt</li>
+<li><code>vten-stages</code>: RELEASE vten-stages-ignored.tar.part00 238M sha256=4ef22b134fe2e8d29685c25193301e93a722cb34199946a6c91368f9d0f588f3 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-vten-stages</li>
+<li><code>western-heart-inventory-western-heart</code>: RELEASE western-heart-inventory-western-heart-ignored.tar.part00 59M sha256=60cab7ea477dc9dd6c4e2d2eb22bcf08d6a2748da85e72c8f23f5a1e55af7cac https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-western-heart-inventory-western-heart</li>
+<li><code>wh-cs</code>: RELEASE wh-cs-ignored.tar.part00 12M sha256=1bb69f81b31a43ad0f988f7119445f5603c0c6be01256953aa47e862f7d40b55 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-wh-cs</li>
+<li><code>wh-qa</code>: RELEASE wh-qa-ignored.tar.part00 12M sha256=2ac84c019181b9f79e5a5093fad4e6c8793700730faba7f145fd8c47102890a4 https://github.com/mhvnsnt/box-storage/releases/tag/box-2026-10-14-wh-qa</li>
+</ul>
+<h2 id="pass-2-after-interruption-430-pm-ct">Pass 2 (after interruption, ~4:30 PM CT)<a class="headerlink" href="#pass-2-after-interruption-430-pm-ct" title="Permanent link">&para;</a></h2>
+<p>Re-scanned 99 <code>.git</code> entries across the box (/workspace, /tmp, /home/box). Refs already on remotes were skipped; WIP trees identical to the pass-1 snapshot were skipped.</p>
+<table>
+<thead>
+<tr>
+<th>Repo path</th>
+<th>New backup</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/workspace/pt-ops</code></td>
+<td>claims/playtest-2026-10-14</td>
+<td>box-storage <code>backup/box-2026-10-14/pt-ops/*</code></td>
+</tr>
+<tr>
+<td><code>/tmp/ceh</code></td>
+<td>feat/private-cloud-console</td>
+<td>mhvnsnt/chimera-emulator-hub (private) <code>backup/box-2026-10-14/tmp_ceh/*</code></td>
+</tr>
+<tr>
+<td><code>/workspace/wh-qa</code> (new clone)</td>
+<td>grok/wh-playtest-qa + WIP (untracked build/)</td>
+<td>mhvnsnt/western-heart (private) <code>backup/box-2026-10-14/wh-qa/*</code></td>
+</tr>
+<tr>
+<td><code>/workspace/wh-cs</code></td>
+<td>WIP (lab/game/scripts/main.gd)</td>
+<td>mhvnsnt/western-heart <code>backup/box-2026-10-14/wh-cs/wip2</code></td>
+</tr>
+<tr>
+<td><code>/workspace/bn/b</code></td>
+<td>fix/perf-lazy-clips-debug-flag-version-stamp</td>
+<td>mhvnsnt/Bannon (private) <code>backup/box-2026-10-14/bn_b/*</code></td>
+</tr>
+</tbody>
+</table>
+<p>These four box-storage pushes failed (index-pack on full history), so they went to the private origin repos; gitleaks on the new commits reported no leaks.</p>
+<p>Final verification: 94 of 99 entries OK. Every unpushed branch tip, stash and dirty tree matched a SHA on a remote. The other 5: 3 were confirmed by <code>ls-remote origin</code> SHA match. <code>/tmp/backend-plugin-bpPnXV</code> is an empty repo with no commits or files, so there was nothing to back up. <code>/workspace/mmhq-autoreply</code> is a broken worktree (its parent <code>/workspace/mmhq</code> is gone); its files are in Producerbot's release <code>box-2026-10-14-folder-mmhq-autoreply</code>.</p>
+<h2 id="pass-2-2026-10-14-450-pm-ct-grok-bot-producerbot-owner-order">Pass 2 — 2026-10-14 ~4:50 PM CT (Grok Bot / Producerbot, owner order)<a class="headerlink" href="#pass-2-2026-10-14-450-pm-ct-grok-bot-producerbot-owner-order" title="Permanent link">&para;</a></h2>
+<p>Free space before: 609 MB. After clone deletions: ~15.1 GB.</p>
+<h3 id="clones-deleted-porcelain-0-unpushed-0-no-stashes-every-branch-tip-reachable-from-an-ls-remote-ref-no-ignored-files-lsof-0-no-file-changes-in-20-min-not-under-an-active-claim">Clones deleted (porcelain 0, unpushed 0, no stashes, every branch tip reachable from an ls-remote ref, no ignored files, lsof 0, no file changes in 20 min, not under an active claim)<a class="headerlink" href="#clones-deleted-porcelain-0-unpushed-0-no-stashes-every-branch-tip-reachable-from-an-ls-remote-ref-no-ignored-files-lsof-0-no-file-changes-in-20-min-not-under-an-active-claim" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Size</th>
+<th>Backup (remote)</th>
+<th>Local HEAD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>wa/TRIPPEDD-Production-studios-</code></td>
+<td>1489MB</td>
+<td>https://github.com/mhvnsnt/TRIPPEDD-Production-studios-/tree/docs/agents-standard</td>
+<td><code>9ffb635f</code></td>
+</tr>
+<tr>
+<td><code>ig/w-TRIPPEDD-Production-studios-</code></td>
+<td>4002MB</td>
+<td>https://github.com/mhvnsnt/TRIPPEDD-Production-studios-/tree/feat/instruction-gate</td>
+<td><code>ef9f5c70</code></td>
+</tr>
+<tr>
+<td><code>ref-repos/Bannon</code></td>
+<td>5717MB</td>
+<td>https://github.com/mhvnsnt/Bannon/tree/stickup/entrance-v1</td>
+<td><code>25c8bf77</code></td>
+</tr>
+<tr>
+<td><code>ig/w-God-Molecule-Show-Studio</code></td>
+<td>281MB</td>
+<td>https://github.com/mhvnsnt/God-Molecule-Show-Studio/tree/feat/instruction-gate</td>
+<td><code>7fbc3430</code></td>
+</tr>
+<tr>
+<td><code>mmhq-cd</code></td>
+<td>600MB</td>
+<td>https://github.com/mhvnsnt/money-machine-hq/tree/main</td>
+<td><code>f0afec51</code></td>
+</tr>
+<tr>
+<td><code>mtp/mmhq</code></td>
+<td>829MB</td>
+<td>https://github.com/mhvnsnt/money-machine-hq/tree/docs/muse-training-pack</td>
+<td><code>ba6a62ab</code></td>
+</tr>
+<tr>
+<td><code>wa/money-machine-hq</code></td>
+<td>597MB</td>
+<td>https://github.com/mhvnsnt/money-machine-hq/tree/docs/agents-edit-in-place</td>
+<td><code>a3481988</code></td>
+</tr>
+<tr>
+<td><code>ig/w-money-machine-hq</code></td>
+<td>184MB</td>
+<td>https://github.com/mhvnsnt/money-machine-hq/tree/feat/instruction-gate</td>
+<td><code>c9f580ef</code></td>
+</tr>
+<tr>
+<td><code>oss-anim-staging/_raw/git/cmu-mocap</code></td>
+<td>434MB</td>
+<td>https://github.com/una-dinosauria/cmu-mocap/tree/master</td>
+<td><code>09a07f54</code></td>
+</tr>
+<tr>
+<td><code>ig/w-BioMechania</code></td>
+<td>188MB</td>
+<td>https://github.com/mhvnsnt/BioMechania/tree/feat/instruction-gate</td>
+<td><code>b65dff97</code></td>
+</tr>
+<tr>
+<td><code>ig/w-ConcreteDragon</code></td>
+<td>190MB</td>
+<td>https://github.com/mhvnsnt/ConcreteDragon/tree/feat/instruction-gate</td>
+<td><code>e8dababf</code></td>
+</tr>
+</tbody>
+</table>
+<p>Note: some head branches no longer exist on the remote (merged and deleted), but each tip commit was confirmed to be an ancestor of a ref on the remote before deletion.</p>
+<h3 id="new-backup-refs-non-disruptive-snapshot-commits-working-trees-and-head-untouched">New backup refs (non-disruptive snapshot commits; working trees and HEAD untouched)<a class="headerlink" href="#new-backup-refs-non-disruptive-snapshot-commits-working-trees-and-head-untouched" title="Permanent link">&para;</a></h3>
+<p>backup/box-2026-10-14b-<clone>-wip / -stashN on: AshLanev2 (ashlane-repo, ashlane-base-wt, originalize-pr-AshLanev2, tmp-ashbuild), Brutal-Fist (wip, stash0, BannonSource-wip), brutalfistgrokversionten (vten-stages, vten-main-wt, vten-intro, vten-intro-base, vten-ci-fix), brutalfistgrokversioneight, western-heart (wh-qa wip + grok/wh-playtest-qa, wh-cs), Bannon (wa-Bannon), M.-Engine- (fix), money-machine-hq (mmhq-entrance wip+2 stashes, mmhq-cdt/money-machine-hq/mmhq-et-v2 2 stashes each).</p>
+<p>Not backed up: mfluid-audit/Mochiichao-Diamond-Version-2d- (2 dirty files; push to mfluidmusic denied 403). Kept on disk.</p>
+<h2 id="2026-10-23-cleanup-owner-standing-permission-t126u-257-pm-ct">2026-10-23 cleanup (owner standing permission, t126u 2:57 PM CT)<a class="headerlink" href="#2026-10-23-cleanup-owner-standing-permission-t126u-257-pm-ct" title="Permanent link">&para;</a></h2>
+<p>Rules: idle &gt;60 min (excluding .git), no open handles, no untracked/modified files (only tracked deletions of files still on remote, or regenerable output like .output/ test-results/), 0 stashes, every local branch + HEAD reachable from a remote ref after fetch.</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Size</th>
+<th>Remote</th>
+<th>SHA</th>
+<th>Cleared (CT)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ashlane/play</code></td>
+<td>1861MB</td>
+<td>https://github.com/mhvnsnt/AshLanev2</td>
+<td><code>7409b03a</code></td>
+<td>15:04 CT</td>
+</tr>
+<tr>
+<td><code>ig/w-AshLanev2</code></td>
+<td>253MB</td>
+<td>https://github.com/mhvnsnt/AshLanev2</td>
+<td><code>93e820f2</code></td>
+<td>15:04 CT</td>
+</tr>
+<tr>
+<td><code>ig/w-Bannon</code></td>
+<td>2001MB</td>
+<td>https://github.com/mhvnsnt/Bannon</td>
+<td><code>7a388cf8</code></td>
+<td>15:04 CT</td>
+</tr>
+<tr>
+<td><code>ig/w-western-heart</code></td>
+<td>741MB</td>
+<td>https://github.com/mhvnsnt/western-heart</td>
+<td><code>86f3b51a</code></td>
+<td>15:04 CT</td>
+</tr>
+<tr>
+<td><code>ig/w-agent-ops</code></td>
+<td>4MB</td>
+<td>https://github.com/mhvnsnt/agent-ops</td>
+<td><code>ca32c44b</code></td>
+<td>15:04 CT</td>
+</tr>
+<tr>
+<td><code>bn/b</code></td>
+<td>1645MB</td>
+<td>https://github.com/mhvnsnt/Bannon.git</td>
+<td><code>63643c5e</code></td>
+<td>15:04 CT</td>
+</tr>
+<tr>
+<td><code>bible/God-Molecule-Show-Studio</code></td>
+<td>727MB</td>
+<td>https://github.com/mhvnsnt/God-Molecule-Show-Studio.git</td>
+<td><code>758365de</code></td>
+<td>15:04 CT</td>
+</tr>
+<tr>
+<td><code>kobra-fix</code></td>
+<td>283MB</td>
+<td>https://github.com/mhvnsnt/brutalfistgrokversionten.git</td>
+<td><code>dded5029</code></td>
+<td>15:04 CT</td>
+</tr>
+<tr>
+<td><code>bible/TRIPPEDD-Production-studios-</code></td>
+<td>12273MB</td>
+<td>https://github.com/mhvnsnt/TRIPPEDD-Production-studios-.git</td>
+<td><code>7efcfbdd</code></td>
+<td>15:04 CT</td>
+</tr>
+<tr>
+<td><code>bible/Bannon</code></td>
+<td>7211MB</td>
+<td>https://github.com/mhvnsnt/Bannon.git</td>
+<td><code>6636ad54</code></td>
+<td>15:04 CT</td>
+</tr>
+<tr>
+<td><code>ashlane/base-wt</code></td>
+<td>2641MB</td>
+<td>https://github.com/mhvnsnt/AshLanev2</td>
+<td><code>1ce79707</code></td>
+<td>15:04 CT</td>
+</tr>
+<tr>
+<td><code>ashlane/repo</code></td>
+<td>4266MB</td>
+<td>https://github.com/mhvnsnt/AshLanev2</td>
+<td><code>af2ff5b7</code></td>
+<td>15:04 CT</td>
+</tr>
+<tr>
+<td><code>TRIPPEDD-Production-studios-</code></td>
+<td>4271MB</td>
+<td>https://github.com/mhvnsnt/TRIPPEDD-Production-studios-.git</td>
+<td><code>43623000</code></td>
+<td>15:04 CT</td>
+</tr>
+<tr>
+<td><code>wh-qa</code></td>
+<td>3874MB</td>
+<td>https://github.com/mhvnsnt/western-heart.git</td>
+<td><code>7b0cdc5d</code></td>
+<td>15:04 CT</td>
+</tr>
+<tr>
+<td><code>western-heart-inventory/western-heart</code></td>
+<td>2683MB</td>
+<td>https://github.com/mhvnsnt/western-heart</td>
+<td><code>4a58f1a6</code></td>
+<td>15:04 CT</td>
+</tr>
+</tbody>
+</table>
+<p>Total freed: ~44.7 GB.</p>
+<h2 id="2026-10-23-1555-cdt-repo-co-dev-own-clone-cleanup-rule-a">2026-10-23 ~15:55 CDT — Repo Co Dev own-clone cleanup (rule (a))<a class="headerlink" href="#2026-10-23-1555-cdt-repo-co-dev-own-clone-cleanup-rule-a" title="Permanent link">&para;</a></h2>
+<p>Checked with <code>/tmp/rcd-chk.sh</code> (clean+no untracked, empty stash, every local branch contained in a remote ref, submodules). <strong>Removed: none</strong> — no clone passed all checks. Kept on disk:</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Size</th>
+<th>Reason kept</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/workspace/western-heart-lab</td>
+<td>76M</td>
+<td>not a git repo (proof/src scratch) — cannot verify</td>
+</tr>
+<tr>
+<td>/workspace/wh-proof</td>
+<td>5.5M</td>
+<td>not a git repo — cannot verify</td>
+</tr>
+<tr>
+<td>/workspace/originalize</td>
+<td>6.1G</td>
+<td>not a git repo (top dir) — cannot verify</td>
+</tr>
+<tr>
+<td>/workspace/Brutal-Fist</td>
+<td>4.5G</td>
+<td>dirty (modified submodule BannonSource, deleted Research/*) + 1 stash</td>
+</tr>
+<tr>
+<td>/workspace/vten-stages</td>
+<td>743M</td>
+<td>3 dirty paths</td>
+</tr>
+<tr>
+<td>/workspace/vten-ci-fix</td>
+<td>493M</td>
+<td>15 dirty paths</td>
+</tr>
+<tr>
+<td>/workspace/vten-main-wt</td>
+<td>275M</td>
+<td>3 dirty paths</td>
+</tr>
+<tr>
+<td>/workspace/vten-intro</td>
+<td>755M</td>
+<td>3 dirty paths</td>
+</tr>
+<tr>
+<td>/workspace/vten-intro-base</td>
+<td>277M</td>
+<td>1 dirty path</td>
+</tr>
+<tr>
+<td>/workspace/brutalfistgrokversioneight</td>
+<td>429M</td>
+<td>1 dirty path</td>
+</tr>
+</tbody>
+</table>
+<p>wh-qa: not present. Other /workspace dirs (wh-*, ashlane, etc.) left untouched — ownership not confirmed.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

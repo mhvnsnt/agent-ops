@@ -1,0 +1,1807 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Indexes, conventions, manifests, and handoffs for the agent fleet.">
+      
+      
+        <meta name="author" content="Mars FMMG">
+      
+      
+      
+        <link rel="prev" href="../torbox-lane4-compute/">
+      
+      
+        <link rel="next" href="../torbox-lane6-oss/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Lane 5 — All-Agents Tooling on TorBox BAD_TOKEN (2026-10-20) - Agent Ops Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lane-5-all-agents-tooling-on-torbox-bad_token-2026-10-20" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Agent Ops Hub" class="md-header__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agent Ops Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lane 5 — All-Agents Tooling on TorBox BAD_TOKEN (2026-10-20)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Agent Ops Hub" class="md-nav__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Agent Ops Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    agent-ops — restart resilience for agent work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AGENTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AGENTS.md
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ANTI-CLOBBER-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ANTI-CLOBBER LAW (owner 2026-10-17)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AUDIT-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repo audit — 2026-10-14 (Grok Bot)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BOX-OFFLOAD-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BOX OFFLOAD LOG — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHECKPOINT_PROTOCOL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkpoint Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLAIMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAIMS (prevents collisions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CROSS-REPO-STRANDED-AUDIT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CROSS-REPO STRANDED-WORK AUDIT — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../END-OF-SESSION-BACKUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    END-OF-SESSION BACKUP (watchdog procedure)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FRICTION-RESEARCH-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FRICTION RESEARCH LOG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-CANON/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — CANON (where the game's knowledge lives)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF INDEX — fleet state, one place, no "missing"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-REPOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — REPOS (per-repo state + landing order)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-TEARDOWNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — TEARDOWNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-WESTERN-HEART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — WESTERN HEART (mhvnsnt/western-heart)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOW-GROKBOT-WORKS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How Grok Bot works (copy this process)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDEMPOTENCY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idempotency Rules — write work so a re-run can't duplicate or corrupt it
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LANE_GUARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane Guard — crash-resilient + collision-proof lanes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-IT-YOURSELF-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE-IT-YOURSELF LAW (owner 2026-10-15) — canonical copy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-QUEUE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE QUEUE — everything built but not landed, all repos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NO-DATA-LOSS-RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NO-DATA-LOSS RULES (owner law — mhvnsnt)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-CONVENTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Conventions (all repos, all agents)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-PULLIN-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RESEARCH → PULL-IN INDEX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESUME_BRIEF_TEMPLATE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resume Brief Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TAG-TEAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TAG-TEAM board (live)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-ALTERNATIVES-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Alternatives — Free/Open-Source Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-BREAKTHROUGH-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Breakthrough Program — Final Report (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-LANE5-AGENT-REVIEW-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox BAD_TOKEN — Lane 5 All-Agents Review (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-RESEARCH-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Research — 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-SUPPORT-TICKET-DRAFT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Support Ticket — DRAFT (do not send without owner approval)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adr-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-NNNN:
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-cleanup-log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Cleanup Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grokbot-activity-proof-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot / MoneyManBusch activity proof — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-claims-recheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Claims Re-Check — 2026-10-20 evening (coordinator lane, parent-ordered)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane1-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Auth — Lane 1, Round 2 (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane2-debrid-live/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LANE 2 (RETRY) — Debrid-Link + AllDebrid Live Tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane3-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 3 — Alternative Debrid / Seedbox Sweep for a 350 GB Single-File Torrent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane4-compute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 4 — Free compute / cloud-to-cloud transfer layer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 5 — All-Agents Tooling on TorBox BAD_TOKEN (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 5 — All-Agents Tooling on TorBox BAD_TOKEN (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-corrections-to-the-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inventory corrections to the brief
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-each-agent-actually-did" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What each agent ACTUALLY did
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What each agent ACTUALLY did">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-copilot-cli-ran-full-review-copilottxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Copilot CLI — ✅ RAN, full review (copilot.txt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-codex-direct-lane-401-full-review-via-kilo-gateway-codextxt-codex-kilotxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Codex — ⚠️ direct lane 401; ✅ full review via Kilo gateway (codex.txt, codex-kilo.txt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-kilo-native-cli-blocked-gateway-contributed-kilotxt-codex-kilotxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Kilo — ⚠️ native CLI blocked; gateway contributed (kilo.txt, codex-kilo.txt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-opencode-binary-ok-runs-never-complete-opencodetxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. OpenCode — ❌ binary OK, runs never complete (opencode.txt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-coderabbit-triggered-on-pr-36-no-review-received-yet-coderabbit-prtxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. CodeRabbit — ⚠️ triggered on PR #36, no review received yet (coderabbit-pr.txt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bottom-line-for-the-torbox-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bottom line for the TorBox problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane6-oss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Lane 6 — Open-Source Wire-Up + Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane7-seedbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 7 — Free-Trial Seedbox Angle (Seedhost.eu + Pulsed Media + others)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-corrections-to-the-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inventory corrections to the brief
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-each-agent-actually-did" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What each agent ACTUALLY did
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What each agent ACTUALLY did">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-copilot-cli-ran-full-review-copilottxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Copilot CLI — ✅ RAN, full review (copilot.txt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-codex-direct-lane-401-full-review-via-kilo-gateway-codextxt-codex-kilotxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Codex — ⚠️ direct lane 401; ✅ full review via Kilo gateway (codex.txt, codex-kilo.txt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-kilo-native-cli-blocked-gateway-contributed-kilotxt-codex-kilotxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Kilo — ⚠️ native CLI blocked; gateway contributed (kilo.txt, codex-kilo.txt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-opencode-binary-ok-runs-never-complete-opencodetxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. OpenCode — ❌ binary OK, runs never complete (opencode.txt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-coderabbit-triggered-on-pr-36-no-review-received-yet-coderabbit-prtxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. CodeRabbit — ⚠️ triggered on PR #36, no review received yet (coderabbit-pr.txt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bottom-line-for-the-torbox-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bottom line for the TorBox problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lane-5-all-agents-tooling-on-torbox-bad_token-2026-10-20">Lane 5 — All-Agents Tooling on TorBox BAD_TOKEN (2026-10-20)<a class="headerlink" href="#lane-5-all-agents-tooling-on-torbox-bad_token-2026-10-20" title="Permanent link">&para;</a></h1>
+<p>Evidence dir: <code>torbox-lane5-agents/</code> (one file per agent, verbatim outputs).
+Same review prompt was given to every runnable agent: review <code>tb_reqdl.py</code>,
+<code>tb_mylist.py</code>, <code>tb_export.py</code>, <code>torbox_add_magnet.py</code>, <code>CONNECTOR.md</code>,
+<code>zip_extract.py</code> for the requestdl <code>?token=</code> / BAD_TOKEN bug. No secrets printed
+(COPILOT_GITHUB_TOKEN checked by existence/length only: present in ~/.bashrc, 93 chars).</p>
+<h2 id="inventory-corrections-to-the-brief">Inventory corrections to the brief<a class="headerlink" href="#inventory-corrections-to-the-brief" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>opencode</code> DID survive: <code>~/.local/bin/opencode</code> v1.19.3 — it was just missing
+  from this shell's PATH (<code>~/.local/bin</code> not in PATH), so <code>which</code> missed it.</li>
+<li><code>codex</code> v0.149.0 at /opt/hatch-image/bin/codex. <code>gh</code> 2.102.0, logged in as mhvnsnt.</li>
+<li>Copilot CLI and Kilo CLI binaries did NOT survive the VM swap (config/state did:
+  ~/.copilot with mhvnsnt logged in, ~/.config/kilo + ~/.local/share/kilo).
+  Both were reinstalled via npm during this lane.</li>
+<li>aider / cline / gemini: not on PATH (unchanged).</li>
+</ul>
+<h2 id="what-each-agent-actually-did">What each agent ACTUALLY did<a class="headerlink" href="#what-each-agent-actually-did" title="Permanent link">&para;</a></h2>
+<h3 id="1-copilot-cli-ran-full-review-copilottxt">1. Copilot CLI — ✅ RAN, full review (<code>copilot.txt</code>)<a class="headerlink" href="#1-copilot-cli-ran-full-review-copilottxt" title="Permanent link">&para;</a></h3>
+<p>Reinstalled: <code>npm i -g @github/copilot</code> → GitHub Copilot CLI 1.0.100 at /usr/bin/copilot.
+Ran non-interactively with COPILOT_GITHUB_TOKEN sourced from ~/.bashrc (value never logged).
+Findings:
+- <strong>Root cause (likely): tb_reqdl.py sends the authd surrogate to TorBox as if it
+  were the API key</strong> — lines 15–17 extract <code>entry["surrogate"]</code> and insert it into
+  <code>?token=</code>, with no Authorization header and no credential exchange. A surrogate is
+  a broker-specific substitute, not a TorBox key; with bearer_header registration,
+  manually moving it into <code>token</code> is the bug. Fresh keys failing doesn't rule this
+  out — the request still wouldn't contain the fresh key.
+- Ranked the other hypotheses low: URL-encoding is correct (<code>quote(..., safe='')</code>),
+  path/order fine, redirect refusal would traceback not BAD_TOKEN, UA already set
+  (Cloudflare 1010 ≠ BAD_TOKEN), plan cap would not be an auth error.
+- <strong>New bug found: <code>torbox_add_magnet.py</code> imports <code>add_surrogate_to_request</code> but
+  calls <code>url_with_surrogate_query_param(...)</code>, which is not imported or defined →
+  NameError before any request.</strong> (Verified by reading the file in this lane.)
+- Diagnostic sequence: baseline via tb_mylist.py → retry requestdl through the
+  broker's supported query_param placement → capture status/body/redirect with
+  token redacted → only then check plan/caps. Do NOT regenerate the key as a diagnostic.
+- Caveat it stated itself: zip_extract.py access was denied in its sandbox, so it
+  made no finding on that file; diagnosis is "strong, not proof" without the
+  dynamic_credentials helper source.</p>
+<h3 id="2-codex-direct-lane-401-full-review-via-kilo-gateway-codextxt-codex-kilotxt">2. Codex — ⚠️ direct lane 401; ✅ full review via Kilo gateway (<code>codex.txt</code>, <code>codex-kilo.txt</code>)<a class="headerlink" href="#2-codex-direct-lane-401-full-review-via-kilo-gateway-codextxt-codex-kilotxt" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Direct OpenAI lane: still broken. Exact error (codex.txt):
+  <code>failed to connect to websocket: HTTP error: 401 Unauthorized, url: wss://api.openai.com/v1/responses</code>
+  and <code>unexpected status 401 Unauthorized: Missing bearer or basic authentication in header</code>.
+  Retried 5× then fell back; run was cut at timeout with the 401 already definitive.</li>
+<li>Via Kilo Code free gateway (<code>codex -p kilo-code exec</code>, model openrouter/free,
+  provider kilo-code): <strong>worked</strong> (sanity test <code>CODEX_KILO_OK</code>, then full review, 135,195 tokens).
+  It read the actual <code>dynamic_credentials</code> module, so its diagnosis is the most specific:</li>
+<li><strong>Root cause confirmed by code: surrogate substitution only happens for the
+  registered placement.</strong> <code>custom.torbox</code> is bearer_header; Sentinel/authd substitutes
+  <code>hsurr:...</code> only in <code>Authorization: Bearer</code>. tb_reqdl.py:17-18 puts the literal
+  surrogate in <code>?token=</code> → TorBox sees the surrogate → BAD_TOKEN.</li>
+<li><strong>More bugs: tb_mylist.py:13, tb_export.py:12, torbox_add_magnet.py:34 all call
+  <code>url_with_surrogate_query_param</code> on a bearer_header credential → predicted
+  <code>DynamicCredentialError: credential is not query_param</code> at runtime</strong> (i.e. the
+  "working" helpers would crash before sending, unless the credential was re-registered).</li>
+<li>Fix A (preferred if requestdl accepts Bearer): use <code>add_surrogate_to_request</code>,
+  drop <code>&amp;token=</code>. Fix B (if ?token= truly required): register a second entry with
+  <code>{"query_param": "token"}</code> placement and use <code>url_with_surrogate_query_param</code> everywhere.</li>
+<li>Diagnostic sequence with expected outcomes for each step (placement print →
+  tb_mylist crash test → Bearer-surrogate requestdl test).</li>
+</ul>
+<p><strong>Consensus: Copilot and Codex/Kilo independently converged on the same root cause</strong>
+(surrogate in ?token= never substituted for a bearer_header credential). That also
+explains the "every fresh key dies as BAD_TOKEN" saga: the failing requests never
+contained any real key.</p>
+<h3 id="3-kilo-native-cli-blocked-gateway-contributed-kilotxt-codex-kilotxt">3. Kilo — ⚠️ native CLI blocked; gateway contributed (<code>kilo.txt</code>, <code>codex-kilo.txt</code>)<a class="headerlink" href="#3-kilo-native-cli-blocked-gateway-contributed-kilotxt-codex-kilotxt" title="Permanent link">&para;</a></h3>
+<p>Reinstalled: <code>npm i -g @kilocode/cli</code> → kilo 7.8.15 at /usr/bin/kilo (<code>kilo --help</code> works).
+- Native <code>kilo run "&lt;review prompt&gt;"</code>: <strong>Error: "You need to sign in to use this model."</strong>
+  It defaulted to <code>google/gemini-3-pro-image</code> (stale session/model state), not the
+  kilo-free config in ~/.config/kilo (config.json defines kilo-free/openrouter/free,
+  but Kilo 7.8 logs a V1-compat warning that drops the <code>providers</code> block).
+- <code>kilo run -m kilo-free/openrouter/free "Reply exactly: KILO_OK"</code>: timed out at 90s, no output (EXIT:124).
+- <code>kilo auth list</code>: timed out at 30s, no output.
+- Workflow-law exception invoked for the NATIVE binary: evidence above. BUT Kilo did
+  contribute — the entire Codex review above ran on <strong>Kilo Code's free gateway</strong>
+  (api.kilo.ai, openrouter/free, 200 req/hr/IP per the 2026-10-16 arsenal doc).</p>
+<h3 id="4-opencode-binary-ok-runs-never-complete-opencodetxt">4. OpenCode — ❌ binary OK, runs never complete (<code>opencode.txt</code>)<a class="headerlink" href="#4-opencode-binary-ok-runs-never-complete-opencodetxt" title="Permanent link">&para;</a></h3>
+<p><code>~/.local/bin/opencode</code> v1.19.3; <code>--help</code>/<code>--version</code> fine. Three <code>opencode run</code>
+attempts (full review prompt; short prompt with <code>-m opencode/big-pickle</code> ×2):
+each starts (<code>&gt; build · big-pickle</code>) and produces <strong>no completion within 110–300s</strong>,
+killed by timeout (EXIT:124). No provider is configured in ~/.config/opencode/opencode.jsonc
+(empty schema-only file). Workflow-law exception: binary present and launching, model
+calls stall in this VM; no review output obtained. Evidence in opencode.txt.</p>
+<h3 id="5-coderabbit-triggered-on-pr-36-no-review-received-yet-coderabbit-prtxt">5. CodeRabbit — ⚠️ triggered on PR #36, no review received yet (<code>coderabbit-pr.txt</code>)<a class="headerlink" href="#5-coderabbit-triggered-on-pr-36-no-review-received-yet-coderabbit-prtxt" title="Permanent link">&para;</a></h3>
+<ul>
+<li>No open TorBox PR existed in mhvnsnt/agent-ops (17 open PRs checked, none TorBox).</li>
+<li>Created branch <code>docs/torbox-lane5-agent-review-20261020</code> (fresh /tmp clone — the
+  local agent-ops checkout is dirty on another PR branch and was not touched),
+  added <code>TORBOX-LANE5-AGENT-REVIEW-2026-10-20.md</code> with the consensus findings,
+  opened <strong>PR #36: https://github.com/mhvnsnt/agent-ops/pull/36</strong> with
+  <code>@coderabbitai review</code> in the body, plus an explicit <code>@coderabbitai review</code> comment
+  (comment id 6296484877).</li>
+<li>After ~10 minutes: no CodeRabbit comment/review on the PR (only mhvnsnt's trigger
+  comment; reviews list empty). No <code>.coderabbit.yaml</code> in the repo, and <code>gh pr checks</code>
+  is blocked by PAT scope ("Resource not accessible by personal access token"), so
+  CodeRabbit's app installation on this repo could not be verified from here.
+  Honest status: trigger delivered, review not (yet) produced — likely the
+  CodeRabbit GitHub App is not installed/enabled on mhvnsnt/agent-ops.</li>
+</ul>
+<h2 id="bottom-line-for-the-torbox-problem">Bottom line for the TorBox problem<a class="headerlink" href="#bottom-line-for-the-torbox-problem" title="Permanent link">&para;</a></h2>
+<p>Two independent agents, one of which read the credential-broker source, agree:
+<strong>stop putting the surrogate in ?token=.</strong> Next step is the 3-step diagnostic in
+the PR doc (placement print → tb_mylist crash test → Bearer-surrogate requestdl),
+then Fix A or B depending on whether requestdl accepts Bearer.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

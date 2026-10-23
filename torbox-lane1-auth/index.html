@@ -1,0 +1,2120 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Indexes, conventions, manifests, and handoffs for the agent fleet.">
+      
+      
+        <meta name="author" content="Mars FMMG">
+      
+      
+      
+        <link rel="prev" href="../torbox-claims-recheck/">
+      
+      
+        <link rel="next" href="../torbox-lane2-debrid-live/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>TorBox API Auth — Lane 1, Round 2 (2026-10-20) - Agent Ops Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#torbox-api-auth-lane-1-round-2-2026-10-20" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Agent Ops Hub" class="md-header__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agent Ops Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TorBox API Auth — Lane 1, Round 2 (2026-10-20)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Agent Ops Hub" class="md-nav__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Agent Ops Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    agent-ops — restart resilience for agent work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AGENTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AGENTS.md
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ANTI-CLOBBER-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ANTI-CLOBBER LAW (owner 2026-10-17)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AUDIT-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repo audit — 2026-10-14 (Grok Bot)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BOX-OFFLOAD-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BOX OFFLOAD LOG — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHECKPOINT_PROTOCOL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkpoint Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLAIMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAIMS (prevents collisions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CROSS-REPO-STRANDED-AUDIT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CROSS-REPO STRANDED-WORK AUDIT — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../END-OF-SESSION-BACKUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    END-OF-SESSION BACKUP (watchdog procedure)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FRICTION-RESEARCH-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FRICTION RESEARCH LOG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-CANON/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — CANON (where the game's knowledge lives)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF INDEX — fleet state, one place, no "missing"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-REPOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — REPOS (per-repo state + landing order)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-TEARDOWNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — TEARDOWNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-WESTERN-HEART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — WESTERN HEART (mhvnsnt/western-heart)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOW-GROKBOT-WORKS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How Grok Bot works (copy this process)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDEMPOTENCY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idempotency Rules — write work so a re-run can't duplicate or corrupt it
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LANE_GUARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane Guard — crash-resilient + collision-proof lanes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-IT-YOURSELF-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE-IT-YOURSELF LAW (owner 2026-10-15) — canonical copy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-QUEUE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE QUEUE — everything built but not landed, all repos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NO-DATA-LOSS-RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NO-DATA-LOSS RULES (owner law — mhvnsnt)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-CONVENTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Conventions (all repos, all agents)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-PULLIN-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RESEARCH → PULL-IN INDEX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESUME_BRIEF_TEMPLATE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resume Brief Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TAG-TEAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TAG-TEAM board (live)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-ALTERNATIVES-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Alternatives — Free/Open-Source Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-BREAKTHROUGH-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Breakthrough Program — Final Report (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-LANE5-AGENT-REVIEW-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox BAD_TOKEN — Lane 5 All-Agents Review (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-RESEARCH-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Research — 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-SUPPORT-TICKET-DRAFT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Support Ticket — DRAFT (do not send without owner approval)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adr-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-NNNN:
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-cleanup-log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Cleanup Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grokbot-activity-proof-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot / MoneyManBusch activity proof — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-claims-recheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Claims Re-Check — 2026-10-20 evening (coordinator lane, parent-ordered)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Auth — Lane 1, Round 2 (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Auth — Lane 1, Round 2 (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#verdict-root-cause-is-a-three-layer-placement-mismatch-not-a-dead-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VERDICT — root cause is a three-layer placement mismatch, not a dead key
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-live-api-documentation-fetched-2026-10-20-15391547-utc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Live API documentation (fetched 2026-10-20 15:39–15:47 UTC)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Live API documentation (fetched 2026-10-20 15:39–15:47 UTC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint-inventory-87-paths-in-the-live-spec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoint inventory — 87 paths in the live spec
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-vault-credential-metadata-2026-10-20-1554-utc-value-never-exposed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Vault credential metadata (2026-10-20 15:54 UTC, value never exposed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-token-taxonomy-is-there-a-separate-integration-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Token taxonomy — is there a separate integration token?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-live-test-matrix-2026-10-20-all-via-vault-surrogate-browser-ua-redirects-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Live test matrix — 2026-10-20 (all via vault surrogate, browser UA, redirects off)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-account-timeline-from-the-accounts-own-notification-feed-4-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Account timeline from the account's own notification feed (§4 E)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-changelog-status-any-auth-change-after-2026-10-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Changelog / status — any auth change after 2026-10-15?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-helper-doc-defects-found-independent-of-the-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Helper / doc defects found (independent of the key)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-what-this-unblocks-recommended-shape-for-the-parent-lane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. What this unblocks / recommended shape for the parent lane
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evidence-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidence index
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane2-debrid-live/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LANE 2 (RETRY) — Debrid-Link + AllDebrid Live Tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane3-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 3 — Alternative Debrid / Seedbox Sweep for a 350 GB Single-File Torrent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane4-compute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 4 — Free compute / cloud-to-cloud transfer layer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane5-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 5 — All-Agents Tooling on TorBox BAD_TOKEN (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane6-oss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Lane 6 — Open-Source Wire-Up + Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane7-seedbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 7 — Free-Trial Seedbox Angle (Seedhost.eu + Pulsed Media + others)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#verdict-root-cause-is-a-three-layer-placement-mismatch-not-a-dead-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VERDICT — root cause is a three-layer placement mismatch, not a dead key
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-live-api-documentation-fetched-2026-10-20-15391547-utc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Live API documentation (fetched 2026-10-20 15:39–15:47 UTC)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Live API documentation (fetched 2026-10-20 15:39–15:47 UTC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint-inventory-87-paths-in-the-live-spec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoint inventory — 87 paths in the live spec
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-vault-credential-metadata-2026-10-20-1554-utc-value-never-exposed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Vault credential metadata (2026-10-20 15:54 UTC, value never exposed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-token-taxonomy-is-there-a-separate-integration-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Token taxonomy — is there a separate integration token?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-live-test-matrix-2026-10-20-all-via-vault-surrogate-browser-ua-redirects-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Live test matrix — 2026-10-20 (all via vault surrogate, browser UA, redirects off)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-account-timeline-from-the-accounts-own-notification-feed-4-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Account timeline from the account's own notification feed (§4 E)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-changelog-status-any-auth-change-after-2026-10-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Changelog / status — any auth change after 2026-10-15?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-helper-doc-defects-found-independent-of-the-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Helper / doc defects found (independent of the key)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-what-this-unblocks-recommended-shape-for-the-parent-lane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. What this unblocks / recommended shape for the parent lane
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evidence-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidence index
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="torbox-api-auth-lane-1-round-2-2026-10-20">TorBox API Auth — Lane 1, Round 2 (2026-10-20)<a class="headerlink" href="#torbox-api-auth-lane-1-round-2-2026-10-20" title="Permanent link">&para;</a></h1>
+<p><strong>Scope:</strong> Root-cause the BAD_TOKEN / 401 failures against ground truth (account
+fmmg.mars@gmail.com, torrent 119449922 "Documents.zip", infohash
+856d01039553693d51c2a98523ca2c9829e8bb63). Supersedes the auth conclusions of
+<code>TORBOX-RESEARCH-2026-10-19.md</code> (Round 1) where they conflict — Round 1's central
+assumption (the key is dead / plan is the problem) is <strong>disproven by live tests below</strong>.
+No real API key appears anywhere in this file; all authenticated tests ran through the
+Secure Vault surrogate flow per <code>custom.torbox/CONNECTOR.md</code>.</p>
+<hr />
+<h2 id="verdict-root-cause-is-a-three-layer-placement-mismatch-not-a-dead-key">VERDICT — root cause is a three-layer placement mismatch, not a dead key<a class="headerlink" href="#verdict-root-cause-is-a-three-layer-placement-mismatch-not-a-dead-key" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>The vault-stored TorBox token is VALID right now.</strong> Proven 2026-10-20 15:58 UTC:
+   <code>GET /v1/api/torrents/requestdl?torrent_id=119449922&amp;token=&lt;surrogate&gt;</code> → <strong>HTTP 200</strong>,
+   and the returned CDN link serves byte ranges of the actual 350 GB zip (see §4).
+   The "stale/revoked vault entry" hypothesis is <strong>dead</strong>.</li>
+<li><strong>The vault credential is registered with placement <code>{"query_param": "token"}</code></strong> —
+   Sentinel/authd only substitutes the <code>hsurr:</code> surrogate in that one spot. Put the
+   surrogate in an <code>Authorization: Bearer</code> header and the <strong>literal surrogate string</strong>
+   reaches TorBox, which correctly answers <code>403 {"error":"BAD_TOKEN"}</code>. Every Bearer
+   failure through our tooling is explained by this alone.</li>
+<li><strong>Most TorBox endpoints accept ONLY Bearer auth.</strong> The live OpenAPI spec marks them
+   <code>OAuth2PasswordBearer</code>; sending the (valid) token as <code>?token=</code> to them returns a raw
+   FastAPI <code>401 {"detail":"Not authenticated"}</code> — the query parameter is ignored
+   entirely. Only a small set of endpoints (<code>requestdl</code>, <code>notifications/rss</code>,
+   <code>stream/getstreamdata</code>, usenet/webdl <code>requestdl</code>) take <code>?token=</code> at all.
+   So our helpers fail in both directions:</li>
+<li><code>tb_mylist.py</code> / <code>tb_export.py</code> send <code>?token=</code> to Bearer-only endpoints → <strong>401</strong>.</li>
+<li>Anything sending Bearer via the vault sends an unsubstituted surrogate → <strong>403 BAD_TOKEN</strong>.</li>
+</ol>
+<p><strong>Net: the API, the account, and the stored key all work. Our connector's auth
+plumbing is what's broken.</strong> The one endpoint family the 350 GB job actually needs
+(<code>requestdl</code> + CDN range reads) works <strong>today, unchanged</strong> — see §4.</p>
+<hr />
+<h2 id="1-live-api-documentation-fetched-2026-10-20-15391547-utc">1. Live API documentation (fetched 2026-10-20 15:39–15:47 UTC)<a class="headerlink" href="#1-live-api-documentation-fetched-2026-10-20-15391547-utc" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Swagger UI: <code>https://api.torbox.app/docs</code> (FastAPI).</li>
+<li>OpenAPI spec (public, no auth): <code>https://api.torbox.app/openapi.json</code> →
+  HTTP 200, 96,620 bytes, OpenAPI 3.1.0, title "TorBox API", version <strong>1.0.0</strong>,
+  server <code>https://api.torbox.app</code>. (Probed <code>/v1/openapi.json</code>,
+  <code>/v1/api/openapi.json</code>, <code>/docs/openapi.json</code> → all 404.)</li>
+<li>Human docs: <code>https://api-docs.torbox.app/</code> — states auth as
+  <code>AUTHORIZATION Bearer {{api_key}}</code>; rate limits are now <strong>per API token,
+  300/min</strong> ("We no longer accept IP whitelisting requests due to rate limiting
+  being API token based, rather than IP based"); error table confirms
+  <code>BAD_TOKEN</code> = "The provided token is invalid", <code>NO_AUTH</code>, <code>AUTH_ERROR</code>,
+  <code>OAUTH_VERIFICATION_ERROR</code>, <code>DOWNLOAD_TOO_LARGE</code> (Free 10 GB / Essential
+  200 GB / Standard 200 GB / Pro 500 GB byte limits as documented).</li>
+<li><strong>Only security scheme in the spec:</strong> <code>OAuth2PasswordBearer</code>
+  (oauth2 password flow, tokenUrl <code>token</code>). No API-key header scheme, no cookie scheme.</li>
+</ul>
+<h3 id="endpoint-inventory-87-paths-in-the-live-spec">Endpoint inventory — 87 paths in the live spec<a class="headerlink" href="#endpoint-inventory-87-paths-in-the-live-spec" title="Permanent link">&para;</a></h3>
+<p>Auth key: <strong>B</strong> = Bearer only (<code>OAuth2PasswordBearer</code>) · <strong>Q</strong> = <code>?token=</code> query
+param declared · <strong>P</strong> = public / no auth in spec.</p>
+<p><strong>general</strong> — <code>GET /</code> (P) · <code>GET /v1/api/changelogs/json</code> (P) ·
+<code>GET /v1/api/changelogs/rss</code> (P) · <code>GET /v1/api/stats</code> (P) ·
+<code>GET /v1/api/stats/30days</code> (P) · <code>GET /v1/api/speedtest</code> (P) ·
+<code>GET /v1/api/notifications/mynotifications</code> (B) ·
+<code>POST /v1/api/notifications/clear</code> (B) · <code>POST /v1/api/notifications/clear/{id}</code> (B) ·
+<code>POST /v1/api/notifications/test</code> (B) ·
+<code>GET /v1/api/notifications/rss</code> (<strong>Q</strong>, <code>token</code> required)</p>
+<p><strong>user</strong> — <code>GET /v1/api/user/me</code> (B) · <code>GET /v1/api/user/stats</code> (B) ·
+<code>GET /v1/api/user/subscriptions</code> (B) · <code>GET /v1/api/user/transactions</code> (B) ·
+<code>GET /v1/api/user/transaction/pdf</code> (B) · <code>GET /v1/api/user/referraldata</code> (B) ·
+<code>POST /v1/api/user/addreferral</code> (B) · <code>GET /v1/api/user/getconfirmation</code> (B) ·
+<code>PUT /v1/api/user/settings/editsettings</code> (B) · <code>DELETE /v1/api/user/deleteme</code> (B) ·
+<code>POST /v1/api/user/refreshtoken</code> (B + web <strong>session_token</strong> in body — see §3) ·
+<code>GET /v1/api/user/auth/device/start</code> (<strong>P</strong>) ·
+<code>POST /v1/api/user/auth/device/token</code> (<strong>P</strong>, body <code>device_code</code>)</p>
+<p><strong>torrents</strong> — <code>POST createtorrent</code> (B) · <code>POST asynccreatetorrent</code> (B) ·
+<code>POST controltorrent</code> (B) · <code>POST controlqueued</code> (B) ·
+<code>PUT edittorrent</code> (B) · <code>GET mylist</code> (B) · <code>GET exportdata</code> (B) ·
+<code>GET getqueued</code> (B) · <code>GET checkcached</code> (B) · <code>POST checkcached</code> (B) ·
+<code>POST magnettofile</code> (P) · <code>GET/POST torrentinfo</code> (P) ·
+<code>GET requestdl</code> (<strong>Q</strong>: <code>token</code>, <code>torrent_id</code> required) — all under <code>/v1/api/torrents/</code></p>
+<p><strong>usenet</strong> (<code>/v1/api/usenet/</code>) — <code>createusenetdownload</code>, <code>asynccreateusenetdownload</code>,
+<code>controlusenetdownload</code> (B) · <code>PUT editusenetdownload</code> (B) · <code>GET mylist</code> (B) ·
+<code>GET/POST checkcached</code> (B) · <code>GET provider/account</code> (B) ·
+<code>POST provider/account/resetpw</code> (B) · <code>GET provider/connection</code> (P) ·
+<code>GET requestdl</code> (<strong>Q</strong>: <code>token</code>, <code>usenet_id</code>)</p>
+<p><strong>webdl</strong> (<code>/v1/api/webdl/</code>) — <code>createwebdownload</code>, <code>asynccreatewebdownload</code>,
+<code>controlwebdownload</code> (B) · <code>PUT editwebdownload</code> (B) · <code>GET mylist</code> (B) ·
+<code>GET/POST checkcached</code> (B) · <code>GET hosters</code> (P) ·
+<code>GET requestdl</code> (<strong>Q</strong>: <code>token</code>, <code>web_id</code>)</p>
+<p><strong>queued</strong> — <code>GET /v1/api/queued/getqueued</code> (B) ·
+<code>POST /v1/api/queued/controlqueued</code> (B)</p>
+<p><strong>rss</strong> (<code>/v1/api/rss/</code>) — <code>POST addrss</code> (B) · <code>POST controlrss</code> (B) ·
+<code>POST modifyrss</code> (B) · <code>GET getfeeds</code> (B) · <code>GET getfeeditems</code> (B)</p>
+<p><strong>stream</strong> — <code>GET /v1/api/stream/createstream</code> (B) ·
+<code>GET /v1/api/stream/getstreamdata</code> (<strong>Q</strong>: <code>token</code> + <code>presigned_token</code> required)</p>
+<p><strong>integration</strong> (<code>/v1/api/integration/</code>) — cloud-upload jobs, all (B):
+<code>POST googledrive</code> · <code>POST dropbox</code> · <code>POST onedrive</code> · <code>POST gofile</code> ·
+<code>POST pixeldrain</code> · <code>POST 1fichier</code> · <code>GET jobs</code> · <code>GET job/{job_id}</code> ·
+<code>DELETE job/{job_id}</code> · <code>GET jobs/{hash}</code> ·
+OAuth linking: <code>GET oauth/{provider}</code> (P, redirect) ·
+<code>GET/POST oauth/{provider}/callback</code> (P) · <code>GET oauth/{provider}/success</code> (P) ·
+<code>POST oauth/{provider}/register</code> (B) · <code>DELETE oauth/{provider}/unregister</code> (B) ·
+<code>GET oauth/me</code> (B) · <code>POST oauth/discord/linked_roles</code> (B)</p>
+<p><strong>vendors</strong> (<code>/v1/api/vendors/</code>) — all (B): <code>GET account</code> · <code>GET getaccount</code> ·
+<code>GET getaccounts</code> · <code>POST register</code> · <code>POST registeruser</code> ·
+<code>DELETE removeuser</code> · <code>PUT updateaccount</code> · <code>PATCH refresh</code></p>
+<hr />
+<h2 id="2-vault-credential-metadata-2026-10-20-1554-utc-value-never-exposed">2. Vault credential metadata (2026-10-20 15:54 UTC, value never exposed)<a class="headerlink" href="#2-vault-credential-metadata-2026-10-20-1554-utc-value-never-exposed" title="Permanent link">&para;</a></h2>
+<p><code>dynamic_credential_entry("custom.torbox")</code> via
+<code>/opt/muse/skills/custom-connector-setup/bin/dynamic_credentials.py</code>:</p>
+<ul>
+<li>Entry keys returned: <code>name</code>, <code>placement</code>, <code>sending_account</code>, <code>surrogate</code>, <code>type</code>.
+  <strong>No timestamp fields exist</strong> in the surrogate response (no created/updated at) —
+  entry staleness cannot be dated from authd; it doesn't matter, the key tests live (§4).</li>
+<li><code>name</code>: <code>access_token</code> · <code>type</code>: <code>api_key</code></li>
+<li><strong><code>placement</code>: <code>{"query_param": "token"}</code></strong> ← contradicts CONNECTOR.md, which claims
+  bearer_header placement and calls <code>tb_reqdl.py</code> "broken for this reason". The doc is
+  stale; the registration is query_param, and <code>tb_reqdl.py</code>'s approach is the correct one.</li>
+<li>Surrogate format check: prefix <code>hsurr:</code> ✓, total length 38 (32-char body),
+  charset <code>[A-Za-z0-9._~-]</code>, 2 colon segments — a well-formed surrogate, correctly
+  returned by authd. <strong>No surrogate mangling in the exchange itself</strong>; substitution
+  works exactly where the placement says it should (proven by §4 D/E vs A/C).</li>
+</ul>
+<h2 id="3-token-taxonomy-is-there-a-separate-integration-token">3. Token taxonomy — is there a separate integration token?<a class="headerlink" href="#3-token-taxonomy-is-there-a-separate-integration-token" title="Permanent link">&para;</a></h2>
+<p>No separate "integration token" exists. Distinct credential types found:</p>
+<table>
+<thead>
+<tr>
+<th>Credential</th>
+<th>Used for</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>API key / API token</strong> (one per account)</td>
+<td>Bearer on B-endpoints; <code>?token=</code> on Q-endpoints; embedded in generated download URLs; WebDAV password (v9)</td>
+<td>Settings page / <code>refreshtoken</code></td>
+</tr>
+<tr>
+<td><strong>Web session token</strong></td>
+<td>ONLY sensitive ops: <code>POST /v1/api/user/refreshtoken</code> body <code>{"session_token": …}</code> ("Gives the user a new API token. Requires the user's session token from the website due to security concerns") and <code>deleteme</code></td>
+<td>Website login session</td>
+</tr>
+<tr>
+<td><strong>OAuth tokens</strong> (third-party apps/vendors)</td>
+<td><code>OAuth2PasswordBearer</code> scheme, tokenUrl <code>token</code>; TorBox.NET documents <code>AccessTokenExpired</code>/<code>RefreshTokenAsync</code> as <strong>OAuth2-only</strong> — API-key failures surface as plain <code>BAD_TOKEN</code></td>
+<td>OAuth flow / vendors endpoints</td>
+</tr>
+<tr>
+<td><strong>Device-code grant</strong></td>
+<td><code>GET /v1/api/user/auth/device/start</code> (public) returns <code>device_code</code>, 6-digit <code>code</code>, <code>verification_url</code> (<code>https://torbox.app/oauth/device</code>), <code>interval</code>, <code>expires_in: 600</code>; <code>POST …/auth/device/token</code> then "Returns the user's token once the device code is authorized" — i.e. it hands over the <strong>same API token</strong> after web authorization. Added in changelog v8 (2025-09-03); free users enabled v8.2.1 (2025-12-20). <strong>Verified live today</strong> (§4 H).</td>
+<td>API + website approval</td>
+</tr>
+<tr>
+<td><strong>Presigned download token</strong></td>
+<td>CDN URLs are <code>…/dld/&lt;presigned&gt;?token=&lt;api_token&gt;</code> (pattern documented since changelog v3.5); valid ~1 hour per old changelog note</td>
+<td><code>requestdl</code> response</td>
+</tr>
+<tr>
+<td><strong>Integration OAuth links</strong> (Discord/Google Drive/etc.)</td>
+<td>Link third-party accounts TO TorBox; authorized <strong>by</strong> the API token, they don't replace it</td>
+<td><code>/integration/oauth/*</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Revocation semantics ("Get New API Key"):</strong> No public doc, issue, or changelog entry
+states the semantics explicitly (searched web + GitHub clients 2026-10-20; results
+were noise from the unrelated torbox.ch project). Indirect evidence for a
+<strong>single-token model</strong>: the token is singular everywhere ("your API key" in settings
+since v3.0; one <code>refreshtoken</code> operation that "gives the user a new API token" gated
+by the web session token; rate limits keyed per token). Under that model, generating a
+new key replaces the old one server-side. <strong>But it cannot explain our failures:</strong> the
+token currently in the vault — registered before/during the click spree — <strong>still
+authenticates today</strong> (§4). Whatever the dashboard clicks did, the vault's token is
+the account's currently accepted token (or an accepted one). Do not build plans on
+"the vault key was revoked" — it was not, as of 2026-10-20 16:13 UTC.</p>
+<h2 id="4-live-test-matrix-2026-10-20-all-via-vault-surrogate-browser-ua-redirects-off">4. Live test matrix — 2026-10-20 (all via vault surrogate, browser UA, redirects off)<a class="headerlink" href="#4-live-test-matrix-2026-10-20-all-via-vault-surrogate-browser-ua-redirects-off" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Call</th>
+<th>Time (UTC)</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>—</td>
+<td><code>GET https://api.torbox.app/</code> (no auth)</td>
+<td>15:47:09</td>
+<td><strong>200</strong> <code>{"success":true,"detail":"API is running."}</code> headers: <code>x-ratelimit-limit: 300</code>, CF-RAY …-DFW</td>
+</tr>
+<tr>
+<td>—</td>
+<td><code>GET /v1/api/stats</code> (no auth)</td>
+<td>15:47:12</td>
+<td><strong>200</strong> <code>total_users: 1081688, total_servers: 268</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code>GET /v1/api/changelogs/json</code> (no auth)</td>
+<td>15:47</td>
+<td><strong>200</strong>, 752,380 bytes, 100 entries, latest v9.2 (2026-08-17)</td>
+</tr>
+<tr>
+<td>—</td>
+<td><code>bin/tb_mylist.py</code> (as shipped)</td>
+<td>15:55:37</td>
+<td><strong>HTTP 401</strong> (traceback, exit 1) — helper sends <code>?token=</code> to a Bearer-only endpoint</td>
+</tr>
+<tr>
+<td>A</td>
+<td><code>GET /v1/api/user/me</code>, <code>Authorization: Bearer &lt;surrogate&gt;</code></td>
+<td>15:58</td>
+<td><strong>403</strong> <code>{"success":false,"error":"BAD_TOKEN","detail":"Your token is invalid or has expired. Please log in again or reset your token."}</code> — literal surrogate reached TorBox unsubstituted</td>
+</tr>
+<tr>
+<td>B</td>
+<td><code>GET /v1/api/user/me?token=&lt;surrogate&gt;</code></td>
+<td>15:58</td>
+<td><strong>401</strong> <code>{"detail":"Not authenticated"}</code> — query token ignored on Bearer endpoints</td>
+</tr>
+<tr>
+<td>C</td>
+<td><code>GET /v1/api/torrents/mylist?limit=5</code>, Bearer surrogate</td>
+<td>15:58</td>
+<td><strong>403 BAD_TOKEN</strong> (same body as A)</td>
+</tr>
+<tr>
+<td>D</td>
+<td><code>GET /v1/api/torrents/requestdl?torrent_id=119449922&amp;token=&lt;surrogate&gt;</code></td>
+<td>15:58</td>
+<td><strong>200</strong> <code>{"success":true,"detail":"Torrent download requested successfully.","data":"https://nexus-306.snam.tb-cdn.io/dld/&lt;presigned&gt;?token=&lt;redacted&gt;"}</code></td>
+</tr>
+<tr>
+<td>E</td>
+<td><code>GET /v1/api/notifications/rss?token=&lt;surrogate&gt;</code></td>
+<td>15:58 / 16:07</td>
+<td><strong>200</strong>, account's real notification feed (see §5) — second independent proof the substituted token authenticates</td>
+</tr>
+<tr>
+<td>F</td>
+<td><code>GET /v1/api/torrents/torrentinfo?hash=856d…</code> (public)</td>
+<td>15:58</td>
+<td>500 <code>UNKNOWN_ERROR</code> "Could not download full metadata…" (endpoint quirk, not auth)</td>
+</tr>
+<tr>
+<td>G</td>
+<td><code>GET /v1/api/torrents/exportdata?torrent_id=119449922&amp;type=torrent</code>, Bearer surrogate</td>
+<td>16:07</td>
+<td><strong>403 BAD_TOKEN</strong> (expected — Bearer-only endpoint)</td>
+</tr>
+<tr>
+<td>H</td>
+<td><code>GET /v1/api/user/auth/device/start?app=Lane1Probe</code> (no auth)</td>
+<td>16:07</td>
+<td><strong>200</strong> device code issued, <code>verification_url: https://torbox.app/oauth/device</code>, <code>expires_in: 600</code></td>
+</tr>
+<tr>
+<td>I</td>
+<td><code>GET /v1/api/usenet/requestdl?token=&lt;surrogate&gt;</code> (no id)</td>
+<td>16:07</td>
+<td><strong>422</strong> validation (missing <code>usenet_id</code>) — no auth rejection</td>
+</tr>
+<tr>
+<td>J</td>
+<td><strong>CDN range proof</strong> on a fresh <code>requestdl</code> link (in-process, URL never printed)</td>
+<td>16:13:02</td>
+<td><code>Range: bytes=0-1023</code> → <strong>206</strong>, <code>Content-Range: bytes 0-1023/350016069416</code>, <code>Accept-Ranges: bytes</code>, first bytes <code>PK\x03\x04</code> (ZIP header). <code>Range: bytes=-131072</code> → <strong>206</strong>, tail content is ZIP central-directory data (visible path fragment "…orts/MGM Shorts/")</td>
+</tr>
+</tbody>
+</table>
+<p>Notes on J: served object size is <strong>350,016,069,416</strong> bytes — 12 bytes less than the
+350,016,069,428 figure in the brief (torrent-reported vs CDN-served size; use the
+served figure for range math). No <code>DOWNLOAD_TOO_LARGE</code> was raised for <code>requestdl</code>
+link generation or range reads on this account today, despite the documented
+Essential 200 GB limit — <strong>observed behavior beats the doc here</strong>; whether a full
+350 GB single-stream pull behaves differently is untested (and unnecessary: the
+extraction plan is range-based).</p>
+<h2 id="5-account-timeline-from-the-accounts-own-notification-feed-4-e">5. Account timeline from the account's own notification feed (§4 E)<a class="headerlink" href="#5-account-timeline-from-the-accounts-own-notification-feed-4-e" title="Permanent link">&para;</a></h2>
+<p>Retrieved via the working <code>?token=</code> RSS endpoint — the account talking about itself:</p>
+<ul>
+<li><strong>2026-10-15T14:48:39Z</strong> — "Free Trial Activated" (TorBox <strong>Pro</strong> free trial, 24 h)</li>
+<li><strong>2026-10-16T20:50:12Z</strong> — "Premium Expired" ("downgraded to the free plan")</li>
+<li><strong>2026-10-18T17:06:59Z</strong> — "Payment Successful"</li>
+</ul>
+<p>Consistent with ground truth (first key worked 2026-10-15 during the Pro trial;
+Essential paid 2026-10-18). Nothing in the feed mentions token resets, security
+locks, or auth incidents.</p>
+<h2 id="6-changelog-status-any-auth-change-after-2026-10-15">6. Changelog / status — any auth change after 2026-10-15?<a class="headerlink" href="#6-changelog-status-any-auth-change-after-2026-10-15" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Official changelog feed (<code>/v1/api/changelogs/json</code>, fetched today): <strong>latest entry
+  is v9.2, 2026-08-17</strong> — nothing published between 2026-08-17 and today at all.
+  v9.2's only API note: auth-accepting routes optimized (~20 ms/req). No auth-model
+  change, no revocation change.</li>
+<li>Recent auth-relevant history: v9.1 (2026-07-31) "API rewritten to be fully async",
+  T3 403 fixes (T3 only); v9 (2026-07-01) WebDAV gains API-key Basic auth
+  (username <code>torbox</code>, password = API key) and T3 (S3-compatible) launches;
+  v8.4 (2026-02-13) rate limits switched to per-API-key; v8.1 (2025-10-25) speedups
+  "for routes with API keys"; v8 (2025-09-03) device-code flow added.
+  <strong>None of this breaks existing API-key auth</strong> — and §4 proves it didn't.</li>
+<li>Status page <code>status.torbox.app</code>: only recent item is CDN/transcoding maintenance
+  2026-09-28 (resolved). No October API/auth incident. API root + stats answer 200
+  today through our normal egress proxy — <strong>the Round 1 "Cloudflare/proxy rejects
+  our API calls" hypothesis is also dead</strong>: unauthenticated and <code>?token=</code> calls
+  traverse the same proxy fine; only the Bearer-surrogate calls fail, at TorBox's
+  own auth layer, because of what we put in the header.</li>
+</ul>
+<h2 id="7-helper-doc-defects-found-independent-of-the-key">7. Helper / doc defects found (independent of the key)<a class="headerlink" href="#7-helper-doc-defects-found-independent-of-the-key" title="Permanent link">&para;</a></h2>
+<ol>
+<li><code>bin/tb_mylist.py</code> + <code>bin/tb_export.py</code>: architecturally incapable of working —
+   they attach the credential as <code>?token=</code> to Bearer-only endpoints (spec §1).
+   Their 401s were never evidence about the key.</li>
+<li><code>bin/torbox_add_magnet.py</code>: <strong>crashes with <code>NameError</code></strong> (verified live 2026-10-20):
+   calls <code>url_with_surrogate_query_param</code>, which is never imported (it imports
+   <code>add_surrogate_to_request</code> instead). Also moot for auth — <code>createtorrent</code> is
+   Bearer-only, so even fixed, it needs Bearer placement.</li>
+<li><code>custom.torbox/CONNECTOR.md</code> is stale: claims bearer_header placement ("so
+   requestdl cannot be called through the surrogate", "tb_reqdl.py is broken").
+   Reality is the exact inverse: placement is <code>query_param: token</code>, and the
+   requestdl-style helper is the one that works.</li>
+<li><code>bin/tb_reqdl.py</code> prints the raw <code>requestdl</code> JSON — the returned CDN URL embeds
+   the <strong>real API token</strong> (see §3, presigned-URL pattern). Anyone running it as-is
+   sprays the key into logs. It must redact <code>token=</code> before printing. (This lane's
+   probes redacted in-process and never printed a full link.)</li>
+</ol>
+<h2 id="8-what-this-unblocks-recommended-shape-for-the-parent-lane">8. What this unblocks / recommended shape for the parent lane<a class="headerlink" href="#8-what-this-unblocks-recommended-shape-for-the-parent-lane" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>The 350 GB extraction can proceed NOW with zero credential changes:</strong>
+  <code>requestdl</code> via the existing vault <code>?token=</code> flow (tb_reqdl pattern, with the
+  §7.4 redaction fix) → CDN link → tail-range reads for the ZIP central directory
+  (72,369-file manifest) → targeted range extraction. All proven live in §4 D/J.
+  <code>mylist</code>/<code>exportdata</code> are <strong>not</strong> needed for this pipeline.</li>
+<li><strong>If Bearer-only endpoints are ever needed</strong> (mylist, exportdata, createtorrent,
+  user/me, integrations): the credential must exist in the vault with
+  <code>bearer_header</code> placement — placement is per-registration, so the clean shape is a
+  <strong>second vault entry for the same key</strong> with bearer placement, leaving the working
+  query_param entry untouched. That's a vault re-registration decision for the
+  parent (agent-side flow), not an owner task.</li>
+<li><strong>Alternative token source if the vault key ever does die:</strong> the device-code flow
+  (§3) is live and public — a browser lane with the standing TorBox sign-in can
+  authorize <code>https://torbox.app/oauth/device</code> and the API hands back the account's
+  current token. No dashboard key-copying involved.</li>
+<li><strong>Do not</strong> chase: plan changes for auth reasons (auth is not plan-gated and the
+  documented download-size limit did not fire on the needed path), key regeneration
+  (the current token works; regenerating would only risk invalidating the working
+  vault entry), or proxy bypasses (proxy is exonerated).</li>
+</ul>
+<h2 id="evidence-index">Evidence index<a class="headerlink" href="#evidence-index" title="Permanent link">&para;</a></h2>
+<ul>
+<li>OpenAPI spec: <code>https://api.torbox.app/openapi.json</code> (HTTP 200, 96,620 B, 2026-10-20 15:39 UTC) — 87 paths, sole scheme <code>OAuth2PasswordBearer</code>.</li>
+<li>Docs: <code>https://api-docs.torbox.app/</code> (Bearer auth, per-token rate limits, error table, DOWNLOAD_TOO_LARGE limits).</li>
+<li>Changelogs: <code>https://api.torbox.app/v1/api/changelogs/json</code> (200, 2026-10-20 15:47 UTC); latest v9.2 2026-08-17.</li>
+<li>Status: <code>https://status.torbox.app/maintenance/1075910</code> (2026-09-28 CDN maintenance, resolved; no October auth incident).</li>
+<li>Live probes: §4 table, 2026-10-20 15:47–16:13 UTC (10:47–11:13 CDT), all through the vault surrogate; key material redacted in-process and never written to disk or logs.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

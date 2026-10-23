@@ -1,0 +1,2305 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Indexes, conventions, manifests, and handoffs for the agent fleet.">
+      
+      
+        <meta name="author" content="Mars FMMG">
+      
+      
+      
+        <link rel="prev" href="../TORBOX-ALTERNATIVES-20261016/">
+      
+      
+        <link rel="next" href="../TORBOX-LANE5-AGENT-REVIEW-2026-10-20/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>TorBox Breakthrough Program — Final Report (2026-10-20) - Agent Ops Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#torbox-breakthrough-program-final-report-2026-10-20" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Agent Ops Hub" class="md-header__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agent Ops Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TorBox Breakthrough Program — Final Report (2026-10-20)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Agent Ops Hub" class="md-nav__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Agent Ops Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    agent-ops — restart resilience for agent work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AGENTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AGENTS.md
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ANTI-CLOBBER-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ANTI-CLOBBER LAW (owner 2026-10-17)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AUDIT-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repo audit — 2026-10-14 (Grok Bot)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BOX-OFFLOAD-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BOX OFFLOAD LOG — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHECKPOINT_PROTOCOL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkpoint Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLAIMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAIMS (prevents collisions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CROSS-REPO-STRANDED-AUDIT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CROSS-REPO STRANDED-WORK AUDIT — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../END-OF-SESSION-BACKUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    END-OF-SESSION BACKUP (watchdog procedure)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FRICTION-RESEARCH-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FRICTION RESEARCH LOG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-CANON/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — CANON (where the game's knowledge lives)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF INDEX — fleet state, one place, no "missing"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-REPOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — REPOS (per-repo state + landing order)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-TEARDOWNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — TEARDOWNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-WESTERN-HEART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — WESTERN HEART (mhvnsnt/western-heart)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOW-GROKBOT-WORKS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How Grok Bot works (copy this process)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDEMPOTENCY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idempotency Rules — write work so a re-run can't duplicate or corrupt it
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LANE_GUARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane Guard — crash-resilient + collision-proof lanes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-IT-YOURSELF-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE-IT-YOURSELF LAW (owner 2026-10-15) — canonical copy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-QUEUE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE QUEUE — everything built but not landed, all repos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NO-DATA-LOSS-RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NO-DATA-LOSS RULES (owner law — mhvnsnt)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-CONVENTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Conventions (all repos, all agents)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-PULLIN-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RESEARCH → PULL-IN INDEX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESUME_BRIEF_TEMPLATE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resume Brief Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TAG-TEAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TAG-TEAM board (live)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-ALTERNATIVES-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Alternatives — Free/Open-Source Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Breakthrough Program — Final Report (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Breakthrough Program — Final Report (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-root-cause-proven-live-three-layers-lane-1-confirmed-by-lane-6-coordinator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Root cause — proven live, three layers (Lane 1, confirmed by Lane 6 + coordinator)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Root cause — proven live, three layers (Lane 1, confirmed by Lane 6 + coordinator)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defects-to-fix-in-the-connector-parentvault-actions-no-owner-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defects to fix in the connector (parent/vault actions, NO owner steps)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-pull-itself-central-directory-read-manifest-diffed-extraction-running" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The pull itself — central directory READ, manifest DIFFED, extraction RUNNING
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. The pull itself — central directory READ, manifest DIFFED, extraction RUNNING">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gaps-to-pull-gaps-only-zero-held-dirs-first-no-duplication-possible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gaps to pull (gaps-only; zero-held dirs first — no duplication possible)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-to-end-proof-in-progress-at-report-time-honest-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        End-to-end proof — IN PROGRESS at report time (honest status)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale-engine-for-the-bulk-lane-4-prototyped-tested" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scale engine for the bulk (Lane 4, prototyped + tested)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-backup-paths-all-tested-all-weaker-keep-in-drawer-dont-lead-with-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Backup paths — all tested, all weaker (keep in drawer, don't lead with them)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-what-each-named-agent-actually-did-lane-5-verbatim-outputs-in-torbox-lane5-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. What each named agent actually did (Lane 5, verbatim outputs in torbox-lane5-agents/)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-open-source-wire-up-lane-6-tested-not-just-listed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Open-source wire-up (Lane 6, tested — not just listed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-what-remains-in-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. What remains (in order)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evidence-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidence index
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-a-parent-folded-deep-research-questions-added-2026-10-20-coordinator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix A — Parent-folded deep-research questions (added 2026-10-20, coordinator)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appendix A — Parent-folded deep-research questions (added 2026-10-20, coordinator)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a1-bad_token-community-reports-key-revocation-oauthintegration-tokens-full-endpoint-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A1. BAD_TOKEN: community reports, key revocation, OAuth/integration tokens, full endpoint groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a2-torbox-server-side-cloud-transfer-drivedropboxonedrive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A2. TorBox server-side cloud transfer (Drive/Dropbox/OneDrive)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a3-free-seedbox-trials-vs-the-350gb-single-file-lane-7-official-pages-fetched-2026-10-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A3. Free seedbox trials vs the 350GB single file (Lane 7, official pages fetched 2026-10-20)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-LANE5-AGENT-REVIEW-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox BAD_TOKEN — Lane 5 All-Agents Review (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-RESEARCH-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Research — 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-SUPPORT-TICKET-DRAFT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Support Ticket — DRAFT (do not send without owner approval)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adr-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-NNNN:
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-cleanup-log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Cleanup Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grokbot-activity-proof-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot / MoneyManBusch activity proof — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-claims-recheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Claims Re-Check — 2026-10-20 evening (coordinator lane, parent-ordered)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane1-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Auth — Lane 1, Round 2 (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane2-debrid-live/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LANE 2 (RETRY) — Debrid-Link + AllDebrid Live Tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane3-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 3 — Alternative Debrid / Seedbox Sweep for a 350 GB Single-File Torrent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane4-compute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 4 — Free compute / cloud-to-cloud transfer layer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane5-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 5 — All-Agents Tooling on TorBox BAD_TOKEN (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane6-oss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Lane 6 — Open-Source Wire-Up + Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane7-seedbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 7 — Free-Trial Seedbox Angle (Seedhost.eu + Pulsed Media + others)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-root-cause-proven-live-three-layers-lane-1-confirmed-by-lane-6-coordinator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Root cause — proven live, three layers (Lane 1, confirmed by Lane 6 + coordinator)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Root cause — proven live, three layers (Lane 1, confirmed by Lane 6 + coordinator)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defects-to-fix-in-the-connector-parentvault-actions-no-owner-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defects to fix in the connector (parent/vault actions, NO owner steps)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-pull-itself-central-directory-read-manifest-diffed-extraction-running" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The pull itself — central directory READ, manifest DIFFED, extraction RUNNING
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. The pull itself — central directory READ, manifest DIFFED, extraction RUNNING">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gaps-to-pull-gaps-only-zero-held-dirs-first-no-duplication-possible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gaps to pull (gaps-only; zero-held dirs first — no duplication possible)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-to-end-proof-in-progress-at-report-time-honest-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        End-to-end proof — IN PROGRESS at report time (honest status)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale-engine-for-the-bulk-lane-4-prototyped-tested" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scale engine for the bulk (Lane 4, prototyped + tested)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-backup-paths-all-tested-all-weaker-keep-in-drawer-dont-lead-with-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Backup paths — all tested, all weaker (keep in drawer, don't lead with them)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-what-each-named-agent-actually-did-lane-5-verbatim-outputs-in-torbox-lane5-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. What each named agent actually did (Lane 5, verbatim outputs in torbox-lane5-agents/)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-open-source-wire-up-lane-6-tested-not-just-listed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Open-source wire-up (Lane 6, tested — not just listed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-what-remains-in-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. What remains (in order)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evidence-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidence index
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-a-parent-folded-deep-research-questions-added-2026-10-20-coordinator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix A — Parent-folded deep-research questions (added 2026-10-20, coordinator)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appendix A — Parent-folded deep-research questions (added 2026-10-20, coordinator)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a1-bad_token-community-reports-key-revocation-oauthintegration-tokens-full-endpoint-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A1. BAD_TOKEN: community reports, key revocation, OAuth/integration tokens, full endpoint groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a2-torbox-server-side-cloud-transfer-drivedropboxonedrive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A2. TorBox server-side cloud transfer (Drive/Dropbox/OneDrive)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a3-free-seedbox-trials-vs-the-350gb-single-file-lane-7-official-pages-fetched-2026-10-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A3. Free seedbox trials vs the 350GB single file (Lane 7, official pages fetched 2026-10-20)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="torbox-breakthrough-program-final-report-2026-10-20">TorBox Breakthrough Program — Final Report (2026-10-20)<a class="headerlink" href="#torbox-breakthrough-program-final-report-2026-10-20" title="Permanent link">&para;</a></h1>
+<p><strong>Owner order:</strong> deep research, all agents on it, find a FREE way to pull the 350GB
+TorBox file with zero manual phone homework, wire up industry-standard/open-source
+tooling, and actually finish the pull.</p>
+<p><strong>Headline: THE PATH WAS NEVER BLOCKED. The TorBox API key in the Secure Vault is
+valid and works TODAY. The "BAD_TOKEN" saga was our own connector plumbing: the
+vault credential is registered with <code>query_param: token</code> placement, so the
+surrogate is only substituted in a <code>?token=</code> query parameter. Every Bearer-header
+call sent the literal <code>hsurr:</code> surrogate to TorBox (correctly rejected as
+BAD_TOKEN), and every <code>?token=</code> call to Bearer-only endpoints was ignored (401).
+The one endpoint family the pull actually needs — <code>requestdl</code> + CDN range reads —
+works right now, unchanged, on the existing Essential plan. No upgrade, no new
+key, no owner action.</strong></p>
+<p>Lane reports: <code>torbox-lane1-auth.md</code>, <code>torbox-lane2-debrid-live.md</code>,
+<code>torbox-lane3-alternatives.md</code>, <code>torbox-lane4-compute.md</code>,
+<code>torbox-lane5-agents.md</code> (+ <code>torbox-lane5-agents/</code> verbatim outputs),
+<code>torbox-lane6-oss.md</code>, <code>torbox-lane7-seedbox.md</code>.
+Prior research built on: <code>TORBOX-RESEARCH-2026-10-19.md</code> (auth conclusions
+superseded by Lane 1 live evidence), <code>~/workspace/research_notes/torbox-alternatives-2026-20261016-2150/report.md</code>
+(web-derived; its TorBox pricing/cap figures were index-grade per its own
+"Could Not Verify" section and are superseded where live tests conflict).</p>
+<hr />
+<h2 id="1-root-cause-proven-live-three-layers-lane-1-confirmed-by-lane-6-coordinator">1. Root cause — proven live, three layers (Lane 1, confirmed by Lane 6 + coordinator)<a class="headerlink" href="#1-root-cause-proven-live-three-layers-lane-1-confirmed-by-lane-6-coordinator" title="Permanent link">&para;</a></h2>
+<p>Live test matrix 2026-10-20, all via the vault surrogate flow, browser UA:</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET /v1/api/torrents/requestdl?torrent_id=119449922&amp;token=&lt;surrogate&gt;</code></td>
+<td><strong>200</strong>, CDN link returned (Lane 1 15:58 UTC; Lane 6 three separate runs; coordinator 4+ runs)</td>
+</tr>
+<tr>
+<td>CDN link <code>Range: bytes=0-1023</code></td>
+<td><strong>206</strong>, <code>PK\x03\x04</code> ZIP header, <code>Content-Range …/350016069416</code>, <code>Accept-Ranges: bytes</code></td>
+</tr>
+<tr>
+<td>CDN tail range</td>
+<td><strong>206</strong>, ZIP central-directory data</td>
+</tr>
+<tr>
+<td><code>GET /v1/api/notifications/rss?token=&lt;surrogate&gt;</code></td>
+<td><strong>200</strong>, the account's own feed (Pro trial 2026-10-15, Premium Expired 2026-10-16, Payment Successful 2026-10-18)</td>
+</tr>
+<tr>
+<td>Bearer surrogate on <code>/user/me</code>, <code>mylist</code></td>
+<td><strong>403 BAD_TOKEN</strong> — literal surrogate reached TorBox unsubstituted</td>
+</tr>
+<tr>
+<td><code>?token=</code> on Bearer-only endpoints (<code>mylist</code>)</td>
+<td><strong>401 {"detail":"Not authenticated"}</strong> — query token ignored there</td>
+</tr>
+<tr>
+<td>Garbage-token control on <code>requestdl</code> (Lane 6)</td>
+<td><strong>403 BAD_TOKEN</strong> — proves requestdl validates the token; the vault token passes because it is real</td>
+</tr>
+<tr>
+<td>Unauthenticated <code>/</code>, <code>/v1/api/stats</code>, changelogs</td>
+<td><strong>200</strong> through the same egress proxy — proxy/Cloudflare hypothesis dead</td>
+</tr>
+</tbody>
+</table>
+<p>Facts established:
+- Vault entry <code>custom.torbox</code>: <code>name=access_token</code>, <code>type=api_key</code>,
+  <strong>placement <code>{"query_param": "token"}</code></strong> (read directly from
+  <code>dynamic_credential_entry</code> metadata, Lane 1 §2). No timestamp fields exist.
+- Live OpenAPI spec (<code>https://api.torbox.app/openapi.json</code>, 200, 87 paths): sole
+  auth scheme <code>OAuth2PasswordBearer</code>. Only <code>requestdl</code> (torrents/usenet/webdl),
+  <code>notifications/rss</code>, <code>stream/getstreamdata</code> accept <code>?token=</code>.
+- The documented Essential 200GB <code>DOWNLOAD_TOO_LARGE</code> limit <strong>did not fire</strong> on
+  requestdl or range reads of the 350GB file (observed repeatedly). Whether a
+  full single-stream 350GB download would differ is untested and irrelevant —
+  the pipeline is range-based.
+- No TorBox auth changes after 2026-10-15 (changelog latest v9.2, 2026-08-17;
+  status page clean). No separate "integration token" exists. A live
+  device-code flow (<code>GET /v1/api/user/auth/device/start</code> → 200 unauthenticated)
+  is a fallback token source if the vault key ever truly dies.
+- <strong>Served size for range math: 350,016,069,416 bytes</strong> (CDN Content-Range).
+  Note: Lane 6's HEAD on a different CDN host reported Content-Length
+  350,016,069,757 — CDN nodes appear to report slightly different totals; the
+  extraction pipeline uses each link's own Content-Range total, and all offsets
+  verified against it (CD parsed, extracted file sizes byte-exact).</p>
+<h3 id="defects-to-fix-in-the-connector-parentvault-actions-no-owner-steps">Defects to fix in the connector (parent/vault actions, NO owner steps)<a class="headerlink" href="#defects-to-fix-in-the-connector-parentvault-actions-no-owner-steps" title="Permanent link">&para;</a></h3>
+<ol>
+<li><code>custom.torbox/CONNECTOR.md</code> is stale/inverted: claims bearer_header
+  placement and calls <code>tb_reqdl.py</code> broken. Reality is the opposite. Rewrite it.</li>
+<li><code>bin/tb_reqdl.py</code> prints raw requestdl JSON — the CDN URL embeds the real API
+  token. Add <code>token=</code> redaction before anyone runs it outside a pipe.</li>
+<li><code>bin/tb_mylist.py</code> / <code>bin/tb_export.py</code> can never work (query token to
+  Bearer-only endpoints). <code>bin/torbox_add_magnet.py</code> crashes with NameError
+  (calls unimported <code>url_with_surrogate_query_param</code>), verified by Lanes 1, 5, 6.</li>
+<li>If Bearer endpoints are ever needed (mylist, createtorrent, integrations):
+  register a SECOND vault entry for the same key with <code>bearer_header</code>
+  placement; leave the working query_param entry untouched.
+   <strong>Do NOT regenerate/reset the API key</strong> — Lane 6 suggested a reset; that is
+  rejected here: the current token provably authenticates, and regenerating
+  would invalidate the working vault entry (this is very plausibly what started
+  the Oct 15→ failure chain of confusion).</li>
+<li>Lane 6 added a safe health probe: <code>bin/tb_cdn_range_probe.py</code> (statuses/host
+  only, never prints URLs or secrets).</li>
+</ol>
+<h2 id="2-the-pull-itself-central-directory-read-manifest-diffed-extraction-running">2. The pull itself — central directory READ, manifest DIFFED, extraction RUNNING<a class="headerlink" href="#2-the-pull-itself-central-directory-read-manifest-diffed-extraction-running" title="Permanent link">&para;</a></h2>
+<p>Coordinator-executed 2026-10-20, all in-process (CDN URL never written or logged):</p>
+<ul>
+<li><strong>Zip64 central directory fetched via Range and parsed:</strong>
+  79,772 entries (72,369 files + 7,403 directory entries) at offset
+  350,002,252,246. Manifest: <code>torbox-documents-cd-manifest.jsonl</code> (15.6MB,
+  names/sizes/offsets/methods only — no URLs, no secrets).</li>
+<li><strong>The whole zip is STORED (method 0): compressed size == uncompressed size
+  for every entry.</strong> Extraction = pure range copies at known offsets; no
+  decompression anywhere.</li>
+<li><strong>Diff vs the torrent manifest (<code>CNleaks.torrent</code>, parsed byte-exact):</strong>
+  72,369 files both sides, total 349,990,644,026 bytes both sides, <strong>zero size
+  mismatches</strong> on name-matched files. 1,435 names per side differ only by
+  filename encoding/normalization (zip cp437-style names vs torrent UTF-8 —
+  e.g. <code>&amp;</code>/<code>and</code>, private-use glyphs); counts and bytes reconcile exactly.
+  Conclusion: Documents.zip contents == torrent contents.</li>
+<li>Per-dir totals from the CD match the 2026-10-19 audit byte-exactly
+  (BAKUGAN 32,789,294,540; HB Classics Boomerang 10,868,460,164; Camp Lazlo
+  6,664,242,263; Wabbit 2,368,980,938; Garfield 2,065,970,372; I Am Weasel
+  115,226,368; Juniper Lee 152,399,701; j2s 278,480,586 …).</li>
+</ul>
+<h3 id="gaps-to-pull-gaps-only-zero-held-dirs-first-no-duplication-possible">Gaps to pull (gaps-only; zero-held dirs first — no duplication possible)<a class="headerlink" href="#gaps-to-pull-gaps-only-zero-held-dirs-first-no-duplication-possible" title="Permanent link">&para;</a></h3>
+<p>Zero held, no other lane touching them:
+BAKUGAN 32.79GB · HB Classics Boomerang 10.87GB · Camp Lazlo 6.66GB ·
+Wabbit 2.37GB · Garfield 2.07GB · j2s .fla set 0.28GB · Juniper Lee 0.15GB ·
+I Am Weasel 0.12GB · Transfer 0.11GB · Transfer(1) 0.03GB ≈ <strong>55.4GB</strong>
+Partial dirs (need file-level holdings diffs first): Kids Next Door gap ~3.13GB,
+MGM gap ~1.85GB, PPG Special gap ~1.79GB, PPG Original gap ~1.51GB,
+Johnny Test gap ~0.56GB, Cow &amp; Chicken gap ~0.18GB, PPGZ gap ~0.13GB,
+PPG 10th gap ~0.06GB, PDFs 0.42GB (also in the IA lane's scope — coordinate).
+Adventure Time / Regular Show remainders stay with the archive.org mass-pull
+lane already running in another chat (do not duplicate its work).</p>
+<h3 id="end-to-end-proof-in-progress-at-report-time-honest-status">End-to-end proof — IN PROGRESS at report time (honest status)<a class="headerlink" href="#end-to-end-proof-in-progress-at-report-time-honest-status" title="Permanent link">&para;</a></h3>
+<p><code>torbox-cd-work/extract_dir.py</code> (requestdl in-process → resumable range fetch →
+per-file extract → ≤100MB tar groups → <code>gh release upload</code> → API size-verify →
+delete staging; checkpoint state every 50 files, restart-safe):
+- Target: <strong>I Am Weasel</strong> (502 files, 115,226,368 B, zero held) →
+  repo <code>mhvnsnt/cn-gigaleak-i-am-weasel</code> (created 2026-10-20, private),
+  draft release <code>i-am-weasel-torbox-v1</code>.
+- Verified so far: first files landed size-exact (e.g. WEASEL browser.pdf
+  6,484,391 B); run reached <strong>100/502 files (32MB) checkpointed</strong> before a
+  runtime restart killed it; relaunched under auto-recovery, resuming from the
+  checkpoint. Final API verification line will appear in
+  <code>torbox-cd-work/weasel.log</code> + <code>state-I_Am_Weasel.json</code> (<code>"complete": true</code>).
+- <strong>Throughput reality (measured, not guessed): 17–22 KB/s</strong> through this VM's
+  egress proxy with a single connection (reads truncate mid-stream; the
+  resumable fetcher re-requests remainders). The local path is therefore a
+  PROOF + SMALL-DIRS path only (~2GB/day). It is not the bulk engine.</p>
+<h3 id="scale-engine-for-the-bulk-lane-4-prototyped-tested">Scale engine for the bulk (Lane 4, prototyped + tested)<a class="headerlink" href="#scale-engine-for-the-bulk-lane-4-prototyped-tested" title="Permanent link">&para;</a></h3>
+<p>GitHub Actions matrix from <code>torbox-gha-prototype/</code> (range_list.py +
+<code>.github/workflows/torbox-range.yml</code>; tested against a public 7.9GB Zip64 on
+archive.org: CD parse exact-matched a prior independent parse; single-file
+extract CRC32-verified; slice sha256 byte-identical to an independent curl
+fetch). Public-repo runners = free unlimited minutes, 20 concurrent jobs,
+zero local proxy involvement.
+<strong>Coordinator refinement over Lane 4's SOURCE_URL design:</strong> put the TorBox API
+TOKEN itself (not a ~1h-expiry CDN link) in the runner repo's secrets once, via
+GitHub's web UI (parent/account lane, signed in as mhvnsnt — the owner never
+touches it). Each job then mints a fresh requestdl link in-runner via the
+<code>?token=</code> flow proven here, so link expiry disappears as a failure mode and
+jobs are resumable by asset name/size. Terms flag from Lane 4 stands: keep the
+runner repo project-scoped; assets land in the private per-show repos.
+Fallback if GHA is undesirable: parallel local extractor processes (throughput
+multiplication unproven — the proxy may throttle in aggregate).</p>
+<h2 id="3-backup-paths-all-tested-all-weaker-keep-in-drawer-dont-lead-with-them">3. Backup paths — all tested, all weaker (keep in drawer, don't lead with them)<a class="headerlink" href="#3-backup-paths-all-tested-all-weaker-keep-in-drawer-dont-lead-with-them" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Verdict</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AllDebrid</td>
+<td>Needs ONE browser login to mint an API key (dashboard or PIN flow — PIN issuance proven live, 200). Vault logins unreachable from sandbox cells (403 privsep). Docs carry "File too big" statusCode 8 + 20-min/72-h magnet failure modes → 350GB acceptance doubtful even then.</td>
+<td>Lane 2</td>
+</tr>
+<tr>
+<td>Debrid-Link</td>
+<td>Paid only (no free tier — 2026-10-16 research + Lane 2). Token only from logged-in account area; APIs answer correctly (401 badToken). Seedbox quota unknown until authenticated.</td>
+<td>Lanes 2, 7 inputs; 2026-10-16 report</td>
+</tr>
+<tr>
+<td>Premiumize</td>
+<td>Best debrid API for this shape (directdl per-file links, 2026-10-16 report) but NO free tier; 1,000 fair-use points ≈1TB rolling would be consumed by this job. Paid fact only.</td>
+<td>2026-10-16 report (web-grade), Lane 3</td>
+</tr>
+<tr>
+<td>PikPak invite trial</td>
+<td>ONLY free candidate: invite code (unverified/rotating) → 5 days Premium 10TB. Signup is browser+captcha; transfer quota unpublished. Unproven.</td>
+<td>Lane 3</td>
+</tr>
+<tr>
+<td>Free-trial seedboxes</td>
+<td><strong>DEAD.</strong> Seedhost.eu killed its free trial (7-day money-back only now). Pulsed Media free trial is real (30 days, SSH, 50 GiB) — 6.5× too small for the file, 2.3× too small for the gaps at once. Ultra.cc: no trials.</td>
+<td>Lane 7 (official pages fetched)</td>
+</tr>
+<tr>
+<td>Free debrid tiers</td>
+<td>All cap at 1–50GB (Seedr 2GB, Bitport 1GB — even its top paid tier is 250GB, Offcloud ~10GB, TorBox Free 10GB). None fits.</td>
+<td>Lane 3 (official pricing pages)</td>
+</tr>
+<tr>
+<td>Mirror/webseed</td>
+<td>None. archive.org has the .torrent file itself (11,399,677 B, items <code>gigaleaks-2010-cn</code>, <code>cnleaks_202610</code>) but no payload mirror anywhere found.</td>
+<td>Lane 3</td>
+</tr>
+<tr>
+<td>Paid facts (end of list, NOT recommendations)</td>
+<td>TorBox Pro $10/mo would raise documented caps but is unnecessary — the working path is free on the current plan. Seedhost HD 2 €5/mo (2TB + SSH) is the cheapest fitting seedbox if ever wanted.</td>
+<td>Lanes 3, 7</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-what-each-named-agent-actually-did-lane-5-verbatim-outputs-in-torbox-lane5-agents">4. What each named agent actually did (Lane 5, verbatim outputs in <code>torbox-lane5-agents/</code>)<a class="headerlink" href="#4-what-each-named-agent-actually-did-lane-5-verbatim-outputs-in-torbox-lane5-agents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Copilot CLI</strong> — binary had not survived the VM swap; reinstalled
+  (<code>@github/copilot</code> 1.0.100), ran the full code review with the standing PAT.
+  Found the <code>torbox_add_magnet.py</code> NameError independently. Its root-cause
+  hypothesis (surrogate in <code>?token=</code> never substituted) was <strong>wrong</strong> — it
+  trusted the stale CONNECTOR.md's bearer_header claim; Lane 1/Lane 6 live
+  tests + the coordinator's own requestdl runs disprove it (substitution works
+  exactly at the registered query_param placement; garbage-token control
+  confirms validation). Valuable review, wrong premise — recorded honestly.</li>
+<li><strong>Codex</strong> — direct OpenAI lane still 401 (exact error saved). Via <strong>Kilo
+  Code's free gateway</strong> (<code>codex -p kilo-code</code>, openrouter/free, 135k tokens) it
+  produced the deepest code review, same wrong-premise conclusion as Copilot
+  (it read <code>dynamic_credentials</code> but took the registered placement from the
+  stale doc). Its Fix B (second entry with query_param placement) is
+  unnecessary — that placement already exists; its Fix A inverts the actual
+  fix for Bearer endpoints.</li>
+<li><strong>Kilo</strong> — reinstalled (<code>@kilocode/cli</code> 7.8.15). Native <code>kilo run</code> blocked:
+  "You need to sign in to use this model" (stale default model state; free
+  model run + <code>kilo auth list</code> timed out). Workflow-law exception for the
+  native binary, with evidence. Kilo's GATEWAY still contributed — the entire
+  Codex review ran on it.</li>
+<li><strong>OpenCode</strong> — present (1.19.3, was just off PATH). Three <code>opencode run</code>
+  attempts produced no completion within 110–300s (no provider configured).
+  Exception documented with evidence.</li>
+<li><strong>CodeRabbit</strong> — no TorBox PR existed; Lane 5 created agent-ops <strong>PR #36</strong>
+  (docs branch with the agent-review consensus) and triggered <code>@coderabbitai
+  review</code> twice. After ~10 min: no review received; the CodeRabbit GitHub App
+  is likely not installed/enabled on mhvnsnt/agent-ops (couldn't verify —
+  PAT scope blocks <code>gh pr checks</code>). Trigger delivered; review not produced.</li>
+<li><strong>Coordinator's own subagent lanes (1, 2, 3, 4, 6, 7)</strong> — did the live
+  testing, prototyping, and this program's extraction work described above.
+  Lane 2's first run died on a database pool timeout and was re-dispatched
+  under auto-recovery; it completed fully on retry.</li>
+</ul>
+<h2 id="5-open-source-wire-up-lane-6-tested-not-just-listed">5. Open-source wire-up (Lane 6, tested — not just listed)<a class="headerlink" href="#5-open-source-wire-up-lane-6-tested-not-just-listed" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>torbox-api SDK 1.0.6</strong>: source-inspected + live-tested. Only difference
+  from raw calls is dual auth on requestdl; same 200. No UA, error bodies
+  dropped. <strong>Not adopted.</strong></li>
+<li><strong>rclone 1.75.2</strong> (at <code>~/workspace/tools/rclone/rclone</code>, off PATH): backend
+  list has NO torbox/realdebrid/alldebrid; only debrid backend is
+  premiumizeme (OAuth). Downstream glue only.</li>
+<li><strong>Decypharr</strong> (917★, MIT): supports TorBox/RD/AllDebrid/DebridLink/
+  Premiumize; its TorBox provider is Bearer-based → same placement issue for
+  listing, though its download-link code uses the working requestdl permalink.
+  Production-grade; unnecessary now; strongest off-the-shelf mount later.</li>
+<li><strong>JDownloader2</strong>: skipped with cause (no JVM/Docker, disk 94–97%, whole-file
+  shape, MyJDownloader account required).</li>
+<li><strong>aria2 1.35.0</strong>: HTTP tested OK locally; magnet re-verified dead from this
+  VM (25s, 0 B/s, no peers — UDP/DHT egress blocked, consistent with 2026-10-17).</li>
+<li><strong>2025–2026 TorBox tools survey</strong> (342 repos): every client uses the same API
+  key; none bypasses auth; none does remote-zip range extraction. The existing
+  pipeline (<code>tb_reqdl.py</code> → CDN → <code>zip_extract.py</code>/<code>extract_dir.py</code> →
+  <code>github_upload_stream.py</code>/<code>gh release upload</code>) remains the winner, now with
+  Lane 6's <code>tb_cdn_range_probe.py</code> health check wired into the connector dir.</li>
+</ul>
+<h2 id="6-what-remains-in-order">6. What remains (in order)<a class="headerlink" href="#6-what-remains-in-order" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Weasel proof finishes + verifies (running; watch
+   <code>torbox-cd-work/weasel.log</code>).</li>
+<li>Small dirs via local extractor: Juniper Lee, Transfer, Transfer(1), j2s
+   (~0.7GB total — hours at local rates, restart-safe).</li>
+<li>Bulk via GHA matrix (Lane 4 prototype + §2 token-secret refinement):
+   parent creates the runner repo from <code>torbox-gha-prototype/</code>, sets the token
+   secret in GitHub UI once, smoke <code>mode=list</code>, then BAKUGAN → HB Classics →
+   Camp Lazlo → Wabbit → Garfield into their per-show repos.</li>
+<li>Partial-dir gaps after file-level holdings diffs (KND/MGM/PPG×3/JT/C&amp;C/PPGZ).</li>
+<li>Connector fixes in §1 (CONNECTOR.md rewrite, tb_reqdl redaction, dead
+   helpers) via the normal PR path; CodeRabbit re-check on PR #36 once the app
+   question is settled.</li>
+<li>TeraBox backfill of everything landed (GitHub → TeraBox, established lane).</li>
+</ol>
+<p><strong>Owner actions required: NONE. Money required: $0. The Pro upgrade is not
+needed and is not recommended.</strong></p>
+<h2 id="evidence-index">Evidence index<a class="headerlink" href="#evidence-index" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Lane 1 live matrix + OpenAPI + changelog: <code>torbox-lane1-auth.md</code> §4.</li>
+<li>Coordinator runs: requestdl 200 ×4; CD fetch log <code>torbox-cd-work/cd2.log</code>;
+  manifest <code>torbox-documents-cd-manifest.jsonl</code>; torrent diff
+  <code>torbox-cd-work/diff_cd.py</code> output (72,369 = 72,369, 0 size mismatches).</li>
+<li>Lane 4 prototype tests: <code>torbox-gha-prototype/test-output/</code> (CRC32 match,
+  sha256 byte-identity vs independent curl).</li>
+<li>Lane 5 verbatim agent outputs: <code>torbox-lane5-agents/*.txt</code>; PR
+  https://github.com/mhvnsnt/agent-ops/pull/36.</li>
+<li>Lane 6 live probes + SDK/rclone/Decypharr tests: <code>torbox-lane6-oss.md</code>.</li>
+<li>Lane 7 official-page quotes: <code>torbox-lane7-seedbox.md</code>.</li>
+<li>Lane 2 API probes (AllDebrid v4 ping/PIN, Debrid-Link badToken):
+  <code>torbox-lane2-debrid-live.md</code>.</li>
+<li>Lane 3 official pricing fetches: <code>torbox-lane3-alternatives.md</code>.</li>
+</ul>
+<hr />
+<h2 id="appendix-a-parent-folded-deep-research-questions-added-2026-10-20-coordinator">Appendix A — Parent-folded deep-research questions (added 2026-10-20, coordinator)<a class="headerlink" href="#appendix-a-parent-folded-deep-research-questions-added-2026-10-20-coordinator" title="Permanent link">&para;</a></h2>
+<h3 id="a1-bad_token-community-reports-key-revocation-oauthintegration-tokens-full-endpoint-groups">A1. BAD_TOKEN: community reports, key revocation, OAuth/integration tokens, full endpoint groups<a class="headerlink" href="#a1-bad_token-community-reports-key-revocation-oauthintegration-tokens-full-endpoint-groups" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Community/GitHub-issue reports (2025–2026):</strong> Lane 1 searched the web and
+  GitHub clients for BAD_TOKEN causes/fixes on 2026-10-20 — results were noise
+  (an unrelated torbox.ch project); no public issue documents this failure mode
+  or a fix. Lane 6 surveyed 342 TorBox-related GitHub repos (official
+  torbox-media-center 284★, atba 180★, DebriDav 155★, DebridDownloader 94★,
+  magnetar 90★, AIOStreams 2,930★, comet 1,120★): every client authenticates
+  with the same single API key; none documents a BAD_TOKEN workaround. The
+  cause in OUR case is proven locally (placement mismatch, §1), not
+  community-sourced: garbage-token control → 403; vault token via <code>?token=</code> →
+  200, repeatedly. No TorBox-side auth change exists to blame: official
+  changelog's latest entry is v9.2 (2026-08-17); status page shows no October
+  auth incident (Lane 1 §6).</li>
+<li><strong>Does generating a new key revoke the old one?</strong> No public doc, issue, or
+  changelog entry states the semantics (searched). Indirect evidence supports a
+  single-token model (one <code>refreshtoken</code> operation, rate limits keyed per
+  token, "your API key" singular in settings since v3.0) — under that model a
+  new key replaces the old server-side. BUT it cannot explain our failures:
+  the token in the vault still authenticates today (Lane 1 §3–§4), so whatever
+  the dashboard clicks did, they did not leave us with a dead key. Operational
+  rule from this program: <strong>never regenerate the key as a diagnostic</strong> — it
+  risks invalidating the one working credential.</li>
+<li><strong>OAuth / separate integration token?</strong> There is NO separate integration
+  token. Token taxonomy (Lane 1 §3, from the live OpenAPI spec + docs): (1)
+  the single API token (Bearer on most endpoints, <code>?token=</code> on requestdl/rss/
+  getstreamdata); (2) a web session_token used ONLY to authorize
+  <code>POST /user/refreshtoken</code> and <code>deleteme</code>; (3) OAuth2PasswordBearer is the
+  spec's only security scheme — vendor/third-party apps get OAuth tokens, and
+  TorBox.NET documents refresh as OAuth-only while API-key failures surface as
+  plain BAD_TOKEN; (4) a live device-code flow (<code>GET /v1/api/user/auth/device/start</code>,
+  public, verified 200 today) returns the SAME API token after web
+  authorization — a fallback source, not a distinct credential; (5) presigned
+  CDN tokens embedded in download URLs (~1h per old changelog note).</li>
+<li><strong>Full endpoint groups</strong> (live spec <code>https://api.torbox.app/openapi.json</code>,
+  HTTP 200, 87 paths, fetched again 2026-10-20 by the coordinator):
+  general (stats, changelogs, speedtest, notifications incl. <code>rss</code> Q),
+  user (me, stats, subscriptions, transactions, referral, settings,
+  refreshtoken, deleteme, auth/device/<em>),
+  torrents (createtorrent, asynccreatetorrent, controltorrent, controlqueued,
+  edittorrent, mylist, <strong>exportdata</strong>, getqueued, checkcached, magnettofile,
+  torrentinfo, <strong>requestdl Q</strong>),
+  usenet (create/control/edit/mylist/checkcached/provider/</em>, requestdl Q),
+  webdl (create/control/edit/mylist/checkcached/hosters, requestdl Q),
+  <strong>queued</strong> (<code>GET /v1/api/queued/getqueued</code>, <code>POST /v1/api/queued/controlqueued</code></li>
+<li>the torrents/ duplicates),
+  rss (addrss/controlrss/modifyrss/getfeeds/getfeeditems),
+  stream (createstream, getstreamdata Q),
+  <strong>integration</strong> (cloud-upload jobs — see A2; oauth link/callback/register/
+  unregister/me; discord linked_roles),
+  vendors (account CRUD). Full per-endpoint auth table: Lane 1 §1.</li>
+</ul>
+<h3 id="a2-torbox-server-side-cloud-transfer-drivedropboxonedrive">A2. TorBox server-side cloud transfer (Drive/Dropbox/OneDrive)<a class="headerlink" href="#a2-torbox-server-side-cloud-transfer-drivedropboxonedrive" title="Permanent link">&para;</a></h3>
+<p><strong>Yes — it exists, as API "integration" jobs</strong> (verified from the live OpenAPI
+spec by the coordinator, 2026-10-20):
+<code>POST /v1/api/integration/googledrive</code>, <code>/dropbox</code>, <code>/onedrive</code>, <code>/gofile</code>,
+<code>/pixeldrain</code>, <code>/1fichier</code>; job management <code>GET /integration/jobs</code>,
+<code>GET /integration/job/{job_id}</code>, <code>GET /integration/jobs/{hash}</code>,
+<code>DELETE /integration/job/{job_id}</code>. Request shape (spec schemas): for Google
+Drive, <code>AddToGoogleDrive</code> requires <code>{id (torrent id), google_token}</code> with
+optional <code>file_id</code>, <code>zip</code>, <code>type</code> (Dropbox identical with <code>dropbox_token</code>) —
+i.e., you first link the destination cloud via the <code>/integration/oauth/{provider}</code>
+flow, then TorBox's servers push the downloaded item into it. <strong>Limits:</strong> the
+spec states no per-job size limit for integration transfers (the documented
+DOWNLOAD_TOO_LARGE table governs <code>requestdl</code>, §1); destination quotas govern
+in practice — free Google Drive is 15GB (owner-established), so Drive is a
+non-target for a 350GB file regardless. <strong>Usability for us: blocked today</strong> —
+every integration endpoint is Bearer-only, and our vault credential substitutes
+only at <code>query_param</code> placement (§1). Unblocking = the second vault entry with
+<code>bearer_header</code> placement (parent/vault action, §1 fix #4) plus an OAuth link
+of the destination cloud (browser lane). The web UI exposes the same feature
+as "Send to cloud" integrations per the API structure; the dashboard route
+itself was not browser-verified (parent notes the browser lane is down), so
+the API evidence above is the verified layer and the UI claim is labeled
+unverified.</p>
+<h3 id="a3-free-seedbox-trials-vs-the-350gb-single-file-lane-7-official-pages-fetched-2026-10-20">A3. Free seedbox trials vs the 350GB single file (Lane 7, official pages fetched 2026-10-20)<a class="headerlink" href="#a3-free-seedbox-trials-vs-the-350gb-single-file-lane-7-official-pages-fetched-2026-10-20" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Seedhost.eu:</strong> the "24-hour free trial" no longer exists. Current official
+  homepage: all packages are covered by a <strong>7-day money-back policy</strong> — order,
+  use, cancel within 7 days for a refund. That requires a payment method, a
+  browser checkout, and a refund claim (Lane 7 file lines 37, 145–146) — it is
+  a purchase + refund gamble, not a free trial, and no current page publishes
+  any trial storage. Paid tiers for scale context: HD 1 = 1TB/€3/mo (NO SSH —
+  FAQ: SSH on all Shared except HD 1); HD 2 = 2TB/€5/mo WITH SSH (rTorrent/
+  qBittorrent/Deluge/Transmission). HTTPS file access is documented; Range
+  support is NOT published (unverified).</li>
+<li><strong>Pulsed Media:</strong> a real free trial exists — official wiki: <strong>30 days,
+  50 GiB storage, 250MB RAM, user-level SSH shell (no root)</strong>, full PMSS
+  feature set, rTorrent/Deluge/qBittorrent, access via SSH/SFTP/SCP/FTP/
+  HTTPS/WebDAV, Python 3 + p7zip + rclone preinstalled. <strong>Card:</strong> the trial
+  signup is a WHMCS email signup at pulsedmedia.com/free-seedbox.php — no
+  Google OAuth advertised, and neither source states a card requirement for
+  the FREE trial (labeled: not explicitly verified either way; slot
+  availability is the first gate). <strong>Math:</strong> 50 GiB is 6.5× too small for the
+  350GB (326 GiB) file and 2.3× too small for the ~125GB gap set at once;
+  even the free tier's 25%-over-limit burst (62.5 GiB) is ~1.9× short of the
+  gaps. The piece-priority path is technically real (libtorrent over SSH can
+  fetch only pieces covering wanted zip ranges) but cannot fit the wanted
+  pieces under the quota in one pass — only an unproven rotating
+  batch→extract→offload→delete loop could, which is a research project, not a
+  backup path.</li>
+<li><strong>Others:</strong> Ultra.cc explicitly offers NO trials (official FAQ; 7-day
+  refund only). Pulsed's own fetched comparison table lists Whatbox, Feral,
+  Seedboxes.cc, RapidSeedbox, Seedhost, Ultra all as Free Tier: No. Seedbox.io
+  = 14-day money-back only. sdbx.moe = free 2-day trial only via a Discord
+  request (manual), storage unpublished, no ≥100GB evidence.</li>
+<li><strong>Verdict:</strong> the free-trial seedbox angle is DEAD for this torrent. If a
+  seedbox is ever wanted, the cheapest fitting paid shape is Seedhost HD 2
+  (€5/mo, 2TB + SSH + HTTPS) — an owner purchase decision, stated as fact only.
+  Full evidence: <code>torbox-lane7-seedbox.md</code>.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

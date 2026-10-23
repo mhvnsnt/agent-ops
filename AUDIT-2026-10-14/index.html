@@ -1,0 +1,2411 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Indexes, conventions, manifests, and handoffs for the agent fleet.">
+      
+      
+        <meta name="author" content="Mars FMMG">
+      
+      
+      
+        <link rel="prev" href="../ANTI-CLOBBER-LAW/">
+      
+      
+        <link rel="next" href="../BOX-OFFLOAD-LOG/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Repo audit — 2026-10-14 (Grok Bot) - Agent Ops Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#repo-audit-2026-10-14-grok-bot" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Agent Ops Hub" class="md-header__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agent Ops Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Repo audit — 2026-10-14 (Grok Bot)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Agent Ops Hub" class="md-nav__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Agent Ops Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    agent-ops — restart resilience for agent work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AGENTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AGENTS.md
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ANTI-CLOBBER-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ANTI-CLOBBER LAW (owner 2026-10-17)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repo audit — 2026-10-14 (Grok Bot)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repo audit — 2026-10-14 (Grok Bot)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#actions-taken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actions taken
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-prs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open PRs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prs-that-delete-files-must-not-merge-without-owner-label-approved-deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRs that delete files (must not merge without owner label approved-deletion)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#force-pushes-seen-activity-api-last-90-days" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Force-pushes seen (activity API, last ~90 days)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branches-with-no-pr-count-first-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Branches with no PR (count, first 15)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BOX-OFFLOAD-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BOX OFFLOAD LOG — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHECKPOINT_PROTOCOL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkpoint Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLAIMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAIMS (prevents collisions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CROSS-REPO-STRANDED-AUDIT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CROSS-REPO STRANDED-WORK AUDIT — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../END-OF-SESSION-BACKUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    END-OF-SESSION BACKUP (watchdog procedure)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FRICTION-RESEARCH-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FRICTION RESEARCH LOG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-CANON/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — CANON (where the game's knowledge lives)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF INDEX — fleet state, one place, no "missing"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-REPOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — REPOS (per-repo state + landing order)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-TEARDOWNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — TEARDOWNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-WESTERN-HEART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — WESTERN HEART (mhvnsnt/western-heart)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOW-GROKBOT-WORKS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How Grok Bot works (copy this process)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDEMPOTENCY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idempotency Rules — write work so a re-run can't duplicate or corrupt it
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LANE_GUARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane Guard — crash-resilient + collision-proof lanes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-IT-YOURSELF-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE-IT-YOURSELF LAW (owner 2026-10-15) — canonical copy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-QUEUE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE QUEUE — everything built but not landed, all repos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NO-DATA-LOSS-RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NO-DATA-LOSS RULES (owner law — mhvnsnt)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-CONVENTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Conventions (all repos, all agents)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-PULLIN-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RESEARCH → PULL-IN INDEX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESUME_BRIEF_TEMPLATE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resume Brief Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TAG-TEAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TAG-TEAM board (live)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-ALTERNATIVES-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Alternatives — Free/Open-Source Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-BREAKTHROUGH-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Breakthrough Program — Final Report (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-LANE5-AGENT-REVIEW-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox BAD_TOKEN — Lane 5 All-Agents Review (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-RESEARCH-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Research — 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-SUPPORT-TICKET-DRAFT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Support Ticket — DRAFT (do not send without owner approval)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adr-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-NNNN:
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-cleanup-log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Cleanup Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grokbot-activity-proof-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot / MoneyManBusch activity proof — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-claims-recheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Claims Re-Check — 2026-10-20 evening (coordinator lane, parent-ordered)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane1-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Auth — Lane 1, Round 2 (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane2-debrid-live/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LANE 2 (RETRY) — Debrid-Link + AllDebrid Live Tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane3-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 3 — Alternative Debrid / Seedbox Sweep for a 350 GB Single-File Torrent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane4-compute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 4 — Free compute / cloud-to-cloud transfer layer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane5-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 5 — All-Agents Tooling on TorBox BAD_TOKEN (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane6-oss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Lane 6 — Open-Source Wire-Up + Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane7-seedbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 7 — Free-Trial Seedbox Angle (Seedhost.eu + Pulsed Media + others)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#actions-taken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actions taken
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-prs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open PRs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prs-that-delete-files-must-not-merge-without-owner-label-approved-deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRs that delete files (must not merge without owner label approved-deletion)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#force-pushes-seen-activity-api-last-90-days" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Force-pushes seen (activity API, last ~90 days)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branches-with-no-pr-count-first-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Branches with no PR (count, first 15)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="repo-audit-2026-10-14-grok-bot">Repo audit — 2026-10-14 (Grok Bot)<a class="headerlink" href="#repo-audit-2026-10-14-grok-bot" title="Permanent link">&para;</a></h1>
+<p>Scope: 109 non-archived mhvnsnt repos; 69 open PRs. Method: GitHub REST (pulls, compare base...head for behind_by and removed files, Actions runs per head SHA for CI, activity API for force-pushes). The PAT cannot read check-runs/statuses, so CI = latest Actions run per workflow.</p>
+<h2 id="actions-taken">Actions taken<a class="headerlink" href="#actions-taken" title="Permanent link">&para;</a></h2>
+<ul>
+<li>MERGED physics-playground-pwa#13 (MERGEABLE/CLEAN, CI green, 0 behind, 0 deletions, gitleaks clean) → 56ad2f1.</li>
+<li>AshLanev2#38: was CI green but 3 behind main → merged main into branch via update-branch (merge commit, no rebase). Re-check CI before merging.</li>
+<li>No PR closed, no branch deleted, nothing force-pushed.</li>
+</ul>
+<h2 id="open-prs">Open PRs<a class="headerlink" href="#open-prs" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>PR</th>
+<th>mergeable</th>
+<th>state</th>
+<th>draft</th>
+<th>base&lt;-head</th>
+<th>behind</th>
+<th>files deleted</th>
+<th>CI (failing workflows)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AshLanev2#21</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-fix/martial-clip-semantic-audit</code></td>
+<td>859</td>
+<td>0 (RED AshLanev2 validation)</td>
+<td></td>
+</tr>
+<tr>
+<td>AshLanev2#23</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-prototype-imports</code></td>
+<td>68</td>
+<td>0 (RED AshLanev2 validation;Asset validation;Visual regression tests)</td>
+<td></td>
+</tr>
+<tr>
+<td>AshLanev2#35</td>
+<td>false</td>
+<td>dirty</td>
+<td>false</td>
+<td><code>main&lt;-docs/agents-standard</code></td>
+<td>3</td>
+<td>0 (RED AshLanev2 validation;Asset validation;Visual regression tests)</td>
+<td></td>
+</tr>
+<tr>
+<td>AshLanev2#36</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-docs/promo-cinematic-kit</code></td>
+<td>3</td>
+<td>0 (RED AshLanev2 validation;Asset validation;Visual regression tests)</td>
+<td></td>
+</tr>
+<tr>
+<td>AshLanev2#37</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-ci/deletion-guard</code></td>
+<td>3</td>
+<td>0 (RED AshLanev2 validation;Asset validation;Visual regression tests)</td>
+<td></td>
+</tr>
+<tr>
+<td>AshLanev2#38</td>
+<td>true</td>
+<td>clean</td>
+<td>false</td>
+<td><code>main&lt;-grok/makerig-crash-fix</code></td>
+<td>3</td>
+<td>0 (GREEN )</td>
+<td></td>
+</tr>
+<tr>
+<td>AshLanev2#39</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-feat/instruction-gate</code></td>
+<td>3</td>
+<td>0 (RED AshLanev2 validation;Asset validation;Visual regression tests)</td>
+<td></td>
+</tr>
+<tr>
+<td>AshLanev2#41</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-fix/duplicate-chaindivider</code></td>
+<td>1</td>
+<td>0 (RED AshLanev2 validation;Asset validation;Visual regression tests)</td>
+<td></td>
+</tr>
+<tr>
+<td>AshLanev2#42</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-grok/cf-pages-base-path</code></td>
+<td>1</td>
+<td>0 (RED AshLanev2 validation;Asset validation;Visual regression tests)</td>
+<td></td>
+</tr>
+<tr>
+<td>Bannon#22</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>claude/aaa-bannon-leg-stepping-sdwcjb&lt;-main</code></td>
+<td>0</td>
+<td>1 (RED EAS Mobile App Store Deployment;instruction-gate)</td>
+<td></td>
+</tr>
+<tr>
+<td>Bannon#38</td>
+<td>false</td>
+<td>dirty</td>
+<td>false</td>
+<td><code>main&lt;-claude/grapple-solver-model-fixes-oar0pg</code></td>
+<td>433</td>
+<td>0 (GREEN )</td>
+<td></td>
+</tr>
+<tr>
+<td>Bannon#39</td>
+<td>false</td>
+<td>dirty</td>
+<td>false</td>
+<td><code>main&lt;-claude/m-engine-audit-pwa-fgl0xy</code></td>
+<td>324</td>
+<td>1 (GREEN )</td>
+<td></td>
+</tr>
+<tr>
+<td>Bannon#41</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-integration/p0-pwa-sync</code></td>
+<td>243</td>
+<td>0 (RED Autonomous Build &amp; Verify Loop;BANNON Integration Gate)</td>
+<td></td>
+</tr>
+<tr>
+<td>Bannon#43</td>
+<td>true</td>
+<td>unstable</td>
+<td>true</td>
+<td><code>main&lt;-upgrade/ue5.8</code></td>
+<td>243</td>
+<td>0 (RED Autonomous Build &amp; Verify Loop)</td>
+<td></td>
+</tr>
+<tr>
+<td>Bannon#44</td>
+<td>true</td>
+<td>unstable</td>
+<td>true</td>
+<td><code>main&lt;-animation-source-bridge</code></td>
+<td>237</td>
+<td>0 (RED Autonomous Build &amp; Verify Loop)</td>
+<td></td>
+</tr>
+<tr>
+<td>Bannon#45</td>
+<td>true</td>
+<td>unstable</td>
+<td>true</td>
+<td><code>main&lt;-game-emulator/bootstrap</code></td>
+<td>170</td>
+<td>0 (RED Autonomous Build &amp; Verify Loop)</td>
+<td></td>
+</tr>
+<tr>
+<td>Bannon#48</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-rig-hardening</code></td>
+<td>83</td>
+<td>0 (RED .github/workflows/model-repair-candidates.yml;Autonomous Build &amp; Verify Loop;Shipping gate)</td>
+<td></td>
+</tr>
+<tr>
+<td>Bannon#49</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-stickup-v2-video</code></td>
+<td>81</td>
+<td>0 (RED .github/workflows/model-repair-candidates.yml;Autonomous Build &amp; Verify Loop;Shipping gate)</td>
+<td></td>
+</tr>
+<tr>
+<td>Bannon#77</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-stickup/hq-model-v2</code></td>
+<td>0</td>
+<td>0 (RED instruction-gate;pr-clean-merge)</td>
+<td></td>
+</tr>
+<tr>
+<td>BioMechania#22</td>
+<td>false</td>
+<td>dirty</td>
+<td>false</td>
+<td><code>main&lt;-docs/muse-training-pack-link</code></td>
+<td>2</td>
+<td>0 (GREEN )</td>
+<td></td>
+</tr>
+<tr>
+<td>Brutal-Fist#10</td>
+<td>false</td>
+<td>dirty</td>
+<td>false</td>
+<td><code>main&lt;-rocket-update</code></td>
+<td>54</td>
+<td>0 (NONE )</td>
+<td></td>
+</tr>
+<tr>
+<td>Brutal-Fist#11</td>
+<td>false</td>
+<td>dirty</td>
+<td>true</td>
+<td><code>main&lt;-agent/glb-runtime-integrity</code></td>
+<td>59</td>
+<td>0 (RED Brutal Fist build)</td>
+<td></td>
+</tr>
+<tr>
+<td>Brutal-Fist#12</td>
+<td>false</td>
+<td>dirty</td>
+<td>true</td>
+<td><code>rocket-update&lt;-agent/animation-rig-runtime</code></td>
+<td>35</td>
+<td>0 (RED Brutal Fist build)</td>
+<td></td>
+</tr>
+<tr>
+<td>Brutal-Fist#13</td>
+<td>true</td>
+<td>unstable</td>
+<td>true</td>
+<td><code>rocket-update&lt;-agent/combat-animation-rig-runtime</code></td>
+<td>31</td>
+<td>0 (RED Brutal Fist build)</td>
+<td></td>
+</tr>
+<tr>
+<td>Brutal-Fist#16</td>
+<td>false</td>
+<td>dirty</td>
+<td>true</td>
+<td><code>main&lt;-fix/native-skeletal-pipeline</code></td>
+<td>35</td>
+<td>0 (RED Brutal Fist build)</td>
+<td></td>
+</tr>
+<tr>
+<td>Brutal-Fist#17</td>
+<td>true</td>
+<td>clean</td>
+<td>true</td>
+<td><code>rocket-update&lt;-agent/animation-retarget-bridge</code></td>
+<td>8</td>
+<td>0 (NONE )</td>
+<td></td>
+</tr>
+<tr>
+<td>Brutal-Fist#18</td>
+<td>false</td>
+<td>dirty</td>
+<td>false</td>
+<td><code>rocket-update&lt;-agent/animation-test-arena-final10</code></td>
+<td>5</td>
+<td>0 (NONE )</td>
+<td></td>
+</tr>
+<tr>
+<td>Brutal-Fist#19</td>
+<td>true</td>
+<td>clean</td>
+<td>true</td>
+<td><code>rocket-update&lt;-agent/bannon-motion-bank-wiring6</code></td>
+<td>5</td>
+<td>0 (NONE )</td>
+<td></td>
+</tr>
+<tr>
+<td>Brutal-Fist#20</td>
+<td>false</td>
+<td>dirty</td>
+<td>true</td>
+<td><code>rocket-update&lt;-agent/bannon-euler-bank-correction</code></td>
+<td>4</td>
+<td>0 (NONE )</td>
+<td></td>
+</tr>
+<tr>
+<td>Brutal-Fist#21</td>
+<td>false</td>
+<td>dirty</td>
+<td>true</td>
+<td><code>rocket-update&lt;-agent/bannon-euler-motion-integration</code></td>
+<td>4</td>
+<td>0 (NONE )</td>
+<td></td>
+</tr>
+<tr>
+<td>Brutal-Fist#22</td>
+<td>true</td>
+<td>unstable</td>
+<td>true</td>
+<td><code>agent/bannon-euler-motion-integration&lt;-agent/bannon-live-deformation-proof</code></td>
+<td>17</td>
+<td>0 (RED Bannon Live Deformation Proof)</td>
+<td></td>
+</tr>
+<tr>
+<td>Brutal-Fist#23</td>
+<td>true</td>
+<td>clean</td>
+<td>false</td>
+<td><code>rocket-update&lt;-grok/anim-euler-gate-authoritative</code></td>
+<td>0</td>
+<td>0 (NONE )</td>
+<td></td>
+</tr>
+<tr>
+<td>Brutal-Fist#28</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-fix/ci-submodule-checkout</code></td>
+<td>1</td>
+<td>0 (RED Brutal Fist build)</td>
+<td></td>
+</tr>
+<tr>
+<td>GAME-Emulator#1</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-feat/libretro-isolated-worker</code></td>
+<td>0</td>
+<td>0 (RED GAME Emulator CI)</td>
+<td></td>
+</tr>
+<tr>
+<td>M.-Engine-#1</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-dependabot/gradle/roborazzi-1.72.0</code></td>
+<td>10</td>
+<td>0 (RED M. Engine Autonomous CI/CD)</td>
+<td></td>
+</tr>
+<tr>
+<td>M.-Engine-#10</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-claude/m-engine-audit-pwa-fgl0xy</code></td>
+<td>2</td>
+<td>6 (RED M. Engine Autonomous CI/CD)</td>
+<td></td>
+</tr>
+<tr>
+<td>M.-Engine-#11</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-dependabot/github_actions/android-actions/setup-android-4</code></td>
+<td>2</td>
+<td>0 (RED M. Engine Autonomous CI/CD)</td>
+<td></td>
+</tr>
+<tr>
+<td>M.-Engine-#12</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-dependabot/github_actions/actions/setup-node-7</code></td>
+<td>2</td>
+<td>0 (RED M. Engine Autonomous CI/CD)</td>
+<td></td>
+</tr>
+<tr>
+<td>M.-Engine-#13</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-dependabot/github_actions/softprops/action-gh-release-3</code></td>
+<td>2</td>
+<td>0 (RED M. Engine Autonomous CI/CD)</td>
+<td></td>
+</tr>
+<tr>
+<td>M.-Engine-#14</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-dependabot/github_actions/actions/upload-pages-artifact-5</code></td>
+<td>2</td>
+<td>0 (RED M. Engine Autonomous CI/CD)</td>
+<td></td>
+</tr>
+<tr>
+<td>M.-Engine-#15</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-dependabot/github_actions/actions/configure-pages-6</code></td>
+<td>2</td>
+<td>0 (RED M. Engine Autonomous CI/CD)</td>
+<td></td>
+</tr>
+<tr>
+<td>M.-Engine-#17</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-docs/muse-training-pack-link</code></td>
+<td>0</td>
+<td>0 (RED M. Engine Autonomous CI/CD)</td>
+<td></td>
+</tr>
+<tr>
+<td>M.-Engine-#18</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-fix/ci-setup-android-v3</code></td>
+<td>0</td>
+<td>0 (RED M. Engine Autonomous CI/CD)</td>
+<td></td>
+</tr>
+<tr>
+<td>M.-Engine-#2</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-dependabot/gradle/org.jetbrains.kotlinx-kotlinx-coroutines-test-1.11.0</code></td>
+<td>20</td>
+<td>0 (RED Android CI;M. Engine Autonomous CI/CD)</td>
+<td></td>
+</tr>
+<tr>
+<td>M.-Engine-#3</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-dependabot/gradle/androidx.room-room-runtime-2.8.4</code></td>
+<td>20</td>
+<td>0 (RED Android CI;M. Engine Autonomous CI/CD)</td>
+<td></td>
+</tr>
+<tr>
+<td>M.-Engine-#4</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-dependabot/gradle/androidx.room-room-ktx-2.8.4</code></td>
+<td>20</td>
+<td>0 (RED Android CI;M. Engine Autonomous CI/CD)</td>
+<td></td>
+</tr>
+<tr>
+<td>M.-Engine-#5</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-dependabot/gradle/androidx.core-core-ktx-1.19.0</code></td>
+<td>20</td>
+<td>0 (RED Android CI;M. Engine Autonomous CI/CD)</td>
+<td></td>
+</tr>
+<tr>
+<td>M.-Engine-#6</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-feature/mission-11-open-source-evolution</code></td>
+<td>19</td>
+<td>0 (RED Android CI;M. Engine Autonomous CI/CD)</td>
+<td></td>
+</tr>
+<tr>
+<td>URBAN-MAYHEM-#2</td>
+<td>false</td>
+<td>dirty</td>
+<td>false</td>
+<td><code>main&lt;-build/combat-context</code></td>
+<td>391</td>
+<td>0 (NONE )</td>
+<td></td>
+</tr>
+<tr>
+<td>agent-ops#10</td>
+<td>false</td>
+<td>dirty</td>
+<td>false</td>
+<td><code>main&lt;-claims/bannon-playtest-paused</code></td>
+<td>16</td>
+<td>0 (RED instruction-gate)</td>
+<td></td>
+</tr>
+<tr>
+<td>agent-ops#11</td>
+<td>false</td>
+<td>dirty</td>
+<td>false</td>
+<td><code>main&lt;-claims/kobra-paused</code></td>
+<td>16</td>
+<td>0 (RED instruction-gate)</td>
+<td></td>
+</tr>
+<tr>
+<td>agent-ops#9</td>
+<td>false</td>
+<td>dirty</td>
+<td>false</td>
+<td><code>main&lt;-docs/multiverse-map</code></td>
+<td>16</td>
+<td>0 (RED instruction-gate)</td>
+<td></td>
+</tr>
+<tr>
+<td>atlas#1</td>
+<td>true</td>
+<td>clean</td>
+<td>false</td>
+<td><code>seed/atlas-v1&lt;-study/greats-v1</code></td>
+<td>12</td>
+<td>0 (NONE )</td>
+<td></td>
+</tr>
+<tr>
+<td>atlas#2</td>
+<td>true</td>
+<td>clean</td>
+<td>false</td>
+<td><code>seed/atlas-v1&lt;-places/riverview-bluffs</code></td>
+<td>12</td>
+<td>0 (NONE )</td>
+<td></td>
+</tr>
+<tr>
+<td>atlas#7</td>
+<td>true</td>
+<td>clean</td>
+<td>false</td>
+<td><code>seed/atlas-v1&lt;-feat/birth-chart-multisystem</code></td>
+<td>2</td>
+<td>0 (NONE )</td>
+<td></td>
+</tr>
+<tr>
+<td>brutalfistgrokversion12#2</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-fix/ci-ground-particle-static-shell</code></td>
+<td>1</td>
+<td>0 (RED Brutal Fist CI)</td>
+<td></td>
+</tr>
+<tr>
+<td>brutalfistgrokversionten#2</td>
+<td>false</td>
+<td>dirty</td>
+<td>false</td>
+<td><code>main&lt;-rocket-update</code></td>
+<td>712</td>
+<td>0 (RED Brutal Fist CI)</td>
+<td></td>
+</tr>
+<tr>
+<td>brutalfistgrokversionten#21</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-grok/tekken-match-flow-reference</code></td>
+<td>342</td>
+<td>0 (RED Brutal Fist CI)</td>
+<td></td>
+</tr>
+<tr>
+<td>brutalfistgrokversionten#30</td>
+<td>true</td>
+<td>unstable</td>
+<td>true</td>
+<td><code>main&lt;-grok/canon-stages-and-grapple-pairs</code></td>
+<td>21</td>
+<td>0 (RED Bannon PWA Gate;Brutal Fist CI)</td>
+<td></td>
+</tr>
+<tr>
+<td>brutalfistgrokversionten#31</td>
+<td>true</td>
+<td>clean</td>
+<td>true</td>
+<td><code>main&lt;-grok/universal-retarget</code></td>
+<td>3</td>
+<td>0 (GREEN )</td>
+<td></td>
+</tr>
+<tr>
+<td>brutalfistgrokversionten#32</td>
+<td>true</td>
+<td>clean</td>
+<td>true</td>
+<td><code>main&lt;-grok/intro-fmv</code></td>
+<td>3</td>
+<td>0 (GREEN )</td>
+<td></td>
+</tr>
+<tr>
+<td>money-machine-hq#12</td>
+<td>true</td>
+<td>clean</td>
+<td>true</td>
+<td><code>main&lt;-feat/entrance-kit-v2-el-toro</code></td>
+<td>32</td>
+<td>0 (NONE )</td>
+<td></td>
+</tr>
+<tr>
+<td>money-machine-hq#25</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-fiverr-creative-gigs</code></td>
+<td>9</td>
+<td>0 (RED instruction-gate;pr-clean-merge)</td>
+<td></td>
+</tr>
+<tr>
+<td>physics-playground-pwa#13</td>
+<td>true</td>
+<td>clean</td>
+<td>false</td>
+<td><code>main&lt;-feat/fight-ai</code></td>
+<td>0</td>
+<td>0 (GREEN )</td>
+<td></td>
+</tr>
+<tr>
+<td>physics-playground-pwa#14</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-ci/cf-deploy</code></td>
+<td>0</td>
+<td>0 (RED CI)</td>
+<td></td>
+</tr>
+<tr>
+<td>western-heart#125</td>
+<td>false</td>
+<td>dirty</td>
+<td>false</td>
+<td><code>main&lt;-grok/wh-roster-cards</code></td>
+<td>7</td>
+<td>0 (RED instruction-gate)</td>
+<td></td>
+</tr>
+<tr>
+<td>western-heart#126</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-grok/wh-import-specs</code></td>
+<td>7</td>
+<td>0 (RED instruction-gate)</td>
+<td></td>
+</tr>
+<tr>
+<td>western-heart#127</td>
+<td>false</td>
+<td>dirty</td>
+<td>false</td>
+<td><code>main&lt;-t7t8-reference</code></td>
+<td>7</td>
+<td>0 (RED instruction-gate)</td>
+<td></td>
+</tr>
+<tr>
+<td>western-heart#128</td>
+<td>true</td>
+<td>unstable</td>
+<td>false</td>
+<td><code>main&lt;-grok/wh-handoff-runbook</code></td>
+<td>7</td>
+<td>0 (RED instruction-gate)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Note: physics-playground-pwa#13 above was merged after this snapshot.</p>
+<h2 id="prs-that-delete-files-must-not-merge-without-owner-label-approved-deletion">PRs that delete files (must not merge without owner label approved-deletion)<a class="headerlink" href="#prs-that-delete-files-must-not-merge-without-owner-label-approved-deletion" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Bannon#22 (base is a claude/ branch, head=main): deletes COPYING.txt</li>
+<li>Bannon#39: deletes .github/workflows/autonomous_build.yml</li>
+<li>M.-Engine-#10: deletes 6 files incl. app/applet/BANNON_ASSET_PROVENANCE.md, BANNON_LYRA_BASELINE_STRATEGY.md, BANNON_UNREAL_IMPORT_MANIFEST.md, create_integration_branch.js, patch_chat.js</li>
+</ul>
+<h2 id="force-pushes-seen-activity-api-last-90-days">Force-pushes seen (activity API, last ~90 days)<a class="headerlink" href="#force-pushes-seen-activity-api-last-90-days" title="Permanent link">&para;</a></h2>
+<p><strong>On default branch:</strong> Brutal-Fist main (2026-09-15), CODEDUMMY main (3× 2026-07-06), God-Mode-OS-D3MN-V2 main (2026-06-30). Old history is recoverable only via reflog/backups; check backup/ branches before assuming loss.</p>
+<ul>
+<li>physics-playground-pwa: feat/fight-ai@2026-10-14</li>
+<li>AshLanev2: feature/customizer-ui-eyes@2026-10-09 round6/music@2026-10-06 round3/audio@2026-10-06</li>
+<li>western-heart: docs/agents-edit-in-place@2026-10-14 feat/teardown-sweep-all-games@2026-10-13</li>
+<li>Bannon: claude/grapple-solver-model-fixes-oar0pg@2026-08-03 claude/grapple-solver-model-fixes-oar0pg@2026-07-20 claude/grapple-solver-model-fixes-oar0pg@2026-07-20 claude/grapple-solver-model-fixes-oar0pg@2026-07-20 claude/grapple-solver-model-fixes-oar0pg@2026-07-20 claude/grapple-solver-model-fixes-oar0pg@2026-07-19 claude/grapple-solver-model-fixes-oar0pg@2026-07-19 claude/grapple-solver-model-fixes-oar0pg@2026-07-11 claude/aaa-bannon-leg-stepping-sdwcjb@2026-07-05 claude/aaa-bannon-leg-stepping-sdwcjb@2026-07-04</li>
+<li>BioMechania: docs/agents-edit-in-place@2026-10-14</li>
+<li>ConcreteDragon: weight-paint-pwa@2026-10-09 weight-paint-pwa@2026-10-09</li>
+<li>Funnel-and-rod-fully-interactive-physics-biomechanics-simulator-: {</li>
+<li>}: </li>
+<li>URBAN-MAYHEM-: research/genre-study-hiredgun@2026-10-09</li>
+<li>TRIPPEDD-Production-studios-: docs/muse-training-pack-link@2026-10-14 wave3-anim-lane-c@2026-10-08 upgrade/production-pipeline-resilient-2026-09-08@2026-09-09</li>
+<li>Brutal-Fist: rocket-update@2026-09-16 main@2026-09-15</li>
+<li>M.-Engine-: dependabot/gradle/roborazzi-1.72.0@2026-09-01</li>
+<li>CODEDUMMY: main@2026-07-06 main@2026-07-06 main@2026-07-06</li>
+<li>God-Mode-OS-D3MN-V2: main@2026-06-30</li>
+<li>font-wizard: feat/gemini-editor-pipeline@2026-10-11</li>
+</ul>
+<h2 id="branches-with-no-pr-count-first-15">Branches with no PR (count, first 15)<a class="headerlink" href="#branches-with-no-pr-count-first-15" title="Permanent link">&para;</a></h2>
+<ul>
+<li>AshLanev2 (57): accessory-system anim-retarget/batch-outputs arena-integration art-wiring backup/ashlane-malakor-20261013 backup/box-2026-10-14-ashlane-base-wt-grok-ashlane-crash-spawn-rig backup/box-2026-10-14-ashlane-base-wt-grok-cf-pages-base-path backup/box-2026-10-14-ashlane-base-wt-grok-makerig-crash-fix backup/box-2026-10-14-ashlane-base-wt-wip backup/box-2026-10-14-ashlane-repo-wip backup/box-2026-10-14-fix-AshLanev2-fix-duplicate-chaindivider backup/box-2026-10-14-ig-w-AshLanev2-feat-instruction-gate backup/box-2026-10-14-mtp-AshLanev2-docs-muse-training-pack-link backup/box-2026-10-14-originalize-pr-AshLanev2-wip backup/box-2026-10-14-tmp-ashbuild-wip </li>
+<li>western-heart (20): backup/box-2026-10-14-ig-w-western-heart-feat-instruction-gate backup/box-2026-10-14-mtp-western-heart-docs-muse-training-pack-link backup/box-2026-10-14-western-heart-inventory-western-heart-grok-lab-playable-slice backup/box-2026-10-14-wh-cs-grok-creation-suite-v0 backup/box-2026-10-14-wh-cs-pr118 backup/box-2026-10-14-wh-cs-wip backup/box-2026-10-14-wh-qa-grok-wh-playtest-qa backup/box-2026-10-14-wh-qa-wip backup/box-2026-10-14/wh-cs/wip2 backup/box-2026-10-14/wh-qa/grok/wh-playtest-qa backup/box-2026-10-14/wh-qa/wip2 backup/box-2026-10-14b-wh-cs-wip backup/box-2026-10-14b-wh-qa-grok-wh-playtest-qa backup/box-2026-10-14b-wh-qa-wip feat/complete-asset-sweep </li>
+<li>Bannon (28): Branch-2 backup/box-2026-10-14-Brutal-Fist-BannonSource-wip backup/box-2026-10-14-bible-Bannon-ci-pr-clean-merge-and-bible backup/box-2026-10-14-bn-b-fix-perf-lazy-clips-debug-flag-version-stamp backup/box-2026-10-14-fix-Bannon-fix-ci-workflow-yaml-node22 backup/box-2026-10-14-ig-w-Bannon-feat-instruction-gate backup/box-2026-10-14-mtp-Bannon-docs-muse-training-pack-link backup/box-2026-10-14-ref-repos-Bannon-stickup-entrance-v1 backup/box-2026-10-14-wa-Bannon-docs-agents-standard backup/box-2026-10-14-wa-Bannon-wip backup/box-2026-10-14/bn_b/fix/perf-lazy-clips-debug-flag-version-stamp backup/box-2026-10-14b-Brutal-Fist-BannonSource-wip backup/box-2026-10-14b-wa-Bannon-wip docs/el-toro-v1-teardown feat/normalize-fbx-and-logging </li>
+<li>agent-ops (8): backup/box-2026-10-14-agent-ops-repo-claims-bannon-playtest-paused backup/box-2026-10-14-agent-ops-repo-claims-kobra-paused backup/box-2026-10-14-agent-ops-repo-docs-grokbot-activity-proof-2026-10-14 backup/box-2026-10-14-dev-shm-ao-grok-box-offload-log-2026-10-14 backup/box-2026-10-14-ig-w-agent-ops-feat-instruction-gate backup/box-2026-10-14-mtp-agent-ops-docs-muse-training-pack-link backup/box-2026-10-14-pt-ops-claims-playtest-2026-10-14 grok/pr13-resolved </li>
+<li>BioMechania (3): backup/box-2026-10-14-ig-w-BioMechania-feat-instruction-gate backup/box-2026-10-14-mtp-BioMechania-docs-muse-training-pack-link feature/mecha-contract-v2 </li>
+<li>ConcreteDragon (7): backup/box-2026-10-14-ig-w-ConcreteDragon-feat-instruction-gate content/wave-1 content/waves-2-4 feature/customization-suite gh-pages improveloop-c5 proving-ground/concretedragon </li>
+<li>brutalfistgrokversioneight (3): backup/box-2026-10-14-brutalfistgrokversioneight-wip backup/box-2026-10-14-mtp-brutalfistgrokversioneight-docs-muse-training-pack-link backup/box-2026-10-14b-brutalfistgrokversioneight-wip </li>
+<li>SMOKE-MIRROR-S- (1): claude/smoke-mirrors-constitution-1elwfs </li>
+<li>Mochiichao-Diamond-Version-2d- (1): grok/original-mochiichao-sprites </li>
+<li>theyard (6): backup/box-2026-10-14-mtp-theyard-docs-muse-training-pack-link feature/mecha-os-pulls feature/mecha-part-system feature/mecha-parts feature/mecha-ui research/genre-study-theyard </li>
+<li>chimera-emulator-hub (3): backup/box-2026-10-14-mtp-chimera-emulator-hub-docs-muse-training-pack-link backup/box-2026-10-14-tmp-ceh-feat-private-cloud-console backup/box-2026-10-14/tmp_ceh/feat/private-cloud-console </li>
+<li>M-Hero-Simulator- (2): backup/box-2026-10-14-mtp-M-docs-muse-training-pack-link research/genre-study-mhero </li>
+<li>URBAN-MAYHEM- (23): backup/box-2026-10-14-mtp-URBAN-MAYHEM--docs-muse-training-pack-link open-source-integration-20260907 open-source-integration-20260907-final open-source-integration-20260907-v10 open-source-integration-20260907-v11 open-source-integration-20260907-v12 open-source-integration-20260907-v2 open-source-integration-20260907-v3 open-source-integration-20260907-v4 open-source-integration-20260907-v5 open-source-integration-20260907-v6 open-source-integration-20260907-v7 open-source-integration-20260907-v8 open-source-integration-20260907-v9 os-int-final-2 </li>
+<li>money-machine-hq (26): backup/box-2026-10-14-ig-w-money-machine-hq-feat-instruction-gate backup/box-2026-10-14-mmhq-cdt-stash-0 backup/box-2026-10-14-mmhq-cdt-stash-1 backup/box-2026-10-14-mmhq-entrance-stash-0 backup/box-2026-10-14-mmhq-entrance-stash-1 backup/box-2026-10-14-mmhq-entrance-wip backup/box-2026-10-14-mmhq-et-v2-stash-0 backup/box-2026-10-14-mmhq-et-v2-stash-1 backup/box-2026-10-14-money-machine-hq-stash-0 backup/box-2026-10-14-money-machine-hq-stash-1 backup/box-2026-10-14-wa-money-machine-hq-docs-agents-edit-in-place backup/box-2026-10-14-wa-money-machine-hq-docs-agents-standard backup/box-2026-10-14-wa-money-machine-hq-docs-western-heart-audit backup/box-2026-10-14b-mmhq-cdt-stash0 backup/box-2026-10-14b-mmhq-cdt-stash1 </li>
+<li>TRIPPEDD-Production-studios- (266): agent/openhands-adapter agent/openhands-adapter-2 agent/openhands-adapter-3 backup/box-2026-10-14-bible-TRIPPEDD-Production-studios--ci-pr-clean-merge-and-bible backup/box-2026-10-14-fix-T-fix-typecheck-dup-rubberband backup/box-2026-10-14-ig-w-TRIPPEDD-Production-studios--feat-instruction-gate backup/box-2026-10-14-mtp-TRIPPEDD-Production-studios--docs-muse-training-pack-link backup/box-2026-10-14-wa-TRIPPEDD-Production-studios--docs-agents-standard dev/ep01-bootstrap-hardening-2026-09-09 dev/production-hardening-2026-09-08 ep02-refused-shots feat/auto-qc-gate feat/ep01-dialogue-v2 feat/episode01-prompt-first feat/episode01-prompt-first-lane </li>
+<li>God-Molecule-Show-Studio (11): backup/box-2026-10-14-bible-God-Molecule-Show-Studio-ci-pr-validate-latest-check backup/box-2026-10-14-ig-w-God-Molecule-Show-Studio-feat-instruction-gate claude/trippedd-toolchain-provisioning-8pccfc feat/episode01-prompt-first feat/episode01-prompt-first-lane feat/episode01-prompt-first-lane-final feat/episode01-prompt-first-lane-v2 feat/episode01-prompt-first-lane-v3 feat/episode01-prompt-first-lane-v4 feat/episode01-prompt-first-lane-v5 feat/world-visual-language-v1 </li>
+<li>brutalfistgrokversion12 (2): backup/box-2026-10-14-fix-brutalfistgrokversion12-fix-ci-ground-particle-static-shell backup/box-2026-10-14-mtp-brutalfistgrokversion12-docs-muse-training-pack-link </li>
+<li>brutalfist11 (1): backup/box-2026-10-14-mtp-brutalfist11-docs-muse-training-pack-link </li>
+<li>brutalfistgrokversiontenpointfive (1): backup/box-2026-10-14-mtp-brutalfistgrokversiontenpointfive-docs-muse-training-pack-link </li>
+<li>brutalfistgrokversion9 (1): backup/box-2026-10-14-mtp-brutalfistgrokversion9-docs-muse-training-pack-link </li>
+<li>brutalfistgrokversionseven (1): backup/box-2026-10-14-mtp-brutalfistgrokversionseven-docs-muse-training-pack-link </li>
+<li>brutalfistgrokversionsix (1): backup/box-2026-10-14-mtp-brutalfistgrokversionsix-docs-muse-training-pack-link </li>
+<li>brutalfistgrokversionfive (1): backup/box-2026-10-14-mtp-brutalfistgrokversionfive-docs-muse-training-pack-link </li>
+<li>brutalfistgrokversionfour (1): backup/box-2026-10-14-mtp-brutalfistgrokversionfour-docs-muse-training-pack-link </li>
+<li>brutalfistgrokversionthree (1): backup/box-2026-10-14-mtp-brutalfistgrokversionthree-docs-muse-training-pack-link </li>
+<li>brutalfistgrokversiontwo (1): backup/box-2026-10-14-mtp-brutalfistgrokversiontwo-docs-muse-training-pack-link </li>
+<li>brutalfistgrokversion (1): backup/box-2026-10-14-mtp-brutalfistgrokversion-docs-muse-training-pack-link </li>
+<li>Brutal-Fist (41): agent/animation-test-arena agent/animation-test-arena-final agent/animation-test-arena-final2 agent/animation-test-arena-final3 agent/animation-test-arena-final4 agent/animation-test-arena-final5 agent/animation-test-arena-final6 agent/animation-test-arena-final7 agent/animation-test-arena-final8 agent/animation-test-arena-final9 agent/animation-test-arena-v10 agent/animation-test-arena-v2 agent/animation-test-arena-v3 agent/animation-test-arena-v4 agent/animation-test-arena-v5 </li>
+<li>brutalfistgrokversionten (16): backup/bfgv10-work-20261013 backup/box-2026-10-14-mtp-brutalfistgrokversionten-docs-muse-training-pack-link backup/box-2026-10-14-vten-ci-fix-wip backup/box-2026-10-14-vten-intro-base-wip backup/box-2026-10-14-vten-intro-wip backup/box-2026-10-14-vten-main-wt-wip backup/box-2026-10-14-vten-stages-wip backup/box-2026-10-14b-vten-ci-fix-wip backup/box-2026-10-14b-vten-intro-base-wip backup/box-2026-10-14b-vten-intro-wip backup/box-2026-10-14b-vten-main-wt-wip backup/box-2026-10-14b-vten-stages-wip backup/brutal-fist-v10-20261013 docs/real-pwa-audit grok/kobra-fix </li>
+<li>AshLane-prototype (7): backup/anim-fix-20261013 backup/ashlane-port-20261013 backup/ashlane-proof-check-20261013 backup/ashlane-test-20261013 backup/box-2026-10-14-mtp-AshLane-prototype-docs-muse-training-pack-link backup/kaykit-replace-20261013 backup/workspace-sweep-save-20261007 </li>
+<li>box-storage (31): backup/box-2026-10-14-code-doctor-case-neon-fix-security-hardening backup/box-2026-10-14-code-doctor-case-neon-main backup/box-2026-10-14-mfluid-audit-Mochiichao-Diamond-Version-2d--wip backup/box-2026-10-14-tmp-tgt-master backup/box-2026-10-14/Brutal-Fist/stash-0 backup/box-2026-10-14/Brutal-Fist/wip backup/box-2026-10-14/agent-ops-repo/claims/bannon-playtest-paused backup/box-2026-10-14/agent-ops-repo/claims/kobra-paused backup/box-2026-10-14/ashlane_base-wt/wip backup/box-2026-10-14/ashlane_repo/wip backup/box-2026-10-14/brutalfistgrokversioneight/wip backup/box-2026-10-14/code-doctor_case-neon/fix/security-hardening backup/box-2026-10-14/code-doctor_case-neon/main backup/box-2026-10-14/mfluid-audit_Mochiichao-Diamond-Version-2d-/wip backup/box-2026-10-14/mmhq-cdt/stash-0 </li>
+<li>M.-Engine- (3): backup/box-2026-10-14-fix-M.-Engine--wip backup/box-2026-10-14-mtp-M.-Engine--docs-muse-training-pack-link backup/box-2026-10-14b-fix-M.-Engine--wip </li>
+<li>box-orphans (3): case-neon/main mfluid-mochiichao-proof-tools tmp-tgt/master </li>
+<li>CODEDUMMY (4): backup/box-2026-10-14-mtp-CODEDUMMY-docs-muse-training-pack-link claude/bannon-dna-native-port-digjqw claude/zip-sync-0710 reconcile/main-master </li>
+<li>Moneymachine (2): backup/box-2026-10-14-mtp-Moneymachine-docs-muse-training-pack-link proving-ground/moneymachine </li>
+<li>Forge3D (2): backup/box-2026-10-14-mtp-Forge3D-docs-muse-training-pack-link proving-ground/forge3d </li>
+<li>Moneymachine-private (1): backup/box-2026-10-14-mtp-Moneymachine-private-docs-muse-training-pack-link </li>
+<li>God-Mode-OS-D3MN-V2 (1): backup/box-2026-10-14-mtp-God-Mode-OS-D3MN-V2-docs-muse-training-pack-link </li>
+<li>disney-tva-bbb-pulls (1): main </li>
+<li>dispossessory-case (1): case/initial-file </li>
+<li>cn-gigaleak-scooby-doo-mystery-inc (4): feat/sdmi-manifest-paths2 feat/sdmi-manifest-v3 scooby-chunked scooby-doo-materials </li>
+<li>Neon-App-Builder (1): fix/security-hardening </li>
+</ul>
+<p>Most are <code>backup/box-2026-10-14-*</code> snapshot branches from the freeze — keep them (never delete without owner approval).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

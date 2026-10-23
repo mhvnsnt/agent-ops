@@ -1,0 +1,2166 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Indexes, conventions, manifests, and handoffs for the agent fleet.">
+      
+      
+        <meta name="author" content="Mars FMMG">
+      
+      
+      
+        <link rel="prev" href="../torbox-lane3-alternatives/">
+      
+      
+        <link rel="next" href="../torbox-lane5-agents/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Lane 4 — Free compute / cloud-to-cloud transfer layer - Agent Ops Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lane-4-free-compute-cloud-to-cloud-transfer-layer" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Agent Ops Hub" class="md-header__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agent Ops Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lane 4 — Free compute / cloud-to-cloud transfer layer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Agent Ops Hub" class="md-nav__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Agent Ops Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    agent-ops — restart resilience for agent work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AGENTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AGENTS.md
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ANTI-CLOBBER-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ANTI-CLOBBER LAW (owner 2026-10-17)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AUDIT-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repo audit — 2026-10-14 (Grok Bot)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BOX-OFFLOAD-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BOX OFFLOAD LOG — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHECKPOINT_PROTOCOL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkpoint Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLAIMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAIMS (prevents collisions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CROSS-REPO-STRANDED-AUDIT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CROSS-REPO STRANDED-WORK AUDIT — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../END-OF-SESSION-BACKUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    END-OF-SESSION BACKUP (watchdog procedure)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FRICTION-RESEARCH-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FRICTION RESEARCH LOG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-CANON/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — CANON (where the game's knowledge lives)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF INDEX — fleet state, one place, no "missing"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-REPOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — REPOS (per-repo state + landing order)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-TEARDOWNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — TEARDOWNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-WESTERN-HEART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — WESTERN HEART (mhvnsnt/western-heart)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOW-GROKBOT-WORKS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How Grok Bot works (copy this process)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDEMPOTENCY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idempotency Rules — write work so a re-run can't duplicate or corrupt it
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LANE_GUARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane Guard — crash-resilient + collision-proof lanes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-IT-YOURSELF-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE-IT-YOURSELF LAW (owner 2026-10-15) — canonical copy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-QUEUE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE QUEUE — everything built but not landed, all repos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NO-DATA-LOSS-RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NO-DATA-LOSS RULES (owner law — mhvnsnt)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-CONVENTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Conventions (all repos, all agents)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-PULLIN-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RESEARCH → PULL-IN INDEX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESUME_BRIEF_TEMPLATE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resume Brief Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TAG-TEAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TAG-TEAM board (live)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-ALTERNATIVES-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Alternatives — Free/Open-Source Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-BREAKTHROUGH-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Breakthrough Program — Final Report (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-LANE5-AGENT-REVIEW-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox BAD_TOKEN — Lane 5 All-Agents Review (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-RESEARCH-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Research — 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-SUPPORT-TICKET-DRAFT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Support Ticket — DRAFT (do not send without owner approval)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adr-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-NNNN:
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-cleanup-log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Cleanup Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grokbot-activity-proof-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot / MoneyManBusch activity proof — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-claims-recheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Claims Re-Check — 2026-10-20 evening (coordinator lane, parent-ordered)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane1-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Auth — Lane 1, Round 2 (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane2-debrid-live/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LANE 2 (RETRY) — Debrid-Link + AllDebrid Live Tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane3-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 3 — Alternative Debrid / Seedbox Sweep for a 350 GB Single-File Torrent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 4 — Free compute / cloud-to-cloud transfer layer
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 4 — Free compute / cloud-to-cloud transfer layer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem-restated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The problem, restated
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-architecture-that-dissolves-all-three-walls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The architecture that dissolves all three walls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verdict-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verdict table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platform-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Platform evidence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Platform evidence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kaggle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kaggle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudflare-workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloudflare Workers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colab-hf-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colab / HF Spaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracle-always-free" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oracle Always Free
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multcloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MultCloud
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-more-dead-end-stated-plainly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One more dead end, stated plainly
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-prototype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The prototype
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The prototype">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-evidence-local-public-file-2026-10-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test evidence (local, public file, 2026-10-20)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runbook-for-the-parent-browser-lane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runbook for the parent / browser lane
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-questions-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open questions / risks
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane5-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 5 — All-Agents Tooling on TorBox BAD_TOKEN (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane6-oss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Lane 6 — Open-Source Wire-Up + Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane7-seedbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 7 — Free-Trial Seedbox Angle (Seedhost.eu + Pulsed Media + others)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem-restated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The problem, restated
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-architecture-that-dissolves-all-three-walls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The architecture that dissolves all three walls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verdict-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verdict table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platform-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Platform evidence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Platform evidence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kaggle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kaggle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudflare-workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloudflare Workers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colab-hf-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colab / HF Spaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracle-always-free" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oracle Always Free
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multcloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MultCloud
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-more-dead-end-stated-plainly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One more dead end, stated plainly
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-prototype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The prototype
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The prototype">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-evidence-local-public-file-2026-10-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test evidence (local, public file, 2026-10-20)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runbook-for-the-parent-browser-lane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runbook for the parent / browser lane
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-questions-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open questions / risks
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lane-4-free-compute-cloud-to-cloud-transfer-layer">Lane 4 — Free compute / cloud-to-cloud transfer layer<a class="headerlink" href="#lane-4-free-compute-cloud-to-cloud-transfer-layer" title="Permanent link">&para;</a></h1>
+<p><strong>Date:</strong> 2026-10-20 · <strong>Status:</strong> prototype built + tested locally · <strong>No real credential was used anywhere in this lane</strong></p>
+<h2 id="the-problem-restated">The problem, restated<a class="headerlink" href="#the-problem-restated" title="Permanent link">&para;</a></h2>
+<p>A ~350 GB zip sits behind a TorBox dashboard CDN link. Three walls:</p>
+<ol>
+<li><strong>Local disk is dead</strong> (96–97% full) — nothing more can stage here.</li>
+<li><strong>TorBox's API path caps out</strong> — API returns <code>BAD_TOKEN</code>; the Essential
+   plan's API allowance (~200 GB) is smaller than the file (350 GB).
+   Dashboard CDN links bypass the API cap, but…</li>
+<li><strong>The link itself is a bearer credential</strong>, and it is DLP-denylisted as
+   a tool parameter — an agent literally cannot be handed the link through
+   chat tooling.</li>
+</ol>
+<h2 id="the-architecture-that-dissolves-all-three-walls">The architecture that dissolves all three walls<a class="headerlink" href="#the-architecture-that-dissolves-all-three-walls" title="Permanent link">&para;</a></h2>
+<p>Put the compute where the secret can be typed into a <strong>platform's own
+secret store by a human in a browser</strong>, and stream through it:</p>
+<div class="highlight"><pre><span></span><code>                 pasted ONCE into the platform's secret UI (browser)
+                 never in chat / git / agent tool parameters
+                                │
+                                ▼
+ TorBox CDN link ──HTTP Range──► FREE COMPUTE ──pipe──► uploads.github.com
+ (350 GB zip,      (tail + CD,   (GHA runner /           ──► private GitHub
+  never fully       then only    Kaggle kernel)              release assets
+  downloaded)       wanted       RAM: a few MiB              (&lt; 2 GiB each,
+                    slices)      Disk: 0 bytes               hash-verified)
+</code></pre></div>
+<p>Why this works, mechanically:</p>
+<ul>
+<li>The proven local code already does the hard part.
+  <code>hero-parts-pull/zip_extract.py</code> reads a Zip64 central directory over
+  HTTP Range and fetches only wanted files' byte ranges;
+  <code>hero-parts-pull/github_upload_stream.py</code> pipes a byte stream straight
+  into an <code>uploads.github.com</code> POST and verifies size + head/mid/tail
+  range hashes. Neither needs the whole file, ever.</li>
+<li>A runner/kernel only needs <strong>a few MiB of RAM and zero disk</strong> if the
+  extraction is slice-streamed (the local extractor held each file whole
+  in RAM; the prototype fixes that — 1 MiB slices, streaming zlib).</li>
+<li>The secret problem is a <em>routing</em> problem, not a cryptography problem:
+  GitHub Actions secrets, Kaggle Secrets, Cloudflare secrets, and HF
+  secrets are all entered through that platform's own UI. The value goes
+  browser → platform secret store → runner environment. Chat, agents,
+  and their DLP filters are simply not in the path.</li>
+<li>Resumability is by construction: release assets are named by content
+  (file name, or <code>slice-&lt;start&gt;-&lt;size&gt;.bin</code>); a re-run skips assets that
+  already exist at the exact size — the same pattern the local uploader
+  uses with its manifest. If a CDN link expires mid-run, paste a fresh
+  link into the secret and re-run; finished slices/files are not redone.</li>
+</ul>
+<h2 id="verdict-table">Verdict table<a class="headerlink" href="#verdict-table" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Verdict</th>
+<th>Why (evidence below)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GitHub Actions</strong></td>
+<td>✅ <strong>PRIMARY — prototype built</strong></td>
+<td>Public-repo standard runners: free, no minute cap. Private: 2,000 min/mo free. 14 GB disk is irrelevant (streaming uses 0). 6 h/job cap solved by matrix fan-out (20 concurrent on Free). Secret store is exactly the DLP bypass needed. Same destination platform as the upload target — when target = same repo, not even a PAT is needed.</td>
+</tr>
+<tr>
+<td><strong>Kaggle kernels</strong></td>
+<td>✅ <strong>STRONG FALLBACK — variant included</strong></td>
+<td>Internet-capable kernels, ~9 h sessions, CPU kernels don't touch the 30 GPU-h/week quota, Kaggle Secrets is a real secret store (<code>UserSecretsClient</code>). ~20 GB working cap is irrelevant when streaming out. Weaker than GHA only in automation (kernel push/run is clunkier) and session model.</td>
+</tr>
+<tr>
+<td><strong>Google Colab</strong></td>
+<td>⚠️ Manual fallback only</td>
+<td>Free runtimes up to 12 h, but idle timeouts (~90 min), no headless trigger, no durable unattended run. Fine if a human is already sitting in the notebook; wrong tool for a 350 GB unattended transfer. Has a Secrets pane (<code>google.colab.userdata</code>) in current Colab — verify in UI.</td>
+</tr>
+<tr>
+<td><strong>Hugging Face Spaces</strong></td>
+<td>⚠️ Workable, awkward</td>
+<td>Free CPU Basic: 2 vCPU / 16 GB / 50 GB <em>non-persistent</em> disk, secrets as env vars. But a Space is a long-running web app that sleeps, not a batch job — you'd expose a trigger endpoint and babysit it. No advantage over GHA for this job.</td>
+</tr>
+<tr>
+<td><strong>Cloudflare Workers (free)</strong></td>
+<td>❌ Not an engine; ✅ optional proxy</td>
+<td>Free: 100k req/day but <strong>10 ms CPU/invocation, 128 MB RAM, 50 subrequests</strong>. Any Zip64 parsing / zlib / hashing blows the CPU cap. A <em>pure pass-through</em> Range proxy survives (CPU isn't charged while waiting on the network; response body size unenforced) — useful only as URL laundering in front of a real engine. Prototype included, untested live (no CF account wired in this lane).</td>
+</tr>
+<tr>
+<td><strong>Oracle Always Free ARM</strong></td>
+<td>🚩 Owner decision — <strong>not recommended by this lane</strong></td>
+<td>Technically the best always-on free VM (Ampere A1 + 200 GB block). But signup <strong>requires a real credit/debit card</strong> for identity verification (no prepaid/virtual), home region is permanent, free ARM capacity is frequently unavailable, and idle instances get reclaimed. Spending/identity step = owner's call only, per the brief.</td>
+</tr>
+<tr>
+<td><strong>MultCloud / cloud-to-cloud services</strong></td>
+<td>❌ Dead end for this target</td>
+<td>Supports ~30–40 clouds (Drive, Dropbox, OneDrive, MEGA, FTP/SFTP, WebDAV, S3…) — <strong>no TorBox / debrid source, and no GitHub (let alone GitHub Releases) as a target</strong>. Its URL "remote upload" lands in a cloud drive, not a release; the obvious free target (Drive, 15 GB) is two orders too small anyway.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="platform-evidence">Platform evidence<a class="headerlink" href="#platform-evidence" title="Permanent link">&para;</a></h2>
+<h3 id="github-actions">GitHub Actions<a class="headerlink" href="#github-actions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Minutes:</strong> "GitHub Actions usage is free for standard GitHub-hosted
+  runners in <strong>public repositories</strong>"; private repos get a plan allowance
+  — <strong>2,000 min/mo on Free</strong>, 3,000 Pro/Team, 50,000 Enterprise Cloud.
+  (<a href="https://docs.github.com/en/enterprise-cloud@latest/get-started/learning-about-github/githubs-plans">GitHub plans doc</a>;
+  <a href="https://www.codetalenthub.io/github-actions-free-tier/">billing summary</a>)</li>
+<li><strong>Runner:</strong> Linux standard runner = 14 GB SSD (2 vCPU/8 GB private,
+  4 vCPU/16 GB public per the current runner table). Our streaming peak
+  disk is the checkout (&lt; 1 MB) — the 14 GB never binds.
+  (<a href="https://docs.github.com/en/actions/reference/runners/github-hosted-runners">runner reference</a>)</li>
+<li><strong>Job cap:</strong> each job max <strong>6 hours</strong> execution; <code>timeout-minutes</code> max</li>
+<li><strong>Concurrency:</strong> Free plan = <strong>20 concurrent jobs</strong>.
+  (<a href="https://docs.github.com/en/enterprise-server@3.18/actions/reference/limits">Actions limits</a>)
+  → Fan-out math (scenarios, not measurements — runner bandwidth was not
+  benchmarked in this lane): one job must move its share in &lt; 6 h, i.e.
+  sustain ≥ share/21,600 s. A full 350 GB mirror split 20 ways = 17.5 GB
+  per job ≈ 0.81 MB/s floor per job — a very low bar. The <em>selective</em>
+  pull (the ~5 GB actually wanted in past pulls of this kind) is a
+  single short job at any plausible speed.</li>
+<li><strong>Release asset cap:</strong> each release file must be <strong>&lt; 2 GB</strong> (2 GiB).
+  The workflow defaults to the owner's <strong>100 MB</strong> asset standard
+  (<code>slice_size=100000000</code>) and accepts anything &lt; 2 GiB.
+  (<a href="https://gitprotect.io/blog/github-storage-limits/">storage limits write-up</a>;
+  <a href="https://deepwiki.com/ading2210/gh-large-releases">gh-large-releases, built around the same 2 GB limit</a>)</li>
+<li><strong>Secrets:</strong> entered in repo Settings → Secrets and variables →
+  Actions; injected as env; GitHub masks exact secret values in logs.
+  This prototype additionally never prints the URL (scheme + host +
+  path only, query redacted) and never puts it on a command line.</li>
+<li><strong>The unlimited-minutes shape:</strong> make the <em>runner</em> repo public (code
+  only — it contains no data and no secrets in git) and the <em>target</em>
+  repo private, reached with a fine-grained PAT stored as a secret in
+  the runner repo (scope: that one repo, Contents: Read and write,
+  short expiry). Public minutes are free; the assets land private.
+  If the target release may live in the runner repo itself, skip the
+  PAT entirely — the built-in <code>GITHUB_TOKEN</code> with
+  <code>permissions: contents: write</code> suffices.</li>
+<li><strong>⚠️ Terms flag (read before the first big run):</strong> GitHub's Actions
+  terms restrict uses unrelated to the repo's own software project
+  (bulk file-hosting / distribution abuse is the classic enforcement
+  case). This lane's honest read: streaming <em>this project's own assets</em>
+  into <em>this project's own releases</em> is project-scoped CI-shaped work,
+  and the selective pull is small. A repeated wholesale 350 GB mirror
+  through a public repo is greyer and higher-profile. Keep runs
+  project-scoped and modest, prefer the private-repo/2,000-min path
+  when the job fits it, and treat any GitHub warning as a stop signal.
+  This is a judgement call for the owner, surfaced — not hidden.</li>
+</ul>
+<h3 id="kaggle">Kaggle<a class="headerlink" href="#kaggle" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Kernels: CPU notebooks (4 cores / ~16 GB in secondary sources),
+  GPU quota <strong>30 h/week</strong> (owner-known), sessions up to <strong>~9 h</strong>,
+  saved output capped ~<strong>20 GB</strong>, internet is a notebook setting that
+  must be ON. (<a href="https://deepwiki.com/hahuyhoang411/SmolDLM/5.2-kaggle-notebooks">Kaggle constraints summary</a>;
+  <a href="https://www.scribd.com/document/738541657/Data-Analysis-and-Machine-Learning-With-Kaggle-How-to-Win-Competitions-On-Kaggle-and-Build-a-Successful-Career-in-Data-Science-1801817472-978180181747">notebook resource notes</a>)</li>
+<li>Secrets: Add-ons → Secrets; read with
+  <code>from kaggle_secrets import UserSecretsClient</code> /
+  <code>UserSecretsClient().get_secret("SOURCE_URL")</code> — same DLP bypass shape
+  as GHA. (<a href="https://blog.gitguardian.com/how-to-handle-secrets-in-jupyter-notebooks/">GitGuardian on notebook secrets</a>)</li>
+<li>Use <strong>CPU</strong> kernels for byte moving; GPU quota is for renders.
+  Variant script: <code>torbox-gha-prototype/kaggle/kaggle_kernel.py</code>.</li>
+</ul>
+<h3 id="cloudflare-workers">Cloudflare Workers<a class="headerlink" href="#cloudflare-workers" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Free plan, from Cloudflare's own docs: <strong>100,000 requests/day,
+  10 ms CPU time, 128 MB memory, 50 subrequests/request, 6 simultaneous
+  outgoing connections</strong>; request body cap 100 MB on the Free zone plan;
+  <strong>response body size not enforced</strong>.
+  (<a href="https://developers.cloudflare.com/workers/platform/limits/">Workers limits</a>;
+  <a href="https://developers.cloudflare.com/workers/platform/pricing/">Workers pricing</a>)</li>
+<li>Conclusion drawn from those numbers: a Worker can <em>proxy</em> a Range
+  stream (I/O wait is not CPU time) but cannot <em>be</em> the engine — parsing
+  a central directory, inflating deflate streams, and SHA-256 over
+  gigabytes inside 10 ms CPU slices is not a thing. Optional proxy
+  prototype: <code>torbox-gha-prototype/cloudflare-worker/worker.js</code>.</li>
+</ul>
+<h3 id="colab-hf-spaces">Colab / HF Spaces<a class="headerlink" href="#colab-hf-spaces" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Colab free: notebooks run <strong>at most 12 hours</strong>, idle timeouts apply,
+  availability varies. (<a href="https://research.google.com/colaboratory/faq.html">Colab FAQ</a>)</li>
+<li>HF Spaces free CPU Basic: <strong>2 vCPU, 16 GB RAM, 50 GB non-persistent
+  disk</strong>; secrets configured per-Space and exposed as env vars; free
+  Spaces sleep when idle. (<a href="https://huggingface.co/docs/hub/spaces-overview">Spaces overview</a>)</li>
+</ul>
+<h3 id="oracle-always-free">Oracle Always Free<a class="headerlink" href="#oracle-always-free" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ampere A1 ARM + 200 GB block storage, always-free — but signup states,
+  in every current guide: <strong>a valid credit card is required for identity
+  verification; virtual/prepaid cards are not accepted</strong>; a small
+  temporary hold is placed; the home region chosen at signup is
+  permanent for Always Free resources.
+  (<a href="https://www.techeia.com/blog/how-to-create-always-free-vm-in-oracle">setup guide</a>;
+  <a href="https://site2us.com/en/servers/oracle-cloud-free-tier">2026 limits write-up</a>)</li>
+<li><strong>Flagged, not recommended.</strong> If the owner ever chooses to create the
+  account himself, an always-on ARM box becomes the cleanest engine of
+  all (no 6 h cap, no minute accounting) — the same <code>range_list.py</code>
+  runs there unchanged. Nobody else should make that signup call.</li>
+</ul>
+<h3 id="multcloud">MultCloud<a class="headerlink" href="#multcloud" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Supported set is mainstream cloud drives + FTP/SFTP/WebDAV/NAS/S3
+  (~30–40 services). TorBox is not among them; GitHub is not among
+  them. (<a href="https://www.multcloud.com/tutorials/access-all-your-clouds-with-one-login.html">MultCloud supported clouds</a>;
+  <a href="https://www.aomeitech.com/s-preview?f=pdf%2FMultCloud.pdf">MultCloud intro, supported list</a>)</li>
+<li>No source, no target → no path. Closed.</li>
+</ul>
+<h3 id="one-more-dead-end-stated-plainly">One more dead end, stated plainly<a class="headerlink" href="#one-more-dead-end-stated-plainly" title="Permanent link">&para;</a></h3>
+<p><strong>Magnet-direct is not viable at 350 GB on any free tier above.</strong> A
+torrent client must land the bytes <em>somewhere</em> before re-chunking them;
+every free disk here is 14–50 GB. The only shapes that work at this
+size are (a) Range-selective extraction of wanted files, and (b)
+Range re-chunking of the raw archive — both need the HTTP/CDN link,
+which is exactly what the secret-store architecture delivers. (For a
+<em>small</em> wanted subset, torrent file-selection on Kaggle's ~20 GB would
+fit — fallback B, only if no CDN link can be obtained at all.)</p>
+<h2 id="the-prototype">The prototype<a class="headerlink" href="#the-prototype" title="Permanent link">&para;</a></h2>
+<p><code>~/workspace/agent-ops/torbox-gha-prototype/</code> — README, workflow,
+<code>range_list.py</code> (stdlib only), Kaggle variant, Worker proxy, test
+evidence. Design deltas vs the local originals:</p>
+<ul>
+<li>CD parsed <strong>incrementally</strong> (8 MiB fetches, carry buffer) — no
+  whole-CD or whole-file RAM residency anywhere.</li>
+<li><code>extract-one</code> <strong>verifies CRC32</strong> against the central directory
+  (the local script never checked).</li>
+<li><code>slice</code> mode is a <strong>stdout generator</strong> for raw re-chunking:
+  <code>range_list.py slice &lt;start&gt; &lt;size&gt; | curl --data-binary @- …uploads…</code></li>
+<li>URL only from <code>SOURCE_URL</code> env; logs print scheme+host+path with the
+  query redacted; size discovery falls back from HEAD to a <code>bytes=0-0</code>
+  probe for signed links that reject HEAD.</li>
+</ul>
+<h3 id="test-evidence-local-public-file-2026-10-20">Test evidence (local, public file, 2026-10-20)<a class="headerlink" href="#test-evidence-local-public-file-2026-10-20" title="Permanent link">&para;</a></h3>
+<p>Target: the archive.org <strong>Zip64</strong> zip <code>OK KO.zip</code>,
+7,910,137,932 bytes — previously parsed by the local pipeline
+(<code>hero-parts-pull/okko-ia-centraldir.json</code>), so results cross-check.</p>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>list</code></td>
+<td><strong>476 entries / 428 files / 12.046 GB uncompressed</strong> — matches the earlier independent parse (476 entries, 7,910,137,932 bytes) exactly</td>
+</tr>
+<tr>
+<td><code>extract-one ENID_01_RGB.ai</code></td>
+<td>444,118 bytes streamed out; <code>size_ok=True</code>; <strong>CRC32 computed <code>4843a44f</code> == CD CRC <code>4843a44f</code></strong>; sha256 <code>2245c7c3…a973a</code></td>
+</tr>
+<tr>
+<td><code>slice 1000000 4194304</code></td>
+<td>sha256 <code>b8103775…c519</code> — <strong>byte-identical to an independent <code>curl -L -r</code> fetch of the same range</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Logs: <code>torbox-gha-prototype/test-output/</code> (<code>list-run.log</code>,
+<code>extract-one-run.log</code>, <code>slice-crosscheck.txt</code>, <code>okko-manifest.json</code>).
+YAML and both Python files pass syntax checks; <code>worker.js</code> passes
+<code>node --check</code>.</p>
+<p><strong>Not tested (needs the parent/browser lane):</strong> an actual Actions run,
+and Range behaviour of a real TorBox CDN link. Both are first-run smoke
+items, deliberately sequenced: <code>mode=list</code> costs only ~70 KB + the CD
+bytes and answers "does this link honour Range after redirects?" before
+a single big byte moves.</p>
+<h2 id="runbook-for-the-parent-browser-lane">Runbook for the parent / browser lane<a class="headerlink" href="#runbook-for-the-parent-browser-lane" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Create the runner repo with this prototype's code (public for
+   unlimited minutes, or private if the job fits 2,000 min/mo and you
+   prefer it — selective pulls fit easily). Push via the normal
+   branch → PR → merge path. <strong>No secrets in git, ever.</strong></li>
+<li>In that repo: <strong>Settings → Secrets and variables → Actions</strong> —
+   add secret <code>SOURCE_URL</code> (paste the TorBox dashboard CDN link in the
+   browser), and, for a separate private target repo, secret
+   <code>TARGET_PAT</code> + variables <code>TARGET_REPO</code>, <code>RELEASE_TAG</code>.</li>
+<li><strong>Actions → torbox-range → Run workflow → <code>mode=list</code>.</strong> Expect the
+   manifest artifact + entry count in the log. If Range fails here, the
+   link/CDN is the problem — nothing else was spent.</li>
+<li>Then <code>mode=extract-one</code> per wanted file, or <code>mode=slice-upload</code>
+   with the JSON offset list for a whole-archive mirror
+   (100 MB assets by default; 20-way matrix max).</li>
+<li>Verify per the workflow's built-in checks (upload size-exact; the
+   extract pass prints CRC OK before the upload pass runs).</li>
+<li><strong>Cleanup:</strong> delete <code>SOURCE_URL</code> / revoke <code>TARGET_PAT</code> when done.
+   Bearer link + PAT are spent once the transfer lands.</li>
+</ol>
+<h2 id="open-questions-risks">Open questions / risks<a class="headerlink" href="#open-questions-risks" title="Permanent link">&para;</a></h2>
+<ul>
+<li>TorBox CDN link lifetime and Range-after-redirect behaviour: unproven
+  until runbook step 3. Mitigation is built in (resumable assets,
+  cheap smoke test first).</li>
+<li>GHA bandwidth from runner → TorBox CDN and runner → uploads endpoint
+  was not benchmarked here; the 6 h math has huge headroom at 20-way
+  fan-out, but the first real run should record its own throughput in
+  the run log for the next plan.</li>
+<li>Actions terms flag (above) — owner's call on public-vs-private
+  runner repo for the big mirror; selective pulls are low-profile
+  either way.</li>
+<li>Kaggle internet-on kernels and the Colab Secrets pane are
+  settings-level facts from secondary sources — confirm in the UI at
+  setup time; neither blocks the GHA primary path.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

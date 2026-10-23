@@ -1,0 +1,2117 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Indexes, conventions, manifests, and handoffs for the agent fleet.">
+      
+      
+        <meta name="author" content="Mars FMMG">
+      
+      
+      
+        <link rel="prev" href="../torbox-lane2-debrid-live/">
+      
+      
+        <link rel="next" href="../torbox-lane4-compute/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Lane 3 — Alternative Debrid / Seedbox Sweep for a 350 GB Single-File Torrent - Agent Ops Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lane-3-alternative-debrid-seedbox-sweep-for-a-350-gb-single-file-torrent" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Agent Ops Hub" class="md-header__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agent Ops Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lane 3 — Alternative Debrid / Seedbox Sweep for a 350 GB Single-File Torrent
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Agent Ops Hub" class="md-nav__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Agent Ops Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    agent-ops — restart resilience for agent work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AGENTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AGENTS.md
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ANTI-CLOBBER-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ANTI-CLOBBER LAW (owner 2026-10-17)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AUDIT-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repo audit — 2026-10-14 (Grok Bot)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BOX-OFFLOAD-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BOX OFFLOAD LOG — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHECKPOINT_PROTOCOL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkpoint Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLAIMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAIMS (prevents collisions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CROSS-REPO-STRANDED-AUDIT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CROSS-REPO STRANDED-WORK AUDIT — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../END-OF-SESSION-BACKUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    END-OF-SESSION BACKUP (watchdog procedure)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FRICTION-RESEARCH-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FRICTION RESEARCH LOG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-CANON/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — CANON (where the game's knowledge lives)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF INDEX — fleet state, one place, no "missing"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-REPOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — REPOS (per-repo state + landing order)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-TEARDOWNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — TEARDOWNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-WESTERN-HEART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — WESTERN HEART (mhvnsnt/western-heart)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOW-GROKBOT-WORKS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How Grok Bot works (copy this process)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDEMPOTENCY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idempotency Rules — write work so a re-run can't duplicate or corrupt it
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LANE_GUARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane Guard — crash-resilient + collision-proof lanes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-IT-YOURSELF-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE-IT-YOURSELF LAW (owner 2026-10-15) — canonical copy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-QUEUE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE QUEUE — everything built but not landed, all repos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NO-DATA-LOSS-RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NO-DATA-LOSS RULES (owner law — mhvnsnt)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-CONVENTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Conventions (all repos, all agents)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-PULLIN-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RESEARCH → PULL-IN INDEX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESUME_BRIEF_TEMPLATE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resume Brief Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TAG-TEAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TAG-TEAM board (live)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-ALTERNATIVES-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Alternatives — Free/Open-Source Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-BREAKTHROUGH-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Breakthrough Program — Final Report (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-LANE5-AGENT-REVIEW-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox BAD_TOKEN — Lane 5 All-Agents Review (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-RESEARCH-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Research — 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-SUPPORT-TICKET-DRAFT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Support Ticket — DRAFT (do not send without owner approval)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adr-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-NNNN:
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-cleanup-log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Cleanup Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grokbot-activity-proof-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot / MoneyManBusch activity proof — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-claims-recheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Claims Re-Check — 2026-10-20 evening (coordinator lane, parent-ordered)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane1-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Auth — Lane 1, Round 2 (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane2-debrid-live/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LANE 2 (RETRY) — Debrid-Link + AllDebrid Live Tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 3 — Alternative Debrid / Seedbox Sweep for a 350 GB Single-File Torrent
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 3 — Alternative Debrid / Seedbox Sweep for a 350 GB Single-File Torrent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bottom-line-honest-evidence-based" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bottom line (honest, evidence-based)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ranked-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ranked table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evidence-source-urls-fetched-or-returned-this-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidence / source URLs (fetched or returned this session)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live-tests-performed-api-level-no-browser-this-subagent-cannot-operate-a-live-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live tests performed (API-level, no browser — this subagent cannot operate a live browser)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Live tests performed (API-level, no browser — this subagent cannot operate a live browser)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#top-candidate-1-pikpak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Top candidate 1 — PikPak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-candidate-2-torbox-free-tier-account-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Top candidate 2 — TorBox (free tier account test)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-api-probes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other API probes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-mirror-webseed-search-is-the-payload-already-mirrored" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public mirror / webseed search — is the payload already mirrored?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exact-signup-paths-for-parent-browser-lane-no-owner-manual-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exact signup paths for parent / browser lane (no owner manual work)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exact signup paths for parent / browser lane (no owner manual work)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#path-a-pikpak-5-day-premium-trial-the-only-free-fit-try-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path A — PikPak 5-day Premium trial (the only FREE fit) — TRY FIRST
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-b-torbox-pro-paid-fact-10mo-proven-fit-fallback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path B — TorBox Pro (paid fact: $10/mo) — proven-fit fallback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-c-real-debrid-3-15-days-paid-unproven-for-this-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path C — Real-Debrid €3 / 15 days (paid, UNPROVEN for this size)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommendation-ranking-free-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommendation ranking (free-first)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane4-compute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 4 — Free compute / cloud-to-cloud transfer layer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane5-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 5 — All-Agents Tooling on TorBox BAD_TOKEN (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane6-oss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Lane 6 — Open-Source Wire-Up + Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane7-seedbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 7 — Free-Trial Seedbox Angle (Seedhost.eu + Pulsed Media + others)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bottom-line-honest-evidence-based" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bottom line (honest, evidence-based)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ranked-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ranked table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evidence-source-urls-fetched-or-returned-this-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidence / source URLs (fetched or returned this session)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live-tests-performed-api-level-no-browser-this-subagent-cannot-operate-a-live-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live tests performed (API-level, no browser — this subagent cannot operate a live browser)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Live tests performed (API-level, no browser — this subagent cannot operate a live browser)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#top-candidate-1-pikpak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Top candidate 1 — PikPak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-candidate-2-torbox-free-tier-account-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Top candidate 2 — TorBox (free tier account test)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-api-probes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other API probes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-mirror-webseed-search-is-the-payload-already-mirrored" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public mirror / webseed search — is the payload already mirrored?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exact-signup-paths-for-parent-browser-lane-no-owner-manual-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exact signup paths for parent / browser lane (no owner manual work)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exact signup paths for parent / browser lane (no owner manual work)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#path-a-pikpak-5-day-premium-trial-the-only-free-fit-try-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path A — PikPak 5-day Premium trial (the only FREE fit) — TRY FIRST
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-b-torbox-pro-paid-fact-10mo-proven-fit-fallback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path B — TorBox Pro (paid fact: $10/mo) — proven-fit fallback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-c-real-debrid-3-15-days-paid-unproven-for-this-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path C — Real-Debrid €3 / 15 days (paid, UNPROVEN for this size)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommendation-ranking-free-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommendation ranking (free-first)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lane-3-alternative-debrid-seedbox-sweep-for-a-350-gb-single-file-torrent">Lane 3 — Alternative Debrid / Seedbox Sweep for a 350 GB Single-File Torrent<a class="headerlink" href="#lane-3-alternative-debrid-seedbox-sweep-for-a-350-gb-single-file-torrent" title="Permanent link">&para;</a></h1>
+<p>Date: 2026-10-20 (researched live this session)
+Target: <code>Documents.zip</code> — 350,016,069,428 B (≈326 GiB / 350 GB decimal)
+Infohash: <code>856d01039553693d51c2a98523ca2c9829e8bb63</code>
+Magnet source: pastebin.com/nhH7LYfp — <strong>verified live this session</strong>: magnet fetched, <code>dn=Documents</code>, 15 trackers (opentrackr, demonii, etc.).</p>
+<h2 id="bottom-line-honest-evidence-based">Bottom line (honest, evidence-based)<a class="headerlink" href="#bottom-line-honest-evidence-based" title="Permanent link">&para;</a></h2>
+<p><strong>No free tier in this sweep can hold a 350 GB single file. Not one.</strong>
+Every free tier caps at 1–50 GB — 7× to 350× too small. The only <em>free</em> paths that
+even touch 350 GB are:</p>
+<ol>
+<li><strong>PikPak 5-day Premium trial via invite code</strong> — 10 TB storage, cloud-download
+   has <em>no per-file size cap</em> (bounded only by storage). This is the single
+   credible free shot. It is a trial, not a free tier, and signup is
+   browser/app + captcha — parent/browser lane required.</li>
+<li><strong>Pulsed Media free seedbox</strong> — real free tier, but only <strong>50 GiB</strong> — fails on size.</li>
+</ol>
+<p>Everything else free fails outright. The cheapest <em>paid</em> fact (report only, no
+recommendation to buy): <strong>TorBox Pro $10/mo — 1 TB max per download, 1 TB
+storage</strong> (official pricing page, fetched this session). TorBox Standard/Essential
+($3–5/mo, 200 GB max) and the TorBox free plan (10 GB max) all fail — which is
+exactly the known TorBox problem this lane was asked to work around.</p>
+<h2 id="ranked-table">Ranked table<a class="headerlink" href="#ranked-table" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Service</th>
+<th>Free tier / trial?</th>
+<th>Max torrent / file (free)</th>
+<th>Max if paid</th>
+<th>API?</th>
+<th>Range links?</th>
+<th>Google OAuth signup?</th>
+<th>Verdict for 350 GB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>PikPak</strong></td>
+<td>Free 6 GB; <strong>5-day full Premium (10 TB) via invite code</strong></td>
+<td>6 GB free; <strong>10 TB during trial</strong></td>
+<td>10 TB Premium</td>
+<td>Unofficial API (auth+captcha); WebDAV read-only, Premium-only</td>
+<td>Via WebDAV / direct links — standard HTTP, not documented as guaranteed</td>
+<td>Email/phone; Google sign-in offered in app (unverified from desktop web)</td>
+<td><strong>ONLY free candidate that can fit it — trial window only</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>TorBox</strong></td>
+<td>Free forever</td>
+<td><strong>10 GB</strong></td>
+<td>Standard $5/mo: 200 GB; <strong>Pro $10/mo: 1 TB</strong>, 1 TB storage</td>
+<td>Yes, official, incl. <code>checkcached</code></td>
+<td>Yes — <code>requestdl</code> returns direct HTTPS links (standard CDN behaviour)</td>
+<td>Yes (TorBox supports Google signup — parent to confirm at signup screen)</td>
+<td>Free FAIL; Pro is cheapest proven paid fit</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Premiumize</strong></td>
+<td><strong>No free / no trial</strong> — paid only</td>
+<td>—</td>
+<td>Cloud 1 TB, but fair-use: <strong>1,000 points ≈ 1,000 GB rolling 30 d</strong>, +30/day top-up, storage also burns points (≈350 pts to hold + ≈350 to download a 350 GB file — feasible in points <em>only if</em> account is fresh/full, booster packs extra)</td>
+<td>Yes, official</td>
+<td>Direct links, standard HTTP</td>
+<td>No (email/password)</td>
+<td>Paid-only; points math is tight, €9.99/mo or €69.99/yr</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Real-Debrid</strong></td>
+<td>Free account = demo only; <strong>no free premium trial</strong></td>
+<td>No published per-file cap for premium torrents</td>
+<td>Premium €3/15 d, €4/30 d, €9/90 d, €16/180 d</td>
+<td>Yes, official (<code>/torrents/addMagnet</code>, <code>/torrents/instantAvailability/{hash}</code>, <code>/unrestrict/link</code>)</td>
+<td>Unrestricted links are direct HTTPS; Range works in practice via download managers (not a documented guarantee)</td>
+<td>No (email/password)</td>
+<td>Plausible paid fit, <strong>size behaviour for a 350 GB uncached torrent is unverified</strong> — RD is cache-centric; an uncached 350 GB torrent must actually download to RD first, and RD has removed/throttled large uncached torrents historically. Do NOT assume it works without a test add. Also 2026 keyword content filter may block by filename.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>AllDebrid</strong></td>
+<td><strong>7-day free trial</strong> (SMS verification, fair-use)</td>
+<td>Trial under fair-use — no published 350 GB allowance</td>
+<td>€2.99/mo recurring / €3.99/30 d one-time</td>
+<td>Yes, official (<code>magnet/upload</code>)</td>
+<td>Direct links, standard HTTP</td>
+<td>No</td>
+<td>Trial exists but fair-use + no published max ⇒ <strong>unproven for 350 GB</strong>; SMS step = owner-phone friction</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Pulsed Media (seedbox)</strong></td>
+<td><strong>Free 30-day trial seedbox, 50 GiB</strong>, 250 MB RAM, when slots open; 14-day money-back on paid</td>
+<td><strong>50 GiB — FAIL</strong></td>
+<td>V1000 from 1 TB storage (paid, ~€6.99/mo class)</td>
+<td>No debrid API; SSH/SFTP/rclone/WebDAV on the box itself</td>
+<td>Yes — you control the box: HTTPS/SFTP/WebDAV from your own files, Range is yours</td>
+<td>No (email/billing account)</td>
+<td>Free FAIL on size; paid seedbox <em>would</em> work and gives full control</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Seedr</strong></td>
+<td>Free <strong>2 GB</strong></td>
+<td><strong>2 GB — FAIL by 175×</strong></td>
+<td>Lite $3.95/10 GB, Basic $7.95/50 GB, Pro $12.95/500 GB, Master $19/1 TB (official pricing fetched)</td>
+<td>API only on highest legacy tiers</td>
+<td>Direct HTTPS download links</td>
+<td>Email; social signup offered</td>
+<td>Free FAIL; even Pro (500 GB) is a paid fit only, Master 1 TB comfortable</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Offcloud</strong></td>
+<td>Free starter: 3 files / ~10 GB class limits (sources conflict on exact wording: "3 files free", "10 GB free storage/conversion", Chrome listing: 100 links incl. 2 torrent sources)</td>
+<td><strong>~10 GB — FAIL</strong></td>
+<td>$9.99/mo (listings vary $49.99–69.99/yr)</td>
+<td>Yes (<code>cloud.*</code> endpoints documented in third-party integrations)</td>
+<td>Direct links</td>
+<td>No clear Google OAuth evidence</td>
+<td>Free FAIL</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Put.io</strong></td>
+<td><strong>No free tier</strong> — $0.99 one-day trial only (official plans page, fetched)</td>
+<td>—</td>
+<td>100 GB $9.99/mo, 1 TB $19.99/mo, 10 TB $49.99/mo</td>
+<td>Yes, official OAuth API</td>
+<td>Yes — direct download URLs, family/storage model</td>
+<td><strong>Yes — Google Pay/Apple Pay at checkout; account signup via email/Google reported</strong></td>
+<td>Paid-only; 1 TB plan fits</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Bitport</strong></td>
+<td>Free <strong>1 GB</strong>, 1 torrent/day</td>
+<td><strong>1 GB — FAIL by 350×</strong></td>
+<td>$5/30 GB, $10/100 GB, $15/250 GB — <strong>even top paid (250 GB) FAILS</strong></td>
+<td>No public API found</td>
+<td>HTTP (free) / HTTPS (paid)</td>
+<td>Email/Facebook historically</td>
+<td>FAIL at every tier</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Mega-Debrid</strong></td>
+<td>Freemium label, premium required for torrent converter (extension states "You need a premium account")</td>
+<td>Not published — no evidence of ≥350 GB</td>
+<td>~€4/mo class</td>
+<td>Yes (third-party integrations)</td>
+<td>Generated host links</td>
+<td>No</td>
+<td>Unproven; no published torrent size evidence — do not rely on it</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Furk.net</strong></td>
+<td>Invite/Facebook-gated free account, limited</td>
+<td>Not published; Furk is a <em>cache/search</em> service — only serves files already in its cache, it does not fetch arbitrary 350 GB torrents on demand for free users</td>
+<td>Paid plans exist</td>
+<td>Yes, documented API (<code>api.furk.net</code>) — requires account API key</td>
+<td>Direct links for cached files</td>
+<td>Facebook historically</td>
+<td>FAIL for this use: no evidence this hash is in Furk's cache; public API test returned empty (see below)</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>Instant.io / WebTorrent</strong></td>
+<td>Free, open</td>
+<td>Browser WebRTC peers only — a 350 GB file in a browser tab is not viable; no persistence, no seeding infrastructure, peers must be WebRTC-capable (regular torrent seeders are not)</td>
+<td>n/a</td>
+<td>WebTorrent JS API</td>
+<td>Streaming in-browser only, no Range-capable hosted link</td>
+<td>n/a</td>
+<td>FAIL — wrong tool at this scale</td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>Debrid-Link</strong></td>
+<td>"Partiellement gratuit" seedbox/debrid (FR)</td>
+<td>Free limits not published in English docs found this session</td>
+<td>Paid seedbox tiers</td>
+<td>Yes</td>
+<td>Direct links</td>
+<td>No</td>
+<td>Unproven — no ≥350 GB evidence found</td>
+</tr>
+</tbody>
+</table>
+<h2 id="evidence-source-urls-fetched-or-returned-this-session">Evidence / source URLs (fetched or returned this session)<a class="headerlink" href="#evidence-source-urls-fetched-or-returned-this-session" title="Permanent link">&para;</a></h2>
+<ul>
+<li>TorBox official pricing (fetched): https://torbox.app/pricing — Free 10 GB max, Standard $5/mo 200 GB max + 500 GB storage, Pro $10/mo 1 TB max + 1 TB storage, API Access on all tiers.</li>
+<li>Seedr official pricing (fetched): https://www.seedr.cc/pricing — Basic $7.95/50 GB, Pro $12.95/500 GB, Master $19/1 TB, Lite $3.95/10 GB. Free = 2 GB: https://nw1.seedr.cc/products/students/ ("account reverts to free tier limits (2GB)").</li>
+<li>Put.io official plans (fetched): https://put.io/plans — "No permanent free tier. The way in is the $0.99 one-day trial."</li>
+<li>Premiumize fair use: https://www.premiumize.me/fairuse (login-walled when fetched; system described at https://koditips.com/premiumize-kodi-info-review-setup/ — 1,000 points max, +30/day, 1 TB cloud, €9.99/mo or €69.99/yr, free account registration but paid membership required to use; and http://www.cloudtorrent.net/provider/premiumize-me/ — "There are no free or trial memberships", ~1 point = 1 GB, storage charged 1 pt/GB).</li>
+<li>Real-Debrid pricing / no free trial: https://koditips.com/real-debrid/ and https://www.firesticktvstream.com/what-is-real-debrid/ (€3/15 d – €16/180 d; "no free trial of the premium tier, very limited free account"). API shape: https://pkg.go.dev/github.com/divyam234/go-debrid/realdebrid (base <code>https://api.real-debrid.com/rest/1.0</code>, AddMagnet, GetInstantAvailability).</li>
+<li>PikPak free 6 GB / Premium 10 TB, invite = 5 days Premium: https://gist.github.com/uqeax34/fdfbbb944fe24c3e60160f159bb091f8 and https://www.cloudslinker.com/support-clouds/pikpak/ ("Cloud download from magnet/torrent/URL: no per-file size cap; bounded by your storage", WebDAV Premium-only read-only, monthly transfer quota since Sep 2023 — <strong>quota size unpublished, a 350 GB pull could hit it; unverified</strong>).</li>
+<li>Offcloud free limits: https://omghowto.com/best-cloud-torrenting-service-providers/ ("only 3 files with the free account", $9.99/mo) and https://quickfever.com/best-cloud-torrenting-sites ("free plan offers up to 10GB of storage or torrent conversion", 3 torrent links/month).</li>
+<li>Bitport free 1 GB: https://quickfever.com/best-cloud-torrenting-sites and https://technofaq.org/posts/2016/07/hassle-free-torrenting-at-work-or-university-using-bitport/ (Free 1 GB / $5 30 GB / $10 100 GB / $15 250 GB).</li>
+<li>Pulsed Media free seedbox 50 GiB / 30 days: https://wiki.pulsedmedia.com/wiki/Computer_resource ("A free 30-day trial (50 GiB, 250 MB RAM) is offered when trial slots are open", 14-day money-back) and https://wiki.pulsedmedia.com/wiki/Seedbox_Feature_Comparison (free tier: Yes).</li>
+<li>AllDebrid 7-day trial: https://troypoint.com/best-debrid-services/ ("Free Trial – 7 Days (fair use policy)", SMS verification, €2.99/mo recurring).</li>
+<li>Mega-Debrid: https://chrome.google.com/webstore/detail/mega-debrid/gakkobdjiifadnllomenhnpojjdaoaad ("You need a premium account to use this extension", torrent converter, 160+ hosts, site https://www.mega-debrid.eu).</li>
+<li>Furk: https://cdn-b.saashub.com/compare-1337x-vs-furk-net ("Limited Free Features", subscription model).</li>
+</ul>
+<h2 id="live-tests-performed-api-level-no-browser-this-subagent-cannot-operate-a-live-browser">Live tests performed (API-level, no browser — this subagent cannot operate a live browser)<a class="headerlink" href="#live-tests-performed-api-level-no-browser-this-subagent-cannot-operate-a-live-browser" title="Permanent link">&para;</a></h2>
+<p>Target hash used in every test: <code>856d01039553693d51c2a98523ca2c9829e8bb63</code></p>
+<h3 id="top-candidate-1-pikpak">Top candidate 1 — PikPak<a class="headerlink" href="#top-candidate-1-pikpak" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Blocked before any transfer test.</strong> PikPak's API requires an authenticated
+  account and a captcha-gated sign-in flow; a no-auth probe of its user API
+  returned an empty response (no public/cache endpoint exists to query).
+  There is no public "is this hash cached?" endpoint.</li>
+<li>Exact browser path for parent (below) is the only way in.</li>
+</ul>
+<h3 id="top-candidate-2-torbox-free-tier-account-test">Top candidate 2 — TorBox (free tier account test)<a class="headerlink" href="#top-candidate-2-torbox-free-tier-account-test" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>POST https://api.torbox.app/v1/api/torrents/checkcached</code> with the target
+  hash → <code>{"detail":"Not authenticated"}</code> — cache check requires an account
+  token. No anonymous test possible.</li>
+<li>Even with a token, the <strong>free plan hard-caps at 10 GB max download size</strong>
+  (official pricing above), so a free TorBox account <em>cannot</em> accept this
+  torrent regardless of cache status. Test outcome: <strong>FAIL by plan limit, proven from official pricing — no signup needed to know.</strong></li>
+</ul>
+<h3 id="other-api-probes">Other API probes<a class="headerlink" href="#other-api-probes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Real-Debrid <code>GET /rest/1.0/torrents/instantAvailability/{hash}</code> no-auth →
+  <code>{"error":"bad_token","error_code":8}</code> — availability check is token-gated.</li>
+<li>Furk public API probe → empty response; Furk API requires an account key.</li>
+<li>Magnet itself: <strong>live-verified</strong> from pastebin raw (see top).</li>
+</ul>
+<h2 id="public-mirror-webseed-search-is-the-payload-already-mirrored">Public mirror / webseed search — is the payload already mirrored?<a class="headerlink" href="#public-mirror-webseed-search-is-the-payload-already-mirrored" title="Permanent link">&para;</a></h2>
+<p><strong>No full payload mirror found. Two pointer-only archive.org items found — important, do not mistake them for mirrors:</strong></p>
+<ol>
+<li>archive.org advancedsearch for the infohash → 1 hit: <strong><code>gigaleaks-2010-cn</code></strong>
+   — description literally embeds this hash ("cartoon network gigaleak torrent
+   magnet hash: 856d…bb63 … totals out to 300+ gigs"). Its files are ONLY:
+   <code>GIGALEAKS2010CN.torrent</code> (11,399,677 B) + archive.org metadata files.
+   <strong>It is the .torrent file, not the 350 GB payload.</strong></li>
+<li><strong><code>cnleaks_202610</code> — "Cartoon Network Leak Torrent (Re-upload)"</strong> — same
+   story: <code>CNleaks.torrent</code> at the identical 11,399,677 B + metadata only.</li>
+<li><code>documents.zip.-005-20251030</code> on archive.org is a <em>different, unrelated</em>
+   split part (414,920,992 B <code>Documents.zip.005.zip</code>) — not this torrent.</li>
+<li>General web search for the infohash returned <strong>zero</strong> torrent-index,
+   webseed, or mirror results (search index has no record of this hash
+   outside the archive.org pointers above). No <code>urlList</code> webseeds are in the
+   magnet (tracker list only, verified from the raw magnet).</li>
+</ol>
+<p>So: no HTTP mirror / webseed shortcut exists. The content must actually be
+fetched from the swarm by <em>something</em> with ≥350 GB of room.</p>
+<h2 id="exact-signup-paths-for-parent-browser-lane-no-owner-manual-work">Exact signup paths for parent / browser lane (no owner manual work)<a class="headerlink" href="#exact-signup-paths-for-parent-browser-lane-no-owner-manual-work" title="Permanent link">&para;</a></h2>
+<h3 id="path-a-pikpak-5-day-premium-trial-the-only-free-fit-try-first">Path A — PikPak 5-day Premium trial (the only FREE fit) — TRY FIRST<a class="headerlink" href="#path-a-pikpak-5-day-premium-trial-the-only-free-fit-try-first" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Browser → https://mypikpak.com → Sign up (email <code>fmmg.mars@gmail.com</code> or
+   Google sign-in if offered in the app/web flow presented).</li>
+<li>Enter invite code <strong><code>74098243</code></strong> in the invitation-code field during
+   registration (per the PikPak review/invite documentation above) → +5 days
+   Premium, 10 TB.
+   ⚠️ Unverified live: invite codes rotate; if this code is rejected, the
+   fallback is any current invite code from PikPak's own referral surface —
+   do NOT pay.</li>
+<li>New Task / Cloud Download → paste the full magnet from
+   pastebin.com/nhH7LYfp → confirm the single file ≈350 GB fits the 10 TB quota.</li>
+<li>Watch for: (a) cloud-download completing from PikPak's cache/peers,
+   (b) the unpublished monthly transfer quota — if PikPak refuses or stalls
+   on quota, this path is dead and Path B is the fallback.</li>
+<li>Get link: file → Download (direct link) or enable WebDAV
+   (Settings → Experimental Features, Premium-only, read-only) for
+   Range-capable pulls.</li>
+<li><strong>Clock risk: 5 days.</strong> The 350 GB must finish cloud-downloading AND be
+   pulled out / Range-served inside the trial window.</li>
+</ol>
+<h3 id="path-b-torbox-pro-paid-fact-10mo-proven-fit-fallback">Path B — TorBox Pro (paid fact: $10/mo) — proven-fit fallback<a class="headerlink" href="#path-b-torbox-pro-paid-fact-10mo-proven-fit-fallback" title="Permanent link">&para;</a></h3>
+<p>Owner already knows TorBox; Pro is the tier that actually fits: 1 TB max per
+download, 1 TB permanent storage, official API.
+<code>createtorrent</code> with the magnet → poll <code>mylist</code> → <code>requestdl</code> for the
+Range-capable direct link. Standard/Essential (200 GB) and Free (10 GB)
+<strong>cannot</strong> be used — do not retry them for this file.</p>
+<h3 id="path-c-real-debrid-3-15-days-paid-unproven-for-this-size">Path C — Real-Debrid €3 / 15 days (paid, UNPROVEN for this size)<a class="headerlink" href="#path-c-real-debrid-3-15-days-paid-unproven-for-this-size" title="Permanent link">&para;</a></h3>
+<p>Only as an experiment if A and B are rejected: signup at real-debrid.com,
+€3 tier, API token → <code>instantAvailability</code> first (if cached, it just works);
+if not cached, <code>addMagnet</code> and watch whether RD will actually ingest a
+350 GB torrent. Budget this as a €3 test, not a solution.</p>
+<h2 id="recommendation-ranking-free-first">Recommendation ranking (free-first)<a class="headerlink" href="#recommendation-ranking-free-first" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>PikPak invite trial</strong> — free, fits on paper, one shot, 5-day clock, quota risk.</li>
+<li><strong>TorBox Pro $10</strong> — not free, but the only <em>documented, API-proven</em> fit in the whole sweep.</li>
+<li><strong>Pulsed Media paid seedbox (≥1 TB tier)</strong> — full control, Range is self-hosted; free tier is a decoy at 50 GiB.</li>
+<li>Everything else: free tiers fail by 7×–350×, or paid tiers are unproven at 350 GB (Premiumize points, Real-Debrid uncached ingestion).</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

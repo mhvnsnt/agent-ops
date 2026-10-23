@@ -1,0 +1,1999 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Indexes, conventions, manifests, and handoffs for the agent fleet.">
+      
+      
+        <meta name="author" content="Mars FMMG">
+      
+      
+      
+        <link rel="prev" href="../torbox-lane1-auth/">
+      
+      
+        <link rel="next" href="../torbox-lane3-alternatives/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>LANE 2 (RETRY) — Debrid-Link + AllDebrid Live Tests - Agent Ops Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lane-2-retry-debrid-link-alldebrid-live-tests" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Agent Ops Hub" class="md-header__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agent Ops Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              LANE 2 (RETRY) — Debrid-Link + AllDebrid Live Tests
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Agent Ops Hub" class="md-nav__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Agent Ops Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    agent-ops — restart resilience for agent work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AGENTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AGENTS.md
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ANTI-CLOBBER-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ANTI-CLOBBER LAW (owner 2026-10-17)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AUDIT-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repo audit — 2026-10-14 (Grok Bot)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BOX-OFFLOAD-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BOX OFFLOAD LOG — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHECKPOINT_PROTOCOL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkpoint Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLAIMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAIMS (prevents collisions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CROSS-REPO-STRANDED-AUDIT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CROSS-REPO STRANDED-WORK AUDIT — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../END-OF-SESSION-BACKUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    END-OF-SESSION BACKUP (watchdog procedure)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FRICTION-RESEARCH-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FRICTION RESEARCH LOG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-CANON/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — CANON (where the game's knowledge lives)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF INDEX — fleet state, one place, no "missing"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-REPOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — REPOS (per-repo state + landing order)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-TEARDOWNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — TEARDOWNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-WESTERN-HEART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — WESTERN HEART (mhvnsnt/western-heart)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOW-GROKBOT-WORKS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How Grok Bot works (copy this process)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDEMPOTENCY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idempotency Rules — write work so a re-run can't duplicate or corrupt it
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LANE_GUARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane Guard — crash-resilient + collision-proof lanes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-IT-YOURSELF-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE-IT-YOURSELF LAW (owner 2026-10-15) — canonical copy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-QUEUE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE QUEUE — everything built but not landed, all repos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NO-DATA-LOSS-RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NO-DATA-LOSS RULES (owner law — mhvnsnt)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-CONVENTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Conventions (all repos, all agents)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-PULLIN-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RESEARCH → PULL-IN INDEX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESUME_BRIEF_TEMPLATE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resume Brief Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TAG-TEAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TAG-TEAM board (live)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-ALTERNATIVES-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Alternatives — Free/Open-Source Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-BREAKTHROUGH-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Breakthrough Program — Final Report (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-LANE5-AGENT-REVIEW-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox BAD_TOKEN — Lane 5 All-Agents Review (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-RESEARCH-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Research — 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-SUPPORT-TICKET-DRAFT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Support Ticket — DRAFT (do not send without owner approval)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adr-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-NNNN:
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-cleanup-log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Cleanup Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grokbot-activity-proof-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot / MoneyManBusch activity proof — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-claims-recheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Claims Re-Check — 2026-10-20 evening (coordinator lane, parent-ordered)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane1-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Auth — Lane 1, Round 2 (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LANE 2 (RETRY) — Debrid-Link + AllDebrid Live Tests
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LANE 2 (RETRY) — Debrid-Link + AllDebrid Live Tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#verdict-bottom-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VERDICT (bottom line)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-connector-vault-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Connector / vault check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-alldebrid-official-api-docsalldebridcom-api-v4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. AllDebrid — official API (docs.alldebrid.com, API v4)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. AllDebrid — official API (docs.alldebrid.com, API v4)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#live-probes-2026-10-20-unauthenticated-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live probes (2026-10-20, unauthenticated + demo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-an-api-key-be-obtained-without-browser-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Can an API key be obtained WITHOUT browser login?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-debrid-link-api-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Debrid-Link — API v2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Debrid-Link — API v2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#live-probes-2026-10-20-unauthenticated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live probes (2026-10-20, unauthenticated)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-an-api-token-be-obtained-without-browser-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Can an API token be obtained WITHOUT browser login?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-limits-vs-a-350-gb-single-file-torrent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Limits vs. a 350 GB single-file torrent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Limits vs. a 350 GB single-file torrent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alldebrid-official-docs-magnet-status-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AllDebrid (official docs, Magnet status codes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debrid-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debrid-Link
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range-support-on-generated-download-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Range support on generated download links
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-exact-browser-step-the-parent-must-route-one-time-per-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Exact browser step the parent must route (one-time, per service)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane3-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 3 — Alternative Debrid / Seedbox Sweep for a 350 GB Single-File Torrent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane4-compute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 4 — Free compute / cloud-to-cloud transfer layer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane5-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 5 — All-Agents Tooling on TorBox BAD_TOKEN (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane6-oss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Lane 6 — Open-Source Wire-Up + Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane7-seedbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 7 — Free-Trial Seedbox Angle (Seedhost.eu + Pulsed Media + others)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#verdict-bottom-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VERDICT (bottom line)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-connector-vault-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Connector / vault check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-alldebrid-official-api-docsalldebridcom-api-v4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. AllDebrid — official API (docs.alldebrid.com, API v4)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. AllDebrid — official API (docs.alldebrid.com, API v4)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#live-probes-2026-10-20-unauthenticated-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live probes (2026-10-20, unauthenticated + demo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-an-api-key-be-obtained-without-browser-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Can an API key be obtained WITHOUT browser login?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-debrid-link-api-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Debrid-Link — API v2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Debrid-Link — API v2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#live-probes-2026-10-20-unauthenticated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live probes (2026-10-20, unauthenticated)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-an-api-token-be-obtained-without-browser-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Can an API token be obtained WITHOUT browser login?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-limits-vs-a-350-gb-single-file-torrent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Limits vs. a 350 GB single-file torrent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Limits vs. a 350 GB single-file torrent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alldebrid-official-docs-magnet-status-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AllDebrid (official docs, Magnet status codes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debrid-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debrid-Link
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range-support-on-generated-download-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Range support on generated download links
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-exact-browser-step-the-parent-must-route-one-time-per-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Exact browser step the parent must route (one-time, per service)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lane-2-retry-debrid-link-alldebrid-live-tests">LANE 2 (RETRY) — Debrid-Link + AllDebrid Live Tests<a class="headerlink" href="#lane-2-retry-debrid-link-alldebrid-live-tests" title="Permanent link">&para;</a></h1>
+<p>Date: 2026-10-20 (America/Chicago). Agent: live-test subagent (depth 2).
+Target torrent: infohash <code>856d01039553693d51c2a98523ca2c9829e8bb63</code>, dn=Documents — ONE file at torrent level: <code>Documents.zip</code>, 350,016,069,428 bytes (~350 GB), wrapping 72,369 files inside the zip.
+Method note: page text was fetched with browser tools; API probes were real HTTP calls to the providers' APIs (curl). No website was "visited" in a browser session, no login was performed, no secrets were printed, written, or passed anywhere. No paid upgrades. No local staging beyond this report.</p>
+<h2 id="verdict-bottom-line">VERDICT (bottom line)<a class="headerlink" href="#verdict-bottom-line" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Neither service could be live-tested with the owner's account from this sandbox, and neither can be driven end-to-end without a browser step.</strong> The blocker is credential access, not the APIs: both APIs exist, are documented, and answered live probes.</li>
+<li><strong>AllDebrid:</strong> API key can be obtained two ways, both need a logged-in browser session ONCE: (a) the Apikey dashboard on alldebrid.com, or (b) the official PIN flow — which I initiated live without any login (see below), but the PIN must be submitted on alldebrid.com/pin by a logged-in user. After that one step, everything (magnet upload/status/files, link unlock) is pure API, no browser again.</li>
+<li><strong>Debrid-Link:</strong> API token is issued from the logged-in account area on debrid-link.com. No PIN/OAuth-style remote flow was found in any documentation. Same one-time browser requirement; after that, pure API.</li>
+<li><strong>350 GB viability is NOT proven for either service, and AllDebrid's own docs contain hard failure modes that make it doubtful</strong> (see Limits). Nobody should promise the owner that either service will swallow this torrent until an authenticated magnet/upload test returns <code>ready</code>/downloading for this exact hash.</li>
+</ul>
+<h2 id="1-connector-vault-check">1. Connector / vault check<a class="headerlink" href="#1-connector-vault-check" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>muse.connector_search</code> for "alldebrid", "debrid-link", "debrid link", "AllDebrid API": <strong>no connector exists</strong> for either service. Only unrelated hits (TorBox, Stripe-Link, etc.).</li>
+<li><code>~/workspace/custom-connectors/</code> on disk: only <code>custom.torbox</code>, <code>custom.terabox</code>, and <code>custom.legacy-*</code> (ai-horde, elevenlabs, gemini, github-pat, groq, mistral, resend, vercel-ai-gateway). No AllDebrid / Debrid-Link connector dirs — matches the coordinator's 2026-10-20 verification.</li>
+<li>Secure Vault / dynamic credentials, metadata only:</li>
+<li><code>authdc cred list</code> → HTTP 403: "ingress auth callbacks are not reachable from the runtime cell (deny-by-default…)".</li>
+<li><code>authdc cred lookup --domain alldebrid.com</code>, <code>--domain debrid-link.com</code>, <code>--provider alldebrid</code>, <code>--provider debrid-link</code> → all HTTP 403: "credential lookup not available to cell callers".</li>
+<li>Surrogate flow via <code>/opt/muse/skills/custom-connector-setup/bin/dynamic_credentials.py</code> (<code>dynamic_credential_entry</code>), tried names <code>alldebrid</code>, <code>alldebrid.com</code>, <code>AllDebrid</code>, <code>debrid-link</code>, <code>debrid-link.com</code>, <code>debridlink</code>, <code>custom.alldebrid</code>, <code>custom.debrid-link</code> × entries <code>access_token</code>/<code>apikey</code>/<code>api_key</code>/<code>password</code>/<code>username</code> → <strong>every call HTTP 403</strong>: "this connector's credentials are not available to the sandbox; use the connector's privsep…".</li>
+<li>Interpretation (evidence-based): from this sandbox there is <strong>no way to enumerate or use</strong> the saved alldebrid.com / debrid-link.com vault entries — they cannot even be confirmed to be API keys vs. website username/password. The 403 is a cell-policy denial, not proof the entries don't exist. A privsep/parent lane or a browser lane holding the vault session is required to use them.</li>
+</ul>
+<h2 id="2-alldebrid-official-api-docsalldebridcom-api-v4">2. AllDebrid — official API (docs.alldebrid.com, API v4)<a class="headerlink" href="#2-alldebrid-official-api-docsalldebridcom-api-v4" title="Permanent link">&para;</a></h2>
+<p>Docs read in full for the relevant sections (Authentication, Rate limiting, Pin auth, Magnet).</p>
+<ul>
+<li>Base: <code>https://api.alldebrid.com/v4/…</code> (some endpoints at <code>/v4.1/</code>). Auth: apikey via <code>Authorization: Bearer &lt;apikey&gt;</code> header (docs also show <code>?apikey=</code> in examples). All endpoints need a valid apikey except documented public ones (<code>/v4/ping</code>, <code>/v4.1/pin/get</code>, <code>/v4/hosts</code>, …).</li>
+<li>Rate limits (official): <strong>12 req/s, 600 req/min</strong>; excess → 429/503.</li>
+<li>Magnet endpoints: <code>POST /v4/magnet/upload</code> (param <code>magnets[]</code>, URIs or hashes), <code>POST /v4/magnet/upload/file</code>, <code>POST /v4.1/magnet/status</code>, <code>POST /v4/magnet/files</code>, <code>POST /v4/magnet/delete</code>, <code>POST /v4/magnet/restart</code>.</li>
+<li>Magnet requirements/errors (official): <code>MAGNET_MUST_BE_PREMIUM</code> (premium account required), <code>MAGNET_TOO_MANY_ACTIVE</code> — <strong>max 30 active magnets</strong>, <code>MAGNET_NO_SERVER</code> (server/VPN IPs refused for this feature — a datacenter egress IP can be rejected; worth flagging for any server-side lane).</li>
+<li>Correcting the task brief: the brief said "GET /v1/user" — the current API is <strong>v4</strong>; the user endpoint is <code>GET /v4/user</code>. There is no v1 in the current docs.</li>
+</ul>
+<h3 id="live-probes-2026-10-20-unauthenticated-demo">Live probes (2026-10-20, unauthenticated + demo)<a class="headerlink" href="#live-probes-2026-10-20-unauthenticated-demo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>HTTP</th>
+<th>Body (exact)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET /v4/ping</code> (public)</td>
+<td>200</td>
+<td><code>{"status":"success","data":{"ping":"pong","version":"4"}}</code></td>
+</tr>
+<tr>
+<td><code>GET /v4/user</code> (no key)</td>
+<td>200</td>
+<td><code>{"status":"error","error":{"code":"AUTH_MISSING_APIKEY","message":"The auth apikey was not sent"}}</code></td>
+</tr>
+<tr>
+<td><code>POST /v4/magnet/upload</code> with the target magnet, no key</td>
+<td>200</td>
+<td>same <code>AUTH_MISSING_APIKEY</code> JSON</td>
+</tr>
+<tr>
+<td><code>GET /v4.1/pin/get</code> (public)</td>
+<td>200</td>
+<td><code>{"status":"success","data":{"pin":"93DA","check":"&lt;check-token&gt;","expires_in":600,"user_url":"https://alldebrid.com/pin/?pin=93DA","base_url":"https://alldebrid.com/pin/"}}</code></td>
+</tr>
+<tr>
+<td><code>POST /v4/pin/check</code> for that PIN (not submitted by anyone)</td>
+<td>200</td>
+<td><code>{"status":"error","error":{"code":"PIN_INVALID","message":"The pin is invalid"}}</code> — recorded as observed; docs split pin/get (v4.1) from pin/check (v4), and an unsubmitted PIN yields no apikey either way. The flow still requires a logged-in human/browser session to submit the PIN at alldebrid.com/pin.</td>
+</tr>
+<tr>
+<td><code>GET /v4/user</code> with the docs' <strong>demo</strong> key <code>staticDemoApikeyPrem</code></td>
+<td>200</td>
+<td><code>"demo": true</code>, static demo user (<code>demoUserPremium</code>, <code>isPremium: true</code>) — proves endpoint shape only</td>
+</tr>
+<tr>
+<td><code>POST /v4/magnet/upload</code> with demo key + target magnet</td>
+<td>200</td>
+<td><code>"demo": true</code> with a <strong>static fake response about an unrelated Ubuntu ISO</strong> — the demo key does NOT process the submitted magnet. It proves nothing about acceptance of the 350 GB torrent. Recorded so nobody mistakes it for a successful test.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="can-an-api-key-be-obtained-without-browser-login">Can an API key be obtained WITHOUT browser login?<a class="headerlink" href="#can-an-api-key-be-obtained-without-browser-login" title="Permanent link">&para;</a></h3>
+<p><strong>No.</strong> Official docs, Authentication section: keys are managed in the "Apikey dashboard" (logged-in website) or generated "remotely (with user action) through the PIN flow" — step 2 of the PIN flow is the user submitting the PIN on the AllDebrid pin page, which requires the account session. I proved step 1 works unauthenticated (live PIN issued above); steps 2–3 cannot complete without that logged-in submission.</p>
+<h2 id="3-debrid-link-api-v2">3. Debrid-Link — API v2<a class="headerlink" href="#3-debrid-link-api-v2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Base: <code>https://debrid-link.com/api/v2/…</code>; auth token sent as <code>Authorization: Bearer &lt;token&gt;</code> (token issued from the logged-in account on debrid-link.com; no PIN/OAuth remote-grant flow appears in any documentation found).</li>
+<li>Known routes (from the provider's API surface + open-source clients, e.g. debrid-blackhole): <code>GET /account/infos</code>, <code>POST /seedbox/add</code>, <code>GET /seedbox/list</code>, <code>GET /seedbox/cached</code>, downloader endpoints. Base URL <code>https://debrid-link.com/api/v2</code> is corroborated by multiple independent clients.</li>
+<li>Bare <code>https://debrid-link.com/api</code> fetched as text returned <code>{"result":"KO","ERR":"unknowR","ts":…}</code> — it is an API root, not a docs page. No public, browsable API reference with numeric limits was found (site docs sit behind the account area).</li>
+</ul>
+<h3 id="live-probes-2026-10-20-unauthenticated">Live probes (2026-10-20, unauthenticated)<a class="headerlink" href="#live-probes-2026-10-20-unauthenticated" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>HTTP</th>
+<th>Body (exact)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET /api</code> (curl, follows to canonical host)</td>
+<td>301</td>
+<td>nginx "301 Moved Permanently" (bare root redirects; the browser text fetch of the same URL returned the <code>unknowR</code> JSON above)</td>
+</tr>
+<tr>
+<td><code>GET /api/v2/account/infos</code> (no token)</td>
+<td><strong>401</strong></td>
+<td><code>{"success":false,"error":"badToken","error_description":"The authentication token is invalid or expired."}</code></td>
+</tr>
+<tr>
+<td><code>GET /api/v2/seedbox/list</code> (no token)</td>
+<td><strong>401</strong></td>
+<td>same <code>badToken</code> JSON</td>
+</tr>
+<tr>
+<td><code>POST /api/v2/seedbox/add</code> with the target magnet, no token</td>
+<td><strong>401</strong></td>
+<td>same <code>badToken</code> JSON — auth is enforced before any magnet/size validation, so size acceptance cannot be probed without a real token</td>
+</tr>
+<tr>
+<td><code>GET /api/v2/account/infos</code> with a bogus Bearer token</td>
+<td><strong>401</strong></td>
+<td>same <code>badToken</code> JSON</td>
+</tr>
+<tr>
+<td><code>GET /api/v2/INVALIDTOKEN/account/infos</code> (token-as-path-segment guess)</td>
+<td><strong>404</strong></td>
+<td><code>{"success":false,"error":"unknowR","error_description":"Unknown API endpoint."}</code> — confirms the token is NOT a URL path segment; it is the Bearer header</td>
+</tr>
+</tbody>
+</table>
+<h3 id="can-an-api-token-be-obtained-without-browser-login">Can an API token be obtained WITHOUT browser login?<a class="headerlink" href="#can-an-api-token-be-obtained-without-browser-login" title="Permanent link">&para;</a></h3>
+<p><strong>No evidence of any such path.</strong> Unlike AllDebrid there is no documented PIN flow. The token is created/copied inside the logged-in account on debrid-link.com. One browser login is required once; afterwards all seedbox operations are API-only.</p>
+<h2 id="4-limits-vs-a-350-gb-single-file-torrent">4. Limits vs. a 350 GB single-file torrent<a class="headerlink" href="#4-limits-vs-a-350-gb-single-file-torrent" title="Permanent link">&para;</a></h2>
+<h3 id="alldebrid-official-docs-magnet-status-codes">AllDebrid (official docs, Magnet status codes)<a class="headerlink" href="#alldebrid-official-docs-magnet-status-codes" title="Permanent link">&para;</a></h3>
+<p>The API docs publish <strong>no numeric max torrent/file size</strong> for magnet/upload. They do publish these magnet failure states, which are the real constraints for this job:</p>
+<ul>
+<li>statusCode <strong>8 — "File too big"</strong>: a too-big failure state exists; the threshold is not stated in the API docs.</li>
+<li>statusCode <strong>7 — "Not downloaded in 20 min"</strong></li>
+<li>statusCode <strong>10 — "Download took more than 72h"</strong>: magnets that can't finish within 72 h are failed.</li>
+<li>statusCode <strong>15 — "File not available - no peer"</strong></li>
+<li>Max <strong>30 active magnets</strong> (fine here — this job is 1 magnet).</li>
+<li>Premium account required for magnets (<code>MAGNET_MUST_BE_PREMIUM</code>). Account premium status of the saved login is unknown (could not be checked — see §1).</li>
+<li>On the 2026-10-15 rejection "for file count": at torrent level this torrent has exactly <strong>1 file</strong>, so a file-count rejection does not fit the torrent structure; the 72,369 files are inside the zip and invisible to the torrent layer. If a rejection recurs with a real key, the documented candidates are statusCode 8 (too big) or the 20-min/72-h rules — the authenticated test will say which, via <code>/v4.1/magnet/status</code>.</li>
+</ul>
+<p>Assessment: <strong>unproven, with documented failure modes pointing against it.</strong> A 350 GB single file is exactly the shape statusCode 8 exists for. Do not treat AllDebrid as viable until an authenticated upload of hash <code>856d01039553693d51c2a98523ca2c9829e8bb63</code> returns a live status.</p>
+<h3 id="debrid-link">Debrid-Link<a class="headerlink" href="#debrid-link" title="Permanent link">&para;</a></h3>
+<ul>
+<li>No numeric seedbox size/quota limit could be verified from official public documentation (docs are behind login; web searches returned no official limit page). <strong>Stated honestly: unknown, not "unlimited."</strong></li>
+<li>The seedbox model means the 350 GB must fit the account's seedbox storage quota — that quota is only visible in <code>GET /account/infos</code> with a real token, which is the first call the browser-enabled lane should make.</li>
+<li>Assessment: <strong>unproven.</strong> Same authenticated test required: <code>POST /seedbox/add</code> with the magnet, then poll the seedbox list; a quota rejection will surface there if one exists.</li>
+</ul>
+<h3 id="range-support-on-generated-download-links">Range support on generated download links<a class="headerlink" href="#range-support-on-generated-download-links" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Not testable in this lane</strong>: generating a real download link requires an authenticated account with a ready file on either service, which §1–§3 show is impossible from this sandbox. No Range claim is made either way.</li>
+<li>What can be said from docs: AllDebrid serves unlocked links via <code>POST /v4/link/unlock</code> returning a direct link (+ optional streaming variants via <code>/v4/link/streaming</code>); the API docs do not state Range/206 behavior. Debrid-Link likewise returns direct links from seedbox files; no published Range statement found. The authenticated lane should test with <code>curl -r 0-1048575 -I &lt;link&gt;</code> on the real link and record the HTTP status (206 vs 200) and <code>Accept-Ranges</code> header before committing to a chunked-download design.</li>
+</ul>
+<h2 id="5-exact-browser-step-the-parent-must-route-one-time-per-service">5. Exact browser step the parent must route (one-time, per service)<a class="headerlink" href="#5-exact-browser-step-the-parent-must-route-one-time-per-service" title="Permanent link">&para;</a></h2>
+<p>Neither service needs the owner to do manual work on an ongoing basis — the browser step can be done by a browser lane using the saved vault logins. What is needed, precisely:</p>
+<ol>
+<li><strong>AllDebrid (choose one):</strong>
+   a. Browser lane logs in at alldebrid.com with the saved login → Apikey dashboard → copy/create the account apikey → register it as a proper dynamic credential/connector so API lanes can use the surrogate flow. <strong>Then</strong> run: <code>GET /v4/user</code> (confirm <code>isPremium: true</code> and <code>premiumUntil</code>), <code>POST /v4/magnet/upload</code> with hash <code>856d01039553693d51c2a98523ca2c9829e8bb63</code>, poll <code>POST /v4.1/magnet/status</code>, record the exact statusCode.
+   b. OR complete the PIN flow: a fresh <code>GET /v4.1/pin/get</code> (PINs expire in 600 s — the PIN <code>93DA</code> issued during this test will already be expired; generate a new one at run time) → browser lane, logged in, opens the returned <code>user_url</code> and submits → poll <code>POST /v4/pin/check</code> until <code>activated: true</code> returns the apikey → store as in (a) and run the same tests.</li>
+<li><strong>Debrid-Link:</strong> browser lane logs in at debrid-link.com with the saved login → account/API area → copy/create the API token → register as a dynamic credential. <strong>Then</strong> run: <code>GET /api/v2/account/infos</code> (record premium status + any seedbox quota fields), <code>POST /api/v2/seedbox/add</code> with the magnet, poll <code>GET /api/v2/seedbox/list</code>, record exact JSON.</li>
+<li>Whichever service accepts the magnet: generate the file's download link and run the Range probe (<code>curl -r 0-1048575 -I</code>) before designing the pull-down.</li>
+</ol>
+<p>Until step 1 or 2 lands a real key/token in the credential store, <strong>no API-only lane can test these services further</strong> — every authenticated endpoint on both services was live-probed and rejects keyless/bogus calls exactly as documented above.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
