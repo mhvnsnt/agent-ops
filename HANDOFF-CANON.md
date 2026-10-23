@@ -1,5 +1,12 @@
 # HANDOFF — CANON (where the game's knowledge lives)
 
+
+## OBSOLETE-ORIGINALS RULE (owner, 2026-10-23 — binding)
+
+Canon is **never** written for obsolete originals — source-game characters whose moveset and identity became a proprietary character of this universe. They get no canon file, no bio, no story, no roster entry, and never appear on the character select list. Their models exist only as late-ladder attires (slots 5+) of their successor, behind Tripo models and the owner's proprietary reskins. **Write all canon for the SUCCESSOR.**
+
+Mapping: Blanka->CHARGER, Zangief->KRONOS, Vega->KORESHI, Iori->DEATHFANG, Kuma->GASHADOKURO, Panda->AOTSUKI, Baek->KEVIN, Zafina->MARIPOSA, Lili->SILVERTONGUE, Jin->DEMONIO, Armor King->YUKIHYO; base-only names (never had roster entries, scaffolding mentions only): Xiaoyu, Christie, Nina, Asuka, Bryan, Bob, Heihachi, King, Yoshimitsu, Lei, Dragunov, Ganryu, Mokujin. Existing text about originals is KEPT with the obsolete notice at the top. Authority: mhvnsnt/western-heart `docs/OBSOLETE-ORIGINALS-RULE.md` (on main since 2026-10-23, PR #766).
+
 State verified 2026-10-23. Sources: western-heart main tree check (main agent, 2026-10-23), `MERGE-QUEUE.md`, owner directives recorded 2026-10-23. Purpose: no agent ever again reports canon as "missing" because it wasn't in the repo, or holds it only in chat memory.
 
 ## The rule (owner, 2026-10-23 — binding)
