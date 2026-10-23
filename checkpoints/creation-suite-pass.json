@@ -1,0 +1,53 @@
+{
+ "env_note": "2026-10-20 ~18:55 CDT: coordinator worktree creation-suite-pass (1.3G) removed+logged earlier; checkpoint committed+pushed to agent-ops (c3c489f). DB/transport layer is unstable today (sqlx pool timeouts killing lanes + blocking spawns/sends intermittently). Lane footprint: cs-inventory 3.6G (A active), cs-bake 1.3G (B active), cs-ui 3.3G (C lane worktree, branch pushed at 1534a7746).",
+ "findings": [
+  "PARTS-REGISTRY.json holds 1,148 parts (wmxix 1,050 geometryPending, no-mercy 35, rest texture/mesh libraries) \u2014 verified by UI lane run #3; '34' was only the curated suite catalog subset. PARTS-INDEX.json indexes 3,398; customization/parts/ = 3,883 files.",
+  "customization/parts-converted/CATALOG.json ABSENT on origin/main (run #3 direct check at f8b3b5d67) \u2014 Worker A converter NOT landed despite an earlier merged claim; coordinator check-in to A pending delivery (DB timeouts).",
+  "WMXIX .ymg/.tex = undeciphered containers, no converter exists; Tekken = slot catalogs only; T6 item tables: none in extracted files; WWE 2K docs only (pac/edit not on disk).",
+  "packages/creation-suite/src = real runtime (dna/body/morphs/parts/regions); body-morphs/MANIFEST.json maps suite sliders -> MPFB2 (13 body + 12 face); apply_mpfb_morphs.py KD-tree; MPFB2 at ~/workspace/cape-jones/production/tools/mpfb2. Master White: roster/baek/attires/master-white/ (+rigged GLB, PR #383). Kevin Tripo = roster/baek/attires/attire1/model.glb (static). Fighter IS Kevin (owner 2026-10-20 15:11); Master White = A3 parked pending this pass."
+ ],
+ "eye_design_verdict": "OWNER 2026-10-20 ~19:40 CDT: eyes are REAL PLACEABLE MESH PARTS in the suite (eyeball + eyelashes + eyebrows, position/scale placement controls) \u2014 NEVER texture-paint decals (he rejected DEATHFANG's painted texture eye: 'let it be a real eye not just a decal on his face from hand tooling'; he wants to place eyes himself). Eye-library texture entries = legacy texture variants only. Eyebrow glTFs already in-repo (parts/hair/cc0 + quaternius); spidergirl-eyes.glb = mesh-eye precedent. DEATHFANG human = NAMED TEST CASE for placeable eyes once they exist. Directives delivered to Worker C run #4 (UI/catalog/docs) + Worker B (schema doc + bake treats eye parts as mesh parts) 2026-10-20 ~19:53 CDT.",
+ "next": "PASS CLOSED. Follow-ups for future lanes: (1) bake: tint part materials (colors for mesh parts) so CC0 hair/beard can take hair color; (2) add baek skin-tone mapping to PARTS-REGISTRY character_mappings; (3) base-hair hide/mask support in bake; (4) eyelash mesh part + eyeball mesh part authoring (eye-parts system ready; DEATHFANG human = named test case); (5) catalog: CC0 hair/beard reclassify texture_part -> mesh part, brow-cc0-regular into PARTS-REGISTRY, eyebrows socket in bake; (6) teardown-side: WMXIX .ymg decoder; WWE 2K pac/edit pull (owner call). FOOTPRINT: lane worktrees (cs-inventory, cs-ui, cs-proof3, creation-suite-pass, western-heart-main checkout) all gone via external disk churn AFTER their contents were verified merged on GitHub \u2014 zero unique loss; cs-proof3-scratch-kevin scratch remains on disk (D intermediates, all shipped outputs on main).",
+ "repo": "mhvnsnt/western-heart",
+ "schema_contract": "customization.json v1 in attire folder: {version:1, app, fighter, attire, base_glb, out_glb, body{body_type, skin_tone}, morphs{morphs.js ids}, parts{suite_slot:{part_id, glb, placement}}, textures[{part_id, kind, image, material, rect}], colors{hair, skin}}",
+ "status": "COMPLETE \u2014 pass delivered end-to-end (A data PR #398, B bake PR #396, C suite PRs #399/#404, D proof PR #438, all merged + coordinator-verified on main). Named gaps remain as follow-ups.",
+ "task": "CREATION SUITE PASS \u2014 unify No Mercy + WMXIX + WWE 2K + Tekken creation data into one working in-game suite; differentiate parked Master White toward Kevin as first proof",
+ "updated": "2026-10-21T15:20:00-05:00",
+ "workers": [
+  {
+   "id": "aad405fc",
+   "role": "A: inventory/conversion",
+   "status": "COMPLETE \u2014 coordinator-verified: PR #398 MERGED 2026-10-21T01:51:42Z (1dff63a52); CATALOG.json on main (1,072,374 B), tools/convert_caw_parts.py (27KB), 303 No Mercy GLBs + 1,044 WMXIX texture PNGs; docs shipped inside PR #398 (no separate docs branch ever existed). TIMELINE: run #3's absence check (at f8b3b5d67) was true when made; A merged ~3h later. Earlier 'merged 09ec5d3' claim and the first checkpoint's confidence were wrong; the correction + this verification are the record."
+  },
+  {
+   "id": "6344b4c8",
+   "role": "B: bake pipeline + schema + assets.js hook + fixture self-proof",
+   "status": "COMPLETE \u2014 PR #396 MERGED 2026-10-21T01:35:57Z (17f03e1ec), all checks PASS, zero deletions; coordinator-verified on main: CUSTOMIZATION-JSON-SCHEMA.md (7.5KB, incl. eye-verdict section), tools/apply_customization.py (32KB), game/js/attire-customizations.js, master-white customization.example.json fixture; self-proof PASS (morphs+eye visible in own-eyes renders, cs-bake-baek proof dir); footprint ZERO (worktrees removed+logged by B)"
+  },
+  {
+   "id": "31683978",
+   "role": "C run 1",
+   "status": "DEAD (daemon restart, zero output)"
+  },
+  {
+   "id": "a1fbab8f",
+   "role": "C run 2",
+   "status": "DEAD (daemon restart, zero output)"
+  },
+  {
+   "id": "864bf292",
+   "role": "C run 3",
+   "status": "DEAD (transport) BUT push-early discipline worked: PROGRESS.md commit b3189fc2 pushed; item-1 data work rescued by coordinator commit 1534a7746 on feat/cs-ui-wiring-20261020"
+  },
+  {
+   "id": "f296c36d",
+   "role": "C run 4: suite UI wiring + follow-ups",
+   "status": "COMPLETE \u2014 coordinator-verified: PR #399 MERGED (3672c58e9: roster mode, real MPFB sliders, unified catalog, per-attire save) + PR #404 MERGED (646d548d9: parts-converted live in catalog \u2014 4,523 parts total (registry 1,148 + converted 3,372 + hair/brow scans), eyes-are-parts: brow-cc0-regular/female placeable, 13 eye textures tagged legacy texture_variant, README 'Eyes are parts, not decals' section, DEATHFANG named test case; honest gap: NO eyelash mesh exists in-repo). parts-catalog.json on main = 2,673,008 B."
+  },
+  {
+   "id": "21969ee4",
+   "role": "D: Master White -> Kevin differentiation proof (references, suite-authored customization.json, bake via apply_customization.py, before/after verdict, suite screenshots, PR)",
+   "status": "COMPLETE \u2014 PR #438 MERGED 2026-10-21T14:36:57Z (0f5ad8030), coordinator-verified on main (customization.json, model-kevin-diff.glb 1,313,048 B, proof pack, registry maps baek-master-white -> model-kevin-diff.glb; smoke PASS). VERDICT (worker own-eyes + coordinator own-eyes on before/after fronts): reads as a DIFFERENT PERSON than Baek (slimmer build, narrower shoulders/jaw, thinner neck, softer younger face); does NOT yet read as Kevin \u2014 parts bake untinted white-gray (bake cannot tint part materials; CC0 textures near-white), skin tone unapplied (no baek mapping in PARTS-REGISTRY -> colors loud-fail by design), base hair unhideable under the hair cap, beard ~2cm low, Kevin marks (tattoo sleeve/watch/widow peak) have no parts/morphs. Machinery wins: real bake bug FIXED (rotation_mode \u2014 placements were silently ignored, parts baked flipped 180Y); suite customization_json restore wired (was null) so the suite round-trips 15 morphs + 3 parts live. Incident: first cs-proof worktree deleted wholesale by external disk churn at 100% disk; rebuilt in fresh clone with push-after-every-step; rebake reproduced byte size exactly."
+  }
+ ]
+}
