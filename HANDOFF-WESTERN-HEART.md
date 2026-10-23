@@ -1,5 +1,14 @@
 # HANDOFF — WESTERN HEART (mhvnsnt/western-heart)
 
+
+## OBSOLETE-ORIGINALS RULE (owner, 2026-10-23 — binding)
+
+A source-game character whose moveset and identity were given to a proprietary character of this universe is **OBSOLETE IN CANON**: not a character here — no canon file, no story, no roster entry. Only the proprietary successor exists. Authority: mhvnsnt/western-heart `docs/OBSOLETE-ORIGINALS-RULE.md` (on main since 2026-10-23, PR #766).
+
+**Character select + attire ladder** (owner's verbatim order, same day): obsolete originals **never appear on the character select list** — not selectable, not listed, not counted as fighters. Their models wire **only as laddered attires of their successor, late in the ladder (slots 5+)**, behind the successor's own attires. The ladder front is fixed: the character's Tripo 3D models first (slots 1-5), then the owner's proprietary reskins. Original-game attires/reskins ladder behind those, never in front.
+
+Existing text about originals is KEPT (never deleted) with the obsolete notice at the top of the file/section. Base-name mentions inside a successor's file are scaffolding references, not identities. Mapping (original -> successor): Blanka->CHARGER, Zangief->KRONOS, Vega->KORESHI, Iori->DEATHFANG, Kuma->GASHADOKURO, Panda->AOTSUKI, Baek->KEVIN, Zafina->MARIPOSA, Lili->SILVERTONGUE, Jin->DEMONIO, Armor King->YUKIHYO; base-only (never had roster entries): Xiaoyu/Christie->STAR, Nina->AWA POP, Asuka->KINPO, Bryan->SKULL, Bob->BURGER, Heihachi->DIABLO, King->PANTERA, Yoshimitsu->PHANTOM, Lei->RAVE, Dragunov->SLICE, Ganryu->THOR, Mokujin->DXMMII.
+
 State verified 2026-10-23. Sources: main-branch tree + `game/js/assets.js` checks by the main agent, merged census doc `docs/ROSTER-COUNT-CANON-2026-10-21.md` (PR #484), `MERGE-QUEUE.md`. Live site: https://mhvnsnt.github.io/western-heart/
 
 ## What exists & where
