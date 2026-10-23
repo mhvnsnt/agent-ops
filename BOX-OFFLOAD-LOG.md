@@ -440,3 +440,21 @@ Rules: idle >60 min (excluding .git), no open handles, no untracked/modified fil
 | `western-heart-inventory/western-heart` | 2683MB | https://github.com/mhvnsnt/western-heart | `4a58f1a6` | 15:04 CT |
 
 Total freed: ~44.7 GB.
+## 2026-10-23 ~15:55 CDT — Repo Co Dev own-clone cleanup (rule (a))
+
+Checked with `/tmp/rcd-chk.sh` (clean+no untracked, empty stash, every local branch contained in a remote ref, submodules). **Removed: none** — no clone passed all checks. Kept on disk:
+
+| Path | Size | Reason kept |
+|---|---|---|
+| /workspace/western-heart-lab | 76M | not a git repo (proof/src scratch) — cannot verify |
+| /workspace/wh-proof | 5.5M | not a git repo — cannot verify |
+| /workspace/originalize | 6.1G | not a git repo (top dir) — cannot verify |
+| /workspace/Brutal-Fist | 4.5G | dirty (modified submodule BannonSource, deleted Research/*) + 1 stash |
+| /workspace/vten-stages | 743M | 3 dirty paths |
+| /workspace/vten-ci-fix | 493M | 15 dirty paths |
+| /workspace/vten-main-wt | 275M | 3 dirty paths |
+| /workspace/vten-intro | 755M | 3 dirty paths |
+| /workspace/vten-intro-base | 277M | 1 dirty path |
+| /workspace/brutalfistgrokversioneight | 429M | 1 dirty path |
+
+wh-qa: not present. Other /workspace dirs (wh-*, ashlane, etc.) left untouched — ownership not confirmed.
