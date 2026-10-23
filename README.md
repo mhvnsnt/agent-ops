@@ -59,3 +59,6 @@ temp-then-move, no force-pushes).
   committed to its repo early and often.
 - A re-spawned worker must still **verify** checkpoint claims against reality
   (files exist? repo state matches?) before continuing. Trust, then verify.
+
+## Muse training pack
+Muse/Ashes and every agent: read the [Muse training pack](https://github.com/mhvnsnt/money-machine-hq/tree/main/docs/muse-training-pack) (instructions, pre-flight checklist, real before/after examples, right-way videos) before every job.
