@@ -3,6 +3,8 @@ name: instruction-gate
 on:
   pull_request:
     types: [opened, edited, synchronize, reopened, labeled, unlabeled, ready_for_review]
+  merge_group:
+    types: [checks_requested]
 permissions:
   contents: read
   pull-requests: read
