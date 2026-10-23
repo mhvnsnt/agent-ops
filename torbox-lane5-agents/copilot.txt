@@ -1,0 +1,32 @@
+**Likely root cause: `tb_reqdl.py` sends the surrogate to TorBox as though it were the API key.** At lines 15–17 it extracts `entry["surrogate"]` and inserts it directly into `?token=`; this request has no `Authorization` header and does not visibly perform a credential exchange. A surrogate is plausibly an opaque, broker-specific substitute—not a TorBox API key—and should not be assumed valid in a provider-facing query parameter. With the credential registered for `bearer_header` placement, manually moving that surrogate into `token` is especially suspect. The helper implementation wasn’t available to verify exactly how surrogates are exchanged, so this is a strong diagnosis, not proof. Fresh keys returning `BAD_TOKEN` doesn’t rule it out if the request still sends a surrogate rather than the key.
+
+**Other hypotheses, ranked**
+
+| Rank | Hypothesis | Assessment |
+|---|---|---|
+| 1 | Surrogate used in `token` instead of a placement-aware credential flow | Strongest fit with the code and the `bearer_header` setup. |
+| 2 | Stored key is stale, invalid, or was revoked during regeneration | Possible if known-good authenticated calls also fail. Fresh-key failures make simple revocation less convincing, but don’t establish which credential the failing request actually sent. |
+| 3 | Endpoint path or parameter placement | The script uses `/v1/api/torrents/requestdl`, consistent with the other scripts and the reported endpoint. `token` is placed in the query as reported; query-parameter order should not normally matter. |
+| 4 | URL encoding | Unlikely: `quote(surrogate, safe='')` correctly percent-encodes a query value. Torrent/file IDs are interpolated unescaped, but that is unlikely to explain `BAD_TOKEN` for ordinary numeric IDs. |
+| 5 | Redirect handling | Unlikely to produce `BAD_TOKEN`. Redirects are deliberately refused, but the resulting `RuntimeError` is not caught by the script’s `HTTPError` handler, so a redirect would instead produce a traceback. |
+| 6 | Cloudflare/User-Agent | Lower likelihood: the script sends the browser User-Agent documented as needed to avoid Cloudflare 1010. A 1010/block response is distinct from an API `BAD_TOKEN`. |
+| 7 | Plan/API cap | Low likelihood for an authentication error; investigate only after authentication succeeds. |
+
+**Concrete findings**
+
+- `bin/tb_reqdl.py:15–17`: `surrogate = str(entry["surrogate"]).strip()` is then placed directly in the URL as `token=...`. This is the central likely bug: the code treats a broker surrogate as a TorBox API key without an evident exchange or placement-aware helper.
+- `bin/tb_reqdl.py:9–11, 21–26`: redirects raise `RuntimeError`, while only `urllib.error.HTTPError` is caught. A redirect failure won’t be reported as a clean status/body by this script.
+- `bin/torbox_add_magnet.py:13, 37`: it imports `add_surrogate_to_request` but calls `url_with_surrogate_query_param`, which is not imported or defined in the file. Calling `main()` will raise `NameError` before sending the request.
+- `CONNECTOR.md:35–39`: it asserts that re-registering the key with `query_param` placement “would fix” requestdl. That’s not established by the listed code; the important distinction is whether the credential broker places/exchanges the actual credential, not merely whether the script inserts a surrogate into the query.
+- I could not inspect `/home/hatch/workspace/hero-parts-pull/zip_extract.py`: access was denied. No finding about that file is possible from this review.
+
+**Minimal diagnostic sequence (without printing the real key)**
+
+1. Run `tb_mylist.py` using the current vault entry and record only the status and sanitized API result. If it succeeds, the stored credential works through the known-good flow; if it also returns `BAD_TOKEN`, investigate the vault entry/key state before requestdl.
+2. Retry requestdl using the credential broker’s supported **query-parameter placement** flow, not `entry["surrogate"]` manually. Keep the actual key in the vault/helper; don’t put it in command arguments, logs, or output. A success here strongly implicates the manual surrogate/placement path.
+3. If it still fails, capture status, response body, and redirect status/host with the token redacted. A `3xx` identifies the redirect-handling branch; a Cloudflare block/1010 points to edge handling; `BAD_TOKEN` on requestdl alone points back to requestdl’s auth contract or endpoint-specific behavior.
+4. Only after authenticated calls work, check plan/API-cap behavior. Avoid regenerating the key again as a diagnostic; compare using the current vault entry so revocation and stale-entry effects aren’t confounded.
+
+No files were edited.
+
+EXIT:0

@@ -1,0 +1,5 @@
+central directory: 476 entries, 69779 bytes at offset 7910068055 (zip64)
+  cd fetch 0.1/0.1 MB, 476 entries parsed
+extracting: OK KO/Character Art/Character Art/ENID_01_RGB.ai  comp=387724 uncomp=444118 method=8 crc=4843a44f
+written: 444118 bytes  size_ok=True  crc_computed=4843a44f crc_ok=True
+out: /tmp/ENID_01_RGB.ai

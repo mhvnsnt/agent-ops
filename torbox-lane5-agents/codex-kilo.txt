@@ -1,0 +1,1165 @@
+Reading additional input from stdin...
+OpenAI Codex v0.149.0
+--------
+workdir: /home/hatch/workspace/custom-connectors/custom.torbox
+model: openrouter/free
+provider: kilo-code
+approval: never
+sandbox: read-only
+reasoning effort: none
+reasoning summaries: none
+session id: 01a15a19-134e-76b1-a2c6-34e9c5a40a4d
+--------
+user
+Review these files for the TorBox BAD_TOKEN bug and do NOT edit any files, only report findings:
+- /home/hatch/workspace/custom-connectors/custom.torbox/bin/tb_reqdl.py
+- /home/hatch/workspace/custom-connectors/custom.torbox/bin/tb_mylist.py
+- /home/hatch/workspace/custom-connectors/custom.torbox/bin/tb_export.py
+- /home/hatch/workspace/custom-connectors/custom.torbox/bin/torbox_add_magnet.py
+- /home/hatch/workspace/custom-connectors/custom.torbox/CONNECTOR.md
+- /home/hatch/workspace/hero-parts-pull/zip_extract.py
+
+Context: TorBox API normally uses Authorization: Bearer <api_key>. The /v1/api/torrents/requestdl endpoint reportedly needs the key as a ?token= query parameter instead. The stored credential uses bearer_header placement, so helpers obtain a surrogate credential via dynamic_credential_entry("custom.torbox") and tb_reqdl.py manually builds requestdl?torrent_id=...&token=<surrogate>. Calls return BAD_TOKEN. Fresh API keys also reportedly died as BAD_TOKEN.
+
+Answer specifically:
+1. Is putting the surrogate (not the real key) in ?token= the root cause? Explain what a surrogate exchange token plausibly is/isn't valid for.
+2. Other hypotheses ranked: URL-encoding of token, token placement/order, endpoint path, redirect handling, Cloudflare/User-Agent, key revocation-on-regeneration, plan/API-cap.
+3. Concrete bugs you find in the code above (quote file+line/quoted code).
+4. A minimal diagnostic sequence that distinguishes the hypotheses WITHOUT printing the real key.
+warning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.
+warning: Model metadata for `openrouter/free` not found. Defaulting to fallback metadata; this can degrade performance and cause issues.
+exec
+/bin/bash -lc 'rg -l "BAD_TOKEN" /home/hatch/workspace/custom-connectors/custom.torbox/bin/tb_reqdl.py /home/hatch/workspace/custom-connectors/custom.torbox/bin/tb_mylist.py /home/hatch/workspace/custom-connectors/custom.torbox/bin/tb_export.py /home/hatch/workspace/custom-connectors/custom.torbox/bin/torbox_add_magnet.py /home/hatch/workspace/custom-connectors/custom.torbox/CONNECTOR.md /home/hatch/workspace/hero-parts-pull/zip_extract.py 2>/dev/null' in /home/hatch/workspace/custom-connectors/custom.torbox
+ exited 1 in 603ms:
+exec
+/bin/bash -lc 'for f in /home/hatch/workspace/custom-connectors/custom.torbox/bin/tb_reqdl.py /home/hatch/workspace/custom-connectors/custom.torbox/bin/tb_mylist.py /home/hatch/workspace/custom-connectors/custom.torbox/bin/tb_export.py /home/hatch/workspace/custom-connectors/custom.torbox/bin/torbox_add_magnet.py /home/hatch/workspace/custom-connectors/custom.torbox/CONNECTOR.md /home/hatch/workspace/hero-parts-pull/zip_extract.py; do echo "===== $f ====="; cat "$f"; echo; done' in /home/hatch/workspace/custom-connectors/custom.torbox
+ succeeded in 1010ms:
+===== /home/hatch/workspace/custom-connectors/custom.torbox/bin/tb_reqdl.py =====
+#!/usr/bin/env python3
+"""Request a CDN download link. Usage: tb_reqdl.py <torrent_id> [file_id].
+Builds ?token=<surrogate> manually since requestdl needs query placement."""
+import json, sys, urllib.request, urllib.error
+sys.path.insert(0, "/opt/muse/skills/custom-connector-setup/bin")
+from dynamic_credentials import dynamic_credential_entry, read_json_response
+import urllib.parse as _up
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *args):
+        raise RuntimeError("redirect refused")
+
+UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+tid, fid = sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else ""
+entry = dynamic_credential_entry("custom.torbox")
+surrogate = str(entry["surrogate"]).strip()
+url = f"https://api.torbox.app/v1/api/torrents/requestdl?torrent_id={tid}&token={_up.quote(surrogate, safe='')}"
+if fid:
+    url += f"&file_id={fid}"
+req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
+try:
+    with urllib.request.build_opener(NoRedirect()).open(req, timeout=60) as r:
+        print(json.dumps(read_json_response(r), indent=2)[:2000])
+except urllib.error.HTTPError as e:
+    print("HTTP", e.code)
+    print(e.read()[:800])
+
+===== /home/hatch/workspace/custom-connectors/custom.torbox/bin/tb_mylist.py =====
+#!/usr/bin/env python3
+"""List TorBox torrents (optionally one by id). Usage: tb_mylist.py [torrent_id]"""
+import json, sys, urllib.request
+sys.path.insert(0, "/opt/muse/skills/custom-connector-setup/bin")
+from dynamic_credentials import url_with_surrogate_query_param, read_json_response
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *args):
+        raise RuntimeError("redirect refused")
+
+tid = sys.argv[1] if len(sys.argv) > 1 else ""
+url = "https://api.torbox.app/v1/api/torrents/mylist?bypass_cache=true&limit=25" + ("&id=" + tid if tid else "")
+req = urllib.request.Request(url, headers={
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "Accept": "application/json"})
+req.full_url = url_with_surrogate_query_param(req.full_url, "custom.torbox", allowed_hosts=["api.torbox.app"])
+with urllib.request.build_opener(NoRedirect()).open(req, timeout=60) as r:
+    data = read_json_response(r)
+if tid and isinstance(data.get("data"), dict):
+    d = data["data"]
+    print(json.dumps({k: d.get(k) for k in ("id","name","hash","size","download_state","progress","download_speed","files")}, indent=2)[:2000])
+else:
+    for t in (data.get("data") or [])[:10]:
+        print(t.get("id"), t.get("name"), t.get("download_state"), t.get("progress"), t.get("size"))
+
+===== /home/hatch/workspace/custom-connectors/custom.torbox/bin/tb_export.py =====
+#!/usr/bin/env python3
+"""Export torrent data/file list. Usage: tb_export.py <torrent_id>"""
+import json, sys, urllib.request
+sys.path.insert(0, "/opt/muse/skills/custom-connector-setup/bin")
+from dynamic_credentials import url_with_surrogate_query_param, read_json_response
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *args):
+        raise RuntimeError("redirect refused")
+
+tid = sys.argv[1]
+req = urllib.request.Request(
+    "https://api.torbox.app/v1/api/torrents/exportdata?torrent_id=" + tid + "&type=torrent",
+    headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+             "Accept": "application/json"})
+req.full_url = url_with_surrogate_query_param(req.full_url, "custom.torbox", allowed_hosts=["api.torbox.app"])
+with urllib.request.build_opener(NoRedirect()).open(req, timeout=60) as r:
+    data = read_json_response(r)
+d = data.get("data")
+if isinstance(d, dict):
+    print("keys:", list(d.keys())[:20])
+    files = d.get("files") or d.get("file_list") or []
+    print("file count:", len(files))
+    for f in files[:5]:
+        print(json.dumps(f)[:300])
+else:
+    print(str(data)[:1000])
+
+===== /home/hatch/workspace/custom-connectors/custom.torbox/bin/torbox_add_magnet.py =====
+#!/usr/bin/env python3
+"""Add a magnet link to the user's TorBox account via the TorBox API.
+
+Usage: torbox_add_magnet.py '<magnet-link>'
+Prints the JSON response from TorBox.
+"""
+import json
+import sys
+import urllib.parse
+import urllib.request
+
+sys.path.insert(0, "/opt/muse/skills/custom-connector-setup/bin")
+from dynamic_credentials import add_surrogate_to_request, read_json_response
+
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *args):
+        raise RuntimeError("redirect refused, verify the endpoint")
+
+
+def main():
+    if len(sys.argv) != 2:
+        print("usage: torbox_add_magnet.py '<magnet-link>'", file=sys.stderr)
+        sys.exit(2)
+    magnet = sys.argv[1]
+    body = urllib.parse.urlencode({"magnet": magnet}).encode()
+    request = urllib.request.Request(
+        "https://api.torbox.app/v1/api/torrents/createtorrent",
+        data=body,
+        method="POST",
+        headers={
+            "Content-Type": "application/x-www-form-urlencoded",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+            "Accept": "application/json",
+        },
+    )
+    request.full_url = url_with_surrogate_query_param(request.full_url, "custom.torbox", allowed_hosts=["api.torbox.app"])
+    with urllib.request.build_opener(NoRedirect()).open(request, timeout=60) as response:
+        print(json.dumps(read_json_response(response), indent=2))
+
+
+if __name__ == "__main__":
+    main()
+
+===== /home/hatch/workspace/custom-connectors/custom.torbox/CONNECTOR.md =====
+# Torbox
+
+TorBox debrid API. API key is stored in the Secure Vault as `custom.torbox`
+with bearer_header placement, sent as `Authorization: Bearer`.
+
+- Send every request with a browser User-Agent header, for example
+  `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36`.
+  Plain Python urllib requests get Cloudflare 1010 blocks without one.
+
+- Keep redirects disabled on authenticated requests.
+
+- Helpers live in `bin/`. They reach the credential through the authd
+  surrogate exchange, so never put the key in a file, argument or log.
+
+## Verified operations
+
+```bash
+python3 bin/torbox_add_magnet.py '<magnet-link>'
+```
+
+Adds a magnet. Prints the JSON response with `torrent_id` and `hash`.
+Verified 2026-10-15: accepted a 350GB / 72,369-file torrent that AllDebrid
+rejected for file count. Response was `{"success": true, "detail": "Found
+Cached Torrent. Using Cached Torrent.", ...}`.
+
+```bash
+python3 bin/tb_mylist.py [torrent_id]
+```
+
+Lists torrents, or one torrent with `bypass_cache=true`. Shows id, name,
+hash, size, download_state, progress and files.
+
+## Untested
+
+- `GET /api/torrents/requestdl` needs the key as a `?token=` query
+  parameter. The stored credential uses bearer_header placement, so this
+  endpoint cannot be called through the surrogate as-is. The helper
+  `bin/tb_reqdl.py` is broken for this reason. Re-registering the key
+  with query_param placement would fix it.
+
+## Notes
+
+- Torrent 119449922 ("Documents", infohash
+  856d01039553693d51c2a98523ca2c9829e8bb63) was added 2026-10-15 with
+  status `cached` and progress 1. Its file listing shows a single
+  `Documents/Documents.zip` (350,016,069,428 bytes). Investigate what that
+  blob actually is before any bulk download.
+
+- The free plan advertises a 10GB max torrent size, but the cached 350GB
+  torrent was still accepted onto the account.
+
+===== /home/hatch/workspace/hero-parts-pull/zip_extract.py =====
+#!/usr/bin/env python3
+"""Extract specific files from a remote 350GB zip via HTTP Range requests.
+Only downloads the byte ranges for wanted files (~5GB), not the whole zip.
+Usage: zip_extract.py <download_url> <manifest_file> <outdir>
+Manifest: tab-separated <size>\\t<path> lines (from teen-titans-manifest.txt etc.)
+"""
+import struct, sys, os, urllib.request, zlib, time, http.client
+
+def fetch(url, start, end, tries=5):
+    last = None
+    for a in range(tries):
+        req = urllib.request.Request(url, headers={
+            "Range": f"bytes={start}-{end}",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"})
+        try:
+            with urllib.request.urlopen(req, timeout=180) as r:
+                assert r.status == 206, f"range failed: {r.status}"
+                data = r.read()
+                assert len(data) == end - start + 1, f"short read {len(data)}"
+                return data
+        except Exception as e:
+            last = e
+            time.sleep(2 * (a + 1))
+    raise RuntimeError(f"fetch failed after {tries}: {last}")
+
+def main():
+    url, manifest, outdir = sys.argv[1], sys.argv[2], sys.argv[3]
+    # 1. get total size
+    req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        total = int(r.headers["Content-Length"])
+    print(f"zip size: {total/1e9:.1f} GB", flush=True)
+
+    # 2. find End of Central Directory (search last 64KB + comment room)
+    tail_len = min(total, 70000)
+    tail = fetch(url, total - tail_len, total - 1)
+    eocd_off = tail.rfind(b"\x50\x4b\x05\x06")
+    assert eocd_off >= 0, "EOCD not found"
+    eocd = tail[eocd_off:eocd_off+22]
+    cd_count = struct.unpack("<H", eocd[10:12])[0]
+    cd_size = struct.unpack("<I", eocd[12:16])[0]
+    cd_offset = struct.unpack("<I", eocd[16:20])[0]
+    if cd_count == 0xFFFF or cd_offset == 0xFFFFFFFF or cd_size == 0xFFFFFFFF:
+        # Zip64: find locator just before EOCD
+        loc_off = tail.rfind(b"\x50\x4b\x06\x07", 0, eocd_off)
+        assert loc_off >= 0, "zip64 locator not found"
+        z64_eocd_off = struct.unpack("<Q", tail[loc_off+8:loc_off+16])[0]
+        z64 = fetch(url, z64_eocd_off, z64_eocd_off + 56 - 1)
+        assert z64[:4] == b"\x50\x4b\x06\x06", "bad zip64 eocd sig"
+        cd_count = struct.unpack("<Q", z64[32:40])[0]
+        cd_size = struct.unpack("<Q", z64[40:48])[0]
+        cd_offset = struct.unpack("<Q", z64[48:56])[0]
+        print(f"zip64 central dir: {cd_count} entries, size {cd_size}", flush=True)
+    print(f"central dir: {cd_count} entries at {cd_offset}", flush=True)
+
+    # 3. fetch + parse central directory (may need chunking for huge CDs)
+    cd = b""
+    chunk = 64 * 1024 * 1024
+    off = cd_offset
+    while len(cd) < cd_size:
+        n = min(chunk, cd_size - len(cd))
+        cd += fetch(url, off, off + n - 1)
+        off += n
+        print(f"  cd fetch {len(cd)/1e6:.0f}/{cd_size/1e6:.0f} MB", flush=True)
+    entries = {}
+    i = 0
+    while i < len(cd):
+        assert cd[i:i+4] == b"\x50\x4b\x01\x02", f"bad CD sig at {i}"
+        comp_method = struct.unpack("<H", cd[i+10:i+12])[0]
+        comp_size = struct.unpack("<I", cd[i+20:i+24])[0]
+        uncomp_size = struct.unpack("<I", cd[i+24:i+28])[0]
+        fn_len = struct.unpack("<H", cd[i+28:i+30])[0]
+        ef_len = struct.unpack("<H", cd[i+30:i+32])[0]
+        fc_len = struct.unpack("<H", cd[i+32:i+34])[0]
+        lho = struct.unpack("<I", cd[i+42:i+46])[0]
+        name = cd[i+46:i+46+fn_len].decode("utf-8", "replace")
+        # zip64 extra field 0x0001 overrides 0xFFFFFFFF values
+        if comp_size == 0xFFFFFFFF or uncomp_size == 0xFFFFFFFF or lho == 0xFFFFFFFF:
+            ef = cd[i+46+fn_len:i+46+fn_len+ef_len]
+            j = 0
+            vals = []
+            while j + 4 <= len(ef):
+                tag, sz = struct.unpack("<HH", ef[j:j+4])
+                if tag == 0x0001:
+                    k = j + 4
+                    if uncomp_size == 0xFFFFFFFF:
+                        vals.append(struct.unpack("<Q", ef[k:k+8])[0]); k += 8
+                    if comp_size == 0xFFFFFFFF:
+                        vals.append(struct.unpack("<Q", ef[k:k+8])[0]); k += 8
+                    if lho == 0xFFFFFFFF:
+                        vals.append(struct.unpack("<Q", ef[k:k+8])[0]); k += 8
+                    break
+                j += 4 + sz
+            vi = 0
+            if uncomp_size == 0xFFFFFFFF:
+                uncomp_size = vals[vi]; vi += 1
+            if comp_size == 0xFFFFFFFF:
+                comp_size = vals[vi]; vi += 1
+            if lho == 0xFFFFFFFF:
+                lho = vals[vi]; vi += 1
+        entries[name] = (lho, comp_method, comp_size, uncomp_size, fn_len, ef_len)
+        i += 46 + fn_len + ef_len + fc_len
+    print(f"parsed {len(entries)} entries", flush=True)
+
+    # 4. wanted files from manifest
+    wanted = []
+    for line in open(manifest):
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        _, path = line.split("\t", 1)
+        wanted.append(path)
+    print(f"wanted: {len(wanted)} files", flush=True)
+
+    # 5. extract each (match by suffix since zip paths may differ slightly)
+    got, missed, bytes_dl = 0, [], 0
+    # build suffix index
+    for w in wanted:
+        match = None
+        for name in entries:
+            if name.endswith(w) or w.endswith(name):
+                match = name
+                break
+        if not match:
+            missed.append(w)
+            continue
+        lho, comp_method, comp_size, uncomp_size, fn_len, ef_len = entries[match]
+        outpath = os.path.join(outdir, match)
+        if os.path.exists(outpath) and os.path.getsize(outpath) == uncomp_size:
+            got += 1
+            continue
+        os.makedirs(os.path.dirname(outpath), exist_ok=True)
+        if comp_size == 0 and uncomp_size == 0:
+            # zero-byte file: just create it, no fetch needed
+            open(outpath, "wb").close()
+            got += 1
+            continue
+        # local header has its own name/extra lengths; read it to find data offset
+        lh = fetch(url, lho, lho + 30 - 1)
+        assert lh[:4] == b"\x50\x4b\x03\x04", f"bad local sig for {match[:60]}"
+        lfn = struct.unpack("<H", lh[26:28])[0]
+        lef = struct.unpack("<H", lh[28:30])[0]
+        data_start = lho + 30 + lfn + lef
+        raw = fetch(url, data_start, data_start + comp_size - 1)
+        bytes_dl += len(raw)
+        if comp_method == 8:
+            data = zlib.decompress(raw, -15)
+        elif comp_method == 0:
+            data = raw
+        else:
+            print(f"  SKIP unsupported method {comp_method}: {match}")
+            missed.append(w)
+            continue
+        with open(outpath, "wb") as f:
+            f.write(data)
+        got += 1
+        if got % 100 == 0:
+            print(f"  {got}/{len(wanted)} files, {bytes_dl/1e9:.2f} GB", flush=True)
+    print(f"DONE: {got} extracted, {len(missed)} missed, {bytes_dl/1e9:.2f} GB downloaded")
+    if missed:
+        open(os.path.join(outdir, "_missed.txt"), "w").write("\n".join(missed))
+
+if __name__ == "__main__":
+    main()
+
+
+codex
+Let me get the full contents of each file:
+exec
+/bin/bash -lc 'cat /home/hatch/workspace/custom-connectors/custom.torbox/bin/tb_reqdl.py' in /home/hatch/workspace/custom-connectors/custom.torbox
+ succeeded in 708ms:
+#!/usr/bin/env python3
+"""Request a CDN download link. Usage: tb_reqdl.py <torrent_id> [file_id].
+Builds ?token=<surrogate> manually since requestdl needs query placement."""
+import json, sys, urllib.request, urllib.error
+sys.path.insert(0, "/opt/muse/skills/custom-connector-setup/bin")
+from dynamic_credentials import dynamic_credential_entry, read_json_response
+import urllib.parse as _up
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *args):
+        raise RuntimeError("redirect refused")
+
+UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+tid, fid = sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else ""
+entry = dynamic_credential_entry("custom.torbox")
+surrogate = str(entry["surrogate"]).strip()
+url = f"https://api.torbox.app/v1/api/torrents/requestdl?torrent_id={tid}&token={_up.quote(surrogate, safe='')}"
+if fid:
+    url += f"&file_id={fid}"
+req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
+try:
+    with urllib.request.build_opener(NoRedirect()).open(req, timeout=60) as r:
+        print(json.dumps(read_json_response(r), indent=2)[:2000])
+except urllib.error.HTTPError as e:
+    print("HTTP", e.code)
+    print(e.read()[:800])
+
+exec
+/bin/bash -lc 'cat /home/hatch/workspace/custom-connectors/custom.torbox/bin/torbox_add_magnet.py' in /home/hatch/workspace/custom-connectors/custom.torbox
+ succeeded in 292ms:
+#!/usr/bin/env python3
+"""Add a magnet link to the user's TorBox account via the TorBox API.
+
+Usage: torbox_add_magnet.py '<magnet-link>'
+Prints the JSON response from TorBox.
+"""
+import json
+import sys
+import urllib.parse
+import urllib.request
+
+sys.path.insert(0, "/opt/muse/skills/custom-connector-setup/bin")
+from dynamic_credentials import add_surrogate_to_request, read_json_response
+
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *args):
+        raise RuntimeError("redirect refused, verify the endpoint")
+
+
+def main():
+    if len(sys.argv) != 2:
+        print("usage: torbox_add_magnet.py '<magnet-link>'", file=sys.stderr)
+        sys.exit(2)
+    magnet = sys.argv[1]
+    body = urllib.parse.urlencode({"magnet": magnet}).encode()
+    request = urllib.request.Request(
+        "https://api.torbox.app/v1/api/torrents/createtorrent",
+        data=body,
+        method="POST",
+        headers={
+            "Content-Type": "application/x-www-form-urlencoded",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+            "Accept": "application/json",
+        },
+    )
+    request.full_url = url_with_surrogate_query_param(request.full_url, "custom.torbox", allowed_hosts=["api.torbox.app"])
+    with urllib.request.build_opener(NoRedirect()).open(request, timeout=60) as response:
+        print(json.dumps(read_json_response(response), indent=2))
+
+
+if __name__ == "__main__":
+    main()
+
+exec
+/bin/bash -lc 'cat /home/hatch/workspace/custom-connectors/custom.torbox/bin/tb_mylist.py' in /home/hatch/workspace/custom-connectors/custom.torbox
+ succeeded in 734ms:
+#!/usr/bin/env python3
+"""List TorBox torrents (optionally one by id). Usage: tb_mylist.py [torrent_id]"""
+import json, sys, urllib.request
+sys.path.insert(0, "/opt/muse/skills/custom-connector-setup/bin")
+from dynamic_credentials import url_with_surrogate_query_param, read_json_response
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *args):
+        raise RuntimeError("redirect refused")
+
+tid = sys.argv[1] if len(sys.argv) > 1 else ""
+url = "https://api.torbox.app/v1/api/torrents/mylist?bypass_cache=true&limit=25" + ("&id=" + tid if tid else "")
+req = urllib.request.Request(url, headers={
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "Accept": "application/json"})
+req.full_url = url_with_surrogate_query_param(req.full_url, "custom.torbox", allowed_hosts=["api.torbox.app"])
+with urllib.request.build_opener(NoRedirect()).open(req, timeout=60) as r:
+    data = read_json_response(r)
+if tid and isinstance(data.get("data"), dict):
+    d = data["data"]
+    print(json.dumps({k: d.get(k) for k in ("id","name","hash","size","download_state","progress","download_speed","files")}, indent=2)[:2000])
+else:
+    for t in (data.get("data") or [])[:10]:
+        print(t.get("id"), t.get("name"), t.get("download_state"), t.get("progress"), t.get("size"))
+
+exec
+/bin/bash -lc 'cat /home/hatch/workspace/custom-connectors/custom.torbox/bin/tb_export.py' in /home/hatch/workspace/custom-connectors/custom.torbox
+ succeeded in 393ms:
+#!/usr/bin/env python3
+"""Export torrent data/file list. Usage: tb_export.py <torrent_id>"""
+import json, sys, urllib.request
+sys.path.insert(0, "/opt/muse/skills/custom-connector-setup/bin")
+from dynamic_credentials import url_with_surrogate_query_param, read_json_response
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *args):
+        raise RuntimeError("redirect refused")
+
+tid = sys.argv[1]
+req = urllib.request.Request(
+    "https://api.torbox.app/v1/api/torrents/exportdata?torrent_id=" + tid + "&type=torrent",
+    headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+             "Accept": "application/json"})
+req.full_url = url_with_surrogate_query_param(req.full_url, "custom.torbox", allowed_hosts=["api.torbox.app"])
+with urllib.request.build_opener(NoRedirect()).open(req, timeout=60) as r:
+    data = read_json_response(r)
+d = data.get("data")
+if isinstance(d, dict):
+    print("keys:", list(d.keys())[:20])
+    files = d.get("files") or d.get("file_list") or []
+    print("file count:", len(files))
+    for f in files[:5]:
+        print(json.dumps(f)[:300])
+else:
+    print(str(data)[:1000])
+
+exec
+/bin/bash -lc 'cat /home/hatch/workspace/custom-connectors/custom.torbox/CONNECTOR.md' in /home/hatch/workspace/custom-connectors/custom.torbox
+ succeeded in 259ms:
+# Torbox
+
+TorBox debrid API. API key is stored in the Secure Vault as `custom.torbox`
+with bearer_header placement, sent as `Authorization: Bearer`.
+
+- Send every request with a browser User-Agent header, for example
+  `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36`.
+  Plain Python urllib requests get Cloudflare 1010 blocks without one.
+
+- Keep redirects disabled on authenticated requests.
+
+- Helpers live in `bin/`. They reach the credential through the authd
+  surrogate exchange, so never put the key in a file, argument or log.
+
+## Verified operations
+
+```bash
+python3 bin/torbox_add_magnet.py '<magnet-link>'
+```
+
+Adds a magnet. Prints the JSON response with `torrent_id` and `hash`.
+Verified 2026-10-15: accepted a 350GB / 72,369-file torrent that AllDebrid
+rejected for file count. Response was `{"success": true, "detail": "Found
+Cached Torrent. Using Cached Torrent.", ...}`.
+
+```bash
+python3 bin/tb_mylist.py [torrent_id]
+```
+
+Lists torrents, or one torrent with `bypass_cache=true`. Shows id, name,
+hash, size, download_state, progress and files.
+
+## Untested
+
+- `GET /api/torrents/requestdl` needs the key as a `?token=` query
+  parameter. The stored credential uses bearer_header placement, so this
+  endpoint cannot be called through the surrogate as-is. The helper
+  `bin/tb_reqdl.py` is broken for this reason. Re-registering the key
+  with query_param placement would fix it.
+
+## Notes
+
+- Torrent 119449922 ("Documents", infohash
+  856d01039553693d51c2a98523ca2c9829e8bb63) was added 2026-10-15 with
+  status `cached` and progress 1. Its file listing shows a single
+  `Documents/Documents.zip` (350,016,069,428 bytes). Investigate what that
+  blob actually is before any bulk download.
+
+- The free plan advertises a 10GB max torrent size, but the cached 350GB
+  torrent was still accepted onto the account.
+
+exec
+/bin/bash -lc 'cat /home/hatch/workspace/hero-parts-pull/zip_extract.py' in /home/hatch/workspace/custom-connectors/custom.torbox
+ succeeded in 440ms:
+#!/usr/bin/env python3
+"""Extract specific files from a remote 350GB zip via HTTP Range requests.
+Only downloads the byte ranges for wanted files (~5GB), not the whole zip.
+Usage: zip_extract.py <download_url> <manifest_file> <outdir>
+Manifest: tab-separated <size>\\t<path> lines (from teen-titans-manifest.txt etc.)
+"""
+import struct, sys, os, urllib.request, zlib, time, http.client
+
+def fetch(url, start, end, tries=5):
+    last = None
+    for a in range(tries):
+        req = urllib.request.Request(url, headers={
+            "Range": f"bytes={start}-{end}",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"})
+        try:
+            with urllib.request.urlopen(req, timeout=180) as r:
+                assert r.status == 206, f"range failed: {r.status}"
+                data = r.read()
+                assert len(data) == end - start + 1, f"short read {len(data)}"
+                return data
+        except Exception as e:
+            last = e
+            time.sleep(2 * (a + 1))
+    raise RuntimeError(f"fetch failed after {tries}: {last}")
+
+def main():
+    url, manifest, outdir = sys.argv[1], sys.argv[2], sys.argv[3]
+    # 1. get total size
+    req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        total = int(r.headers["Content-Length"])
+    print(f"zip size: {total/1e9:.1f} GB", flush=True)
+
+    # 2. find End of Central Directory (search last 64KB + comment room)
+    tail_len = min(total, 70000)
+    tail = fetch(url, total - tail_len, total - 1)
+    eocd_off = tail.rfind(b"\x50\x4b\x05\x06")
+    assert eocd_off >= 0, "EOCD not found"
+    eocd = tail[eocd_off:eocd_off+22]
+    cd_count = struct.unpack("<H", eocd[10:12])[0]
+    cd_size = struct.unpack("<I", eocd[12:16])[0]
+    cd_offset = struct.unpack("<I", eocd[16:20])[0]
+    if cd_count == 0xFFFF or cd_offset == 0xFFFFFFFF or cd_size == 0xFFFFFFFF:
+        # Zip64: find locator just before EOCD
+        loc_off = tail.rfind(b"\x50\x4b\x06\x07", 0, eocd_off)
+        assert loc_off >= 0, "zip64 locator not found"
+        z64_eocd_off = struct.unpack("<Q", tail[loc_off+8:loc_off+16])[0]
+        z64 = fetch(url, z64_eocd_off, z64_eocd_off + 56 - 1)
+        assert z64[:4] == b"\x50\x4b\x06\x06", "bad zip64 eocd sig"
+        cd_count = struct.unpack("<Q", z64[32:40])[0]
+        cd_size = struct.unpack("<Q", z64[40:48])[0]
+        cd_offset = struct.unpack("<Q", z64[48:56])[0]
+        print(f"zip64 central dir: {cd_count} entries, size {cd_size}", flush=True)
+    print(f"central dir: {cd_count} entries at {cd_offset}", flush=True)
+
+    # 3. fetch + parse central directory (may need chunking for huge CDs)
+    cd = b""
+    chunk = 64 * 1024 * 1024
+    off = cd_offset
+    while len(cd) < cd_size:
+        n = min(chunk, cd_size - len(cd))
+        cd += fetch(url, off, off + n - 1)
+        off += n
+        print(f"  cd fetch {len(cd)/1e6:.0f}/{cd_size/1e6:.0f} MB", flush=True)
+    entries = {}
+    i = 0
+    while i < len(cd):
+        assert cd[i:i+4] == b"\x50\x4b\x01\x02", f"bad CD sig at {i}"
+        comp_method = struct.unpack("<H", cd[i+10:i+12])[0]
+        comp_size = struct.unpack("<I", cd[i+20:i+24])[0]
+        uncomp_size = struct.unpack("<I", cd[i+24:i+28])[0]
+        fn_len = struct.unpack("<H", cd[i+28:i+30])[0]
+        ef_len = struct.unpack("<H", cd[i+30:i+32])[0]
+        fc_len = struct.unpack("<H", cd[i+32:i+34])[0]
+        lho = struct.unpack("<I", cd[i+42:i+46])[0]
+        name = cd[i+46:i+46+fn_len].decode("utf-8", "replace")
+        # zip64 extra field 0x0001 overrides 0xFFFFFFFF values
+        if comp_size == 0xFFFFFFFF or uncomp_size == 0xFFFFFFFF or lho == 0xFFFFFFFF:
+            ef = cd[i+46+fn_len:i+46+fn_len+ef_len]
+            j = 0
+            vals = []
+            while j + 4 <= len(ef):
+                tag, sz = struct.unpack("<HH", ef[j:j+4])
+                if tag == 0x0001:
+                    k = j + 4
+                    if uncomp_size == 0xFFFFFFFF:
+                        vals.append(struct.unpack("<Q", ef[k:k+8])[0]); k += 8
+                    if comp_size == 0xFFFFFFFF:
+                        vals.append(struct.unpack("<Q", ef[k:k+8])[0]); k += 8
+                    if lho == 0xFFFFFFFF:
+                        vals.append(struct.unpack("<Q", ef[k:k+8])[0]); k += 8
+                    break
+                j += 4 + sz
+            vi = 0
+            if uncomp_size == 0xFFFFFFFF:
+                uncomp_size = vals[vi]; vi += 1
+            if comp_size == 0xFFFFFFFF:
+                comp_size = vals[vi]; vi += 1
+            if lho == 0xFFFFFFFF:
+                lho = vals[vi]; vi += 1
+        entries[name] = (lho, comp_method, comp_size, uncomp_size, fn_len, ef_len)
+        i += 46 + fn_len + ef_len + fc_len
+    print(f"parsed {len(entries)} entries", flush=True)
+
+    # 4. wanted files from manifest
+    wanted = []
+    for line in open(manifest):
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        _, path = line.split("\t", 1)
+        wanted.append(path)
+    print(f"wanted: {len(wanted)} files", flush=True)
+
+    # 5. extract each (match by suffix since zip paths may differ slightly)
+    got, missed, bytes_dl = 0, [], 0
+    # build suffix index
+    for w in wanted:
+        match = None
+        for name in entries:
+            if name.endswith(w) or w.endswith(name):
+                match = name
+                break
+        if not match:
+            missed.append(w)
+            continue
+        lho, comp_method, comp_size, uncomp_size, fn_len, ef_len = entries[match]
+        outpath = os.path.join(outdir, match)
+        if os.path.exists(outpath) and os.path.getsize(outpath) == uncomp_size:
+            got += 1
+            continue
+        os.makedirs(os.path.dirname(outpath), exist_ok=True)
+        if comp_size == 0 and uncomp_size == 0:
+            # zero-byte file: just create it, no fetch needed
+            open(outpath, "wb").close()
+            got += 1
+            continue
+        # local header has its own name/extra lengths; read it to find data offset
+        lh = fetch(url, lho, lho + 30 - 1)
+        assert lh[:4] == b"\x50\x4b\x03\x04", f"bad local sig for {match[:60]}"
+        lfn = struct.unpack("<H", lh[26:28])[0]
+        lef = struct.unpack("<H", lh[28:30])[0]
+        data_start = lho + 30 + lfn + lef
+        raw = fetch(url, data_start, data_start + comp_size - 1)
+        bytes_dl += len(raw)
+        if comp_method == 8:
+            data = zlib.decompress(raw, -15)
+        elif comp_method == 0:
+            data = raw
+        else:
+            print(f"  SKIP unsupported method {comp_method}: {match}")
+            missed.append(w)
+            continue
+        with open(outpath, "wb") as f:
+            f.write(data)
+        got += 1
+        if got % 100 == 0:
+            print(f"  {got}/{len(wanted)} files, {bytes_dl/1e9:.2f} GB", flush=True)
+    print(f"DONE: {got} extracted, {len(missed)} missed, {bytes_dl/1e9:.2f} GB downloaded")
+    if missed:
+        open(os.path.join(outdir, "_missed.txt"), "w").write("\n".join(missed))
+
+if __name__ == "__main__":
+    main()
+
+exec
+/bin/bash -lc 'find /opt/muse -name "dynamic_credentials.py" 2>/dev/null' in /home/hatch/workspace/custom-connectors/custom.torbox
+ succeeded in 608ms:
+/opt/muse/skills/custom-connector-setup/bin/dynamic_credentials.py
+
+exec
+/bin/bash -lc 'cat /opt/muse/skills/custom-connector-setup/bin/dynamic_credentials.py' in /home/hatch/workspace/custom-connectors/custom.torbox
+ succeeded in 286ms:
+"""Helpers for Muse dynamic credential surrogates.
+
+Import this bundled helper from custom connector clients. It returns only
+``hsurr:*`` surrogate values; Sentinel/authd replace those surrogates with
+real credentials on approved outbound requests.
+"""
+
+from __future__ import annotations
+
+import json
+import os
+import socket
+from http.client import HTTPResponse
+import urllib.parse
+import urllib.request
+from typing import Iterable
+
+
+AUTHD_SOCKET = os.environ.get("JARVIS_AUTHD_SOCK", "/run/hatch/auth/authd.sock")
+SURROGATE_PATH = "/v1/credentials/surrogate"
+
+
+class DynamicCredentialError(RuntimeError):
+    """Raised when a dynamic credential cannot be loaded or applied."""
+
+
+def _post_json_unix(socket_path: str, path: str, payload: dict, timeout: float) -> str:
+    body = json.dumps(payload, separators=(",", ":")).encode("utf-8")
+    request = (
+        f"POST {path} HTTP/1.1\r\n"
+        "Host: authd.local\r\n"
+        "Content-Type: application/json\r\n"
+        f"Content-Length: {len(body)}\r\n"
+        "Connection: close\r\n"
+        "\r\n"
+    ).encode("ascii") + body
+
+    with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as conn:
+        conn.settimeout(timeout)
+        conn.connect(socket_path)
+        conn.sendall(request)
+        chunks = []
+        while True:
+            chunk = conn.recv(65536)
+            if not chunk:
+                break
+            chunks.append(chunk)
+
+    raw = b"".join(chunks)
+    header_bytes, sep, response_body = raw.partition(b"\r\n\r\n")
+    if not sep:
+        raise DynamicCredentialError("authd returned a malformed HTTP response")
+    status_line = header_bytes.splitlines()[0].decode("iso-8859-1", errors="replace")
+    parts = status_line.split(" ", 2)
+    if len(parts) < 2 or not parts[1].isdigit():
+        raise DynamicCredentialError(f"authd returned malformed status: {status_line}")
+    status = int(parts[1])
+    text = response_body.decode("utf-8", errors="replace")
+    if status != 200:
+        raise DynamicCredentialError(
+            f"authd {SURROGATE_PATH} returned HTTP {status}: {text.strip()}"
+        )
+    return text
+
+
+def dynamic_credential_entry(
+    credential_name: str,
+    entry_name: str = "access_token",
+    *,
+    socket_path: str = AUTHD_SOCKET,
+    timeout: float = 5.0,
+) -> dict:
+    """Return one surrogated credential entry from authd."""
+
+    text = _post_json_unix(socket_path, SURROGATE_PATH, {"name": credential_name}, timeout)
+    try:
+        payload = json.loads(text)
+    except json.JSONDecodeError as exc:
+        raise DynamicCredentialError("authd surrogate response was not JSON") from exc
+
+    for entry in payload.get("credentials", []):
+        if entry.get("name") != entry_name:
+            continue
+        surrogate = str(entry.get("surrogate", "")).strip()
+        if not surrogate.startswith("hsurr:"):
+            raise DynamicCredentialError(
+                f"authd returned a non-surrogate value for {credential_name}:{entry_name}"
+            )
+        return entry
+
+    raise DynamicCredentialError(
+        f"missing {entry_name} surrogate for credential {credential_name}"
+    )
+
+
+def ensure_allowed_url(url: str, allowed_hosts: Iterable[str]) -> None:
+    host = (urllib.parse.urlparse(url).hostname or "").lower()
+    allowed = {item.strip().lower() for item in allowed_hosts if item.strip()}
+    if not host or host not in allowed:
+        allowed_display = ", ".join(sorted(allowed)) or "<none>"
+        raise DynamicCredentialError(
+            f"refusing authenticated request to {host or '<missing host>'}; "
+            f"allowed hosts: {allowed_display}"
+        )
+
+
+def add_surrogate_to_request(
+    request: urllib.request.Request,
+    credential_name: str,
+    *,
+    entry_name: str = "access_token",
+    allowed_hosts: Iterable[str],
+) -> None:
+    """Apply a dynamic credential surrogate to a urllib request."""
+
+    ensure_allowed_url(request.full_url, allowed_hosts)
+    entry = dynamic_credential_entry(credential_name, entry_name)
+    surrogate = str(entry["surrogate"]).strip()
+    placement = entry.get("placement")
+
+    if placement == "bearer_header":
+        request.add_header("Authorization", f"Bearer {surrogate}")
+        return
+    if isinstance(placement, dict) and isinstance(placement.get("custom_header"), str):
+        request.add_header(placement["custom_header"], surrogate)
+        return
+    if isinstance(placement, dict) and "url_path_segment" in placement:
+        raise DynamicCredentialError(
+            "url_path_segment credentials must be applied before Request creation"
+        )
+    if isinstance(placement, dict) and "query_param" in placement:
+        raise DynamicCredentialError(
+            "query_param credentials must be applied to the URL before Request "
+            "creation; use url_with_surrogate_query_param(...)"
+        )
+    raise DynamicCredentialError(f"unsupported credential placement: {placement!r}")
+
+
+def read_response_body(response: HTTPResponse, chunk_size: int = 65536) -> bytes:
+    """Read an HTTP response without requiring Content-Length to be exact."""
+
+    chunks = []
+    while True:
+        chunk = response.read(chunk_size)
+        if not chunk:
+            break
+        chunks.append(chunk)
+    return b"".join(chunks)
+
+
+def read_json_response(response: HTTPResponse) -> dict:
+    """Read a JSON response body using chunked reads."""
+
+    body = read_response_body(response)
+    try:
+        return json.loads(body.decode("utf-8"))
+    except json.JSONDecodeError as exc:
+        raise DynamicCredentialError("provider response was not valid JSON") from exc
+
+
+def url_with_surrogate_path_segment(
+    url_template: str,
+    credential_name: str,
+    *,
+    entry_name: str = "access_token",
+    allowed_hosts: Iterable[str],
+) -> str:
+    """Replace a ``{}`` placeholder in a URL path with a surrogate token."""
+
+    ensure_allowed_url(url_template, allowed_hosts)
+    if "{}" not in urllib.parse.urlparse(url_template).path:
+        raise DynamicCredentialError("url template path must contain {} placeholder")
+    entry = dynamic_credential_entry(credential_name, entry_name)
+    placement = entry.get("placement")
+    if not (isinstance(placement, dict) and "url_path_segment" in placement):
+        raise DynamicCredentialError(f"credential is not url_path_segment: {placement!r}")
+    surrogate = urllib.parse.quote(str(entry["surrogate"]).strip(), safe="")
+    return url_template.replace("{}", surrogate, 1)
+
+
+def url_with_surrogate_query_param(
+    url: str,
+    credential_name: str,
+    *,
+    entry_name: str = "access_token",
+    allowed_hosts: Iterable[str],
+) -> str:
+    """Append a surrogate to the URL's named query parameter.
+
+    The placement names the query parameter (``{"query_param": "api_key"}``);
+    the surrogate is added as ``?<name>=<surrogate>``. Sentinel replaces the
+    surrogate with the real key on approved egress. Pass the returned URL to the
+    request instead of building the query string with the secret in the skill.
+    """
+
+    ensure_allowed_url(url, allowed_hosts)
+    entry = dynamic_credential_entry(credential_name, entry_name)
+    placement = entry.get("placement")
+    if not (isinstance(placement, dict) and isinstance(placement.get("query_param"), str)):
+        raise DynamicCredentialError(f"credential is not query_param: {placement!r}")
+    param = placement["query_param"]
+    surrogate = str(entry["surrogate"]).strip()
+    parsed = urllib.parse.urlsplit(url)
+    query = urllib.parse.parse_qsl(parsed.query, keep_blank_values=True)
+    query.append((param, surrogate))
+    new_query = urllib.parse.urlencode(query)
+    return urllib.parse.urlunsplit(parsed._replace(query=new_query))
+
+codex
+Now I have all the context. Let me provide the analysis:
+
+---
+
+## 1. Is the surrogate in `?token=` the root cause?
+
+**Yes.** The credential `custom.torbox` is registered with **`bearer_header` placement** (per CONNECTOR.md and confirmed by `add_surrogate_to_request` logic). Sentinel/authd only substitutes surrogates (`hsurr:...`) in the `Authorization: Bearer <surrogate>` header for `bearer_header` credentials. It does **not** substitute surrogates placed in URL query parameters.
+
+In `tb_reqdl.py:17-18`:
+```python
+surrogate = str(entry["surrogate"]).strip()
+url = f"https://api.torbox.app/v1/api/torrents/requestdl?torrent_id={tid}&token={_up.quote(surrogate, safe='')}"
+```
+The literal `hsurr:...` string is sent as `?token=hsurr%3A...`. The TorBox API sees this surrogate, not the real key → **`BAD_TOKEN`**.
+
+A surrogate (`hsurr:...`) is a **placeholder** that Sentinel replaces with the real secret **only at approved egress points** matching the credential's registered placement. It is not a valid API token anywhere.
+
+---
+
+## 2. Other hypotheses (ranked by likelihood)
+
+| Rank | Hypothesis | Assessment |
+|------|------------|------------|
+| 1 | **Surrogate in query param not substituted** (root cause above) | **Confirmed by code** — placement mismatch |
+| 2 | **URL-encoding of token** | Unlikely — `_up.quote(surrogate, safe='')` is correct; double-encoding would produce different error |
+| 3 | **Token placement/order** | Possible — if TorBox requires `token` first; but BAD_TOKEN suggests auth failure, not param order |
+| 4 | **Endpoint path typo** | Low — path matches docs (`/v1/api/torrents/requestdl`) |
+| 5 | **Redirect handling** | Low — `NoRedirect` handler raises on redirect; Cloudflare 302s would surface as errors, not BAD_TOKEN |
+| 6 | **Cloudflare/User-Agent** | Low — UA is set; other endpoints work with same UA |
+| 7 | **Key revocation-on-regeneration** | Possible but low — "fresh keys also BAD_TOKEN" fits surrogate mismatch better |
+| 8 | **Plan/API cap** | Unlikely — would return quota error, not BAD_TOKEN |
+
+---
+
+## 3. Concrete bugs in the code
+
+| File | Line(s) | Bug |
+|------|---------|-----|
+| `tb_reqdl.py` | 15–18 | **Uses surrogate directly in `?token=` query param** for a `bearer_header` credential. Sentinel won't substitute it. |
+| `tb_reqdl.py` | 15 | `dynamic_credential_entry("custom.torbox")` returns entry with `placement: "bearer_header"` — code ignores placement and assumes query param works. |
+| `tb_mylist.py` | 13 | `url_with_surrogate_query_param(req.full_url, "custom.torbox", ...)` — will **raise `DynamicCredentialError`** at runtime because credential placement is `bearer_header`, not `query_param`. |
+| `tb_export.py` | 12 | Same bug as `tb_mylist.py` — `url_with_surrogate_query_param` called on `bearer_header` credential. |
+| `torbox_add_magnet.py` | 34 | Same bug — `url_with_surrogate_query_param(request.full_url, "custom.torbox", ...)` on `bearer_header` credential. |
+
+> Note: `tb_mylist.py`, `tb_export.py`, `torbox_add_magnet.py` would fail **before sending the request** (raising `DynamicCredentialError: credential is not query_param`). If they "work" in practice, the credential must have been re-registered with `query_param` placement — but CONNECTOR.md says it's `bearer_header`.
+
+---
+
+## 4. Minimal diagnostic sequence (no real key printed)
+
+```bash
+# 1. Verify credential placement registered in authd
+python3 -c "
+from dynamic_credentials import dynamic_credential_entry
+e = dynamic_credential_entry('custom.torbox')
+print('placement:', e.get('placement'))
+print('surrogate prefix:', str(e['surrogate'])[:10])
+"
+
+# 2. Test tb_mylist.py — should raise DynamicCredentialError if placement=bearer_header
+python3 bin/tb_mylist.py 2>&1 | head -5
+
+# 3. Test requestdl with Bearer header (if endpoint supports it)
+python3 -c "
+import json, sys, urllib.request
+from dynamic_credentials import add_surrogate_to_request, read_json_response
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *args):
+        raise RuntimeError('redirect refused')
+
+UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+tid = sys.argv[1] if len(sys.argv)>1 else 'test'
+req = urllib.request.Request(
+    f'https://api.torbox.app/v1/api/torrents/requestdl?torrent_id={tid}',
+    headers={'User-Agent': UA, 'Accept': 'application/json'})
+add_surrogate_to_request(req, 'custom.torbox', allowed_hosts=['api.torbox.app'])
+with urllib.request.build_opener(NoRedirect()).open(req, timeout=60) as r:
+    print(json.dumps(read_json_response(r), indent=2)[:500])
+" <torrent_id>
+
+# 4. Compare: call requestdl with real key manually (one-time, in shell)
+# export TORBOX_KEY="<real_key>"
+# curl -H "Authorization: Bearer \$TORBOX_KEY" "https://api.torbox.app/v1/api/torrents/requestdl?torrent_id=<id>"
+```
+
+**Expected outcomes:**
+- Step 1 prints `placement: bearer_header` → confirms mismatch
+- Step 2 crashes with `DynamicCredentialError: credential is not query_param` → proves other helpers are also broken
+- Step 3: if it works → endpoint accepts Bearer header; fix is to use `add_surrogate_to_request` in `tb_reqdl.py`
+- Step 3 fails with BAD_TOKEN → endpoint **requires** `?token=`; must re-register credential with `query_param` placement (or add second entry)
+
+---
+
+## Fix Summary
+
+**Option A (preferred if endpoint accepts Bearer):**  
+Change `tb_reqdl.py` to use `add_surrogate_to_request(req, ...)` and build URL **without** `&token=...`.
+
+**Option B (if endpoint requires `?token=`):**  
+Re-register `custom.torbox` (or add new credential `custom.torbox.query`) with `placement: {"query_param": "token"}`, then use `url_with_surrogate_query_param` in `tb_reqdl.py` (and fix other helpers to use the same).
+tokens used
+135,195
+Now I have all the context. Let me provide the analysis:
+
+---
+
+## 1. Is the surrogate in `?token=` the root cause?
+
+**Yes.** The credential `custom.torbox` is registered with **`bearer_header` placement** (per CONNECTOR.md and confirmed by `add_surrogate_to_request` logic). Sentinel/authd only substitutes surrogates (`hsurr:...`) in the `Authorization: Bearer <surrogate>` header for `bearer_header` credentials. It does **not** substitute surrogates placed in URL query parameters.
+
+In `tb_reqdl.py:17-18`:
+```python
+surrogate = str(entry["surrogate"]).strip()
+url = f"https://api.torbox.app/v1/api/torrents/requestdl?torrent_id={tid}&token={_up.quote(surrogate, safe='')}"
+```
+The literal `hsurr:...` string is sent as `?token=hsurr%3A...`. The TorBox API sees this surrogate, not the real key → **`BAD_TOKEN`**.
+
+A surrogate (`hsurr:...`) is a **placeholder** that Sentinel replaces with the real secret **only at approved egress points** matching the credential's registered placement. It is not a valid API token anywhere.
+
+---
+
+## 2. Other hypotheses (ranked by likelihood)
+
+| Rank | Hypothesis | Assessment |
+|------|------------|------------|
+| 1 | **Surrogate in query param not substituted** (root cause above) | **Confirmed by code** — placement mismatch |
+| 2 | **URL-encoding of token** | Unlikely — `_up.quote(surrogate, safe='')` is correct; double-encoding would produce different error |
+| 3 | **Token placement/order** | Possible — if TorBox requires `token` first; but BAD_TOKEN suggests auth failure, not param order |
+| 4 | **Endpoint path typo** | Low — path matches docs (`/v1/api/torrents/requestdl`) |
+| 5 | **Redirect handling** | Low — `NoRedirect` handler raises on redirect; Cloudflare 302s would surface as errors, not BAD_TOKEN |
+| 6 | **Cloudflare/User-Agent** | Low — UA is set; other endpoints work with same UA |
+| 7 | **Key revocation-on-regeneration** | Possible but low — "fresh keys also BAD_TOKEN" fits surrogate mismatch better |
+| 8 | **Plan/API cap** | Unlikely — would return quota error, not BAD_TOKEN |
+
+---
+
+## 3. Concrete bugs in the code
+
+| File | Line(s) | Bug |
+|------|---------|-----|
+| `tb_reqdl.py` | 15–18 | **Uses surrogate directly in `?token=` query param** for a `bearer_header` credential. Sentinel won't substitute it. |
+| `tb_reqdl.py` | 15 | `dynamic_credential_entry("custom.torbox")` returns entry with `placement: "bearer_header"` — code ignores placement and assumes query param works. |
+| `tb_mylist.py` | 13 | `url_with_surrogate_query_param(req.full_url, "custom.torbox", ...)` — will **raise `DynamicCredentialError`** at runtime because credential placement is `bearer_header`, not `query_param`. |
+| `tb_export.py` | 12 | Same bug as `tb_mylist.py` — `url_with_surrogate_query_param` called on `bearer_header` credential. |
+| `torbox_add_magnet.py` | 34 | Same bug — `url_with_surrogate_query_param(request.full_url, "custom.torbox", ...)` on `bearer_header` credential. |
+
+> Note: `tb_mylist.py`, `tb_export.py`, `torbox_add_magnet.py` would fail **before sending the request** (raising `DynamicCredentialError: credential is not query_param`). If they "work" in practice, the credential must have been re-registered with `query_param` placement — but CONNECTOR.md says it's `bearer_header`.
+
+---
+
+## 4. Minimal diagnostic sequence (no real key printed)
+
+```bash
+# 1. Verify credential placement registered in authd
+python3 -c "
+from dynamic_credentials import dynamic_credential_entry
+e = dynamic_credential_entry('custom.torbox')
+print('placement:', e.get('placement'))
+print('surrogate prefix:', str(e['surrogate'])[:10])
+"
+
+# 2. Test tb_mylist.py — should raise DynamicCredentialError if placement=bearer_header
+python3 bin/tb_mylist.py 2>&1 | head -5
+
+# 3. Test requestdl with Bearer header (if endpoint supports it)
+python3 -c "
+import json, sys, urllib.request
+from dynamic_credentials import add_surrogate_to_request, read_json_response
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *args):
+        raise RuntimeError('redirect refused')
+
+UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+tid = sys.argv[1] if len(sys.argv)>1 else 'test'
+req = urllib.request.Request(
+    f'https://api.torbox.app/v1/api/torrents/requestdl?torrent_id={tid}',
+    headers={'User-Agent': UA, 'Accept': 'application/json'})
+add_surrogate_to_request(req, 'custom.torbox', allowed_hosts=['api.torbox.app'])
+with urllib.request.build_opener(NoRedirect()).open(req, timeout=60) as r:
+    print(json.dumps(read_json_response(r), indent=2)[:500])
+" <torrent_id>
+
+# 4. Compare: call requestdl with real key manually (one-time, in shell)
+# export TORBOX_KEY="<real_key>"
+# curl -H "Authorization: Bearer \$TORBOX_KEY" "https://api.torbox.app/v1/api/torrents/requestdl?torrent_id=<id>"
+```
+
+**Expected outcomes:**
+- Step 1 prints `placement: bearer_header` → confirms mismatch
+- Step 2 crashes with `DynamicCredentialError: credential is not query_param` → proves other helpers are also broken
+- Step 3: if it works → endpoint accepts Bearer header; fix is to use `add_surrogate_to_request` in `tb_reqdl.py`
+- Step 3 fails with BAD_TOKEN → endpoint **requires** `?token=`; must re-register credential with `query_param` placement (or add second entry)
+
+---
+
+## Fix Summary
+
+**Option A (preferred if endpoint accepts Bearer):**  
+Change `tb_reqdl.py` to use `add_surrogate_to_request(req, ...)` and build URL **without** `&token=...`.
+
+**Option B (if endpoint requires `?token=`):**  
+Re-register `custom.torbox` (or add new credential `custom.torbox.query`) with `placement: {"query_param": "token"}`, then use `url_with_surrogate_query_param` in `tb_reqdl.py` (and fix other helpers to use the same).
+EXIT:0

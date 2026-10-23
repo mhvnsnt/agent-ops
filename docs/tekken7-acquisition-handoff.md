@@ -1,0 +1,1 @@
+../tekken7-acquisition-handoff.md

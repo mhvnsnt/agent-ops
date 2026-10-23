@@ -1,0 +1,17 @@
+35	ci: minute diet on guard workflows (Plan B) — concurrency cancel + timeouts + blob:none checkout	ci-minute-diet	OPEN	2026-10-20T06:03:49Z
+34	tools: local-ci — validate PRs locally when GitHub runners are down	tools/local-ci-20261019	OPEN	2026-10-20T04:36:06Z
+33	lane-guard: crash-resilient + collision-proof lanes toolkit	lane-guard	OPEN	2026-10-20T04:22:04Z
+32	ANTI-CLOBBER LAWS (owner 2026-10-17 — the DXMMII 54k-file wipe)	anti-clobber-laws	OPEN	2026-10-17T19:11:12Z
+31	law: ANTI-CLOBBER LAW (owner 2026-10-17)	law/anti-clobber-20261017	OPEN	2026-10-17T15:02:02Z
+30	Reusable game-repo CI template (Godot export + Blender headless + asset gates)	feat/ci-templates-20261016	OPEN	2026-10-16T17:36:48Z
+29	docs: research conventions + ADR template + research-check dedupe + index meta-research	docs/research-conventions-20261016	OPEN	2026-10-16T16:52:31Z
+28	claim: rig-universal-standard coordinator	claim/rig-universal-standard	OPEN	2026-10-15T16:56:57Z
+27	docs: canonical MERGE-IT-YOURSELF LAW (owner 2026-10-15)	docs/merge-it-yourself-law	OPEN	2026-10-15T16:53:21Z
+26	docs: COMPUTE_ARSENAL.md — free compute accounts (owner 2026-10-15)	docs/compute-arsenal	OPEN	2026-10-15T15:08:08Z
+25	claim: western-heart Pantera entrance/promo kit video v1	claim/wh-pantera-entrance-v1	OPEN	2026-10-15T01:35:42Z
+24	Claim: universal automatic rig-repair pipeline	claim/rig-pipeline-universal	OPEN	2026-10-15T01:14:51Z
+23	Handoff runbook: how Producerbot works	grok/handoff-runbook	OPEN	2026-10-15T00:51:41Z
+21	board: Jigglebot physics sandbox link	jigglebot-sandbox-link	OPEN	2026-10-14T22:56:30Z
+11	claims: KOBRA mesh/audit work paused	claims/kobra-paused	OPEN	2026-10-14T21:09:59Z
+10	CLAIMS: Bannon playtest fixes (paused)	claims/bannon-playtest-paused	OPEN	2026-10-14T21:09:34Z
+9	docs: MULTIVERSE.md map + Repo Co Dev claims	docs/multiverse-map	OPEN	2026-10-14T21:05:40Z
