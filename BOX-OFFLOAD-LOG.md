@@ -417,6 +417,29 @@ backup/box-2026-10-14b-<clone>-wip / -stashN on: AshLanev2 (ashlane-repo, ashlan
 
 Not backed up: mfluid-audit/Mochiichao-Diamond-Version-2d- (2 dirty files; push to mfluidmusic denied 403). Kept on disk.
 
+## 2026-10-23 cleanup (owner standing permission, t126u 2:57 PM CT)
+
+Rules: idle >60 min (excluding .git), no open handles, no untracked/modified files (only tracked deletions of files still on remote, or regenerable output like .output/ test-results/), 0 stashes, every local branch + HEAD reachable from a remote ref after fetch.
+
+| Path | Size | Remote | SHA | Cleared (CT) |
+|---|---|---|---|---|
+| `ashlane/play` | 1861MB | https://github.com/mhvnsnt/AshLanev2 | `7409b03a` | 15:04 CT |
+| `ig/w-AshLanev2` | 253MB | https://github.com/mhvnsnt/AshLanev2 | `93e820f2` | 15:04 CT |
+| `ig/w-Bannon` | 2001MB | https://github.com/mhvnsnt/Bannon | `7a388cf8` | 15:04 CT |
+| `ig/w-western-heart` | 741MB | https://github.com/mhvnsnt/western-heart | `86f3b51a` | 15:04 CT |
+| `ig/w-agent-ops` | 4MB | https://github.com/mhvnsnt/agent-ops | `ca32c44b` | 15:04 CT |
+| `bn/b` | 1645MB | https://github.com/mhvnsnt/Bannon.git | `63643c5e` | 15:04 CT |
+| `bible/God-Molecule-Show-Studio` | 727MB | https://github.com/mhvnsnt/God-Molecule-Show-Studio.git | `758365de` | 15:04 CT |
+| `kobra-fix` | 283MB | https://github.com/mhvnsnt/brutalfistgrokversionten.git | `dded5029` | 15:04 CT |
+| `bible/TRIPPEDD-Production-studios-` | 12273MB | https://github.com/mhvnsnt/TRIPPEDD-Production-studios-.git | `7efcfbdd` | 15:04 CT |
+| `bible/Bannon` | 7211MB | https://github.com/mhvnsnt/Bannon.git | `6636ad54` | 15:04 CT |
+| `ashlane/base-wt` | 2641MB | https://github.com/mhvnsnt/AshLanev2 | `1ce79707` | 15:04 CT |
+| `ashlane/repo` | 4266MB | https://github.com/mhvnsnt/AshLanev2 | `af2ff5b7` | 15:04 CT |
+| `TRIPPEDD-Production-studios-` | 4271MB | https://github.com/mhvnsnt/TRIPPEDD-Production-studios-.git | `43623000` | 15:04 CT |
+| `wh-qa` | 3874MB | https://github.com/mhvnsnt/western-heart.git | `7b0cdc5d` | 15:04 CT |
+| `western-heart-inventory/western-heart` | 2683MB | https://github.com/mhvnsnt/western-heart | `4a58f1a6` | 15:04 CT |
+
+Total freed: ~44.7 GB.
 ## 2026-10-23 ~15:55 CDT — Repo Co Dev own-clone cleanup (rule (a))
 
 Checked with `/tmp/rcd-chk.sh` (clean+no untracked, empty stash, every local branch contained in a remote ref, submodules). **Removed: none** — no clone passed all checks. Kept on disk:
