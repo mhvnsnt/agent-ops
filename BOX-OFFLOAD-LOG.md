@@ -416,3 +416,9 @@ Note: some head branches no longer exist on the remote (merged and deleted), but
 backup/box-2026-10-14b-<clone>-wip / -stashN on: AshLanev2 (ashlane-repo, ashlane-base-wt, originalize-pr-AshLanev2, tmp-ashbuild), Brutal-Fist (wip, stash0, BannonSource-wip), brutalfistgrokversionten (vten-stages, vten-main-wt, vten-intro, vten-intro-base, vten-ci-fix), brutalfistgrokversioneight, western-heart (wh-qa wip + grok/wh-playtest-qa, wh-cs), Bannon (wa-Bannon), M.-Engine- (fix), money-machine-hq (mmhq-entrance wip+2 stashes, mmhq-cdt/money-machine-hq/mmhq-et-v2 2 stashes each).
 
 Not backed up: mfluid-audit/Mochiichao-Diamond-Version-2d- (2 dirty files; push to mfluidmusic denied 403). Kept on disk.
+
+## 2026-10-23 ~4:20 PM CT — box offload
+- CLEARED /workspace/studio-pipeline (5.3G): git fetch; clean status (incl. untracked), empty stash, all local branches ancestor of origin; lsof none.
+- KEPT western-heart (20G): uncommitted deletions + 13 local branches not on/behind origin.
+- KEPT Brutal-Fist (4.5G): modified/deleted files, 1 stash, 2 unpushed branches.
+- KEPT originalize (6.1G), fc-glb (3.4G): not git repos.
