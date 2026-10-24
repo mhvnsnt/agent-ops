@@ -1,0 +1,5 @@
+slice cross-check 2026-10-20
+generator: python range_list.py slice 1000000 4194304
+sha256(slice.bin)      = b81037754bd3fe0561f40d3739bfb36bb499da822093bc73e263c25824fac519
+sha256(curl -L -r independent) = b81037754bd3fe0561f40d3739bfb36bb499da822093bc73e263c25824fac519
+cmp: IDENTICAL

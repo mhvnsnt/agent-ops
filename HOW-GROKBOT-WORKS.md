@@ -14,3 +14,14 @@ Rules: [money-machine-hq docs/AGENTS.md](https://github.com/mhvnsnt/money-machin
 10. **Log the workflow.** Record what you did, how, which tools and files, and where the output is, in the repo.
 11. **Check before claiming done.** Re-read his literal words and compare them to the result, method included.
 12. **Hygiene.** Run gitleaks before pushing. No secrets. Use unique temp file names.
+
+## Common mistakes to avoid (added 2026-10-23, merge steward)
+
+1. **Pushing straight to main.** It skips every guard. Example: the Megami expansion landed on western-heart main while its PR #793 was still open. Always go through branch + PR. See `ANTI-CLOBBER-LAW.md`.
+2. **Merging red, or merging on a check you can't read.** A 403, a cancelled run or a missing run counts as a FAIL. Verify through the Actions runs API.
+3. **Resolving conflicts by picking one side.** Never use "ours/theirs" on someone else's work. Append-only docs (WORKLOG.md, docs/owner-directives.md) get union-merged to keep both sides. Code conflicts go back to the author with a PR comment. See `docs/NO-DATA-LOSS-RULES.md`.
+4. **Hand-tooling moves.** Movement, crouch, jump, sidestep and every gap come from the TTT2/T6 teardowns (and the existing repos) until the owner says otherwise. Log the source file for each piece.
+5. **Paraphrasing the method in the PR body.** The instruction-gate needs "Method actually used" to match "Method the owner specified". Put the details under Proof, with paths in backticks.
+6. **Stale gate on old PRs.** The gate runs from the PR's own head. To pick up a gate fix, the author merges main into their branch. Don't force-push or rebase.
+7. **Force-push, rebase, amend, reset --hard, or deleting branches.** Never.
+8. **Forgetting docs.** Every change gets a WORKLOG entry and an update to HOW-TO-CONTINUE, so Muse and the owner can pick it up.
