@@ -55,3 +55,10 @@ Held/problem PRs: #497 (CONFLICTING — merging as-is REGRESSES the #508 feet fi
 ## Engine lock
 
 **GODOT 4.7.2** (owner-delegated pick, 2026-10-21). Mobile (Vulkan) renderer, Compatibility fallback, GLB native import, deterministic fixed-step sim core separated from presentation, direct APK export. Unity 6.3 LTS is the standing fallback. First build step: 2-fighter vertical slice on a real mid-range phone. The current web build (gh-pages) is the shipping prototype the playtest gate applies to.
+
+## 2026-10-24 ~05:20Z verify-sweep (overnight pipeline)
+
+- **#979 "cape-jones-fight" — VERIFIED on main.** Live merge lane merged 7559a534 at 05:07:21Z. Merge-tree gate: ahead_by=9, behind=0 vs parent1 d60f354f; exactly the 11 intended files (WORKLOG.md, docs/decisions/2026-10-23-cape-jones-fight-wiring.md, 3 proof pngs, portraits-manifest.json, owner-models.json, assets.js, attires.js, ATTIRE-SLOTS.md, roster/cyborg-x/attires/attire1/model-rigged.glb); 0 deletions. Cyborg X Attire 1 = Cape Jones canonical wiring is on main.
+- **#987 soul-variants-wave3 — VERIFIED on main.** Merge 67631439 vs parent1 acfd05a3 = exactly 1 modified file: game/data/soul-variants.json; 0 deletions.
+- **#989 dev-notes** — tail entry (Vain Abel A1 / rig wave 2 / moveset wave 3) intact on main, 41,512B — survived the lane's subsequent merges.
+- WH live merge lane ACTIVE tonight (merged #979 05:07Z; #984/#985/#986/#988 iterating). Pipeline stood down per CHECK-BEFORE-START.
