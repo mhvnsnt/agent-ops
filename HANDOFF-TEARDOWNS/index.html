@@ -1835,6 +1835,13 @@
 <li>GRE PR #10 (RE tooling pull-in, 905 files) carries <strong>−2 deletions</strong> — run the deletion guard before any merge.</li>
 <li>Every item above is in <code>MERGE-QUEUE.md</code> with its landing order. If a teardown's state here disagrees with a checkpoint, the repo wins and the checkpoint is stale — fix the checkpoint in your PR.</li>
 </ul>
+<h2 id="incident-2026-10-24-0520z-gre-5857-merges-wiped-off-main-by-lane-ref-rewrite">INCIDENT 2026-10-24 ~05:20Z — GRE #58/#57 merges wiped off main by lane ref-rewrite<a class="headerlink" href="#incident-2026-10-24-0520z-gre-5857-merges-wiped-off-main-by-lane-ref-rewrite" title="Permanent link">&para;</a></h2>
+<p><strong>What happened:</strong> the overnight pipeline's 04:22-04:24Z merges (#58 WWE 2K19 batch1 → 79c068d5, #57 Yakuza Kiwami hact → c2a1c8c7) were verified LANDED-VERIFIED at 04:24Z, then dropped off main. Verified own-eyes 05:20Z: <code>teardown/wwe2k19</code> 404 on main (retried — not transient); <code>teardown/</code> on main = firepro, pakchunk0, tekken7-steam, tkdata, wrestling-empire only. Both merge commits exist but are NOT in main's ancestry (compare 79c068d5...HEAD = diverged, ahead 27 / behind 15). Main HEAD = b8abadd6 (03:49:18Z) — the ref moved BACKWARD over the 04:22-04:24Z merges.
+<strong>Cause:</strong> the GRE teardown lane is rewriting main directly tonight (their teardown stack push is in flight — #59 was merged by the pipeline onto their stacking branch teardown/wwe2k19-b1 @2ae430ef 04:30:30Z). Same failure class as western-heart #499 (lane force-push dropped a landed merge).
+<strong>Nothing lost:</strong> payloads survive on branches — teardown/wwe2k19-b1 @2ae430ef (union tree: gang-beasts 1605 + wwe2k19 1775 + yakuza 11809 paths); teardown/yakuza-kiwami-hact @79c068d5 (wwe2k19 batch1 + yakuza hact). REOPENED in MERGE-QUEUE.md. Pipeline stood down per CHECK-BEFORE-START — the lane owns the stack merge to main; an API merge now would be dropped again or collide.
+<strong>Rule for future runs:</strong> on repos where a lane is force-pushing main, LANDED-VERIFIED requires re-checking the ref AFTER the lane's push window closes.
+<strong>Concrete owner question:</strong> does the GRE teardown lane get to keep force-pushing main, or must it merge via PRs/API like everyone else?
+<strong>Also lane-owned in-flight:</strong> GRE #55 "Yakuza Kiwami b1 (battle, boot, motion PARs)" — OPEN, mergeable=false/dirty, +828,709/-0, 19 commits. Same lane; stand down.</p>
 
 
 
