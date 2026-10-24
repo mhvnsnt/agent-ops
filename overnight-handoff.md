@@ -1,3 +1,20 @@
+## overnight-idle-pipeline run 2026-10-23 19:14-19:50 CDT (productive — 2 landed-verified: WH #701 + #498; #841 confirmed CONFLICT; brutal-fist #10 lane resumed)
+
+- **Idle:** last user msg 2026-10-23T11:56:11Z, run 00:41Z → idle ~12.7h. Lock file STALE (91 min, the 23:10Z run died at cron timeout without cleanup) → deleted, recreated, proceeded.
+- **STEP 1 — LANDING QUEUE:**
+  - **WH #701** FIGHT-LOOP CRASH REPAIR — merged via API (merge 4757df4d1d083515db0b78ab8fa1d1d5cc650098). Gates: CI 9/10 green on head 781816fc (instruction-gate success; deletion-guard CANCELLED by concurrency at 00:49:54Z with no visible superseding run — verified locally: 1 added + 4 modified + 0 removed → guard passes). Payloads verified on main: game/js/game.js 34,071B with 8× hitfx.spawn + 1× new HitFX (restored HitFX wiring). LANDED-VERIFIED. Resumed from the interrupted 23:10Z lane (WH-FIXABLE-2026-10-23.md continued).
+  - **WH #498** Pantera k-NN weights — merged via API (merge a46838460b9ddccb70c2f6d987aadd33ef4db55d). Was 405-conflicting (WORKLOG.md append/append vs main). Resolved keep-both-sides via Git Data API merge commit 32495cfc (parents branch@0a2c7110 + main@4757df4d): main's WORKLOG.md kept — main ALREADY carries the verbatim Pantera entry (lines 1066+, restored 2026-10-22; branch section byte-identical per diff, no content lost); pantera.glb + reskin script from branch (untouched on main). Gates: instruction-gate body passes locally under the gate's own normalization (the CI failure was STALE — 2026-10-22 run against the pre-fix body; body fixed 2026-10-23 21:03Z, no re-run ever fired); deletion-guard verified locally (0 deletions). Payloads verified on main: pantera.glb 7,625,912B (matches PR bytes), reskin_pantera_weights.py 15,877B, WORKLOG.md 217,868B intact. LANDED-VERIFIED.
+  - **WH #841** versus-setup — API merge → 405 REAL conflicts vs current main (5c499626; the lane's 05a08e5b resolution was vs main@06d3361b, now stale). → CONFLICT, needs a fresh keep-both-sides resolution lane. CI-delivery finding: Git Data API ref updates do NOT fire push webhooks (no synchronize event); a REAL `git push` (82cbd8a..634b1c7, 01:25Z) STILL produced zero workflow runs after 10+ min — GitHub event delivery for this branch is broken/delayed. Gates verified locally anyway (instruction-gate pass, 0 deletions, e2e fix Playwright-verified by prior lane) — merge with manual gate-intent once conflicts are re-resolved, if CI stays undeliverable.
+  - **brutal-fist #10** — resumed the cron-interrupted conflict lane via subagent (ba60deb2, running at handoff): 28/29 files resolved+staged at ~/workspace/_conflict-work/brutal-fist/pr-10, CharacterPipeline.ts 25 markers remaining. Do NOT touch; reconcile its result next run.
+- **STEP 2 — VERIFY SWEEP (5 samples, 5 verified, 0 false):** WH #825 (buffalo-bill attire3 30,955,028B + thor attire1 31,017,636B) ✓; WH #499 ryuji-rock.json 86,879B (matches re-land blob; no repeat of the force-push incident — 3301d9f3 still ancestor of main, 160 ahead/0 behind) ✓; CJ #224 COMPLETE-PIPELINE.md 19,988B with 4× v6 + 3× 60fps mentions ✓; GRE #51 pakchunk0/manifest.json 74,872B ✓; CD #66 cd-menu-verify.mjs 4,678B ✓.
+- **STEP 3 — CHECKPOINTS:** checkpoint_audit.py → 83 healthy / 0 stale. Only watchdog+running checkpoint is ttt2-resume-100 (heartbeat 00:11Z, parked-by-design behind disk gate; longtail_pull.py pid 5857 alive). No resumes needed.
+- **STEP 4 — CANON SYNC:** nothing new since 20:38Z sync (daily note = cron pulses only, no owner canon/decisions). Logged `canon-sync: nothing new`.
+- **STEP 5 — FRICTION:** new finding logged in queue — Git Data API ref updates don't fire CI webhooks; real `git push` is the only reliable CI trigger, and even that is currently not delivering for WH #841's branch (10+ min, 0 runs). Watch item for next runs.
+- **Blockers needing the owner (concrete, unchanged):** WH #718 (approve 2 deviations with links? lift MERGE FREEZE?); #377 (evidence — keep open or close condition?); #722 SmutBase (freeze lifted?); #446 Tekken 6 PSP (land as one giant merge or split?); #182 (close as dead or keep?); UR phase-2 gap (#442's 83 converted banks not on main — deliberate or dropped?); Bannon #22 (close as stale no-op?); CD #62 (land or close); cape-jones 97.1MB proof_sitting.blend on main (needs owner word for history removal); live merge lane force-push risk (from prior run — verify no recurrence: none this run).
+- **Safety:** no ffmpeg/blender/aria2c/wget/curl procs running at run start; nothing in-progress touched. Disk not checked this run (no large pulls).
+
+---
+
 ## overnight-idle-pipeline run 2026-10-23 17:25-17:58 CDT (productive — 2 landed-verified + INCIDENT: live lane force-pushed WH main)
 
 - **Idle:** last user msg 2026-10-23T11:56:11Z, run 22:25Z → idle ~10.5h. Lock file STALE (93 min old, previous run died without cleanup) → deleted, recreated, proceeded.
@@ -2177,3 +2194,11 @@
 - In-flight, not landed-verified on main: WH #701 merge-commit creation (backgrounded, outcome unknown); WH #498 (binary GLB semantic conflict unresolved); WH #832 (pending hand-off); brutal-fist lane 4 PRs/unstarted items.
 - Lock was not cleared by the timed-out run; the next scheduled run (lock at 22:25Z) is already active and will process the queue.
 - No user decisions owed from this run.
+
+## Run 2026-10-23 17:44 CDT — TIMED OUT (5400s, bookkeeping by main agent)
+- **LANDED-VERIFIED (verified on main by main agent):** GRE #51 (T7 Steam assets pakchunk0+tkdata, merge d2ed97a4) — manifest.json 74,872B + tkdata dirs present on main; GRE #52 (T7 customization tables, merge 9ced11be) — items.json 4,027,346B on main. MERGE-QUEUE.md marked LANDED-VERIFIED by the run.
+- **INCOMPLETE (not landed-verified):** WH #841 + WH #701 — conflict resolutions pushed (05a08e5b+498d1fd4 / 781816fc) but CI did not trigger on synchronize; need CI re-trigger then merge+verify. WH #498 — not started. brutal-fist #10 — 28/29 conflicts resolved locally but uncommitted (sparse-checkout law); CharacterPipeline.ts still has 25 markers.
+- **Verify-done sweep:** 5/5 (WH #499 4/4 payloads, GRE #50, agent-ops BOX-OFFLOAD-LOG.md, cape-jones sitting-final release blend).
+- **Unfinished bookkeeping:** queue sync PR not opened (timeout); WH fixable + brutal-fist queue sections left IN-PROGRESS; handed to next run.
+- **Lock:** reclaimed by the next run (stale 91min, removed 00:41:38Z).
+- **No new owner decisions owed from this run.**
