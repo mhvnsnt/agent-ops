@@ -1,0 +1,90 @@
+name: game-ci
+
+# Reusable CI for game repos: asset gates -> headless tests -> Blender check -> Godot export.
+# Copy this file to .github/workflows/game-ci.yml, set GODOT_VERSION + presets.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  tags: ["v*"]
+
+env:
+  GODOT_VERSION: "4.4"   # <-- pin to the repo's Godot version
+
+jobs:
+  asset-gates:
+    name: Asset validation gates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run asset gates (stdlib Python, no deps)
+        run: python3 scripts/asset_gates.py .
+
+  godot-test:
+    name: Godot headless tests
+    needs: asset-gates
+    runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:4.4   # <-- must match GODOT_VERSION
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import project (builds .godot cache)
+        run: godot --headless --import
+      - name: Run GUT tests
+        run: godot --headless --script res://addons/gut/gut_cmdln.gd -gdir=res://test -gexit
+
+  blender-check:
+    name: Blender headless check
+    needs: asset-gates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Blender 4.x
+        run: |
+          curl -sL https://download.blender.org/release/Blender4.4/blender-4.4.0-linux-x64.tar.xz -o /tmp/blender.tar.xz
+          tar -xf /tmp/blender.tar.xz -C /tmp
+          echo "/tmp/blender-4.4.0-linux-x64" >> "$GITHUB_PATH"
+      - name: Run Blender checks (xvfb required — Blender hard-needs a display)
+        run: |
+          sudo apt-get install -y xvfb
+          xvfb-run -a blender -b --python scripts/blender_smoke.py
+        env:
+          BLENDER_SMOKE_OUT: /tmp/blender_smoke.png
+      - name: Upload smoke render
+        uses: actions/upload-artifact@v4
+        with:
+          name: blender-smoke
+          path: /tmp/blender_smoke.png
+
+  godot-export:
+    name: Export ${{ matrix.preset }}
+    needs: [godot-test, blender-check]
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - preset: "Web"
+            path: build/web/index.html
+          - preset: "Linux"
+            path: build/linux/game.x86_64
+          - preset: "Windows"
+            path: build/windows/game.exe
+    container:
+      image: barichello/godot-ci:4.4   # <-- must match GODOT_VERSION
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inject version from git
+        run: |
+          VER=$(git describe --tags --always --dirty)
+          echo "version=$VER"
+      - name: Export
+        run: |
+          mkdir -p "$(dirname '${{ matrix.path }}')"
+          godot --headless --export-release "${{ matrix.preset }}" "${{ matrix.path }}"
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: game-${{ matrix.preset }}
+          path: build/
