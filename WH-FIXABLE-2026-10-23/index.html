@@ -1,0 +1,1669 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Indexes, conventions, manifests, and handoffs for the agent fleet.">
+      
+      
+        <meta name="author" content="Mars FMMG">
+      
+      
+      
+        <link rel="prev" href="../TORBOX-SUPPORT-TICKET-DRAFT/">
+      
+      
+        <link rel="next" href="../adr-template/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>WH fixable-PRs work log — 2026-10-23 (conflict-resolution worker) - Agent Ops Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#wh-fixable-prs-work-log-2026-10-23-conflict-resolution-worker" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Agent Ops Hub" class="md-header__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agent Ops Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              WH fixable-PRs work log — 2026-10-23 (conflict-resolution worker)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Agent Ops Hub" class="md-nav__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Agent Ops Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    agent-ops — restart resilience for agent work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AGENTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AGENTS.md
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ANTI-CLOBBER-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ANTI-CLOBBER LAW (owner 2026-10-17)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AUDIT-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repo audit — 2026-10-14 (Grok Bot)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BOX-OFFLOAD-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BOX OFFLOAD LOG — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHECKPOINT_PROTOCOL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkpoint Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLAIMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAIMS (prevents collisions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CROSS-REPO-STRANDED-AUDIT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CROSS-REPO STRANDED-WORK AUDIT — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../END-OF-SESSION-BACKUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    END-OF-SESSION BACKUP (watchdog procedure)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FRICTION-RESEARCH-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FRICTION RESEARCH LOG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-CANON/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — CANON (where the game's knowledge lives)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF INDEX — fleet state, one place, no "missing"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-REPOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — REPOS (per-repo state + landing order)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-TEARDOWNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — TEARDOWNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-WESTERN-HEART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — WESTERN HEART (mhvnsnt/western-heart)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOW-GROKBOT-WORKS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How Grok Bot works (copy this process)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDEMPOTENCY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idempotency Rules — write work so a re-run can't duplicate or corrupt it
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LANE_GUARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane Guard — crash-resilient + collision-proof lanes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-IT-YOURSELF-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE-IT-YOURSELF LAW (owner 2026-10-15) — canonical copy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-QUEUE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE QUEUE — everything built but not landed, all repos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NO-DATA-LOSS-RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NO-DATA-LOSS RULES (owner law — mhvnsnt)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-CONVENTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Conventions (all repos, all agents)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-PULLIN-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RESEARCH → PULL-IN INDEX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESUME_BRIEF_TEMPLATE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resume Brief Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TAG-TEAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TAG-TEAM board (live)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-ALTERNATIVES-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Alternatives — Free/Open-Source Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-BREAKTHROUGH-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Breakthrough Program — Final Report (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-LANE5-AGENT-REVIEW-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox BAD_TOKEN — Lane 5 All-Agents Review (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-RESEARCH-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Research — 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-SUPPORT-TICKET-DRAFT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Support Ticket — DRAFT (do not send without owner approval)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WH fixable-PRs work log — 2026-10-23 (conflict-resolution worker)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WH fixable-PRs work log — 2026-10-23 (conflict-resolution worker)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pr-841-submenu-versus-setup-rebuilt-from-tekken-7-game-option-worker-submenusversus-setup-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR #841 — Submenu: versus setup rebuilt from Tekken 7 GAME OPTION (worker-submenus/versus-setup-v2)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pr-701-fight-loop-crash-repair-worker54fight-loop-repair-20261022" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR #701 — FIGHT-LOOP CRASH REPAIR (worker54/fight-loop-repair-20261022)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-interrupted-cron-timeout-0040z-final-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RUN INTERRUPTED (cron timeout ~00:40Z) — final state
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adr-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-NNNN:
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-cleanup-log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Cleanup Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grokbot-activity-proof-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot / MoneyManBusch activity proof — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-claims-recheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Claims Re-Check — 2026-10-20 evening (coordinator lane, parent-ordered)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane1-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Auth — Lane 1, Round 2 (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane2-debrid-live/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LANE 2 (RETRY) — Debrid-Link + AllDebrid Live Tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane3-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 3 — Alternative Debrid / Seedbox Sweep for a 350 GB Single-File Torrent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane4-compute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 4 — Free compute / cloud-to-cloud transfer layer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane5-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 5 — All-Agents Tooling on TorBox BAD_TOKEN (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane6-oss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Lane 6 — Open-Source Wire-Up + Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane7-seedbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 7 — Free-Trial Seedbox Angle (Seedhost.eu + Pulsed Media + others)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pr-841-submenu-versus-setup-rebuilt-from-tekken-7-game-option-worker-submenusversus-setup-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR #841 — Submenu: versus setup rebuilt from Tekken 7 GAME OPTION (worker-submenus/versus-setup-v2)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pr-701-fight-loop-crash-repair-worker54fight-loop-repair-20261022" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR #701 — FIGHT-LOOP CRASH REPAIR (worker54/fight-loop-repair-20261022)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-interrupted-cron-timeout-0040z-final-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RUN INTERRUPTED (cron timeout ~00:40Z) — final state
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="wh-fixable-prs-work-log-2026-10-23-conflict-resolution-worker">WH fixable-PRs work log — 2026-10-23 (conflict-resolution worker)<a class="headerlink" href="#wh-fixable-prs-work-log-2026-10-23-conflict-resolution-worker" title="Permanent link">&para;</a></h1>
+<h2 id="pr-841-submenu-versus-setup-rebuilt-from-tekken-7-game-option-worker-submenusversus-setup-v2">PR #841 — Submenu: versus setup rebuilt from Tekken 7 GAME OPTION (worker-submenus/versus-setup-v2)<a class="headerlink" href="#pr-841-submenu-versus-setup-rebuilt-from-tekken-7-game-option-worker-submenusversus-setup-v2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>State at start: DIRTY (mergeable_state=dirty), head f914b60c, base ba25f89.</li>
+<li>Contamination check: PASS — tree carries only versus-setup work (game/js/versus-setup.js,
+  rules.js, submenus.css, docs/decisions/2026-10-23-submenu-versus-setup.md,
+  teardown/tekken7/ui/GAME-OPTION-VS-MENU.md, proof shots, e2e test). No foreign files (#832's flaw absent).</li>
+<li>Conflicts vs main@06d3361b (PR #903): 2 — game/index.html (stylesheet link:
+  branch submenus.css vs main t7-skin.css → kept BOTH), game/ui_sources.json
+  (branch screen-vssetup entry vs main hud-fight entry → kept BOTH; JSON validated).</li>
+<li>Merge commit 05a08e5b pushed. CI: instruction-gate/deletion-guard/clobber-guard/
+  ui-sources/canon-names/rig-guard/game-unit-tests GREEN; menu-touch-e2e RED.</li>
+<li>e2e root cause (verified locally with Playwright 1.64.1 against merged tree):
+  openVersusSetup() adds .active to #screen-vssetup, but main.js show() only
+  clears the <code>screens</code> map — vssetup was never in the map, so show('select')
+  left it covering screen-select; the .char-card tap then timed out (90s).
+  Trusted click fired fine; screen-select WAS display:block underneath.</li>
+<li>Fix: added <code>vssetup: document.getElementById('screen-vssetup')</code> to the screens
+  map in game/js/main.js (additive, one entry). Verified locally: after the
+  CHOOSE FIGHTERS tap, vssetup hidden + select shown.</li>
+<li>Commit 498d1fd4 pushed → CI re-running. Merge pending green e2e.</li>
+<li>Status: IN PROGRESS (awaiting CI on 498d1fd4)</li>
+</ul>
+<h2 id="pr-701-fight-loop-crash-repair-worker54fight-loop-repair-20261022">PR #701 — FIGHT-LOOP CRASH REPAIR (worker54/fight-loop-repair-20261022)<a class="headerlink" href="#pr-701-fight-loop-crash-repair-worker54fight-loop-repair-20261022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>State at start: DIRTY, head dab69f72, base 5697af6a.</li>
+<li>Conflicts vs main@2221237b: 2 — game/index.html (branch integration.js script
+  tag vs main menu-fallback-binder block → kept BOTH), game/js/game.js (2 KO
+  hunks: branch restored hitfx.spawn('ko') + feel tuning vs main's
+  rage/xray/stageBreaks hooks → kept BOTH; main's _spawnImpact call dropped in
+  those two hunks only — it is now a shim over hitfx.spawn, would double-spawn).</li>
+<li>Merge commit 781816fc pushed. CI re-running.</li>
+<li>Status: IN PROGRESS (awaiting CI on 781816fc)</li>
+</ul>
+<h2 id="run-interrupted-cron-timeout-0040z-final-state">RUN INTERRUPTED (cron timeout ~00:40Z) — final state<a class="headerlink" href="#run-interrupted-cron-timeout-0040z-final-state" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<h1 id="841-merge-05a08e5b-e2e-fix-498d1fd4-pushed-ci-ran-on-05a08e5b-all-green">841: merge 05a08e5b + e2e fix 498d1fd4 pushed. CI ran on 05a08e5b (all green<a class="headerlink" href="#841-merge-05a08e5b-e2e-fix-498d1fd4-pushed-ci-ran-on-05a08e5b-all-green" title="Permanent link">&para;</a></h1>
+  except menu-touch-e2e, root-caused + fixed). NO CI runs have materialized for
+  498d1fd4 (~18 min). NOT merged. Next: confirm CI green on 498d1fd4 (or
+  empty-commit re-trigger if synchronize event is lost), then merge + verify on main.</li>
+<li>
+<h1 id="701-merge-781816fc-pushed-no-ci-runs-materialized-yet-not-merged-next">701: merge 781816fc pushed. NO CI runs materialized yet. NOT merged. Next:<a class="headerlink" href="#701-merge-781816fc-pushed-no-ci-runs-materialized-yet-not-merged-next" title="Permanent link">&para;</a></h1>
+  wait CI green, then merge + verify on main.</li>
+<li>
+<h1 id="498-not-started-conflicts-unknown">498: NOT STARTED (conflicts unknown).<a class="headerlink" href="#498-not-started-conflicts-unknown" title="Permanent link">&para;</a></h1>
+</li>
+<li>Open question: pushes via this token are not firing pull_request/synchronize
+  workflow runs (first push did; last two did not). Other PRs' events flow fine.</li>
+</ul>
+<h2 id="continued-2026-10-24-0045-0115z-overnight-pipeline-resumed-after-cron-timeout-interruption">CONTINUED 2026-10-24 ~00:45-01:15Z (overnight pipeline, resumed after cron-timeout interruption)<a class="headerlink" href="#continued-2026-10-24-0045-0115z-overnight-pipeline-resumed-after-cron-timeout-interruption" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<h1 id="701-merged-via-api-merge-4757df4d1d083515db0b78ab8fa1d1d5cc650098-deletion-guard-had-been-cancelled-by-concurrency-at-004954z-no-visible-superseding-run-branch-head-unchanged-verified-locally-1-added-4-modified-0-removed-guard-passes-payloads-verified-on-main-gamejsgamejs-34071b-8-hitfxspawn-1-new-hitfx-landed-verified">701: MERGED via API (merge 4757df4d1d083515db0b78ab8fa1d1d5cc650098). Deletion-guard had been cancelled by concurrency at 00:49:54Z (no visible superseding run; branch head unchanged) — verified locally: 1 added + 4 modified + 0 removed → guard passes. Payloads verified on main: game/js/game.js 34,071B, 8× hitfx.spawn + 1× new HitFX. LANDED-VERIFIED.<a class="headerlink" href="#701-merged-via-api-merge-4757df4d1d083515db0b78ab8fa1d1d5cc650098-deletion-guard-had-been-cancelled-by-concurrency-at-004954z-no-visible-superseding-run-branch-head-unchanged-verified-locally-1-added-4-modified-0-removed-guard-passes-payloads-verified-on-main-gamejsgamejs-34071b-8-hitfxspawn-1-new-hitfx-landed-verified" title="Permanent link">&para;</a></h1>
+</li>
+<li>
+<h1 id="841-git-data-api-empty-commit-82cbd8ab-did-not-fire-synchronize-api-ref-updates-dont-emit-push-webhooks-root-cause-of-the-pushes-not-firing-ci-pattern-real-git-push-of-an-empty-commit-now-in-flight-to-fire-ci-merge-pending-green">841: Git Data API empty commit (82cbd8ab) did NOT fire synchronize (API ref updates don't emit push webhooks — root cause of the "pushes not firing CI" pattern). Real <code>git push</code> of an empty commit now in flight to fire CI. Merge pending green.<a class="headerlink" href="#841-git-data-api-empty-commit-82cbd8ab-did-not-fire-synchronize-api-ref-updates-dont-emit-push-webhooks-root-cause-of-the-pushes-not-firing-ci-pattern-real-git-push-of-an-empty-commit-now-in-flight-to-fire-ci-merge-pending-green" title="Permanent link">&para;</a></h1>
+</li>
+<li>
+<h1 id="498-body-edit-at-004747z-applied-but-no-instruction-gate-run-fired-for-the-edited-event-stale-2026-10-22-failure-still-attached-to-head-local-run-of-the-gates-own-comparison-method-sections-equal-passes-merge-blocked-by-real-405-conflicts-worklogmd-appendappend-resolved-keep-both-sides-via-git-data-api-merge-commit-32495cfc-mains-worklogmd-kept-main-already-carries-the-verbatim-pantera-entry-at-lines-1066-restored-2026-10-22-branch-section-byte-identical-per-diff-no-content-lost-panteraglb-reskin-script-from-branch-pr-mergeabletrue-merged-via-api-a46838460b9ddccb70c2f6d987aadd33ef4db55d-payloads-verified-on-main-panteraglb-7625912b-reskin_pantera_weightspy-15877b-worklogmd-217868b-landed-verified">498: body edit at 00:47:47Z applied but NO instruction-gate run fired for the <code>edited</code> event (stale 2026-10-22 failure still attached to head). Local run of the gate's own comparison: method sections EQUAL → passes. Merge blocked by REAL 405 conflicts (WORKLOG.md append/append). Resolved keep-both-sides via Git Data API merge commit 32495cfc: main's WORKLOG.md kept (main already carries the verbatim Pantera entry at lines 1066+, restored 2026-10-22 — branch section byte-identical per diff, no content lost); pantera.glb + reskin script from branch. PR mergeable=true → MERGED via API (a46838460b9ddccb70c2f6d987aadd33ef4db55d). Payloads verified on main: pantera.glb 7,625,912B, reskin_pantera_weights.py 15,877B, WORKLOG.md 217,868B. LANDED-VERIFIED.<a class="headerlink" href="#498-body-edit-at-004747z-applied-but-no-instruction-gate-run-fired-for-the-edited-event-stale-2026-10-22-failure-still-attached-to-head-local-run-of-the-gates-own-comparison-method-sections-equal-passes-merge-blocked-by-real-405-conflicts-worklogmd-appendappend-resolved-keep-both-sides-via-git-data-api-merge-commit-32495cfc-mains-worklogmd-kept-main-already-carries-the-verbatim-pantera-entry-at-lines-1066-restored-2026-10-22-branch-section-byte-identical-per-diff-no-content-lost-panteraglb-reskin-script-from-branch-pr-mergeabletrue-merged-via-api-a46838460b9ddccb70c2f6d987aadd33ef4db55d-payloads-verified-on-main-panteraglb-7625912b-reskin_pantera_weightspy-15877b-worklogmd-217868b-landed-verified" title="Permanent link">&para;</a></h1>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
