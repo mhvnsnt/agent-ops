@@ -1,6 +1,6 @@
 # TAG-TEAM board (live)
 
-Last updated: 2026-10-14 3:23 PM CT by Repo Co Dev (claims refresh).
+Last updated: 2026-10-14 6:40 PM CT by Grok Bot (Muse #18 links filled).
 Agents: **Grok Bot** (MoneyManBusch), **Muse/Ashes** (Meta), **Repo Co Dev**, **Producerbot**, **Dom Assist**, **Owner** (Marquis, mhvnsnt).
 
 Before touching anything: read [HOW-GROKBOT-WORKS.md](HOW-GROKBOT-WORKS.md), then add a line to [CLAIMS.md](CLAIMS.md).
@@ -24,10 +24,18 @@ Update your row's status and link in the same PR as your work.
 
 | 14 | Brutal-Fist all-character model audit + Tripo intake | Repo Co Dev | In progress | [brutalfistgrokversionten](https://github.com/mhvnsnt/brutalfistgrokversionten) (Bannon bone fix merged in #34) | Every character arena-pass like Bannon; Tripo export intake; secondary-bone / jiggle later |
 | 15 | Cloudflare Pages PWAs (private-repo deploys) | Repo Co Dev | Live (manual redeploy) | [bannon.pages.dev](https://bannon.pages.dev), [brutalfist.pages.dev](https://brutalfist.pages.dev), [ashlane-1aa.pages.dev](https://ashlane-1aa.pages.dev) | Redeploy as merges land; AshLane from crash-fix branch until main builds |
+| 16 | western-heart per-character height/scale (owner rule c) | Grok Bot | PR open | [western-heart #120](https://github.com/mhvnsnt/western-heart/pull/120) | **Heads-up, Repo Co Dev:** this adds a scale hook inside your Lab claim, additive only. `fighter.gd` gets `char_id`, `height_cm` and `apply_height(id)`. `main.gd` gets an `apply_height` call for both fighters, a cm readout on the HUD names, and `--p1-char`/`--p2-char`. New files: `scripts/height_scale.gd` and `data/characters/heights.json`. Keep `apply_height` after `setup()` when you refactor. Swap in T6/TTT2 skeleton heights when your importer lands |
+| 17 | western-heart T-pose reference sheets, whole roster and every attire | **Muse** (assigned by owner via Producerbot) | Assigned | [western-heart #124](https://github.com/mhvnsnt/western-heart/pull/124), spec `docs/tpose-refs/MUSE_TPOSE_SPEC.md` | 1:1 2048² T-pose on pure white, orthographic, flat. Match `pantera/p1_front.png` exactly. Work the checklist table, then follow `docs/pipeline/MODEL_COAUTHOR_PIPELINE.md` (Tripo rescan, segment, retarget, co-author). Creation suite stays Repo Co Dev's |
+
+| 18 | western-heart public collection (frame data + fan assets + refs + T7/T8 extraction stub) | **Muse** (assigned by owner via Grok Bot) | Assigned — **START NOW** | [western-heart #132](https://github.com/mhvnsnt/western-heart/pull/132), [agent-ops #19](https://github.com/mhvnsnt/agent-ops/pull/19), [`docs/handoffs/MUSE_FAN_ASSETS_HANDOFF.md`](https://github.com/mhvnsnt/western-heart/blob/main/docs/handoffs/MUSE_FAN_ASSETS_HANDOFF.md) | Start immediately in parallel. Collect free public frame/move/stage data, reuse-licensed fan models/stages/anims, and reference links (TikTok/YT/FB OK as reference). Stub for owner T7/T8 extractions. **Do not touch** teardown wiring, creation suite, or physics files. Small additive PRs. |
 
 ## Tasks Muse can claim now
 Add a line to CLAIMS.md first.
+- **Public collection handoff** (#18, assigned, START NOW): western-heart `docs/handoffs/MUSE_FAN_ASSETS_HANDOFF.md` — frame data / fan assets / reference links / owner-extraction stub. Do not touch teardown wiring, creation suite, or physics.
+- **T-pose reference batch** (#17, assigned): render every remaining character and attire per western-heart `docs/tpose-refs/MUSE_TPOSE_SPEC.md`.
 - **Canon character art for the Fiverr samples** (#4): replace the stand-in mascot with the owner's real characters. Edit the existing sample files in PR #25's branch. Don't regenerate them from scratch.
 - **Goodville segment edits with mask cutouts** (#6): use Smart/Magic Cut that follows each piece's edges. **No rectangular crops.** Show proof on a checkerboard, matched to the Preston Blair frames (beer-can hold, punch, face).
 - **Gig 3 video cut from the Bannon render**: cut a sample from the existing render. Log the method and commit with a hash of the output.
 - **Push the why-shortcut-research file** (#13) to agent-ops via a branch plus PR.
+
+- Physics sandbox (Jigglebot, owner of physics-playground-pwa): live at https://physics-playground-pwa.pages.dev/ (fallback https://mhvnsnt.github.io/physics-playground-pwa/). Original and licensed assets only, so no teardown files go in that repo. Jiggle bone names must contain chest/breast, glute/butt, thigh or belly.
