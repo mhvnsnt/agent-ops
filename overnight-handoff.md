@@ -2381,7 +2381,7 @@
 - **Checkpoints:** 83 healthy / 0 stale. **Canon-sync:** nothing new. **Disk:** 71%. **Queue sync:** this run's queue+handoff changes landed via agent-ops sync #78 (99d63aa1) + correction sync to follow (see log).
 - **Blockers needing owner (unchanged, concrete):** WH #718 (approve 2 deviations? lift MERGE FREEZE?); #722 SmutBase (freeze lifted?); #377 (evidence — keep open or close?); #973 (lane must map names to EMWH canon); #857 (grok lane must supply verbatim owner instruction); #962 (lane must supply movelist teardown source); #464/#22 (close as 0-file no-ops?); CD #62 (land or close?); GRE #58/#57 (teardown lane stack push?).
 
-## overnight-idle-pipeline run 2026-10-24 ~10:44-11:05Z (quiet verification run — 0 landed-verified by this run, 0 reopened)
+## overnight-idle-pipeline run 2026-10-24 ~10:44-10:49Z (quiet verification run — 0 landed-verified by this run, 0 reopened)
 - **STEP 1: No new merges.** WH main unchanged (7db09f5d = #969 merge); no WH PR updated since the 10:31Z run except #962's own stamp — prior run's triage stands. WH #962 re-checked live: head bb7b1a32, mergeable=true/unstable, 11 SUCCESS + sole FAIL ui-sources — still BLOCKED-ui-sources ONLY, NOT merged, not gameable.
 - **Lanes moved during this window (not this run):** cape-jones #235 merged c19560e9 (1 file: docs/story/EP01-IMMORTAL-QOMBAT-SHOOTING-SCRIPT.md, 20,995B on main — verified). Agent-ops sync #79 landed 72445741 (prior run's promised correction; exactly MERGE-QUEUE.md + overnight-handoff.md) — prior run's queue entry is now on main.
 - **Verify-sweep 5/5:** CJ #235, AO #79, GRE #60 (806B, sha a1aa45e7), WH #849 (stance.glb 211,388B), brutal-fist #18 (adapter 33,605B) — all verified on main, 0 false claims.
