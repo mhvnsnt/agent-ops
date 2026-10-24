@@ -1,3 +1,10 @@
+## overnight-idle-pipeline run 2026-10-24 ~11:14-11:17Z (quiet verification run — 0 landed, 0 reopened)
+
+- **STEP 1:** nothing mergeable. WH main unchanged (7db09f5d = #969); no WH PR updated since 10:31:25Z, prior triage stands. WH #962 re-checked live: head bb7b1a32, MERGEABLE/UNSTABLE, 11 SUCCESS + sole FAIL ui-sources — BLOCKED-ui-sources ONLY, NOT merged. AO main = prior correction sync #81 (048d0b2, exactly MERGE-QUEUE.md + overnight-handoff.md) verified this run. CJ main moved by another lane: #237 (509b6ca, exactly docs/story/EP01-IMMORTAL-QOMBAT-SHOOTING-SCRIPT.md, payload 23,536B on main) verified, NOT this run's merge. AO 0 open PRs, CJ 0 open PRs.
+- **Verify sweep:** 5 claims — 5 VERIFIED, 0 FALSE (AO #81; CJ #237 merge + payload; WH #969 18-file list + Neck.png 5,736B; GRE #60 CANON-NAME-MAP.json 806B).
+- **Checkpoints:** 83 healthy / 0 stale. **Canon-sync:** nothing new. **failure-alerts.log:** nothing new since 2026-10-20. **Disk:** 71%.
+- **Stood down / untouched:** all prior blockers (WH #962/#973/#966/#960/#857/#988, Bannon #22 + drafts, CD #62, brutal-fist drafts, WH #377/#718/#722/#446/#182, CD #168, GRE #58/#57, WH #464); in-progress longtail_pull.py + at-inflate2.py and sibling cnleaks lane left alone.
+
 ## overnight-idle-pipeline run 2026-10-24 ~07:44-08:0xZ (quiet verification run — 0 landed, 0 reopened)
 
 - **STEP 1:** nothing mergeable. WH fresh PRs #984/#986/#988 still mergeable=UNKNOWN (GitHub computing); #973 BLOCKED (canon-names content violation — lane must map imported names); #857 BLOCKED (gate FAIL — verbatim owner instruction quote missing, will not fabricate); GRE #55 CONFLICTING/DIRTY lane-owned — stood down; AO zero open PRs; Bannon #22 owner-call + drafts excluded; CD #62 owner-held; brutal-fist drafts/conflicting owner-held; cape-jones + wrestling-game clear.
