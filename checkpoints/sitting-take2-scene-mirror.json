@@ -1,0 +1,96 @@
+{
+ "id": "sitting-take2-scene-mirror",
+ "task": "Mirror sitting-take2 scene files (~/workspace/sitcanon-work/) to GitHub release sitting-wt-sitcanon-20261019 on mhvnsnt/cape-jones \u2014 the documented honest gap: take-2 scene .blends lived ONLY on local disk.",
+ "status": "running",
+ "watchdog": true,
+ "created_at": "2026-10-20T09:20:57Z",
+ "updated_at": "2026-10-20T10:04:08Z",
+ "heartbeat": "2026-10-20T10:04:08Z",
+ "attempts": 1,
+ "repo": "mhvnsnt/cape-jones",
+ "release": "sitting-wt-sitcanon-20261019",
+ "resume_brief": "Run ~/workspace/agent-ops/.take2-mirror/mirror.sh once per idle run (one group per run: A..F). It uploads verified parts, heartbeats this checkpoint, marks groups_done. When all groups uploaded, run the re-download final verify: download all take2-*.tar.part-* assets, join per group in alpha order, sha256 must equal group_tars[g].sha256, then set status complete. Source dir is read-only sacred; staging parts are transient.",
+ "groups_done": [
+  "A",
+  "B"
+ ],
+ "parts": {
+  "A": {
+   "take2-A.tar.part-aa": {
+    "sha256": "c6def678b02052be7dd8660ddb99e8775fe1dd2dc07ff63a98cd539010c8dfa8",
+    "size": 104857600,
+    "uploaded": true
+   },
+   "take2-A.tar.part-ab": {
+    "sha256": "3df087080bf711a47a32b85144a884c55d628344054e468a013557719e00acdf",
+    "size": 104857600,
+    "uploaded": true
+   },
+   "take2-A.tar.part-ac": {
+    "sha256": "da4727e4f145729f845dc7bb41785a66e738cf67790fc56e8c7be3e9d5fa8d37",
+    "size": 104857600,
+    "uploaded": true
+   },
+   "take2-A.tar.part-ad": {
+    "sha256": "57fac28899d34ecdc247994dc306846cbae440d39675402e4da9a2bef92907b6",
+    "size": 104857600,
+    "uploaded": true
+   },
+   "take2-A.tar.part-ae": {
+    "sha256": "1cf781b8eb47e4a989fa293b209583580603c3eae536e6770b1d765a98d946df",
+    "size": 85770240,
+    "uploaded": true
+   }
+  },
+  "B": {
+   "take2-B.tar.part-aa": {
+    "sha256": "8c64cdc37916bb9e3947e3cad59caadec48210a19cc7bc725be6f31f6a2ab29b",
+    "size": 104857600,
+    "uploaded": true
+   },
+   "take2-B.tar.part-ab": {
+    "sha256": "7a32bace482bb3d8af1a12f6b5257a9ecc3512577ad2f865ff77cd920fbf9adb",
+    "size": 104857600,
+    "uploaded": true
+   },
+   "take2-B.tar.part-ac": {
+    "sha256": "84451ebc1e4e238d5a46bae8723bddf64e652001e532216c1e678f8ec9ac06b9",
+    "size": 104857600,
+    "uploaded": true
+   },
+   "take2-B.tar.part-ad": {
+    "sha256": "26377c62eed27c5b37086242acb3eb877ef6d01644ca35a75d16db1d59efcc32",
+    "size": 104857600,
+    "uploaded": true
+   },
+   "take2-B.tar.part-ae": {
+    "sha256": "d6f391dd1363af43b6694dc02f7505a1737ff9072818cddd31273ce251c06b5a",
+    "size": 104857600,
+    "uploaded": true
+   },
+   "take2-B.tar.part-af": {
+    "sha256": "667526e0e87ae695b11e4440bb44e0228c5a6827e3a6e9ba758ddcafcbbfef25",
+    "size": 104857600,
+    "uploaded": true
+   },
+   "take2-B.tar.part-ag": {
+    "sha256": "fb783c8d60f69bb1c0fecf405a53c87f7cb2b623eda20194af404aa5c9341419",
+    "size": 4106240,
+    "uploaded": true
+   }
+  }
+ },
+ "group_tars": {
+  "A": {
+   "sha256": "8e525117f63e8f34ca67e40275835c28d4381bd1a2da6dceec25cc7bca91088c",
+   "size": 505200640
+  },
+  "B": {
+   "sha256": "45610e884b29c0c4a2516cbf65c2d929baab7728f326c87a58e571c0a4ba4894",
+   "size": 633251840
+  }
+ },
+ "script": "~/workspace/agent-ops/.take2-mirror/mirror.sh",
+ "progress_seq": 2,
+ "notes": "2026-10-20T10:02Z watchdog: group B complete (7/7 parts verified on release sitting-wt-sitcanon-20261019; sha256 45610e88...); mid-upload worker died on part af (daemon kill), resumed idempotently, finished. Groups C..F remain (one per idle run). Added progress_seq instrumentation to mirror.sh to stop supervisor false-STUCK flags."
+}

@@ -1,0 +1,1 @@
+../why-shortcut-research-2026-10-12.md
