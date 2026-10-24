@@ -1,3 +1,14 @@
+## overnight-idle-pipeline run 2026-10-24 ~05:14-05:35Z (0 landed — WH lane live, GRE ref-wipe incident found + reopened)
+
+- **Idle:** last user msg 2026-10-24T04:39:33Z, run 05:14Z → idle ~35 min. No lock file → created, proceeded.
+- **WH: STOOD DOWN (CHECK-BEFORE-START).** Live merge lane merged #979 ("cape-jones-fight") at 05:07:21Z — 7 min before this run started. Fresh PRs #984/#985/#986/#988 are lane-iterated (instruction-gate failing on #984/#986/#988, canon-names + game-unit-tests on #988). Next run picks them up when green.
+- **INCIDENT — GRE #58/#57 merges WIPED off main by lane ref-rewrite (~04:25-05:10Z).** The previous run's LANDED-VERIFIED claims for #58/#57 are FALSE as of now. Own-eyes evidence: `teardown/wwe2k19` = 404 on GRE main (retried, not transient); `teardown/` = firepro, pakchunk0, tekken7-steam, tkdata, wrestling-empire only. Merge commits 79c068d5 (#58, 04:22:37Z) and c2a1c8c7 (#57) EXIST but are not in main's ancestry (compare = diverged: ahead 27, behind 15). Main HEAD = b8abadd6 (03:49:18Z) — the ref moved backward over the 04:22-04:24Z merges. The GRE teardown lane is rewriting main directly tonight (stack push in flight). Payloads survive on branches: teardown/wwe2k19-b1 @2ae430ef (union: gang-beasts+wwe2k19+yakuza), teardown/yakuza-kiwami-hact @79c068d5. REOPENED in MERGE-QUEUE.md; stood down (lane owns the stack merge — an API merge now would be dropped again). **Concrete owner question:** does the GRE teardown lane get to keep force-pushing main, or must it merge via PRs/API like everyone else? Same failure class as WH #499.
+- **Verify-sweep: 4 VERIFIED, 1 REOPENED-FALSE** — WH #979 (merge 7559a534 clean: ahead 9/behind 0, exactly 11 intended files, 0 deletions), WH #987 (merge 67631439: exactly 1 file game/data/soul-variants.json, 0 deletions), WH #989 (dev-notes tail intact on main, 41,512B), AO #23 (PRODUCERBOT_WORKFLOW.md 10,006B on main).
+- **GRE #55** (Yakuza Kiwami b1, +828,709/-0, 19 commits) — mergeable=false/dirty, lane-owned; stood down. **Bannon #22** — owner-call close candidate (aging). **AO #60/#63/#65** — instruction-gate still FAIL after lanes' 03:51Z amendments; exact-fix comments stand; can't auto-fix without fabricating.
+- **Local-only sweep:** 21 dirty clones, ALL stale (mtimes Oct 8–23; nothing in last 24h). Nothing to push. **Checkpoints:** 83 healthy/0 stale. **Canon-sync:** nothing new. **failure-alerts.log:** nothing new since 2026-10-20. **Disk:** 71%.
+- **Queue sync:** MERGE-QUEUE.md updated locally; sync PR to mhvnsnt/agent-ops (merge-queue-sync branch) — this run.
+- **No user decisions owed from this run beyond the GRE force-push question above.**
+
 ## overnight-idle-pipeline run 2026-10-24 ~04:14-05:10Z (productive — 6 landed-verified: GRE #58/#57, AO #21/#23/#26, WH #989 canon sync)
 
 - **Idle:** last user msg 2026-10-24T03:13:24Z, run 04:14Z → idle ~61 min. No lock file → created, proceeded.
