@@ -1072,6 +1072,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pulled-2026-10-16-console-homebrewre-toolchains-build-systemsci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pulled 2026-10-16 — Console homebrew/RE toolchains + build systems/CI
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1889,6 +1900,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pulled-2026-10-16-console-homebrewre-toolchains-build-systemsci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pulled 2026-10-16 — Console homebrew/RE toolchains + build systems/CI
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1959,8 +1981,8 @@ Owner rule 2026-10-16: a finding without a pull-in is incomplete — track until
 <tr>
 <td>Console homebrew + CI</td>
 <td>PS2/PSP/GC/N64/Xbox SDKs, emulator debuggers, CI templates</td>
-<td>→ game-reverse-engineering docs/ (pending)</td>
-<td>Researching</td>
+<td>→ game-reverse-engineering docs/toolchains/ (9 docs) + tooling/console-toolchains/ ; CI template → agent-ops ci-templates/game-ci/</td>
+<td>✅ wired 2026-10-16</td>
 </tr>
 </tbody>
 </table>
@@ -2302,6 +2324,98 @@ Owner rule 2026-10-16: a finding without a pull-in is incomplete — track until
 | PKM tools: Logseq (AGPL-3.0, open source, outliner, block-addressable — best for LLM-written content) vs Obsidian (proprietary, 4,500+ plugins, better for long-form); both local-first markdown + git | mehmetgoekce llm-wiki; freshtechtips 2026 | convention: plain markdown + git + [[wikilinks]] (no app needed for agents) |
 | Zettelkasten: atomicity (one idea per note), unique addressing, dense interlinking via [[wikilinks]]; distributed teams = shared workspace + linking conventions + knowledge gardening | jqueiroz notenav; taskade.com; Luhmann 90k cards | [[wikilink]] cross-reference convention in RESEARCH-CONVENTIONS.md |
 | Dedupe lesson: "the URL is an attribute of the copy, not the entity — dedupe on normalized content fields; treat URLs as provenance, not identity" | dev.to imapphelp | research-check.sh + index-first rule (check before researching) |</p>
+<h2 id="pulled-2026-10-16-console-homebrewre-toolchains-build-systemsci">Pulled 2026-10-16 — Console homebrew/RE toolchains + build systems/CI<a class="headerlink" href="#pulled-2026-10-16-console-homebrewre-toolchains-build-systemsci" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Source</th>
+<th>License</th>
+<th>Landed</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>psprecomp (Allegrex→C static recomp)</td>
+<td>sp00nznet/psprecomp</td>
+<td>MIT</td>
+<td>game-reverse-engineering docs/toolchains/psp.md + tooling/console-toolchains/install.sh</td>
+<td>✅ wired (built, 10/10 ctest pass; needs <code>-lm</code> — upstream CMake gap)</td>
+</tr>
+<tr>
+<td>dolphin-memory-engine-fork (Dolphin live-memory R/W)</td>
+<td>PyPI</td>
+<td>MIT</td>
+<td>pip recipe in install.sh; tooling/console-toolchains/dolphin-memscan.py</td>
+<td>✅ wired (v2.1.3 import + API verified)</td>
+</tr>
+<tr>
+<td>game-ci template (Godot export + Blender headless + asset gates)</td>
+<td>original (2026 patterns)</td>
+<td>ours</td>
+<td>agent-ops ci-templates/game-ci/</td>
+<td>✅ wired (asset_gates + blender_smoke tested on VM)</td>
+</tr>
+<tr>
+<td>PS2SDK/ps2toolchain (ps2dev)</td>
+<td>ps2dev org</td>
+<td>AFL-2.0 / BSD-2-Clause / MIT</td>
+<td>install recipe (prebuilt tarball)</td>
+<td>📄 documented (Urban Reign lane)</td>
+</tr>
+<tr>
+<td>pspsdk/pspdev</td>
+<td>pspdev org</td>
+<td>BSD</td>
+<td>install recipe (docker pspdev/pspdev:latest)</td>
+<td>📄 documented (Tekken 6 PSP lane)</td>
+</tr>
+<tr>
+<td>devkitPPC r50 + libogc 3.1.0 / libogc2</td>
+<td>devkitPro / extremscorner</td>
+<td>verify in repo</td>
+<td>install recipe (dkp-pacman)</td>
+<td>📄 documented (WMXIX lane)</td>
+</tr>
+<tr>
+<td>libdragon (GCC 16, rdpq, n64.mk)</td>
+<td>DragonMinded/libdragon</td>
+<td>verify in repo</td>
+<td>install recipe (toolchain-continuous-prerelease)</td>
+<td>📄 documented (No Mercy lane)</td>
+</tr>
+<tr>
+<td>NxDK + ghidra-xbe + extract-xiso</td>
+<td>XboxDev org</td>
+<td>verify in repo</td>
+<td>install recipe</td>
+<td>📄 documented (SCII Xbox lane)</td>
+</tr>
+<tr>
+<td>mcp-ppsspp (PPSSPP debugger MCP)</td>
+<td>dmang-dev/mcp-ppsspp</td>
+<td>verify before wiring</td>
+<td>docs/toolchains/emulator-debuggers.md</td>
+<td>⏸️ queued (license unconfirmed)</td>
+</tr>
+<tr>
+<td>PSPRecomp</td>
+<td>jessicanataliagta/PSPRecomp</td>
+<td>verify before wiring</td>
+<td>docs/toolchains/psp.md</td>
+<td>⏸️ queued (license unconfirmed)</td>
+</tr>
+<tr>
+<td>cth9191/blender-to-web</td>
+<td>—</td>
+<td>rights reserved</td>
+<td>referenced only</td>
+<td>❌ excluded (no reuse license)</td>
+</tr>
+</tbody>
+</table>
+<p>Research docs: game-reverse-engineering <code>docs/toolchains/</code> (README + ps2/psp/gamecube-wii/n64/xbox/emulator-debuggers/build-systems-2026/ci-game-repos).</p>
 
 
 
