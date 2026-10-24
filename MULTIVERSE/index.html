@@ -1,0 +1,2183 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Indexes, conventions, manifests, and handoffs for the agent fleet.">
+      
+      
+        <meta name="author" content="Mars FMMG">
+      
+      
+      
+        <link rel="prev" href="../MERGE-QUEUE/">
+      
+      
+        <link rel="next" href="../NO-DATA-LOSS-RULES/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>MULTIVERSE — one universe, many games - Agent Ops Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#multiverse-one-universe-many-games" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Agent Ops Hub" class="md-header__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agent Ops Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MULTIVERSE — one universe, many games
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Agent Ops Hub" class="md-nav__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Agent Ops Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    agent-ops — restart resilience for agent work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AGENTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AGENTS.md
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ANTI-CLOBBER-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ANTI-CLOBBER LAW (owner 2026-10-17)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AUDIT-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repo audit — 2026-10-14 (Grok Bot)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BOX-OFFLOAD-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BOX OFFLOAD LOG — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHECKPOINT_PROTOCOL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkpoint Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLAIMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAIMS (prevents collisions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COMPUTE_ARSENAL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Free Compute Arsenal — fmmg.mars@gmail.com (Mars FMMG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CROSS-REPO-STRANDED-AUDIT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CROSS-REPO STRANDED-WORK AUDIT — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../END-OF-SESSION-BACKUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    END-OF-SESSION BACKUP (watchdog procedure)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FRICTION-RESEARCH-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FRICTION RESEARCH LOG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-CANON/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — CANON (where the game's knowledge lives)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF INDEX — fleet state, one place, no "missing"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-REPOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — REPOS (per-repo state + landing order)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-TEARDOWNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — TEARDOWNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-WESTERN-HEART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — WESTERN HEART (mhvnsnt/western-heart)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOW-GROKBOT-WORKS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How Grok Bot works (copy this process)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDEMPOTENCY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idempotency Rules — write work so a re-run can't duplicate or corrupt it
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LANE_GUARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane Guard — crash-resilient + collision-proof lanes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-IT-YOURSELF-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE-IT-YOURSELF LAW (owner 2026-10-15) — canonical copy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-QUEUE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE QUEUE — everything built but not landed, all repos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MULTIVERSE — one universe, many games
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MULTIVERSE — one universe, many games
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#games-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Games at a glance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-parts-use-these-do-not-fork-silently" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared parts (use these; do not fork silently)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-game-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per-game parts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Per-game parts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bannon-mhvnsntbannon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bannon (mhvnsnt/Bannon)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ashlane-v2-mhvnsntashlanev2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AshLane v2 (mhvnsnt/AshLanev2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brutal-fist-mhvnsntbrutalfistgrokversionten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brutal-Fist (mhvnsnt/brutalfistgrokversionten)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#western-heart-mhvnsntwestern-heart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        western-heart (mhvnsnt/western-heart)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-game-rules-owner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-game rules (owner)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#active-follow-ups-repo-co-dev" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Active follow-ups (Repo Co Dev)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NO-DATA-LOSS-RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NO-DATA-LOSS RULES (owner law — mhvnsnt)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-CONVENTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Conventions (all repos, all agents)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-PULLIN-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RESEARCH → PULL-IN INDEX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESUME_BRIEF_TEMPLATE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resume Brief Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TAG-TEAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TAG-TEAM board (live)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-ALTERNATIVES-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Alternatives — Free/Open-Source Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-BREAKTHROUGH-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Breakthrough Program — Final Report (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-LANE5-AGENT-REVIEW-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox BAD_TOKEN — Lane 5 All-Agents Review (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-RESEARCH-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Research — 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-SUPPORT-TICKET-DRAFT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Support Ticket — DRAFT (do not send without owner approval)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WH-974-REVERT-2026-10-24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    INCIDENT 2026-10-24 ~02:28Z — WH #974 merge built on stale branch tree (main's payloads dropped)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WH-FIXABLE-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WH fixable-PRs work log — 2026-10-23 (conflict-resolution worker)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adr-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-NNNN:
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-cleanup-log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Cleanup Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grokbot-activity-proof-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot / MoneyManBusch activity proof — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-claims-recheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Claims Re-Check — 2026-10-20 evening (coordinator lane, parent-ordered)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane1-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Auth — Lane 1, Round 2 (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane2-debrid-live/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LANE 2 (RETRY) — Debrid-Link + AllDebrid Live Tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane3-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 3 — Alternative Debrid / Seedbox Sweep for a 350 GB Single-File Torrent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane4-compute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 4 — Free compute / cloud-to-cloud transfer layer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane5-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 5 — All-Agents Tooling on TorBox BAD_TOKEN (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane6-oss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Lane 6 — Open-Source Wire-Up + Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane7-seedbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 7 — Free-Trial Seedbox Angle (Seedhost.eu + Pulsed Media + others)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_47" >
+        
+          
+          <label class="md-nav__link" for="__nav_47" id="__nav_47_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent handoff
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_47_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_47">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent handoff
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-handoff/PRODUCERBOT_WORKFLOW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PRODUCERBOT WORKFLOW
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#games-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Games at a glance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-parts-use-these-do-not-fork-silently" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared parts (use these; do not fork silently)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-game-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per-game parts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Per-game parts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bannon-mhvnsntbannon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bannon (mhvnsnt/Bannon)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ashlane-v2-mhvnsntashlanev2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AshLane v2 (mhvnsnt/AshLanev2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brutal-fist-mhvnsntbrutalfistgrokversionten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brutal-Fist (mhvnsnt/brutalfistgrokversionten)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#western-heart-mhvnsntwestern-heart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        western-heart (mhvnsnt/western-heart)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-game-rules-owner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-game rules (owner)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#active-follow-ups-repo-co-dev" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Active follow-ups (Repo Co Dev)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="multiverse-one-universe-many-games">MULTIVERSE — one universe, many games<a class="headerlink" href="#multiverse-one-universe-many-games" title="Permanent link">&para;</a></h1>
+<p>Owner direction (2026-10-14): <strong>all of the owner's games are ONE multiverse</strong>,
+in the spirit of the MDickie universe — shared parts, shared skeleton, shared
+creation suite, shared wearables — with each title keeping its own reference
+games, tone, and per-game systems.</p>
+<p>This doc lives in <code>mhvnsnt/agent-ops</code> so every agent can find the map without
+cloning every game repo. Update it when a shared part lands or a game's
+reference set changes. Claim related work in <a href="../CLAIMS.md">CLAIMS.md</a>.</p>
+<hr />
+<h2 id="games-at-a-glance">Games at a glance<a class="headerlink" href="#games-at-a-glance" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Game</th>
+<th>Repo</th>
+<th>Primary references</th>
+<th>Canon distance from Bannon</th>
+<th>Live / Lab</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bannon</strong></td>
+<td><a href="https://github.com/mhvnsnt/Bannon"><code>mhvnsnt/Bannon</code></a></td>
+<td>WWE games we have (2K CAW/moveset lineage, Off The Top Rope books, MDickie wrestling sims, Neckbreaker / Visceral Pro Wrestling ragdoll notes)</td>
+<td><strong>Canon center</strong></td>
+<td><a href="https://bannon.pages.dev">bannon.pages.dev</a>; UE5 under <code>unreal/</code>; legacy Three.js arena</td>
+</tr>
+<tr>
+<td><strong>AshLane (v2)</strong></td>
+<td><a href="https://github.com/mhvnsnt/AshLanev2"><code>mhvnsnt/AshLanev2</code></a></td>
+<td><strong>Urban Reign</strong> (street-lane brawler feel); Kenney City Kit CC0 shells</td>
+<td>Close — shared cast / Bannon can appear</td>
+<td><a href="https://ashlane-1aa.pages.dev">ashlane-1aa.pages.dev</a>; TanStack Start + Three.js mobile</td>
+</tr>
+<tr>
+<td><strong>Brutal-Fist</strong></td>
+<td><a href="https://github.com/mhvnsnt/brutalfistgrokversionten"><code>mhvnsnt/brutalfistgrokversionten</code></a></td>
+<td><strong>Tekken</strong>, <strong>Def Jam</strong>, and similar 3D fighters. <strong>No psychedelic elements</strong> — AshLane/Tekken-style fighting without Urban Reign rain or Tong-Nou surrealism</td>
+<td>Close — shared roster DNA, Bannon model as quality bar</td>
+<td><a href="https://brutalfist.pages.dev">brutalfist.pages.dev</a></td>
+</tr>
+<tr>
+<td><strong>western-heart</strong></td>
+<td><a href="https://github.com/mhvnsnt/western-heart"><code>mhvnsnt/western-heart</code></a></td>
+<td><strong>Tekken base</strong> (T3 engine/importers; T6/TTT2 in progress) <strong>plus</strong> pieces from all teardown games: Urban Reign, Def Jam, WWE No Mercy / WM19, Eastern Mind / Tong-Nou fiction</td>
+<td><strong>Furthest from Bannon canon</strong>, but <strong>linked</strong> — Bannon can appear playable; mask is universal</td>
+<td>Godot Lab 1v1 (<code>lab/</code>); private, never published as those titles</td>
+</tr>
+</tbody>
+</table>
+<p>Study / teardown material is for understanding and licensed recombination only.
+Western Heart and the other originals remain the owner's work.</p>
+<hr />
+<h2 id="shared-parts-use-these-do-not-fork-silently">Shared parts (use these; do not fork silently)<a class="headerlink" href="#shared-parts-use-these-do-not-fork-silently" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Shared part</th>
+<th>Canonical home</th>
+<th>What agents must do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Canonical skeleton + retarget maps</strong></td>
+<td>western-heart Lab (<code>lab/</code>, <code>wh_canonical_*</code> rigs); retarget into each game's runtime</td>
+<td>Retarget Tekken / Mixamo / Tripo / WWE-style clips onto the shared skeleton; do not invent a second "canonical" bone set</td>
+</tr>
+<tr>
+<td><strong>Creation suite</strong></td>
+<td>western-heart <a href="https://github.com/mhvnsnt/western-heart/tree/main/packages/creation-suite"><code>packages/creation-suite</code></a> (<code>@mhvnsnt/creation-suite</code>); design in <a href="https://github.com/mhvnsnt/western-heart/blob/main/docs/creation-suite/DESIGN.md"><code>docs/creation-suite/DESIGN.md</code></a></td>
+<td>DNA v2 (superset of Bannon <code>docs/DNA_SCHEMA.md</code> + <code>bannon_customizer.js</code>); body sliders + size-adaptive jiggle; attire slots; WWE-style moveset from Bannon <code>assets/moves/moveset_schema.json</code> next. Wire into every game under its suite name (Create a Wrestler / Fighter / Brawler)</td>
+</tr>
+<tr>
+<td><strong>Bannon mask (universal wearable)</strong></td>
+<td>western-heart <a href="https://github.com/mhvnsnt/western-heart/blob/main/docs/attire/BANNON_MASK.md"><code>docs/attire/BANNON_MASK.md</code></a> + <code>lab/game/attire/bannon_mask/</code></td>
+<td>Equip in <strong>all</strong> games' character customization; bind/skin to head bone (or aliases); per-body-type fit offsets from the manifest presets</td>
+</tr>
+<tr>
+<td><strong>Rig / mesh audits</strong></td>
+<td>Brutal-Fist bone-integrity CI (e.g. PR #34/#38 pattern); western-heart mask follow-check (<code>lab/tools/mask_fit.py</code>); Bannon UniRig / skinqa gate</td>
+<td>Run before merge of new Tripo/Drive models; catch broken bind poses, pixelated meshes, wrong facing</td>
+</tr>
+<tr>
+<td><strong>Tripo intake pipeline</strong></td>
+<td>Owner models mostly from <strong>Tripo 3D</strong>; intake + gate owned with Brutal-Fist model audit / Drive sync patterns (Bannon <code>tools/drive_sync</code>)</td>
+<td>Assume no authored blend shapes or extra bones; procedural morphs + generated spring bones (creation-suite)</td>
+</tr>
+</tbody>
+</table>
+<p>Secondary physics (glute / thigh / chest / belly jiggle, hair/cloth chains) is part of the shared creation suite and scales with measured body size — not a per-game reinvention.</p>
+<hr />
+<h2 id="per-game-parts">Per-game parts<a class="headerlink" href="#per-game-parts" title="Permanent link">&para;</a></h2>
+<p>What stays <strong>local</strong> to each title (engine, fiction, stages, exclusive systems).
+Filled from each repo's README / design docs (2026-10-14).</p>
+<h3 id="bannon-mhvnsntbannon">Bannon (<code>mhvnsnt/Bannon</code>)<a class="headerlink" href="#bannon-mhvnsntbannon" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Per-game</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fantasy / fiction</td>
+<td>Off The Top Rope books; wrestling promotion sim</td>
+</tr>
+<tr>
+<td>Engine</td>
+<td>UE5 C++ primary (<code>unreal/</code>); legacy Three.js single-file arena</td>
+</tr>
+<tr>
+<td>Creation naming</td>
+<td><strong>Create a Wrestler</strong></td>
+</tr>
+<tr>
+<td>Own systems</td>
+<td>DNA schema v1 + customizer hub; moveset_schema (WWE-2K Create-a-Moveset data); attire catalogues under <code>assets/customizer/</code>; active ragdoll / Neckbreaker-inspired physics notes</td>
+</tr>
+<tr>
+<td>Stages</td>
+<td>Wrestling rings / arenas (canon arena ledger in sibling fighters)</td>
+</tr>
+<tr>
+<td>Deployment</td>
+<td>Cloudflare Pages PWA; Android WebView package noted in README</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ashlane-v2-mhvnsntashlanev2">AshLane v2 (<code>mhvnsnt/AshLanev2</code>)<a class="headerlink" href="#ashlane-v2-mhvnsntashlanev2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Per-game</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fantasy / fiction</td>
+<td>One walkable city lane; district jobs; named street fighters (<code>src/game3d/ward.ts</code>, <code>roster.ts</code>)</td>
+</tr>
+<tr>
+<td>Engine</td>
+<td>TanStack Start + Three.js; <strong>not</strong> C++ / Godot rewrite</td>
+</tr>
+<tr>
+<td>Reference feel</td>
+<td>Urban Reign street brawler</td>
+</tr>
+<tr>
+<td>Creation naming</td>
+<td><strong>Create a Brawler</strong></td>
+</tr>
+<tr>
+<td>Own systems</td>
+<td>Campaign save <code>ashlane-campaign-v2</code>; Kenney City Kit CC0 buildings; ring/cage/subway/crane/back-room interiors in <code>sim.ts</code></td>
+</tr>
+<tr>
+<td>Hard rules</td>
+<td>No Schwarzerblitz / OpenBOR / GPL game asset copies; MIT/BSD/Apache/CC0 only; do not retarget foreign skeletons onto lane fighters (T-pose bug)</td>
+</tr>
+<tr>
+<td>Deployment</td>
+<td>Cloudflare Pages (<code>ashlane-1aa</code>); Vercel-oriented app builder shell</td>
+</tr>
+</tbody>
+</table>
+<h3 id="brutal-fist-mhvnsntbrutalfistgrokversionten">Brutal-Fist (<code>mhvnsnt/brutalfistgrokversionten</code>)<a class="headerlink" href="#brutal-fist-mhvnsntbrutalfistgrokversionten" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Per-game</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fantasy / fiction</td>
+<td>Straight 3D fighter — <strong>no</strong> Tong-Nou / psychedelic layer</td>
+</tr>
+<tr>
+<td>Engine</td>
+<td>App-builder stack (TanStack / Vite / Three.js path in repo)</td>
+</tr>
+<tr>
+<td>Reference feel</td>
+<td>Tekken (movement, walls, juggles, okizeme — see <code>docs/TEKKEN-INSPIRATION.md</code>) + Def Jam / similar</td>
+</tr>
+<tr>
+<td>Creation naming</td>
+<td><strong>Create a Fighter</strong></td>
+</tr>
+<tr>
+<td>Own systems</td>
+<td>Roster + arena ledger (<code>docs/CANON_ARENA_STAGE_ROSTER_LEDGER.md</code>); animation intake docs; airborne dive / grapple maps; Bannon model as mesh/rig quality bar</td>
+</tr>
+<tr>
+<td>Deployment</td>
+<td>Cloudflare Pages (<code>brutalfist.pages.dev</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="western-heart-mhvnsntwestern-heart">western-heart (<code>mhvnsnt/western-heart</code>)<a class="headerlink" href="#western-heart-mhvnsntwestern-heart" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Per-game</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fantasy / fiction</td>
+<td>Fighting trial inside Tong-Nou (Eastern Mind); nine souls; reincarnation rounds; Force Claiming — "lost multiverse bastard child" (<code>MISSION.md</code>, <code>DESIGN.md</code>)</td>
+</tr>
+<tr>
+<td>Engine</td>
+<td>Godot 4 Lab; Tekken 3–derived fighting core from teardown</td>
+</tr>
+<tr>
+<td>Reference base</td>
+<td>Tekken 3 (+ T6/TTT2 importers); Urban Reign, Def Jam, WWE No Mercy/WM19 teardown pieces as library entries</td>
+</tr>
+<tr>
+<td>Creation naming</td>
+<td><strong>Create a Fighter</strong> (shared suite ships here first)</td>
+</tr>
+<tr>
+<td>Own systems</td>
+<td>Chimera architecture docs; Lab 1v1 (Leo-Man Pantera vs King); attire.gd + mask; teardown under <code>teardown/</code>; moveset-library</td>
+</tr>
+<tr>
+<td>Multiverse link</td>
+<td>Furthest fiction from Bannon, but Bannon is allowed as a playable guest with Tekken-style inputs + retargeted WH moves; mask already Lab-wired</td>
+</tr>
+<tr>
+<td>Publishing</td>
+<td>Private study build — do not ship as Tekken / WWE / etc.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cross-game-rules-owner">Cross-game rules (owner)<a class="headerlink" href="#cross-game-rules-owner" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>One multiverse</strong> — shared skeleton, creation suite, mask, audits, Tripo intake.</li>
+<li><strong>Playtest against the right references:</strong> Bannon ↔ WWE; AshLane ↔ Urban Reign; Brutal-Fist ↔ Tekken + Def Jam (+ similar); western-heart ↔ Tekken base + all its teardown games.</li>
+<li><strong>Push each piece</strong> as small incremental PRs; claim in CLAIMS.md before starting.</li>
+<li><strong>No deletion of owner work</strong> — store safely (backup branches / box-storage) before freeing disk.</li>
+<li><strong>Proof</strong> for multiverse tasks: clips of Bannon fighting in western-heart; mask equipped on characters in each game.</li>
+</ol>
+<hr />
+<h2 id="active-follow-ups-repo-co-dev">Active follow-ups (Repo Co Dev)<a class="headerlink" href="#active-follow-ups-repo-co-dev" title="Permanent link">&para;</a></h2>
+<p>See CLAIMS.md row for this workstream:</p>
+<ol>
+<li>Put the fixed Bannon model/skeleton/rig into western-heart, playable, Tekken-style movesets + retargeted WH animations.</li>
+<li>Add the Bannon mask GLB as an equippable wearable in <strong>all</strong> games (head bind + per-body fit).</li>
+<li>Keep this MULTIVERSE.md current as shared parts land.</li>
+</ol>
+<p><em>Last updated: 2026-10-14 CT.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
