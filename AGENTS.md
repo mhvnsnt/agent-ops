@@ -23,3 +23,25 @@ Read and follow [`docs/NO-DATA-LOSS-RULES.md`](docs/NO-DATA-LOSS-RULES.md) (cano
 
 ### NO-SPARSE-COMMIT LAW (2026-10-23 — the cape-jones #219 main wipe)
 NEVER commit or push from a sparse/partial checkout. On 2026-10-23 the overnight pipeline committed PR #219 from a sparse checkout that materialized only docs/ — the merge DELETED the other 21 root entries from cape-jones main. A sparse checkout that looks complete can silently carry deletions. RULE: before any commit from a non-full clone, verify the working tree against the branch's real tree (diff the root listing, or compare tree SHAs). Default recovery path for a bad merge: revert the merge commit (-m 1) and re-add the branch's real payload — nothing lost on either side. When in doubt, build the commit via the Git Data API from verified tree SHAs instead of a local checkout. GOTCHA: gh's `-f content=@file` does NOT expand @file for the blobs API — base64 the content explicitly or the blob will contain the literal path string.
+
+---
+
+## MERGE QUEUE — COMING SOON (owner-ordered briefing, 2026-10-24)
+
+Read this if you work on western-heart or agent-ops. Nothing changes today. This is advance notice only.
+
+**What is changing:** soon, pull requests will merge one at a time, in a line, instead of every lane merging whenever it wants. Each PR in the line gets checked against the newest main before it goes in. That is called a merge queue.
+
+**Why:** two lanes merged at almost the same time and one wiped out the other's work. The line stops that happening.
+
+**What changes for your lane, once the flip happens:**
+- Merging a PR directly will stop working. GitHub will reject a direct merge.
+- Instead you add your PR to the queue. GitHub merges it when its turn comes, after re-checking it against the newest main.
+- If the queue asks you to update your branch (because main moved under you), update it and it goes back in line. Do not force-push. Do not merge main into your branch by hand to get around it.
+- The merge method stays "merge". Never squash, never rebase. Same as now.
+
+**When:** NOT YET. The flip happens only after every active lane has confirmed it knows. This briefing is the advance notice — today, merging works exactly the way it always has.
+
+**How to confirm:** reply "merge-queue briefing confirmed" in your chat, or drop that line as a comment on your PR, or tell the merge coordinator at your next check-in. Confirmations are tracked in mhvnsnt/agent-ops at `MERGE-QUEUE-BRIEFING-CONFIRMATIONS-2026-10-24.md`.
+
+**Status 2026-10-24:** the queue plumbing is ready on both repos (western-heart PR #742 and agent-ops PR #39 both merged the merge_group triggers). The flip itself has NOT happened. No branch protection has changed.
