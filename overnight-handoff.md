@@ -1,3 +1,11 @@
+## overnight-idle-pipeline run 2026-10-24 ~13:44-14:05Z (productive — 1 landed-verified, 0 reopened)
+
+- **LANDED-VERIFIED: CJ #244** "Track D: EP1 render pipeline — measured timings, chunked renderer, Flamenco config" — merged ad8a81c9 (parents [61ee7394 main, 328da6e8 branch-updated-to-main]); merge-tree = exactly the 4 PR files (+610/-0); payloads verified on main (EP1-RENDER-PIPELINE.md 16,370B, ep1_render.py 9,469B, ep1_render_chunk.sh 1,807B, flamenco-manager.ep1.yaml 2,471B). Gate body verified (verbatim owner quote, method specified vs used, self-check, deviations none); Flamenco dispatch + T4 rates explicitly PENDING in the report, not claimed.
+- **NOT merged:** CJ #243 (held — reconstruction deviation review pending); CJ #239 (owner ear-check pending); WH #962 (bb7b1a32, sole FAIL ui-sources). WH main unchanged (add4e62). No new/updated PRs in WG/Bannon/CD/GRE/AO since 13:14Z.
+- **Verify sweep:** 5/5, 0 false (CJ #242 8,402B; CJ #235 script 24,016B — growth from later owner-decision commits, explained, not a false claim; AO queue 106,308B on main; WH/CJ main heads).
+- **Checkpoints:** 83 healthy / 0 stale. **Canon-sync:** nothing new. **Disk:** 71%. **Failure-alerts:** nothing new since 2026-10-20.
+- **Blockers needing owner (unchanged):** CJ #243 (approve the Jungle Outpost reconstruction as the Ep1 arena, or hold for true T7 extraction?); CJ #239 (ear-check the 13:38 Nosferatu clip?); WH #962 (lane must supply movelist teardown source); WH #718/#722/#377/#973/#857/#464; Bannon #22; CD #62; GRE #58/#57.
+
 ## overnight-idle-pipeline run 2026-10-24 ~13:14-13:30Z (quiet verification run — 0 landed-verified by this run, 0 reopened)
 
 - **STEP 1: No merges.** Only change since the 13:00Z run: CJ #243 (new, ep1-arena) — MERGEABLE/CLEAN, cast pass, +374/-0, 7 new files, 0 deletions — HELD, NOT merged: its own body flags a deviation with NO owner approval link (original Jungle Outpost reconstruction, NOT extracted T7 geometry; "PR left unmerged" pending coordinator/owner review). Merging would land the reconstruction as the Ep1 arena asset, a substantive decision, not a report doc — same hold rule as WH #960.
