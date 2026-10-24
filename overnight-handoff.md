@@ -1,3 +1,11 @@
+## overnight-idle-pipeline run 2026-10-24 ~11:44-11:47Z (quiet verification run — 0 landed, 0 reopened)
+
+- **STEP 1:** nothing mergeable. WH main unchanged (7db09f5d = #969); no new WH PR number above #988. WH #962 re-checked live: head bb7b1a32, MERGEABLE/UNSTABLE, 11 SUCCESS + sole FAIL ui-sources — BLOCKED-ui-sources ONLY, NOT merged. Open-PR scan: WH conflicting/blocked set lane-owned/stood down; GRE #55 conflicting; Bannon #22 owner-call + drafts untouched; CD #62 owner-held; brutal-fist CLEAN #19/#17 are drafts — never merged; AO 0 open PRs, CJ 0 open PRs, wrestling-game 0 open PRs.
+- **CJ main moved by another lane:** #238 (0fa67989, exactly docs/story/EP01-IMMORTAL-QOMBAT-SHOOTING-SCRIPT.md, payload 24,016B on main) verified, NOT this run's merge. AO main still 98cc06c3 (#82), GRE main still b8abadd6 (#60).
+- **Verify sweep:** 5 claims — 5 VERIFIED, 0 FALSE (WH #971 miruko 4,119,856B; WH #965 test 1034B; brutal-fist #18 adapter 33,605B; GRE #51 manifest 74,872B; CJ #238 merge + payload).
+- **Checkpoints:** 83 healthy / 0 stale. **Canon-sync:** nothing new. **failure-alerts.log:** nothing new since 2026-10-20. **Disk:** 71%.
+- **Stood down / untouched:** all prior blockers (WH #962/#973/#966/#960/#857/#988, Bannon #22 + drafts, CD #62, brutal-fist drafts, WH #377/#718/#722/#446/#182, CD #168, GRE #58/#57, WH #464); in-progress longtail_pull.py + at-inflate2.py and sibling cnleaks lane left alone.
+
 ## overnight-idle-pipeline run 2026-10-24 ~11:14-11:17Z (quiet verification run — 0 landed, 0 reopened)
 
 - **STEP 1:** nothing mergeable. WH main unchanged (7db09f5d = #969); no WH PR updated since 10:31:25Z, prior triage stands. WH #962 re-checked live: head bb7b1a32, MERGEABLE/UNSTABLE, 11 SUCCESS + sole FAIL ui-sources — BLOCKED-ui-sources ONLY, NOT merged. AO main = prior correction sync #81 (048d0b2, exactly MERGE-QUEUE.md + overnight-handoff.md) verified this run. CJ main moved by another lane: #237 (509b6ca, exactly docs/story/EP01-IMMORTAL-QOMBAT-SHOOTING-SCRIPT.md, payload 23,536B on main) verified, NOT this run's merge. AO 0 open PRs, CJ 0 open PRs.
