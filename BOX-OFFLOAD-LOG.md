@@ -458,3 +458,11 @@ Checked with `/tmp/rcd-chk.sh` (clean+no untracked, empty stash, every local bra
 | /workspace/brutalfistgrokversioneight | 429M | 1 dirty path |
 
 wh-qa: not present. Other /workspace dirs (wh-*, ashlane, etc.) left untouched — ownership not confirmed.
+Not backed up: mfluid-audit/Mochiichao-Diamond-Version-2d- (2 dirty files; push to mfluidmusic denied 403). Kept on disk.
+
+## 2026-10-23 ~4:20 PM CT — box offload
+- CLEARED /workspace/studio-pipeline (5.3G): git fetch; clean status (incl. untracked), empty stash, all local branches ancestor of origin; lsof none.
+- KEPT western-heart (20G): uncommitted deletions + 13 local branches not on/behind origin.
+- KEPT Brutal-Fist (4.5G): modified/deleted files, 1 stash, 2 unpushed branches.
+- KEPT originalize (6.1G), fc-glb (3.4G): not git repos.
+- RESOLVED Mochiichao-Diamond-Version-2d- untracked proof/ + tools/: committed as `backup/proof-tools-20261023` (9ab97786); no credential can push to mfluidmusic (gh has only mhvnsnt, read-only there), so pushed to private mirror https://github.com/mhvnsnt/Mochiichao-Diamond-Version-2d--mirror.
