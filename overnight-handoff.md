@@ -1,3 +1,18 @@
+## overnight-idle-pipeline run 2026-10-24 ~04:14-05:10Z (productive — 6 landed-verified: GRE #58/#57, AO #21/#23/#26, WH #989 canon sync)
+
+- **Idle:** last user msg 2026-10-24T03:13:24Z, run 04:14Z → idle ~61 min. No lock file → created, proceeded.
+- **STEP 1 — LANDING QUEUE:**
+  - **GRE #58** "teardown: WWE 2K19 batch1" — **LANDED-VERIFIED** (merge 79c068d5). 299 added + 1 modified (naming/CANON-NAME-MAP.json 12-line additive entry, verified on main alongside #60's approved entries — clean keep-both-sides). No CI on repo (checks 403 — precedent); merged on manual gate-intent (0 deletions). Merge-tree vs parent = exactly the 300 intended paths, 0 deletions.
+  - **GRE #57** "teardown: Yakuza Kiwami hact" — **LANDED-VERIFIED** (merge c2a1c8c7, tree no-op: lane had pushed the hact batch directly to main 23:51-23:55Z; payload 2062 extracted paths + hashes verified on main's tree).
+  - **GRE #59** (Gang Beasts IL2CPP dump) — merged 2ae430ef onto the lane's stacking branch teardown/wwe2k19-b1 (full union tree, 0 deletions). NOT on main yet — lane owns the stack merge (stood down per CHECK-BEFORE-START).
+  - **AO #21/#23/#26** — **LANDED-VERIFIED** (merges 43eab483/089e7493/81e66326). 8-day-old stranded docs adds; `docs-only` label applied (gate's own bypass), merged on outage precedent after manual gate-intent verification. Payloads verified in merge trees.
+  - **WH #989** "docs(canon): 2026-10-24 dev notes" — **LANDED-VERIFIED** (merge d60f354f). Vain Abel A1 wired + rig wave 2 + moveset wave 3 appended to docs/canon-archive/DEV-NOTES-ARCHIVE.md. Gate body with verbatim 2026-10-23 archive-order quote; CI 12/12 green; merge-tree = exactly 1 modified file, 0 deletions.
+  - **STOOD DOWN:** WH #984/#985/#986/#979 — lanes actively iterating (updated 03:52-04:08Z). Live merge lane owns them.
+- **STEP 2 — VERIFY SWEEP (5/5 verified, 0 false):** WH #983 merge-tree-guard.yml on main ✓; WH #982 pantera.glb 7,625,912B (k-NN intact) ✓; GRE CANON-NAME-MAP.json 862B (#60+#58 entries) ✓; AO MERGE-QUEUE.md on main ✓; CJ #228 EXPANSION-4.md ✓.
+- **STEP 3 — CHECKPOINTS:** 83 healthy / 0 stale. No resumes needed.
+- **STEP 4 — CANON SYNC:** WH #989 (above). Candlestick animation-app decision NOT synced — it is an unendorsed lane proposal (owner's standing plan 2026-10-15 is the Wick Editor fork until he confirms); recorded here only.
+- **STEPS 5-8:** failure-alerts.log clean since 2026-10-20; no live media processes; disk 75%. No new tool pulls (landing took priority).
+- **OWNER QUESTIONS (unchanged, still open):** (1) live merge lane must stop building merges on stale branch trees; (2) WH #377 keep-open vs close; #718/#722 merge-freeze status; #446 land-vs-split; #182 close-vs-keep; (3) CD #62 Quantum Jam (starts Oct 25): land or close; (4) Bannon #22 close call; (5) cape-jones 97MB blend on main follow-up; (6) Candlestick vs Wick fork for the animation app — lane proposal, owner has not confirmed.
 ## overnight-idle-pipeline run 2026-10-24 ~03:44-03:53Z (productive — WH #983 merge-tree-guard + GRE #60 canon naming landed-verified)
 
 - **Idle:** last user msg 2026-10-24T03:13:24Z (22:13:24 CDT), run 03:44Z → idle ~31 min (just over threshold). No lock file → created, proceeded.
