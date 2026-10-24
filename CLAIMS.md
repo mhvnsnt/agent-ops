@@ -38,3 +38,4 @@ Protocol:
 | Muse (DoggByte subagent) | western-heart: make Cape Jones playable on Alisa's select slot — rig QA on cape-jones.glb, stage roster/cyborg-x/attires/attire1/model-rigged.glb, MODEL_URLS + attire wiring, proof frames (select + fight) | muse/cape-jones-fight | 2026-10-23 20:45 CT | active |
 | DoggByte (merge-tree-guard) | western-heart merge-time guard: NEW `.github/workflows/merge-tree-guard.yml` + `.github/scripts/merge_tree_guard.py` + `test_merge_tree_guard.py`; catches fake stale-tree merges (PR #974 pattern). No other files touched | muse/merge-tree-guard | 2026-10-23 22:05 CT | active |
 | Repo Co Dev | Bannon playable in western-heart + Bannon mask in all games + MULTIVERSE.md | docs/multiverse-map | 2026-10-14 17:04 | active |
+| Repo Co Dev | Bannon playtest perf/overlay/version fixes + GLB-replacement audit (PAUSED by owner; see Bannon docs/HOW-TO-CONTINUE.md) | Bannon/fix/perf-lazy-clips-debug-flag-version-stamp | 2026-10-14 16:10 | paused |
