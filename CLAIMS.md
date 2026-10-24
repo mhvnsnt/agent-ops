@@ -34,3 +34,4 @@ Protocol:
 | Repo Co Dev | Add Oct 23 owner rules (disk offload + merge rule) to western-heart + agent-ops docs; clean up Repo Co Dev's own finished /workspace clones | repo-co-dev/owner-rules-20261023 | 2026-10-23 15:55 | active |
 | Grok Bot (T7/T8 integration) | western-heart: T8 frame data (docs/t7t8-reference/frame-data-t8-full, 41 JSON) -> game/data hit/guard/CH/throw-break tables + fighter.js lookup hook (additive, no moveset edits) | grok/t8-frame-tables | 2026-10-23 16:30 | starting |
 | Grok Bot (T7/T8 integration) | western-heart: T7 Mishima Dojo stage (private-gated GLB) | stages/t7-mishima-dojo | 2026-10-23 16:30 | PR western-heart #855 + private game-reverse-engineering #50 |
+| DoggByte (FutureTech subagent) | western-heart: SCRIPT + AdaHuman/GAIA integration design (research-stage; 2 design docs + tools/script-adapter + tools/photo-to-fighter, 38 tests pass) | docs/futuretech-script-phototofighter-20261023 | 2026-10-23 19:30 | PR western-heart #957 |
