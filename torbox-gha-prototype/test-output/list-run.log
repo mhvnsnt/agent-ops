@@ -1,0 +1,12 @@
+source: https://archive.org/download/CNleaks/OK%20KO.zip (query redacted, 0 chars)
+source size: 7910137932 bytes (7.910 GB)
+central directory: 476 entries, 69779 bytes at offset 7910068055 (zip64)
+  cd fetch 0.1/0.1 MB, 476 entries parsed
+TOTAL: 476 entries, 428 files, 12.046 GB uncompressed
+             0  method=0  crc=00000000  OK KO/
+             0  method=0  crc=00000000  OK KO/Character Art/
+             0  method=0  crc=00000000  OK KO/Character Art/Character Art/
+        444118  method=8  crc=4843a44f  OK KO/Character Art/Character Art/ENID_01_RGB.ai
+        434241  method=8  crc=91350e6f  OK KO/Character Art/Character Art/ENID_02_RGB.ai
+  ... (471 more in manifest)
+manifest written: test-output/okko-manifest.json

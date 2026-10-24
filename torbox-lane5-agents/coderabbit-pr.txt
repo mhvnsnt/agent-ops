@@ -1,0 +1,7 @@
+https://github.com/mhvnsnt/agent-ops/pull/36
+https://github.com/mhvnsnt/agent-ops/pull/36#issuecomment-6296484877
+
+PR: https://github.com/mhvnsnt/agent-ops/pull/36
+Branch: docs/torbox-lane5-agent-review-20261020 (commit 49a9d44)
+Trigger comment: https://github.com/mhvnsnt/agent-ops/pull/36#issuecomment-6296484877
+Status ~10min after trigger: no coderabbitai comment/review; reviews list empty. No .coderabbit.yaml in repo; gh pr checks blocked by PAT scope. App installation unverifiable from here.

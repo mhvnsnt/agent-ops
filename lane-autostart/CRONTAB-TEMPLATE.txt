@@ -1,0 +1,45 @@
+# CRONTAB-TEMPLATE.txt — wiring options for lane-autostart.sh
+# STATUS 2026-10-22: NOT INSTALLED. Everything below is a proposal that needs
+# OWNER APPROVAL before anything is scheduled.
+#
+# ---------------------------------------------------------------------------
+# OPTION A (RECOMMENDED): runtime scheduler cron, every 5 minutes
+# ---------------------------------------------------------------------------
+# This VM has NO local cron daemon (checked 2026-10-22: no `cron`/`crond`
+# binary, no /etc/crontab, no crond process). The scheduler that runs the
+# continuous-friction-research task DOES survive runtime restarts, so a
+# scheduler-level job running lane-autostart.sh every 5 min is the
+# restart-resilient loop. Recovery latency <= 5 min after a reboot, no local
+# daemon install required.
+#
+# Equivalent crontab line if a local cron daemon ever exists:
+#   */5 * * * * /home/hatch/workspace/agent-ops/lane-autostart/lane-autostart.sh
+#
+# Gotchas that the script already defends against (why we do NOT rely on
+# @reboot alone even with a daemon):
+#   - @reboot fires once per boot via a marker in /run (tmpfs):
+#       /run/cron.reboot (cronie) or /run/crond.reboot (Debian cron).
+#     Restarting crond itself does NOT re-fire (old Vixie bug BZ#476972 fixed).
+#   - @reboot does NOT wait for the network; anything network-dependent must
+#     retry internally.
+#   - Jobs run with a skeletal env: PATH=/usr/bin:/bin, no login shell, no
+#     user env. Always set PATH/SHELL in the crontab and use absolute paths.
+#     (lane-autostart.sh instead enforces env -i + explicit PATH per lane,
+#     so it behaves identically under any launcher.)
+#   - A single @reboot line gives ONE shot at boot. If a lane dies later, only
+#     the periodic run catches it — which is exactly why the every-5-min
+#     scheduler entry is the real supervisor, not the @reboot line.
+#
+# ---------------------------------------------------------------------------
+# OPTION B: @reboot entry (supplement, needs local cron daemon + approval)
+# ---------------------------------------------------------------------------
+# Requires installing cronie or Debian cron (apt/root) — NOT present today.
+# Install + this entry BOTH need OWNER APPROVAL.
+#
+# SHELL=/bin/bash
+# PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# HOME=/home/hatch
+# @reboot sleep 30 && /home/hatch/workspace/agent-ops/lane-autostart/lane-autostart.sh >> /home/hatch/workspace/agent-ops/lane-autostart/logs/autostart-boot.log 2>&1
+#
+# The `sleep 30` gives the runtime a beat to settle after boot; the script is
+# idempotent (flock -n), so running it at boot AND every 5 min is safe.

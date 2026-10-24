@@ -416,3 +416,53 @@ Note: some head branches no longer exist on the remote (merged and deleted), but
 backup/box-2026-10-14b-<clone>-wip / -stashN on: AshLanev2 (ashlane-repo, ashlane-base-wt, originalize-pr-AshLanev2, tmp-ashbuild), Brutal-Fist (wip, stash0, BannonSource-wip), brutalfistgrokversionten (vten-stages, vten-main-wt, vten-intro, vten-intro-base, vten-ci-fix), brutalfistgrokversioneight, western-heart (wh-qa wip + grok/wh-playtest-qa, wh-cs), Bannon (wa-Bannon), M.-Engine- (fix), money-machine-hq (mmhq-entrance wip+2 stashes, mmhq-cdt/money-machine-hq/mmhq-et-v2 2 stashes each).
 
 Not backed up: mfluid-audit/Mochiichao-Diamond-Version-2d- (2 dirty files; push to mfluidmusic denied 403). Kept on disk.
+
+## 2026-10-23 cleanup (owner standing permission, t126u 2:57 PM CT)
+
+Rules: idle >60 min (excluding .git), no open handles, no untracked/modified files (only tracked deletions of files still on remote, or regenerable output like .output/ test-results/), 0 stashes, every local branch + HEAD reachable from a remote ref after fetch.
+
+| Path | Size | Remote | SHA | Cleared (CT) |
+|---|---|---|---|---|
+| `ashlane/play` | 1861MB | https://github.com/mhvnsnt/AshLanev2 | `7409b03a` | 15:04 CT |
+| `ig/w-AshLanev2` | 253MB | https://github.com/mhvnsnt/AshLanev2 | `93e820f2` | 15:04 CT |
+| `ig/w-Bannon` | 2001MB | https://github.com/mhvnsnt/Bannon | `7a388cf8` | 15:04 CT |
+| `ig/w-western-heart` | 741MB | https://github.com/mhvnsnt/western-heart | `86f3b51a` | 15:04 CT |
+| `ig/w-agent-ops` | 4MB | https://github.com/mhvnsnt/agent-ops | `ca32c44b` | 15:04 CT |
+| `bn/b` | 1645MB | https://github.com/mhvnsnt/Bannon.git | `63643c5e` | 15:04 CT |
+| `bible/God-Molecule-Show-Studio` | 727MB | https://github.com/mhvnsnt/God-Molecule-Show-Studio.git | `758365de` | 15:04 CT |
+| `kobra-fix` | 283MB | https://github.com/mhvnsnt/brutalfistgrokversionten.git | `dded5029` | 15:04 CT |
+| `bible/TRIPPEDD-Production-studios-` | 12273MB | https://github.com/mhvnsnt/TRIPPEDD-Production-studios-.git | `7efcfbdd` | 15:04 CT |
+| `bible/Bannon` | 7211MB | https://github.com/mhvnsnt/Bannon.git | `6636ad54` | 15:04 CT |
+| `ashlane/base-wt` | 2641MB | https://github.com/mhvnsnt/AshLanev2 | `1ce79707` | 15:04 CT |
+| `ashlane/repo` | 4266MB | https://github.com/mhvnsnt/AshLanev2 | `af2ff5b7` | 15:04 CT |
+| `TRIPPEDD-Production-studios-` | 4271MB | https://github.com/mhvnsnt/TRIPPEDD-Production-studios-.git | `43623000` | 15:04 CT |
+| `wh-qa` | 3874MB | https://github.com/mhvnsnt/western-heart.git | `7b0cdc5d` | 15:04 CT |
+| `western-heart-inventory/western-heart` | 2683MB | https://github.com/mhvnsnt/western-heart | `4a58f1a6` | 15:04 CT |
+
+Total freed: ~44.7 GB.
+## 2026-10-23 ~15:55 CDT — Repo Co Dev own-clone cleanup (rule (a))
+
+Checked with `/tmp/rcd-chk.sh` (clean+no untracked, empty stash, every local branch contained in a remote ref, submodules). **Removed: none** — no clone passed all checks. Kept on disk:
+
+| Path | Size | Reason kept |
+|---|---|---|
+| /workspace/western-heart-lab | 76M | not a git repo (proof/src scratch) — cannot verify |
+| /workspace/wh-proof | 5.5M | not a git repo — cannot verify |
+| /workspace/originalize | 6.1G | not a git repo (top dir) — cannot verify |
+| /workspace/Brutal-Fist | 4.5G | dirty (modified submodule BannonSource, deleted Research/*) + 1 stash |
+| /workspace/vten-stages | 743M | 3 dirty paths |
+| /workspace/vten-ci-fix | 493M | 15 dirty paths |
+| /workspace/vten-main-wt | 275M | 3 dirty paths |
+| /workspace/vten-intro | 755M | 3 dirty paths |
+| /workspace/vten-intro-base | 277M | 1 dirty path |
+| /workspace/brutalfistgrokversioneight | 429M | 1 dirty path |
+
+wh-qa: not present. Other /workspace dirs (wh-*, ashlane, etc.) left untouched — ownership not confirmed.
+Not backed up: mfluid-audit/Mochiichao-Diamond-Version-2d- (2 dirty files; push to mfluidmusic denied 403). Kept on disk.
+
+## 2026-10-23 ~4:20 PM CT — box offload
+- CLEARED /workspace/studio-pipeline (5.3G): git fetch; clean status (incl. untracked), empty stash, all local branches ancestor of origin; lsof none.
+- KEPT western-heart (20G): uncommitted deletions + 13 local branches not on/behind origin.
+- KEPT Brutal-Fist (4.5G): modified/deleted files, 1 stash, 2 unpushed branches.
+- KEPT originalize (6.1G), fc-glb (3.4G): not git repos.
+- RESOLVED Mochiichao-Diamond-Version-2d- untracked proof/ + tools/: committed as `backup/proof-tools-20261023` (9ab97786); no credential can push to mfluidmusic (gh has only mhvnsnt, read-only there), so pushed to private mirror https://github.com/mhvnsnt/Mochiichao-Diamond-Version-2d--mirror.

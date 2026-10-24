@@ -37,3 +37,5 @@ Add a line to CLAIMS.md first.
 - **Goodville segment edits with mask cutouts** (#6): use Smart/Magic Cut that follows each piece's edges. **No rectangular crops.** Show proof on a checkerboard, matched to the Preston Blair frames (beer-can hold, punch, face).
 - **Gig 3 video cut from the Bannon render**: cut a sample from the existing render. Log the method and commit with a hash of the output.
 - **Push the why-shortcut-research file** (#13) to agent-ops via a branch plus PR.
+
+- Physics sandbox (Jigglebot, owner of physics-playground-pwa): live at https://physics-playground-pwa.pages.dev/ (fallback https://mhvnsnt.github.io/physics-playground-pwa/). Original and licensed assets only, so no teardown files go in that repo. Jiggle bone names must contain chest/breast, glute/butt, thigh or belly.

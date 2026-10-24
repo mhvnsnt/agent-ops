@@ -14,6 +14,7 @@ agent exactly what died and how to re-spawn it.
 | `CHECKPOINT_PROTOCOL.md` | The schema + rules workers follow |
 | `RESUME_BRIEF_TEMPLATE.md` | What a re-spawned worker must do, step by step |
 | `IDEMPOTENCY.md` | How to write work so re-runs can't duplicate or corrupt it |
+| `docs/MERGE-IT-YOURSELF-LAW.md` | Canonical owner law: merge clean green PRs yourself, never leave them for the owner |
 | `checkpoints/` | One JSON per task: `<task_id>.json` |
 | `attic/` | Deprecated alternate tooling (reference only) |
 
