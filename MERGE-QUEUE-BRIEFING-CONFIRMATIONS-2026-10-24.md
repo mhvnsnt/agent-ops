@@ -16,13 +16,13 @@ Record each confirmation here with lane + PR + time.
 - western-heart queue plumbing: READY (PR #742 merged the merge_group triggers, 2026-10-23).
 - agent-ops queue plumbing: READY (PR #39 merged the merge_group triggers, 2026-10-23 21:23Z).
 - The flip itself: NOT DONE. No branch protection changed.
-- Briefing landed: western-heart PR (GAME-DEV-BRIEFING.md section 11) + agent-ops PR (AGENTS.md) — fill in numbers below.
+- Briefing landed: western-heart PR #1010 (merged 2026-10-24T21:43:29Z, merge f9306e87; GAME-DEV-BRIEFING.md section 11) + agent-ops PR #104 (merged 2026-10-24T21:43:38Z, merge cf516322; AGENTS.md). Both verified on main: merge-tree exactly the briefing files, 0 deletions.
 
 ## western-heart — open PRs at briefing time (77, listed 2026-10-24 ~16:35 CDT)
 
 | PR | Title | Branch | Last updated | Status |
 |----|-------|--------|--------------|--------|
-| #1008 | Root motion: apply decoded T3 clip root_t travel during attacks (fighter.js) | `feat/root-motion-20261024b` | 2026-10-24 | AWAITING CONFIRMATION |
+| #1008 | Root motion: apply decoded T3 clip root_t travel during attacks (fighter.js) | `feat/root-motion-20261024b` | 2026-10-24 | MERGED 2026-10-24T21:36:17Z (merge 3275523e) — no confirmation needed |
 | #995 | docs: Create-A-Move List design with custom combos | `docs/create-a-move-list-design-20261024` | 2026-10-24 | AWAITING CONFIRMATION |
 | #994 | docs: Move Matching System design | `docs/move-matching-system-20261024` | 2026-10-24 | AWAITING CONFIRMATION |
 | #993 | docs: button names LP1/RP2/LK3/RK4 directive (2026-10-24) | `docs/button-names-lp1-rp2-20261024` | 2026-10-24 | AWAITING CONFIRMATION |
