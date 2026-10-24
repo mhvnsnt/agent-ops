@@ -1,0 +1,3814 @@
+{
+ "source_size": 7910137932,
+ "entry_count": 476,
+ "entries": [
+  {
+   "name": "OK KO/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 0
+  },
+  {
+   "name": "OK KO/Character Art/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 68
+  },
+  {
+   "name": "OK KO/Character Art/Character Art/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 150
+  },
+  {
+   "name": "OK KO/Character Art/Character Art/ENID_01_RGB.ai",
+   "method": 8,
+   "crc32": "4843a44f",
+   "comp_size": 387724,
+   "uncomp_size": 444118,
+   "local_header_offset": 246
+  },
+  {
+   "name": "OK KO/Character Art/Character Art/ENID_02_RGB.ai",
+   "method": 8,
+   "crc32": "91350e6f",
+   "comp_size": 379131,
+   "uncomp_size": 434241,
+   "local_header_offset": 388096
+  },
+  {
+   "name": "OK KO/Character Art/Character Art/ENID_03_RGB.ai",
+   "method": 8,
+   "crc32": "0b2dddf3",
+   "comp_size": 364866,
+   "uncomp_size": 422361,
+   "local_header_offset": 767353
+  },
+  {
+   "name": "OK KO/Character Art/Character Art/KO_01_RGB.ai",
+   "method": 8,
+   "crc32": "c006bb78",
+   "comp_size": 394756,
+   "uncomp_size": 454468,
+   "local_header_offset": 1132345
+  },
+  {
+   "name": "OK KO/Character Art/Character Art/KO_02_RGB.ai",
+   "method": 8,
+   "crc32": "6389e746",
+   "comp_size": 381837,
+   "uncomp_size": 438477,
+   "local_header_offset": 1527225
+  },
+  {
+   "name": "OK KO/Character Art/Character Art/KO_03_RGB.ai",
+   "method": 8,
+   "crc32": "3b01774f",
+   "comp_size": 393579,
+   "uncomp_size": 452186,
+   "local_header_offset": 1909186
+  },
+  {
+   "name": "OK KO/Character Art/Character Art/OK_Character_RGB.ai",
+   "method": 8,
+   "crc32": "8caeedc3",
+   "comp_size": 6690413,
+   "uncomp_size": 6783884,
+   "local_header_offset": 2302889
+  },
+  {
+   "name": "OK KO/Character Art/Character Art/RAD_01_RGB.ai",
+   "method": 8,
+   "crc32": "f27da2f6",
+   "comp_size": 417161,
+   "uncomp_size": 477448,
+   "local_header_offset": 8993433
+  },
+  {
+   "name": "OK KO/Character Art/Character Art/RAD_02_RGB.ai",
+   "method": 8,
+   "crc32": "012c4389",
+   "comp_size": 435009,
+   "uncomp_size": 493581,
+   "local_header_offset": 9410719
+  },
+  {
+   "name": "OK KO/Character Art/Character Art/RAD_03_RGB.ai",
+   "method": 8,
+   "crc32": "7e1deac9",
+   "comp_size": 397164,
+   "uncomp_size": 454976,
+   "local_header_offset": 9845853
+  },
+  {
+   "name": "OK KO/Character Art/Character Turns/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 10243142
+  },
+  {
+   "name": "OK KO/Character Art/Character Turns/Enid_Turns_RGB.ai",
+   "method": 8,
+   "crc32": "b89a4ec6",
+   "comp_size": 1308328,
+   "uncomp_size": 1364899,
+   "local_header_offset": 10243240
+  },
+  {
+   "name": "OK KO/Character Art/Character Turns/KO_Turns_RGB.ai",
+   "method": 8,
+   "crc32": "598b1224",
+   "comp_size": 855372,
+   "uncomp_size": 903325,
+   "local_header_offset": 11551699
+  },
+  {
+   "name": "OK KO/Character Art/Character Turns/Rad_Turns_RGB.ai",
+   "method": 8,
+   "crc32": "4324d6b3",
+   "comp_size": 1778633,
+   "uncomp_size": 1839892,
+   "local_header_offset": 12407200
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 14185963
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S004_650_v02.psd",
+   "method": 8,
+   "crc32": "fbbf4a19",
+   "comp_size": 3522395,
+   "uncomp_size": 15371811,
+   "local_header_offset": 14186047
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S010_629_v06.psd",
+   "method": 8,
+   "crc32": "c2654f2b",
+   "comp_size": 29313582,
+   "uncomp_size": 64733144,
+   "local_header_offset": 17708562
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S018_657_v02.psd",
+   "method": 8,
+   "crc32": "6f032576",
+   "comp_size": 40754501,
+   "uncomp_size": 119267141,
+   "local_header_offset": 47022264
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S018_674_v09.psd",
+   "method": 8,
+   "crc32": "a0776f28",
+   "comp_size": 64151090,
+   "uncomp_size": 169709050,
+   "local_header_offset": 87776885
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S019_677_v02.psd",
+   "method": 8,
+   "crc32": "c285ab7c",
+   "comp_size": 52968743,
+   "uncomp_size": 120803999,
+   "local_header_offset": 151928095
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S026_685_v03.psd",
+   "method": 8,
+   "crc32": "a49b0b24",
+   "comp_size": 23693803,
+   "uncomp_size": 48516227,
+   "local_header_offset": 204896958
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S027_686_v02.psd",
+   "method": 8,
+   "crc32": "fb3573fc",
+   "comp_size": 24486778,
+   "uncomp_size": 51028431,
+   "local_header_offset": 228590881
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S039_710_v02.psd",
+   "method": 8,
+   "crc32": "b60ab35a",
+   "comp_size": 74500507,
+   "uncomp_size": 143052452,
+   "local_header_offset": 253077779
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S054_632_v10.psd",
+   "method": 8,
+   "crc32": "23909fe1",
+   "comp_size": 57722152,
+   "uncomp_size": 138514594,
+   "local_header_offset": 327578406
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S058_633_v07.psd",
+   "method": 8,
+   "crc32": "fdcabe7b",
+   "comp_size": 100794762,
+   "uncomp_size": 246416060,
+   "local_header_offset": 385300678
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S059_774_v02.psd",
+   "method": 8,
+   "crc32": "271c54ff",
+   "comp_size": 218521111,
+   "uncomp_size": 520119932,
+   "local_header_offset": 486095560
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S061_776_v07.psd",
+   "method": 8,
+   "crc32": "09c5b356",
+   "comp_size": 41013409,
+   "uncomp_size": 65155005,
+   "local_header_offset": 704616791
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S070_794_v02.psd",
+   "method": 8,
+   "crc32": "4be2dc0d",
+   "comp_size": 31537581,
+   "uncomp_size": 93830238,
+   "local_header_offset": 745630320
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S081_813_v06.psd",
+   "method": 8,
+   "crc32": "54ad4e55",
+   "comp_size": 105335164,
+   "uncomp_size": 174795890,
+   "local_header_offset": 777168021
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S089_815_v03.psd",
+   "method": 8,
+   "crc32": "a19e16d2",
+   "comp_size": 74532326,
+   "uncomp_size": 145445841,
+   "local_header_offset": 882503305
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S091_816_v02.psd",
+   "method": 8,
+   "crc32": "626d2f42",
+   "comp_size": 89926719,
+   "uncomp_size": 171918157,
+   "local_header_offset": 957035751
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S093_819_v02.psd",
+   "method": 8,
+   "crc32": "aa166bd2",
+   "comp_size": 114699906,
+   "uncomp_size": 246784514,
+   "local_header_offset": 1046962590
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S094_821_v02.psd",
+   "method": 8,
+   "crc32": "98cbb2eb",
+   "comp_size": 103953832,
+   "uncomp_size": 205362372,
+   "local_header_offset": 1161662616
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S096_823_v02.psd",
+   "method": 8,
+   "crc32": "de26296d",
+   "comp_size": 35504704,
+   "uncomp_size": 73434374,
+   "local_header_offset": 1265616568
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S101_834_v03.psd",
+   "method": 8,
+   "crc32": "c7ee4acb",
+   "comp_size": 19668034,
+   "uncomp_size": 56376992,
+   "local_header_offset": 1301121392
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S101_839_v01.psd",
+   "method": 8,
+   "crc32": "8362bc61",
+   "comp_size": 74014641,
+   "uncomp_size": 145423168,
+   "local_header_offset": 1320789546
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S102_840_v02.psd",
+   "method": 8,
+   "crc32": "355bc141",
+   "comp_size": 11740352,
+   "uncomp_size": 30269807,
+   "local_header_offset": 1394804307
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S103_842_v04.psd",
+   "method": 8,
+   "crc32": "83ee75c2",
+   "comp_size": 16222804,
+   "uncomp_size": 35518876,
+   "local_header_offset": 1406544779
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S104_844_v03.psd",
+   "method": 8,
+   "crc32": "c9192d83",
+   "comp_size": 16796735,
+   "uncomp_size": 39055663,
+   "local_header_offset": 1422767703
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S146_886_v05.psd",
+   "method": 8,
+   "crc32": "e2ccc87c",
+   "comp_size": 23063891,
+   "uncomp_size": 41777375,
+   "local_header_offset": 1439564558
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S156_888_v06.psd",
+   "method": 8,
+   "crc32": "c7984692",
+   "comp_size": 35155407,
+   "uncomp_size": 76998166,
+   "local_header_offset": 1462628569
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B005S165_900_v02.psd",
+   "method": 8,
+   "crc32": "43d9dbfb",
+   "comp_size": 91128513,
+   "uncomp_size": 203608524,
+   "local_header_offset": 1497784096
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B006S018_945_v03.psd",
+   "method": 8,
+   "crc32": "5d226263",
+   "comp_size": 36124826,
+   "uncomp_size": 84795257,
+   "local_header_offset": 1588912729
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B006S018_947_v03.psd",
+   "method": 8,
+   "crc32": "b6dd4612",
+   "comp_size": 7612757,
+   "uncomp_size": 24453612,
+   "local_header_offset": 1625037675
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B006S026_968_v02.psd",
+   "method": 8,
+   "crc32": "34a8eb05",
+   "comp_size": 37388841,
+   "uncomp_size": 85059932,
+   "local_header_offset": 1632650552
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B006S110_082_v04.psd",
+   "method": 8,
+   "crc32": "42c10313",
+   "comp_size": 68778617,
+   "uncomp_size": 152278198,
+   "local_header_offset": 1670039513
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/B006S116_089_v02.psd",
+   "method": 8,
+   "crc32": "24a08a86",
+   "comp_size": 74321149,
+   "uncomp_size": 145794111,
+   "local_header_offset": 1738818250
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/Boxmore_ExtWide_Day_v05.psd",
+   "method": 8,
+   "crc32": "ddda178f",
+   "comp_size": 72452356,
+   "uncomp_size": 245525299,
+   "local_header_offset": 1813139519
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/EXT_Front_Upshot.psd",
+   "method": 8,
+   "crc32": "1decf61e",
+   "comp_size": 13890606,
+   "uncomp_size": 34496879,
+   "local_header_offset": 1885592002
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/INT_BoxmanOffice_FacingWindow_v01.psd",
+   "method": 8,
+   "crc32": "74cb384e",
+   "comp_size": 86455674,
+   "uncomp_size": 180274893,
+   "local_header_offset": 1899482728
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 1985938539
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S004_650_v02.jpg",
+   "method": 8,
+   "crc32": "355307ff",
+   "comp_size": 201616,
+   "uncomp_size": 1005885,
+   "local_header_offset": 1985938670
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S010_629_v06.jpg",
+   "method": 8,
+   "crc32": "af0a5677",
+   "comp_size": 1555493,
+   "uncomp_size": 1824811,
+   "local_header_offset": 1986140453
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S018_657_v02.jpg",
+   "method": 8,
+   "crc32": "b8731722",
+   "comp_size": 4538312,
+   "uncomp_size": 5122805,
+   "local_header_offset": 1987696113
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S018_674_v09.jpg",
+   "method": 8,
+   "crc32": "638af347",
+   "comp_size": 2371904,
+   "uncomp_size": 2640397,
+   "local_header_offset": 1992234592
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S019_677_v02.jpg",
+   "method": 8,
+   "crc32": "e5609b45",
+   "comp_size": 4237435,
+   "uncomp_size": 5176723,
+   "local_header_offset": 1994606663
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S026_685_v03.jpg",
+   "method": 8,
+   "crc32": "0c082e7f",
+   "comp_size": 1614882,
+   "uncomp_size": 1874179,
+   "local_header_offset": 1998844265
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S027_686_v02.jpg",
+   "method": 8,
+   "crc32": "50e5b600",
+   "comp_size": 465087,
+   "uncomp_size": 946651,
+   "local_header_offset": 2000459314
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S039_710_v02.jpg",
+   "method": 8,
+   "crc32": "ff350b30",
+   "comp_size": 3632430,
+   "uncomp_size": 4453476,
+   "local_header_offset": 2000924568
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S054_632_v10.jpg",
+   "method": 8,
+   "crc32": "6c057a8c",
+   "comp_size": 3005431,
+   "uncomp_size": 3943161,
+   "local_header_offset": 2004557165
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S058_633_v07.jpg",
+   "method": 8,
+   "crc32": "966764f9",
+   "comp_size": 2583417,
+   "uncomp_size": 6433253,
+   "local_header_offset": 2007562763
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S059_774_v02.jpg",
+   "method": 8,
+   "crc32": "e783d99a",
+   "comp_size": 10784968,
+   "uncomp_size": 12281857,
+   "local_header_offset": 2010146347
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S061_776_v07.jpg",
+   "method": 8,
+   "crc32": "690891b9",
+   "comp_size": 3325023,
+   "uncomp_size": 3641590,
+   "local_header_offset": 2020931482
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S070_794_v02.jpg",
+   "method": 8,
+   "crc32": "73d31bb2",
+   "comp_size": 5466219,
+   "uncomp_size": 6540442,
+   "local_header_offset": 2024256672
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S081_813_v06.jpg",
+   "method": 8,
+   "crc32": "e552c0ac",
+   "comp_size": 2572380,
+   "uncomp_size": 2877777,
+   "local_header_offset": 2029723058
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S089_815_v03.jpg",
+   "method": 8,
+   "crc32": "f160d8c0",
+   "comp_size": 1173364,
+   "uncomp_size": 1380973,
+   "local_header_offset": 2032295605
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S091_816_v02.jpg",
+   "method": 8,
+   "crc32": "2331e182",
+   "comp_size": 3991361,
+   "uncomp_size": 6247707,
+   "local_header_offset": 2033469136
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S093_819_v02.jpg",
+   "method": 8,
+   "crc32": "1ab50cfd",
+   "comp_size": 7164483,
+   "uncomp_size": 12080210,
+   "local_header_offset": 2037460664
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S094_821_v02.jpg",
+   "method": 8,
+   "crc32": "dd6bf9ba",
+   "comp_size": 6685456,
+   "uncomp_size": 11086421,
+   "local_header_offset": 2044625314
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S096_823_v02.jpg",
+   "method": 8,
+   "crc32": "c8b193ac",
+   "comp_size": 1565395,
+   "uncomp_size": 1738605,
+   "local_header_offset": 2051310937
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S101_834_v03.jpg",
+   "method": 8,
+   "crc32": "6b7559a5",
+   "comp_size": 419451,
+   "uncomp_size": 1726069,
+   "local_header_offset": 2052876499
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S101_839_v01.jpg",
+   "method": 8,
+   "crc32": "aa4ccb78",
+   "comp_size": 1198259,
+   "uncomp_size": 2033681,
+   "local_header_offset": 2053296117
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S102_840_v02.jpg",
+   "method": 8,
+   "crc32": "e7856858",
+   "comp_size": 537728,
+   "uncomp_size": 962236,
+   "local_header_offset": 2054494543
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S103_842_v04.jpg",
+   "method": 8,
+   "crc32": "16fd7a31",
+   "comp_size": 684661,
+   "uncomp_size": 1079163,
+   "local_header_offset": 2055032438
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S104_844_v03.jpg",
+   "method": 8,
+   "crc32": "49e1fdc5",
+   "comp_size": 699947,
+   "uncomp_size": 1106632,
+   "local_header_offset": 2055717266
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S146_886_v05.jpg",
+   "method": 8,
+   "crc32": "58b68d25",
+   "comp_size": 1097461,
+   "uncomp_size": 1465332,
+   "local_header_offset": 2056417380
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S156_888_v06.jpg",
+   "method": 8,
+   "crc32": "a3f5af9f",
+   "comp_size": 1478345,
+   "uncomp_size": 2222499,
+   "local_header_offset": 2057515008
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B005S165_900_v02.jpg",
+   "method": 8,
+   "crc32": "f5c762b5",
+   "comp_size": 3870111,
+   "uncomp_size": 5593231,
+   "local_header_offset": 2058993520
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B006S018_945_v03.jpg",
+   "method": 8,
+   "crc32": "4b934d01",
+   "comp_size": 2326851,
+   "uncomp_size": 3737472,
+   "local_header_offset": 2062863798
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B006S018_947_v03.jpg",
+   "method": 8,
+   "crc32": "34da0c06",
+   "comp_size": 994734,
+   "uncomp_size": 1419790,
+   "local_header_offset": 2065190816
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B006S026_968_v02.jpg",
+   "method": 8,
+   "crc32": "6d3bcaf6",
+   "comp_size": 2314926,
+   "uncomp_size": 2969219,
+   "local_header_offset": 2066185717
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B006S110_082_v04.jpg",
+   "method": 8,
+   "crc32": "ffe2b2b1",
+   "comp_size": 5117836,
+   "uncomp_size": 6294331,
+   "local_header_offset": 2068500810
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/B006S116_089_v02.jpg",
+   "method": 8,
+   "crc32": "3c606192",
+   "comp_size": 3494627,
+   "uncomp_size": 5873690,
+   "local_header_offset": 2073618813
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/Boxmore_ExtWide_Day_v05.jpg",
+   "method": 8,
+   "crc32": "af735d6a",
+   "comp_size": 5535503,
+   "uncomp_size": 5837394,
+   "local_header_offset": 2077113607
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/EXT_Front_Upshot.jpg",
+   "method": 8,
+   "crc32": "7a8240c6",
+   "comp_size": 736276,
+   "uncomp_size": 1124224,
+   "local_header_offset": 2082649284
+  },
+  {
+   "name": "OK KO/CNS Backgrounds/\uf021LOW RES BACKGROUNDS\uf021 (FOR REFERENCE ONLY)/INT_BoxmanOffice_FacingWindow_v01.jpg",
+   "method": 8,
+   "crc32": "84c9cfad",
+   "comp_size": 1900919,
+   "uncomp_size": 2542746,
+   "local_header_offset": 2083385727
+  },
+  {
+   "name": "OK KO/CNS Characters/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2085286830
+  },
+  {
+   "name": "OK KO/CNS Characters/B005S001_635_v05.psd",
+   "method": 8,
+   "crc32": "5bcf990c",
+   "comp_size": 37820192,
+   "uncomp_size": 76375786,
+   "local_header_offset": 2085286913
+  },
+  {
+   "name": "OK KO/CNS Characters/CAROL/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2123107224
+  },
+  {
+   "name": "OK KO/CNS Characters/CAROL/C005S001_636_v02.jpg",
+   "method": 8,
+   "crc32": "21022a00",
+   "comp_size": 1492904,
+   "uncomp_size": 2149984,
+   "local_header_offset": 2123107313
+  },
+  {
+   "name": "OK KO/CNS Characters/CAROL/C005S001_636_v02.psd",
+   "method": 8,
+   "crc32": "b681edf5",
+   "comp_size": 729820,
+   "uncomp_size": 2722165,
+   "local_header_offset": 2124600342
+  },
+  {
+   "name": "OK KO/CNS Characters/ENID/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2125330287
+  },
+  {
+   "name": "OK KO/CNS Characters/ENID/C005S032_701_v01.jpg",
+   "method": 8,
+   "crc32": "5c125ae9",
+   "comp_size": 1303091,
+   "uncomp_size": 1958182,
+   "local_header_offset": 2125330375
+  },
+  {
+   "name": "OK KO/CNS Characters/ENID/C005S032_701_v01.psd",
+   "method": 8,
+   "crc32": "8c30153b",
+   "comp_size": 793407,
+   "uncomp_size": 2914320,
+   "local_header_offset": 2126633590
+  },
+  {
+   "name": "OK KO/CNS Characters/ENID/ENID_POSE_v08.jpg",
+   "method": 8,
+   "crc32": "831bd719",
+   "comp_size": 2012949,
+   "uncomp_size": 2645323,
+   "local_header_offset": 2127427121
+  },
+  {
+   "name": "OK KO/CNS Characters/ENID/ENID_POSE_v08.psd",
+   "method": 8,
+   "crc32": "53eb4f36",
+   "comp_size": 13323107,
+   "uncomp_size": 19685860,
+   "local_header_offset": 2129440191
+  },
+  {
+   "name": "OK KO/CNS Characters/GAR/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2142763419
+  },
+  {
+   "name": "OK KO/CNS Characters/GAR/C005S029_696_v01.jpg",
+   "method": 8,
+   "crc32": "5160cc7f",
+   "comp_size": 1875698,
+   "uncomp_size": 2513410,
+   "local_header_offset": 2142763506
+  },
+  {
+   "name": "OK KO/CNS Characters/GAR/C005S029_696_v01.psd",
+   "method": 8,
+   "crc32": "78c56dba",
+   "comp_size": 943020,
+   "uncomp_size": 3319982,
+   "local_header_offset": 2144639327
+  },
+  {
+   "name": "OK KO/CNS Characters/KO/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2145582470
+  },
+  {
+   "name": "OK KO/CNS Characters/KO/C005S045_717_v01.psd",
+   "method": 8,
+   "crc32": "fd239bae",
+   "comp_size": 498521,
+   "uncomp_size": 2118382,
+   "local_header_offset": 2145582556
+  },
+  {
+   "name": "OK KO/CNS Characters/KO/C005S055_756_v02.psd",
+   "method": 8,
+   "crc32": "ab897ed5",
+   "comp_size": 481373,
+   "uncomp_size": 3112874,
+   "local_header_offset": 2146081199
+  },
+  {
+   "name": "OK KO/CNS Characters/KO/C005S063_782_v01.psd",
+   "method": 8,
+   "crc32": "5078c6fa",
+   "comp_size": 828612,
+   "uncomp_size": 3081817,
+   "local_header_offset": 2146562694
+  },
+  {
+   "name": "OK KO/CNS Characters/KO/C005S097_824_v07.psd",
+   "method": 8,
+   "crc32": "73dcf788",
+   "comp_size": 19157991,
+   "uncomp_size": 30803327,
+   "local_header_offset": 2147391428
+  },
+  {
+   "name": "OK KO/CNS Characters/KO/KO_POSE_v01.jpg",
+   "method": 8,
+   "crc32": "bd51a0ac",
+   "comp_size": 2003912,
+   "uncomp_size": 2636130,
+   "local_header_offset": 2166549541
+  },
+  {
+   "name": "OK KO/CNS Characters/KO/KO_POSE_v01.psd",
+   "method": 8,
+   "crc32": "f378725a",
+   "comp_size": 1201520,
+   "uncomp_size": 4549281,
+   "local_header_offset": 2168553570
+  },
+  {
+   "name": "OK KO/CNS Characters/KO/KO_TURN_v01.jpg",
+   "method": 8,
+   "crc32": "94371d85",
+   "comp_size": 1661148,
+   "uncomp_size": 2297467,
+   "local_header_offset": 2169755207
+  },
+  {
+   "name": "OK KO/CNS Characters/KO/KO_TURN_v01.psd",
+   "method": 8,
+   "crc32": "05810a2e",
+   "comp_size": 987771,
+   "uncomp_size": 3972185,
+   "local_header_offset": 2171416472
+  },
+  {
+   "name": "OK KO/CNS Characters/models/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2172404360
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Heroes_Group_Shot.psd",
+   "method": 8,
+   "crc32": "318bc9d6",
+   "comp_size": 5057982,
+   "uncomp_size": 8280298,
+   "local_header_offset": 2172404450
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2177462588
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/A Real Magic Skeleton_v03.psd",
+   "method": 8,
+   "crc32": "79e36122",
+   "comp_size": 624623,
+   "uncomp_size": 3412533,
+   "local_header_offset": 2177462728
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Baby Teeth NW.psd",
+   "method": 8,
+   "crc32": "9fbd4697",
+   "comp_size": 4881031,
+   "uncomp_size": 10738517,
+   "local_header_offset": 2178087536
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Beardo_v02.psd",
+   "method": 8,
+   "crc32": "17b57635",
+   "comp_size": 601910,
+   "uncomp_size": 2903120,
+   "local_header_offset": 2182968740
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Bell Beefer JS.psd",
+   "method": 8,
+   "crc32": "fc00bb76",
+   "comp_size": 2484522,
+   "uncomp_size": 17109938,
+   "local_header_offset": 2183570820
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Big Bull Demon JS_JP.psd",
+   "method": 8,
+   "crc32": "1bc0171a",
+   "comp_size": 2747341,
+   "uncomp_size": 15700397,
+   "local_header_offset": 2186055516
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Bill Burp BW.psd",
+   "method": 8,
+   "crc32": "766617c1",
+   "comp_size": 1023417,
+   "uncomp_size": 5421881,
+   "local_header_offset": 2188803037
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Billiam Milliam NW.psd",
+   "method": 8,
+   "crc32": "d9aa7cb8",
+   "comp_size": 5034595,
+   "uncomp_size": 11664054,
+   "local_header_offset": 2189826626
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Bomberfan BW_JP.psd",
+   "method": 8,
+   "crc32": "d10eaeac",
+   "comp_size": 768138,
+   "uncomp_size": 4257844,
+   "local_header_offset": 2194861399
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Brandon IJQ.psd",
+   "method": 8,
+   "crc32": "ed42c280",
+   "comp_size": 547728,
+   "uncomp_size": 2826912,
+   "local_header_offset": 2195629712
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Calopo_v03.psd",
+   "method": 8,
+   "crc32": "d4ee0c31",
+   "comp_size": 2286673,
+   "uncomp_size": 12758092,
+   "local_header_offset": 2196177611
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Chip_DamageA_v02.psd",
+   "method": 8,
+   "crc32": "8d1304cc",
+   "comp_size": 3035726,
+   "uncomp_size": 17737044,
+   "local_header_offset": 2198464454
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Co-Bruh BW.psd",
+   "method": 8,
+   "crc32": "d81bd06d",
+   "comp_size": 1243842,
+   "uncomp_size": 6444832,
+   "local_header_offset": 2201500356
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Colewort JS.psd",
+   "method": 8,
+   "crc32": "0b503343",
+   "comp_size": 4645444,
+   "uncomp_size": 12446875,
+   "local_header_offset": 2202744368
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Combo Breaker NW.psd",
+   "method": 8,
+   "crc32": "910661b8",
+   "comp_size": 1760611,
+   "uncomp_size": 8915205,
+   "local_header_offset": 2207389983
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Cookie Man JS.psd",
+   "method": 8,
+   "crc32": "7c757381",
+   "comp_size": 2367294,
+   "uncomp_size": 13977304,
+   "local_header_offset": 2209150770
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Crinkly Wrinkly JS.psd",
+   "method": 8,
+   "crc32": "9afe4c86",
+   "comp_size": 4541987,
+   "uncomp_size": 10469141,
+   "local_header_offset": 2211518237
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Diving Belle JS.psd",
+   "method": 8,
+   "crc32": "1f3223df",
+   "comp_size": 2594998,
+   "uncomp_size": 13851675,
+   "local_header_offset": 2216060402
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Dogmun NW.psd",
+   "method": 8,
+   "crc32": "81041898",
+   "comp_size": 1265842,
+   "uncomp_size": 6118482,
+   "local_header_offset": 2218655575
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Dolph Finn BW.psd",
+   "method": 8,
+   "crc32": "1b87b581",
+   "comp_size": 1218029,
+   "uncomp_size": 5253053,
+   "local_header_offset": 2219921586
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Drupe JS.psd",
+   "method": 8,
+   "crc32": "68625fc4",
+   "comp_size": 1929198,
+   "uncomp_size": 13126702,
+   "local_header_offset": 2221139788
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Dynamite_Watkins_v03.psd",
+   "method": 8,
+   "crc32": "4c54de7b",
+   "comp_size": 677300,
+   "uncomp_size": 2750696,
+   "local_header_offset": 2223069154
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Elodie BW_JP.psd",
+   "method": 8,
+   "crc32": "73c7cfce",
+   "comp_size": 4506679,
+   "uncomp_size": 9203771,
+   "local_header_offset": 2223746634
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Fish Dude NW.psd",
+   "method": 8,
+   "crc32": "1a32bfe5",
+   "comp_size": 1283729,
+   "uncomp_size": 6091547,
+   "local_header_offset": 2228253485
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Flurry BW.psd",
+   "method": 8,
+   "crc32": "da6ed234",
+   "comp_size": 1331432,
+   "uncomp_size": 6305262,
+   "local_header_offset": 2229537386
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Gertie IJQ_JP.psd",
+   "method": 8,
+   "crc32": "f19e3a87",
+   "comp_size": 494648,
+   "uncomp_size": 2872673,
+   "local_header_offset": 2230868987
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Ginger JS.psd",
+   "method": 8,
+   "crc32": "d4b61cc6",
+   "comp_size": 3135040,
+   "uncomp_size": 12366344,
+   "local_header_offset": 2231363808
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Gladys IJQ_JP.psd",
+   "method": 8,
+   "crc32": "0d34fd9c",
+   "comp_size": 411578,
+   "uncomp_size": 2681119,
+   "local_header_offset": 2234499017
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Gregg BW.psd",
+   "method": 8,
+   "crc32": "2c738680",
+   "comp_size": 1446683,
+   "uncomp_size": 8122074,
+   "local_header_offset": 2234910768
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Holo-Jane JS.psd",
+   "method": 8,
+   "crc32": "715c8ec5",
+   "comp_size": 5072020,
+   "uncomp_size": 11916410,
+   "local_header_offset": 2236357619
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Joe Cuppa NW_JP.psd",
+   "method": 8,
+   "crc32": "0f069c4f",
+   "comp_size": 1913131,
+   "uncomp_size": 10039217,
+   "local_header_offset": 2241429811
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Joff IJQ_JP.psd",
+   "method": 8,
+   "crc32": "06501e61",
+   "comp_size": 453938,
+   "uncomp_size": 2791621,
+   "local_header_offset": 2243343117
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Kid Aphid JS.psd",
+   "method": 8,
+   "crc32": "839250ba",
+   "comp_size": 1692636,
+   "uncomp_size": 11397645,
+   "local_header_offset": 2243797226
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Lion Cat JS.psd",
+   "method": 8,
+   "crc32": "8ce611c6",
+   "comp_size": 1596403,
+   "uncomp_size": 9967542,
+   "local_header_offset": 2245490034
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Mad Sam IJQ.psd",
+   "method": 8,
+   "crc32": "0a507fce",
+   "comp_size": 604257,
+   "uncomp_size": 2998347,
+   "local_header_offset": 2247086608
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Mega Football Baby IJQ.psd",
+   "method": 8,
+   "crc32": "1a94e357",
+   "comp_size": 427333,
+   "uncomp_size": 2714895,
+   "local_header_offset": 2247691036
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Miss Mummy NW.psd",
+   "method": 8,
+   "crc32": "c6e2ff43",
+   "comp_size": 2049028,
+   "uncomp_size": 6944479,
+   "local_header_offset": 2248118551
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Miss Pastel NW.psd",
+   "method": 8,
+   "crc32": "371d4086",
+   "comp_size": 4940075,
+   "uncomp_size": 10757610,
+   "local_header_offset": 2250167752
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Miss Quantum_JP.psd",
+   "method": 8,
+   "crc32": "f6a4a0bd",
+   "comp_size": 3730563,
+   "uncomp_size": 9252862,
+   "local_header_offset": 2255108001
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Mr Allen Work JS_JP.psd",
+   "method": 8,
+   "crc32": "05c8efde",
+   "comp_size": 4629677,
+   "uncomp_size": 9874552,
+   "local_header_offset": 2258838739
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Mr Logic IJQ.psd",
+   "method": 8,
+   "crc32": "74125a1a",
+   "comp_size": 473317,
+   "uncomp_size": 2830786,
+   "local_header_offset": 2263468595
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Neil BW_v2.psd",
+   "method": 8,
+   "crc32": "230afe0e",
+   "comp_size": 1364757,
+   "uncomp_size": 6367349,
+   "local_header_offset": 2263942084
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Nick Army IJQ.psd",
+   "method": 8,
+   "crc32": "82f559ff",
+   "comp_size": 656174,
+   "uncomp_size": 3137091,
+   "local_header_offset": 2265307011
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Old Man Jenkins BW.psd",
+   "method": 8,
+   "crc32": "234ee46f",
+   "comp_size": 1234556,
+   "uncomp_size": 6108338,
+   "local_header_offset": 2265963358
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Potato BW.psd",
+   "method": 8,
+   "crc32": "fcef95db",
+   "comp_size": 3878975,
+   "uncomp_size": 8453898,
+   "local_header_offset": 2267198092
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Red Action IJQ.psd",
+   "method": 8,
+   "crc32": "f3c3da3a",
+   "comp_size": 624324,
+   "uncomp_size": 3052052,
+   "local_header_offset": 2271077236
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Rex Th Bunny BW.psd",
+   "method": 8,
+   "crc32": "85a0d029",
+   "comp_size": 2308044,
+   "uncomp_size": 6805709,
+   "local_header_offset": 2271701734
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Shy Ninja BW_JP.psd",
+   "method": 8,
+   "crc32": "05fe2377",
+   "comp_size": 1714254,
+   "uncomp_size": 8087174,
+   "local_header_offset": 2274009953
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Skateboard Nerd JS.psd",
+   "method": 8,
+   "crc32": "f21b598f",
+   "comp_size": 4846091,
+   "uncomp_size": 11033944,
+   "local_header_offset": 2275724382
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Small One BW.psd",
+   "method": 8,
+   "crc32": "92cc7a7c",
+   "comp_size": 1000252,
+   "uncomp_size": 5487830,
+   "local_header_offset": 2280570651
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Sparko IJQ.psd",
+   "method": 8,
+   "crc32": "df056836",
+   "comp_size": 483565,
+   "uncomp_size": 2777697,
+   "local_header_offset": 2281571075
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Teamster JS_JP.psd",
+   "method": 8,
+   "crc32": "fd7e8640",
+   "comp_size": 1689132,
+   "uncomp_size": 8449596,
+   "local_header_offset": 2282054810
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Ted Viking IJQ.psd",
+   "method": 8,
+   "crc32": "cbce053b",
+   "comp_size": 794535,
+   "uncomp_size": 3351960,
+   "local_header_offset": 2283744116
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Tiny Dino 1 IJQ.psd",
+   "method": 8,
+   "crc32": "8a41b6b3",
+   "comp_size": 325653,
+   "uncomp_size": 2566556,
+   "local_header_offset": 2284538825
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Tiny Dino 3 IJQ.psd",
+   "method": 8,
+   "crc32": "5af0cb4b",
+   "comp_size": 311202,
+   "uncomp_size": 2514314,
+   "local_header_offset": 2284864653
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Tiny_Dino2_v02.psd",
+   "method": 8,
+   "crc32": "c947812d",
+   "comp_size": 4209803,
+   "uncomp_size": 9743260,
+   "local_header_offset": 2285176030
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Tiny_Dino4_v02.psd",
+   "method": 8,
+   "crc32": "34a8fc97",
+   "comp_size": 7811097,
+   "uncomp_size": 16638734,
+   "local_header_offset": 2289386007
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Tiny_Dino5_v01.psd",
+   "method": 8,
+   "crc32": "7fa4887a",
+   "comp_size": 11242236,
+   "uncomp_size": 20381641,
+   "local_header_offset": 2297197278
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Topher BW.psd",
+   "method": 8,
+   "crc32": "2ae43f1c",
+   "comp_size": 1210509,
+   "uncomp_size": 5940960,
+   "local_header_offset": 2308439688
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/URL NW.psd",
+   "method": 8,
+   "crc32": "de94197b",
+   "comp_size": 5039098,
+   "uncomp_size": 11904750,
+   "local_header_offset": 2309650366
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Secondary_Characters/Vormulax NW.psd",
+   "method": 8,
+   "crc32": "51c6e6d5",
+   "comp_size": 1281042,
+   "uncomp_size": 5722943,
+   "local_header_offset": 2314689630
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Models_Villains_Group_Shot.psd",
+   "method": 8,
+   "crc32": "ca1f2775",
+   "comp_size": 4145538,
+   "uncomp_size": 7351307,
+   "local_header_offset": 2315970843
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Boxman/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2320116539
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Boxman/BOXMAN_TURN_A.pdf",
+   "method": 8,
+   "crc32": "1e9f314c",
+   "comp_size": 779727,
+   "uncomp_size": 835940,
+   "local_header_offset": 2320116664
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Boxman/BOXMAN_TURN_A_v02.psd",
+   "method": 8,
+   "crc32": "477b7f6b",
+   "comp_size": 692733,
+   "uncomp_size": 2623774,
+   "local_header_offset": 2320896549
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Boxman/BOXMAN_TURN_B.pdf",
+   "method": 8,
+   "crc32": "5dc8d613",
+   "comp_size": 935474,
+   "uncomp_size": 1001166,
+   "local_header_offset": 2321589444
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Boxman/BOXMAN_TURN_B_v02.psd",
+   "method": 8,
+   "crc32": "688832b5",
+   "comp_size": 813839,
+   "uncomp_size": 2885498,
+   "local_header_offset": 2322525076
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Carol/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2323339077
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Carol/CAROL_TURN.pdf",
+   "method": 8,
+   "crc32": "144be8f6",
+   "comp_size": 660279,
+   "uncomp_size": 705926,
+   "local_header_offset": 2323339201
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Carol/CAROL_TURN_v03.psd",
+   "method": 8,
+   "crc32": "107cd66d",
+   "comp_size": 862683,
+   "uncomp_size": 3764534,
+   "local_header_offset": 2323999634
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Darrell/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2324862475
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Darrell/DARRELL.pdf",
+   "method": 8,
+   "crc32": "bcc9be32",
+   "comp_size": 337705,
+   "uncomp_size": 355639,
+   "local_header_offset": 2324862601
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Darrell/DARRELL_v01.psd",
+   "method": 8,
+   "crc32": "432006e0",
+   "comp_size": 494060,
+   "uncomp_size": 2310930,
+   "local_header_offset": 2325200459
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Enid/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2325694676
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Enid/ENID_POSE.pdf",
+   "method": 8,
+   "crc32": "b0b6cd18",
+   "comp_size": 1783624,
+   "uncomp_size": 1883990,
+   "local_header_offset": 2325694799
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Enid/ENID_POSE_v08.psd",
+   "method": 8,
+   "crc32": "53eb4f36",
+   "comp_size": 13323107,
+   "uncomp_size": 19685860,
+   "local_header_offset": 2327478575
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Enid/ENID_TURN.pdf",
+   "method": 8,
+   "crc32": "e2178374",
+   "comp_size": 903163,
+   "uncomp_size": 968176,
+   "local_header_offset": 2340801838
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Enid/ENID_TURN_v08.psd",
+   "method": 8,
+   "crc32": "207f02ee",
+   "comp_size": 848254,
+   "uncomp_size": 3684905,
+   "local_header_offset": 2341705153
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Ernesto/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2342553563
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Ernesto/ERNESTO.pdf",
+   "method": 8,
+   "crc32": "01f65141",
+   "comp_size": 429308,
+   "uncomp_size": 460003,
+   "local_header_offset": 2342553689
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Ernesto/ERNESTO_v01.psd",
+   "method": 8,
+   "crc32": "4e7a14dc",
+   "comp_size": 683130,
+   "uncomp_size": 2789216,
+   "local_header_offset": 2342983150
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Gar/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2343666437
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Gar/GAR_POSE.pdf",
+   "method": 8,
+   "crc32": "136b158c",
+   "comp_size": 1339917,
+   "uncomp_size": 1424580,
+   "local_header_offset": 2343666559
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Gar/GAR_POSE_v01.psd",
+   "method": 8,
+   "crc32": "f8d105af",
+   "comp_size": 899511,
+   "uncomp_size": 3592523,
+   "local_header_offset": 2345006626
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Jethro/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2345906291
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Jethro/JETHRO.pdf",
+   "method": 8,
+   "crc32": "c1afa844",
+   "comp_size": 926480,
+   "uncomp_size": 1002754,
+   "local_header_offset": 2345906416
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Jethro/JETHRO_v01.psd",
+   "method": 8,
+   "crc32": "5b551609",
+   "comp_size": 16888665,
+   "uncomp_size": 28440516,
+   "local_header_offset": 2346833047
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_KO/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2363721867
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_KO/KO_POSE.pdf",
+   "method": 8,
+   "crc32": "86d7dbf6",
+   "comp_size": 2885241,
+   "uncomp_size": 3098080,
+   "local_header_offset": 2363721988
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_KO/KO_POSE_v01.psd",
+   "method": 8,
+   "crc32": "f378725a",
+   "comp_size": 1201520,
+   "uncomp_size": 4549281,
+   "local_header_offset": 2366607377
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_KO/KO_TURN.pdf",
+   "method": 8,
+   "crc32": "0f2dc037",
+   "comp_size": 921851,
+   "uncomp_size": 967324,
+   "local_header_offset": 2367809049
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_KO/KO_TURN_v01.psd",
+   "method": 8,
+   "crc32": "05810a2e",
+   "comp_size": 987771,
+   "uncomp_size": 3972185,
+   "local_header_offset": 2368731048
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Rad/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2369718971
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Rad/RAD_POSE.pdf",
+   "method": 8,
+   "crc32": "d5d68e63",
+   "comp_size": 1845648,
+   "uncomp_size": 1966270,
+   "local_header_offset": 2369719093
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Rad/RAD_POSE_v01.psd",
+   "method": 8,
+   "crc32": "1d14fde8",
+   "comp_size": 856251,
+   "uncomp_size": 3167350,
+   "local_header_offset": 2371564891
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Rad/RAD_TURN.pdf",
+   "method": 8,
+   "crc32": "b11be22d",
+   "comp_size": 503341,
+   "uncomp_size": 532779,
+   "local_header_offset": 2372421296
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Rad/RAD_TURN_v01.psd",
+   "method": 8,
+   "crc32": "5e70c0e9",
+   "comp_size": 679559,
+   "uncomp_size": 3560780,
+   "local_header_offset": 2372924787
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Raymond/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2373604500
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Raymond/RAYMOND_v02.psd",
+   "method": 8,
+   "crc32": "21cd15af",
+   "comp_size": 853024,
+   "uncomp_size": 3340318,
+   "local_header_offset": 2373604626
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Shannon/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2374457807
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Character_Model_Shannon/SHANNON_v01.psd",
+   "method": 8,
+   "crc32": "b35864a6",
+   "comp_size": 468299,
+   "uncomp_size": 2159815,
+   "local_header_offset": 2374457933
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Prop_Models_Vehicles/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2374926389
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Prop_Models_Vehicles/OK_KO_Stock_Prop_Model_Sheet_Burrito_Beardo_Truck_V02.psd",
+   "method": 8,
+   "crc32": "b8456f9e",
+   "comp_size": 27620771,
+   "uncomp_size": 43306078,
+   "local_header_offset": 2374926512
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Prop_Models_Vehicles/OK_KO_Stock_Prop_Model_Sheet_Carol_Tank_v08.psd",
+   "method": 8,
+   "crc32": "cbffcb46",
+   "comp_size": 3726057,
+   "uncomp_size": 10146174,
+   "local_header_offset": 2402547479
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Prop_Models_Vehicles/OK_KO_Stock_Prop_Model_Sheet_Gar_Car_V03.psd",
+   "method": 8,
+   "crc32": "1232ee32",
+   "comp_size": 20496491,
+   "uncomp_size": 37231019,
+   "local_header_offset": 2406273722
+  },
+  {
+   "name": "OK KO/CNS Characters/models/OK_KO_Stock_Prop_Models_Vehicles/OK_KO_Stock_Prop_Model_Sheet_Rad_Van_v05.psd",
+   "method": 8,
+   "crc32": "5eb563b6",
+   "comp_size": 1881955,
+   "uncomp_size": 4549439,
+   "local_header_offset": 2426770396
+  },
+  {
+   "name": "OK KO/CNS Characters/OK_KO_Stock_Character_Models_Heroes_Group_Shot.psd",
+   "method": 8,
+   "crc32": "318bc9d6",
+   "comp_size": 5057982,
+   "uncomp_size": 8280298,
+   "local_header_offset": 2428652534
+  },
+  {
+   "name": "OK KO/CNS Characters/RAD/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2433710665
+  },
+  {
+   "name": "OK KO/CNS Characters/RAD/C005S032_702_v01.jpg",
+   "method": 8,
+   "crc32": "4e4b5417",
+   "comp_size": 1324520,
+   "uncomp_size": 1980318,
+   "local_header_offset": 2433710752
+  },
+  {
+   "name": "OK KO/CNS Characters/RAD/C005S032_702_v01.psd",
+   "method": 8,
+   "crc32": "5791c4ae",
+   "comp_size": 689618,
+   "uncomp_size": 2954612,
+   "local_header_offset": 2435035395
+  },
+  {
+   "name": "OK KO/CNS Characters/RAD/C005S066_792_v01.psd",
+   "method": 8,
+   "crc32": "f061b96a",
+   "comp_size": 484234,
+   "uncomp_size": 2106728,
+   "local_header_offset": 2435725136
+  },
+  {
+   "name": "OK KO/CNS Characters/RAD/RAD_POSE_v01.jpg",
+   "method": 8,
+   "crc32": "767467a0",
+   "comp_size": 1790373,
+   "uncomp_size": 2436687,
+   "local_header_offset": 2436209493
+  },
+  {
+   "name": "OK KO/CNS Characters/RAD/RAD_POSE_v01.psd",
+   "method": 8,
+   "crc32": "1d14fde8",
+   "comp_size": 856251,
+   "uncomp_size": 3167350,
+   "local_header_offset": 2437999985
+  },
+  {
+   "name": "OK KO/CNS Characters/vector/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2438856355
+  },
+  {
+   "name": "OK KO/CNS Characters/vector/OK_Characters_4C.ai",
+   "method": 8,
+   "crc32": "b48a4b07",
+   "comp_size": 6380643,
+   "uncomp_size": 6444754,
+   "local_header_offset": 2438856445
+  },
+  {
+   "name": "OK KO/CNS Characters/vector/OK_Characters_PMS_outlines_colors_v2.ai",
+   "method": 8,
+   "crc32": "db01fb8f",
+   "comp_size": 1129811,
+   "uncomp_size": 1185946,
+   "local_header_offset": 2445237213
+  },
+  {
+   "name": "OK KO/CNS Characters/vector/OK_Character_PMS.ai",
+   "method": 8,
+   "crc32": "7be0aa40",
+   "comp_size": 6123242,
+   "uncomp_size": 6199228,
+   "local_header_offset": 2446367169
+  },
+  {
+   "name": "OK KO/CNS Characters/vector/OK_Character_RGB.ai",
+   "method": 8,
+   "crc32": "73cdf01c",
+   "comp_size": 6687832,
+   "uncomp_size": 6782069,
+   "local_header_offset": 2452490536
+  },
+  {
+   "name": "OK KO/Episodes/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 2459178493
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_005_LP.mov",
+   "method": 8,
+   "crc32": "65e3a6bd",
+   "comp_size": 266213250,
+   "uncomp_size": 295276570,
+   "local_header_offset": 2459178570
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_006_LP.mov",
+   "method": 8,
+   "crc32": "ceb02b03",
+   "comp_size": 774255197,
+   "uncomp_size": 784814031,
+   "local_header_offset": 2725391928
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_007_LP.mov",
+   "method": 8,
+   "crc32": "5ddd5512",
+   "comp_size": 335618563,
+   "uncomp_size": 346380537,
+   "local_header_offset": 3499647233
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_008_LP.mov",
+   "method": 8,
+   "crc32": "734cf9b3",
+   "comp_size": 310973598,
+   "uncomp_size": 339707503,
+   "local_header_offset": 3835265904
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_009_LP.mov",
+   "method": 8,
+   "crc32": "c13fa6d2",
+   "comp_size": 313178726,
+   "uncomp_size": 340700859,
+   "local_header_offset": 4146239610
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_010_LP.mov",
+   "method": 8,
+   "crc32": "ecb13f51",
+   "comp_size": 267336107,
+   "uncomp_size": 294380036,
+   "local_header_offset": 4459418444
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_011_LP.mov",
+   "method": 8,
+   "crc32": "0f032544",
+   "comp_size": 267862951,
+   "uncomp_size": 296888762,
+   "local_header_offset": 4726754659
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_012_LP.mov",
+   "method": 8,
+   "crc32": "e36b677f",
+   "comp_size": 259771482,
+   "uncomp_size": 287195681,
+   "local_header_offset": 4994617718
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_013_LP.mov",
+   "method": 8,
+   "crc32": "bce14fbd",
+   "comp_size": 288736763,
+   "uncomp_size": 299558900,
+   "local_header_offset": 5254389308
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_014_LP.mov",
+   "method": 8,
+   "crc32": "85410eb3",
+   "comp_size": 287725787,
+   "uncomp_size": 299310070,
+   "local_header_offset": 5543126179
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_015_LP.mov",
+   "method": 8,
+   "crc32": "29c33093",
+   "comp_size": 287420720,
+   "uncomp_size": 299300731,
+   "local_header_offset": 5830852074
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_501S.mov",
+   "method": 8,
+   "crc32": "338c553d",
+   "comp_size": 52705320,
+   "uncomp_size": 58248159,
+   "local_header_offset": 6118272902
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_501_238_001.mov",
+   "method": 8,
+   "crc32": "e52d7421",
+   "comp_size": 37092514,
+   "uncomp_size": 38429173,
+   "local_header_offset": 6170978328
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_501_238_002.mov",
+   "method": 8,
+   "crc32": "04bcd881",
+   "comp_size": 34617242,
+   "uncomp_size": 37283887,
+   "local_header_offset": 6208070955
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_501_238_003.mov",
+   "method": 8,
+   "crc32": "7b0b166c",
+   "comp_size": 36572111,
+   "uncomp_size": 38939833,
+   "local_header_offset": 6242688310
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_502S.mov",
+   "method": 8,
+   "crc32": "28f8723b",
+   "comp_size": 55691839,
+   "uncomp_size": 62814352,
+   "local_header_offset": 6279260534
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_503S.mov",
+   "method": 8,
+   "crc32": "b9b0832e",
+   "comp_size": 58074791,
+   "uncomp_size": 63848128,
+   "local_header_offset": 6334952479
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_504s.mov",
+   "method": 8,
+   "crc32": "49528501",
+   "comp_size": 54128657,
+   "uncomp_size": 59051811,
+   "local_header_offset": 6393027376
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_505S.mov",
+   "method": 8,
+   "crc32": "ce4d70f9",
+   "comp_size": 52604439,
+   "uncomp_size": 59354517,
+   "local_header_offset": 6447156139
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_506S.mov",
+   "method": 8,
+   "crc32": "5ce198f4",
+   "comp_size": 55140355,
+   "uncomp_size": 57590257,
+   "local_header_offset": 6499760684
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_507s.mov",
+   "method": 8,
+   "crc32": "e03de736",
+   "comp_size": 52477061,
+   "uncomp_size": 55947045,
+   "local_header_offset": 6554901145
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_508s.mov",
+   "method": 8,
+   "crc32": "86f2e84e",
+   "comp_size": 50543837,
+   "uncomp_size": 55922037,
+   "local_header_offset": 6607378312
+  },
+  {
+   "name": "OK KO/Episodes/OKKO_510s.mov",
+   "method": 8,
+   "crc32": "23983e98",
+   "comp_size": 56538494,
+   "uncomp_size": 59549045,
+   "local_header_offset": 6657922255
+  },
+  {
+   "name": "OK KO/Font/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 6714460855
+  },
+  {
+   "name": "OK KO/Font/Lakefont.ttf",
+   "method": 8,
+   "crc32": "2940c595",
+   "comp_size": 38409,
+   "uncomp_size": 62120,
+   "local_header_offset": 6714460928
+  },
+  {
+   "name": "OK KO/Key Art/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 6714499438
+  },
+  {
+   "name": "OK KO/Key Art/OKKO_Key_Art_v7.jpg",
+   "method": 8,
+   "crc32": "156fc6ea",
+   "comp_size": 13191413,
+   "uncomp_size": 13520534,
+   "local_header_offset": 6714499514
+  },
+  {
+   "name": "OK KO/Key Art/OKKO_Key_Art_v7.psd",
+   "method": 8,
+   "crc32": "d46ed204",
+   "comp_size": 90245908,
+   "uncomp_size": 173381200,
+   "local_header_offset": 6727691038
+  },
+  {
+   "name": "OK KO/Logo/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 6817937057
+  },
+  {
+   "name": "OK KO/Logo/Alt Consumer Proudcts/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 6817937130
+  },
+  {
+   "name": "OK KO/Logo/Alt Consumer Proudcts/OKKO_LOGO_4C_ALT_v2.ai",
+   "method": 8,
+   "crc32": "06edb59a",
+   "comp_size": 479906,
+   "uncomp_size": 509357,
+   "local_header_offset": 6817937225
+  },
+  {
+   "name": "OK KO/Logo/Alt Consumer Proudcts/OKKO_LOGO_PN_ALT.ai",
+   "method": 8,
+   "crc32": "08344036",
+   "comp_size": 492524,
+   "uncomp_size": 524159,
+   "local_header_offset": 6818417264
+  },
+  {
+   "name": "OK KO/Logo/Alt Consumer Proudcts/OKKO_LOGO_PN_ALT_NEON_v2.ai",
+   "method": 8,
+   "crc32": "474a0384",
+   "comp_size": 570389,
+   "uncomp_size": 602621,
+   "local_header_offset": 6818909918
+  },
+  {
+   "name": "OK KO/Logo/Alt Consumer Proudcts/OKKO_LOGO_RGB_ALT.ai",
+   "method": 8,
+   "crc32": "1832c42d",
+   "comp_size": 496394,
+   "uncomp_size": 529613,
+   "local_header_offset": 6819480445
+  },
+  {
+   "name": "OK KO/Logo/lock-up/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 6819976970
+  },
+  {
+   "name": "OK KO/Logo/lock-up/AI/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 6819977051
+  },
+  {
+   "name": "OK KO/Logo/lock-up/AI/CN_OKKO_LOGO_LOCKUP_1C_BLACK.ai",
+   "method": 8,
+   "crc32": "0ff77b51",
+   "comp_size": 335368,
+   "uncomp_size": 369313,
+   "local_header_offset": 6819977135
+  },
+  {
+   "name": "OK KO/Logo/lock-up/AI/CN_OKKO_LOGO_LOCKUP_1C_WHITE.ai",
+   "method": 8,
+   "crc32": "ef8ee2b2",
+   "comp_size": 330113,
+   "uncomp_size": 363293,
+   "local_header_offset": 6820312634
+  },
+  {
+   "name": "OK KO/Logo/lock-up/AI/CN_OKKO_LOGO_LOCKUP_4C.ai",
+   "method": 8,
+   "crc32": "9dbb4768",
+   "comp_size": 840774,
+   "uncomp_size": 881725,
+   "local_header_offset": 6820642878
+  },
+  {
+   "name": "OK KO/Logo/lock-up/AI/CN_OKKO_LOGO_LOCKUP_BW.ai",
+   "method": 8,
+   "crc32": "56793a89",
+   "comp_size": 541314,
+   "uncomp_size": 576359,
+   "local_header_offset": 6821483777
+  },
+  {
+   "name": "OK KO/Logo/lock-up/AI/CN_OKKO_LOGO_LOCKUP_PN.ai",
+   "method": 8,
+   "crc32": "836f4343",
+   "comp_size": 837476,
+   "uncomp_size": 879651,
+   "local_header_offset": 6822025216
+  },
+  {
+   "name": "OK KO/Logo/lock-up/AI/CN_OKKO_LOGO_LOCKUP_PN_NEON.ai",
+   "method": 8,
+   "crc32": "32652b08",
+   "comp_size": 836477,
+   "uncomp_size": 879716,
+   "local_header_offset": 6822862817
+  },
+  {
+   "name": "OK KO/Logo/lock-up/AI/CN_OKKO_LOGO_LOCKUP_RGB.ai",
+   "method": 8,
+   "crc32": "3cb73713",
+   "comp_size": 936747,
+   "uncomp_size": 973799,
+   "local_header_offset": 6823699424
+  },
+  {
+   "name": "OK KO/Logo/lock-up/EPS/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 6824636297
+  },
+  {
+   "name": "OK KO/Logo/lock-up/EPS/CN_OKKO_LOGO_LOCKUP_1C_BLACK.eps",
+   "method": 8,
+   "crc32": "6e530fbb",
+   "comp_size": 305209,
+   "uncomp_size": 1609690,
+   "local_header_offset": 6824636382
+  },
+  {
+   "name": "OK KO/Logo/lock-up/EPS/CN_OKKO_LOGO_LOCKUP_1C_WHITE.eps",
+   "method": 8,
+   "crc32": "5e9c5bfc",
+   "comp_size": 305708,
+   "uncomp_size": 1606938,
+   "local_header_offset": 6824941724
+  },
+  {
+   "name": "OK KO/Logo/lock-up/EPS/CN_OKKO_LOGO_LOCKUP_4C.eps",
+   "method": 8,
+   "crc32": "d3963191",
+   "comp_size": 594349,
+   "uncomp_size": 2151806,
+   "local_header_offset": 6825247565
+  },
+  {
+   "name": "OK KO/Logo/lock-up/EPS/CN_OKKO_LOGO_LOCKUP_BW.eps",
+   "method": 8,
+   "crc32": "8a04081e",
+   "comp_size": 484737,
+   "uncomp_size": 1951838,
+   "local_header_offset": 6825842041
+  },
+  {
+   "name": "OK KO/Logo/lock-up/EPS/CN_OKKO_LOGO_LOCKUP_PN.eps",
+   "method": 8,
+   "crc32": "da5b999d",
+   "comp_size": 600862,
+   "uncomp_size": 2168610,
+   "local_header_offset": 6826326905
+  },
+  {
+   "name": "OK KO/Logo/lock-up/EPS/CN_OKKO_LOGO_LOCKUP_PN_NEON.eps",
+   "method": 8,
+   "crc32": "f8859d33",
+   "comp_size": 604661,
+   "uncomp_size": 2172850,
+   "local_header_offset": 6826927894
+  },
+  {
+   "name": "OK KO/Logo/lock-up/EPS/CN_OKKO_LOGO_LOCKUP_RGB.eps",
+   "method": 8,
+   "crc32": "3d7a9c46",
+   "comp_size": 671427,
+   "uncomp_size": 2265326,
+   "local_header_offset": 6827532687
+  },
+  {
+   "name": "OK KO/Logo/lock-up/JPEG and PNG/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 6828204242
+  },
+  {
+   "name": "OK KO/Logo/lock-up/JPEG and PNG/CN_OKKO_LOGO_LOCKUP_RGB.jpg",
+   "method": 8,
+   "crc32": "c8751871",
+   "comp_size": 1448900,
+   "uncomp_size": 1616614,
+   "local_header_offset": 6828204336
+  },
+  {
+   "name": "OK KO/Logo/lock-up/JPEG and PNG/CN_OKKO_LOGO_LOCKUP_RGB.png",
+   "method": 8,
+   "crc32": "721280cc",
+   "comp_size": 742184,
+   "uncomp_size": 774566,
+   "local_header_offset": 6829653373
+  },
+  {
+   "name": "OK KO/Logo/lock-up/JPEG and PNG/CN_OKKO_LOGO_LOCKUP_RGB_onair.jpg",
+   "method": 8,
+   "crc32": "2dc3b2d7",
+   "comp_size": 1448041,
+   "uncomp_size": 1615709,
+   "local_header_offset": 6830395694
+  },
+  {
+   "name": "OK KO/Logo/lock-up/JPEG and PNG/CN_OKKO_LOGO_LOCKUP_RGB_onair.png",
+   "method": 8,
+   "crc32": "c3854464",
+   "comp_size": 741624,
+   "uncomp_size": 773664,
+   "local_header_offset": 6831843878
+  },
+  {
+   "name": "OK KO/Logo/Main/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 6832585645
+  },
+  {
+   "name": "OK KO/Logo/Main/OKKO_LOGO_1C_tweaked_OriginalWhite.ai",
+   "method": 8,
+   "crc32": "bfadc300",
+   "comp_size": 300888,
+   "uncomp_size": 335838,
+   "local_header_offset": 6832585723
+  },
+  {
+   "name": "OK KO/Logo/Main/OKKO_LOGO_4C_OriginalBlack.ai",
+   "method": 8,
+   "crc32": "b016e70e",
+   "comp_size": 506102,
+   "uncomp_size": 536514,
+   "local_header_offset": 6832886742
+  },
+  {
+   "name": "OK KO/Logo/Main/OKKO_LOGO_4C_OriginalWhite.ai",
+   "method": 8,
+   "crc32": "2e252fa8",
+   "comp_size": 503732,
+   "uncomp_size": 533452,
+   "local_header_offset": 6833392967
+  },
+  {
+   "name": "OK KO/Logo/Main/OKKO_LOGO_PN_NEON_OriginalBlack.ai",
+   "method": 8,
+   "crc32": "1a473692",
+   "comp_size": 527820,
+   "uncomp_size": 559426,
+   "local_header_offset": 6833896822
+  },
+  {
+   "name": "OK KO/Logo/Main/OKKO_LOGO_PN_NEON_OriginalWhite.ai",
+   "method": 8,
+   "crc32": "c4e6e322",
+   "comp_size": 525762,
+   "uncomp_size": 556414,
+   "local_header_offset": 6834424770
+  },
+  {
+   "name": "OK KO/Logo/Main/OKKO_LOGO_PN_OriginalBlack.ai",
+   "method": 8,
+   "crc32": "efb24654",
+   "comp_size": 505936,
+   "uncomp_size": 537541,
+   "local_header_offset": 6834950660
+  },
+  {
+   "name": "OK KO/Logo/Main/OKKO_LOGO_PN_OriginalWhite.ai",
+   "method": 8,
+   "crc32": "228b7ba5",
+   "comp_size": 503732,
+   "uncomp_size": 535080,
+   "local_header_offset": 6835456719
+  },
+  {
+   "name": "OK KO/Logo/Main/OKKO_LOGO_RGB_OriginalBlack.ai",
+   "method": 8,
+   "crc32": "4a2f0dd7",
+   "comp_size": 506545,
+   "uncomp_size": 537678,
+   "local_header_offset": 6835960574
+  },
+  {
+   "name": "OK KO/Logo/Main/OKKO_LOGO_RGB_OriginalWhite.ai",
+   "method": 8,
+   "crc32": "7269f859",
+   "comp_size": 504773,
+   "uncomp_size": 534361,
+   "local_header_offset": 6836467243
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 6836972140
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Document fonts/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 6836972225
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Document fonts/AdobeFnt18.lst",
+   "method": 8,
+   "crc32": "ae178891",
+   "comp_size": 831,
+   "uncomp_size": 4356,
+   "local_header_offset": 6836972325
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Document fonts/Arial Rounded Bold.ttf",
+   "method": 8,
+   "crc32": "bab5b731",
+   "comp_size": 32210,
+   "uncomp_size": 49296,
+   "local_header_offset": 6836973286
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Document fonts/AvenirNextRoundedStd-Demi.otf",
+   "method": 8,
+   "crc32": "bdf9511e",
+   "comp_size": 44667,
+   "uncomp_size": 73288,
+   "local_header_offset": 6837005634
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Document fonts/AvenirNextRoundedStd-Italic.otf",
+   "method": 8,
+   "crc32": "b9274cb5",
+   "comp_size": 45078,
+   "uncomp_size": 73720,
+   "local_header_offset": 6837050446
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Document fonts/AvenirNextRoundedStd-Med.otf",
+   "method": 8,
+   "crc32": "231e8792",
+   "comp_size": 45561,
+   "uncomp_size": 73872,
+   "local_header_offset": 6837095671
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Document fonts/AvenirNextRoundedStd-Reg.otf",
+   "method": 8,
+   "crc32": "55011631",
+   "comp_size": 44017,
+   "uncomp_size": 72264,
+   "local_header_offset": 6837141376
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Document fonts/DIN-Medium",
+   "method": 8,
+   "crc32": "00000000",
+   "comp_size": 2,
+   "uncomp_size": 0,
+   "local_header_offset": 6837185537
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Document fonts/DINMed",
+   "method": 8,
+   "crc32": "00000000",
+   "comp_size": 2,
+   "uncomp_size": 0,
+   "local_header_offset": 6837185665
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Document fonts/HelveNeuMedCon",
+   "method": 8,
+   "crc32": "00000000",
+   "comp_size": 2,
+   "uncomp_size": 0,
+   "local_header_offset": 6837185789
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Document fonts/HelveticaNeue-MediumCond.t1",
+   "method": 8,
+   "crc32": "00000000",
+   "comp_size": 2,
+   "uncomp_size": 0,
+   "local_header_offset": 6837185921
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Document fonts/Lakefont.ttf",
+   "method": 8,
+   "crc32": "2940c595",
+   "comp_size": 38409,
+   "uncomp_size": 62120,
+   "local_header_offset": 6837186066
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Instructions.txt",
+   "method": 8,
+   "crc32": "11d2159f",
+   "comp_size": 1703,
+   "uncomp_size": 7117,
+   "local_header_offset": 6837224603
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 6837226423
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/B005S004_650_v02_tweaked-no_clouds.psd",
+   "method": 8,
+   "crc32": "6c9c0b6f",
+   "comp_size": 4157997,
+   "uncomp_size": 19576968,
+   "local_header_offset": 6837226514
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/B005S004_650_v02_tweaked_2.psd",
+   "method": 8,
+   "crc32": "816789f5",
+   "comp_size": 4259487,
+   "uncomp_size": 19663488,
+   "local_header_offset": 6841384656
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/B005S004_650_v02_tweaked_3.psd",
+   "method": 8,
+   "crc32": "89badd5a",
+   "comp_size": 4263376,
+   "uncomp_size": 19768135,
+   "local_header_offset": 6845644280
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/B005S058_633_v08_clouds_out_sm.psd",
+   "method": 8,
+   "crc32": "e27ba991",
+   "comp_size": 42006463,
+   "uncomp_size": 103045504,
+   "local_header_offset": 6849907793
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/B005S156_888_v06_extended.psd",
+   "method": 8,
+   "crc32": "1ba1eef8",
+   "comp_size": 33574576,
+   "uncomp_size": 84949445,
+   "local_header_offset": 6891914397
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/B006S018_945_v04_clouds_out_sm.psd",
+   "method": 8,
+   "crc32": "f40348da",
+   "comp_size": 9164255,
+   "uncomp_size": 23017991,
+   "local_header_offset": 6925489109
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/Enid_Turns_RGB.ai",
+   "method": 8,
+   "crc32": "037daf3a",
+   "comp_size": 1437713,
+   "uncomp_size": 1498786,
+   "local_header_offset": 6934653505
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/KO_Turns_RGB.ai",
+   "method": 8,
+   "crc32": "a322d03f",
+   "comp_size": 1708295,
+   "uncomp_size": 1760995,
+   "local_header_offset": 6936091342
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/ok k.o mbg cover.jpg",
+   "method": 8,
+   "crc32": "80b751e0",
+   "comp_size": 5115479,
+   "uncomp_size": 5171501,
+   "local_header_offset": 6937799759
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OKKO_Key_Art_v7.jpg",
+   "method": 8,
+   "crc32": "5a9edf56",
+   "comp_size": 13125726,
+   "uncomp_size": 13457335,
+   "local_header_offset": 6942915365
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OKKO_LOGO_1C_tweaked_OriginalWhite.ai",
+   "method": 8,
+   "crc32": "bfadc300",
+   "comp_size": 300888,
+   "uncomp_size": 335838,
+   "local_header_offset": 6956041217
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OKKO_LOGO_4C_ALT_OriginalWhite.ai",
+   "method": 8,
+   "crc32": "9db918cc",
+   "comp_size": 489341,
+   "uncomp_size": 518840,
+   "local_header_offset": 6956342249
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OKKO_LOGO_4C_OriginalWhite.ai",
+   "method": 8,
+   "crc32": "2e252fa8",
+   "comp_size": 503732,
+   "uncomp_size": 533452,
+   "local_header_offset": 6956831730
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OKKO_LOGO_PN_ALT_NEON_OriginalWhite.ai",
+   "method": 8,
+   "crc32": "9d2e5a45",
+   "comp_size": 581212,
+   "uncomp_size": 613200,
+   "local_header_offset": 6957335598
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OKKO_LOGO_PN_NEON_OriginalWhite.ai",
+   "method": 8,
+   "crc32": "c4e6e322",
+   "comp_size": 525762,
+   "uncomp_size": 556414,
+   "local_header_offset": 6957916955
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OKKO_LOGO_RGB_ALT_OriginalWhite.ai",
+   "method": 8,
+   "crc32": "a68488d3",
+   "comp_size": 507480,
+   "uncomp_size": 536629,
+   "local_header_offset": 6958442858
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OKKO_LOGO_RGB_OriginalBlack.ai",
+   "method": 8,
+   "crc32": "4a2f0dd7",
+   "comp_size": 506545,
+   "uncomp_size": 537678,
+   "local_header_offset": 6958950479
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OKKO_LOGO_RGB_OriginalWhite.ai",
+   "method": 8,
+   "crc32": "7269f859",
+   "comp_size": 504773,
+   "uncomp_size": 534361,
+   "local_header_offset": 6959457161
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OKKO_Presentation_Templates_r3.001.jpeg",
+   "method": 8,
+   "crc32": "545d185d",
+   "comp_size": 946886,
+   "uncomp_size": 950211,
+   "local_header_offset": 6959962071
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OKKO_Presentation_Templates_r3.002.jpeg",
+   "method": 8,
+   "crc32": "7e39f0a0",
+   "comp_size": 995482,
+   "uncomp_size": 998976,
+   "local_header_offset": 6960909103
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OKKO_Presentation_Templates_r3.003.jpeg",
+   "method": 8,
+   "crc32": "1963c15d",
+   "comp_size": 371276,
+   "uncomp_size": 405321,
+   "local_header_offset": 6961904731
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OKKO_Presentation_Templates_r3.004.jpeg",
+   "method": 8,
+   "crc32": "c6295ddf",
+   "comp_size": 356742,
+   "uncomp_size": 369249,
+   "local_header_offset": 6962276153
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OKKO_Presentation_Templates_r3.006.jpeg",
+   "method": 8,
+   "crc32": "c96eeaf8",
+   "comp_size": 385197,
+   "uncomp_size": 400869,
+   "local_header_offset": 6962633041
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OKKO_Presentation_Templates_r4.005.jpeg",
+   "method": 8,
+   "crc32": "b0c6115c",
+   "comp_size": 381397,
+   "uncomp_size": 517951,
+   "local_header_offset": 6963018384
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OK_KO_TRADEAD_ TEMPLATE_01_MBG.ai",
+   "method": 8,
+   "crc32": "d67b7900",
+   "comp_size": 59288366,
+   "uncomp_size": 59445368,
+   "local_header_offset": 6963399927
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OK_KO_TRADEAD_ TEMPLATE_02_MBG.ai",
+   "method": 8,
+   "crc32": "30156bd5",
+   "comp_size": 2057248,
+   "uncomp_size": 2127849,
+   "local_header_offset": 7022688433
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OK_KO_TRADEAD_ TEMPLATE_03_MBG.ai",
+   "method": 8,
+   "crc32": "b637c71d",
+   "comp_size": 1876260,
+   "uncomp_size": 1932402,
+   "local_header_offset": 7024745821
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/OK_KO_TRADEAD_ TEMPLATE_04_MBG.ai",
+   "method": 8,
+   "crc32": "b2a85cc1",
+   "comp_size": 65855938,
+   "uncomp_size": 66127484,
+   "local_header_offset": 7026622221
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/Links/Rad_Turns_RGB.ai",
+   "method": 8,
+   "crc32": "d7bd615a",
+   "comp_size": 2224730,
+   "uncomp_size": 2290414,
+   "local_header_offset": 7092478299
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/OK KO Mini Brand Guide 02092017/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 7094703152
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/OKKO_MiniBrandGuide_03232017.idml",
+   "method": 8,
+   "crc32": "e3d191f9",
+   "comp_size": 4362965,
+   "uncomp_size": 4409909,
+   "local_header_offset": 7094703269
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/OKKO_MiniBrandGuide_03232017.indd",
+   "method": 8,
+   "crc32": "e008a7e7",
+   "comp_size": 7045616,
+   "uncomp_size": 15085568,
+   "local_header_offset": 7099066368
+  },
+  {
+   "name": "OK KO/Mini Brand Guide/OKKO_MiniBrandGuide_03232017.pdf",
+   "method": 8,
+   "crc32": "5f403e29",
+   "comp_size": 11087462,
+   "uncomp_size": 12261916,
+   "local_header_offset": 7106112118
+  },
+  {
+   "name": "OK KO/Pow Cards - new/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 7117199713
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 7117199797
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/Font/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 7117199909
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/Font/Lakefont.ttf",
+   "method": 8,
+   "crc32": "2940c595",
+   "comp_size": 38409,
+   "uncomp_size": 62120,
+   "local_header_offset": 7117200026
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 7117238580
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/A REAL MAGIC SKELETON_V01.psd",
+   "method": 8,
+   "crc32": "bbeea34a",
+   "comp_size": 707652,
+   "uncomp_size": 2532066,
+   "local_header_offset": 7117238743
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/AQUARIUS_v03.psd",
+   "method": 8,
+   "crc32": "88810064",
+   "comp_size": 1173254,
+   "uncomp_size": 2853203,
+   "local_header_offset": 7117946603
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/BABY TEETH_v01.psd",
+   "method": 8,
+   "crc32": "9a6f84d2",
+   "comp_size": 36130199,
+   "uncomp_size": 49693061,
+   "local_header_offset": 7119120052
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/BARISTA_PUP_v01.psd",
+   "method": 8,
+   "crc32": "fcb981f8",
+   "comp_size": 17093467,
+   "uncomp_size": 30659884,
+   "local_header_offset": 7155250448
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/BEARDO_v01.psd",
+   "method": 8,
+   "crc32": "a9cda1b1",
+   "comp_size": 663468,
+   "uncomp_size": 2770217,
+   "local_header_offset": 7172344113
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/BEE_RANDO_v01.psd",
+   "method": 8,
+   "crc32": "75e81625",
+   "comp_size": 15096542,
+   "uncomp_size": 25110520,
+   "local_header_offset": 7173007774
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/BELL BEEFER_v01.psd",
+   "method": 8,
+   "crc32": "9a78d90a",
+   "comp_size": 438613,
+   "uncomp_size": 2132107,
+   "local_header_offset": 7188104512
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/BIG BULL DEMON_v01.psd",
+   "method": 8,
+   "crc32": "0bcebd89",
+   "comp_size": 659445,
+   "uncomp_size": 2897059,
+   "local_header_offset": 7188543323
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/BILL BURP_v03.psd",
+   "method": 8,
+   "crc32": "5b8d8624",
+   "comp_size": 773551,
+   "uncomp_size": 3240632,
+   "local_header_offset": 7189202969
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/BILLIAM MILLIAM_v01.psd",
+   "method": 8,
+   "crc32": "ce516248",
+   "comp_size": 544418,
+   "uncomp_size": 2425250,
+   "local_header_offset": 7189976716
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/BOBO_v01.psd",
+   "method": 8,
+   "crc32": "c62728df",
+   "comp_size": 15321807,
+   "uncomp_size": 26110803,
+   "local_header_offset": 7190521336
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/BOMBERFAN_v01.psd",
+   "method": 8,
+   "crc32": "58b58f16",
+   "comp_size": 696136,
+   "uncomp_size": 2793572,
+   "local_header_offset": 7205843334
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/BOXMAN_TURN_A_v03.psd",
+   "method": 8,
+   "crc32": "c9105ea7",
+   "comp_size": 757299,
+   "uncomp_size": 2796856,
+   "local_header_offset": 7206539666
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/BOXMAN_TURN_B_v03.psd",
+   "method": 8,
+   "crc32": "134e56d2",
+   "comp_size": 1052313,
+   "uncomp_size": 3838515,
+   "local_header_offset": 7207297165
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/BRANDON_V01.psd",
+   "method": 8,
+   "crc32": "274cec1f",
+   "comp_size": 559288,
+   "uncomp_size": 2361371,
+   "local_header_offset": 7208349678
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/CAROL_TURN_v03.psd",
+   "method": 8,
+   "crc32": "107cd66d",
+   "comp_size": 862683,
+   "uncomp_size": 3764534,
+   "local_header_offset": 7208909160
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/CHAMELEON JR_v01.psd",
+   "method": 8,
+   "crc32": "ce349ed1",
+   "comp_size": 552641,
+   "uncomp_size": 2243251,
+   "local_header_offset": 7209772040
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/COBRUH_v03.psd",
+   "method": 8,
+   "crc32": "04619d3c",
+   "comp_size": 1583816,
+   "uncomp_size": 4702928,
+   "local_header_offset": 7210324880
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/COLEWORT_v01.psd",
+   "method": 8,
+   "crc32": "0ee8230e",
+   "comp_size": 1388867,
+   "uncomp_size": 4971686,
+   "local_header_offset": 7211908889
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/COOKIE MAN_v01.psd",
+   "method": 8,
+   "crc32": "1ed01232",
+   "comp_size": 556852,
+   "uncomp_size": 2523191,
+   "local_header_offset": 7213297951
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/COOL_SUN_v01.psd",
+   "method": 8,
+   "crc32": "d29089ac",
+   "comp_size": 638988,
+   "uncomp_size": 2458849,
+   "local_header_offset": 7213855000
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/CRINKLY WRINKLY_v01.psd",
+   "method": 8,
+   "crc32": "c0129366",
+   "comp_size": 580509,
+   "uncomp_size": 2521202,
+   "local_header_offset": 7214494183
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/DARRELL_v01.psd",
+   "method": 8,
+   "crc32": "0e8cd016",
+   "comp_size": 582084,
+   "uncomp_size": 2466941,
+   "local_header_offset": 7215074894
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/DIVING_BELLE_v02.psd",
+   "method": 8,
+   "crc32": "30ab75ca",
+   "comp_size": 1497340,
+   "uncomp_size": 3855660,
+   "local_header_offset": 7215657172
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/DOGMUN_V01.psd",
+   "method": 8,
+   "crc32": "de50c625",
+   "comp_size": 1457229,
+   "uncomp_size": 3369825,
+   "local_header_offset": 7217154711
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/DOLPH FINN_V01.psd",
+   "method": 8,
+   "crc32": "bf80fe16",
+   "comp_size": 1181364,
+   "uncomp_size": 3072310,
+   "local_header_offset": 7218612133
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/DRUPE_v01.psd",
+   "method": 8,
+   "crc32": "3f2e2d69",
+   "comp_size": 539400,
+   "uncomp_size": 2397426,
+   "local_header_offset": 7219793694
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/DR_SPHINXEN_v01.psd",
+   "method": 8,
+   "crc32": "5520259a",
+   "comp_size": 36373528,
+   "uncomp_size": 50763583,
+   "local_header_offset": 7220333286
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/DYNAMITE WATKINS_v01.psd",
+   "method": 8,
+   "crc32": "f161fa47",
+   "comp_size": 708269,
+   "uncomp_size": 2773810,
+   "local_header_offset": 7256707012
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/ENID_TURN_v08.psd",
+   "method": 8,
+   "crc32": "207f02ee",
+   "comp_size": 848254,
+   "uncomp_size": 3684905,
+   "local_header_offset": 7257415484
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/FISH_DUDE_v01.psd",
+   "method": 8,
+   "crc32": "9374e4ce",
+   "comp_size": 562336,
+   "uncomp_size": 2485496,
+   "local_header_offset": 7258263934
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/FLURRY.psd",
+   "method": 8,
+   "crc32": "96182a18",
+   "comp_size": 569317,
+   "uncomp_size": 2507854,
+   "local_header_offset": 7258826466
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/GAR_POSE_v01.psd",
+   "method": 8,
+   "crc32": "f8d105af",
+   "comp_size": 899511,
+   "uncomp_size": 3592523,
+   "local_header_offset": 7259395972
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/GENESIS_v01.psd",
+   "method": 8,
+   "crc32": "f3752139",
+   "comp_size": 523410,
+   "uncomp_size": 2157680,
+   "local_header_offset": 7260295678
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/GERTIE_v01.psd",
+   "method": 8,
+   "crc32": "6ac437b1",
+   "comp_size": 534064,
+   "uncomp_size": 2437877,
+   "local_header_offset": 7260819282
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/GINGER_v01.psd",
+   "method": 8,
+   "crc32": "80962abf",
+   "comp_size": 725325,
+   "uncomp_size": 2636113,
+   "local_header_offset": 7261353539
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/GLADYS_v01.psd",
+   "method": 8,
+   "crc32": "900778f4",
+   "comp_size": 489178,
+   "uncomp_size": 2314793,
+   "local_header_offset": 7262079057
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/GLITTER_STARLIGHT_v02.psd",
+   "method": 8,
+   "crc32": "32bce3dd",
+   "comp_size": 3223898,
+   "uncomp_size": 5697408,
+   "local_header_offset": 7262568428
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/GLOBE_MAN_v03.psd",
+   "method": 8,
+   "crc32": "d4be0ae5",
+   "comp_size": 11216191,
+   "uncomp_size": 20933438,
+   "local_header_offset": 7265792530
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/GREGG_V01.psd",
+   "method": 8,
+   "crc32": "bda4b919",
+   "comp_size": 1041879,
+   "uncomp_size": 2965784,
+   "local_header_offset": 7277008917
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/GUARD_v01.psd",
+   "method": 8,
+   "crc32": "39d9fa96",
+   "comp_size": 569101,
+   "uncomp_size": 2388925,
+   "local_header_offset": 7278050988
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/HOLO JANE_v02.psd",
+   "method": 8,
+   "crc32": "57088d45",
+   "comp_size": 1661738,
+   "uncomp_size": 5092356,
+   "local_header_offset": 7278620281
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/ICE_CREAMY_v02.psd",
+   "method": 8,
+   "crc32": "97c17f85",
+   "comp_size": 18285071,
+   "uncomp_size": 29377028,
+   "local_header_offset": 7280282215
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/JOE CUPPA_v01.psd",
+   "method": 8,
+   "crc32": "1c702f40",
+   "comp_size": 520747,
+   "uncomp_size": 2412348,
+   "local_header_offset": 7298567483
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/JOFF.psd",
+   "method": 8,
+   "crc32": "fe5e5651",
+   "comp_size": 454895,
+   "uncomp_size": 2183156,
+   "local_header_offset": 7299088426
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/JUNK_FISH_v04.psd",
+   "method": 8,
+   "crc32": "86e68b24",
+   "comp_size": 45641802,
+   "uncomp_size": 79521867,
+   "local_header_offset": 7299543508
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/KID_APHID_v01.psd",
+   "method": 8,
+   "crc32": "c91074ad",
+   "comp_size": 638799,
+   "uncomp_size": 2499256,
+   "local_header_offset": 7345185506
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/KO_TURN_v01.psd",
+   "method": 8,
+   "crc32": "05810a2e",
+   "comp_size": 987771,
+   "uncomp_size": 3972185,
+   "local_header_offset": 7345824501
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/LION_CAT_v01.psd",
+   "method": 8,
+   "crc32": "908282cd",
+   "comp_size": 502750,
+   "uncomp_size": 2153303,
+   "local_header_offset": 7346812466
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/MEGA FOOTBALL BABY_v02.psd",
+   "method": 8,
+   "crc32": "4755927c",
+   "comp_size": 514966,
+   "uncomp_size": 2254392,
+   "local_header_offset": 7347315411
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/MISS MUMMY_v02.psd",
+   "method": 8,
+   "crc32": "668453b2",
+   "comp_size": 1795389,
+   "uncomp_size": 5222491,
+   "local_header_offset": 7347830582
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/MISS_PASTEL_v01.psd",
+   "method": 8,
+   "crc32": "284c9c2e",
+   "comp_size": 2032810,
+   "uncomp_size": 5438361,
+   "local_header_offset": 7349626168
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/MISS_QUANTUM_v01.psd",
+   "method": 8,
+   "crc32": "8fc1d0a7",
+   "comp_size": 1660390,
+   "uncomp_size": 3611857,
+   "local_header_offset": 7351659176
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/MR LOGIC_v01.psd",
+   "method": 8,
+   "crc32": "eca197dc",
+   "comp_size": 432653,
+   "uncomp_size": 2099868,
+   "local_header_offset": 7353319765
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/MR_ALLEN_WORK_v01.psd",
+   "method": 8,
+   "crc32": "dae80642",
+   "comp_size": 454306,
+   "uncomp_size": 2320599,
+   "local_header_offset": 7353752613
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/NANINI_v01.psd",
+   "method": 8,
+   "crc32": "32e4618b",
+   "comp_size": 588745,
+   "uncomp_size": 2391617,
+   "local_header_offset": 7354207119
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/NEER_DO_WELL_v02.psd",
+   "method": 8,
+   "crc32": "274c5e20",
+   "comp_size": 26842330,
+   "uncomp_size": 41035496,
+   "local_header_offset": 7354796057
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/NEIL_v01.psd",
+   "method": 8,
+   "crc32": "a7030f3e",
+   "comp_size": 588589,
+   "uncomp_size": 2572695,
+   "local_header_offset": 7381638586
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/NICK ARMY_v01.psd",
+   "method": 8,
+   "crc32": "189dd5bb",
+   "comp_size": 635371,
+   "uncomp_size": 2967090,
+   "local_header_offset": 7382227366
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/OLD_MAN_JENKINS_v02.psd",
+   "method": 8,
+   "crc32": "1606b4fb",
+   "comp_size": 2095670,
+   "uncomp_size": 5055247,
+   "local_header_offset": 7382862933
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/PIRD_v01.psd",
+   "method": 8,
+   "crc32": "fb3868a7",
+   "comp_size": 608316,
+   "uncomp_size": 2575507,
+   "local_header_offset": 7384958805
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/POTATO_V01.psd",
+   "method": 8,
+   "crc32": "b0578082",
+   "comp_size": 1081089,
+   "uncomp_size": 2936145,
+   "local_header_offset": 7385567312
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/PUCK_REVERIE_v01.psd",
+   "method": 8,
+   "crc32": "26abbfeb",
+   "comp_size": 2876403,
+   "uncomp_size": 5167037,
+   "local_header_offset": 7386648594
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/PUNCHING JUDY_v01.psd",
+   "method": 8,
+   "crc32": "740fc8e7",
+   "comp_size": 666320,
+   "uncomp_size": 2639971,
+   "local_header_offset": 7389525196
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/PUP_BOY_v01.psd",
+   "method": 8,
+   "crc32": "d6032cea",
+   "comp_size": 11140387,
+   "uncomp_size": 18127153,
+   "local_header_offset": 7390191716
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/RAD_TURN_v01.psd",
+   "method": 8,
+   "crc32": "5e70c0e9",
+   "comp_size": 679559,
+   "uncomp_size": 3560780,
+   "local_header_offset": 7401332297
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/RED ACTION_V01.psd",
+   "method": 8,
+   "crc32": "9b7d6829",
+   "comp_size": 671438,
+   "uncomp_size": 2609731,
+   "local_header_offset": 7402012051
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/REX TH BUNNY.psd",
+   "method": 8,
+   "crc32": "df7aea13",
+   "comp_size": 523199,
+   "uncomp_size": 2739529,
+   "local_header_offset": 7402683686
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/SARDINE_v02.psd",
+   "method": 8,
+   "crc32": "2889fcb1",
+   "comp_size": 15114161,
+   "uncomp_size": 25189268,
+   "local_header_offset": 7403207080
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/SHADAMY_v01.psd",
+   "method": 8,
+   "crc32": "824061ae",
+   "comp_size": 9942790,
+   "uncomp_size": 19859200,
+   "local_header_offset": 7418321435
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/SHANNON_v02.psd",
+   "method": 8,
+   "crc32": "15afbff8",
+   "comp_size": 458349,
+   "uncomp_size": 2163397,
+   "local_header_offset": 7428264419
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/SHY_NINJA_v01.psd",
+   "method": 8,
+   "crc32": "b494bad2",
+   "comp_size": 641339,
+   "uncomp_size": 2458678,
+   "local_header_offset": 7428722962
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/SKATEBOARD NERD_v01.psd",
+   "method": 8,
+   "crc32": "752804d0",
+   "comp_size": 895513,
+   "uncomp_size": 3083679,
+   "local_header_offset": 7429364497
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/SMALL ONE_v01.psd",
+   "method": 8,
+   "crc32": "9ebb0050",
+   "comp_size": 465096,
+   "uncomp_size": 2600737,
+   "local_header_offset": 7430260212
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/SPARKO_v01.psd",
+   "method": 8,
+   "crc32": "453277a9",
+   "comp_size": 523577,
+   "uncomp_size": 2296788,
+   "local_header_offset": 7430725504
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/SWEETS_PIE_v01.psd",
+   "method": 8,
+   "crc32": "b7e8cd4b",
+   "comp_size": 1585338,
+   "uncomp_size": 7664098,
+   "local_header_offset": 7431249274
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/TEAMSTER_v01.psd",
+   "method": 8,
+   "crc32": "4a3fcfad",
+   "comp_size": 635641,
+   "uncomp_size": 2599068,
+   "local_header_offset": 7432834809
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/TED VIKING_v02.psd",
+   "method": 8,
+   "crc32": "27f906e9",
+   "comp_size": 995558,
+   "uncomp_size": 3099356,
+   "local_header_offset": 7433470645
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/TOPHER_v01.psd",
+   "method": 8,
+   "crc32": "a6ad7b65",
+   "comp_size": 526654,
+   "uncomp_size": 2657390,
+   "local_header_offset": 7434466400
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/URL_v01.psd",
+   "method": 8,
+   "crc32": "734bee24",
+   "comp_size": 782958,
+   "uncomp_size": 2879923,
+   "local_header_offset": 7434993247
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/VORMULAX_v02.psd",
+   "method": 8,
+   "crc32": "6f41d7a1",
+   "comp_size": 1172294,
+   "uncomp_size": 3074349,
+   "local_header_offset": 7435776395
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/WEATHER_MAN_v01.psd",
+   "method": 8,
+   "crc32": "8ba4f90d",
+   "comp_size": 6727453,
+   "uncomp_size": 13290185,
+   "local_header_offset": 7436948884
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_Character_Model_Sheets_For_POW_Card_Creation/WILLY_v02.psd",
+   "method": 8,
+   "crc32": "d662d689",
+   "comp_size": 8308428,
+   "uncomp_size": 15503828,
+   "local_header_offset": 7443676535
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_POW_Cards_Descriptions_06-01-17.docx",
+   "method": 8,
+   "crc32": "0d873019",
+   "comp_size": 4759102,
+   "uncomp_size": 4789564,
+   "local_header_offset": 7451985155
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_POW_Cards_Descriptions_SENSITIVE_HOLD_UNTIL_AIR.docx",
+   "method": 8,
+   "crc32": "a3cd25e8",
+   "comp_size": 4212129,
+   "uncomp_size": 4241265,
+   "local_header_offset": 7456744427
+  },
+  {
+   "name": "OK KO/Pow Cards - new/OK_KO_POW_Card_Creation_Kit/OK_KO_POW_Card_Template_v08.psd",
+   "method": 8,
+   "crc32": "60615b3c",
+   "comp_size": 639869,
+   "uncomp_size": 3834079,
+   "local_header_offset": 7460956742
+  },
+  {
+   "name": "OK KO/Pow Cards -old/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 7461596770
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 7461596853
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card001.psd",
+   "method": 8,
+   "crc32": "25e70f03",
+   "comp_size": 7489304,
+   "uncomp_size": 14799626,
+   "local_header_offset": 7461596952
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card002.psd",
+   "method": 8,
+   "crc32": "76f6c5fe",
+   "comp_size": 6902600,
+   "uncomp_size": 13826991,
+   "local_header_offset": 7469086382
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card003.psd",
+   "method": 8,
+   "crc32": "81e57d8c",
+   "comp_size": 6615155,
+   "uncomp_size": 13672919,
+   "local_header_offset": 7475989108
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card004.psd",
+   "method": 8,
+   "crc32": "16f59f45",
+   "comp_size": 6957429,
+   "uncomp_size": 15075495,
+   "local_header_offset": 7482604389
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card005.psd",
+   "method": 8,
+   "crc32": "edaced16",
+   "comp_size": 6253165,
+   "uncomp_size": 13539336,
+   "local_header_offset": 7489561944
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card006.psd",
+   "method": 8,
+   "crc32": "f98efe8d",
+   "comp_size": 6598720,
+   "uncomp_size": 13806842,
+   "local_header_offset": 7495815235
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card007.psd",
+   "method": 8,
+   "crc32": "9fe2b37a",
+   "comp_size": 7087307,
+   "uncomp_size": 14642162,
+   "local_header_offset": 7502414081
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card008.psd",
+   "method": 8,
+   "crc32": "465687f7",
+   "comp_size": 6551300,
+   "uncomp_size": 13955608,
+   "local_header_offset": 7509501514
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card009.psd",
+   "method": 8,
+   "crc32": "c2f9a5ea",
+   "comp_size": 7164707,
+   "uncomp_size": 15991071,
+   "local_header_offset": 7516052940
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card010.psd",
+   "method": 8,
+   "crc32": "50a32619",
+   "comp_size": 6721348,
+   "uncomp_size": 14022024,
+   "local_header_offset": 7523217773
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card011.psd",
+   "method": 8,
+   "crc32": "c9c5f71e",
+   "comp_size": 6635089,
+   "uncomp_size": 14395021,
+   "local_header_offset": 7529939247
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card012.psd",
+   "method": 8,
+   "crc32": "839c0a1b",
+   "comp_size": 7001981,
+   "uncomp_size": 14440372,
+   "local_header_offset": 7536574462
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card013.psd",
+   "method": 8,
+   "crc32": "5249eaa8",
+   "comp_size": 6423942,
+   "uncomp_size": 14018175,
+   "local_header_offset": 7543576569
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card014.psd",
+   "method": 8,
+   "crc32": "ef60645f",
+   "comp_size": 6510249,
+   "uncomp_size": 14528125,
+   "local_header_offset": 7550000637
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card015.psd",
+   "method": 8,
+   "crc32": "0b2d2aa5",
+   "comp_size": 6495844,
+   "uncomp_size": 13681106,
+   "local_header_offset": 7556511012
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card016.psd",
+   "method": 8,
+   "crc32": "b96447c1",
+   "comp_size": 7065817,
+   "uncomp_size": 15329138,
+   "local_header_offset": 7563006982
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card017.psd",
+   "method": 8,
+   "crc32": "3c2aed1a",
+   "comp_size": 6371392,
+   "uncomp_size": 13562146,
+   "local_header_offset": 7570072925
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card018.psd",
+   "method": 8,
+   "crc32": "e7769f51",
+   "comp_size": 6719133,
+   "uncomp_size": 13886474,
+   "local_header_offset": 7576444443
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card019.psd",
+   "method": 8,
+   "crc32": "d60f78bf",
+   "comp_size": 6748062,
+   "uncomp_size": 14618283,
+   "local_header_offset": 7583163702
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card020.psd",
+   "method": 8,
+   "crc32": "c6a9ca8a",
+   "comp_size": 7142810,
+   "uncomp_size": 15069291,
+   "local_header_offset": 7589911890
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card021.psd",
+   "method": 8,
+   "crc32": "62627a78",
+   "comp_size": 6450196,
+   "uncomp_size": 13946722,
+   "local_header_offset": 7597054826
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card022.psd",
+   "method": 8,
+   "crc32": "dadd412f",
+   "comp_size": 6947110,
+   "uncomp_size": 14182230,
+   "local_header_offset": 7603505148
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card023.psd",
+   "method": 8,
+   "crc32": "64bfeda4",
+   "comp_size": 6637763,
+   "uncomp_size": 14008423,
+   "local_header_offset": 7610452384
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card024.psd",
+   "method": 8,
+   "crc32": "e6b035e6",
+   "comp_size": 6964390,
+   "uncomp_size": 14400340,
+   "local_header_offset": 7617090273
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card025.psd",
+   "method": 8,
+   "crc32": "58d997cf",
+   "comp_size": 6838802,
+   "uncomp_size": 14484455,
+   "local_header_offset": 7624054789
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card026.psd",
+   "method": 8,
+   "crc32": "fce16785",
+   "comp_size": 6225983,
+   "uncomp_size": 13585330,
+   "local_header_offset": 7630893717
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card027.psd",
+   "method": 8,
+   "crc32": "9779915f",
+   "comp_size": 7275260,
+   "uncomp_size": 14658302,
+   "local_header_offset": 7637119826
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card028.psd",
+   "method": 8,
+   "crc32": "c8e7442a",
+   "comp_size": 6809137,
+   "uncomp_size": 14024418,
+   "local_header_offset": 7644395212
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card029.psd",
+   "method": 8,
+   "crc32": "c247205b",
+   "comp_size": 6449351,
+   "uncomp_size": 13644509,
+   "local_header_offset": 7651204475
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card030.psd",
+   "method": 8,
+   "crc32": "49437a65",
+   "comp_size": 6869164,
+   "uncomp_size": 14025380,
+   "local_header_offset": 7657653952
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card031.psd",
+   "method": 8,
+   "crc32": "aee1329c",
+   "comp_size": 7432421,
+   "uncomp_size": 14712486,
+   "local_header_offset": 7664523242
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards/card032.psd",
+   "method": 8,
+   "crc32": "6e397bea",
+   "comp_size": 7115484,
+   "uncomp_size": 14554745,
+   "local_header_offset": 7671955789
+  },
+  {
+   "name": "OK KO/Pow Cards -old/completed cards.zip",
+   "method": 8,
+   "crc32": "792dd95e",
+   "comp_size": 217049060,
+   "uncomp_size": 217476911,
+   "local_header_offset": 7679071399
+  },
+  {
+   "name": "OK KO/Pow Cards -old/Lakefont.ttf",
+   "method": 8,
+   "crc32": "2940c595",
+   "comp_size": 38409,
+   "uncomp_size": 62120,
+   "local_header_offset": 7896120577
+  },
+  {
+   "name": "OK KO/Stuff/",
+   "method": 0,
+   "crc32": "00000000",
+   "comp_size": 0,
+   "uncomp_size": 0,
+   "local_header_offset": 7896159097
+  },
+  {
+   "name": "OK KO/Stuff/Inking_Guide_v009a_JP.psd",
+   "method": 8,
+   "crc32": "3e6fe636",
+   "comp_size": 12346289,
+   "uncomp_size": 27194615,
+   "local_header_offset": 7896159171
+  },
+  {
+   "name": "OK KO/Stuff/KO head.ai",
+   "method": 8,
+   "crc32": "d8a2c495",
+   "comp_size": 1562380,
+   "uncomp_size": 1619898,
+   "local_header_offset": 7908505575
+  }
+ ]
+}

@@ -1,0 +1,177 @@
+=== which ===
+/opt/hatch-image/bin/codex
+/usr/bin/gh
+---
+opencode: NOT FOUND
+kilo: NOT FOUND
+codex: /opt/hatch-image/bin/codex
+copilot: NOT FOUND
+gh: /usr/bin/gh
+aider: NOT FOUND
+cline: NOT FOUND
+gemini: NOT FOUND
+npm: /opt/hatch-image/bin/npm
+node: /usr/bin/node
+=== versions ===
+codex-cli 0.149.0
+codex exit:0
+/bin/bash: line 8: opencode: command not found
+opencode exit:0
+gh version 2.102.0 (2026-09-30)
+https://github.com/cli/cli/releases/tag/v2.102.0
+v24.20.0
+10.9.4
+=== kilo dirs ===
+total 12
+drwxrws--- 1 root nogroup 112 Oct 17 02:35 .
+drwx--S--- 1 root nogroup 630 Oct 19 13:32 ..
+-rw-rw---- 1 root nogroup   0 Oct 17 02:34 .bash-permission-migrated
+-rw-rw---- 1 root nogroup 107 Oct 17 02:34 .gitignore
+-rw-rw---- 1 root nogroup 285 Oct 17 02:35 config.json
+-rw-rw---- 1 root nogroup  50 Oct 17 02:34 kilo.jsonc
+total 328
+drwxrws--- 1 root nogroup    112 Oct 17 02:34 .
+drwxrws--- 1 root nogroup    274 Oct 17 20:51 ..
+-rw-r----- 1 root nogroup 299008 Oct 17 02:36 kilo.db
+-rw-r----- 1 root nogroup  32768 Oct 17 02:46 kilo.db-shm
+-rw-r----- 1 root nogroup      0 Oct 17 02:46 kilo.db-wal
+drwxrws--- 1 root nogroup    192 Oct 17 02:36 log
+drwxrws--- 1 root nogroup      0 Oct 17 02:28 repos
+drwxrws--- 1 root nogroup     42 Oct 17 02:34 storage
+-rw-rw---- 1 root nogroup     36 Oct 17 02:34 telemetry-id
+total 459924
+drwxrws--- 1 root nogroup      1354 Oct 18 02:18 .
+drwxrws--- 1 root nogroup        76 Oct 17 20:51 ..
+drwxrws--- 1 root nogroup        46 Oct 13 23:38 __pycache__
+-rwxrwxr-x 1 root nogroup       253 Oct 12 17:47 activate-global-python-argcomplete
+-rwxr-x--- 1 root nogroup 220553472 Oct 17 01:15 agy
+-rwxrwxr-x 1 root nogroup       225 Oct 12 17:47 b2
+-rwxrwxr-x 1 root nogroup       225 Oct 12 17:47 b2v3
+-rwxrwxr-x 1 root nogroup       225 Oct 12 17:47 b2v4
+-rwxrwxr-x 1 root nogroup       225 Oct 12 17:47 b2v5
+-rwxrwxr-x 1 root nogroup       215 Oct 10 15:44 cffi-gen-src
+-rwxrwxr-x 1 root nogroup       229 Oct  6 20:46 ct2-fairseq-converter
+-rwxrwxr-x 1 root nogroup       228 Oct  6 20:46 ct2-marian-converter
+-rwxrwxr-x 1 root nogroup       233 Oct  6 20:46 ct2-openai-gpt2-converter
+-rwxrwxr-x 1 root nogroup       232 Oct  6 20:46 ct2-opennmt-py-converter
+-rwxrwxr-x 1 root nogroup       232 Oct  6 20:46 ct2-opennmt-tf-converter
+-rwxrwxr-x 1 root nogroup       229 Oct  6 20:46 ct2-opus-mt-converter
+-rwxrwxr-x 1 root nogroup       234 Oct  6 20:46 ct2-transformers-converter
+-rwxrwxr-x 1 root nogroup       216 Oct 12 17:47 docutils
+-rwxrwxr-x 1 root nogroup       212 Oct  6 20:00 dotenv
+-rw-rw---- 1 root nogroup       328 Oct 11 03:15 env
+-rw-rw---- 1 root nogroup       165 Oct 11 03:15 env.fish
+-rwxrwxr-x 1 root nogroup       221 Oct  8 04:01 hf
+-rwxrwxr-x 1 root nogroup       204 Oct  6 20:46 httpx
+-rwxrwxr-x 1 root nogroup       233 Oct  8 04:01 huggingface-cli
+-rwxrwxr-x 1 root nogroup       207 Oct  6 20:46 idna
+-rwxrwxr-x 1 root nogroup       241 Oct  6 20:01 imageio_download_bin
+-rwxrwxr-x 1 root nogroup       237 Oct  6 20:01 imageio_remove_bin
+-rwxrwxr-x 1 root nogroup       219 Oct 17 20:51 jupytext
+-rwxrwxr-x 1 root nogroup       223 Oct 17 20:51 jupytext-config
+-rwxrwxr-x 1 root nogroup       209 Oct 17 20:51 kaggle
+-rwxrwxr-x 1 root nogroup       220 Oct 17 20:51 markdown-it
+-rwxrwxr-x 1 root nogroup       233 Oct  6 20:01 onnxruntime_test
+-rwxr-x--- 1 root nogroup 186013824 Oct 17 01:58 opencode
+-rwxrwxr-x 1 root nogroup       213 Oct  6 20:01 piper
+-rwxrwxr-x 1 root nogroup       218 Oct  9 23:08 playwright
+-rwxrwxr-x 1 root nogroup       231 Oct 17 18:31 py.test
+-rwxrwxr-x 1 root nogroup       213 Oct 12 15:40 py7zr
+-rwxrwxr-x 1 root nogroup       210 Oct  6 20:46 pyav
+-rwxrwx--x 1 root nogroup     20132 Oct 13 23:16 pycdlib-explorer
+-rwxrwx--x 1 root nogroup      5922 Oct 13 23:16 pycdlib-extract-files
+-rwxrwx--x 1 root nogroup     47424 Oct 13 23:16 pycdlib-genisoimage
+-rwxrwxr-x 1 root nogroup       215 Oct 17 18:30 pygmentize
+-rwxrwxr-x 1 root nogroup       231 Oct 17 18:31 pytest
+-rwxrwxr-x 1 root nogroup       221 Oct 17 12:35 qr
+-rwxrwx--x 1 root nogroup     92877 Oct 13 23:38 readelf.py
+-rwxrwxr-x 1 root nogroup       246 Oct 12 17:47 register-python-argcomplete
+-rwxrwx--x 1 root nogroup       634 Oct 12 17:47 rst2ansi
+-rwxrwxr-x 1 root nogroup       220 Oct 12 17:47 rst2html
+-rwxrwxr-x 1 root nogroup       222 Oct 12 17:47 rst2html4
+-rwxrwxr-x 1 root nogroup       222 Oct 12 17:47 rst2html5
+-rwxrwxr-x 1 root nogroup       222 Oct 12 17:47 rst2latex
+-rwxrwxr-x 1 root nogroup       218 Oct 12 17:47 rst2man
+-rwxrwxr-x 1 root nogroup       218 Oct 12 17:47 rst2odt
+-rwxrwxr-x 1 root nogroup       230 Oct 12 17:47 rst2pseudoxml
+-rwxrwxr-x 1 root nogroup       216 Oct 12 17:47 rst2s5
+-rwxrwxr-x 1 root nogroup       222 Oct 12 17:47 rst2xetex
+-rwxrwxr-x 1 root nogroup       218 Oct 12 17:47 rst2xml
+-rwxrwx--x 1 root nogroup  23938560 Oct 18 02:18 ruff
+-rwxrwxr-x 1 root nogroup       215 Oct 17 20:51 slugify
+=== npm globals ===
+/usr/lib
+`-- (empty)
+
+bun
+codex
+codex-resources
+convert-cell-intent
+disabled-user-mgmt
+gws
+hatch-manifest
+hatch-memory-reclaim
+hatch-prewarm
+igd-cli
+messenger-cli
+npm
+npm-package
+npx
+percona-telemetry-disabled
+reboot-as-poweroff
+rtc-sidecar
+rtc-sidecar-lib
+runtime-cell.kdl
+wai
+aftership
+asana
+authdc
+avatar-media-generation
+box-cli
+browser-broker
+browser-service
+calendly
+canva
+device-data
+dropbox
+duffel
+edits
+etsy-cli
+evernote
+facebook-cli
+feature-request
+figma
+flightaware
+function-health
+genui-display-render
+geocode
+ghl
+github
+granola-cli
+hatch
+hatch-browser-lease-helper
+hatch-connector-output
+hatch-doctor
+hatch-execd
+hatch-healthd
+hatch-multicall
+hatch-rescue
+hatch-rescue-systemctl
+hatch-rescuectl
+hatch-slide-style
+hatch-vault
+hatch-ws-client
+hatch-zeitgeist
+hatch_gws_auth
+=== bashrc token check (existence/length only) ===
+COPILOT_GITHUB_TOKEN present in .bashrc: YES
+export COPILOT_GITHUB_TOKEN=<redacted>
+approx length: 93
+env COPILOT_GITHUB_TOKEN not set
+env GITHUB_TOKEN not set
+=== gh auth ===
+github.com
+  ✓ Logged in to github.com account mhvnsnt (/home/hatch/.config/gh/hosts.yml)
+  - Active account: true
+  - Git operations protocol: https
+  - Token: <redacted>
