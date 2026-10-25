@@ -1,3 +1,7 @@
+## Overnight run 2026-10-25 19:14-19:2xZ — verification run, QUIET window
+- Queue delta: 0 landed-verified BY this run, 0 lane merges verified, 0 reopened. No main moved: WH 8bf9f469, CJ 88342e6b, GRE a1dbd4cd, AO fd56cece.
+- WH #1096 still blocked: head eff663f2 unchanged, 13/14 green, game-unit-tests the only FAIL (pantera unmapped steps — real failure, lane-owned, coordinator-gated). #1136/#1139/#1141 heads unchanged, stack behind #1096 + gate FAIL. No new PRs.
+- Verify-sweep 6/6 verified. Checkpoints 80 healthy / 0 stale; ttt2 lane live (DATA000-XML-JOIN written 19:16Z), checkpoint 35 min old, not stale. Canon-sync: nothing new. Disk 82%.
 ## Overnight run 2026-10-25 18:44-18:53Z — verification run, QUIET window
 - Queue delta: 0 landed-verified BY this run, 0 lane merges verified, 0 reopened. No main moved: WH 8bf9f469, CJ 88342e6b, GRE a1dbd4cd, AO 4152e8b8.
 - WH #1096 still blocked: head eff663f2 unchanged since 16:44:37Z, 13/14 green, game-unit-tests the only FAIL (pantera unmapped steps — real failure, lane-owned, coordinator-gated). #1136/#1139/#1141 heads unchanged, stack behind #1096 + gate FAIL. No new PRs.
