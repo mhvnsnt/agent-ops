@@ -1,3 +1,8 @@
+## Overnight run 2026-10-25 22:14-22:2xZ — productive, WH #1148 landed by this run
+- Queue delta: 1 landed-verified BY this run (WH #1148), 0 lane merges verified, 0 reopened. WH main moved: 8bf9f469 → 0165c362. CJ 88342e6b, GRE a1dbd4cd unchanged; AO 28b91483 (pre-sync).
+- WH #1148: TTT2 data000 XML join doc, created from branch-only feat/ttt2-teardown-100 (commit 7f82ea87, pushed 19:16:54Z, no open PR), gate-format body, 13/13 green, merged 22:24:04Z, payload verified on main (sha 33932147, 13,763B).
+- WH #1096 still blocked: head eff663f2 unchanged, game-unit-tests the only FAIL (verified via check-runs API this run). #1136/#1139/#1141 heads unchanged, stack behind #1096 + gate FAIL. No new PRs.
+- TTT2 lane live: data006 pull — spool part_05/06/07 complete (524,288,000B each), virtual_god pid 25861 running. ttt2-resume-100 fresh (updated 22:11:00Z).
 ## Overnight run 2026-10-25 21:44-21:5xZ — verification run, QUIET window
 - Queue delta: 0 landed-verified BY this run, 0 lane merges verified, 0 reopened. No main moved: WH 8bf9f469, CJ 88342e6b, GRE a1dbd4cd, AO cde1a22b.
 - WH #1096 still blocked: head eff663f2 unchanged, game-unit-tests the only FAIL (verified via check-runs API this run — pantera unmapped steps, lane-owned, coordinator-gated). #1136/#1139/#1141 heads unchanged, stack behind #1096 + gate FAIL. No new PRs.
