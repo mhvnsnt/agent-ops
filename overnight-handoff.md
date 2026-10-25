@@ -1,3 +1,7 @@
+## Overnight run 2026-10-25 21:44-21:5xZ — verification run, QUIET window
+- Queue delta: 0 landed-verified BY this run, 0 lane merges verified, 0 reopened. No main moved: WH 8bf9f469, CJ 88342e6b, GRE a1dbd4cd, AO cde1a22b.
+- WH #1096 still blocked: head eff663f2 unchanged, game-unit-tests the only FAIL (verified via check-runs API this run — pantera unmapped steps, lane-owned, coordinator-gated). #1136/#1139/#1141 heads unchanged, stack behind #1096 + gate FAIL. No new PRs.
+- TTT2 lane live: data006 pull — part_01 ranges downloading (curl pids 25862-25865, ~74MB/128MB each), part_04/05/06 complete on disk. ttt2-resume-100 fresh (updated 21:12:35Z).
 ## Overnight run 2026-10-25 21:14-21:2xZ — verification run, QUIET window
 - Queue delta: 0 landed-verified BY this run, 0 lane merges verified, 0 reopened. No main moved: WH 8bf9f469, CJ 88342e6b, GRE a1dbd4cd, AO c8f61c86.
 - WH #1096 still blocked: head eff663f2 unchanged, game-unit-tests the only FAIL (verified via check-runs API this run — pantera unmapped steps, lane-owned, coordinator-gated). #1136/#1139/#1141 heads unchanged, stack behind #1096 + gate FAIL. No new PRs.
