@@ -1,3 +1,12 @@
+## Overnight run 2026-10-26 01:44-01:5xZ — verification run, QUIET window
+- Queue delta: 0 landed-verified BY this run, 0 lane merges verified, 0 reopened. No main moved: WH 0165c362, CJ 88342e6b, GRE a1dbd4cd, AO e80655dc.
+- WH #1096 still blocked: head eff663f2 unchanged, game-unit-tests the only FAIL (pantera unmapped steps, lane-owned, coordinator-gated, owner decision pending). CORRECTION: step-plan batches #1122-#1132 latest instruction-gate runs all SUCCESS ~11:43Z Oct 25 — prior "gate FAIL" triage stale; blocker is now the STACK (#1129 CONFLICTING blocks Skull chain; all stack behind #1096). #1141 gate still FAILURE and lane self-blocks ("Merges AFTER #1096... never on mergeable:true alone") — not merged.
+- BF guard runs #19/#17 STILL queued (~2h57m); runner box-Brutal-Fist STILL OFFLINE — merge decision deferred.
+- Verify-sweep 5/5 verified (WH #1148, AO #155, WH #446, CJ v2 + full-video releases). Checkpoints 80 healthy / 0 stale. Canon-sync: nothing new. Disk 60% (40G free).
+- Blockers unchanged (see queue).
+
+ADDENDUM 01:18Z: AO #155 (this run's queue sync) LANDED-VERIFIED BY THIS RUN — merged e80655dc (parents [a51b4763 main, 8b218df branch]); merge-tree = exactly MERGE-QUEUE.md +12/-0 and overnight-handoff.md +8/-0, 0 deletions; queue on main 448,464B sha 8414059a byte-identical to local, handoff 691,888B sha eda44ff0 byte-identical, 01:14Z run entry at line 1 of both. Corrected run tally: 1 landed-verified BY this run (AO #155), 0 lane merges verified on main, 0 reopened. BF #19/#17 guard runs STILL queued at run end — runner box-Brutal-Fist still offline; merge decision deferred to a later run. Run window corrected to 01:14-01:18Z.
+
 ## Overnight run 2026-10-26 01:14-01:2xZ — verification run, QUIET window
 - Queue delta: 0 landed-verified BY this run, 0 lane merges verified, 0 reopened. No main moved: WH 0165c362, CJ 88342e6b, GRE a1dbd4cd, AO a51b4763.
 - WH #1096 still blocked: head eff663f2 unchanged, game-unit-tests the only FAIL (verified via check-runs API this run — pantera unmapped steps, lane-owned, coordinator-gated). #1136/#1139/#1141 heads unchanged, stack behind #1096 + gate FAIL. No new PRs.
