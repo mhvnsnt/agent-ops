@@ -1033,10 +1033,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-continue-with-checkpointing" class="md-nav__link">
+  <a href="#step-4-claim-the-task-then-continue-with-checkpointing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4 — Continue, with checkpointing
+        Step 4 — Claim the task, then continue with checkpointing
       
     </span>
   </a>
@@ -1048,6 +1048,17 @@
     <span class="md-ellipsis">
       
         Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standing-laws-apply-to-every-resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standing Laws (apply to every resume)
       
     </span>
   </a>
@@ -1751,10 +1762,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-continue-with-checkpointing" class="md-nav__link">
+  <a href="#step-4-claim-the-task-then-continue-with-checkpointing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4 — Continue, with checkpointing
+        Step 4 — Claim the task, then continue with checkpointing
       
     </span>
   </a>
@@ -1766,6 +1777,17 @@
     <span class="md-ellipsis">
       
         Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standing-laws-apply-to-every-resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standing Laws (apply to every resume)
       
     </span>
   </a>
@@ -1814,11 +1836,17 @@ The previous worker is gone. Its checkpoint is your only source of truth.</p>
 <li>If the checkpoint says a step was done but its outputs are missing,
   treat that step as NOT done and redo it (the restart may have eaten it)</li>
 </ul>
-<h2 id="step-4-continue-with-checkpointing">Step 4 — Continue, with checkpointing<a class="headerlink" href="#step-4-continue-with-checkpointing" title="Permanent link">&para;</a></h2>
+<h2 id="step-4-claim-the-task-then-continue-with-checkpointing">Step 4 — Claim the task, then continue with checkpointing<a class="headerlink" href="#step-4-claim-the-task-then-continue-with-checkpointing" title="Permanent link">&para;</a></h2>
 <ul>
+<li><strong>Claim first</strong>: <code>checkpoint.sh claim &lt;TASK_ID&gt; &lt;your-agent-id&gt;</code> — this
+  bumps the fencing epoch and prints <code>EPOCH=N</code>. From now on pass
+  <code>--epoch N</code> on <strong>every</strong> checkpoint write. If a write comes back
+  <code>FENCED</code> (exit 3), someone else claimed the task after you — stop and
+  report to the parent; do not force your way in. (Full contract:
+  <code>LANE-RESILIENCE-SOP.md</code>.)</li>
 <li>Update your checkpoint as you work:</li>
-<li><code>checkpoint.sh beat &lt;TASK_ID&gt;</code> at least every 10 minutes during long runs</li>
-<li><code>checkpoint.sh step &lt;TASK_ID&gt; "..."</code> after each completed unit of work</li>
+<li><code>checkpoint.sh beat &lt;TASK_ID&gt; --epoch N</code> at least every 10 minutes during long runs</li>
+<li><code>checkpoint.sh step &lt;TASK_ID&gt; "..." --epoch N</code> after each completed unit of work</li>
 <li><code>checkpoint.sh next &lt;TASK_ID&gt; "..."</code> when the plan changes</li>
 <li><code>checkpoint.sh decide &lt;TASK_ID&gt; "..."</code> for any decision a future
     resume needs to know</li>
@@ -1834,6 +1862,15 @@ The previous worker is gone. Its checkpoint is your only source of truth.</p>
   Report that to the parent agent and ask for direction.</li>
 <li>Your final report to the parent must state: what was already done before
   the restart, what you did after resuming, and what remains.</li>
+</ul>
+<h2 id="standing-laws-apply-to-every-resume">Standing Laws (apply to every resume)<a class="headerlink" href="#standing-laws-apply-to-every-resume" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>RESEARCH-BEFORE-ANSWER</strong>: If you need to answer "what's the best X", run <code>python3 ~/workspace/tools/research.py compare "&lt;topic&gt;"</code> first. Don't guess from training data.</li>
+<li><strong>NO-SILENT-FAILURE</strong>: If you discover something failed, report it immediately. Never let the owner discover a failure by asking.</li>
+<li><strong>PHONE-BRIDGE</strong>: The owner is phone-only. If something needs a browser/computer, do it yourself. Don't hand him manual homework.</li>
+<li><strong>PULL-STRAIGHT-TO-STORE</strong>: Clone directly into repo checkouts, wire up there, push. Don't stage on local disk.</li>
+<li><strong>RESPOND-FAST</strong>: Acknowledge fast, work async. Don't chain tool calls in silence.</li>
+<li><strong>CHECK-PR-BODY-LOCALLY</strong>: Before opening a PR, verify its body with the local instruction-gate check — the queue's copy at <code>agent-ops/queue-work/instruction_gate-main.py</code> is verified byte-identical to the live gate (<code>.github/scripts/instruction_gate.py</code> on western-heart main). Pattern: <code>agent-ops/queue-work/check1146.py</code> — <code>check(body, changed_files, repo_root, labels, author)</code> returns the error list; empty = pass. A body that fails locally fails CI too, so check before pushing, not after.</li>
 </ul>
 
 

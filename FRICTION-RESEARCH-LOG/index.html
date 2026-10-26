@@ -628,6 +628,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2026-10-25-continuous-friction-research-pass-deploy-block-126s-load-gate-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-10-25 — Continuous friction-research pass (deploy block + 126s load + gate failures)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-10-25 — Continuous friction-research pass (deploy block + 126s load + gate failures)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-1-deploy-blocked-5969-mb-vs-github-pages-1-gb-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 1 — Deploy blocked: 5,969 MB vs GitHub Pages 1 GB limit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-2-fight-goes-live-126s-after-stage-confirm-play-verify-run-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 2 — Fight goes live +126s after stage confirm (play-verify run 18)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-3-instruction-gate-body-failures-keep-recurring-parent-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 3 — Instruction-gate body failures keep recurring (parent check)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tooling-involvement-note-reporting-rule_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tooling-involvement note (reporting rule)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1784,6 +1845,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2026-10-25-continuous-friction-research-pass-deploy-block-126s-load-gate-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-10-25 — Continuous friction-research pass (deploy block + 126s load + gate failures)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-10-25 — Continuous friction-research pass (deploy block + 126s load + gate failures)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-1-deploy-blocked-5969-mb-vs-github-pages-1-gb-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 1 — Deploy blocked: 5,969 MB vs GitHub Pages 1 GB limit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-2-fight-goes-live-126s-after-stage-confirm-play-verify-run-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 2 — Fight goes live +126s after stage confirm (play-verify run 18)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-3-instruction-gate-body-failures-keep-recurring-parent-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 3 — Instruction-gate body failures keep recurring (parent check)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tooling-involvement-note-reporting-rule_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tooling-involvement note (reporting rule)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1893,6 +2015,115 @@ repos). Mergify — CONDITIONAL power option (free for public repos,
 verified absent). Codex not used. All research via live web sources cited in the
 docs above; all wire-ups are own-code (bash/python3 stdlib) or adopted research
 output, tested as recorded.</p>
+<hr />
+<h2 id="2026-10-25-continuous-friction-research-pass-deploy-block-126s-load-gate-failures">2026-10-25 — Continuous friction-research pass (deploy block + 126s load + gate failures)<a class="headerlink" href="#2026-10-25-continuous-friction-research-pass-deploy-block-126s-load-gate-failures" title="Permanent link">&para;</a></h2>
+<p>Owner standing order 2026-10-19 ~23:03 CDT. Problems picked from the last few
+days of <code>~/MEMORY.md</code>, <code>~/memory/2026-10-25.md</code>, and
+<code>~/workspace/agent-ops/disk-cleanup-log.md</code> (failures/stalls/retries Oct 23–25),
+excluding everything settled in the 2026-10-19 sweep (restic/aria2/zstd/croc,
+releases-as-store, CI minute-diet — the last one LANDED 2026-10-23 as
+agent-ops #35, concurrency-cancel + timeout-minutes now on the western-heart
+gate workflows) and the 2026-10-22 pass above. Two researchers fanned out in
+parallel; a third friction (instruction-gate body failures) was checked by the
+parent run directly. Research + docs only — no game code touched, no lanes
+touched, nothing deleted.</p>
+<h3 id="problem-1-deploy-blocked-5969-mb-vs-github-pages-1-gb-limit">Problem 1 — Deploy blocked: 5,969 MB vs GitHub Pages 1 GB limit<a class="headerlink" href="#problem-1-deploy-blocked-5969-mb-vs-github-pages-1-gb-limit" title="Permanent link">&para;</a></h3>
+<p><strong>Cost:</strong> live site <code>https://mhvnsnt.github.io/western-heart/</code> frozen on the
+Oct 24 build; owner decision pending ("what gets cut").</p>
+<p><strong>Doc:</strong> <code>research-friction-20261025/01-deploy-pages-limit.md</code>.</p>
+<p><strong>Verified live (2026-10-25/26):</strong> Pages 1 GB published-site cap confirmed
+from GitHub's own docs (5,969 MB is 5.8× over — the full set can never ship
+on Pages). GitHub Release assets send <strong>NO CORS headers</strong> (curl-probed:
+302 → <code>release-assets.githubusercontent.com</code>, 200, no <code>Access-Control-Allow-Origin</code>,
+signed URL ~1 h expiry) — direct in-game <code>fetch()</code> from Releases FAILS, so
+releases stay the store, not the runtime CDN. jsDelivr serves repo files
+≤20 MB with CORS <code>*</code> + correct <code>model/gltf-binary</code> (live probe) and 403s an
+86 MB GLB (documented 20 MB/file cap). Repo tree measured via the git-trees
+API: 176 GLBs &gt;20 MB hold 5,914 MB (73% of GLB bytes); 98 GLBs &gt;25 MiB
+(4,178 MB). Shell-only floor ≈ 70–170 MB (code ~10 MB + UI/portraits ~7.5 MB
++ 1 stage + 2 fighters + movesets/music). <code>game/netlify.toml</code> on main
+verified: publishes <code>game/</code>, proxies <code>/roster/*</code> etc. to Pages (so Netlify
+currently inherits the Pages problem).</p>
+<p><strong>Recommended (1st choice, $0):</strong> shell on Pages (~70–170 MB) + all GLBs on
+Cloudflare R2 free tier (whole set fits 10 GB, $0 egress, CORS-configurable).
+itch.io HTML5 shell + R2 lazy-load as the money path (shell fits the 500 MB /
+1,000-file caps; HTML5 = donations only, selling needs a Downloadable build;
+payouts Direct to PayPal/Stripe or Collected, $5 min). jsDelivr as the
+small-file fast path (optional). Cloudflare Pages as shell-only host
+(unlimited bandwidth) or Netlify free as shell mirror (bandwidth figure
+uncertain under the 2025 credit system — verify at signup).</p>
+<p><strong>Excluded:</strong> full set on Pages, releases as runtime CDN, Cloudflare Pages
+full set (25 MiB/file cap on all plans), Vercel Hobby (non-commercial clause),
+git LFS / Actions artifacts (already excluded 2026-10-19).</p>
+<p><strong>Blocked:</strong> owner decision (split hosting vs cutting content — the
+recommendation makes cutting unnecessary); R2 signup (may ask for a payment
+method — owner-only per card rules); itch.io account + payout setup
+(owner phone-only).</p>
+<h3 id="problem-2-fight-goes-live-126s-after-stage-confirm-play-verify-run-18">Problem 2 — Fight goes live +126s after stage confirm (play-verify run 18)<a class="headerlink" href="#problem-2-fight-goes-live-126s-after-stage-confirm-play-verify-run-18" title="Permanent link">&para;</a></h3>
+<p><strong>Cost:</strong> owner previously called the game unplayable; the 2-min load is part
+of that. 4 missing assets (404s) in the same run.</p>
+<p><strong>Doc:</strong> <code>research-friction-20261025/02-load-time-126s.md</code>.</p>
+<p><strong>Verified live (2026-10-26 ~04:09 UTC):</strong> <code>deploy-manifest.json</code> on the live
+site is summary-only (7,181 files / 5,647,298,304 B — no per-file list, no
+hashes), so no manifest check can run until <code>build_pages.py</code> emits a per-file
+manifest. HTTP Range works on Pages (live 206 + <code>accept-ranges: bytes</code>).
+Pages serves <code>cache-control: max-age=600</code> — the browser HTTP cache only holds
+assets 10 minutes. three.js latest 0.186.1 (MIT); r186 release notes contain
+zero KTX2/GLTFLoader entries.</p>
+<p><strong>Recommended sequence (measure first, then cut):</strong> (1) own instrumentation
+in <code>game/js/loadperf.js</code> + <code>?loadreport</code> FIRST — the 126s is unmeasured and
+no three.js load profiler exists to pull (stats-gl, MIT, is a dev-only frame
+overlay). (2) Kill the 404s: per-file <code>asset-manifest.json</code> from
+<code>build_pages.py</code> + ~100-line boot verifier (HEAD + size check, named failure,
+3× retry); SRI does not apply to <code>fetch()</code>/GLB, and no lib exists for this.
+(3) If network-bound: KTX2/BasisU via existing gltfpack <code>-tc</code> (ETC1S color /
+UASTC normal, POT resize, own-eyes compare per fighter) + one shared
+<code>KTX2Loader</code> in <code>game/js/assets.js</code>; preload next fight during the current
+fight; Workbox SW + Cache Storage (Apache-2.0; its precache manifest doubles
+as the §4 verifier). (4) Draco: SKIP — meshopt already wired and decodes
+faster (1–3 GB/s SIMD). (5) Needle gltf-progressive (MIT): EVALUATE for
+stages only (17.4 MB → 715 KB first paint is real, but needs LOD-processed
+assets and buys nothing for fighters).</p>
+<p><strong>Correction (parent pass, 2026-10-25):</strong> the research doc's first draft said
+the 4 missing assets were "unnamed in the handoff" — wrong. They are named in
+the run-18 HTTP log (<code>~/workspace/_playverify-20261025/http8123.log</code>) and in
+memory: <code>roster/demonio/anatomy/anatomy-layers.json</code>,
+<code>game-src/js/intro-interactions.js</code>, <code>customization/parts/no-mercy/glb/body_parts/model_1171.glb</code>,
+<code>customization/eye-library/eye-classic-original.png</code>. <code>game-src/js/...</code> looks
+like a wrong-path bug (<code>game-src/</code> vs <code>game/js/</code>) — a game-lane fix. Doc
+corrected before this PR.</p>
+<p><strong>Blocked:</strong> nothing above is proven to fix the 126s until the instrumentation
+runs. Do not start the KTX2 re-encode of all fighters before the measurement.
+Needle Cloud asset generation is a third-party service step (free tier: 30
+optimizations) — owner call before any fighter GLB is uploaded to it.</p>
+<h3 id="problem-3-instruction-gate-body-failures-keep-recurring-parent-check">Problem 3 — Instruction-gate body failures keep recurring (parent check)<a class="headerlink" href="#problem-3-instruction-gate-body-failures-keep-recurring-parent-check" title="Permanent link">&para;</a></h3>
+<p><strong>Cost:</strong> AO #111 and #113 (queue syncs) plus WH #1085/#1092/#1086–#1089 failed
+the instruction gate on body format (missing sections, short "## Proof"
+heading, deviations "None." ×5 with specified≠used, proof backticks resolving
+as refs) — each failure burns a CI run and a lane round-trip.</p>
+<p><strong>Verified this pass (2026-10-25):</strong> the local gate script
+<code>agent-ops/queue-work/instruction_gate-main.py</code> is <strong>byte-identical</strong> to the
+live gate on western-heart main (<code>.github/scripts/instruction_gate.py</code>,
+221 lines, <code>diff</code> clean against commit <code>04bbd28</code>); both copies in queue-work/
+are identical. The PR template on main already contains all 6 required
+sections with guidance. The merge-queue runs already use the local check
+("Gate-format body verified 0 errors locally" appears in MERGE-QUEUE.md).
+The gap is adoption: lanes that open PRs outside the queue flow never run the
+check first, and neither <code>RESUME_BRIEF_TEMPLATE.md</code> nor <code>CHECKPOINT_PROTOCOL.md</code>
+mentions it.</p>
+<p><strong>Wired (this PR):</strong> one standing-law line in <code>RESUME_BRIEF_TEMPLATE.md</code> —
+run the local gate check on the PR body before opening the PR (pattern:
+<code>agent-ops/queue-work/check1146.py</code>, <code>check(body, changed_files, repo_root,
+labels, author)</code>; empty list = pass; the queue-work copy is verified identical
+to live). Docs-only, no behavior change.</p>
+<h3 id="tooling-involvement-note-reporting-rule_1">Tooling-involvement note (reporting rule)<a class="headerlink" href="#tooling-involvement-note-reporting-rule_1" title="Permanent link">&para;</a></h3>
+<p>No aider/copilot/gemini CLI involvement in this pass (not installed on this VM;
+verified absent). Codex not used. All research via live web sources cited in the
+two docs above; all wire-ups are own-code (docs) or adopted research output,
+tested as recorded. The two researchers ran in parallel as subagents; both
+docs were read and verified by the parent run before this PR (including the
+404-names correction above and a misread-diff check on
+RESEARCH-PULLIN-INDEX.md — the file was confirmed intact, no clobber).</p>
 
 
 
