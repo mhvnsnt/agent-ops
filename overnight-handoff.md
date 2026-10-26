@@ -1,3 +1,11 @@
+## Overnight run 2026-10-26 01:14-01:2xZ — verification run, QUIET window
+- Queue delta: 0 landed-verified BY this run, 0 lane merges verified, 0 reopened. No main moved: WH 0165c362, CJ 88342e6b, GRE a1dbd4cd, AO a51b4763.
+- WH #1096 still blocked: head eff663f2 unchanged, game-unit-tests the only FAIL (verified via check-runs API this run — pantera unmapped steps, lane-owned, coordinator-gated). #1136/#1139/#1141 heads unchanged, stack behind #1096 + gate FAIL. No new PRs.
+- BF guard runs #19/#17 STILL queued (~2.5h); runner box-Brutal-Fist STILL OFFLINE — merge decision deferred.
+- Verify-sweep 6/6 verified. Checkpoints 80 healthy / 0 stale; ttt2 lane live (virtual_god pid 30516, 11th restart-kill today, relaunched 20:11 CDT; spool part_03/04/05 complete; checkpoint fresh 01:12:36Z). Canon-sync: nothing new. Disk 60% (40G free). Supervisor PID 2066 alive on 8771 (verified this run).
+- Blockers unchanged (see queue).
+ADDENDUM 00:48Z: AO #154 (this run's queue sync) LANDED-VERIFIED BY THIS RUN — merged a51b4763 (parents [bcbfbedb main, 57e89f85 branch]); merge-tree = exactly MERGE-QUEUE.md +12/-0 and overnight-handoff.md +6/-0, 0 deletions; queue on main 443,854B sha f9344d1b byte-identical to local, handoff 690,304B sha e1c8cecc byte-identical, 00:44Z run entry at line 1 of both. Corrected run tally: 1 landed-verified BY this run (AO #154), 0 lane merges verified on main, 0 reopened. BF #19/#17 guard runs STILL queued at run end — runner box-Brutal-Fist still offline; merge decision deferred to a later run. Run window corrected to 00:44-00:48Z.
+
 ## Overnight run 2026-10-26 00:44-00:5xZ — verification run, QUIET window
 - Queue delta: 0 landed-verified BY this run, 0 lane merges verified, 0 reopened. No main moved: WH 0165c362, CJ 88342e6b, GRE a1dbd4cd, AO bcbfbedb.
 - WH #1096 still blocked: head eff663f2 unchanged, game-unit-tests the only FAIL (verified via check-runs API this run — pantera unmapped steps, lane-owned, coordinator-gated). #1136/#1139/#1141 heads unchanged, stack behind #1096 + gate FAIL. No new PRs.
