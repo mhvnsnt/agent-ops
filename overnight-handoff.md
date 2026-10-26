@@ -1,3 +1,9 @@
+## Overnight run 2026-10-26 00:44-00:5xZ — verification run, QUIET window
+- Queue delta: 0 landed-verified BY this run, 0 lane merges verified, 0 reopened. No main moved: WH 0165c362, CJ 88342e6b, GRE a1dbd4cd, AO bcbfbedb.
+- WH #1096 still blocked: head eff663f2 unchanged, game-unit-tests the only FAIL (verified via check-runs API this run — pantera unmapped steps, lane-owned, coordinator-gated). #1136/#1139/#1141 heads unchanged, stack behind #1096 + gate FAIL. No new PRs.
+- BF guard runs #19/#17 STILL queued (~2h); runner box-Brutal-Fist STILL OFFLINE — merge decision deferred.
+- Verify-sweep 6/6 verified. Checkpoints 80 healthy / 0 stale; ttt2 lane live (virtual_god pid 16567, part_02 ranges actively writing; checkpoint fresh 00:43:16Z). Canon-sync: nothing new. Disk 59% (41G free).
+- Blockers unchanged (see queue).
 ## overnight-idle-pipeline run 2026-10-26 ~00:14-00:2xZ (quiet verification run — 0 landed-verified by this run, 0 reopened)
 - **STEP 1: No new merges.** WH main unchanged (0165c362 = #1148); CJ/GRE unchanged; AO 753a854f = 23:44 run's sync #152. No new PRs (newest WH #1141). WH #1096 head eff663f2 unchanged, MERGEABLE/UNSTABLE, game-unit-tests still the only FAIL — owner decision pending. #1136/#1139/#1141 heads unchanged, stack behind #1096 + gate FAIL. Brutal-fist guard runs #19/#17 STILL queued (~95 min); runner box-Brutal-Fist STILL OFFLINE — merge decision deferred.
 - **Verify-sweep 6/6:** AO #152 queue + handoff on main byte-identical; WH #1148 merge parents + payload file; WH #1147 ingest.mjs; CJ full-video release asset — all verified, 0 false claims.
