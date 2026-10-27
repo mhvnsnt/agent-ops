@@ -689,6 +689,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2026-10-27-no-card-fallback-asset-host-if-cloudflare-r2-doesnt-work-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-10-27 — No-card fallback asset host (if Cloudflare R2 doesn't work out)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1906,6 +1917,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2026-10-27-no-card-fallback-asset-host-if-cloudflare-r2-doesnt-work-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-10-27 — No-card fallback asset host (if Cloudflare R2 doesn't work out)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2124,6 +2146,12 @@ tested as recorded. The two researchers ran in parallel as subagents; both
 docs were read and verified by the parent run before this PR (including the
 404-names correction above and a misread-diff check on
 RESEARCH-PULLIN-INDEX.md — the file was confirmed intact, no clobber).</p>
+<h2 id="2026-10-27-no-card-fallback-asset-host-if-cloudflare-r2-doesnt-work-out">2026-10-27 — No-card fallback asset host (if Cloudflare R2 doesn't work out)<a class="headerlink" href="#2026-10-27-no-card-fallback-asset-host-if-cloudflare-r2-doesnt-work-out" title="Permanent link">&para;</a></h2>
+<p><strong>Doc:</strong> <code>research-friction-20261025/03-no-card-fallback.md</code> (research only, no accounts created, no cards entered).
+<strong>Problem targeted:</strong> R2 signup stalled 2026-10-27 ~09:47 CDT at the "Add R2 subscription" step (Total Due Now $0.00, but auto-renews and bills a payment method on file); owner ordered a no-card fallback be found, plus a free-tier guard that is actually set up and saved.
+<strong>What was verified live (2026-10-27):</strong> <strong>Backblaze B2 is the recommended fallback</strong> — no card at signup (name + email only; card only needed past 10 GB), 10 GB free storage (set is 5.33 GB), 5 GB single-PUT max file (largest WH file ~90 MB), per-bucket CORS rules (official docs), free egress 3x stored volume ≈ 16 GB/mo ≈ ~160 full loads/mo (Backblaze's own page). <strong>Key finding: B2's no-card state IS a hard cap</strong> — uploads block at 10 GB (<code>storage cap exceeded</code>, first-hand + MSP360 KB 2026-10-16), daily download/transaction caps 403 for non-paying accounts (B2 API docs), email alerts at 75%/100%; adding a card flips every cap to "No Cap", so never add one to "fix" a cap hit. <strong>Cloudflare has NO hard cap</strong> (official budget-alerts docs: "informational only. They do not pause or cap usage"; usage-based alerts also notify-only and can't even be created on this account yet) — the real R2 guard is size discipline (5.33 GB vs 10 GB free) + a $0.01/$1 budget alert once subscribed + weekly usage checks. Also verified: Tebi closed 2026-03-31 (dead); Scaleway needs a card to create a bucket despite 75 GB free; Oracle needs a card (own FAQ); IDrive e2's free tier is disputed (permanent-free vs trial allowance + 1 TB minimum — verify before use); Bunny.net is 14-day trial only ($1/mo minimum after); Tigris/Filebase fail on size (5 GB &lt; 5.33 GB); Supabase 1 GB, Firebase needs Blaze/card, Storj 30-day trial + Chapter 11.
+<strong>Pulled in:</strong> nothing (research only, per task). <strong>Recommended:</strong> B2 as the fallback with exact setup steps in the doc (bucket <code>western-heart-assets</code>, public, CORS <code>["https"]</code> rule, Caps &amp; Alerts recorded in-repo); R2 stays 1st choice for its unlimited $0 egress.
+<strong>Blocked:</strong> owner decision 2026-10-27 ~10:04 CDT: WAIT for the no-card fallback — do NOT accept R2 subscription/preauthorization terms; R2 untouched. No B2 account created — standing up B2 needs his word (research task forbade signups).</p>
 
 
 
