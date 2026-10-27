@@ -111,7 +111,97 @@ briefing is briefed by the AGENTS.md section on arrival; add its row here when i
 |------|-------------|--------|
 | Merge coordinator (overnight queue-sync / push-everything wave) | agent-ops AGENTS.md briefing + this file | AWAITING CONFIRMATION |
 
+## Scope decision + active-lane census (2026-10-26)
+
+Owner decision 2026-10-26 ~19:10 CDT (tapped option): **"Count only active lanes"** — the flip no longer waits on every briefed lane, only on active ones. This replaces the open question in the 2026-10-24 record.
+
+**"Active" definition (recorded, defensible):** a western-heart PR counts as active if its `updatedAt` is at or after the briefing census, **2026-10-24 21:35Z** (16:35 CDT Oct 24). `updatedAt` moves on any push, comment, or GitHub-side refresh, so it is a checkable liveness signal, not a guess about who is working. PRs opened after the briefing are active by the same test (their `updatedAt` is after the cutoff).
+
+**Census 2026-10-26 ~19:11 CDT (00:11Z Oct 27), verified live via `gh pr list`:** 57 open western-heart PRs (down from 77 at briefing — 20 closed/merged since, incl. the Oct 25 get-it-all-done wave). 31 mergeable / 26 conflicting. **51 active, 6 inactive.** 40 PRs opened after the briefing — the active set keeps moving; the flip must be judged against the cutoff set below, or re-censused at flip time.
+
+**Flip state verified live 2026-10-26:** western-heart `main` branch protection has `required_merge_queue: null`; agent-ops `main` has NO branch protection at all (404); no rulesets on either repo. The flip has NOT happened anywhere. Do not flip until the parent agent verifies the confirmation evidence and flips both repos together.
+
+### Active lanes (51) — in scope, all chased 2026-10-26
+
+| PR | Title | Branch | Last updated | Status | Confirmation |
+|----|-------|--------|--------------|--------|--------------|
+| #442 | Urban Reign phase 2: native .gyu motion conversion (stacked on #434) | `ur-phase2-motion` | 2026-10-26 | MERGEABLE / BLOCKED | AWAITING CONFIRMATION |
+| #706 | w59: Ashlane->DOA claimed-map lock + DOA4/KOF3D federation sources + Vain Abel 200-entry wiring | `w59-doa4-kof-movesets` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #713 | VF5 motion pipeline: Dural stance for Zen (worker 60) | `vf5/motion-pipeline-20261022` | 2026-10-25 | MERGEABLE / UNSTABLE | AWAITING CONFIRMATION |
+| #714 | worker68: CORNERSTONE moveset — Yamazaki 3D KOF + Rock + Toguro (YYH:DT teardown) + library banks | `w68/cornerstone-moveset` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #718 | Worker 72: T5/T6/TTT2/T7 teardown completion report (MERGE FREEZE — do not merge) | `worker72/t5-t6-ttt2-teardown-completion` | 2026-10-26 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #722 | Worker 75: SmutBase intake repair — all 6 files open + T-pose renders (MERGE FREEZE, do NOT merge) | `worker75-smutbase-intake-repair-20261022` | 2026-10-26 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #744 | Worker 84: Gyou spirit body archive (Tripo fiery humanoid) — archive-only, not wired | `archive/gyou-spirit-body-20261022` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #857 | Jules API helper + Jules taskboard claims | `grok/jules-helper` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #863 | T7 Steam extraction #1: pakchunk0 meshes (Alisa/Lee/Bob + 35 more), textures, UI | `feat/t7-steam-extraction` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #875 | rig: universal face-cone skin-weight audit + fixer (WIP) | `feat/face-cone-skin-weights` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #964 | docs: agent handoff 2026-10-23 (pickup guide for Claude/Muse) | `docs/agent-handoff-20261023` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #1057 | Creation Suite: remove Mixamo Soldier, wire real templates, nested menus, universal rigs | `feature/creation-suite-mixamo-removal-20261024` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #1072 | feat(music): rotation pools for every stage + mode, two Cape pools, cutscene hook, Tekken/all-games research | `feature/music-wiring-rotations-20261024` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #1073 | Reconcile mega-batch + motbin wiring: one correct moveset per fighter (supersedes #1039) | `feature/reconcile-1039-1048-20261024` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #1090 | [HELD FOR APPROVAL - DO NOT MERGE] Zen: VF5 Dural layer (194) + Twelve layer (5), proposed button map | `feature/zen-dural-twelve-20261024` | 2026-10-25 | MERGEABLE / BLOCKED | AWAITING CONFIRMATION |
+| #1096 | Batch 1 step plans (Pantera LP1/RP2): _attackClipPlan step-plan branch + 60 string_step_plans, verified steps  | `feat/batch1-step-plans-pantera-20261024` | 2026-10-25 | MERGEABLE / UNSTABLE | AWAITING CONFIRMATION |
+| #1097 | Batch 1 follow-up (Pantera LP1/RP2): Job 3 fills (row 97 VERIFIED, row 49 SOFT) + Job 4 adjudications | `feat/batch1-followup-job3-job4-20261025` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #1099 | Batch 2 step plans (Pantera LK3/RK4-only strings): 27 plan keys, 1 verified step | `feat/batch2-step-plans-pantera-20261025` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #1101 | Batch 3 step plans (Pantera mixed-pair strings): 49 plan keys, 10 verified steps | `feat/batch3-step-plans-pantera-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1102 | Batch 4 step plans (Pantera triples/quads/rest strings): 72 plan keys, 36 verified steps | `feat/batch4-step-plans-pantera-20261025` | 2026-10-25 | MERGEABLE / UNSTABLE | AWAITING CONFIRMATION |
+| #1103 | Burger Batch 1 step plans (LP1/RP2-only strings): 88 plan keys, 15 verified steps | `feat/burger-batch1-step-plans-20261025` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #1104 | Burger Batch 2 step plans (LK3/RK4-only strings): 67 plan keys, 11 verified steps | `feat/burger-batch2-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1105 | Burger Batch 3 step plans (mixed-pair strings): 49 plan keys, 8 verified steps | `feat/burger-batch3-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1107 | Burger Batch 4 step plans (triples/quads/rest): 15 plan keys, 5 verified steps, BURGER COVERAGE-COMPLETE | `feat/burger-batch4-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1108 | Demonio Batch 1 step plans (LP1/RP2-only strings): 59 plan keys, 27 verified steps, 0 fills | `feat/demonio-batch1-step-plans-20261025` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #1110 | Demonio Batch 2 step plans (LK3/RK4-only strings): 25 plan keys, 11 verified steps, 0 fills | `feat/demonio-batch2-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1111 | Demonio Batch 3 step plans (mixed-pair strings): 87 plan keys, 19 verified steps, 0 fills | `feat/demonio-batch3-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1112 | Demonio Batch 4 step plans (triples/quads/rest): 100 plan keys, 133 verified steps, coverage COMPLETE | `feat/demonio-batch4-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1113 | Diablo Batch 1 step plans (LP1/RP2-only strings): 111 plan keys, 44 verified steps, 0 fills | `feat/diablo-batch1-step-plans-20261025` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #1114 | Diablo Batch 2 step plans (LK3/RK4-only strings): 21 plan keys, 9 verified steps, 0 fills | `feat/diablo-batch2-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1115 | Diablo Batch 3 step plans (mixed-pair strings): 43 plan keys, 15 verified steps, 0 fills | `feat/diablo-batch3-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1116 | Diablo Batch 4 step plans (triples/quads/rest): 42 plan keys, 110 verified steps, 0 fills — LAST diablo batch | `feat/diablo-batch4-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1117 | Kinpo Batch 1 step plans (LP1/RP2-only strings): 47 plan keys, 19 verified steps, 1 Job 3 fill | `feat/kinpo-batch1-step-plans-20261025` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #1118 | Kinpo Batch 2 step plans (LK3/RK4-only strings): 20 plan keys, 9 verified steps, 0 Job 3 fills | `feat/kinpo-batch2-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1119 | Kinpo Batch 3 step plans (mixed-pair strings): 48 plan keys, 2 verified steps, 0 Job 3 fills | `feat/kinpo-batch3-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1120 | Kinpo Batch 4 step plans (triples/quads + rest): 62 plan keys, 27 verified steps, 1 Job 3 fill — COVERAGE COMP | `feat/kinpo-batch4-step-plans-20261025` | 2026-10-25 | MERGEABLE / UNSTABLE | AWAITING CONFIRMATION |
+| #1121 | Phantom Batch 1 step plans (LP1/RP2-only strings): 186 plan keys, 22 verified steps, 0 Job 3 fills | `feat/phantom-batch1-step-plans-20261025` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #1122 | Phantom Batch 2 step plans (LK3/RK4-only strings): 49 plan keys, 3 verified steps, 0 Job 3 fills | `feat/phantom-batch2-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1123 | Phantom Batch 3 step plans (mixed-pair strings): 85 plan keys, 18 verified steps, 0 Job 3 fills | `feat/phantom-batch3-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1124 | Phantom Batch 4 step plans (triples/quads/rest): 52 plan keys, 32 verified steps, coverage-complete | `feat/phantom-batch4-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1125 | Scimitar Batch 1 step plans (LP1/RP2-only strings): 21 plan keys, 16 verified steps, 0 Job 3 fills | `feat/scimitar-batch1-step-plans-20261025` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #1126 | Scimitar Batch 2 step plans (LK3/RK4-only strings): 18 plan keys, 9 verified steps, 0 Job 3 fills | `feat/scimitar-batch2-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1127 | Scimitar Batch 3 step plans (mixed-pair strings): 23 plan keys, 1 verified step, 0 Job 3 fills | `feat/scimitar-batch3-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1128 | Scimitar Batch 4 step plans (triples/quads/rest): 16 plan keys, 30 verified steps, 0 Job 3 fills — COVERAGE CO | `feat/scimitar-batch4-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1129 | Skull Batch 1 step plans (LP1/RP2-only strings): 91 plan keys, 32 verified steps, 0 Job 3 fills | `feat/skull-batch1-step-plans-20261025` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #1130 | Skull Batch 2 step plans (LK3/RK4-only strings): 29 plan keys, 8 verified steps | `feat/skull-batch2-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1131 | Skull Batch 3 step plans (mixed-pair strings): 78 plan keys, 12 verified steps | `feat/skull-batch3-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1132 | Skull Batch 4 step plans (triples/quads/rest): 130 plan keys, skull coverage COMPLETE | `feat/skull-batch4-step-plans-20261025` | 2026-10-25 | MERGEABLE / CLEAN | AWAITING CONFIRMATION |
+| #1136 | Torch Batch 1 step plans (LP1/RP2-only strings): 79 plan keys, 11 verified (anna) steps, 22 BANK-BLOCKED (jin) | `feat/torch-batch1-step-plans-20261025` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #1139 | Zui Batch 1 step plans (LP1/RP2-only strings): 194 plan keys, 9 verified (jin) steps, 0 Job 3 fills | `feat/zui-batch1-step-plans-20261025` | 2026-10-25 | CONFLICTING / DIRTY | AWAITING CONFIRMATION |
+| #1141 | Torch per-step-bank engine support: step plans resolve a step's clip from the step's own bank (BANK-BLOCKED fl | `feat/torch-per-step-bank-20261025` | 2026-10-25 | MERGEABLE / UNSTABLE | AWAITING CONFIRMATION |
+
+### Inactive lanes (6) — OUT of scope under the owner's decision, not chased, no confirmation needed
+
+| PR | Title | Branch | Last updated | Status |
+|----|-------|--------|--------------|--------|
+| #182 | RESEARCH (do not merge): rig auto-fix survey — teardown rules + OSS tooling | `research/rig-autofix-survey` | 2026-10-15 | CONFLICTING / DIRTY |
+| #377 | [DO NOT MERGE - tool fails rig] Wire Keemap into anim-retarget + proof run: Keemap v0.0.9 collapses Scarlett D | `wireup/keemap-20261020` | 2026-10-20 | MERGEABLE / CLEAN |
+| #826 | T7 character select rebuild: 2-row grid, 1P/2P cursors, stage strip, announcer cues | `w-t7-select-rebuild` | 2026-10-23 | CONFLICTING / DIRTY |
+| #908 | Fix universal face-weight cone bug (37 models) + CI guard | `fix/face-weight-cone-20261023` | 2026-10-23 | CONFLICTING / DIRTY |
+| #911 | Select-card audit: Tripo-first defaults + texture-elimination guard | `fix/select-card-defaults-20261023` | 2026-10-23 | CONFLICTING / DIRTY |
+| #970 | Batch2 moveset pull: scimitar/slice/skull/zui/kinpo (T8 diff + SHOW-ANIMATION LOCK) | `moveset/batch2-pull` | 2026-10-24 | CONFLICTING / DIRTY |
+
+Notes on the inactive set: #377 is parked forever (`[DO NOT MERGE - tool fails rig]`); #182 is a research-only PR from 2026-10-15; #826/#911/#908/#970 last moved Oct 23–24, before the briefing census, and have not moved since.
+
+### Chase (2026-10-26)
+
+2nd-notice comment posted to **all 51 active PRs** (2026-10-27 00:13–00:21Z, 51 posted / 0 skipped / 0 failed), pointing at `GAME-DEV-BRIEFING.md` section 11 on main and asking each lane to reply `merge-queue briefing confirmed`. Spot-verified live afterwards on #964, #744, #1101. No PR was closed, no branch touched, nothing flipped.
+
+### Merge coordinator lane (no PR of its own)
+
+Still AWAITING CONFIRMATION. Briefed via agent-ops AGENTS.md + this file. Evidence it is still running: agent-ops overnight queue-sync PRs #194–#200 landed 2026-10-26 (latest merge 3eedcbe, #200 at 23:44Z). It cannot confirm via a PR comment — it confirms at its next check-in.
+
+
 ## Confirmations received
 
 None yet. Add rows as lanes confirm: `PR # / lane — confirmed, <time>, via <chat / PR comment / check-in>`.
+
+Checked 2026-10-26 ~19:30 CDT: still NONE. Exact-phrase GitHub search (`merge-queue briefing confirmed`, both repos) returns 0; spot-checked comments on WH #1096, #718, #1101 (zero comments) and #442 (one unrelated sweep note). No lane has confirmed by any verifiable channel this lane can check (chat check-ins in other chats are not visible to this lane — if a lane says it confirmed in chat, the parent agent should record it here with the chat + time).
 
