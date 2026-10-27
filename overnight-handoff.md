@@ -1,4 +1,15 @@
-## overnight-idle-pipeline run 2026-10-27 22:44-22:5xZ (verification run — 0 landed-verified BY this run, 0 reopened)
+## overnight-idle-pipeline run 2026-10-27 23:14-23:2xZ (verification run — 0 landed-verified BY this run, 0 reopened)
+- **STEP 1: No new merges.** WH 57 open, no new PRs, no PR updated since 15:07Z. #1096 head eff663f2 unchanged, game-unit-tests still only FAIL (check-runs verified: 13 success, 1 failure) — owner decision pending. #1136/#1139 gate-substance; #1141/#1097 CLEAN held in stack; #377 excluded; #718/#722 freeze held. BF 7 open; main build still FAILED (same run 40548689257). Bannon 5 open; #78 excluded. CD/CJ/GRE/AO 0 open.
+- **Mochiichao lane EXTREMELY ACTIVE:** merged #360 22:52:44Z, #363 23:03:07Z, #365 23:12:44Z, #366 23:15:24Z (8480590c = fork main tip, verified this run) — stood down per CHECK-BEFORE-START. 15 open (was 12).
+- **Verify-sweep 8/8, 0 false** (Mochiichao #366 8480590c + AO #245 f3d59b42 + WH #1153 1bd601a9 = main tips; #365 ancestor of fork main; CJ WORKING-METHOD blob c51d177e; WH #1096 check-runs + BF build + TTT2 pull states re-confirmed).
+- **Checkpoints:** 79 healthy / 0 stale (audit 23:14:54Z). TTT2 data037 pull VERIFIED LIVE (curl pids 69279-69282 on part_05, parent pids 51033/51034 alive); checkpoint ttt2-resume-100 fresh (seq 51, attempts 88).
+- **Canon-sync:** nothing new. **Disk:** 54% (69G free). **Failure-alerts:** nothing new since 2026-10-20. No in-progress media touched.
+- **Blockers (unchanged set):** WH #1096 (owner decision); #1136/#1139 (gate-substance); #1141/#1097 (held in stack); #718/#722 (freeze); B2 $1-or-Worker (owner decision); BF build RED; CJ clone local-only; TorBox key DEAD (owner decision: re-register/rotate).
+- **Queue sync to follow this run.**
+
+ADDENDUM 22:49Z: AO #245 LANDED-VERIFIED BY THIS RUN — merged f3d59b42 (parents [dccd8603 main, 95af6eff branch]); merge-tree exactly MERGE-QUEUE.md +12/-1, overnight-handoff.md +12/-1 (the -1s are window-label corrections); queue on main 905,334B sha 4e3c7306 byte-identical to local, handoff 873,905B sha 0a1db5ab byte-identical. Corrected run tally: 1 landed-verified BY this run (AO #245), 0 reopened. Instruction-gate passed first try (guard 5s + instruction-gate 12s). Run window corrected to 22:44-22:49Z.
+
+## overnight-idle-pipeline run 2026-10-27 22:44-22:49Z (verification run — 0 landed-verified BY this run, 0 reopened)
 - **STEP 1: No new merges.** WH 57 open, no new PRs, no PR updated since 15:07Z. All CLEAN batch PRs target stack branches, not main — HELD in #1096 stack. #1096 game-unit-tests still only FAIL (same run 40213414222) — owner decision pending. #1136/#1139 gate-substance; #377 excluded; #718/#722 freeze held. BF 7 drafts; main build still FAILED (same run 40548689257). Bannon #22 = main tip (0-file diff), not merged. CD/CJ/GRE/AO 0 open.
 - **Mochiichao lane EXTREMELY ACTIVE:** #359 merged 22:43:31Z (8d1984e3 = fork main tip, verified this run) — stood down per CHECK-BEFORE-START. 12 open; CLEAN #336/#335/#328 untouched.
 - **Verify-sweep 7/7, 0 false** (Mochiichao #359 8d1984e3 + WH #1153 1bd601a9 + AO #244 dccd8603 = main tips; CJ WORKING-METHOD blob c51d177e; #353 ancestor of fork main; BF build + TTT2 pull states re-confirmed).
