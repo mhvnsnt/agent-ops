@@ -62,3 +62,10 @@ Held/problem PRs: #497 (CONFLICTING — merging as-is REGRESSES the #508 feet fi
 - **#987 soul-variants-wave3 — VERIFIED on main.** Merge 67631439 vs parent1 acfd05a3 = exactly 1 modified file: game/data/soul-variants.json; 0 deletions.
 - **#989 dev-notes** — tail entry (Vain Abel A1 / rig wave 2 / moveset wave 3) intact on main, 41,512B — survived the lane's subsequent merges.
 - WH live merge lane ACTIVE tonight (merged #979 05:07Z; #984/#985/#986/#988 iterating). Pipeline stood down per CHECK-BEFORE-START.
+
+## Deploy state (2026-10-26/27 — verified)
+
+- **Split hosting approved (owner, 2026-10-26 19:10 CDT):** Pages shell + GLBs on Cloudflare R2. Nothing is cut from the game, only from the deploy. Doc on WH main: `docs/DEPLOY-SPLIT-2026-10-26.md` (PR #1151, merge bce9feba, blob sha 08565ccb, 810B). R2 signup still owner-only (card rules); itch.io account/payout setup still owner-only.
+- **Live site frozen on Oct 24 build:** deploy set 5,969 MB vs 1 GB Pages limit.
+- **Netlify credits exhausted (verified extraction 2026-10-27 00:44 UTC, claim 408b1ac0):** 75% of 300 credits used by Sun 8:47 AM CT, all 300 by 11:21 AM CT. Production deploys and Agent Runners paused; live sites stay up on 30 operational credits; if those run out the sites suspend until credits come back or the billing cycle resets November 23. Offered fix is upgrading to a Personal plan (1,000 credits/mo, no price in the email) — owner's call. With Pages also failing its deploy on size, Netlify is off the table as a deploy fallback unless upgraded.
+- WH deploy-split doc was NOT amended with the Netlify note — no verbatim owner instruction on file for that edit; the split decision itself is landed (above).
