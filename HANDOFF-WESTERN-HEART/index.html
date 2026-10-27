@@ -801,6 +801,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#deploy-state-2026-10-2627-verified" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy state (2026-10-26/27 — verified)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1860,6 +1871,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#deploy-state-2026-10-2627-verified" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy state (2026-10-26/27 — verified)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1931,6 +1953,13 @@
 <li><strong>#987 soul-variants-wave3 — VERIFIED on main.</strong> Merge 67631439 vs parent1 acfd05a3 = exactly 1 modified file: game/data/soul-variants.json; 0 deletions.</li>
 <li><strong>#989 dev-notes</strong> — tail entry (Vain Abel A1 / rig wave 2 / moveset wave 3) intact on main, 41,512B — survived the lane's subsequent merges.</li>
 <li>WH live merge lane ACTIVE tonight (merged #979 05:07Z; #984/#985/#986/#988 iterating). Pipeline stood down per CHECK-BEFORE-START.</li>
+</ul>
+<h2 id="deploy-state-2026-10-2627-verified">Deploy state (2026-10-26/27 — verified)<a class="headerlink" href="#deploy-state-2026-10-2627-verified" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Split hosting approved (owner, 2026-10-26 19:10 CDT):</strong> Pages shell + GLBs on Cloudflare R2. Nothing is cut from the game, only from the deploy. Doc on WH main: <code>docs/DEPLOY-SPLIT-2026-10-26.md</code> (PR #1151, merge bce9feba, blob sha 08565ccb, 810B). R2 signup still owner-only (card rules); itch.io account/payout setup still owner-only.</li>
+<li><strong>Live site frozen on Oct 24 build:</strong> deploy set 5,969 MB vs 1 GB Pages limit.</li>
+<li><strong>Netlify credits exhausted (verified extraction 2026-10-27 00:44 UTC, claim 408b1ac0):</strong> 75% of 300 credits used by Sun 8:47 AM CT, all 300 by 11:21 AM CT. Production deploys and Agent Runners paused; live sites stay up on 30 operational credits; if those run out the sites suspend until credits come back or the billing cycle resets November 23. Offered fix is upgrading to a Personal plan (1,000 credits/mo, no price in the email) — owner's call. With Pages also failing its deploy on size, Netlify is off the table as a deploy fallback unless upgraded.</li>
+<li>WH deploy-split doc was NOT amended with the Netlify note — no verbatim owner instruction on file for that edit; the split decision itself is landed (above).</li>
 </ul>
 
 
