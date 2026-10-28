@@ -1,9 +1,17 @@
-## overnight-idle-pipeline run 2026-10-28 19:14-19:2xZ (verification run — 0 landed-verified by this run, 0 reopened)
+## overnight-idle-pipeline run 2026-10-28 19:44-20:0xZ (verification run — 0 landed-verified by this run at entry time, 0 reopened)
+- **Queue delta:** 0 landed-verified BY this run at entry time. Lane merges verified on main (not this run's): Mochi private #55-#59 (19:29-19:42Z); private tip now f441da7, private open set still 16 (#1-#12, #19, #38, #44, #52), lane ACTIVE (#44/#52, NOT touched). WH/Bannon/BF/CJ unchanged.
+- **NEW, left untouched by this run, then lane-merged:** AO #285 (opened 19:37Z, 1 file +14/-0, instruction-gate FAIL at this run's check time, guard pass) — not merged, not body-edited by this run: approval provenance is relayed, not verified in the owner's own words. UPDATE: its lane merged it 19:50:00Z as 05fda85 (verified on AO main, tree exactly BOX-OFFLOAD-LOG.md +14/-0) — a lane merge, not this run's; no gate-pass claim made for it.
+- **Verify-sweep 7/7:** AO #284, WH #1156, private #59 + #54-to-tip chain, CJ #235 ancestor, Bannon tip, BF tip — all verified, 0 false claims.
+- **Checkpoints:** 79 healthy / 0 stale; TTT2 data042 pull healthy + advancing (seq 63, updated 19:29Z), left alone. **Canon-sync:** nothing new. **Disk:** 55%.
+- **Blockers needing owner (unchanged, concrete):** WH #1096 — game-unit-tests sole FAIL: approve/waive it, or order the fix? Mochi queue retarget — private fresh-start repo, or keep tracking the public repo? WH #718/#722 MERGE FREEZE lift? B2 $1 card vs private+Worker? NEW: AO #285 — lane/owner to clear its gate + provenance?
+- **Queue sync:** AO #___ (this run, merged __:__Z).
+## overnight-idle-pipeline run 2026-10-28 19:14-19:28Z (verification run — 0 landed-verified by this run, 0 reopened)
+- ADDENDUM 19:28Z: AO #284 LANDED-VERIFIED BY THIS RUN — merged 5ce73ee, queue+handoff byte-identical on main. Corrected tally: 1 landed-verified BY this run (AO #284), 0 reopened.
 - **Queue delta:** 0 landed-verified BY this run. Lane merges verified on main (not this run's): Mochi private #13, #14, #20, #21, #22, #43, #45–#51, #53, #54 (15 total, 18:59–19:13Z); private tip now 5ba1586, private open set 16 (#1–#12, #19, #38, #44, #52), lane ACTIVE (#44/#52 updated 19:00/19:09Z, NOT touched).
 - **Verify-sweep 7/7:** AO #283, WH #1156, private #54 payload + #53 chain, CJ #235 ancestor, WH #1096 checks, Bannon tip — all verified, 0 false claims.
 - **Checkpoints:** 79 healthy / 0 stale; TTT2 data042 pull healthy + advancing (seq 63, updated 19:12:51Z), left alone. **Canon-sync:** nothing new. **Disk:** 56%.
 - **Blockers needing owner (unchanged, concrete):** WH #1096 — game-unit-tests sole FAIL: approve/waive it, or order the fix? Mochi queue retarget — private fresh-start repo, or keep tracking the public repo? (Note: public repo name mhvnsnt/mochiichao now 404s; upstream mfluidmusic shows 1 open — public count needs re-baselining.) WH #718/#722 MERGE FREEZE lift? B2 $1 card vs private+Worker?
-- **Queue sync:** AO #284 (this run, merged 19:xxZ, verified on main).
+- **Queue sync:** AO #284 (this run, merged 19:27Z, verified on main).
 ## overnight-idle-pipeline run 2026-10-28 18:44-18:53Z (verification run — 0 landed-verified by this run, 0 reopened)
 - **Queue delta:** 0 landed-verified BY this run. Lane merges verified on main (not this run's): Mochi private #37 (d026c3e) + #39 (c98f122, run-watcher payload verified); private tip now c98f122, private open set 19 with new lane-owned #38 (NOT touched). Public queue counts unchanged: open 83 (WH 57 + Mochi public 14 + Bannon 5 + BF 7), blocked 12.
 - **Verify-sweep 5/5:** AO #282, WH #1156, Mochi #39 payload, CJ #235 ancestor, WH #1096 checks — all verified, 0 false claims.
