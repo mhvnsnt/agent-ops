@@ -1,4 +1,11 @@
-## overnight-idle-pipeline run 2026-10-28 20:14-20:26Z (verification run — 0 landed-verified by this run at entry time, 0 reopened)
+## overnight-idle-pipeline run 2026-10-28 20:44-20:xxZ (verification run — 0 landed-verified by this run at entry time, 0 reopened)
+- **Queue delta:** 0 landed-verified BY this run at entry time. Lane merges verified on main (not this run's): GRE #65/#66/#67 (20:21–20:34Z, tip d3505a7, #67 tree 18 files all added); private-fresh #67 (20:33Z, tip cb32b0d9, re-land Grok kit superseding #52). NEW, lane-active, NOT touched: WH #1158 (created 20:21Z, BLOCKED) + WH #1157 (updated 20:35Z during this run, BLOCKED). WH open 59 (was 58), tip daabd633 unchanged; Bannon 5, BF 7, CJ/CD/AO 0, GRE 0, private-fresh 22.
+- **Verify-sweep 7/7:** GRE #67/#66/#65 chain, private #67, AO #287, WH #1156, CJ #235 ancestor — all verified, 0 false claims.
+- **Checkpoints:** 79 healthy / 0 stale; TTT2 data042 pull healthy + advancing (pids 2235/2236 + at-inflate2 11423, part_07 ranges in flight), left alone. **Canon-sync:** nothing new. **Disk:** 56%.
+- **Blockers needing owner (carried, unchanged):** WH #1096 — game-unit-tests sole FAIL: approve/waive it, or order the fix? Mochi queue retarget — private fresh-start repo, or keep tracking the public repo? WH #718/#722 MERGE FREEZE lift? B2 $1 card vs private+Worker?
+- **Queue sync:** AO #___ (this run, merged __:__Z, verified on main).
+## overnight-idle-pipeline run 2026-10-28 20:14-20:24Z (verification run — 0 landed-verified by this run at entry time, 0 reopened)
+- ADDENDUM 20:24Z: AO #287 LANDED-VERIFIED BY THIS RUN — merged 8dedf9e, queue+handoff byte-identical on main (hash-object match). Corrected tally: 1 landed-verified BY this run (AO #287), 0 reopened.
 - **Queue delta:** 0 landed-verified BY this run at entry time. Lane advances verified on main (not this run's): GRE #64 merged 20:04Z as c02170f (T7 README, 1 file, contents-verified); private-fresh tip 918b95f (direct push on f441da7, not a PR merge). WH/Bannon/BF/CJ/CD/AO tips unchanged. NEW, lane-active, NOT touched: WH #1157 (checks pending, BLOCKED), GRE #65 (UNSTABLE), private #60/#62-#66. Open counts live: WH 58, private-fresh 22, Bannon 5, BF 7, GRE 1, CJ/CD/AO 0.
 - **Verify-sweep 5/5:** GRE #64, AO #286, WH #1156, private #59 chain, CJ #235 ancestor — all verified, 0 false claims.
 - **Checkpoints:** 79 healthy / 0 stale; TTT2 pull advancing (procs 2235-2240, 20:17Z, part_01 ranges), left alone. **Canon-sync:** nothing new. **Disk:** 55%. **Failure-alerts:** nothing new since 2026-10-20.
