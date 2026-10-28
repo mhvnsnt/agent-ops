@@ -1,4 +1,17 @@
-## overnight-idle-pipeline run 2026-10-28 04:44-04:5xZ (verification run — 0 landed-verified BY this run, 0 reopened; Mochiichao lane merged #459-#463, #463 = mirror main tip; VM restart ~04:38Z, TTT2 data039 relaunched solo by watchdog)
+## overnight-idle-pipeline run 2026-10-28 05:14-05:2xZ (verification run — 0 landed-verified BY this run, 0 reopened; Mochiichao lane opened #464/#465, #463 still mirror main tip; TTT2 data039 pull healthy)
+
+- **Queue delta:** LANDED-VERIFIED BY THIS RUN: 0. REOPENED: 0. NEW QUEUE ITEMS: none. Open PRs counted live: WH 57, Mochiichao 18 (+2 new, #464/#465, lane-owned), Bannon 5, Brutal-Fist 7 = 87 (85→87); blocked set unchanged (12).
+- **STEP 1:** Rate limit healthy (4616 at start). WH 57 open; #1096 tests still only FAIL — owner decision pending; #1141/#1097 heads unchanged, #1141 latest instruction-gate SUCCESS — green, held in #1096 stack; #1136/#1139 heads unchanged, gate-substance; #713 MERGEABLE but tests FAIL; #377 excluded; #718/#722 freeze; #1090 held (draft); #442 no-op; #182 CONFLICTING draft. BF 7 drafts, main build still FAILED same run 40548689257 (re-verified). Bannon 5 open (#78 excluded). CD/CJ/GRE/AO 0 open. Mochiichao lane opened #464 (04:48:48Z) + #465 (05:05:04Z), both MERGEABLE, lane-owned; main tip still edbae52f = #463 merge, verified this run; #456 CONFLICTING, lane-owned — stood down.
+- **STEP 2 verify-sweep:** 7/7 VERIFIED, 0 FALSE (Mochi #463 = mirror main tip; Mochi #459 ancestor of mirror main; AO #255 = AO main tip; WH #1156 = WH main tip; CJ #235 ancestor of CJ main; WH #1096 tests still only FAIL same run; BF build still FAILED same run).
+- **STEP 3:** Checkpoints 79 healthy / 0 stale (audit 05:14:38Z). No new VM restart (uptime 36 min, restart ~04:38Z). TTT2 data039 pull HEALTHY (2155/2156 alive, 26% CPU, part_09 downloading, parts 01-08 done, chunk 9/26); checkpoint ttt2-resume-100 running, updated 05:11:28Z, seq 55, epoch 15, attempts 93 — FRESH. CJ clone LOCAL-ONLY unchanged (pull/glaxnimate-20261023, HEAD 46bc22574, 10,408 changes). No resumes.
+- **STEP 4 canon-sync:** nothing new (MEMORY.md mtime 2026-10-27 18:44 CDT unchanged; daily note ops/supervisor/watchdog only).
+- **STEP 5:** Disk 54% (69G free). Failure-alerts nothing new since 2026-10-20. No in-progress media touched.
+- **Blockers (unchanged set):** WH #1096 (owner decision pending); #1136/#1139 (gate-substance); #1141/#1097 (green, held in #1096 stack); #713 (tests FAIL); #718/#722 (freeze); B2 card decision; BF build red; CJ clone local-only; TorBox key dead.
+- **Queue sync:** AO #___ (this run, to follow).
+
+## overnight-idle-pipeline run 2026-10-28 04:44-04:51Z (verification run — 0 landed-verified BY this run, 0 reopened; Mochiichao lane merged #459-#463, #463 = mirror main tip; VM restart ~04:38Z, TTT2 data039 relaunched solo by watchdog)
+ADDENDUM 04:51Z: AO #255 (this run's queue sync) LANDED-VERIFIED BY THIS RUN — merged 46c74b9f (parents [b6704e8e main, c9da70ae branch]); merge-tree exactly MERGE-QUEUE.md +12/-1, overnight-handoff.md +13/-1; queue on main 955,725B sha e7774b19 byte-identical to local, handoff 905,695B sha 3d233771 byte-identical. Corrected run tally: 1 landed-verified BY this run (AO #255), 0 reopened. Instruction-gate passed first try (guard 5s + instruction-gate 7s). Run window corrected to 04:44-04:51Z.
+
 - **Queue delta:** LANDED-VERIFIED BY THIS RUN: 0. REOPENED: 0. NEW QUEUE ITEMS: none. Open PRs counted live: WH 57, Mochiichao 16, Bannon 5, Brutal-Fist 7 = 85 (unchanged); blocked set unchanged (12).
 - **STEP 1:** Rate limit healthy (4843 at start). WH 57 open; #1096 tests still only FAIL — owner decision pending; #1141/#1097 heads unchanged, #1141 latest instruction-gate SUCCESS (run 40429116017) — green, held in #1096 stack; #1136/#1139 heads unchanged, gate-substance; #713 MERGEABLE but tests FAIL; #377 excluded; #718/#722 freeze; #1090 held; #442 no-op; #182 CONFLICTING. BF 7 drafts, main build still FAILED same run 40548689257 (re-verified). Bannon 5 open (#78 excluded). CD/CJ/GRE/AO 0 open. Mochiichao lane merged #459-#463 (5 merges); main tip edbae52f = #463 merge, verified this run; #456 CONFLICTING, lane-owned — stood down.
 - **STEP 2 verify-sweep: 7/7, 0 false** (Mochi #463 edbae52f = mirror main tip; Mochi #459 e3c6aae7 ancestor of mirror main; AO #254 b6704e8e = AO main tip; WH #1156 daabd633 = WH main tip; CJ #235 c19560e9 ancestor of CJ main; WH #1096 game-unit-tests still only FAIL same run; BF build still FAILED same run).
@@ -6,7 +19,7 @@
 - **STEP 4 canon-sync:** nothing new. Archive current through 2026-10-27.
 - **STEP 5:** disk 54% (69G free); failure-alerts nothing new since 2026-10-20; TTT2 pull untouched.
 - **Blockers (unchanged):** WH #1096; #1136/#1139; #1141/#1097 held; #713 tests-fail; #718/#722 freeze; B2 $1-or-Worker; BF build red; CJ clone local-only; TorBox key dead.
-- **Queue sync to follow this run (AO #___).**
+- **Queue sync to follow this run (AO #255).**
 
 
 ## overnight-idle-pipeline run 2026-10-28 04:14-04:19Z (verification run — 0 landed-verified BY this run, 0 reopened; Mochiichao lane merged #451-#458, #458 = mirror main tip; TTT2 data038 COMPLETE, data039 pull launched)
