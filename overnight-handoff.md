@@ -1,5 +1,5 @@
-## overnight-idle-pipeline run 2026-10-28 22:14-22:xxZ (verification run — 0 landed-verified BY this run at entry time, 0 reopened)
-- **Queue delta:** 0 landed-verified BY this run at entry time. Lane merges verified on main (not this run's): WH #1162 (8d65ec16 = WH tip, combat fix, 8 files); private-fresh #83/#84/#85 chain (tip 52ce8bb0, #77 verified ancestor). NEW GRE #70 (nioh chunk 2) NOT merged — mergeable but checks pending/unstable at check time; next run merges when green.
+## overnight-idle-pipeline run 2026-10-28 22:14-22:xxZ (productive — 1 landed-verified BY this run: GRE #70; 0 reopened)
+- **Queue delta:** GRE #70 LANDED-VERIFIED BY THIS RUN (merge 9afd5340 = GRE tip, nioh chunk 2, +357/-0, 0 deletions, payload verified on main). Lane merges verified on main (not this run's): WH #1162 (8d65ec16 = WH tip, combat fix, 8 files); private-fresh #83/#84/#85 chain (tip 52ce8bb0, #77 verified ancestor).
 - **Verify-sweep 7/7:** WH #1161/#1162, GRE #69, AO #290, private #77, Bannon tip, BF tip — all verified, 0 false claims.
 - **Checkpoints:** 79 healthy / 0 stale. TTT2 data042 healthy + advancing (seq 63, updated 21:56Z), untouched. **Canon-sync:** nothing new. **Disk:** 56%.
 - **Blockers needing owner (carried, unchanged):** WH #1096 (A-or-B decision, now also conflicting); B2 $1 one-time card payment vs private bucket + Cloudflare Worker; WH #718/#722 freeze; #377 evidence keep-or-close; Mochi #282 budgets / #186 / #256 / #296 (Mars-only); Mochi queue retarget (private vs public).
