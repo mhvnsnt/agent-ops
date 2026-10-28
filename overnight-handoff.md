@@ -1,9 +1,17 @@
-## overnight-idle-pipeline run 2026-10-28 07:14-07:2xZ (verification run — 0 landed-verified BY this run, 0 reopened; Mochiichao lane merged #472 + #474, #474 = mirror main tip; VM restart ~06:44Z, TTT2 data040 pull relaunched)
+## overnight-idle-pipeline run 2026-10-28 07:44-07:5xZ (verification run — 0 landed-verified BY this run, 0 reopened; Mochiichao lane merged #475, #475 = mirror main tip; TTT2 data040 pull healthy, chunk 10/26)
+- Queue delta: 0 landed-verified BY this run; 0 reopened. Mochiichao lane merged #475 (07:33:25Z, merge cafb727b = mirror main tip, verified this run); open 88 (WH 57 + Mochi 19 + Bannon 5 + BF 7), blocked 12 — unchanged blocked set. WH unchanged: no PR updated since 15:07:51Z Oct 27; #1096 owner decision pending; step-plan stack held.
+- TTT2 data040 pull HEALTHY: timeout 7771/python 7772 alive (18.2% CPU), spool part_10 ranges downloading; checkpoint ttt2-resume-100 running, updated 07:26:29Z, attempts 94 — FRESH, guardian-owned.
+- Verify-sweep 7/7 VERIFIED, 0 FALSE. Checkpoints 79 healthy / 0 stale. Canon-sync: nothing new. Disk 54% (70G free).
+- Blockers (unchanged): WH #1096 owner decision; #1136/#1139 gate-substance; #1141/#1097 held in #1096 stack; step-plan stack (8 conflicting Batch-1 bases); #713 tests FAIL; #718/#722 freeze; B2 card decision; BF build red; CJ clone local-only; TorBox key dead.
+- Queue sync: AO #___ (this run, to follow).
+
+## overnight-idle-pipeline run 2026-10-28 07:14-07:19Z (verification run — 0 landed-verified BY this run, 0 reopened; Mochiichao lane merged #472 + #474, #474 = mirror main tip; VM restart ~06:44Z, TTT2 data040 pull relaunched)
+ADDENDUM 07:19Z: AO #260 (this run's queue sync) LANDED-VERIFIED BY THIS RUN — merged f439b468 (parents [16e584f9 main, f048794 branch]); merge-tree exactly MERGE-QUEUE.md +12/-2, overnight-handoff.md +10/-2; queue on main 980,210B sha 62c6570f byte-identical to local, handoff 917,871B sha 7e0957d9 byte-identical. Corrected run tally: 1 landed-verified BY this run (AO #260), 0 reopened. Instruction-gate passed first try (guard + instruction-gate). Run window corrected to 07:14-07:19Z.
 - Queue delta: 0 landed-verified BY this run; 0 reopened. Mochiichao lane merged #472 (07:02:00Z, merge fcbcc883) + #474 (07:02:14Z, merge f695d9e4 = mirror main tip, verified this run); open 88 (WH 57 + Mochi 19 + Bannon 5 + BF 7), blocked 12 — unchanged blocked set. WH unchanged: no PR updated since 15:07:51Z Oct 27; #1096 owner decision pending; step-plan stack held.
 - VM restart ~06:44Z (boot 01:44 CDT) inside the 06:44 run's window; that run still completed (AO #259 verified on main this run). TTT2 data039 COMPLETE; data040 pull relaunched by watchdog 06:57Z (timeout 7771/python 7772 alive, chunk 4/26) — FRESH, guardian-owned.
 - Verify-sweep 8/8 VERIFIED, 0 FALSE. Checkpoints 79 healthy / 0 stale. Canon-sync: nothing new. Disk 54% (70G free).
 - Blockers (unchanged): WH #1096 owner decision; #1136/#1139 gate-substance; #1141/#1097 held in #1096 stack; step-plan stack (8 conflicting Batch-1 bases); #713 tests FAIL; #718/#722 freeze; B2 card decision; BF build red; CJ clone local-only; TorBox key dead.
-- Queue sync: AO #___ (this run, to follow).
+- Queue sync: AO #260 (this run, merged 07:18:46Z).
 
 ## overnight-idle-pipeline run 2026-10-28 06:44-06:50Z (verification run — 0 landed-verified BY this run, 0 reopened; Mochiichao lane merged #473, #473 = mirror main tip; TTT2 data039 COMPLETE)
 ADDENDUM 06:50Z: AO #259 (this run's queue sync) LANDED-VERIFIED BY THIS RUN — merged 16e584f9 (parents [a3ee6e72 main, 1b33f46b branch]); merge-tree exactly MERGE-QUEUE.md +13/-2, overnight-handoff.md +9/-1; queue on main 975,173B sha 1f982647 byte-identical to local, handoff 916,072B sha 6662dfd0 byte-identical. Corrected run tally: 1 landed-verified BY this run (AO #259), 0 reopened. Instruction-gate passed first try (guard + instruction-gate). Run window corrected to 06:44-06:50Z.
