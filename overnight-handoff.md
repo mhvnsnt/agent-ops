@@ -1,4 +1,17 @@
+## overnight-idle-pipeline run 2026-10-28 01:44-01:56Z (verification + resume run — 0 landed-verified BY this run; Mochiichao #390 LANDED-VERIFIED lane merge, verified by this run; TTT2 data038 resumed after VM restart)
+- **Queue delta:** LANDED-VERIFIED (lane merge, verified BY THIS RUN): Mochiichao #390 (merge 02524955, ancestor of mirror main bd8941c5). REOPENED: 0. NEW QUEUE ITEMS: Mochiichao #406/#407/#409 (OPEN-PR, lane-owned, fresh 01:45-01:47Z). Open PRs counted live: WH 57, Mochiichao 17, Bannon 5, Brutal-Fist 7 = 86; blocked set unchanged (12).
+- **STEP 1:** Rate limit healthy (4629 at start). WH 57 open; #1096 tests still only FAIL (same run 40213414222, re-verified) — owner decision pending; #1136/#1139 gate-substance; #1141/#1097 green, held in #1096 stack; #713 tests FAIL; #377 excluded; #718/#722 freeze; #1090 held; #442 no-op. BF 7 drafts/conflicting, main build still FAILED same run 40548689257 (re-verified). Bannon 5 open (#78 excluded). CD/CJ/GRE/AO 0 open. Mochiichao lane merged #390 01:17:29Z + #399/#401/#404/#405/#408 in ~15 min; main bd8941c5; #409 MERGEABLE but Netlify pending — stood down, lane-owned.
+- **STEP 2 verify-sweep: 5/5, 0 false** (Mochi #390 02524955 behind 0/ahead 32; Mochi #389 caf87979 behind 0/ahead 34; WH #1155 76426d48 behind 0/ahead 2; CJ #235 c19560e9 behind 0/ahead 64; WH #1156 DEV-NOTES-ARCHIVE.md 47,607B sha 5f8dc197 on main).
+- **STEP 3:** checkpoints 79 healthy / 0 stale (audit 01:45:18Z). VM RESTART ~01:43Z killed TTT2 data038 pull (0 bytes) + data037 worker. data037 VERIFIED COMPLETE (305,710,000B, sha b441e6c2... matches log). data038 relaunched 01:47:18Z by disk-space-guardian; verified healthy (timeout 3332 PPID 1 + python 3333, spool ranges growing). Checkpoint epoch 14→15, progress_seq 55. CJ clone local-only unchanged (46bc22574, 10,408 changes).
+- **STEP 4 canon-sync:** nothing new. Archive current through 2026-10-27.
+- **STEP 5:** disk 52% (73G free); failure-alerts nothing new since 2026-10-20; TTT2 pull untouched.
+- **Blockers (unchanged):** WH #1096; #1136/#1139; #1141/#1097 held; #713 tests-fail; #718/#722 freeze; B2 $1-or-Worker; BF build red; CJ clone local-only; TorBox key dead.
+- **Queue sync to follow this run (AO #249).**
+
+
 ## overnight-idle-pipeline run 2026-10-28 01:14-01:35Z (productive — 1 landed-verified BY this run: WH #1156 canon-sync; 0 reopened; Mochiichao lane merged #389 during run, #390 new CONFLICTING)
+ADDENDUM 01:32Z: AO #248 (this run's queue sync) LANDED-VERIFIED BY THIS RUN — merged affbabf4; queue + handoff byte-identical on main. Corrected run tally: 2 landed-verified BY this run (WH #1156 + AO #248), 0 reopened.
+
 
 - **Queue delta:** LANDED-VERIFIED BY THIS RUN: WH #1156 (canon-sync, merge daabd633). REOPENED: 0. NEW QUEUE ITEM: Mochiichao #390 (OPEN-PR, CONFLICTING, lane-owned). Open PRs counted live: WH 57, Mochiichao 14, Bannon 5, Brutal-Fist 7 = 83; blocked set unchanged (12).
 - **STEP 1:** Rate limit healthy (3037 at start). WH 57 open; #1096 tests still only FAIL (same run 40213414222) — owner decision pending; #1136/#1139 gate-substance; #1141/#1097 all checks PASS, held in #1096 stack; #713 tests FAIL; #377 excluded; #718/#722 freeze; #1090 held; #442 no-op. BF (mhvnsnt/Brutal-Fist) 7 drafts, main build still FAILED same run 40548689257. Bannon 5 open (#78 excluded). CD/CJ/GRE/AO 0 open. Mochiichao lane merged #389 01:13:25Z (tip caf87979); #390 new CONFLICTING — stood down, lane-owned.
