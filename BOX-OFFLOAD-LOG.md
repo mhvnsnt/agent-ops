@@ -466,3 +466,17 @@ Not backed up: mfluid-audit/Mochiichao-Diamond-Version-2d- (2 dirty files; push 
 - KEPT Brutal-Fist (4.5G): modified/deleted files, 1 stash, 2 unpushed branches.
 - KEPT originalize (6.1G), fc-glb (3.4G): not git repos.
 - RESOLVED Mochiichao-Diamond-Version-2d- untracked proof/ + tools/: committed as `backup/proof-tools-20261023` (9ab97786); no credential can push to mfluidmusic (gh has only mhvnsnt, read-only there), so pushed to private mirror https://github.com/mhvnsnt/Mochiichao-Diamond-Version-2d--mirror.
+
+## 2026-10-28 ~2:35 PM CT — box offload (owner-approved t264)
+Re-verified before each removal: every local branch contained in origin (only grok/combat-fix-20261028, owned by the active combat job in the shared western-heart repo, excepted), uncommitted status = checkout deletion artifacts only. Worktrees removed via `git -C /workspace/western-heart worktree remove --force`.
+Backups: western-heart `backup/wh-weights-20261028` (29984b65, face_proof_pw.mjs edit), `backup/wh-weights-stash-20261028` (ecb11a8e, stash), `backup/wh-roster-20261028` (b0a2f32a, roster cards).
+
+| path | repo | HEAD | size | date |
+|---|---|---|---|---|
+| /workspace/wh-sel2 | mhvnsnt/western-heart | 84d146eacdf8aab5e2a6fedf42c3269e615bc732 | 12G | 2026-10-28 |
+| /workspace/wh-suite | mhvnsnt/western-heart | 801131cbf53dcc569553cadbe6c82d8f26ff0a60 | 2.9G | 2026-10-28 |
+| /workspace/wh-menu7 | mhvnsnt/western-heart | a85766f706072afcf3503ff2985f86009fb30370 | 2.3G | 2026-10-28 |
+| /workspace/wh-wire | mhvnsnt/western-heart | 1f49a9debf80d2ff7c0ae660ffaae7456bb26147 | 8.9G | 2026-10-28 |
+| /workspace/wh-of | mhvnsnt/western-heart | 841bcea86813e78202f5b20798159709e10434c2 | 6.1G | 2026-10-28 |
+| /workspace/wh-weights | mhvnsnt/western-heart | 0aabe81fc9df394a2c0582934ece823f22ae384d | 6.2G | 2026-10-28 |
+Freed ~36 GB (df 110G used -> 74G used).
