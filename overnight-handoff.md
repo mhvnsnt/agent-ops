@@ -3850,3 +3850,10 @@ ADDENDUM 11:57Z: AO #130 (this run's queue sync) LANDED-VERIFIED BY THIS RUN —
 - WH open 58->57: #1175 merged by the sweep lane after all 13 checks passed; #1176 created and merged by the lane in the same window. Step-plan stack stays HELD pending #1096 owner decision; owner-held exclusions untouched.
 - Checkpoints: audit 79 healthy / 0 stale / 1100 skipped. TTT2 advancing (part_04 curls live, checkpoint 08:27Z fresh) — untouched.
 - Canon-sync: nothing new. Disk 59%. Queue sync: AO PR this run (see overnight-log).
+
+## overnight-idle-pipeline run 2026-10-29 11:44-12:05Z (productive -- WH #1186 gate-fixed + lane-merged, verified)
+- **WH #1186 LANDED-VERIFIED (lane merge, verified by this run, NOT merged by this run):** instruction-gate body fix by this run (Proof backticks limited to the 2 real diff paths), gate re-ran SUCCESS, API clean; lane merged 601920c1 (parents f3420bfa + 5f3a33e3); both blobs on main == head 5f3a33e3. My merge attempt reported already-merged -- no duplicate merge.
+- **WH #1187 queued BLOCKED, lane-active, NOT merged:** clobber-guard + instruction-gate FAIL, 4 checks in progress, created 11:46Z -- left for the lane.
+- **Verify-sweep 5+ verified, 0 false:** WH #1186, WH #1185, AO #318, CJ/GRE tips unchanged.
+- **Checkpoints:** 79 healthy / 0 stale. **TTT2:** running, fresh (11:41Z, seq 67), untouched. **Canon-sync:** nothing new. **Disk:** 57%. **Queue:** open 99 / blocked 12, unchanged count (WH 58->58).
+- **Blockers (unchanged):** WH #1096 owner decision; step-plan stack held; #1187 lane-owned failures; owner-held exclusions untouched.
