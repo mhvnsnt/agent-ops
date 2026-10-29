@@ -3875,3 +3875,11 @@ ADDENDUM 11:57Z: AO #130 (this run's queue sync) LANDED-VERIFIED BY THIS RUN —
 - **Verify-sweep 8 verified, 0 false:** WH #1190/#1191/#1192, AO #321 tip, CJ/GRE/CD/WG/Bannon tips unchanged.
 - **Checkpoints:** 79 healthy / 0 stale. **TTT2:** running, fresh (12:56Z, seq 69), untouched. **Canon-sync:** nothing new. **Disk:** 58%. **Queue:** open 100 / blocked 12 (WH 59).
 - **Blockers (unchanged):** WH #1096 owner decision; step-plan stack held; owner-held exclusions untouched.
+
+## Overnight run 2026-10-29 13:44Z (productive -- WH #1196 merged by this run)
+- **WH #1193/#1194/#1195 LANDED-VERIFIED (lane merges, verified by this run, NOT merged by this run):** #1193 merge 0f459277 (2/2 blobs match); #1194 merge a644cc7e (MATRIX.md blob match); #1195 merge b2b364f1 (input.js blob match).
+- **WH #1196 LANDED-VERIFIED (MERGED BY THIS RUN):** gate body fixed (proof backticks to the 3 real diff paths), gate re-ran PASS, 14/14 checks PASS, CLEAN; merge a0680534, 3/3 blobs on main == branch head.
+- **WH #1197 gate-fixed, NOT merged:** instruction-gate failed on backticked code identifiers; body fixed, gate re-ran PASS; budgets/speed-quality/menu-touch-e2e still pending -- next run merges if green.
+- **Verify-sweep 9 verified, 0 false:** WH #1193/#1194/#1195/#1196, AO #322 tip, CJ/GRE/CD/WG/Bannon tips unchanged.
+- **Checkpoints:** 79 healthy / 0 stale. **TTT2:** running, fresh (13:41Z, seq 69), part_12 curls live, untouched. **Canon-sync:** nothing new. **Disk:** 57%. **Queue:** open 99 / blocked 12 (WH 58 live).
+- **Blockers (unchanged):** WH #1096 owner decision; step-plan stack held; owner-held exclusions untouched.
