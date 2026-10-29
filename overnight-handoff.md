@@ -3812,3 +3812,10 @@ ADDENDUM 11:57Z: AO #130 (this run's queue sync) LANDED-VERIFIED BY THIS RUN —
 - **Also landed by another lane during this window:** GRE #61 (T7 Master Raven + Lucky Chloe movesets JSON) merged 21:41:46Z, merge c6ba1a37.
 - **Method note:** Git Data API flat create-tree calls time out/502 past ~500–1,000 entries on this repo; local blobless-clone git write-tree hangs on a multi-hundred-MB promisor fetch. What worked: SUBTREE BUILD — reference the branch's existing subtree SHAs and rebuild only changed ancestor trees (3 tiny API calls). Verify every tree by full-path diff before committing.
 - **Blockers:** GRE #58/#57 re-land + #59 CLOSED by this run. Remaining owner decisions unchanged (CJ #253/#245, CJ #248/#239, WH #962/#992/#993, etc. — see MERGE-QUEUE.md header).
+
+## Overnight run 2026-10-29 07:14-07:3xZ (verification run)
+- Queue delta: landed-verified 1 (WH #1169, lane merge, verified by this run NOT merged by this run: moveset sweep pass 5, merge c5b5de4e = WH tip, +1948/-5, MATRIX.md on main sha 71866432). Merged by this run: 0. Reopened false claims: 0 (verify-sweep 7/7). Queue open 98 / blocked 12, unchanged.
+- WH open holds at 57: #1169 was created and merged between the 06:44 run and this run. Step-plan stack stays HELD pending #1096 owner decision; owner-held exclusions untouched.
+- Checkpoints: audit 79 healthy / 0 stale / 1100 skipped. TTT2 advancing (part_13 in flight, checkpoint 06:58Z fresh) — untouched.
+- Canon-sync: nothing new. Disk 57%. Bounded local-only sweep surfaced pre-existing dirty lane worktrees only — none touched or pushed.
+- Queue sync: AO PR this run (see overnight-log).
