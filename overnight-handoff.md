@@ -3911,3 +3911,9 @@ ADDENDUM 11:57Z: AO #130 (this run's queue sync) LANDED-VERIFIED BY THIS RUN —
 - Verify-sweep 5+ verified, 0 false: WH #1201/#1200, AO #327, CJ/GRE/CD/WG tips unchanged.
 - Checkpoints: 79 healthy / 0 stale. TTT2: running, fresh (15:41:39Z), part_09 curls live, untouched. Canon-sync: nothing new. Disk: 58%.
 - Blockers (unchanged): WH #1096 owner decision — the step-plan stack (incl. CLEAN #1141) stays HELD until he decides.
+
+## Overnight run 2026-10-29 17:14Z (verification run)
+- **WH #1203/#1204 LANDED-VERIFIED (lane merges, verified by this run, NOT merged by this run):** #1203 merge 4eb9d630 (tilde window, fighter.js +10/-0, movesets.js +5/-1, merge diff == PR diff, fighter.js blob match 430eba77); #1204 merge 74dda5de = WH tip (canonNotation FGC shorthand, movesets.js +6/-0, sweep.page.js +2/-2, merge diff == PR diff, sweep.page.js blob match ae74430a). All 14 checks PASS on both. WH open 57, no PRs >=1205.
+- **Verify-sweep 6 verified, 0 false:** WH #1203/#1204, AO #329 tip afd4d0cd, CJ tip 207d44ec, GRE tip 8d09e4c, CD tip a7972ee. Gap: WG tip not re-verified (mhvnsnt/wizard-gang 404) -- no WG claim made this run.
+- **Checkpoints:** 79 healthy / 0 stale. **TTT2:** running, fresh (16:58:52Z), part_04 curls live, untouched. **Canon-sync:** WG V2 directives (PIPELINE ONE stays, USE-PRO-100%, NO-MISSING-TOOLS) are new since last sync; landing owned by the WG side-chat wire-up lane -- not duplicated by this run. **Disk:** 61%. **Queue:** open 98 / blocked 12 (WH 57).
+- **Blockers (unchanged):** WH #1096 owner decision -- the step-plan stack (incl. CLEAN #1141) stays HELD until he decides. Owner-held exclusions untouched.
