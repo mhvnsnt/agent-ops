@@ -3883,3 +3883,6 @@ ADDENDUM 11:57Z: AO #130 (this run's queue sync) LANDED-VERIFIED BY THIS RUN —
 - **Verify-sweep 9 verified, 0 false:** WH #1193/#1194/#1195/#1196, AO #322 tip, CJ/GRE/CD/WG/Bannon tips unchanged.
 - **Checkpoints:** 79 healthy / 0 stale. **TTT2:** running, fresh (13:41Z, seq 69), part_12 curls live, untouched. **Canon-sync:** nothing new. **Disk:** 57%. **Queue:** open 99 / blocked 12 (WH 58 live).
 - **Blockers (unchanged):** WH #1096 owner decision; step-plan stack held; owner-held exclusions untouched.
+
+## Overnight run 2026-10-29 13:44Z addendum
+- **WH #1197 LANDED-VERIFIED (lane merge, verified by this run):** merge 7a68da88 = WH tip, 2/2 blobs match, 14/14 checks PASS (gate passed after this run's body fix). WH open 57. Queue open 98 / blocked 12.
