@@ -3825,3 +3825,9 @@ ADDENDUM 11:57Z: AO #130 (this run's queue sync) LANDED-VERIFIED BY THIS RUN —
 - Checkpoints: audit 79 healthy / 0 stale / 1100 skipped. TTT2 advancing (part_13 in flight, checkpoint 06:58Z fresh) — untouched.
 - Canon-sync: nothing new. Disk 57%. Bounded local-only sweep surfaced pre-existing dirty lane worktrees only — none touched or pushed.
 - Queue sync: AO PR this run (see overnight-log).
+
+## Overnight run 2026-10-29 08:44-2026-10-29T08:49ZZ (verification run)
+- Queue delta: landed-verified 2 (WH #1175/#1176 lane merges verified on main by this run: #1175 merge cbcb9be3, both proof JSON blobs == branch head; #1176 merge 2ee2d16f = WH tip, MATRIX.md == branch head). Merged by this run: 0. Reopened false claims: 0 (verify-sweep 5+ verified).
+- WH open 58->57: #1175 merged by the sweep lane after all 13 checks passed; #1176 created and merged by the lane in the same window. Step-plan stack stays HELD pending #1096 owner decision; owner-held exclusions untouched.
+- Checkpoints: audit 79 healthy / 0 stale / 1100 skipped. TTT2 advancing (part_04 curls live, checkpoint 08:27Z fresh) — untouched.
+- Canon-sync: nothing new. Disk 59%. Queue sync: AO PR this run (see overnight-log).
