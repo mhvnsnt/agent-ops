@@ -3862,3 +3862,9 @@ ADDENDUM 11:57Z: AO #130 (this run's queue sync) LANDED-VERIFIED BY THIS RUN —
 - **Verify-sweep 5+ verified, 0 false:** WH #1186, WH #1185, AO #318, CJ/GRE tips unchanged.
 - **Checkpoints:** 79 healthy / 0 stale. **TTT2:** running, fresh (11:41Z, seq 67), untouched. **Canon-sync:** nothing new. **Disk:** 57%. **Queue:** open 99 / blocked 12, unchanged count (WH 58->58).
 - **Blockers (unchanged):** WH #1096 owner decision; step-plan stack held; #1187 lane-owned failures; owner-held exclusions untouched.
+
+## Overnight run 2026-10-29 12:44Z
+- **WH #1189 LANDED-VERIFIED (lane merge, verified by this run, NOT merged by this run):** strict resolved-row check for condition rows + WH_LOAD_SCALE, +13/-5, 2 files; lane-merged d3ad3135 (parents 01d4a656 + 47b95f3f = WH tip); both blobs on main == branch head; all 13 checks PASS.
+- **Verify-sweep 5+ verified, 0 false:** WH #1189, AO #320 (ff441179), CJ/GRE/CD/WG/Bannon tips unchanged.
+- **Checkpoints:** 79 healthy / 0 stale. **TTT2:** running, fresh (12:26:52Z, seq 68), part_04 curls live, untouched. **Canon-sync:** nothing new. **Disk:** 58%. **Queue:** open 98 / blocked 12 (WH 57->57 net: #1189 landed, none created).
+- **Blockers (unchanged):** WH #1096 owner decision; step-plan stack held; owner-held exclusions untouched.
