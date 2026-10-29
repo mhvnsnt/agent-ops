@@ -3868,3 +3868,10 @@ ADDENDUM 11:57Z: AO #130 (this run's queue sync) LANDED-VERIFIED BY THIS RUN —
 - **Verify-sweep 5+ verified, 0 false:** WH #1189, AO #320 (ff441179), CJ/GRE/CD/WG/Bannon tips unchanged.
 - **Checkpoints:** 79 healthy / 0 stale. **TTT2:** running, fresh (12:26:52Z, seq 68), part_04 curls live, untouched. **Canon-sync:** nothing new. **Disk:** 58%. **Queue:** open 98 / blocked 12 (WH 57->57 net: #1189 landed, none created).
 - **Blockers (unchanged):** WH #1096 owner decision; step-plan stack held; owner-held exclusions untouched.
+
+## Overnight run 2026-10-29 13:14Z
+- **WH #1190/#1191/#1192 LANDED-VERIFIED (lane merges, verified by this run, NOT merged by this run):** #1190 merge e12a34dc (.gitleaks.toml blob match); #1191 merge 04177fe0 (3/3 blobs match, 14 checks pass); #1192 merge 2ea1e9b0 = WH tip (fighter.js blob match, 14 checks pass, merged by the lane mid-run).
+- **WH #1193/#1194 queued OPEN-PR pending-checks, lane-active:** #1193 no-connect cause breakdown (+27/-4, 3 checks in progress); #1194 MATRIX.md refresh (+97/-97, 3 checks in progress). Next run merges if green.
+- **Verify-sweep 8 verified, 0 false:** WH #1190/#1191/#1192, AO #321 tip, CJ/GRE/CD/WG/Bannon tips unchanged.
+- **Checkpoints:** 79 healthy / 0 stale. **TTT2:** running, fresh (12:56Z, seq 69), untouched. **Canon-sync:** nothing new. **Disk:** 58%. **Queue:** open 100 / blocked 12 (WH 59).
+- **Blockers (unchanged):** WH #1096 owner decision; step-plan stack held; owner-held exclusions untouched.
