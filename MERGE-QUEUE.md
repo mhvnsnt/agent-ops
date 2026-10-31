@@ -9,7 +9,7 @@ Overnight pipeline 2026-10-31T10:44Z (queue delta first: 0 merged BY this run; 1
 - IN-FLIGHT LEFT ALONE: storing-lane upload to WH release 429652519 (curl now on pulls__data037.bin, up from Data0015 at 10:14Z) + supervisor_ttt2.sh / store_driver3.py — untouched per NEVER-KILL.
 - FAILURE-ALERTS: nothing new since 2026-10-20. STEP 7 pulls: none this run (new intake last).
 - Queue counts: WH open PRs 15 + CJ 3 + Bannon 5 = 23 open / blocked 11 (carried: WH #377 + drafts #1090/#863/#182 + Bannon drafts #78/#45/#44/#43 + CJ review-held #270/#271/#272).
-- SYNC: PENDING-FRESH-CLONE-RESULT
+- SYNC: LANDED-VERIFIED — agent-ops PR #331 merged d82a6e3 (parents b9f95f4 + c50e218); queue + handoff heads on main verified this run.
 
 Overnight pipeline 2026-10-31T10:14Z (queue delta first: 0 merged BY this run; 3 NEW lane landings VERIFIED on main by this run (WH #1357/#1359/#1363); 0 false claims reopened)
 - LANDED-VERIFIED (lane merges, verified by this run, not by this run's merge): WH #1357 (F6 slice, merge 27637b3, merged 09:51:22Z) + #1359 (F6 torch, merge 2bbe79b, merged 10:04:14Z) + #1363 (F6 throw settlement doc, merge b15042a, merged 10:13:30Z) = WH main tip b15042a. Chain check: compare 2a2f702 (#1362 tip)...b15042a ahead_by 8, behind_by 0, all 3 merge messages + 2 settlement commits + 2 CI-retrigger commits in list. Files, all modified/added, 0 deletions: slice.json +4/-4, torch.json +4/-4, F6-THROW-SETTLEMENT-2026-10-30.md +337/-0 (new). Payloads on main via contents API: slice.json sha 2671955 3,094,439 B; torch.json sha 43f8a56 3,802,126 B; settlement doc sha df37986 21,740 B. F6 throw settlement series now COMPLETE (184-entry accounting doc landed); no new open F6 PRs.

@@ -3,7 +3,7 @@
 - 0 merged by this run, 0 false claims reopened. Queue: 23 open (WH 15 + CJ 3 + Bannon 5), 11 blocked (carried).
 - Not merged, with reasons: CJ #270/#271/#272 review-held by their own bodies ("Do not merge without review" / "Not merging — for review" / stacked after #271); Bannon #22 head=main + empty body + UNSTABLE (unclear, needs clarification); WH #713 MERGEABLE but game-unit-tests fail 3/9 (attack-anim.test.mjs zen rows, run 40955196304) — real failure, lane fix needed; WH #1073/#1072/#1057/#970/#911/#908/#875/#826/#714/#706 all CONFLICTING (>72h, flagged).
 - In flight, left alone: TTT2 storing lane (release 429652519, now pulls__data037.bin) + supervisor_ttt2. Checkpoints 78 healthy / 0 stale. Disk 68%.
-- SYNC: PENDING-FRESH-CLONE-RESULT
+- SYNC: LANDED-VERIFIED — agent-ops PR #331 merged d82a6e3 (parents b9f95f4 + c50e218); queue + handoff heads on main verified this run.
 
 ## 2026-10-31 05:14 CDT overnight run — queue delta first
 - LANDED-VERIFIED (lane merges, verified on main this run): WH #1357 (F6 slice, 27637b3), #1359 (F6 torch, 2bbe79b), #1363 (F6 settlement doc, b15042a) — WH tip now b15042a. F6 throw settlement series COMPLETE (184-entry accounting doc on main).
