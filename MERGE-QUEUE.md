@@ -9,7 +9,7 @@ Overnight pipeline 2026-10-31T15:15Z (queue delta first: 0 merged BY this run; 4
 - IN-FLIGHT LEFT ALONE: CJ v4 blender render (frames 1031-1090) + TTT2 storing-lane curl loops + disk-guardian du scan — untouched per NEVER-KILL. DISK: 79% (117G used, 33G free) — under 85% but ~1G below the recorded ~118G EDQUOT write limit; guardian tracking (10:13 CDT), no safe deletions, no action by this run.
 - FAILURE-ALERTS: nothing new since 2026-10-20. STEP 7 pulls: none this run (new intake last; reactions lane merging live).
 - Queue counts: WH open PRs 24 + CJ 5 + Bannon 5 = 34 open / blocked 11 (carried, unchanged set).
-- SYNC: PENDING — see handoff; queue/handoff update attempted via /tmp shallow clone this run (avoids home-quota risk at 117G used).
+- SYNC: LANDED-VERIFIED — agent-ops PR #333 merged 1a2092dbc48cf2da599179635083ec73131a960f (parents 19dae42ef59ec76801b2f3a5bc61a3b978d8d3b3 + 01ba76a444278e95253ca0267351deb4764be0c8); MERGE-QUEUE.md on main sha 2c63e717635b3889cf1ee5c09a5ff8b4cefadc94 size 1,397,601 B, matching local. Dated branch used (remote merge-queue-sync still points at merged #332 head; see PR #333 deviations note); no force push.
 
 
 Overnight pipeline 2026-10-31T10:44Z (queue delta first: 0 merged BY this run; 1 NEW lane landing VERIFIED on main by this run (WH #1365); 0 false claims reopened)
