@@ -9,7 +9,7 @@ Overnight pipeline 2026-10-31T15:44Z (queue delta first: 0 merged BY this run; 1
 - IN-FLIGHT LEFT ALONE: CJ v4 blender renders + CJ v2 ffmpeg encode + TTT2 storing-lane curl upload (lzx__decdata011.tar.gz, 260MB, to WH release 429652519) + disk-guardian du scan + fight-freeze repro4 — untouched per NEVER-KILL. DISK: 79% (117G used, 33G free) — under 85% but ~1G below the recorded ~118G EDQUOT write limit; guardian tracking, no safe deletions, no action by this run.
 - FAILURE-ALERTS: nothing new since 2026-10-20. STEP 7 pulls: none this run (new intake last; reactions lane merging live).
 - Queue counts: WH open PRs 21 + CJ 5 + Bannon 5 = 31 open / blocked 11 (carried, unchanged set).
-- SYNC: (filled after sync attempt below)
+- SYNC: LANDED-VERIFIED — agent-ops PR #335 merged 406003c59a304b2e011d04dd72960d6c452ea59e (merge commit, 2 parents); MERGE-QUEUE.md on main sha e63d77d size 1,402,469 B. Gate failed twice on body format (missing sections, then un-backticked proof paths + unticked self-check box) — fixed per STEP 1 item 2, green (guard pass + instruction-gate pass), then merged. No force push.
 
 
 Overnight pipeline 2026-10-31T15:15Z (queue delta first: 0 merged BY this run; 40 NEW lane landings VERIFIED on main by this run (WH #1366-#1404 except open #1377 = 38 merges + GRE #78 + agent-ops #332); 0 false claims reopened)
