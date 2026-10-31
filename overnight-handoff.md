@@ -4582,3 +4582,9 @@ Overnight pipeline 2026-10-31T00:44-00:55Z (queue delta first: 0 merged by this 
 - STALLED: none (checkpoint_audit 78 healthy / 0 stale; ttt2-resume-100 heartbeat 00:43:55Z fresh, untouched).
 - IN-FLIGHT LEFT ALONE: at-inflate2 PID 18967, Blender scene_v3 frames 1001-1250 PID 25884, _playverify ffmpeg. DISK 79% (32G free).
 - Queue counts: WH open 24 + CJ 2 + Bannon 5 = 31 open / blocked 11 (was 12; #1096 resolved). SYNC GAP carried: queue/handoff/log local-only (dirty workdirs block the queue-sync push).
+
+Overnight pipeline 2026-10-31T20:20Z (queue delta first: 0 merged by this run; 0 new landings; 0 false claims reopened)
+- Queue counts: WH 16 + CJ 6 + Bannon 5 = 27 open / blocked 11. New: WH #1462 (rig stage 3 batch 4, MERGEABLE but 1 check IN_PROGRESS -- not merged, left to lane/CI); CJ #286 (v7c, MERGEABLE but check IN_PROGRESS -- not merged).
+- Tips verified unchanged on main: WH e090c0f (#1461), CJ 23bbeaa, Bannon bca19c4, agent-ops 3e61f16 (#344), wrestling-game e1702af, GRE 05578ee, ConcreteDragon a7972ee.
+- Verify sweep 6/6, 0 false. Checkpoints: 81 healthy / 0 stale; watchdog+running fresh (fight-input-freeze 20:14:51Z, ttt2-resume-100 19:59:33Z), untouched.
+- Canon-sync: nothing new. Failure-alerts: nothing new since 2026-10-20. Disk 62% (92G/58G free). In-flight lanes untouched per NEVER-KILL.
