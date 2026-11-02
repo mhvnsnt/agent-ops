@@ -5358,3 +5358,11 @@ Overnight pipeline 2026-11-02T06:14Z (queue delta first: 0 merged BY this run; 1
 - STALLED: none. Checkpoints 1,210 files, 1 known unparseable; watchdog+running fresh (steam-full-pull 05:51Z, ttt2-resume-100 06:14Z) untouched.
 - IN-FLIGHT LEFT ALONE: Steam curl upload EP01.usm to GRE release 431075585; separate lane du scan. Disk 61%. Failure-alerts nothing new. Canon-sync nothing new. No new thread/pull (stand-down, live lanes).
 - Queue counts: WH 18 + CJ 5 + Bannon 5 + agent-ops 0 = 28 open.
+
+Overnight pipeline 2026-11-02T06:44Z (queue delta first: 0 merged BY this run; 1 prior sync landing verified (#403); 0 false claims reopened; 0 new queue items)
+- LANDED-VERIFIED: agent-ops #403 (06:14Z run's sync), merge f8c19103 = tip, parents fdacfae4 + 2e3dd7ed, merged 06:20:17Z; main queue sha 59376b17 / handoff sha 19cb553e matched local exactly before this run's entry.
+- NOT MERGED: WH 18 carried (CONFLICTING stack + #713 UNSTABLE/game-unit-tests + #377 owner-held; drafts untouched); CJ 5 CLEAN but held (owner 2D decision / dance-lane order); Bannon 5 (#22 UNSTABLE, drafts excluded). WG/GRE/CD/agent-ops 0 open.
+- VERIFY-SWEEP 6/6, 0 false: agent-ops #403, WH tip 9a2e6d60 (#1493), xray.js e3b67880, pantera.json 192fd889, CJ/Bannon/WG/GRE/CD tips unchanged.
+- STALLED: none. Checkpoints 1,210 files, 1 known unparseable; watchdog+running fresh (steam-full-pull 06:26Z, ttt2-resume-100 06:27Z) untouched.
+- IN-FLIGHT LEFT ALONE: Steam curl upload CH01_02.usm to GRE release 431075585; separate lane du scan. Disk 59%. Failure-alerts nothing new. Canon-sync nothing new. No new thread/pull (stand-down, live lanes).
+- Queue counts: WH 18 + CJ 5 + Bannon 5 + agent-ops 0 = 28 open.
