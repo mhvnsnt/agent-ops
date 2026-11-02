@@ -5351,3 +5351,10 @@ Overnight pipeline 2026-11-02T05:44Z (queue delta first: 0 merged BY this run; 1
 - STEP 6/7/8: no new thread started and no new pulls -- WH suite lane + Steam lane live, so stand-down per CHECK-BEFORE-START.
 - BLOCKED >72h (flagged by name, concrete decisions carried): WH #1073 CONFLICTING + carried #1072/#1057/#970/#911/#908/#875/#826/#714/#706 -- need conflict resolution keeping both sides; WH #713 blocked on game-unit-tests (fix the test fixture or the VF5 motion data, VF5 lane owns it); WH #377 owner-held evidence (do-not-merge); CJ #270 owner decision: merge as the 2D v2 record, or hold pending the 2D-direction decision; Bannon #78 draft excluded/owner-held.
 - Queue counts: WH 18 + CJ 5 + Bannon 5 + agent-ops 0 = 28 open.
+Overnight pipeline 2026-11-02T06:14Z (queue delta first: 0 merged BY this run; 1 prior sync landing verified (#402); 0 false claims reopened; 0 new queue items)
+- LANDED-VERIFIED: agent-ops #402 (05:44Z run's sync), merge fdacfae4 = tip, parents 1b16d829 + 4f9ef7ae.
+- NOT MERGED: WH 18 carried (heads unchanged; #713 sole fail game-unit-tests; #377 owner-held + failing canon-names/ui-sources; drafts untouched); CJ 5 CLEAN but held (owner 2D decision / dance-lane order); Bannon 5 (#22 UNSTABLE, drafts excluded). WG/GRE/CD/agent-ops 0 open.
+- VERIFY-SWEEP 6/6, 0 false: agent-ops #402, WH tip 9a2e6d60 (#1493), xray.js e3b67880, pantera.json 192fd889, CJ/Bannon/WG/GRE/CD tips unchanged.
+- STALLED: none. Checkpoints 1,210 files, 1 known unparseable; watchdog+running fresh (steam-full-pull 05:51Z, ttt2-resume-100 06:14Z) untouched.
+- IN-FLIGHT LEFT ALONE: Steam curl upload EP01.usm to GRE release 431075585; separate lane du scan. Disk 61%. Failure-alerts nothing new. Canon-sync nothing new. No new thread/pull (stand-down, live lanes).
+- Queue counts: WH 18 + CJ 5 + Bannon 5 + agent-ops 0 = 28 open.
