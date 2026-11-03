@@ -5528,3 +5528,13 @@ Overnight pipeline 2026-11-02T08:44Z (queue delta first: 0 merged BY this run; 1
 - BLOCKED >72h (flagged by name, concrete decisions carried): WH #1073 CONFLICTING + carried #1072/#1057/#970/#911/#908/#875/#826/#714/#706 -- need conflict resolution keeping both sides; WH #713 blocked on game-unit-tests (fix the test fixture or the VF5 motion data, VF5 lane owns it); WH #377 owner-held evidence (do-not-merge); CJ #270 owner decision: merge as the 2D v2 record, or hold pending the 2D-direction decision; Bannon #78 draft excluded/owner-held.
 - Queue counts: WH 18 + CJ 5 + Bannon 5 + agent-ops 0 = 28 open.
 
+
+Overnight pipeline 2026-11-03T07:14Z (queue delta first: 0 merged BY this run; 0 new lane landings; 0 false claims reopened; 0 stale checkpoints resumed; 0 new queue items)
+- NOT MERGED BY THIS RUN (carried, re-confirmed fresh via gh): WH open 19 (6 drafts incl. #1527/#1526/#1525/#863 CLEAN, #1090/#182 CONFLICTING; 11 CONFLICTING non-drafts; #713/#377 UNSTABLE not green, #377 owner-held); CJ open 5 (#274-#271 CLEAN/MERGEABLE held for dance-lane landing order; #270 held for owner 2D-direction decision); GRE open 2 (#79/#80 UNSTABLE, guard run still queued); Bannon open 5 (#22 UNSTABLE empty diff; drafts #78/#45/#44/#43 excluded/owner-held); WG/CD/agent-ops 0 open before this run's sync.
+- VERIFY-SWEEP: 8 checks, 0 false (WH tip #1538 merge; CJ tip Gumball catalog; CJ #373 blob 69175e61 2,055,292 B; WH xray.js e3b67880 25,391 B; agent-ops tip #418 sync merge; GRE/Bannon tips unchanged; agent-ops queue blob on main = local hash before this run's entry).
+- STALLED: none. 1,222 checkpoints scanned; both watchdog+running FRESH (07:13:49Z); 2 known zero-byte unparseable files unchanged; checkpoint_audit.py still missing (tools/ archived).
+- CANON-SYNC: nothing new. IN-FLIGHT LEFT ALONE: CJ v5 Blender 3519, wave2 Blender 15687, everything-else server 2545 + deploy dry-run 5522, at-inflate2 4940.
+- DISK WATCH: 78% (116G/34G free), under 85%, up from ~60% earlier — no action, cleanup worker owns it. Nothing deleted.
+- STEP 6/7/8: no new thread, no new pulls — live lanes, stand-down per CHECK-BEFORE-START.
+- BLOCKED >72h: WH #1073 + carried conflicting set (conflict resolution keeping both sides); WH #713 (game-unit-tests, VF5 lane); WH #377 owner-held; CJ #270 (owner 2D-direction decision); Bannon #78 excluded/owner-held.
+- Queue counts: WH 19 + CJ 5 + GRE 2 + Bannon 5 = 31 open.
