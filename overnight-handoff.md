@@ -1,3 +1,14 @@
+Overnight pipeline 2026-11-03T14:14Z (queue delta first: 0 merged BY this run at push time; #431 body fixed to gate format, merge gated on green — outcome in run log + next run's verification; 0 false claims reopened; 0 stale checkpoints resumed; 0 new queue items)
+- GATE FIX: agent-ops #431 failed instruction-gate only (missing 6 body sections), guard passing; body rewritten to gate format this run, body-only, merge only when green.
+- NOT MERGED AT PUSH TIME: WH 19, CJ #270 (CLEAN, owner-held), GRE #79/#80 (UNSTABLE, guard-waiting), Bannon 5 (4 excluded drafts + #22 UNSTABLE), agent-ops #431 (this sync PR).
+- VERIFY-SWEEP: 11 checks, 0 false (WH #1540/#1541 payloads + #1542 file exact on main; tips WH f1cdcd59, agent-ops 261ca7cc, CJ d1eb1abd, GRE 05578ee8, Bannon bca19c49, CD a7972ee1, WG e1702afd all unchanged).
+- STALLED: none. Steam watchdog+running fresh (14:12:10Z), not resumed. 2 known unparseable unchanged.
+- CANON-SYNC: nothing new. IN-FLIGHT LEFT ALONE: CJ v5 Blender render frames 289-384 (pid 38730, untouched).
+- DISK: 74%, under 85%. FAILURE-ALERTS: nothing new.
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work.
+- BLOCKED >72h: WH conflicting set; WH #713; WH #377 owner-held; CJ #270 (owner 2D-direction decision); Bannon #78 excluded/owner-held.
+- Queue counts: WH 19 + CJ 1 + GRE 2 + Bannon 5 = 27 open game PRs; + agent-ops #431 = 28 total open; blocked (>72h) = 14.
+
 Overnight pipeline 2026-11-03T13:44Z (queue delta first: 0 merged BY this run; 3 lane landings verified on main BY this run (#1540/#1541/#1542); 0 false claims reopened; 0 stale checkpoints resumed; 0 new queue items)
 - LANDED-VERIFIED (verified on WH main by this run via gh contents API): #1540 Ryusan bake (model-rerig.glb 470afb0c, 5,079,568 B), #1541 Menajerii palette (model-rigged-noplane.glb 0108a6756, 3,194,880 B), #1542 handoff amendment (MERGED, tip f1cdcd59). WH open now 19.
 - NOT MERGED: CJ #270 (CLEAN, owner-held); GRE #79/#80 (UNSTABLE, guard-waiting); Bannon #78 drafts excluded + #22 UNSTABLE; WH drafts/conflicting/#713/#377 as in MERGE-QUEUE.md entry for this run; agent-ops #431 = this sync PR (UNSTABLE, left open).
