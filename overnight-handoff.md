@@ -1,4 +1,13 @@
 
+## Overnight pipeline — 2026-11-03T23:44Z (idle 35min, last user msg 2026-11-03T23:09:11Z)
+- QUEUE DELTA: 0 merged by this run; 1 prior sync landing re-verified (#445 = agent-ops main tip ce2c7277); 0 false claims; 0 stale resumed; 5 new items (WH #1548/#1547/#1546/#1544 + canon-sync pending). Queue counts: WH 23 + CJ 1 + GRE 2 + Bannon 5 = 31 open; blocked (>72h) = 14.
+- VERIFY SWEEP: 9 checks, 0 false — agent-ops #445 = tip; WH tip 096489c3; WH #1540/#1541 payload blobs exact; CJ/GRE/Bannon/WG/CD tips unchanged.
+- PR STATE (fresh gh pr list): no game PR mergeable+green+unexcluded. WH #1548 MERGEABLE/UNSTABLE (menu-touch-e2e pending, rest pass) — NOT merged; new drafts #1547/#1546/#1544 CLEAN; conflicting set unchanged; #713/#377 UNSTABLE; GRE #79/#80 UNSTABLE; CJ #270 CLEAN but owner-held; Bannon #78 excluded/owner-held.
+- CHECKPOINTS: 1,227 scanned; 3 watchdog+running live (smutbase-t7-banks, megami-outfit-hunt, ttt2-motion, heartbeated 23:36-23:37Z); steam-full-pull updated 22:44Z but watchdog-verified guard-waiting — no resume, watchdog-owned. 2 known zero-byte unparseable skipped.
+- CANON-SYNC: queued not committed — Pond fix order + TTT2/Megami verdict are lane-owned (T7-banks / TTT2 continuation coordinators) and must land via their PR routes into WH docs/canon-archive/.
+- IN-FLIGHT: CJ v5 EEVEE render frames 673-768, pid 39074, 725 frames, progressing — untouched. DISK 74%. FAILURE-ALERTS nothing new.
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work.
+
 ## Overnight pipeline — 2026-11-03T22:14Z (idle 33h+, last user msg 2026-11-02T13:13:08Z)
 - QUEUE DELTA: 0 merged by this run at entry time; 1 prior sync landing re-verified (#444 = agent-ops main tip 24b45fd3); 0 false claims; 0 stale resumed; 0 new items; agent-ops #445 body fixed to gate format (was instruction-gate FAIL, guard PASS) and this run's entry appended to its branch — merges when green, next run re-verifies. Queue counts: WH 19 + CJ 1 + GRE 2 + Bannon 5 = 27 open; blocked (>72h) = 14.
 - VERIFY SWEEP: 6+ checks, 0 false — agent-ops #444 = tip; WH tip 096489c3; WH #1540/#1541 payload blobs exact; CJ BVH blob exact; CJ/GRE/Bannon/WG/CD tips unchanged.
