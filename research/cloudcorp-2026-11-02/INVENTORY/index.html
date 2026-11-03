@@ -1,0 +1,5788 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Indexes, conventions, manifests, and handoffs for the agent fleet.">
+      
+      
+        <meta name="author" content="Mars FMMG">
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../WATCHLIST/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>CloudCorpRecords — Complete Public Repo Inventory (excl. xod, internet-of-things) - Agent Ops Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cloudcorprecords-complete-public-repo-inventory-excl-xod-internet-of-things" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Agent Ops Hub" class="md-header__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agent Ops Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CloudCorpRecords — Complete Public Repo Inventory (excl. xod, internet-of-things)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Agent Ops Hub" class="md-nav__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Agent Ops Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    agent-ops — restart resilience for agent work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AGENTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AGENTS.md
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ANTI-CLOBBER-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ANTI-CLOBBER LAW (owner 2026-10-17)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AUDIT-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repo audit — 2026-10-14 (Grok Bot)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BOX-OFFLOAD-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BOX OFFLOAD LOG — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CHECKPOINT_PROTOCOL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkpoint Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CLAIMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAIMS (prevents collisions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../COMPUTE_ARSENAL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Free Compute Arsenal — fmmg.mars@gmail.com (Mars FMMG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CROSS-REPO-STRANDED-AUDIT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CROSS-REPO STRANDED-WORK AUDIT — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../END-OF-SESSION-BACKUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    END-OF-SESSION BACKUP (watchdog procedure)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FRICTION-RESEARCH-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FRICTION RESEARCH LOG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../HANDOFF-CANON/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — CANON (where the game's knowledge lives)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../HANDOFF-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF INDEX — fleet state, one place, no "missing"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../HANDOFF-REPOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — REPOS (per-repo state + landing order)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../HANDOFF-TEARDOWNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — TEARDOWNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../HANDOFF-WESTERN-HEART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — WESTERN HEART (mhvnsnt/western-heart)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../HOW-GROKBOT-WORKS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How Grok Bot works (copy this process)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IDEMPOTENCY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idempotency Rules — write work so a re-run can't duplicate or corrupt it
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LANE_GUARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane Guard — crash-resilient + collision-proof lanes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MERGE-IT-YOURSELF-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE-IT-YOURSELF LAW (owner 2026-10-15) — canonical copy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MERGE-QUEUE-BRIEFING-CONFIRMATIONS-2026-10-24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE-QUEUE BRIEFING — CONFIRMATIONS (2026-10-24)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MERGE-QUEUE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE QUEUE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MULTIVERSE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MULTIVERSE — one universe, many games
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NO-DATA-LOSS-RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NO-DATA-LOSS RULES (owner law — mhvnsnt)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../RESEARCH-CONVENTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Conventions (all repos, all agents)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../RESEARCH-PULLIN-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RESEARCH → PULL-IN INDEX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../RESUME_BRIEF_TEMPLATE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resume Brief Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../TAG-TEAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TAG-TEAM board (live)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../TORBOX-ALTERNATIVES-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Alternatives — Free/Open-Source Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../TORBOX-BREAKTHROUGH-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Breakthrough Program — Final Report (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../TORBOX-LANE5-AGENT-REVIEW-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox BAD_TOKEN — Lane 5 All-Agents Review (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../TORBOX-RESEARCH-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Research — 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../TORBOX-SUPPORT-TICKET-DRAFT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Support Ticket — DRAFT (do not send without owner approval)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WH-974-REVERT-2026-10-24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    INCIDENT 2026-10-24 ~02:28Z — WH #974 merge built on stale branch tree (main's payloads dropped)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WH-FIXABLE-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WH fixable-PRs work log — 2026-10-23 (conflict-resolution worker)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WORKING-METHOD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working Method
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adr-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-NNNN:
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../disk-cleanup-log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Cleanup Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../grokbot-activity-proof-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot / MoneyManBusch activity proof — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../torbox-claims-recheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Claims Re-Check — 2026-10-20 evening (coordinator lane, parent-ordered)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../torbox-lane1-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Auth — Lane 1, Round 2 (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../torbox-lane2-debrid-live/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LANE 2 (RETRY) — Debrid-Link + AllDebrid Live Tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../torbox-lane3-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 3 — Alternative Debrid / Seedbox Sweep for a 350 GB Single-File Torrent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../torbox-lane4-compute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 4 — Free compute / cloud-to-cloud transfer layer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../torbox-lane5-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 5 — All-Agents Tooling on TorBox BAD_TOKEN (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../torbox-lane6-oss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Lane 6 — Open-Source Wire-Up + Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../torbox-lane7-seedbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 7 — Free-Trial Seedbox Angle (Seedhost.eu + Pulsed Media + others)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_49" >
+        
+          
+          <label class="md-nav__link" for="__nav_49" id="__nav_49_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent handoff
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_49_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_49">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent handoff
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../agent-handoff/PRODUCERBOT_WORKFLOW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PRODUCERBOT WORKFLOW
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_50" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_50" id="__nav_50_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_50_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_50">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Research
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_50_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_50_1" id="__nav_50_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloudcorp 2026 11 02
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_50_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_50_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cloudcorp 2026 11 02
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CloudCorpRecords pull-in — 2026-11-02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CloudCorpRecords — Complete Public Repo Inventory (excl. xod, internet-of-things)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CloudCorpRecords — Complete Public Repo Inventory (excl. xod, internet-of-things)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#all-originals-non-forks-265" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        All originals (non-forks, 265)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-forks-90-upstream-projects-not-cloudcorprecords-originals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        All forks (90) — upstream projects, NOT CloudCorpRecords originals
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WATCHLIST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CloudCorpRecords — RESEARCH / WATCH list (everything not in the top 25)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_50_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_50_1_4" id="__nav_50_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audits
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_50_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_50_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Audits
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/actionpin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — actionpin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/agent-evals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — agent-evals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/agentsfile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — agentsfile (@reneturcios/agentsfile)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/audioport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — audioport (@reneturcios/audioport)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/cidiff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — cidiff
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/commitcheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — commitcheck
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/depguard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — depguard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/flowcheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — flowcheck
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/greenlight/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — greenlight
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/hookcheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — hookcheck
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/imageport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — imageport (@reneturcios/imageport)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/injectcheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — injectcheck
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/logdigest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — logdigest (@reneturcios/logdigest)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/mcpaudit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — mcpaudit (@reneturcios/mcpaudit)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/mcpvet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — mcpvet (@reneturcios/mcpvet)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/muse-farm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — muse-farm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/muse-marketplace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — muse-marketplace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/prodforge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — prodforge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/readmeaudit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — readmeaudit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/scenemodel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — scenemodel (@reneturcios/scenemodel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/shipcheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — shipcheck (@reneturcios/shipcheck)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/skillcheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — skillcheck (@reneturcios/skillcheck)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/specforge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — specforge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/testdelta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — testdelta (@reneturcios/testdelta)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/videokit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — videokit (@reneturcios/videokit)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audits/xod-parts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — Xod parts (scoped extraction candidates only)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_50_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_50_1_5" id="__nav_50_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test runs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_50_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_50_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Test runs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test-runs/agentsfile-RESULT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    agentsfile 0.1.0 — TEST RUN RESULT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test-runs/xod-sentinel-RESULT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Xod sentinel smoke test — standalone run result
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#all-originals-non-forks-265" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        All originals (non-forks, 265)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-forks-90-upstream-projects-not-cloudcorprecords-originals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        All forks (90) — upstream projects, NOT CloudCorpRecords originals
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cloudcorprecords-complete-public-repo-inventory-excl-xod-internet-of-things">CloudCorpRecords — Complete Public Repo Inventory (excl. xod, internet-of-things)<a class="headerlink" href="#cloudcorprecords-complete-public-repo-inventory-excl-xod-internet-of-things" title="Permanent link">&para;</a></h1>
+<p>Source: <code>gh api users/CloudCorpRecords/repos --paginate</code> on 2026-11-02. Account type: User, 357 public repos total. Excluding xod + internet-of-things = <strong>355</strong>. Non-forks: 265, Forks: 90. Licenses: {'NOASSERTION': 15, 'MIT': 260, 'ISC': 1, 'NONE': 45, 'AGPL-3.0': 6, 'Apache-2.0': 26, 'GPL-3.0': 2}. Languages top: [('TypeScript', 218), ('None', 87), ('Python', 25), ('JavaScript', 20), ('HTML', 2), ('Go', 1)].</p>
+<p>All stars are 0 unless noted in the API data (max in set: OpenGenApps 10, system-monitor 4, AI-Course-Creator/musicboi 3).</p>
+<h2 id="all-originals-non-forks-265">All originals (non-forks, 265)<a class="headerlink" href="#all-originals-non-forks-265" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>License</th>
+<th>Lang</th>
+<th>Updated</th>
+<th>Size KB</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/actionbridge">actionbridge</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>34</td>
+<td>Zapier exposed actions as MCP tools via a generic action runner.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/actionpin">actionpin</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>388</td>
+<td>GitHub Actions supply-chain hardener: find actions not pinned to a full commit SHA and pin them, with evidence per workflow line.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/adyen-payments-demo">adyen-payments-demo</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-10-20</td>
+<td>19</td>
+<td>Independent DevRel prototype of an Adyen-style payments flow. Simulated payments, from public docs. Not affiliated with Adyen.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/aftertaste">aftertaste</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-27</td>
+<td>24</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/agent-eval-harness">agent-eval-harness</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-10-20</td>
+<td>16</td>
+<td>Independent prototype: deterministic agent eval harness with experiment tracking. Simulated agents. Not affiliated with Databricks.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/agent-evals">agent-evals</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-23</td>
+<td>28</td>
+<td>Open agent evaluation harness + public leaderboard — point it at any AI agent, get scored on tool-use, accuracy, and latency</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/agentsfile">agentsfile</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-25</td>
+<td>37</td>
+<td>Validate AGENTS.md and CLAUDE.md against repo reality: referenced paths, package.json scripts, and documented commands are checked against the actual tree, so agent instruction files cannot quietly rot.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/AI-Course-Creator">AI-Course-Creator</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-10-13</td>
+<td>1453</td>
+<td>Learn to build software with AI — a complete vibe-coding course</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/ai-handoff">ai-handoff</a></td>
+<td>-</td>
+<td>Python</td>
+<td>2026-10-27</td>
+<td>20</td>
+<td>Muse plugin: two AI coding tools hand work to each other through one shared per-repo handoff file</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/ai-research-assistant-temporal">ai-research-assistant-temporal</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-13</td>
+<td>113</td>
+<td>Durable AI research assistant on Temporal: live web search plus a local knowledge base, with a split-screen view of the workflow event history</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/aidocs">aidocs</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>32</td>
+<td>OpenAI docs, guides, changelog and API reference as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/allfeatures">allfeatures</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>42</td>
+<td>Protocol feature showcase: echo, math, resources, images, sampling and elicitation demos.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/analyticbase">analyticbase</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>40</td>
+<td>Query ClickHouse over HTTP: list databases and tables, run SELECT.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/animeport">animeport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>38</td>
+<td>Anime, manga, characters, and staff from AniList: search, profiles, lists, and birthdays.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/answersearch">answersearch</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-31</td>
+<td>35</td>
+<td>Perplexity answers: ask, search, reason, and deep research through the Sonar API.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/anthropic-perf-takehome-attempt">anthropic-perf-takehome-attempt</a></td>
+<td>-</td>
+<td>Python</td>
+<td>2026-10-20</td>
+<td>13</td>
+<td>Independent attempt at Anthropic's publicly released retired performance take-home: 147,734 to 2,819 cycles (52.4x), correctness verified with their harness.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/API-Hub">API-Hub</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-03-15</td>
+<td>7242</td>
+<td>Repository for https://replit.com/@CloudCorpRecord/API-Hub</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/appbase">appbase</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>44</td>
+<td>Supabase projects, tables, SQL, migrations, and storage from your MCP client.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/apphost-port">apphost-port</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>32</td>
+<td>Render services, deploys, env vars and logs as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/ashareport">ashareport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>36</td>
+<td>A-share stock data: history, realtime, news, statements and metrics.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/assetlens">assetlens</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>0</td>
+<td>Search public marketplace listings, projects, and documents for real-world assets.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/audioport">audioport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>37</td>
+<td>Audio metadata, conversion, trimming, normalization, and transcription via ffmpeg.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/bilitrack">bilitrack</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>42</td>
+<td>Track Bilibili users, videos, dynamics, articles, and comments via the public web API.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/blindrelay">blindrelay</a></td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>2026-10-27</td>
+<td>175</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/BlingBlau">BlingBlau</a></td>
+<td>-</td>
+<td>Python</td>
+<td>2024-05-22</td>
+<td>0</td>
+<td>Upload your song, get a Lyric Video back.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/brdata">brdata</a></td>
+<td>NOASSERTION</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>38</td>
+<td>Brazilian public data: IBGE, CNPJ, CEP, CPF, BCB rates, FIPE, PNCP, gazettes, and health units.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/browserboi">browserboi</a></td>
+<td>-</td>
+<td>Python</td>
+<td>2026-10-05</td>
+<td>222</td>
+<td>Local browser automation agent powered by LM Studio — fully local LLMs</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/browserdebug">browserdebug</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-31</td>
+<td>36</td>
+<td>Debug web pages in Chrome: performance traces, network, console, snapshots, screenshots.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/browserstage">browserstage</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-31</td>
+<td>35</td>
+<td>Automate a browser with accessibility snapshots: navigate, click, type, fill and wait.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/build_llm">build_llm</a></td>
+<td>-</td>
+<td>Python</td>
+<td>2023-07-02</td>
+<td>4</td>
+<td>class workshop of building llm</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/burnmeter">burnmeter</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>37</td>
+<td>Local Claude Code token analytics: efficiency shares and per-model spend breakdown.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/cacheport">cacheport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>39</td>
+<td>Key-value cache over Redis: set, get, delete and list keys.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/calcport">calcport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>31</td>
+<td>Safe arithmetic: evaluate expressions and add, subtract, multiply, divide.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/calendarport">calendarport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>32</td>
+<td>Google Calendar calendars, events and free-busy checks, as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/california-fiscal-tracker-ro-edition">california-fiscal-tracker-ro-edition</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-10-23</td>
+<td>273</td>
+<td>California state fiscal data tracker.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/chainlens">chainlens</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>43</td>
+<td>Blockscout explorer data: addresses, blocks, transactions, tokens, NFTs, and contract reads.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/channelchat">channelchat</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>34</td>
+<td>Slack channels, messages, threads, reactions and users via the Slack Web API.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/chatport">chatport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>34</td>
+<td>WhatsApp messaging via a GoWA REST service: send text, contacts, links, and locations.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/cidiff">cidiff</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>99</td>
+<td>Base-vs-head CI differ for GitHub PRs: which failing checks were introduced, pre-existing, external, or fixed.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/claim-api">claim-api</a></td>
+<td>-</td>
+<td>JavaScript</td>
+<td>2026-10-23</td>
+<td>158</td>
+<td>The hosted write API for the Greenlight Claim Protocol: authenticated claim, release and heartbeat endpoints, plus live pre-flight reads.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/claim-ledger">claim-ledger</a></td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>2026-11-02</td>
+<td>1917</td>
+<td>The public index for the Greenlight Claim Protocol: who holds which issue claim, until when, and who is queued. Static pre-flight API included.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/claimcheck">claimcheck</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>162</td>
+<td>Find stale issue claims and parked fixes: claims aging with no PR, and finished work sitting on fork branches that never became a PR. CLI plus MCP server.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/clearcall">clearcall</a></td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>2026-10-27</td>
+<td>455</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/cliqwise">cliqwise</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-26</td>
+<td>22666</td>
+<td>MCP-first AI video clipping — agents submit long videos via MCP, the server edits and returns viral clips</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/clockport">clockport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>33</td>
+<td>Current time and timezone conversion for any IANA zone.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/CloudCorpRecords">CloudCorpRecords</a></td>
+<td>-</td>
+<td>-</td>
+<td>2026-10-27</td>
+<td>128</td>
+<td>Config files for my GitHub profile.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/cloudcorprecords.github.io">cloudcorprecords.github.io</a></td>
+<td>-</td>
+<td>HTML</td>
+<td>2026-10-24</td>
+<td>6</td>
+<td>CloudCorpRecords GitHub Pages site: agent-access audit and Web Bot Auth signed-agent directory.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/clouddocs">clouddocs</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-31</td>
+<td>39</td>
+<td>Search, read, and get recommendations for AWS documentation pages.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/cloudinfra">cloudinfra</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>38</td>
+<td>Terraform Registry docs, module search and AWS plan policy scans as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/cloudkb">cloudkb</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>34</td>
+<td>Bedrock knowledge bases, data sources and retrieval as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/cloudpanel">cloudpanel</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>32</td>
+<td>Azure subscriptions, resource groups, resources and VMs via ARM REST as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/cloudsuite">cloudsuite</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>41</td>
+<td>Nextcloud from your agent: notes, calendars, contacts, and files over DAV and the Notes API.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/clusterport">clusterport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>37</td>
+<td>Core kubectl operations: get, describe, logs, apply, scale, patch, rollout and explain.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/codehost-port">codehost-port</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>34</td>
+<td>GitHub repositories, issues and pull requests via the REST API, as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/codehost-remote">codehost-remote</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>33</td>
+<td>Forward GitHub tools to the hosted GitHub Copilot remote MCP endpoint.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/collabnotes">collabnotes</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>35</td>
+<td>Collaborative notes via HackMD: user, team, and personal notes with full CRUD.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/commitcheck">commitcheck</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>36</td>
+<td>Commit message convention and DCO sign-off checker over a git history range.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/containerport">containerport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>34</td>
+<td>Run core Docker container operations: list, run, inspect, logs, images and volumes.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/context-budget-analyzer">context-budget-analyzer</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-10-20</td>
+<td>15</td>
+<td>Independent prototype: scans a codebase and estimates what each file costs an AI coding agent in context. Not affiliated with Anthropic.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/contextbudget">contextbudget</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-25</td>
+<td>38</td>
+<td>Token budget auditor for agent context: per-file and per-directory token estimates for a repo, the top offenders eating the window, and concrete exclusion advice, against a configurable budget.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/crawlport">crawlport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-31</td>
+<td>41</td>
+<td>Firecrawl web data: scrape, map, search, crawl, extract, research, and llms.txt.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/crmcloud">crmcloud</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>38</td>
+<td>Salesforce org access: SOQL queries, SOSL search, SObject CRUD, limits, and user info.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/crmport">crmport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>39</td>
+<td>HubSpot CRM objects, properties, owners, and associations: list, search, write.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/cryptoprice">cryptoprice</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>35</td>
+<td>CoinGecko prices, coin data, search, charts, global and trending data, keyless.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/cueport">cueport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>43</td>
+<td>CueAPI agent-work scheduling: cues, executions, claiming, heartbeats, and outcomes.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/dashmetrics">dashmetrics</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>39</td>
+<td>Grafana dashboards, datasources, Prometheus, Loki, and alerts from your MCP client.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/databridge-kit">databridge-kit</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-31</td>
+<td>39</td>
+<td>Execute SQL and inspect tables, views, schemas and more on a configured database.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/deepsearch">deepsearch</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-31</td>
+<td>37</td>
+<td>Neural web search, code context, and page crawling through the Exa API.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/depguard">depguard</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>192</td>
+<td>PR-time dependency early warning: diff manifests and lockfiles, flag install scripts, typosquats, downgrades, and lockfile drift. Offline core, optional registry checks.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/deployport">deployport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>32</td>
+<td>Vercel projects, deployments, domains and env vars as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/designmind">designmind</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>60</td>
+<td>Local design knowledge: principles, patterns, tokens, brand, content and metrics.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/designport">designport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>34</td>
+<td>Figma REST API client: files, nodes, images, styles, components, projects and comments.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/deskcommand">deskcommand</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-31</td>
+<td>39</td>
+<td>Run terminal processes, edit files and search code on the local machine from an MCP client.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/diagramport">diagramport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>38</td>
+<td>Generate Mermaid diagrams and charts from Mermaid syntax, validated locally.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/diceport">diceport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>31</td>
+<td>Dice rolls, coin flips, and random numbers, reproducible with a seed.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/dnsprobe">dnsprobe</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>0</td>
+<td>DNS and email-security diagnostics via the keyless intodns.ai API: scans, SPF, DMARC, headers.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/docbase">docbase</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>45</td>
+<td>MongoDB tools: query, aggregate, index, and administer collections and databases.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/docmark">docmark</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>36</td>
+<td>Convert documents and URLs to Markdown via the hosted file2markdown service.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/docxredline">docxredline</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>47</td>
+<td>Read, redline, and finalize .docx files with native Word tracked changes.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/driveport">driveport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>32</td>
+<td>Google Drive files: search, list, read, upload, download, folders and trash, as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/edgeport">edgeport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>39</td>
+<td>Zones, DNS, cache purge, Workers, KV, and R2 through the Cloudflare API.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/embedbase">embedbase</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>38</td>
+<td>Vector collections and document search backed by a Chroma HTTP service.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/encyport">encyport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>35</td>
+<td>Search Wikipedia and read articles, summaries, sections, links, and coordinates.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/enginegate">enginegate</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>37</td>
+<td>Gateway to a running Unreal Editor: search, describe, execute, and configure capabilities.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/envdoc">envdoc</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-25</td>
+<td>35</td>
+<td>Environment documentation checker: scans code for actual env var usage (process.env, import.meta.env, os.environ, getenv) and diffs it against .env.example, reporting used-but-undocumented, documented-but-unused, and undocumented-default vars.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/envdoctor">envdoctor</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>39</td>
+<td>Local environment doctor: runtime, tools, env files, and services, pass or fail.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/errorwatch">errorwatch</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>37</td>
+<td>Organizations, projects, releases, and issues through the Sentry API.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/eventops-sql">eventops-sql</a></td>
+<td>-</td>
+<td>-</td>
+<td>2026-10-16</td>
+<td>1</td>
+<td>PostgreSQL schema and query library for event operations: migrations, seed data, and 18+ commented queries with automated tests.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/fairqueue">fairqueue</a></td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>2026-10-27</td>
+<td>30</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/feedport">feedport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>32</td>
+<td>Fetch and parse RSS or Atom feeds from a URL.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/feelens">feelens</a></td>
+<td>-</td>
+<td>JavaScript</td>
+<td>2026-10-29</td>
+<td>464</td>
+<td>FeeLens — see the true cost of getting paid across borders: percentage fees, fixed fees, and the hidden FX markup, ranked side by side. Code-con (Telem AI) hackathon entry.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/fileport">fileport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>38</td>
+<td>Sandboxed file access: read, write, edit and search in allowed dirs.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/fleet-policy-templates">fleet-policy-templates</a></td>
+<td>MIT</td>
+<td>Python</td>
+<td>2026-11-02</td>
+<td>21</td>
+<td>Least-privilege 1Claw policy templates at fleet scale: compile a manifest into one vault path + one read-only policy per tool, with a policy linter that rejects wildcards and shared paths. Built for the 1Claw Creator Contest.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/flowcheck">flowcheck</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>141</td>
+<td>GitHub Actions least-privilege auditor: permissions, dangerous triggers, fork-reachable secrets, hardened per-job permission plans. CLI plus stdio MCP server.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/forumport">forumport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>33</td>
+<td>Reddit subreddits, posts, comments and users as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/fraudlens">fraudlens</a></td>
+<td>MIT</td>
+<td>Python</td>
+<td>2026-10-27</td>
+<td>3821</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/fridgerescue">fridgerescue</a></td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>2026-10-26</td>
+<td>476</td>
+<td>Turn what's about to go bad into tonight's dinner — a leftover-to-meal planner that ranks recipes by Rescue Score. Built for NextSpark Hacks.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/frontier-model-lab">frontier-model-lab</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-10-17</td>
+<td>5471</td>
+<td>Experiments with frontier AI models (Replit)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/fxrates">fxrates</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>36</td>
+<td>Frankfurter FX rates: currencies, latest and historical rates, and conversions, keyless.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/gamedb-port">gamedb-port</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>38</td>
+<td>IGDB game database: search games, game details, anticipated releases, and custom queries.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/gamestudai">gamestudai</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2025-03-15</td>
+<td>467</td>
+<td>GameStuAI Engine - AI-assisted 3D game engine</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/ganjuko-updates">ganjuko-updates</a></td>
+<td>-</td>
+<td>-</td>
+<td>2026-11-02</td>
+<td>6</td>
+<td>OTA update endpoint for the Ganjuko Android app (manifest + bundle releases)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/gapproof">gapproof</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>44</td>
+<td>Find untested functions: link tests to code, score coverage, record proven runs locally.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/gatecart">gatecart</a></td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>2026-10-28</td>
+<td>4000</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/gatefile">gatefile</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>160</td>
+<td>Extract a repo's hidden contribution gates (assignment first, claim first, DCO, vouch) from its docs into a machine-readable contribution-gates.json. CLI plus MCP server.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/Geminiserver">Geminiserver</a></td>
+<td>-</td>
+<td>Python</td>
+<td>2026-10-13</td>
+<td>30</td>
+<td>Open-Source Backend Gemini server. Fork it and set your secret with your gemini api key and it works. documentation is in code.  This is part of the OpenGenApps initiative by Rene Turcios to create open Source Generative AI Apps. This one is specific to webapps.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/glowroutine">glowroutine</a></td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>2026-10-27</td>
+<td>520</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/graphmind">graphmind</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>38</td>
+<td>Persistent knowledge graph: entities, relations, and observations for agents.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/greenlight">greenlight</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>4565</td>
+<td>Pre-flight checks for open-source contributions: is this issue actually landable? Verdicts (GO / RISKY / TAKEN / GATED), repo friction scores, an open Claim Protocol with a public ledger, and optional AI claim detection. CLI + MCP server.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/gridbase">gridbase</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>44</td>
+<td>Bases, tables, and records in Airtable: list, search, create, update, delete.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/guildchat">guildchat</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>33</td>
+<td>Discord guild and channel messaging via REST API v10: guilds, channels, messages and reactions.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/hallway">hallway</a></td>
+<td>-</td>
+<td>Python</td>
+<td>2026-10-26</td>
+<td>3360</td>
+<td>Hallway, a conference concierge. Three agents share one FalkorDB graph to plan your day, match who to meet, and repair your schedule when talks move. Built at the Patch the Conference Hackathon, WeMakeDevs, Oct 24 2026.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/headlessstage">headlessstage</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-31</td>
+<td>32</td>
+<td>Browser automation: navigate, click, fill, screenshot and evaluate in a headless browser.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/healthcare-doc-pipeline">healthcare-doc-pipeline</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-10-20</td>
+<td>17</td>
+<td>Independent FDE prototype: synthetic discharge notes in, redacted validated structured JSON out. Not affiliated with Wolters Kluwer.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/hookcheck">hookcheck</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>1660</td>
+<td>AI persistence hook auditor: scan a repo for auto-exec hooks and flag Shai-Hulud style persistence patterns. CLI plus MCP server.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/hostpanel">hostpanel</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>40</td>
+<td>Host, Docker, Compose, SSH, logs and ZFS operations via two action-router tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/identity-admin-kit">identity-admin-kit</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-10-20</td>
+<td>19</td>
+<td>Independent prototype: enterprise identity admin patterns, SSO setup flow, directory sync, audit log. Simulated. Not affiliated with WorkOS.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/imageport">imageport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>36</td>
+<td>Local image tools via ImageMagick: metadata, resize, convert, crop, rotate.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/inboxwatch">inboxwatch</a></td>
+<td>MIT</td>
+<td>Python</td>
+<td>2026-10-27</td>
+<td>80</td>
+<td>An E2E encrypted mailbox for AI agents. MCP server included.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/indexsearch">indexsearch</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-31</td>
+<td>38</td>
+<td>Elasticsearch tools: indices, mappings, query DSL search, ES/QL, and shards.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/infraport">infraport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>38</td>
+<td>Terraform Registry modules, providers and policies, plus HCP Terraform workspaces.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/injectcheck">injectcheck</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>1606</td>
+<td>Prompt-injection scanner for content AI agents read: issues, PR bodies, READMEs, comments, docs. Deterministic rules for hidden unicode, HTML comment instructions, exfil patterns, tool lures, and base64 payloads, with file, line, rule id, and severity for every finding.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/installaudit">installaudit</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>37</td>
+<td>Install-script inventory for a dependency tree: what runs when you install.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/issueport">issueport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>33</td>
+<td>Linear teams, projects, issues and comments via GraphQL, as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/job-search-tracker">job-search-tracker</a></td>
+<td>-</td>
+<td>JavaScript</td>
+<td>2026-10-31</td>
+<td>1754</td>
+<td>Live dashboard of my job search and open-source PRs, streamed from Google Sheets</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/jobintake">jobintake</a></td>
+<td>MIT</td>
+<td>Python</td>
+<td>2026-10-18</td>
+<td>124</td>
+<td>Local-first job tracker: collects postings, scores matches 0-100, tracks your pipeline, exports CSV. Plain Python, nothing to install.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/lab-experiment-console">lab-experiment-console</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-10-20</td>
+<td>19</td>
+<td>Independent prototype: console for tracking autonomous lab experiment runs. Simulated data. Not affiliated with Periodic Labs.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/lancontrol">lancontrol</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>37</td>
+<td>UniFi controller: clients, devices, WLANs, health, alarms, events, sysinfo, identity.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/legislens">legislens</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>0</td>
+<td>US state bills and hearing transcripts: search bills, testimony, speakers, hearings.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/lensdeal">lensdeal</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-10-13</td>
+<td>16038</td>
+<td>Deal-sourcing tool for private-company data</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/libdocs">libdocs</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-31</td>
+<td>36</td>
+<td>Resolve library names and fetch current, version-specific documentation via Context7.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/libdocs-remote">libdocs-remote</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>32</td>
+<td>Forward Context7 library documentation lookups to the hosted remote MCP endpoint.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/linkguard">linkguard</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>35</td>
+<td>Forward URL safety scans to the hosted PreClick remote MCP endpoint.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/linkrot">linkrot</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>36</td>
+<td>Docs link checker separating dead, moved, and bot-blocked links from healthy ones.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/litebase">litebase</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>38</td>
+<td>SQLite database access for agents: query, write, create and describe tables, record insights.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/local-drivers-network">local-drivers-network</a></td>
+<td>-</td>
+<td>Python</td>
+<td>2026-10-26</td>
+<td>290</td>
+<td>Local Drivers Network - DUI-prevention ride network for small towns. Project brief, sourced proof pack, town data, and live sales tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/localmodels">localmodels</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>33</td>
+<td>Talk to a local Ollama server: list, pull, inspect, generate, chat and embed.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/lockdrift">lockdrift</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>40</td>
+<td>Lockfile versus package.json drift auditor for a repo or monorepo.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/logdigest">logdigest</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-25</td>
+<td>36</td>
+<td>CI log condenser: reads a build or test log and extracts the failure sections, error lines, and failing test names with their original line numbers, so a 10k-line log becomes the 50 lines that matter.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/loglens">loglens</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>41</td>
+<td>Homelab log investigation over local logs: tail, errors, search, timeline, context.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/macflow">macflow</a></td>
+<td>MIT</td>
+<td>Python</td>
+<td>2026-10-24</td>
+<td>130</td>
+<td>Roboflow-style vision training optimized for Apple Silicon Macs (MLX, MPS, CoreML)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/mailport">mailport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>32</td>
+<td>Gmail messages, threads, labels, drafts and sending, as MCP tools via the Gmail API.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/mailsend">mailsend</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>36</td>
+<td>Send and manage email, domains, audiences, and API keys through the Resend API.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/mapport">mapport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-31</td>
+<td>39</td>
+<td>Geocoding, places, directions, distance, and elevation through Google Maps.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/mcp-directory">mcp-directory</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-23</td>
+<td>47</td>
+<td>Searchable directory of MCP servers with a live in-browser playground — try any server's tools without installing anything</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/mcp-job-tracker">mcp-job-tracker</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-24</td>
+<td>20</td>
+<td>Ask Claude about your job hunt — MCP server over your application tracker: search applications, find stale leads, check reply status</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/mcpaudit">mcpaudit</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>143</td>
+<td>Audit any MCP server: handshake, tool schemas, missing descriptions, and error handling, scored with evidence.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/mcpvet">mcpvet</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-28</td>
+<td>349</td>
+<td>Vet MCP servers and agent skills before install: dangerous combos, config audits, typosquat checks.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/mediafleet">mediafleet</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>44</td>
+<td>Run JavaScript in a sandbox to orchestrate Sonarr, Radarr, Plex and other media services.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/metricwatch">metricwatch</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>36</td>
+<td>Datadog metrics, dashboards, logs, incidents, and monitors from your MCP client.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/modelhub-port">modelhub-port</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>42</td>
+<td>Search and inspect Hugging Face models, datasets, spaces, papers and docs.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/modelrun">modelrun</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>37</td>
+<td>Replicate models, collections, versions, and predictions: browse and run.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/muse-farm">muse-farm</a></td>
+<td>MIT</td>
+<td>Python</td>
+<td>2026-10-18</td>
+<td>94</td>
+<td>One wrapper for headless, parallel, scheduled muse jobs.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/muse-farm-plugin">muse-farm-plugin</a></td>
+<td>MIT</td>
+<td>Python</td>
+<td>2026-10-18</td>
+<td>5</td>
+<td>Muse plugin: auto-sync open sessions on start + farm-status command.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/muse-marketplace">muse-marketplace</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>102</td>
+<td>The open marketplace and registry for shareable Muse assets: avatars, personas, voices, and bundles — with checksums, vetting, and an animated preview site.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/musicboi">musicboi</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-10-13</td>
+<td>394</td>
+<td>Free, open-source AI music creation: text-to-music with MusicGen plus a full multi-track DAW, running locally in an Electron app</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/musicport">musicport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>33</td>
+<td>Spotify search, playback and playlists as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/myopendata">myopendata</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>38</td>
+<td>Malaysia open data: datasets, dashboards, DOSM, weather, floods and transit, keyless.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/nasport">nasport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>36</td>
+<td>Unraid server operations router: system, array, Docker, VMs and more.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/nightshift-gb10">nightshift-gb10</a></td>
+<td>MIT</td>
+<td>Python</td>
+<td>2026-10-26</td>
+<td>23416</td>
+<td>NightShift — always-on local ops agent on the Dell Pro Max with GB10. Dell x NVIDIA AI Hackathon SF (Oct 25, 2026). Multi-agent team repo: humans + AI agents coordinate in comms/.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/notifyfan">notifyfan</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>38</td>
+<td>Apprise notification fan-out: health, status, and tagged or one-off sends.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/npmpreflight">npmpreflight</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-25</td>
+<td>43</td>
+<td>Pre-publish npm package auditor: what npm pack would ship, total size, secret-pattern leak scan over the shipped file set, and missing or risky package.json fields, checked before you publish instead of after.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/open-city-remake">open-city-remake</a></td>
+<td>MIT</td>
+<td>HTML</td>
+<td>2026-10-18</td>
+<td>315</td>
+<td>Original GTA-style open-city 3D game: UE5/Unity plans plus a playable web slice. Fully original content, no Rockstar IP.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/OpenGenApps">OpenGenApps</a></td>
+<td>-</td>
+<td>JavaScript</td>
+<td>2026-10-13</td>
+<td>51</td>
+<td>Open Source  Generative AI Apps. Using Replit and Gemini for anyone to be a developer.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/openlofi">openlofi</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2025-02-23</td>
+<td>5</td>
+<td>open source digital audio workshop avail for anyone.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/opensourceit">opensourceit</a></td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>2026-10-27</td>
+<td>445</td>
+<td>The open source community that welcomes AI. If r/opensource bans it, fork it — post it here. MCP server + npm package, disclosure badges instead of an AI ban.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/opsboard">opsboard</a></td>
+<td>-</td>
+<td>JavaScript</td>
+<td>2026-10-04</td>
+<td>67</td>
+<td>Demo dashboard for pre-solved product workflows</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/ownmind">ownmind</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-27</td>
+<td>25</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/pageport">pageport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>32</td>
+<td>Fetch a URL and return its contents as readable markdown text.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/pageworkspace">pageworkspace</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>32</td>
+<td>Notion pages, databases and blocks via the REST API, as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/palettemash">palettemash</a></td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>2026-10-27</td>
+<td>13906</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/paperport">paperport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>36</td>
+<td>Search and read arXiv papers, with local paper storage.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/partnerloop">partnerloop</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>36</td>
+<td>CreationLoop design partners: company overview, partner offer, FAQ, and apply.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/password-validation">password-validation</a></td>
+<td>-</td>
+<td>Shell</td>
+<td>2026-10-23</td>
+<td>23257</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/patchminion">patchminion</a></td>
+<td>-</td>
+<td>Python</td>
+<td>2026-10-29</td>
+<td>3196</td>
+<td>PatchMinion — a reproducible GitHub-issue triage agent built on the OpenMinion 0.1 SDK. Cortensor Hackathon #5 entry.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/payport">payport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>39</td>
+<td>Customers, products, prices, invoices, and payments through the Stripe API.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/pcapport">pcapport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>43</td>
+<td>PCAP analysis: DNS, DHCP, ICMP, TCP flows, anomalies, and SIP from capture files.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/pdfport">pdfport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>43</td>
+<td>Extract text and metadata from local PDFs, and merge or split PDF files.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/pgcloud">pgcloud</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>46</td>
+<td>Neon Postgres projects, branches, SQL, and migrations from your MCP client.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/pgport">pgport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>39</td>
+<td>Read-only SQL queries against a PostgreSQL database.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/pkgverdict">pkgverdict</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-26</td>
+<td>106</td>
+<td>Pre-install verdicts for npm packages: GO, RISKY, FAKE, or MISSING. Built for humans and AI agents.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/policyrecall">policyrecall</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>0</td>
+<td>Policy-verified recall and calibration for tool calls via signed operational memory.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/policyvault">policyvault</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>35</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/prepboard">prepboard</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>38</td>
+<td>Calaf seeds core subset (4 of 38): format, validate, import, list workspaces.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/privatesearch">privatesearch</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>35</td>
+<td>Web search through DuckDuckGo and readable page fetching, no API key needed.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/procureport">procureport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>45</td>
+<td>Korean public procurement: bids, awards, contracts, statistics, products and mall search.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/prodforge">prodforge</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>116</td>
+<td>Take any product to production without wiring it all yourself: connects MCP servers, packages, security checks, and release gates in one massive repo.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/productmetrics">productmetrics</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>32</td>
+<td>PostHog projects, insights, flags and experiments as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/prwatch">prwatch</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>174</td>
+<td>What needs my attention across all my open PRs? Ranked PR triage for contributors: changes requested, unresolved review threads, real failing checks, conflicts, reviewer silence. CLI plus MCP server.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/pushnote">pushnote</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>0</td>
+<td>Gotify push notifications: send, read messages, manage apps and clients, one router tool.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/rdrive">rdrive</a></td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>2026-10-31</td>
+<td>1802</td>
+<td>Open-source, self-hosted Google Drive alternative: run it on one machine, reach it securely from all your devices. GitHub SSO, device management, Docker.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/readmeaudit">readmeaudit</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>38</td>
+<td>README drift auditor: documented names and flags checked against the actual package.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/recordcrm">recordcrm</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>38</td>
+<td>Attio CRM records, companies, deals, lists, and members via the Attio API.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/RedShieldGemini">RedShieldGemini</a></td>
+<td>-</td>
+<td>JavaScript</td>
+<td>2026-10-13</td>
+<td>6</td>
+<td>Frontend for the Red Team AI code generator: enter a target URL and vulnerability type, and a backend generates analysis with Gemini</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/RedTeamGemini">RedTeamGemini</a></td>
+<td>-</td>
+<td>Python</td>
+<td>2026-10-13</td>
+<td>28</td>
+<td>Red_Team_Gemini is a Open_Source endeavor to do red teaming testing with AI Agents</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/refdocs">refdocs</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>35</td>
+<td>Search technical documentation and read web pages as markdown.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/repocollab">repocollab</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>37</td>
+<td>GitLab projects, branches, files, issues and merge requests via the GitLab REST API.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/repoport">repoport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>36</td>
+<td>Local git operations over MCP: status, diff, log, branches and commits.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/repowiki">repowiki</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-31</td>
+<td>35</td>
+<td>Read DeepWiki repository wikis and ask questions about public GitHub repos.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/reprocheck">reprocheck</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>76</td>
+<td>Red-first repro verifier: runs your repro in clean worktrees of the base and the fix. A fix counts only when it fails on the base and passes on the fix.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/researchsearch">researchsearch</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-31</td>
+<td>37</td>
+<td>Web search, page extraction, crawling, and site mapping powered by the Tavily API.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/restaurant-api-devex-kit">restaurant-api-devex-kit</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-10-20</td>
+<td>13</td>
+<td>Independent DevEx sample kit: simulated restaurant ordering API with a tested quickstart and error guide. Not affiliated with Toast.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/resume-sync">resume-sync</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-23</td>
+<td>15</td>
+<td>Regenerate your resume Projects section from GitHub pinned repos — Markdown or DOCX, one command, never stale</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/routerbase">routerbase</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>40</td>
+<td>Router defaults, PSTI/CRA compliance checks, and MAC lookup via the hosted ssid.ai MCP service.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/sandboxrun">sandboxrun</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>34</td>
+<td>Run code in a secure E2B sandbox from the CLI or a stdio MCP server.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/sayflow">sayflow</a></td>
+<td>MIT</td>
+<td>Python</td>
+<td>2026-10-27</td>
+<td>2536</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/scenemodel">scenemodel</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>36</td>
+<td>Drive Blender scenes: scene and object info, code execution, assets and 3D generation.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/scicompute">scicompute</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>39</td>
+<td>Scientific computation: named tensors, matrix algebra and vector operations, fully local.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/searchport">searchport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-31</td>
+<td>37</td>
+<td>Web, local, news, image, and video search through the Brave Search API.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/secretless-agent">secretless-agent</a></td>
+<td>MIT</td>
+<td>Python</td>
+<td>2026-11-02</td>
+<td>21</td>
+<td>An AI agent that does useful work with an API key it never sees: 1Claw vaults, scoped policies, just-in-time fetch, hash-chained audit, and a leak scanner that proves it. Built for the 1Claw Creator Contest.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/security-wave">security-wave</a></td>
+<td>-</td>
+<td>JavaScript</td>
+<td>2026-11-02</td>
+<td>242</td>
+<td>Security Wave live danger board: real-time findings, proofs, and the hand-verified problem ledger for hookcheck, actionpin, injectcheck, and tracewatch.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/serverlessrun">serverlessrun</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>33</td>
+<td>AWS Lambda functions, versions, aliases, layers and settings as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/sheetport">sheetport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>32</td>
+<td>Google Sheets spreadsheets and cell values via the Sheets API, as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/shelfsignal">shelfsignal</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>172</td>
+<td>The open store index for AI agents: local merchants list what they sell for a flat $100 starter, agents find real food and real stock nearby, and every listing carries a validation receipt. No 30% delivery-app cut.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/shipcheck">shipcheck</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>90</td>
+<td>Release verification: git tag, GitHub release, npm, MCP Registry, and GHCR must agree on the same version, or NO-GO.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/sitehost-port">sitehost-port</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>32</td>
+<td>Netlify sites, deploys and builds as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/skillcheck">skillcheck</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>37</td>
+<td>SKILL.md validator: frontmatter, structure, links, and referenced files checked.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/slideport">slideport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>32</td>
+<td>Google Slides presentations and slides via the Slides API, as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/smarthome-port">smarthome-port</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>39</td>
+<td>Home Assistant control: entity states, services, history, config, templates, and events.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/sortright">sortright</a></td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>2026-10-27</td>
+<td>3044</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/specforge">specforge</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>0</td>
+<td>Spec-driven development locally: specs, constitutions, plans, tasks, git and quality checks.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/stackconstruct">stackconstruct</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>40</td>
+<td>AWS CDK guidance, docs, constructs and nag checks as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/storeport">storeport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>37</td>
+<td>Shopify developer docs, API learning, GraphQL introspection, and code validation.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/streetmap-port">streetmap-port</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>33</td>
+<td>Geocode, reverse geocode and find nearby places with the public OpenStreetMap APIs.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/strikemobile">strikemobile</a></td>
+<td>MIT</td>
+<td>C++</td>
+<td>2026-10-19</td>
+<td>52</td>
+<td>Counter-Strike-style tactical FPS for mobile (Android/iOS) on UE 5.8 — 5v5, bots, 9-mission story campaign</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/sudohired">sudohired</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-04</td>
+<td>64686</td>
+<td>Open-source AI SDR — autonomous sales development rep</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/supportchat">supportchat</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>32</td>
+<td>Intercom conversations, contacts, tags and articles as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/system-monitor">system-monitor</a></td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>2026-10-13</td>
+<td>10423</td>
+<td>macOS system monitor with a built-in agentic AI assistant: live CPU, memory, disk, network and battery dashboards, local-first via Ollama</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/tabletopdb">tabletopdb</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>42</td>
+<td>BoardGameGeek tools: search, details, collections, hot list, trades, and recommendations.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/tailnetport">tailnetport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>36</td>
+<td>Tailscale tailnet admin via one router tool: devices, keys, ACL, DNS, and users.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/taskboard-port">taskboard-port</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>33</td>
+<td>Asana workspaces, projects and tasks via the REST API, as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/tasklist-port">tasklist-port</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>32</td>
+<td>Todoist tasks, projects, labels and sections as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/taskpilot">taskpilot</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>0</td>
+<td>Task and project management for AI coding agents: tasks, prompts, projects, next task.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/technews-port">technews-port</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>35</td>
+<td>Hacker News top, new, and best stories, items, users, and full-text search.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/tellcheck">tellcheck</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>47</td>
+<td>Voice-style checks and a deterministic AI-tell audit for your writing.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/termmux">termmux</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-31</td>
+<td>32</td>
+<td>Drive local tmux sessions, windows and panes: list, create, send keys, capture output.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/test-ai">test-ai</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-18</td>
+<td>2</td>
+<td>Small Godot experiments and prototypes.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/testdelta">testdelta</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-25</td>
+<td>36</td>
+<td>Base-vs-head test result differ: given two test result files (base.json and head.json with named test outcomes), reports named tests added, removed, fixed, and broken. Never raw counts without names.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/textgraph">textgraph</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>37</td>
+<td>Text to knowledge graphs: topics, clusters, gaps, and research ideas via InfraNodus.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/thinkstep">thinkstep</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>33</td>
+<td>Step-by-step reflective thinking: record, revise, and branch thought chains.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/threatkb">threatkb</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>42</td>
+<td>Local MITRE ATT&amp;CK queries: techniques, tactics, mitigations, and detections from a STIX file.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/tododebt">tododebt</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>37</td>
+<td>TODO, FIXME, and HACK inventory with git blame age and file owner.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/toolkit-status-api">toolkit-status-api</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-10-16</td>
+<td>16</td>
+<td>Serverless API on Vercel Edge Functions (TypeScript) reporting live npm and GitHub status for the Greenlight OSS toolkit.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/topiclint">topiclint</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>0</td>
+<td>Sparkplug B topic linting and UNS naming checks for MQTT topic paths.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/tracewatch">tracewatch</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>229</td>
+<td>Observability, tracking, and root-cause MCP for the Security Wave: scan history, diffs, provenance, and time-to-detect over hookcheck, actionpin, and injectcheck.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/trainerboi">trainerboi</a></td>
+<td>MIT</td>
+<td>Python</td>
+<td>2026-10-26</td>
+<td>4111</td>
+<td>Train your own AI on your own computer — open-source, local-first LLM fine-tuning for Windows &amp; macOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/tvpilot">tvpilot</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>38</td>
+<td>Android TV remote: list devices, send keys, launch apps, play titles, and observe the screen.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/typosquat">typosquat</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>35</td>
+<td>Check dependency names against popular package names at small edit distance.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/vaultnotes">vaultnotes</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>37</td>
+<td>List, read, search, and edit markdown notes in a local vault directory.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/vectorsearch">vectorsearch</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>37</td>
+<td>Store and retrieve text in a Qdrant vector database by similarity search.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/ventpad">ventpad</a></td>
+<td>-</td>
+<td>JavaScript</td>
+<td>2026-10-04</td>
+<td>283</td>
+<td>A weekend build, start to finish</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/video-evidence-search">video-evidence-search</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-10-20</td>
+<td>16</td>
+<td>Independent prototype: video evidence search and grounded QA over timestamped segments. Synthetic corpus. Not affiliated with Twelve Labs.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/video-job-console">video-job-console</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-10-20</td>
+<td>21</td>
+<td>Independent prototype: generative video job queue console with simulated worker and credit costing. Not affiliated with Runway.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/videohub-port">videohub-port</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>34</td>
+<td>YouTube videos, channels, playlists, comments and transcripts as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/videokit">videokit</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-30</td>
+<td>32</td>
+<td>Probe, trim, transcode and extract frames or audio from local video files with ffmpeg.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/visionforge">visionforge</a></td>
+<td>MIT</td>
+<td>Python</td>
+<td>2026-10-21</td>
+<td>53</td>
+<td>Local-first Roboflow-style vision trainer for Mac: label, train, evaluate, and export to Core ML — your images never leave your machine.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/visualdiff">visualdiff</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-02</td>
+<td>38</td>
+<td>SnapDiff visual diffs: verify UI changes, compare pages, screenshots, HTML to image.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/vocalos">vocalos</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-10-13</td>
+<td>4226</td>
+<td>AI agent for live music production and performance</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/voicegen-port">voicegen-port</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>41</td>
+<td>Generate speech, voices, and transcripts through the ElevenLabs API.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/wallcheck">wallcheck</a></td>
+<td>MIT</td>
+<td>Python</td>
+<td>2026-10-27</td>
+<td>1952</td>
+<td>Deterministic bot-wall transparency for agent builders: probe a URL, name the wall, get the evidence. CLI + stdio MCP server, Python stdlib only.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/water">water</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-10-19</td>
+<td>6506</td>
+<td>Advanced real-time water for the web: ocean rendering + buoyancy physics, toward UE5 parity</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/weatherport">weatherport</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>34</td>
+<td>OpenWeather current weather, 5-day forecast, One Call, air pollution, and geocoding.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/worktrack-port">worktrack-port</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>34</td>
+<td>Jira issues and Confluence pages via the REST APIs, as MCP tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/yellingstop">yellingstop</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-05</td>
+<td>172</td>
+<td>Open-source, fully local WhisperFlow alternative — private real-time voice dictation</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/yuzu_compressed">yuzu_compressed</a></td>
+<td>-</td>
+<td>-</td>
+<td>2024-07-09</td>
+<td>8168</td>
+<td>Yuzu github , downloaded as a zip. Backup file in case Yuzu goes down.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="all-forks-90-upstream-projects-not-cloudcorprecords-originals">All forks (90) — upstream projects, NOT CloudCorpRecords originals<a class="headerlink" href="#all-forks-90-upstream-projects-not-cloudcorprecords-originals" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>License</th>
+<th>Lang</th>
+<th>Updated</th>
+<th>Size KB</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/ace">ace</a></td>
+<td>NOASSERTION</td>
+<td>-</td>
+<td>2026-10-26</td>
+<td>44917</td>
+<td>Ace (Ajax.org Cloud9 Editor)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/activepieces">activepieces</a></td>
+<td>NOASSERTION</td>
+<td>-</td>
+<td>2026-10-16</td>
+<td>554895</td>
+<td>AI Agents &amp; MCPs &amp; AI Workflow Automation • (~400 MCP servers for AI agents) • AI Automation / AI Agent with MCPs • AI Workflows &amp; AI Agents • MCPs for AI Agents</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/actual">actual</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-17</td>
+<td>643736</td>
+<td>A local-first personal finance app</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/actual-gh-bot">actual-gh-bot</a></td>
+<td>ISC</td>
+<td>-</td>
+<td>2026-10-16</td>
+<td>1689</td>
+<td>Actual GitHub bot for managing contributions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/apitable">apitable</a></td>
+<td>AGPL-3.0</td>
+<td>-</td>
+<td>2026-11-02</td>
+<td>393388</td>
+<td>🚀🎉📚 APITable, an API-oriented low-code platform for building collaborative apps and better than all other Airtable open-source alternatives.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/Auto-GPT">Auto-GPT</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2023-09-15</td>
+<td>57321</td>
+<td>An experimental open-source attempt to make GPT-4 fully autonomous.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/AutonomousVehicleControlBeginnersGuide">AutonomousVehicleControlBeginnersGuide</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-13</td>
+<td>264446</td>
+<td>Python sample codes and documents about Autonomous vehicle control algorithm. This project can be used as a technical guide book to study the algorithms and the software architectures for beginners.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/awesome-mcp-servers">awesome-mcp-servers</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-26</td>
+<td>559712</td>
+<td>A collection of MCP servers.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/blockly">blockly</a></td>
+<td>Apache-2.0</td>
+<td>TypeScript</td>
+<td>2026-10-26</td>
+<td>188350</td>
+<td>The web-based visual programming editor.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/brightdata-mcp">brightdata-mcp</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-24</td>
+<td>67231</td>
+<td>A powerful Model Context Protocol (MCP) server that provides an all-in-one solution for public web access.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/bruno">bruno</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-16</td>
+<td>62212</td>
+<td>Opensource IDE For Exploring and Testing API's (lightweight alternative to Postman/Insomnia)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/cdp-agentkit-nodejs">cdp-agentkit-nodejs</a></td>
+<td>NOASSERTION</td>
+<td>-</td>
+<td>2025-01-07</td>
+<td>860</td>
+<td>The Coinbase Developer Platform (CDP) AgentKit for Node.js simplifies the process of bringing your AI agents on-chain.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/chroma">chroma</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-10-23</td>
+<td>891864</td>
+<td>Search infrastructure for AI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/chroma-mcp">chroma-mcp</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-10-23</td>
+<td>368</td>
+<td>A Model Context Protocol (MCP) server implementation that provides database capabilities for Chroma</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/circuit-to-canvas">circuit-to-canvas</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-15</td>
+<td>8760</td>
+<td>Draw Circuit JSON into a Canvas- works with any canvas object (Node/Vanilla)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/circuit-to-svg">circuit-to-svg</a></td>
+<td>-</td>
+<td>-</td>
+<td>2026-10-16</td>
+<td>6804</td>
+<td>Convert Circuit JSON into an Schematic/PCB/Assembly SVGs</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/ClipForge">ClipForge</a></td>
+<td>MIT</td>
+<td>Python</td>
+<td>2026-10-18</td>
+<td>277</td>
+<td>Chrome video clipping studio with transcription, captions, reframing and local MP4 exports. macOS companion installer included.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/coil">coil</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-10-18</td>
+<td>129649</td>
+<td>Image loading for Android and Compose Multiplatform.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/composio">composio</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-16</td>
+<td>302304</td>
+<td>Composio powers 1000+ toolkits, tool search, context management, authentication, and a sandboxed workbench to help you build AI agents that turn intent into action.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/contextforge-web-ui">contextforge-web-ui</a></td>
+<td>Apache-2.0</td>
+<td>TypeScript</td>
+<td>2026-10-19</td>
+<td>3111</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/convex-js">convex-js</a></td>
+<td>Apache-2.0</td>
+<td>TypeScript</td>
+<td>2026-10-17</td>
+<td>2923</td>
+<td>TypeScript/JavaScript client library for Convex</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/core">core</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-15</td>
+<td>140562</td>
+<td>Create electronics with Typescript and React. Compile Typescript to Circuit JSON</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/cuga-agent">cuga-agent</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-10-13</td>
+<td>62688</td>
+<td>CUGA is an open-source generalist agent harness for the enterprise, supporting complex task execution on web and APIs, OpenAPI/MCP integrations, composable architecture, reasoning modes, and policy-aware features.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/deno">deno</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-17</td>
+<td>253426</td>
+<td>A modern runtime for JavaScript and TypeScript.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/doc-scraper">doc-scraper</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-10-08</td>
+<td>4117</td>
+<td>Go web crawler to scrape documentation sites and convert content to clean Markdown for LLM ingestion (RAG, training data).</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/dub">dub</a></td>
+<td>NOASSERTION</td>
+<td>-</td>
+<td>2026-10-16</td>
+<td>90399</td>
+<td>The modern link attribution platform. Loved by world-class marketing teams like Framer, Perplexity, Superhuman, Twilio, Buffer and more.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/E2B">E2B</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-10-16</td>
+<td>130187</td>
+<td>Open-source, secure environment with real-world tools for enterprise-grade agents.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/fastmcp">fastmcp</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-10-15</td>
+<td>56778</td>
+<td>🚀 The fast, Pythonic way to build MCP servers and clients.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/fiber">fiber</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-11-01</td>
+<td>49227</td>
+<td>⚡️ Express inspired web framework written in Go</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/firecrawl">firecrawl</a></td>
+<td>AGPL-3.0</td>
+<td>-</td>
+<td>2026-10-15</td>
+<td>94196</td>
+<td>Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/flint">flint</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-13</td>
+<td>15363</td>
+<td>[Experimental] A fast, friendly linter for JavaScript, TypeScript, and more. ❤️‍🔥</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/forge">forge</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-13</td>
+<td>741</td>
+<td>Go library and CLI for working with git forges. Supports GitHub, GitLab, Gitea/Forgejo, and Bitbucket Cloud through a single interface.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/formbricks">formbricks</a></td>
+<td>NOASSERTION</td>
+<td>-</td>
+<td>2026-10-16</td>
+<td>614313</td>
+<td>Open Source Qualtrics Alternative</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/GENesis-AGI">GENesis-AGI</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-13</td>
+<td>43110</td>
+<td>'Personal AGI' that thinks on its own. Autonomous cognitive cycle, earned autonomy, 60+ tools. It decides what to do without being told.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/ghostfolio">ghostfolio</a></td>
+<td>AGPL-3.0</td>
+<td>-</td>
+<td>2026-10-16</td>
+<td>109706</td>
+<td>Open Source Wealth Management Software. Angular + NestJS + Prisma + Nx + TypeScript 🤍</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/gophenberg">gophenberg</a></td>
+<td>Apache-2.0</td>
+<td>Go</td>
+<td>2026-10-19</td>
+<td>11379</td>
+<td>A plugin-first CMS. Go backend, React admin, Gutenberg editor.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/gorilla">gorilla</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-10-27</td>
+<td>379984</td>
+<td>Gorilla: Training and Evaluating LLMs for Function Calls (Tool Calls)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/graphql">graphql</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-22</td>
+<td>458640</td>
+<td>RedwoodGraphQL</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/inngest">inngest</a></td>
+<td>NOASSERTION</td>
+<td>-</td>
+<td>2026-11-01</td>
+<td>491115</td>
+<td>The leading workflow orchestration platform.  Run stateful step functions and AI workflows on serverless, servers, or the edge.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/inngest-js">inngest-js</a></td>
+<td>GPL-3.0</td>
+<td>TypeScript</td>
+<td>2026-11-01</td>
+<td>13363</td>
+<td>The developer platform for easily building reliable workflows with zero infrastructure for TypeScript &amp; JavaScript</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/kit">kit</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-17</td>
+<td>45094</td>
+<td>web development, streamlined</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/kubevela">kubevela</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-10-13</td>
+<td>72545</td>
+<td>The Modern Application Platform.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/LiquidNation">LiquidNation</a></td>
+<td>-</td>
+<td>-</td>
+<td>2024-07-07</td>
+<td>9317</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/llmsql-benchmark">llmsql-benchmark</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-13</td>
+<td>33205</td>
+<td>A Text2SQL benchmark for evaluation of Large Language Models</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/lq-ai">lq-ai</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-10-13</td>
+<td>74562</td>
+<td>Open-source AI for legal teams. Bring your own keys, run it where you want, own your data.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/manim">manim</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-26</td>
+<td>48178</td>
+<td>A community-maintained Python framework for creating mathematical animations.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/marimo">marimo</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-10-16</td>
+<td>252991</td>
+<td>A reactive notebook for Python — run reproducible experiments, query with SQL, execute as a script, deploy as an app, and version with git. Stored as pure Python. All in a modern, AI-native editor.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/mealie">mealie</a></td>
+<td>AGPL-3.0</td>
+<td>-</td>
+<td>2026-10-16</td>
+<td>451167</td>
+<td>Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. Easily add recipes into your database by providing the url and mealie will automatically import the relevant data or add a family recipe with the UI editor</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/n8n">n8n</a></td>
+<td>NOASSERTION</td>
+<td>-</td>
+<td>2026-10-16</td>
+<td>503812</td>
+<td>Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/nocodb">nocodb</a></td>
+<td>NOASSERTION</td>
+<td>-</td>
+<td>2026-10-16</td>
+<td>682392</td>
+<td>🔥 🔥 🔥 A Free &amp; Self-hostable Airtable Alternative</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/node-restify">node-restify</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-22</td>
+<td>4944</td>
+<td>The future of Node.js REST development</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/notyuzu">notyuzu</a></td>
+<td>GPL-3.0</td>
+<td>-</td>
+<td>2024-05-01</td>
+<td>101294</td>
+<td>not the Nintendo Switch emulator</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/nuxt">nuxt</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-17</td>
+<td>157047</td>
+<td>The full-stack Vue framework.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/olake">olake</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-09-22</td>
+<td>76321</td>
+<td>OLake - Fastest Databases, Kafka &amp; S3 Replication to Apache Iceberg with Table optimization (Called OLake Fusion). ⚡ Efficient, quick and scalable data ingestion for real-time analytics.  Supported sources :  Postgres, MongoDB, MySQL, Oracle, MSSql, DB2, Kafka, S3.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/open-webui">open-webui</a></td>
+<td>NOASSERTION</td>
+<td>-</td>
+<td>2026-10-16</td>
+<td>484106</td>
+<td>User-friendly AI Interface (Supports Ollama, OpenAI API, ...)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/openage">openage</a></td>
+<td>NOASSERTION</td>
+<td>-</td>
+<td>2026-11-02</td>
+<td>19609</td>
+<td>Clone of the Age of Empires II engine 🚀</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/openclaw">openclaw</a></td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2026-10-27</td>
+<td>10214359</td>
+<td>The AI that really does things. Any OS. Any Platform. The lobster way. 🦞</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/OphirPay">OphirPay</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-16</td>
+<td>35984</td>
+<td>Send, batch, schedule, and track blockchain payments — all from one powerful dashboard. Built natively on Stellar &amp; Soroban for individuals, startups, nonprofits, and DAOs who demand speed, transparency, and low fees.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/payload">payload</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-17</td>
+<td>232857</td>
+<td>Payload is the open-source, fullstack Next.js framework, giving you instant backend superpowers. Get a full TypeScript backend and admin panel instantly. Use Payload as a headless CMS or for building powerful applications.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/pdfcn">pdfcn</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-13</td>
+<td>4414</td>
+<td>Beautiful pdf components, built on Takumi and Forme. 100% Free, Zero config, one command setup.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/plotly.js">plotly.js</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-20</td>
+<td>2157494</td>
+<td>Open-source JavaScript charting library behind Plotly and Dash</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/powercontext">powercontext</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-10-13</td>
+<td>51104</td>
+<td>Not only memory but a full story.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/pretty-ts-errors">pretty-ts-errors</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-21</td>
+<td>7483</td>
+<td>🔵 Make TypeScript errors prettier and human-readable in VSCode 🎀</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/Prism-platform">Prism-platform</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-13</td>
+<td>17024</td>
+<td>Self-hosted OSINT platform. Point it at a domain, IP, email, phone or username and 26 modules run in parallel: WHOIS, DNS, threat intel, breaches, username search. One dashboard, an exposure score, an entity graph, HTML and PDF reports.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/pwntools">pwntools</a></td>
+<td>NOASSERTION</td>
+<td>-</td>
+<td>2026-10-27</td>
+<td>29044</td>
+<td>CTF framework and exploit development library</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/railtracks">railtracks</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-08</td>
+<td>34204</td>
+<td>An agentic framework that helps developers build resilient agentic systems</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/razer-ctl">razer-ctl</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-20</td>
+<td>1491</td>
+<td>Fan, power, and lighting control for Razer Blade laptops on Windows — tray app and CLI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/repowise">repowise</a></td>
+<td>AGPL-3.0</td>
+<td>-</td>
+<td>2026-10-13</td>
+<td>144966</td>
+<td>Codebase intelligence for AI and humans: code health scores, auto-generated docs, git analytics, dead code detection, and architectural decisions via MCP.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/reticle">reticle</a></td>
+<td>NOASSERTION</td>
+<td>TypeScript</td>
+<td>2026-10-19</td>
+<td>159230</td>
+<td>AI agents can generate code, but still struggle to understand what they build. Reticle brings Jev-style machine-native runtime perception to web &amp; desktop applications.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/saga_boi_npo_food">saga_boi_npo_food</a></td>
+<td>-</td>
+<td>TypeScript</td>
+<td>2026-04-22</td>
+<td>1104</td>
+<td>the best</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/Sage">Sage</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-13</td>
+<td>85221</td>
+<td>An extensible framework for custom, self-evolving AI agents, with configurable agent packages, tools, skills, and multi-round recursive self-improvement (RSI).</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/SceneDreamer">SceneDreamer</a></td>
+<td>NOASSERTION</td>
+<td>-</td>
+<td>2023-12-21</td>
+<td>30387</td>
+<td>[TPAMI 2023] SceneDreamer: Unbounded 3D Scene Generation from 2D Image Collections</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/shields">shields</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-10-29</td>
+<td>533408</td>
+<td>Concise, consistent, and legible badges in SVG and raster format</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/skopeo">skopeo</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-10-26</td>
+<td>75126</td>
+<td>Work with remote images registries - retrieving information, images, signing content</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/sloptotal">sloptotal</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-13</td>
+<td>14521</td>
+<td>Open-source AI text detector and ChatGPT detector: 23 engines, one calibrated score, every number measured on a public benchmark. Self-hosted, runs on CPU.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/soundcraft">soundcraft</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-10-24</td>
+<td>7905</td>
+<td>An open-source, clean-room reimplementation of Avid Pro Tools in pure Rust</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/sqlalchemy-cubrid">sqlalchemy-cubrid</a></td>
+<td>MIT</td>
+<td>Python</td>
+<td>2026-10-20</td>
+<td>3850</td>
+<td>SQLAlchemy 2.0–2.2 dialect for CUBRID with Alembic, async, and ORM support</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/squidbrake">squidbrake</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-10-18</td>
+<td>10597</td>
+<td>Brakes for your AI agents: every tool call is checked against your rules, held for human approval when risky, and recorded in a tamper-evident audit trail. Works with Claude Code and any MCP app.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/statewave">statewave</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-10-13</td>
+<td>8228</td>
+<td>Open-source memory runtime for AI agents — reproducible, provenance-tagged context bundles instead of query-time retrieval. Apache-2.0, self-hosted on Postgres + pgvector, Python + TypeScript SDKs.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/statewave-openrouter">statewave-openrouter</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-10-13</td>
+<td>63</td>
+<td>OpenAI-compatible proxy that injects Statewave memory into OpenRouter calls and writes each turn back.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/SwifterSwift">SwifterSwift</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-25</td>
+<td>16229</td>
+<td>A handy collection of more than 500 native Swift extensions to boost your productivity.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/ToolJet">ToolJet</a></td>
+<td>AGPL-3.0</td>
+<td>-</td>
+<td>2026-10-16</td>
+<td>1746286</td>
+<td>Open-source foundation of ToolJet AI - the enterprise app generation platform for internal tools, dashboards, business applications, workflows and AI agents. Build visually, from a prompt, or from Claude Code, Codex and Cursor over MCP 🚀</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/ToolRAG">ToolRAG</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2025-03-30</td>
+<td>8970</td>
+<td>Unlimited LLM tools, zero context penalties — ToolRAG serves exactly the LLM tools your user-query demands.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/twitter-clone">twitter-clone</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2024-08-12</td>
+<td>2034</td>
+<td>Twitter clone built in Next.js + TypeScript + Tailwind CSS using Cloud Firestore and Storage</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/typescript-sdk">typescript-sdk</a></td>
+<td>NOASSERTION</td>
+<td>-</td>
+<td>2026-10-17</td>
+<td>20346</td>
+<td>The official TypeScript SDK for Model Context Protocol servers and clients</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/umami">umami</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-16</td>
+<td>28406</td>
+<td>Umami is a privacy-first analytics platform. Traffic, campaigns, behavior, conversions, and revenue in one place — no cookies, no surveillance, self-hosted or in the cloud.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/unicorn-finance">unicorn-finance</a></td>
+<td>Apache-2.0</td>
+<td>-</td>
+<td>2026-09-23</td>
+<td>3320</td>
+<td>Payments - we have created Unicorn Finance as a sample application showcasing the capabilities of our JP Morgan core external APIs.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/validator">validator</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-26</td>
+<td>2570</td>
+<td>:100:Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/vite">vite</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-17</td>
+<td>76648</td>
+<td>Next generation frontend tooling. It's fast!</td>
+</tr>
+<tr>
+<td><a href="https://github.com/CloudCorpRecords/wallabag">wallabag</a></td>
+<td>MIT</td>
+<td>-</td>
+<td>2026-10-21</td>
+<td>139717</td>
+<td>wallabag is a self hostable application for saving web pages: Save and classify articles. Read them later. Freely.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>
