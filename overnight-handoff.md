@@ -5574,3 +5574,14 @@ Overnight pipeline 2026-11-03T07:48:35Z (queue delta first: 1 prior sync landing
 - BLOCKED >72h (flagged by name, concrete decisions carried): WH #1073 + carried conflicting set (conflict resolution keeping both sides); WH #713 (game-unit-tests, VF5 lane owns it); WH #377 owner-held evidence (do-not-merge); CJ #270 (owner 2D-direction decision: merge as the 2D v2 record, or hold); Bannon #78 excluded/owner-held.
 - Queue counts: WH 19 + CJ 5 + GRE 2 + Bannon 5 = 31 open; blocked (>72h) = 14.
 
+
+Overnight pipeline 2026-11-03T09:14Z (queue delta first: 4 landed-verified BY this run: CJ #271/#272/#273/#274; 0 false claims reopened; 0 stale checkpoints resumed; 0 new queue items)
+- LANDED-VERIFIED: cape-jones dance-proof 3D stack landed in order, merge commits only, payloads verified on main — #271 merge a4d31af6, #272 merge 5fae850e, #273 merge 1097bf52, #274 merge cbc8d877 (CJ tip). Payloads: saved-animation/cj-dance-3d-v3.bvh sha 421c4510 9,297,190 B; dance-proof-3d-v4/README.md sha 2dc3045d; solve_v4.py sha 56f6a7db. CJ open queue is now #270 only (owner-held 2D-direction decision).
+- NOT MERGED BY THIS RUN: WH 19 (same state as 07:48Z run: CLEAN drafts never merged, 11 CONFLICTING non-drafts, #713/#377 UNSTABLE not green, #377 owner-held); GRE #79/#80 UNSTABLE guard-gated; Bannon #22 UNSTABLE + 4 excluded drafts.
+- VERIFY-SWEEP: 8 checks, 0 false (tips/payloads as in MERGE-QUEUE.md entry for this run; agent-ops tip moved via legitimate sync merges #421/#422).
+- STALLED: none. Both watchdog+running checkpoints fresh (steam 08:55Z, everything-else 09:05Z). Everything-else Step 5 deploy dry-run v2 still under the standing parent WAIT decision — not respawned, not surfaced as stuck.
+- CANON-SYNC: nothing new. IN-FLIGHT LEFT ALONE: wave2 Blender (PiranhaPlant), CJ v5 Blender (scene_v5.blend), everything-else deploy dry-run, http :8123.
+- DISK: 70%, under 85%. FAILURE-ALERTS: nothing new.
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work.
+- BLOCKED >72h: WH #1073 + conflicting set; WH #713 (VF5 lane); WH #377 owner-held; CJ #270 (owner 2D-direction decision); Bannon #78 excluded/owner-held.
+- Queue counts: WH 19 + CJ 1 + GRE 2 + Bannon 5 = 27 open; blocked (>72h) = 14.
