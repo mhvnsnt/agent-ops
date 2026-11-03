@@ -1,4 +1,13 @@
 
+## Overnight pipeline — 2026-11-03T22:14Z (idle 33h+, last user msg 2026-11-02T13:13:08Z)
+- QUEUE DELTA: 0 merged by this run at entry time; 1 prior sync landing re-verified (#444 = agent-ops main tip 24b45fd3); 0 false claims; 0 stale resumed; 0 new items; agent-ops #445 body fixed to gate format (was instruction-gate FAIL, guard PASS) and this run's entry appended to its branch — merges when green, next run re-verifies. Queue counts: WH 19 + CJ 1 + GRE 2 + Bannon 5 = 27 open; blocked (>72h) = 14.
+- VERIFY SWEEP: 6+ checks, 0 false — agent-ops #444 = tip; WH tip 096489c3; WH #1540/#1541 payload blobs exact; CJ BVH blob exact; CJ/GRE/Bannon/WG/CD tips unchanged.
+- PR STATE (fresh gh pr list): no game PR mergeable+green+unexcluded. WH drafts #1525-#1527/#863 CLEAN (never merged as drafts); conflicting set unchanged; #713/#377 UNSTABLE; GRE #79/#80 UNSTABLE; CJ #270 CLEAN but owner 2D-direction decision; Bannon #78 excluded/owner-held.
+- CHECKPOINTS: 1,223 scanned, 2 unparseable pre-existing, 1 watchdog+running (fresh), 0 stale >60m. checkpoint_audit.py still absent (tools archived); direct python scan substituted.
+- CANON-SYNC: nothing new. IN-FLIGHT LEFT ALONE: CJ v5 render (666 frames, f0666.png, progressing) + another lane's du scan. DISK: 74%. FAILURE-ALERTS: nothing new.
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work; queue-sync update follows the STEP 1.6 flow via the already-open #445.
+- BLOCKED >72h: WH conflicting set; WH #713 (VF5 lane); WH #377 owner-held; CJ #270 (owner 2D-direction decision); Bannon #78 excluded/owner-held; B2 cap-raise retry decision carried.
+
 ## Overnight pipeline — 2026-11-03T21:44Z (idle 32h+, last user msg 2026-11-02T13:13:08Z)
 - QUEUE DELTA: 0 merged by this run; 1 prior sync landing re-verified (#444 = agent-ops main tip 24b45fd3); 0 false claims; 0 stale resumed; 0 new items. Queue counts: WH 19 + CJ 1 + GRE 2 + Bannon 5 = 27 open; blocked (>72h) = 14.
 - VERIFY SWEEP: 6+ checks, 0 false — agent-ops #444 = tip; WH tip 096489c3; WH #1540/#1541 payload blobs exact; CJ BVH blob exact; CJ/GRE/Bannon/WG/CD tips unchanged.
