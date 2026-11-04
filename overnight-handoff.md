@@ -6323,3 +6323,9 @@ Overnight pipeline 2026-11-03T11:14Z (queue delta first: 0 merged BY this run; 1
 - Verify sweep: 6 checks, 0 false (#1560 tip+payload, #1559 verdict file unchanged, agent-ops tip 8039f35f, CJ/GRE/Bannon/wrestling/CD tips unchanged).
 - Checkpoints: 1227 scanned, 0 watchdog+running, 0 stale. Canon-sync: nothing new. In-flight CJ v5 render + Gigaleak inflate left alone. Disk 69%.
 - Blockers (concrete, unchanged): CJ #270 needs owner's 2D-direction decision; WH #377 stays open as evidence per owner; Bannon #78 excluded; WH conflicting set needs lane resolution keeping both sides.
+
+## Overnight pipeline 2026-11-04T19:44Z (30-min run)
+- Queue delta: 0 merged by this run; 0 newly verified-landed (WH #1560 re-confirmed on main: tip 2f0b4b3e + movesets.js 89,651 B sha 61310e7b); 0 false claims; 0 stale resumed; 0 new items. queue_open=30 queue_blocked=14 (unchanged set: WH 22 + CJ 1 + GRE 2 + Bannon 5).
+- Verify sweep: 7 checks, 0 false (WH #1560 tip+payload, #1559 verdict file unchanged, agent-ops tip d036b48a, CJ/GRE/Bannon/wrestling/CD tips unchanged).
+- Checkpoints: 1227 scanned, 0 watchdog+running, 0 stale. Canon-sync: nothing new. In-flight CJ v5 render + Gigaleak inflate + pathfix download + jun-gap server left alone. Disk 70%.
+- Blockers (concrete, unchanged): CJ #270 needs owner's 2D-direction decision; WH #377 stays open as evidence per owner; Bannon #78 excluded; WH conflicting set needs lane resolution keeping both sides; GRE #79/#80 guard-gated.
