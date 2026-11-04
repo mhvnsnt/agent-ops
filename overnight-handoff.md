@@ -1,3 +1,13 @@
+## Overnight pipeline — 2026-11-04T02:44Z (idle 215min, last user msg 2026-11-03T23:09:11Z)
+- QUEUE DELTA: 0 merged by this run; 1 prior sync landing re-verified (#451 = agent-ops main tip 444594f4); 0 false claims; 0 stale resumed; 0 new items. Queue counts: WH 22 + CJ 1 + GRE 2 + Bannon 5 = 30 open; blocked (>72h) = 15.
+- VERIFY SWEEP: 7 checks, 0 false — agent-ops #451 (merge = tip); WH tip f75d38ba (#1549) unchanged; CJ/GRE/Bannon/WG/CD tips unchanged.
+- PR STATE (fresh gh): no game PR mergeable+green+unexcluded. WH #1517 CONFLICTING/DIRTY, #713 MERGEABLE/UNSTABLE, drafts #1544/#1546/#1547 never merged as drafts; CJ #270 MERGEABLE/CLEAN but owner-held 2D-direction decision; GRE #79/#80 MERGEABLE/UNSTABLE guard-gated; Bannon #78 excluded/owner-held, #22 UNSTABLE reverse-direction.
+- CHECKPOINTS: 1,227 scanned, 2 unparseable pre-existing, 3 watchdog+running all >60m by updated_at but flagged-not-resumed with live-workdir evidence (ttt2 decoded-data027 20:44 CST; smutbase ryusan capture logs 20:44-20:45 CST; steam guard-wait, workdir Nov 2). checkpoint_audit.py still absent (tools archived); direct scan substituted.
+- CANON-SYNC: nothing new. IN-FLIGHT LEFT ALONE: CJ v5 render (778 frames, f0778.png 20:44 CST, pid 3369, chunk 769-864) + ttt2/smutbase lanes + du scan. DISK: 75%, under 85%. FAILURE-ALERTS: nothing new.
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work; queue-sync PR for this run's entry follows the STEP 1.6 flow.
+- BLOCKED >72h: WH conflicting set + #1517; WH #713; WH #377 owner-held; CJ #270 owner 2D-direction decision; Bannon #78 excluded/owner-held; GRE #79/#80 guard-gated.
+
+
 ## Overnight pipeline — 2026-11-04T02:14Z (idle 185min, last user msg 2026-11-03T23:09:11Z)
 - QUEUE DELTA: 0 merged by this run; 1 prior sync landing re-verified (#450 = agent-ops main tip 1ad99934); 0 false claims; 0 stale resumed; 0 new items. Queue counts: WH 22 + CJ 1 + GRE 2 + Bannon 5 = 30 open; blocked (>72h) = 15 (#1517 aged in).
 - VERIFY SWEEP: 7 checks, 0 false — agent-ops #450 (merge = tip); WH tip f75d38ba (#1549) unchanged; CJ/GRE/Bannon/WG/CD tips unchanged.
