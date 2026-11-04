@@ -6317,3 +6317,9 @@ Overnight pipeline 2026-11-03T11:14Z (queue delta first: 0 merged BY this run; 1
 - CANON-SYNC: nothing new. IN-FLIGHT LEFT ALONE: CJ v5 render + other lanes' dirty files in local agent-ops checkout. DISK: 74%. FAILURE-ALERTS: nothing new.
 - STEP 6/7/8: no new thread, no new pulls — live lanes own the work; queue-sync PR for this run's entry follows the STEP 1.6 flow.
 - BLOCKED >72h: WH conflicting set; WH #713 (VF5 lane); WH #377 owner-held; CJ #270 (owner 2D-direction decision); Bannon #78 excluded/owner-held; B2 cap-raise retry decision carried.
+
+## Overnight pipeline 2026-11-04T19:14Z (30-min run)
+- Queue delta: 0 merged by this run; 1 VERIFIED LANDED — WH #1560 (dead d+1, merge 2f0b4b3e = WH main HEAD, movesets.js 89,651 B on main); queue_open=30 queue_blocked=14 (unchanged set: WH 22 + CJ 1 + GRE 2 + Bannon 5).
+- Verify sweep: 6 checks, 0 false (#1560 tip+payload, #1559 verdict file unchanged, agent-ops tip 8039f35f, CJ/GRE/Bannon/wrestling/CD tips unchanged).
+- Checkpoints: 1227 scanned, 0 watchdog+running, 0 stale. Canon-sync: nothing new. In-flight CJ v5 render + Gigaleak inflate left alone. Disk 69%.
+- Blockers (concrete, unchanged): CJ #270 needs owner's 2D-direction decision; WH #377 stays open as evidence per owner; Bannon #78 excluded; WH conflicting set needs lane resolution keeping both sides.
