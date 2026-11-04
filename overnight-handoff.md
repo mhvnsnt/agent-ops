@@ -1,3 +1,8 @@
+## 2026-11-04 02:14 CST — overnight-idle-pipeline run (08:14Z)
+- Queue delta first: 0 merged BY this run; 1 landing VERIFIED on main by this run (WH #1550 SmutBase T7 banks, merged by finisher lane 03:26:38Z, df8af5a4 — pond.json + raven moves.pack.json confirmed on WH main); 0 false claims (6-check sweep, all pass); 0 stale resumed (ttt2-motion checkpoint updated 07:41Z, lane active); 0 game PRs merged (none mergeable+green+unexcluded; WH 22 + CJ 1 + GRE 2 + Bannon 5 = 30 open, 14 blocked >72h).
+- LOCAL-ONLY note (not pushed, not deleted): ~/workspace/agent-ops checkout on stale Oct branch shows 294 changed files incl. mode churn — left untouched for owner/lane review, recorded in MERGE-QUEUE.md.
+- Untouched in-progress work: CJ Blender render (scene_v5f.blend frames 961-984) running; TTT2 bank-build lane active. Canon-sync: nothing new. Disk 67%.
+
 ## Overnight pipeline — 2026-11-04T07:47Z (idle ~515min, last user msg 2026-11-03T23:09:11Z)
 - QUEUE DELTA: 0 merged by this run; 1 landing verified on main by this run (WH #1557, merged by TTT2 join lane 07:41:06Z, squash 7dc58c0e = WH main tip; roger/jun join payloads confirmed on main via contents API); 0 false claims; 0 stale resumed; 0 new items. Queue counts: WH 22 + CJ 1 + GRE 2 + Bannon 5 = 30 open; blocked (>72h) = 14.
 - VERIFY SWEEP: 6 checks, 0 false — WH #1557/#1556 payloads on main; agent-ops #461 = main tip a8e4922e; deploy branch gh-pages-m1-20261029 still 8eb155a; other repo tips unchanged.
