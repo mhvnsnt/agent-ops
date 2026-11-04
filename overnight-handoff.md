@@ -1,3 +1,14 @@
+## Overnight pipeline — 2026-11-04T01:14Z (idle 125min, last user msg 2026-11-03T17:09 CST)
+- QUEUE DELTA: 0 merged by this run; 1 prior sync landing re-verified (#448 = agent-ops main tip 201ac469); 0 false claims; 0 stale resumed; 0 new items. Queue counts: WH 22 + CJ 1 + GRE 2 + Bannon 5 = 30 open; blocked (>72h) = 14.
+- VERIFY SWEEP: 7 checks, 0 false — WH tip f75d38ba (#1549), CJ/GRE/Bannon/WG/CD tips unchanged, agent-ops tip 201ac469 (#448).
+- PR STATE (fresh gh): no game PR mergeable+green+unexcluded. WH #1517 CONFLICTING/DIRTY, #713 MERGEABLE/UNSTABLE, new drafts #1544/#1546/#1547 never merged as drafts; CJ #270 CLEAN but owner-held; GRE #79/#80 UNSTABLE guard-gated; Bannon #78 excluded/owner-held.
+- CHECKPOINTS: 1,227 scanned, 2 unparseable pre-existing, 3 watchdog+running (ttt2 fresh; smutbase-t7 + steam >60m by updated_at, flagged not resumed — live lanes / guard gate).
+- CANON-SYNC: nothing new. IN-FLIGHT LEFT ALONE: CJ v5 Blender render frames 673-768 + du scan. DISK: 75%, under 85%. FAILURE-ALERTS: nothing new.
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work; queue-sync PR for this run's entry follows the STEP 1.6 flow.
+- BLOCKED >72h: WH conflicting set; WH #713; WH #377 owner-held; CJ #270 owner 2D-direction decision; Bannon #78 excluded/owner-held; GRE #79/#80 guard-gated.
+
+
+
 ## Overnight pipeline — 2026-11-04T00:44Z (idle 95min at start, last user msg 2026-11-03T23:09:11Z)
 - QUEUE DELTA: 1 LANDED-VERIFIED DURING THIS RUN (WH #1549 Megami no-outfit variant, merged by mhvnsnt mid-run at 00:53:40Z, verified on main BY THIS RUN: merge f75d38ba = WH tip, GLB payload blob 135bae42 19,510,660 B exact); 1 prior sync landing re-verified (#447 = agent-ops main tip 8705e42f); 0 false claims; 0 stale resumed; 2 heartbeat-stale items flagged-not-resumed (smutbase-t7 live workdir, steam guard-wait). Queue counts: WH 22 + CJ 1 + GRE 2 + Bannon 5 = 30 open; blocked (>72h) = 14.
 - VERIFY SWEEP: 9 checks, 0 false — agent-ops #447, WH #1549 + GLB payload, WH #1548, WH #1540/#1541 blobs exact, CJ BVH blob exact, CJ/GRE/Bannon/WG/CD tips unchanged.
