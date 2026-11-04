@@ -1,3 +1,13 @@
+## Overnight pipeline — 2026-11-04T00:14Z (idle 65min at start, last user msg 2026-11-03T23:09:11Z)
+- QUEUE DELTA: 0 merged by this run; 1 prior sync landing re-verified (#446 = agent-ops main tip 1eae3c99); WH #1548 re-verified on main (= WH tip 392352ed, payload files present); 0 false claims; 1 stale checkpoint flagged-not-resumed (steam-full-pull, guard-wait); 0 new items. Queue counts: WH 22 + CJ 1 + GRE 2 + Bannon 5 = 30 open; blocked (>72h) = 14.
+- VERIFY SWEEP: 12 checks, 0 false — agent-ops #446, WH #1548 + payload, WH #1540/#1541 blobs exact, CJ BVH blob exact, CJ/GRE/Bannon/WG/CD tips unchanged.
+- PR STATE (fresh gh pr list): no game PR mergeable+green+unexcluded. WH drafts #1547/#1546/#1544/#1527/#1526/#1525/#863 never merged as drafts; conflicting set unchanged; #713/#377 UNSTABLE (#377 owner-held); CJ #270 CLEAN but owner 2D-direction decision; GRE #79/#80 UNSTABLE guard-gated; Bannon #78 excluded/owner-held, #22 UNSTABLE reverse-direction.
+- CHECKPOINTS: 1,227 scanned, 2 unparseable pre-existing, 3 watchdog+running fresh (smutbase-t7-banks, megami-outfit-hunt, ttt2-motion), steam-full-pull STALLED-guard-wait (download complete, merges held on guards for GRE #79/#80 — flagged, not resumed, not dropped).
+- CANON-SYNC: carried pending (Pond fix order + TTT2/Megami verdict, lane-owned; not blind-committed to WH).
+- IN-FLIGHT LEFT ALONE: CJ v5 render (734 frames, f0734.png, progressing). Local agent-ops checkout stale+dirty (other lanes' diffs) — untouched; this sync edited main's versions via a clean temp index and touches ONLY MERGE-QUEUE.md + overnight-handoff.md.
+- DISK: 74%. FAILURE-ALERTS: nothing new. STEP 6/7/8: no new thread, no new pulls — live lanes own the work.
+- BLOCKED >72h: WH conflicting set; WH #713 (VF5 lane); WH #377 owner-held; CJ #270 (owner 2D-direction decision); Bannon #78 excluded/owner-held; B2 cap-raise retry decision carried; TOP BLOCKER: owner phone playtest of the live e1581570 bundle.
+
 
 ## Overnight pipeline — 2026-11-03T23:44Z (idle 35min, last user msg 2026-11-03T23:09:11Z)
 - QUEUE DELTA: 1 LANDED-VERIFIED during this run (WH #1548 Pantera wiring fix, merged by mhvnsnt mid-run, verified on main BY THIS RUN: merge 392352ed = WH tip); 1 prior sync landing re-verified (#445 = agent-ops main tip ce2c7277); 0 false claims; 0 stale resumed; 4 new items still open (WH #1547/#1546/#1544 + canon-sync pending). Queue counts: WH 22 + CJ 1 + GRE 2 + Bannon 5 = 30 open; blocked (>72h) = 14.
