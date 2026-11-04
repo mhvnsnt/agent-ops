@@ -6347,3 +6347,9 @@ Overnight pipeline 2026-11-03T11:14Z (queue delta first: 0 merged BY this run; 1
 - Verify sweep: 12 checks, 0 false (WH tip 2f0b4b3e + movesets.js 89,651 B sha 61310e7b, #1559 verdict file unchanged, TTT2-BANKS doc unchanged, agent-ops tip eb42085d + queue file on main, CJ/GRE/Bannon/wrestling/CD tips unchanged).
 - Checkpoints: 1227 scanned, 0 watchdog+running, 0 stale. Canon-sync: nothing new. In-flight CJ v5 render (frames 1489-1512) + jun-gap server + Gigaleak inflate left alone. Disk 71%.
 - Blockers (concrete, unchanged): CJ #270 needs owner's 2D-direction decision; WH #377 stays open as evidence per owner; Bannon #78 excluded; WH conflicting set needs lane resolution keeping both sides; GRE #79/#80 guard-gated.
+
+## Overnight pipeline 2026-11-04T21:44Z (30-min run)
+- Queue delta: 0 game PRs merged by this run; 2 verified landed by this run (WH #1561 Jun bank gap close, merged 21:35:11Z by lane, verified on main tip a67ec395; agent-ops #489 21:15Z sync, merged 21:22:11Z, verified on main tip a526bc19); 0 false claims; 0 stale resumed; 0 new items. queue_open=30 queue_blocked=14 (unchanged set: WH 22 + CJ 1 + GRE 2 + Bannon 5).
+- Verify sweep: 13 checks, 0 false (WH tip a67ec395 + TTT2-BANKS doc 16,002 B; movesets.js + roster verdict file unchanged; #1560/#1558 re-confirmed merged; agent-ops tip a526bc19 + queue file byte-identical to local; CJ/GRE/Bannon/wrestling/CD tips unchanged).
+- Checkpoints: 1227 scanned, 0 watchdog+running, 0 stale. Canon-sync: nothing new. In-flight CJ v5 render (frames 1513-1536) left alone. Disk 71%.
+- Blockers (concrete, unchanged): CJ #270 needs owner's 2D-direction decision; WH #377 stays open as evidence per owner; Bannon #78 excluded; WH conflicting set needs lane resolution keeping both sides; GRE #79/#80 guard-gated.
