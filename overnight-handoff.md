@@ -1,3 +1,13 @@
+## Overnight pipeline — 2026-11-04T02:14Z (idle 185min, last user msg 2026-11-03T23:09:11Z)
+- QUEUE DELTA: 0 merged by this run; 1 prior sync landing re-verified (#450 = agent-ops main tip 1ad99934); 0 false claims; 0 stale resumed; 0 new items. Queue counts: WH 22 + CJ 1 + GRE 2 + Bannon 5 = 30 open; blocked (>72h) = 15 (#1517 aged in).
+- VERIFY SWEEP: 7 checks, 0 false — agent-ops #450 (merge = tip); WH tip f75d38ba (#1549) unchanged; CJ/GRE/Bannon/WG/CD tips unchanged.
+- PR STATE (fresh gh): no game PR mergeable+green+unexcluded. WH #1517 CONFLICTING/DIRTY, #713 MERGEABLE/UNSTABLE, drafts #1544/#1546/#1547 never merged as drafts; CJ #270 MERGEABLE/CLEAN but owner-held 2D-direction decision; GRE #79/#80 MERGEABLE/UNSTABLE guard-gated; Bannon #78 excluded/owner-held, #22 UNSTABLE reverse-direction.
+- CHECKPOINTS: 1,227 scanned, 2 unparseable pre-existing, 3 watchdog+running all >60m by updated_at but flagged-not-resumed with live-workdir evidence (ttt2 join-round2-work 20:10 CST; smutbase capture logs 20:14-20:16 CST; steam guard-wait, workdir Nov 2). megami-outfit-hunt now done (00:54Z), consistent with #1549. checkpoint_audit.py still absent (tools archived); direct scan substituted.
+- CANON-SYNC: nothing new committed by this run; lane-owned items already landed via #1548/#1549 or in MEMORY.md + prior handoffs. IN-FLIGHT LEFT ALONE: CJ v5 render (766 frames, f0766.png, pid 44129) + ttt2/smutbase lanes + du scan. DISK: 75%. FAILURE-ALERTS: nothing new.
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work; queue-sync PR for this run's entry follows the STEP 1.6 flow.
+- BLOCKED >72h: WH conflicting set + #1517; WH #713; WH #377 owner-held; CJ #270 owner 2D-direction decision; Bannon #78 excluded/owner-held; GRE #79/#80 guard-gated.
+
+
 ## Overnight pipeline — 2026-11-04T01:44Z (idle 155min, last user msg 2026-11-03T23:09:11Z)
 - QUEUE DELTA: 0 merged by this run; 1 prior sync landing re-verified (#449 = agent-ops main tip 828c52fd); 0 false claims; 0 stale resumed; 0 new items. Queue counts: WH 22 + CJ 1 + GRE 2 + Bannon 5 = 30 open; blocked (>72h) = 14.
 - VERIFY SWEEP: 7 checks, 0 false — agent-ops #449 (merge 828c52fd, parents 201ac469 + 29af19c7, API-verified); WH tip f75d38ba (#1549) unchanged; CJ/GRE/Bannon/WG/CD tips unchanged.
