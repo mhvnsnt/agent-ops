@@ -6353,3 +6353,10 @@ Overnight pipeline 2026-11-03T11:14Z (queue delta first: 0 merged BY this run; 1
 - Verify sweep: 13 checks, 0 false (WH tip a67ec395 + TTT2-BANKS doc 16,002 B; movesets.js + roster verdict file unchanged; #1560/#1558 re-confirmed merged; agent-ops tip a526bc19 + queue file byte-identical to local; CJ/GRE/Bannon/wrestling/CD tips unchanged).
 - Checkpoints: 1227 scanned, 0 watchdog+running, 0 stale. Canon-sync: nothing new. In-flight CJ v5 render (frames 1513-1536) left alone. Disk 71%.
 - Blockers (concrete, unchanged): CJ #270 needs owner's 2D-direction decision; WH #377 stays open as evidence per owner; Bannon #78 excluded; WH conflicting set needs lane resolution keeping both sides; GRE #79/#80 guard-gated.
+
+## Overnight pipeline 2026-11-04T22:14Z (30-min run)
+- Queue delta: 0 game PRs merged by this run; 1 verified landed by this run (agent-ops #490, 21:44Z sync, merged 21:53:12Z, verified on main tip 9fe104f2); 0 false claims; 0 stale resumed; 0 new items. queue_open=30 queue_blocked=14 (unchanged set: WH 22 + CJ 1 + GRE 2 + Bannon 5).
+- Fresh mergeability this run: WH 11 CONFLICTING/DIRTY, #713 MERGEABLE/UNSTABLE (game-unit-tests fail); CJ #270 MERGEABLE/CLEAN held (owner 2D-direction decision); GRE #79/#80 + Bannon #22 MERGEABLE/UNSTABLE, not green (check detail unreadable via token).
+- Verify sweep: 12 checks, 0 false (WH tip a67ec395 + TTT2-BANKS doc 16,002 B + Jun baked clips on main; agent-ops tip 9fe104f2; CJ/GRE/Bannon/wrestling/CD tips unchanged).
+- Checkpoints: 1227 scanned, 0 watchdog+running, 0 stale. Canon-sync: nothing new. In-flight CJ v5 render (frames 1537-1560) left alone. Disk 71%.
+- Blockers (concrete, unchanged): CJ #270 needs owner's 2D-direction decision; WH #377 stays open as evidence per owner; Bannon #78 excluded; WH conflicting set needs lane resolution keeping both sides; WH #713 needs its game-unit-tests failure fixed; GRE #79/#80 guard-gated.
