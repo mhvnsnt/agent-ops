@@ -1,3 +1,10 @@
+## Overnight pipeline — 2026-11-04T08:44Z
+- QUEUE DELTA: 0 merged by this run; prior run's sync #463 verified on main (tip a343084c); 0 false claims; 0 stale resumed; 0 new items. Queue counts: WH 22 + CJ 1 + GRE 2 + Bannon 5 = 30 open; blocked (>72h) = 14.
+- VERIFY SWEEP: 6 checks, 0 false — WH tip 7dc58c0e (#1557); #1550 pond.json + raven moves.pack.json on main; #1556 decode64 on main; #1557 roger-join.json on main; deploy branch still 8eb155a4.
+- CHECKPOINTS: ttt2-motion heartbeat 63 min stale but successor bank-build lane live (pose_check1.png 02:44 CST) — not resumed, not duplicated.
+- CANON-SYNC: nothing new. IN-FLIGHT LEFT ALONE: CJ v5 render (frames 985-1008) + bank-build lane + du scan. DISK: 67%. FAILURE-ALERTS: nothing new.
+- BLOCKED >72h: WH conflicting set; WH #713; WH #377 owner-held; CJ #270 owner 2D-direction decision; Bannon #78 excluded/owner-held.
+
 ## 2026-11-04 02:14 CST — overnight-idle-pipeline run (08:14Z)
 - Queue delta first: 0 merged BY this run; 1 landing VERIFIED on main by this run (WH #1550 SmutBase T7 banks, merged by finisher lane 03:26:38Z, df8af5a4 — pond.json + raven moves.pack.json confirmed on WH main); 0 false claims (6-check sweep, all pass); 0 stale resumed (ttt2-motion checkpoint updated 07:41Z, lane active); 0 game PRs merged (none mergeable+green+unexcluded; WH 22 + CJ 1 + GRE 2 + Bannon 5 = 30 open, 14 blocked >72h).
 - LOCAL-ONLY note (not pushed, not deleted): ~/workspace/agent-ops checkout on stale Oct branch shows 294 changed files incl. mode churn — left untouched for owner/lane review, recorded in MERGE-QUEUE.md.
