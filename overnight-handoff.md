@@ -1,3 +1,5 @@
+Overnight pipeline 2026-11-04T03:14Z: 0 merged by this run; WH #1550 (SmutBase T7 banks) MERGEABLE but UNSTABLE (speed-quality + menu-touch-e2e pending) — not merged, finisher lane active, next run merges when green. Verify sweep 7 checks, 0 false (#1549/#452 re-verified on main tips). 3 watchdog+running checkpoints heartbeat-stale but all live by workdir/PR evidence — none resumed. Canon-sync: nothing new. Queue: 31 open, 15 blocked. In-flight CJ render + ttt2 + smutbase lanes untouched.
+
 ## Overnight pipeline — 2026-11-04T02:44Z (idle 215min, last user msg 2026-11-03T23:09:11Z)
 - QUEUE DELTA: 0 merged by this run; 1 prior sync landing re-verified (#451 = agent-ops main tip 444594f4); 0 false claims; 0 stale resumed; 0 new items. Queue counts: WH 22 + CJ 1 + GRE 2 + Bannon 5 = 30 open; blocked (>72h) = 15.
 - VERIFY SWEEP: 7 checks, 0 false — agent-ops #451 (merge = tip); WH tip f75d38ba (#1549) unchanged; CJ/GRE/Bannon/WG/CD tips unchanged.
