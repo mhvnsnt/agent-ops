@@ -1,3 +1,14 @@
+## Overnight pipeline — 2026-11-04T01:44Z (idle 155min, last user msg 2026-11-03T23:09:11Z)
+- QUEUE DELTA: 0 merged by this run; 1 prior sync landing re-verified (#449 = agent-ops main tip 828c52fd); 0 false claims; 0 stale resumed; 0 new items. Queue counts: WH 22 + CJ 1 + GRE 2 + Bannon 5 = 30 open; blocked (>72h) = 14.
+- VERIFY SWEEP: 7 checks, 0 false — agent-ops #449 (merge 828c52fd, parents 201ac469 + 29af19c7, API-verified); WH tip f75d38ba (#1549) unchanged; CJ/GRE/Bannon/WG/CD tips unchanged.
+- PR STATE (fresh gh): no game PR mergeable+green+unexcluded. WH #1517 CONFLICTING/DIRTY, #713 MERGEABLE/UNSTABLE, drafts #1544/#1546/#1547 never merged as drafts; CJ #270 MERGEABLE/CLEAN but owner-held 2D-direction decision; GRE #79/#80 MERGEABLE/UNSTABLE guard-gated; Bannon #78 excluded/owner-held, #22 UNSTABLE reverse-direction.
+- CHECKPOINTS: 1,227 scanned, 2 unparseable pre-existing, 3 watchdog+running all >60m by updated_at but flagged-not-resumed with live-workdir evidence (ttt2 decoded-data015.bin 19:47 CST; smutbase capture-pond-full6 + frames 19:47 CST; steam guard-wait, workdir Nov 2). checkpoint_audit.py still absent (tools archived); direct scan substituted.
+- CANON-SYNC: nothing new. IN-FLIGHT LEFT ALONE: CJ v5 render (759 frames, f0759.png 19:45 CST, pid 44129) + ttt2/smutbase lanes + du scan. DISK: 74%. FAILURE-ALERTS: nothing new.
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work; queue-sync PR for this run's entry follows the STEP 1.6 flow.
+- BLOCKED >72h: WH conflicting set; WH #713 (VF5 lane); WH #377 owner-held; CJ #270 (owner 2D-direction decision); Bannon #78 excluded/owner-held; B2 cap-raise retry decision carried; TOP BLOCKER: owner phone playtest of the live e1581570 bundle.
+
+
+
 ## Overnight pipeline — 2026-11-04T01:14Z (idle 125min, last user msg 2026-11-03T17:09 CST)
 - QUEUE DELTA: 0 merged by this run; 1 prior sync landing re-verified (#448 = agent-ops main tip 201ac469); 0 false claims; 0 stale resumed; 0 new items. Queue counts: WH 22 + CJ 1 + GRE 2 + Bannon 5 = 30 open; blocked (>72h) = 14.
 - VERIFY SWEEP: 7 checks, 0 false — WH tip f75d38ba (#1549), CJ/GRE/Bannon/WG/CD tips unchanged, agent-ops tip 201ac469 (#448).
