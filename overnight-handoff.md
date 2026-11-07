@@ -7521,3 +7521,13 @@ Overnight pipeline 2026-11-05T01:14Z (queue delta first: 1 game PR MERGED BY thi
 - CHECKPOINTS: 1,230 scanned, 0 stale, 0 running. CANON-SYNC: nothing new. FAILURE-ALERTS: nothing new. Disk 77%.
 - In-flight: none observed (no ffmpeg/blender/curl processes) — prior SCVI curls gone, lane-owned, no intervention.
 - OPEN OWNER CALLS: CJ #270 leave-merged vs revert. CARRIED: row-48 stamp; non-upright-start incl. t3_crouch; live-opponent proof videos owed (Megami flag NOT closed); Jun bank rows.pack.json/hit_frames.json owed; bank-row import adjudication; TorBox key dead; OWNER RULING #8 (Star moveset re-key?); quantum-jam decisions; B2 overflow now served via GitHub Releases + Worker (WH #1623).
+
+
+## Overnight pipeline — 2026-11-07T06:45Z (30-min run)
+- Queue delta: 0 merged BY this run; 3 verified landed by other lanes (WH #1625/#1626/#1627, payloads blob-verified on main); 1 tracked-lane merge (Diamond #370, tip-level only); 0 false claims; 0 stale resumed; queue_open=32 (WH 26 + CJ 0 + GRE 1 + Bannon 5) + ME 18 + Crystal 22 + Diamond 15 tracked; queue_blocked=15.
+- LANDED-VERIFIED: WH #1625 (1434c8c4, Fill 3 TTT2 banks batch 1, 5/5 blobs MATCH), WH #1626 (531ee559, Geese 'Nioh Kuzushi' restore, 2/2 MATCH), WH #1627 (ef2ac59b, Fill 3 batch 2, 4/4 MATCH) — WH tip now ef2ac59b. Diamond #370 merged 06:52:11Z (c048b555), tip-level only.
+- NOT MERGED: WH #1600 (CONFLICTING + menu-touch-e2e FAIL) + #713 (game-unit-tests FAIL); GRE #84 + Bannon #22 checks 403, green unverifiable — standing call; Bannon #22 is also an empty PR (0 files); drafts never merged; #377 owner-held.
+- VERIFY SWEEP: 9 checks, 0 false (3 WH merges; pose-fix release 16 assets; Crystal 22 / Diamond 15 / ME 18 re-checked).
+- CHECKPOINTS: 1,230 scanned, 0 stale, 0 running. CANON-SYNC: nothing new. FAILURE-ALERTS: nothing new. Disk 79%.
+- In-flight: none observed (no ffmpeg/blender/curl processes).
+- OPEN OWNER CALLS: CJ #270 leave-merged vs revert. CARRIED: row-48 stamp; non-upright-start incl. t3_crouch; live-opponent proof videos owed (Megami flag NOT closed); Jun bank rows.pack.json/hit_frames.json owed; bank-row import adjudication; TorBox key dead; OWNER RULING #8 (Star moveset re-key?); quantum-jam decisions; live Worker deploy STILL PENDING (Cloudflare password stale — owner refresh via Secure Vault).
