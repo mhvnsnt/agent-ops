@@ -676,6 +676,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2026-11-06-addendum-soulcalibur-vi-found-on-archiveorg-archive-org-first-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-11-06 addendum — SoulCalibur VI found on archive.org; ARCHIVE-ORG-FIRST law
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tekken-6-psp-mhvnsntwestern-heart-teardowntekken6-game-reverse-engineering" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2884,6 +2895,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2026-11-06-addendum-soulcalibur-vi-found-on-archiveorg-archive-org-first-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-11-06 addendum — SoulCalibur VI found on archive.org; ARCHIVE-ORG-FIRST law
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tekken-6-psp-mhvnsntwestern-heart-teardowntekken6-game-reverse-engineering" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2990,6 +3012,8 @@
 
 <h1 id="handoff-teardowns">HANDOFF — TEARDOWNS<a class="headerlink" href="#handoff-teardowns" title="Permanent link">&para;</a></h1>
 <p>State verified 2026-10-23. Sources: checkpoints in <code>checkpoints/</code> (<code>extract-nomercy.json</code>, <code>wh-tekken6-100.json</code>, <code>tekken6-data401-decrypt.json</code>, <code>teardown-sweep-tekken6-psp.json</code>, <code>ttt2-resume-100.json</code>, <code>wh-ttt2-100.json</code>, <code>defjam-teardown.json</code>, <code>wh-defjam-100.json</code>, <code>gap-closure-w5*.json</code>), <code>CROSS-REPO-STRANDED-AUDIT-2026-10-23.md</code>, <code>MERGE-QUEUE.md</code>. Teardown completion means: extracted + decrypted + decoded + assembled. Anything short of that is not "done", whatever a checkpoint says.</p>
+<h2 id="2026-11-06-addendum-soulcalibur-vi-found-on-archiveorg-archive-org-first-law">2026-11-06 addendum — SoulCalibur VI found on archive.org; ARCHIVE-ORG-FIRST law<a class="headerlink" href="#2026-11-06-addendum-soulcalibur-vi-found-on-archiveorg-archive-org-first-law" title="Permanent link">&para;</a></h2>
+<p><strong>SCVI found on archive.org 2026-11-06</strong> (item <code>dixen-18-soulcalibur-vi</code>, "[dixen18] Soulcalibur VI.zip", 11,441,266,068 B, md5 <code>55259ff04257400d1d0e23df4d8e05a1</code>). The Oct 2026 "not on archive.org" record was stale. Holdings index landed on both repos, verified on main 2026-11-07T01:18Z by the overnight pipeline: western-heart #1616 (merge <code>73e082ca</code>; <code>teardown/soulcalibur-6/HOLDINGS-INDEX-2026-11-06.md</code>, blob <code>383c09a2</code>) + game-reverse-engineering #83 (merge <code>7d20d701</code>; <code>soulcalibur/HOLDINGS-INDEX-2026-11-06.md</code>, same blob). <strong>Store in progress:</strong> releases <code>soulcalibur6-archiveorg-20261106</code> exist on both repos with 0 assets as of 2026-11-07T01:18Z; streaming store lane running (4 parallel range downloads). Completion signal: <code>VERIFY-PULLBACK.json</code> / <code>STORE2_DONE</code> on the releases — not yet present. Extraction not started (needs FreeArc tooling + staged space). <strong>ARCHIVE-ORG-FIRST LAW (owner 2026-11-06):</strong> "always just go to archive.org first" — recorded in <code>teardown/PLAYBOOK.md</code> Phase 1: Acquire (western-heart #1617, merge <code>37afecce</code>, verified on main) and <code>docs/RULES.md</code> (game-reverse-engineering #84, opened, queued — checks unreadable via pipeline token, not merged).</p>
 <h2 id="tekken-6-psp-mhvnsntwestern-heart-teardowntekken6-game-reverse-engineering">Tekken 6 (PSP) — mhvnsnt/western-heart <code>teardown/tekken6/</code> + game-reverse-engineering<a class="headerlink" href="#tekken-6-psp-mhvnsntwestern-heart-teardowntekken6-game-reverse-engineering" title="Permanent link">&para;</a></h2>
 <p><strong>What exists &amp; where:</strong> sector cipher fully reversed bit-exact (<code>tekken6/tools/sector_cipher.py</code>); ISO preserved byte-exact at game-reverse-engineering release <code>tekken6-psp-v1</code>; EBOOT decrypted; DATA401 DINF manifest re-verified (2,169 entries, data-region byte total 384,051,200); bulk region is NOT plaintext-compressed (entropy ~7.91) — the Tekken 5 LZSS surprise does not repeat.
 <strong>Verified state:</strong> models/partial decode work landed via sweep-lane PRs #187/#388/#413/#446 (western-heart). <strong>Motion/move extraction DOES-NOT-EXIST.</strong>
