@@ -1,3 +1,9 @@
+## Overnight pipeline 2026-11-07T02:44Z (30-min run)
+- Queue delta: 0 merged BY this run; 1 verified landed by another lane (GRE #85, payload verified on main BY THIS RUN); 1 tracked-lane merge (Mochiichao #369, tip-level only); 0 false claims; 0 stale resumed; queue_open=32 (WH 26 + CJ 0 + GRE 1 + Bannon 5) + ME 1 + Mochiichao 3 tracked; queue_blocked=15.
+- VERIFIED LANDED: GRE #85 Fill 2 bank-0 + fighter indexes (merge 1960badf = GRE main tip; 6/6 payload blobs identical; 39-file merge diff). Lane merged with guard still QUEUED — recorded, not this run's precedent.
+- NOT MERGED: GRE #84 (+4/-0 docs-only, guard QUEUED, green unverifiable — stays OPEN-PR per standing call; its docs/RULES.md content is NOT on GRE main yet); WH #1600 (menu-touch-e2e FAIL) + #713 (game-unit-tests FAIL) unchanged; drafts never merged as drafts; #377 owner-held evidence.
+- SCVI store progress: releases soulcalibur6-archiveorg-20261106 now carry part-06 on both repos; curls still running.
+- Checkpoints: 0 stale, 0 running (1,230 scanned). Disk 76%. Canon-sync: nothing new (MEMORY.md externally consolidated, no new canon). Failure-alerts: nothing new.
 ## Overnight pipeline 2026-11-07T01:36Z (30-min run)
 - Queue delta: 1 merged BY this run (WH #1618, verified on main); 6 verified landed by other lanes (WH #1619, WH #1620, GRE #86, GRE #79, GRE #80, CJ #270 — payloads verified on main BY THIS RUN); 1 NEW queue item (GRE #85, OPEN-PR, checks queued/unreadable); 0 false claims; 0 stale resumed; queue_open=33 (WH 26 + CJ 0 + GRE 2 + Bannon 5) + ME 1 + Mochiichao 3 tracked; queue_blocked=15.
 - MERGED BY THIS RUN: WH #1618 Fill 2 T7 gaps (merge 0eb3c193 = WH main HEAD; 14/14 green; 3/3 payload blobs identical).
