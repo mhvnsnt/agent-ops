@@ -7782,3 +7782,15 @@ Overnight pipeline 2026-11-07T21:14Z (queue delta first: 0 merged BY this run; 5
 - STEP 6/7/8: no new thread, no new pulls — live lanes own the work (incl. CD2 side-chat lane, owner-active now — do not touch CD2); stand down per CHECK-BEFORE-START.
 - BLOCKED >72h (carried): WH conflicting set; WH #713; WH #377 owner-held; Bannon #78 excluded; GRE #84 guard-queued. OPEN OWNER CALLS: CJ #270 leave-merged vs revert; _1096-exec keep/PR/drop; WH #1544 lane to mark ready for review.
 - Queue counts: WH 27 + CJ 0 + GRE 1 + Bannon 5 = 33 open; tracked ME 18 + Crystal 22 + Diamond 15; blocked (>72h) = 15 carried.
+
+## Overnight pipeline 2026-11-07T22:14Z (30-min run)
+Overnight pipeline 2026-11-07T22:14Z (queue delta first: 3 merged BY this run (WH #1639, Diamond #363, Diamond #223); 2 verified landed by other lanes (WH #1640, CD2 #5); 0 false claims; 0 stale resumed; queue: WH 26 + CJ 0 + GRE 1 + Bannon 5 = 32 open (game repos) + ME 18 + Crystal 22 + Diamond 13 tracked; blocked (>72h) = 15 carried)
+- IDLE: last user msg 2026-11-07T21:42:25Z (~32 min idle at run start); no lock file; lock created, deleted at run end.
+- LANDED-VERIFIED (merged BY this run): WH #1639 (merge 3334ebf, 24/24 blobs); Diamond #363 (merge 33b04e3, 1/1); Diamond #223 (merge 8630a8e, 2/2). (Lane-merged, verified by this run): WH #1640 Deathfang facing (merge 45fa411, 1/1); CD2 #5 Step-1 GLBs (merge 0e0ffb0, 37/37).
+- NOT MERGED: WH #713 game-unit-tests FAIL (same Oct 22 run 40955196304); #1600 + 11 conflicting; drafts MERGEABLE CLEAN never merged as drafts (#1544 still draft); #377 owner-held; GRE #84 check-runs 403 + UNSTABLE, standing call; Bannon 5 unchanged (#78 draft owner-held).
+- VERIFY SWEEP (16 checks, 0 false): 5 payloads blob-verified; 9 repo tips fresh; Megami vcolor fix doc still 404 on WH main; _1096-exec unchanged (HEAD e2ae4143, 4,757 paths).
+- CHECKPOINTS: 0 running, 0 stale; 2 zero-byte pre-existing unparseable. CANON-SYNC: CD2 Step 1 verified on main but VERTICAL-SLICE.md still unchecked on main - pending canon-sync carried for CD2 lane (live, do not touch); MEMORY.md changed mid-run (Step 1 completion), not edited.
+- STEP 5: failure-alerts.log nothing new; ffmpeg kiko proof render in flight, untouched; disk 79% (118G/150G, 32G free).
+- STEP 6/7/8: no new thread/pulls - live lanes own the work; stand down per CHECK-BEFORE-START.
+- BLOCKED >72h (carried, unchanged): WH conflicting 12; WH #713; WH #377 owner-held; Bannon #78 excluded; GRE #84 guard-queued. CARRIED: row-48 stamp; non-upright-start incl. t3_crouch; live-opponent proof videos owed (Megami flag NOT closed); Jun bank rows owed; bank-row import adjudication; TorBox key dead; OWNER RULING #8; quantum-jam decisions; live Worker deploy STILL PENDING (Cloudflare password route DEAD - real routes: Google sign-in retry with 2-Step, or B2 secrets via secure form; B2 cap 100% again 2026-11-07 14:10 UTC). OPEN OWNER CALLS: CJ #270 leave-merged vs revert; _1096-exec keep/PR/drop; WH #1544 lane to mark ready.
+- Queue counts: WH 26 + CJ 0 + GRE 1 + Bannon 5 = 32 open; tracked ME 18 + Crystal 22 + Diamond 13; blocked (>72h) = 15 carried.
