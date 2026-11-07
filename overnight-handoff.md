@@ -7559,3 +7559,8 @@ Overnight pipeline 2026-11-05T01:14Z (queue delta first: 1 game PR MERGED BY thi
 - CHECKPOINTS: 1,230 scanned, 0 stale, 0 running. CANON-SYNC: nothing new. FAILURE-ALERTS: nothing new. Disk 77%.
 - In-flight: Megami Blender pose render (_cj_v5_work), another lane's du scan, SCVI store_chunks.sh (guardian-relaunched) — all untouched.
 - OPEN OWNER CALLS: CJ #270 leave-merged vs revert. CARRIED: row-48 stamp; non-upright-start incl. t3_crouch; live-opponent proof videos owed (Megami flag NOT closed, fix lane running); Jun bank rows.pack.json/hit_frames.json owed; bank-row import adjudication; TorBox key dead; OWNER RULING #8 (Star moveset re-key?); quantum-jam decisions; live Worker deploy STILL PENDING (Cloudflare password stale — owner refresh via Secure Vault).
+
+## Overnight pipeline — 2026-11-07T08:14Z ADDENDUM
+- WH #1630 LANDED-VERIFIED BY THIS RUN (lane-merged 08:25:58Z, merge 5e39de61; 6/6 blobs MATCH, 63 files, 0 removed). WH tip now 5e39de61. The entry above saying "#1630 not merged" is superseded.
+- AO #595 queue sync merged by this run (463f6d1d, guard + instruction-gate PASS first try); payload 2/2 blob-identical on main.
+- Landed_verified total this run: 2 (AO #595 sync + WH #1630). Queue now WH 26 + CJ 0 + GRE 1 + Bannon 5 = 32 open.
