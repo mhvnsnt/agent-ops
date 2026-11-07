@@ -7513,3 +7513,11 @@ Overnight pipeline 2026-11-05T01:14Z (queue delta first: 1 game PR MERGED BY thi
 - BLOCKED >72h: WH conflicting set (11 PRs above); WH #713 (game-unit-tests); WH #377 owner-held evidence; CJ #270 (owner 2D-direction decision); Bannon #78 excluded/owner-held; GRE #79/#80 guard-gated. CARRIED: Jun bank t3_crouch gate-skipped + rows.pack.json/hit_frames.json owed for roger+jun banks; Megami/Menajerii source blends missing (recovery lane, per #1567 report).
 - Queue counts: WH 24 + CJ 1 + GRE 2 + Bannon 5 = 32 open; blocked (>72h) = 14.
 
+
+## Overnight pipeline — 2026-11-07T05:36Z (30-min run)
+- Queue delta: 0 merged BY this run; 0 verified landed by other lanes (all repo tips unchanged since 04:44Z); 0 false claims; 0 stale resumed; queue_open=32 (WH 26 + CJ 0 + GRE 1 + Bannon 5) + ME 18 + Crystal 22 + Diamond 15 tracked; queue_blocked=15.
+- NOT MERGED: WH #1600 (CONFLICTING + menu-touch-e2e FAIL, fresh check) + #713 (game-unit-tests FAIL, fresh check); GRE #84 + Bannon #22 check-runs 403, green unverifiable — standing call; drafts never merged; #377 owner-held.
+- VERIFY SWEEP: 7 checks, 0 false (tips unchanged; pose-fix release 16 assets; Crystal 22 / Diamond 15 / ME 18 re-checked).
+- CHECKPOINTS: 1,230 scanned, 0 stale, 0 running. CANON-SYNC: nothing new. FAILURE-ALERTS: nothing new. Disk 77%.
+- In-flight: none observed (no ffmpeg/blender/curl processes) — prior SCVI curls gone, lane-owned, no intervention.
+- OPEN OWNER CALLS: CJ #270 leave-merged vs revert. CARRIED: row-48 stamp; non-upright-start incl. t3_crouch; live-opponent proof videos owed (Megami flag NOT closed); Jun bank rows.pack.json/hit_frames.json owed; bank-row import adjudication; TorBox key dead; OWNER RULING #8 (Star moveset re-key?); quantum-jam decisions; B2 overflow now served via GitHub Releases + Worker (WH #1623).
