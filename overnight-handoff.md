@@ -7587,3 +7587,13 @@ Overnight pipeline 2026-11-07T09:14Z (queue delta first: 0 merged BY this run; 3
 - STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down per CHECK-BEFORE-START.
 - BLOCKED >72h (carried): WH conflicting set; WH #713; WH #377 owner-held; Bannon #78 excluded; GRE #84 guard-queued. OPEN OWNER CALLS: CJ #270 leave-merged vs revert.
 - Queue counts: WH 27 + CJ 0 + GRE 1 + Bannon 5 = 33 open; tracked ME 18 + Crystal 22 + Diamond 15; blocked (>72h) = 15 carried.
+## Overnight pipeline 2026-11-07T09:44Z (30-min run)
+- Queue delta first: 0 merged BY this run; 1 verified landed by another lane (WH #1634, payload blob-verified on main BY THIS RUN); 1 NEW queue item (WH #1635 Fill 3 batch 9, checks pending, NOT merged); 0 false claims reopened; 0 stale checkpoints resumed; queue: WH 27 + CJ 0 + GRE 1 + Bannon 5 = 33 open; blocked (>72h) = 15 carried.
+- LANDED-VERIFIED: WH #1634 Fill 3 batch 8 (michelle, miguel, miharu, nina_ttt2, ogre_ttt2) — lane-merged 09:29:30Z, merge 26e88f67; 74 files, 0 removed; 6/6 blobs MATCH branch-head vs main. WH tip now 26e88f67.
+- NEW QUEUE ITEM: WH #1635 Fill 3 batch 9 (p-jack, panda, paul_ttt2, raven_ttt2, sebastian, slimbob, steve_fox) — created 09:44:11Z, head 400ec9bc, 100 files, 9/14 checks pass, 5 pending; lane merges when green.
+- VERIFY-DONE SWEEP (11 checks, 0 false): tips — WH 26e88f67 (new), GRE 1960badf, CJ 26b410e8, Bannon bca19c49, CD a7972ee1, wrestling e1702afd, AO 97a57352 (all others unchanged); pose-fix release 16 assets; SCVI releases 62 (WH) / 63 (GRE) assets, in-flight; Megami vcolor fix doc still 404 on WH main.
+- CHECKPOINTS: 1,230 scanned, 0 running, 0 stale; 2 unparseable zero-byte pre-existing.
+- CANON-SYNC: nothing new. STEP 5: failure-alerts.log nothing new; disk 76%; in-flight weight-bleed curl + du scan left alone.
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work.
+- BLOCKED >72h (carried): WH conflicting set; WH #713; WH #377 owner-held; Bannon #78 excluded; GRE #84 guard-queued. OPEN OWNER CALLS: CJ #270 leave-merged vs revert.
+- Queue counts: WH 27 + CJ 0 + GRE 1 + Bannon 5 = 33 open; tracked ME 18 + Crystal 22 + Diamond 15; blocked (>72h) = 15 carried.
