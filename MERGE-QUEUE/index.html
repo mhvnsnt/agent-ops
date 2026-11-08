@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-08t1914z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-08t1944z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -859,6 +859,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-08t1944z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-08T19:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-08t1914z-30-min-run" class="md-nav__link">
@@ -3104,6 +3115,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-08t1944z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-08T19:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-08t1914z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3434,6 +3456,20 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-08t1944z-30-min-run">Overnight pipeline 2026-11-08T19:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-08t1944z-30-min-run" title="Permanent link">&para;</a></h2>
+<p>Overnight pipeline 2026-11-08T19:44Z (queue delta first: 0 merged by this run; 1 PR FIXED by this run (WH #1665, stale T5 blob pin 46→48 — checks pending, mergeable by next run if green); 0 false claims reopened; 0 stale checkpoints resumed; 0 new PRs opened in-window; WH 27 open (unchanged); queue sync AO #658 this run; queue: WH 27 + CJ 0 + GRE 1 + Bannon 5 = 33 open (game repos) + ME 18 + Crystal 22 + Diamond 12 tracked; blocked (&gt;72h) = 15 carried)
+- IDLE: last user msg 2026-11-08T05:41:50Z (~843 min idle at run start); no lock file; lock created OK this run (disk 80%, 118G/150G, 31G free); lock to delete at run end.
+- FIXED BY THIS RUN (not merged — 3 slow checks pending, next run merges if green): WH #1665 "DW follow-ups: kit-pack move mappings + Warden kind binding + throw re-check probe + audio blockers" — game-unit-tests failed on a stale exact-count pin in test/wwe-tekken-audit.test.mjs:30 (expected 46, actual 47). Root cause: #1665's branch (base d2de46f, 46 blobs) added teardown/tekken5/DW-AUDIO-WIRING-NOTE.md (47th blob on the branch) while #1659 landed dw_trigger_search.py on main (47th blob on main) — merged count is 48, and a naive 47-pin would have conflicted with main's 47-pin on the same line. Fix applied to the branch: (1) update-branch merged main 76d1113 into dw-followups (merge 37288eb, parents [bcf880c, 76d1113]); (2) commit fb35a01f bumped the pin 47→48 + handoff doc 47→48 (docs/handoffs/WWE-TEKKEN-AUDIT-2026-11-02.md, #1665 update block). Verified on the branch by this run: teardown/tekken5/ recursive blob count 48, test expects 48. CI on the fixed branch: 11/14 pass (game-unit-tests PASS 1m31s, material-gate PASS, instruction-gate PASS, all guards PASS); budgets / menu-touch-e2e / speed-quality pending at run end. Lane quiet ~35 min before the fix (last lane push 19:25:50Z); fix is mechanical, branch-only, no force-push, merge-commit-safe.
+- WH #1662: still game-unit-tests FAIL only — portraits test: rin/sha/retsu rendered from wrong donor models (steve-fox/pantera vs rin-body/sha-body/retsu-body); lane-owned content work (re-render portraits), NOT touched. Flag: its branch test still pins 46; after it merges main (47) the pin must go to 48 or it fails the same way #1665 did — noted here for the lane.
+- WH #1600 still CONFLICTING/DIRTY, head d55c088 unchanged. Drafts unchanged (never merged as drafts); #377 owner-held evidence; #1090 HELD FOR APPROVAL — DO NOT MERGE. GRE #84 head caeddb0 unchanged (checks 403 via this token, green unverifiable, NOT merged). Bannon 5 unchanged (#22 head = repo tip; #78 owner-held). CJ/CD/CD2/wrestling/AO 0 open. Diamond fresh-start tip moved 1b1af68 → 3391966 (lane landing since 19:14Z); Crystal 3546e81 / ME 0adaced unchanged.
+- VERIFY-DONE SWEEP (7 checks, 0 false): WH #1657/#1656/#1653/#1647/#1517 all closed merged=true (merges 9081612/63cedd0/7770466/14a5020/4355ab0); GRE teardown/WIRING.md on main size 9264 sha 173dae2 (matches prior spot); #1665 fix commit fb35a01 verified on branch (test pin 48, count 48). Tips verified fresh — WH 76d1113 / GRE e9ffb91 / CJ 1f0d627 / Bannon bca19c4 / CD 5280d74 / wrestling e1702af / AO 8e191f2 (was db4fdb4 — #657 queue-sync merge 8e191f2 landed 19:34:35Z, 2 commits ahead of db4fdb4) / CD2 8ae215f / Crystal 3546e81 / Diamond 3391966 (fresh-start, moved) / ME 0adaced.
+- CHECKPOINTS: manual scan (checkpoint_audit.py still missing, tools/ archived 2026-10-31): 0 running, 0 watchdog+running+&gt;60m stale; 2 unparseable zero-byte pre-existing (ttt2-resume-100.json, wdstage-bgk0bdaj.json).
+- CANON-SYNC: nothing new to commit (MEMORY.md mtime 2026-11-08 09:37 CST, unchanged since 19:14Z check; daily-note additions since then are ops ticks only). No personal/legal/family/financial material committed anywhere.
+- STEP 5: failure-alerts.log nothing new (last entry 2026-10-20). Disk 80% (118G/150G, 31G free), below 85% threshold. No in-progress media processes touched (safety rule 1).
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work (WH #1662/#1665 lanes, CD2 Step 2, CJ v6 render). Stand down per CHECK-BEFORE-START. tools/research.py + pull-to-repo.sh still absent (tools/ archived).
+- BLOCKED &gt;72h (carried set, 15, unchanged): WH conflicting 11 (#1073, #1072, #1057, #970, #911, #908, #875, #826, #714, #706, #1600 — #1600 Wave 3 item 3, pending B2 bucket sync); WH #713 (game-unit-tests fail + conflicting); WH #377 owner-held evidence; Bannon #78 excluded/owner-held; GRE #84 guard-queued (checks unreadable). CARRIED: row-48 stamp; non-upright-start incl. t3_crouch; live-opponent proof videos owed (Megami flag NOT closed, fix lane running); Jun bank rows.pack.json/hit_frames.json owed; bank-row import adjudication; TorBox key dead; OWNER RULING #8 (Star moveset re-key?); quantum-jam decisions; live Worker deploy STILL PENDING (Cloudflare password route DEAD - real routes: retry Google sign-in with 2-Step approval, or B2_KEY_ID/B2_APP_KEY via secure form; B2 cap at 100% again 2026-11-07 14:10 UTC). OPEN OWNER CALLS: CJ #270 leave-merged vs revert; _1096-exec 2.2G uncommitted work: keep / PR / drop?; WH #1544 lane to mark ready for review; Kiko v4 approve vs paint-removal (proof link expires Mon 2026-11-09 ~5:51 PM CT).
+- Queue counts: WH 27 + CJ 0 + GRE 1 + Bannon 5 = 33 open (game repos); tracked ME 18 + Crystal 22 + Diamond 12; blocked (&gt;72h) = 15 carried.
+- Queue sync: AO #658 this run (branch merge-queue-sync-20261108-1944); merge + payload verify follow in this run's close-out (daily log) and next run's entry.</p>
 <h2 id="overnight-pipeline-2026-11-08t1914z-30-min-run">Overnight pipeline 2026-11-08T19:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-08t1914z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-08T19:14Z (queue delta first: 2 merged BY this run (WH #1659, 11/11 files + 3/3 blobs MATCH on main; WH #1664, 1/1 blob MATCH); 3 verified landed by other lanes (WH #1660/#1661/#1663, 1 spot blob each MATCH); 0 false claims reopened; 0 stale checkpoints resumed; 2 NEW WH PRs opened in-window (#1664/#1665); WH 27 open (was 30, +2 -5); queue sync AO #PENDING this run; queue: WH 27 + CJ 0 + GRE 1 + Bannon 5 = 33 open (game repos) + ME 18 + Crystal 22 + Diamond 12 tracked; blocked (&gt;72h) = 15 carried)
 - IDLE: last user msg 2026-11-08T05:41:50Z (~813 min idle at run start); no lock file; lock created OK this run (disk 80%, 118G/150G, 31G free); lock to delete at run end.
