@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-08t1444z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-08t1514z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -859,6 +859,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-08t1514z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-08T15:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-08t1444z-30-min-run" class="md-nav__link">
@@ -3005,6 +3016,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-08t1514z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-08T15:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-08t1444z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3236,6 +3258,20 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-08t1514z-30-min-run">Overnight pipeline 2026-11-08T15:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-08t1514z-30-min-run" title="Permanent link">&para;</a></h2>
+<p>Overnight pipeline 2026-11-08T15:14Z (queue delta first: 0 merged BY this run; 2 verified landed by other lanes (WH #1657 19/19 blobs, Diamond #393 2/2); 0 false claims reopened; 0 stale checkpoints resumed; 0 NEW queue items; WH #1654/#1656 closed to dw-decode, payloads ride #1657; WH 32 open (unchanged net: #1657 opened+merged in-window); #1645 flipped MERGEABLE BLOCKED -&gt; CONFLICTING (main moved under it via #1657); queue sync AO #PENDING this run; queue: WH 32 + CJ 0 + GRE 1 + Bannon 5 = 38 open (game repos) + ME 0 + Crystal 22 + Diamond 13 tracked; blocked (&gt;72h) = 15 carried)
+- IDLE: last user msg 2026-11-08T05:41:50Z (~573 min idle at run start); no lock file; lock created OK this run (disk 80%, 119G/150G, 31G free); lock to delete at run end.
+- LANDED-VERIFIED (lane-merged, verified on main by this run, NOT merged by this run): WH #1657 "DW retarget rollout — carry the 144-clip rollout onto main" — merge 9081612 (parents [6d5e125 (#1655 merge), 427f8e1 (dw-decode head)]), merged 15:04:50Z; 19/19 blobs MATCH branch-head vs main (5 new DW move packs incl. moves.drowned-ogre/unmasked/warden/wave-echo.pack.json + pantera pack rewritten df40a705; deletions audited — pantera -36,738 lines is the pack rewrite inside the same file, DW-BAKE-LOG -2, dw-retarget.test -12, dw_roundtrip.py -24, dw_curve_bake.py -44, all within-file rewrites of files the PR expands). #1654 (merge 0f7f8a5, 13:33:26Z) + #1656 (merge 63cedd0, 14:44:20Z) both merged to dw-decode, NOT main; both are ancestors of main via #1657 (0/39 and 0/9 behind). WH tip now 9081612. Diamond #393 "gap-fill S14 slice 293: garden outing bundle + edge-discoveries reading" — merge 8bf1643 (parents [29eb2ca (#392 merge), c81c24b (branch head)]), merged 14:55:00Z; 2/2 blobs MATCH (src/lib/s14slice293.ts e60fdfdb, .test.ts b2cd9a49). Diamond tip now 8bf1643.
+- WH 32 open (unchanged net). #1645 flipped to CONFLICTING (head unchanged 67421f2 — main moved under it via #1657); checks: instruction-gate FAIL + ui-sources FAIL. #1649/#1650 still CONFLICTING (heads unchanged ba56303 / 9d90c88), instruction-gate FAIL only. #1643/#1646/#1648 heads unchanged (b391147 / 66cf0d2 / f537e17), instruction-gate FAIL carried; #1643 additionally fails game-unit-tests + material-gate (re-checked this run). Drafts MERGEABLE CLEAN unchanged (#1596/#1566/#1547/#1546/#1544/#863, never merged as drafts); #377 owner-held evidence; #182 draft UNKNOWN. GRE #84 head caeddb0 unchanged (checks 403 via this token, green unverifiable, NOT merged). Bannon 5 unchanged; #22 head = repo tip; #78 draft owner-held. CJ/CD/CD2/wrestling/AO 0 open. Diamond 13 / Crystal 22 open, unchanged; ME 0 open, master tip 258f769 unchanged.
+- VERIFY-DONE SWEEP (7 checks, 0 false): WH #1657 19/19 + Diamond #393 2/2 (above); AO #648 payload re-verified 2/2 (MERGE-QUEUE.md 90a0d55d, overnight-handoff.md 7be76ffd on main 8d4cc3f); CJ #389 spot (memory-backup/MEMORY.md e7a4a1d0); CD2 #8 spot (docs/VERTICAL-SLICE.md 5bded96e); GRE #95 spot (teardown/WIRING.md 173dae25); WH #1653 spot (game/data/heartmind-dw-teardown.json f9d03794 on main 9081612, untouched by #1657). Tips verified fresh — WH 9081612 / GRE e9ffb91 / CJ 1f0d627 / Bannon bca19c4 / CD 5280d74 / wrestling e1702af / AO 8d4cc3f / CD2 8ae215f / Diamond 8bf1643 / Crystal 3546e81 / ME 258f769 (master).
+- CHECKPOINTS: 1,230 scanned (direct python; checkpoint_audit.py still absent, tools/ archived 2026-10-31): 0 running, 0 watchdog+running+&gt;60m stale; 2 unparseable zero-byte pre-existing (ttt2-resume-100.json, wdstage-bgk0bdaj.json).
+- CANON-SYNC: nothing new to commit (MEMORY.md tail unchanged — EDQUOT Relief Clear #3 ops entry, mtime 2026-11-08 08:40 CST; daily-note additions since 14:44Z are ops ticks only — lane-autostart 09:18 CST; WH #1648 is the canon lane's own PR). No personal/legal/family/financial material committed anywhere.
+- STEP 5: failure-alerts.log nothing new (last entry 2026-10-20). Disk 80% (119G/150G, 31G free), below 85% threshold. In-flight at check (lane-owned, untouched per safety rule 1): CJ v6 Blender render RUNNING (frames 841-864, progressing from 793-816) + top-10 pull-back curl (absolum part-020 slice).
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work (DW retarget lane just landed #1657, CJ v6 render, absolum pull). Stand down per CHECK-BEFORE-START. tools/research.py + pull-to-repo.sh still absent (tools/ archived).
+- BLOCKED &gt;72h (carried set, 15, unchanged in count): WH conflicting 11 (#1073, #1072, #1057, #970, #911, #908, #875, #826, #714, #706, #1600) + #1649/#1650 conflicting; WH #713 (game-unit-tests fail + conflicting); WH #377 owner-held evidence; Bannon #78 excluded/owner-held; GRE #84 guard-queued (checks unreadable). SET NOTES this run: #1645 newly CONFLICTING (main moved under it via #1657) — opened recently, NOT &gt;72h, so the &gt;72h count stays 15; #1642 confirmed CONFLICTING (head c4480de) — it was in the conflicting set in earlier runs, omitted from the 14:44Z summary's 11-list. CARRIED: row-48 stamp; non-upright-start incl. t3_crouch; live-opponent proof videos owed (Megami flag NOT closed, fix lane running); Jun bank rows.pack.json/hit_frames.json owed; bank-row import adjudication; TorBox key dead; OWNER RULING #8 (Star moveset re-key?); quantum-jam decisions; live Worker deploy STILL PENDING (Cloudflare password route DEAD - real routes: retry Google sign-in with 2-Step approval, or B2_KEY_ID/B2_APP_KEY via secure form; B2 cap at 100% again 2026-11-07 14:10 UTC). OPEN OWNER CALLS: CJ #270 leave-merged vs revert; _1096-exec 2.2G uncommitted work: keep / PR / drop?; WH #1544 lane to mark ready for review; Kiko v4 approve vs paint-removal (proof link expires Mon 2026-11-09 ~5:51 PM CT).
+- Queue counts: WH 32 + CJ 0 + GRE 1 + Bannon 5 = 38 open (game repos); tracked ME 0 + Crystal 22 + Diamond 13; blocked (&gt;72h) = 15 carried.
+- Queue sync: AO #PENDING this run (branch merge-queue-sync-20261108-1514; PR to open, merge when green, payload verify follows).
+Overnight pipeline 2026-11-08T14:44Z ADDENDUM: this run's queue sync AO #648 merged by this run (mergeCommit 8d4cc3f7; parents [297a3ae5 (#647 merge), b8a35ad9 (branch head)]), payload 2/2 blob-identical on main (MERGE-QUEUE.md 90a0d55d, overnight-handoff.md 7be76ffd) — verified by this run; guard + instruction-gate PASS first body. 0 game PRs merged BY this run + 0 verified landed by another lane + 1 sync (AO #648) = 1 landed_verified total this run.</p>
 <h2 id="overnight-pipeline-2026-11-08t1444z-30-min-run">Overnight pipeline 2026-11-08T14:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-08t1444z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-08T14:44Z (queue delta first: 0 merged BY this run; 0 verified landed by another lane (AO #647 + WH #1655 already counted by the 14:14Z run); 0 false claims reopened; 0 stale checkpoints resumed; 0 NEW queue items; WH 32 open (unchanged); queue sync AO #PENDING this run; queue: WH 32 + CJ 0 + GRE 1 + Bannon 5 = 38 open (game repos) + ME 0 + Crystal 22 + Diamond 13 tracked; blocked (&gt;72h) = 15 carried)
 - IDLE: last user msg 2026-11-08T05:41:50Z (~543 min idle at run start); no lock file; lock created OK this run (prior run's EDQUOT on new-file creation did NOT reproduce — lock touch worked, disk 80%, 118G/150G, 31G free); lock to delete at run end.
