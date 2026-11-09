@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-09t1314z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-09t1344z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -859,6 +859,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-09t1344z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-09T13:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-09t1314z-30-min-run" class="md-nav__link">
@@ -3324,6 +3335,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-09t1344z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-09T13:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-09t1314z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3874,6 +3896,21 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-09t1344z-30-min-run">Overnight pipeline 2026-11-09T13:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-09t1344z-30-min-run" title="Permanent link">&para;</a></h2>
+<p>Overnight pipeline 2026-11-09T13:44Z (queue delta first: 0 merged BY this run; 6 verified landed by lanes (WH #1689/#1690/#1692/#1693/#1694/#1695, tip 82b233e -&gt; de2aff4, 7/7 payload spots MATCH); CJ #393 memory-backup-sync landed (merge d3cf144); AO #670 fills the 09:44Z entry's "AO #<strong><em>" placeholder; 0 false claims reopened (verify sweep 10 checks, 0 false); 0 stale checkpoints resumed; WH 28 open (unchanged since 13:14Z); queue: WH 28 + CJ 0 + GRE 1 + Bannon 5 = 34 open (game repos) + ME 18 + Crystal 22 + Diamond 12 + PP 12 tracked (not re-checked this run); blocked (&gt;72h) = 15 carried)
+- IDLE: last user msg 2026-11-09T05:56:54Z (~468 min idle at run start); no lock file; lock created OK this run (disk 79%, 116G/150G, 33G free); lock to delete at run end.
+- STEP 1 (fresh gh sweep): WH 28 open - #1691 NEW CLEAN MERGEABLE, 14/14 checks PASS, +295/-1, 2 files, NOT merged by this run (canon PR, parent lands per #1648/#1649 precedent + MEMORY.md canon sequence "#1691 follows after #1680"); #1680 CLEAN MERGEABLE, 14/14 PASS, +245/-1, NOT merged (parent lands; MEMORY.md says awaiting re-sync before landing); #1678 MERGEABLE BLOCKED - PROOF do-not-merge, lane-owned; 12 non-draft DIRTY/CONFLICTING carried (#1600, #1073, #1072, #1057, #970, #911, #908, #875, #826, #714, #713, #706); drafts never merged (#1596/#1569/#1566/#1547/#1546/#1544 CLEAN+MERGEABLE but DRAFT/#1527/#1526/#1525/#863/#182); #1090 HELD FOR APPROVAL - DO NOT MERGE; #377 owner-held evidence. GRE #84 UNSTABLE head caeddb0 unchanged (checks 403 via this token, green unverifiable, NOT merged). Bannon 5 unchanged (#22 UNSTABLE head bca19c4 = tip, checks 403-unreadable, NOT merged; #78 draft owner-held; #45/#44/#43 drafts). CJ 0 open, tip moved 7a1d63c -&gt; d3cf144 (merge PR #393 memory-backup-sync). CD/CD2/wrestling/AO 0 open. Crystal 22 / Diamond 12 / ME 18 / PP 12 tracked, not re-checked this run.
+- LANDED-VERIFIED (lane-merged, verified on main by this run): WH #1689 merge b36e8ab (afro GLB 2bf343a3 MATCH); #1690 merge 3d613b6 (hero-front png 49cf8867 + MEGAMI-HERO-SHOT doc 1c10ce48 MATCH); #1692 merge a369a31 (nightwolf model-rigged.glb a88faf98 MATCH); #1693 merge 91c0a71 (hero-v2fix-front bc0ac8b5 MATCH); #1694 merge de2aff4 = tip (parvati model-rigged.glb d6fd2342 MATCH); #1695 merge 750f8b9 (straight GLB 0c3d67aa MATCH). WH tip now de2aff4. CJ #393 merge d3cf144 (parents [7a1d63c, f47433f]; memory-backup/MEMORY.md blob c07b61f7 == sync commit f47433f file sha). AO #677 merge 687322e = 13:14Z sync (parents [2a2cb20, f30eb00]); AO #670 (merged 09:59:18Z) = 09:44Z sync, fills that entry's placeholder.
+- VERIFY-DONE SWEEP (10 checks, 0 false): 7 WH payload spots above; GRE teardown/WIRING.md 173dae2/9264 MATCH; CD2 docs/VERTICAL-SLICE.md 5bded96/2578 MATCH; AO #677 merge + parents verified. Tips verified fresh - WH de2aff4 / GRE e9ffb91 / CJ d3cf144 / Bannon bca19c4 / CD 5280d74 / wrestling e1702af / AO 687322e / CD2 8ae215f.
+- ALERT — PHYSIQUE LAB LIVE DOWN (new state, 13:49Z): curl to https://physique-lab.pages.dev/ = empty reply x3 (TLS handshake then close; remote_ip fd8b:4f84:7d32:99::1) AND live-browser check = DNS_PROBE_STARTED x2 ("DNS address could not be found", no HTTP status, no site content). Control mochiichao.pages.dev returns 200 from the same shell, so not a general egress failure. Prior runs verified HTTP 200 through 09:44Z — deploy-DONE no longer verifies; the live site is not serving as of 13:49Z. Needs lane/owner: check Cloudflare Pages project state / re-run the direct-upload deploy. (State change since last verified 200, not a lane false-claim reopen.)
+- CHECKPOINTS: direct python scan of 1,230 files (checkpoint_audit.py still absent, tools/ archived): 0 running, 0 watchdog+running+&gt;60m stale; 2 unparseable zero-byte pre-existing (ttt2-resume-100.json, wdstage-bgk0bdaj.json).
+- CANON-SYNC: nothing new to commit by this run - MEMORY.md mtime 06:31 CST (new 2026-11-09 Megami outcomes: afro accepted, straight rejected, hero shot, fidelity lane, owner rulings owed) is already covered by open WH #1691 (canon sequence per MEMORY.md: #1691 follows #1680; parent lands canon PRs). WH canon-archive on main still pre-#1680/#1691. No personal/legal/family/financial material committed anywhere.
+- STEP 5: failure-alerts.log nothing new (last entry 2026-10-20). Disk 79% (116G/150G, 33G free), below 85% threshold. In-flight at check: NONE in ps (no ffmpeg/blender/aria2c/wget/curl) - Megami capture lane, afro fix lane, nw-gpurig watcher not in ps this run (lane-owned either way, untouched). Daily-note 07:43-07:47 CST: M.Engine supervisor healthy (PID 2546, up 1h30m); Nightwolf GPU-rig still quota-parked, watch_run2.sh re-armed PID 56148; CNleaks pull 100% (33.39GB); disk guardian 79% flat; <em>1096-exec uncommitted changes GREW.
+- STEP 6/7/8: no new thread, no new pulls - live lanes own the work (fidelity lane, hair lanes, UAL retarget lane, PP visual/involuntary lanes, Megami capture). Stand down per CHECK-BEFORE-START. tools/research.py + pull-to-repo.sh still absent (tools/ archived).
+- BLOCKED &gt;72h (carried set, 15, unchanged): WH conflicting 12 (#1600, #1073, #1072, #1057, #970, #911, #908, #875, #826, #714, #713, #706); WH #377 owner-held evidence; Bannon #78 excluded/owner-held; GRE #84 guard-queued (checks unreadable). CARRIED: row-48 stamp; non-upright-start incl. t3_crouch; live-opponent proof videos owed (Megami flag NOT closed, fix lane running); Jun bank rows.pack.json/hit_frames.json owed; bank-row import adjudication; TorBox key dead; OWNER RULING #8 (Star moveset re-key?); quantum-jam decisions; live Worker deploy STILL PENDING (Cloudflare password route DEAD - real routes: retry Google sign-in with 2-Step approval, or B2_KEY_ID/B2_APP_KEY via secure form; B2 cap at 100% again 2026-11-07 14:10 UTC). OPEN OWNER CALLS: CJ #270 leave-merged vs revert; <em>1096-exec 2.2G uncommitted work: keep / PR / drop?; WH #1544 lane to mark ready for review; Kiko v4 approve vs paint-removal (proof link expires Mon 2026-11-09 ~5:51 PM CT). NEW STATE: Physique Lab live DOWN (see ALERT above); WH #1691 new canon PR (afro accepted / straight rejected / hero shot / fidelity lane); WH tip de2aff4 (6 lane merges in-window).
+- Queue counts: WH 28 + CJ 0 + GRE 1 + Bannon 5 = 34 open (game repos); tracked ME 18 + Crystal 22 + Diamond 12 + PP 12 (not re-checked this run); blocked (&gt;72h) = 15 carried.
+- Queue sync: AO #</em></em></em> this run (branch merge-queue-sync-20261109-1344); merge + payload verify follow in this run's close-out (daily log) and next run's entry.
+- OPS NOTE (carried, updated): local MERGE-QUEUE.md was BEHIND main this run (local hash 9b46bb23 vs main e1dce81 - main carries syncs #670-#677 since the 09:44Z entry; local tops out at 09:44Z). This run synced via fresh clone from origin/main (clone verified: tip 687322e, MERGE-QUEUE.md e1dce81 == contents API); main worktree files untouched. Main agent-ops worktree (lindy-privacy-policy-20261107 branch) still carries a STALE STAGED index - do NOT commit from that index. This run also fills the 09:44Z entry's "AO #</strong>_" placeholder with #670. LOCAL-ONLY (carried, 19:14Z run): agent-ops clone bulk-modified tracked files (mtime 2026-11-07 13:24 CST) + untracked watchdog-scan files - needs lane review before commit; NOT committed by this run.</p>
 <h2 id="overnight-pipeline-2026-11-09t1314z-30-min-run">Overnight pipeline 2026-11-09T13:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-09t1314z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-09T13:14Z (queue delta first: 0 merged BY this run; 9 verified landed by other parties (WH #1694 Parvati v4 attire1, merge de2aff4, 2/2 blobs MATCH; PP roster-anim burst #116/#117/#118/#119/#120/#121 — #119 1/1, #120 3/3, #121 3/3 blobs MATCH, #116/#117/#118 merges confirmed ancestors of tip; CJ #393 memory-backup-sync, merge d3cf144; AO #676 queue sync, merge 2a2cb20, blob e7be05a MATCH — fills the 12:44Z entry's "AO #<strong><em>" placeholder); 0 false claims reopened (9-check sweep, 0 false); 0 stale checkpoints resumed; WH 28 open (was 29: #1694 merged by lane); queue: WH 28 + CJ 0 + GRE 1 + Bannon 5 = 34 open (game repos) + ME 18 + Crystal 22 + Diamond 12 tracked (not re-checked this run); PP 12 open; blocked (&gt;72h) = 15 carried)
 - IDLE: last user msg 2026-11-09T05:56:54Z (~437 min idle at run start); no lock file; lock created OK this run (disk 78%, 116G/150G, 33G free); lock to delete at run end.
@@ -3984,9 +4021,9 @@
 - CANON-SYNC: nothing new for WH - MEMORY.md mtime touched 03:41 CST (09:41Z) but tail content is the same 2026-11-08 orders already covered by #1680 (open) + lanes #1681-#1688 (merged); WH canon-archive on main still pre-#1680 (CANON-MASTER.md c040e90, 108,473 B; roster/parvati/CANON.md 9adbdae, 4,908 B) because #1680 is unmerged, awaiting parent landing. atlas #14 still OPEN (owner gate, head 56d7f98). No personal/legal/family/financial material committed anywhere.
 - STEP 5: failure-alerts.log nothing new (last entry 2026-10-20). Disk 80% (118G/150G, 31G free), below 85% threshold. In-flight at check (lane-owned, untouched per safety rule 1): Megami capture lane (wrapper PID 1834 + http.server 8977) + nw-gpurig watch_run2.sh PID 45535 (Kaggle quota watcher, quota still maxed per daily note) + du sweep PID 55163 (disk guardian). No Blender process in ps at check (afro fix lane between runs or finished - lane-owned either way).
 - STEP 6/7/8: no new thread, no new pulls - live lanes own the work (Adri animation lane, front-end proof lane, hair fix lane, UAL retarget lane, PP visual/involuntary lanes, Megami capture, afro fix). Stand down per CHECK-BEFORE-START. tools/research.py + pull-to-repo.sh still absent (tools/ archived).
-- BLOCKED &gt;72h (carried set, 15, unchanged): WH conflicting 12 (#1600, #1073, #1072, #1057, #970, #911, #908, #875, #826, #714, #713, #706); WH #377 owner-held evidence; Bannon #78 excluded/owner-held; GRE #84 guard-queued (checks unreadable). CARRIED: row-48 stamp; non-upright-start incl. t3_crouch; live-opponent proof videos owed (Megami flag NOT closed, fix lane running); Jun bank rows.pack.json/hit_frames.json owed; bank-row import adjudication; TorBox key dead; OWNER RULING #8 (Star moveset re-key?); quantum-jam decisions; live Worker deploy STILL PENDING (Cloudflare password route DEAD - real routes: retry Google sign-in with 2-Step approval, or B2_KEY_ID/B2_APP_KEY via secure form; B2 cap at 100% again 2026-11-07 14:10 UTC). OPEN OWNER CALLS: CJ #270 leave-merged vs revert; <em>1096-exec 2.2G uncommitted work: keep / PR / drop?; WH #1544 lane to mark ready for review; Kiko v4 approve vs paint-removal (proof link expires Mon 2026-11-09 ~5:51 PM CT). NEW STATE: Physique Lab live holds (200, 'Physique Lab'); CNleaks pull 100% verified (33.39GB, daily note 03:45 CST); M.Engine supervisor healthy (watchdog exit 0, no restart).
+- BLOCKED &gt;72h (carried set, 15, unchanged): WH conflicting 12 (#1600, #1073, #1072, #1057, #970, #911, #908, #875, #826, #714, #713, #706); WH #377 owner-held evidence; Bannon #78 excluded/owner-held; GRE #84 guard-queued (checks unreadable). CARRIED: row-48 stamp; non-upright-start incl. t3_crouch; live-opponent proof videos owed (Megami flag NOT closed, fix lane running); Jun bank rows.pack.json/hit_frames.json owed; bank-row import adjudication; TorBox key dead; OWNER RULING #8 (Star moveset re-key?); quantum-jam decisions; live Worker deploy STILL PENDING (Cloudflare password route DEAD - real routes: retry Google sign-in with 2-Step approval, or B2_KEY_ID/B2_APP_KEY via secure form; B2 cap at 100% again 2026-11-07 14:10 UTC). OPEN OWNER CALLS: CJ #270 leave-merged vs revert; _1096-exec 2.2G uncommitted work: keep / PR / drop?; WH #1544 lane to mark ready for review; Kiko v4 approve vs paint-removal (proof link expires Mon 2026-11-09 ~5:51 PM CT). NEW STATE: Physique Lab live holds (200, 'Physique Lab'); CNleaks pull 100% verified (33.39GB, daily note 03:45 CST); M.Engine supervisor healthy (watchdog exit 0, no restart).
 - Queue counts: WH 27 + CJ 0 + GRE 1 + Bannon 5 = 33 open (game repos); tracked ME 18 + Crystal 22 + Diamond 12 (not re-checked this run); blocked (&gt;72h) = 15 carried.
-- Queue sync: AO #</em>__ this run (branch merge-queue-sync-20261109-0944); merge + payload verify follow in this run's close-out (daily log) and next run's entry.
+- Queue sync: AO #670 this run (branch merge-queue-sync-20261109-0944, merged 09:59:18Z; placeholder filled by the 13:44Z run); merge + payload verify follow in this run's close-out (daily log) and next run's entry.
 - OPS NOTE (carried): local MERGE-QUEUE.md IS current with main (verified hash 6551e37 this run) - the stale-file warning below applies to overnight-handoff.md only in the MAIN agent-ops worktree, whose local copy tops out at the AO #633 era while main carries entries through 09:14Z. Do NOT commit the handoff from the local worktree or it reverts main. This run synced via fresh clone from origin/main; main worktree files untouched. Main agent-ops worktree (lindy-privacy-policy-20261107 branch) still carries a STALE STAGED index - do NOT commit from that index. LOCAL-ONLY (carried, 19:14Z run): agent-ops clone bulk-modified tracked files (mtime 2026-11-07 13:24 CST) + untracked watchdog-scan files - needs lane review before commit; NOT committed by this run.</p>
 <h2 id="overnight-pipeline-2026-11-09t0914z-30-min-run">Overnight pipeline 2026-11-09T09:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-09t0914z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-09T09:14Z (queue delta first: 0 merged BY this run; 1 verified landed by another party (AO #668 queue sync, merge e868daa, MERGE-QUEUE.md blob 06e86d0 MATCH - fills the 08:45Z entry's "AO #<strong><em>" placeholder); 0 false claims reopened (6-check sweep, 0 false); 0 stale checkpoints resumed; WH 27 open (unchanged); queue: WH 27 + CJ 0 + GRE 1 + Bannon 5 = 33 open (game repos) + ME 18 + Crystal 22 + Diamond 12 tracked (not re-checked this run); blocked (&gt;72h) = 15 carried)
