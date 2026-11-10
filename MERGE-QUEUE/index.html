@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-10t2044z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-10t2114z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -859,6 +859,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-10t2114z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-10T21:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-10t2044z-30-min-run" class="md-nav__link">
@@ -3555,6 +3566,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-10t2114z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-10T21:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-10t2044z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4336,6 +4358,20 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-10t2114z-30-min-run">Overnight pipeline 2026-11-10T21:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-10t2114z-30-min-run" title="Permanent link">&para;</a></h2>
+<p>Overnight pipeline 2026-11-10T21:14Z (queue delta first: 1 merged BY this run (WH #1737 King T7 cancel walk, payload-verified on main); 1 verified landed by another party (AO #697 queue sync, merge 3888b41, queue file heads with 20:44Z entry); 0 false claims reopened (7-check sweep, 0 false); 0 stale checkpoints resumed; WH 34 open (35 at sweep, -#1737 merged); queue: WH 34 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 41 open (game repos); blocked (&gt;72h) = 16 carried)
+- IDLE: last user msg 2026-11-10T18:37:47Z (~157 min idle at run start); no lock file; lock created OK this run (disk 75%, 111G/150G, 39G free); lock to delete at run end.
+- STEP 1 (fresh gh sweep): WH #1737 CLEAN 14/14 checks green, mergeable clean, +463/-67, 17 files (deletions are small in-file rewrites, explained in the body) — MERGED BY THIS RUN 21:18Z, merge f7c4fe7, parents [7535a79, 25c4f06]; PAYLOAD VERIFIED ON MAIN BY THIS RUN: tip f7c4fe7; 5/5 blobs MATCH (t7graph.js 1f79f3b/25,250 B, t7-walker README 3262b8c/4,819 B, t7-graph-adapter test 29b2262/34,595 B, t7-graph-driver.js 3e309a0/9,787 B, t7-flags README 9b962f3/2,809 B). WH #1737 is LANDED-VERIFIED. All other WH PRs unchanged in blocked states (re-checked this run): #1714/#1711/#1709/#1702/#1701/#1710/#1708/#1703/#1678 instruction-gate fail; #1696 gate success but DIRTY (conflicting, parent lands); drafts never merged; #1090 held; #377 owner-held evidence. CD #71 BLOCKED (gate fail only, verbatim Xbox instruction still absent). GRE #84 UNSTABLE head caeddb0 unchanged, checks 403-unreadable, NOT merged. Bannon 5 unchanged (#22 head bca19c4 == tip, checks 403-unreadable, NOT merged; #78 draft owner-held; #45/#44/#43 drafts). CJ/CD2/wrestling 0 open. PP #172/#161 OPEN, parent-gated, NOT merged; PP #173 merged by another party (tip 96ae0f4). AO 0 open; #697 queue sync merged (see LANDED-VERIFIED).
+- LANDED-VERIFIED BY THIS RUN (merged by another party, payload confirmed on main): AO #697 "merge-queue-sync-20261110-2044" — merge 3888b41; MERGE-QUEUE.md blob 624684c/3,284,474 B on main heads with the 20:44Z entry.
+- VERIFY-DONE SWEEP (7 checks, 0 false): WH #1737 merge + 5/5 blobs (above); AO #697 + queue head (above); PP #173 tip 96ae0f4 == merge commit; life-cut mp4 2,799,138 B sha256 c06a4a48… MATCH; CD2 tip 4523ff1 + VERTICAL-SLICE 5bded96/2578 MATCH; GRE tip e9ffb91 + WIRING.md 173dae2/9264 MATCH; CJ tip a40463e == #401 merge. NOTES: keep-working pulse 15:10 CST says WH #1737 "awaiting owner merge gate" — STALE, merged by this run 21:18Z (daily-note text, not edited). Merge-law CI watch 15:12 "ZERO CLEAN" also stale for #1737 (it went green after the watch). Minor: pulse counted "15 checks" for #1737; this run read 14 check-runs, all green — count difference only, merge verified on main.
+- CHECKPOINTS: direct python scan of 1,230 files (checkpoint_audit.py still absent, tools/ archived): 0 running, 0 watchdog+running+&gt;60m stale; 2 unparseable zero-byte pre-existing (wdstage-bgk0bdaj.json, ttt2-resume-100.json). Worker-watchdog 15:10 CST tick agrees: 0 resumable, 0 STUCK.
+- CANON-SYNC: nothing new to commit. MEMORY.md mtime 2026-11-10 14:48:19 CST; tail entries all previously synced (lash v7, Dream Girl, NEXT-MOVES-AUTOMATIC law). NOTE (carried): MEMORY.md tail still says WH #1680 "is still clean and green but unmerged" — STALE, #1680 landed 05:33Z (6792647); memory file not edited by this run (curated, main agent owns it). No personal/legal/family/financial material committed anywhere.
+- STEP 5: failure-alerts.log nothing new (last entry 2026-10-20). Disk 75% (111G/150G, 39G free), below 85% threshold. research.py + pull-to-repo.sh still absent (tools/ archived). In-flight at check (lane-owned, untouched per safety rule 1): gumball mirror curls (part-bn, part-bq), T7 pakchunk0 part-32 curl, afro-refit http server (port 8843). No ffmpeg/Blender render process in ps at check. Afro refit finisher #5 active (checkpoint 15:09); Tammy Phase 2 bootstrap + Kasumi/Melanie deploy lanes active per pulse; TorBox browser task still blocked on Google 2FA SMS code (owner step).
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work. Stand down per CHECK-BEFORE-START.
+- BLOCKED &gt;72h (carried set, unchanged): WH conflicting 13 (#1696 + #1600, #1073, #1072, #1057, #970, #911, #908, #875, #826, #714, #713, #706); WH #377 owner-held evidence; Bannon #78 excluded/owner-held; GRE #84 guard-queued (checks unreadable); CD #71 (verbatim instruction absent). CARRIED: row-48 stamp; non-upright-start incl. t3_crouch; live-opponent proof videos owed (Megami flag NOT closed); Jun bank rows.pack.json/hit_frames.json owed; bank-row import adjudication; TorBox key dead; OWNER RULING #8; quantum-jam decisions; live Worker deploy STILL PENDING; CJ #270 leave-merged vs revert; <em>1096-exec 2.2G uncommitted work: keep / PR / drop?; WH #1544 lane to mark ready; Kiko v4 approve vs paint-removal.
+- Queue counts: WH 34 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 41 open (game repos); blocked (&gt;72h) = 16 carried.
+- Queue sync: AO #</em>__ this run (branch merge-queue-sync-20261110-2114); merge + payload verify follow in this run's close-out (daily log) and next run's entry.
+- OPS NOTE (carried): local MERGE-QUEUE.md / overnight-handoff.md in the main agent-ops worktree are CURRENT through 20:44Z — sync done via fresh clone per practice; main worktree files updated by plain edit only (no git ops in that worktree). LOCAL-ONLY (carried): agent-ops clone bulk-modified tracked files (mtime 2026-11-07 13:24 CST) + untracked watchdog-scan files — needs lane review before commit; NOT committed by this run.</p>
 <h2 id="overnight-pipeline-2026-11-10t2044z-30-min-run">Overnight pipeline 2026-11-10T20:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-10t2044z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-10T20:44Z (queue delta first: 0 merged BY this run; 2 verified landed by another party (PP #173 face-on-body v2 graft, merge 96ae0f4, 11 files, 3 spot-checked on main; PP #171 toolchain re-verified 6/6 on main incl. root AGENTS.md 413e112f); 0 false claims reopened (6-check sweep, 0 false); 0 stale checkpoints resumed; WH #1737 NEW (King T7 cancel walk, +425/-67, 15 files, instruction-gate PASS, 11/14 checks pass, 3 pending: speed-quality, budgets, menu-touch-e2e — merge pending green); queue: WH 35 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 42 open (game repos); blocked (&gt;72h) = 16 carried)
 - IDLE: last user msg 2026-11-10T18:37:47Z (~126 min idle at run start); no lock file; lock created OK this run (disk 76%, 113G/150G, 37G free); lock to delete at run end.
