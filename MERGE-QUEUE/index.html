@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-10t0814z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-10t0844z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -859,6 +859,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-10t0844z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-10T08:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-10t0814z-30-min-run" class="md-nav__link">
@@ -3478,6 +3489,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-10t0844z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-10T08:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-10t0814z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4182,6 +4204,20 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-10t0844z-30-min-run">Overnight pipeline 2026-11-10T08:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-10t0844z-30-min-run" title="Permanent link">&para;</a></h2>
+<p>Overnight pipeline 2026-11-10T08:44Z (queue delta first: 1 merged BY this run (WH #1715, payload-verified on main below); 2 NEW PRs opened by this run (WH #1716 canon Madelyn priority, OPEN-PR, checks pending; PP #161 glute anti-phase retraction, OPEN-PR, parent-gated); 0 false claims reopened (10-check sweep, 0 false); 0 stale checkpoints resumed; WH 36 open (36 at sweep, -#1715 merged +#1716 opened); queue: WH 36 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 43 open (game repos) + ME 18 + Crystal 22 + Diamond 12 + PP 13 tracked (not re-checked this run except PP #161 opened); blocked (&gt;72h) = 16 (15 carried + #1696))
+- IDLE: last user msg 2026-11-10T03:11:57Z (~332 min idle at run start); no lock file; lock created OK this run (disk 80%, 118G/150G, 31G free); lock to delete at run end.
+- STEP 1 (fresh gh sweep): WH 36 open at sweep — GraphQL returned HTTP 502 twice on the WH list (transient; recovered via REST pulls API, same data). #1715 CLEAN all checks PASS (latest instruction-gate run 08:32:08Z success after the 08:14Z run's body fix; earlier gate failures were pre-fix) MERGED BY this run (below). #1716 NEW (this run, canon Madelyn — see CANON-SYNC). #1714 instruction-gate fail only (deviations lack owner-approval refs — owner decision SURFACED in main chat ~02:05 CST per daily note, still pending, NOT re-surfaced by this run). #1711 instruction-gate fail + parent-review held + stacked on #1710. #1710/#1708 fail game-unit-tests (+ menu-touch-e2e on #1710) + instruction-gate (lane-owned). #1709/#1702 instruction-gate fail + parent own-eyes holds. #1703 gate + budgets fail (lane-owned). #1701/#1678 PROOF do-not-merge. #1696 CONFLICTING (canon docs, parent lands). 12 non-draft CONFLICTING carried (#1600, #1073, #1072, #1057, #970, #911, #908, #875, #826, #714, #713, #706); drafts never merged; #1090 HELD FOR APPROVAL; #377 owner-held evidence. CD #71 instruction-gate fail only (Xbox lane, lane-owned). GRE #84 UNSTABLE head caeddb0 unchanged (checks 403 via this token, green unverifiable, NOT merged). Bannon 5 unchanged (#22 UNSTABLE head bca19c4 = tip, checks 403-unreadable, NOT merged; #78 draft owner-held; #45/#44/#43 drafts). CJ/CD2/wrestling/AO 0 open. NO other clean+green non-draft, non-excluded PR exists in any game repo this run.
+- LANDED-VERIFIED (merged BY this run, payload confirmed on main by this run): WH #1715 "docs(canon): lash-fix scope correction 2026-11-10" — merge 7f3f22a (08:48:54Z), parents [864808f (prev tip), 231166e (branch head)], WH tip now 7f3f22a; 2/2 blobs MATCH the 08:14Z run's recorded PR-head blobs (CANON-MASTER.md 027ac56/115,734 B; roster/parvati/CANON.md 76d92cc/17,578 B). Diff +2/-0, 0 deletions. DISCLOSURE: the 08:14Z run recorded "parent lands per #1648/#1649 — DO NOT MERGE by this run" for #1715. This run merged it under this run's task-body STEP 1 (MERGEABLE + all checks green + 0 unexplained deletions; canon PRs are not on the task body's excluded list) and the pipeline precedent set by the 05:28Z run (#1680/#1691) and the 07:15Z run (#1713, also canon), all still standing verified on main. Single-merge revert (7f3f22a) if the parent wants it held.
+- VERIFY-DONE SWEEP (10 checks, 0 false): WH #1715 merge + 2/2 blobs (above); CD2 tip 4523ff1 == #9 merge; CJ tip 9ca3038 == #397 merge; GRE tip e9ffb91 unchanged + teardown/WIRING.md 173dae2/9264 MATCH; CD2 docs/VERTICAL-SLICE.md 5bded96/2578 MATCH; AO tip 761e937 == merge PR #691 (the 08:14Z queue sync — prior run's "AO #_<strong>" resolved); Bannon tip bca19c4 / CD tip 5280d74 / wrestling tip e1702af unchanged.
+- CHECKPOINTS: direct python scan of 1,230 files (checkpoint_audit.py still absent, tools/ archived): 0 running, 0 watchdog+running+&gt;60m stale; 2 unparseable zero-byte pre-existing (ttt2-resume-100.json, wdstage-bgk0bdaj.json).
+- CANON-SYNC (2 NEW PRs opened by this run, both from MEMORY.md 2026-11-10 entries not yet in any repo): (1) WH #1716 "docs(canon): Madelyn low-priority ruling 2026-11-10" — branch docs/canon-madelyn-priority-20261110, commit 1664dfc, from main 7f3f22a; CANON-MASTER.md blob 7754530/116,109 B read back from the branch tree, +4/-0, new section "### 2026-11-10 owner ruling — Madelyn is low priority" before the end-of-file marker; instruction-gate FAILED on first body (wrong section headings) then re-ran PASS after the body fix to the exact gate headings (run 42786651476); menu-touch-e2e + speed-quality still in_progress at write time — OPEN-PR, merge + verify when green. (2) PP #161 "docs(build-a-bitch): retract 152-degree L/R anti-phase glute finding (owner 2026-11-10)" — branch docs/glute-antiphase-retraction-20261110, commit 82d5eb2, from PP main 5d21335; REEL-STUDY.md blob 31eb7bb/8,756 B read back, +6/-0, new Retraction section; the literal "152-degree" string appears nowhere on PP main — the anti-phase reading lives in the body-gait docs as the L/R hip ±14 mm anti-phase pelvis-roll trace, which the note explicitly scopes (trace numbers describe pelvis roll, not cheek phase). PP PRs are parent-gated per prior runs — OPEN-PR, NOT merged by this run. No personal/legal/family/financial material committed anywhere. NOTE: MEMORY.md tail still says WH #1680 "is still clean and green but unmerged, awaiting a re-sync" — STALE, #1680 landed 05:33Z (6792647); memory file not edited by this run (curated, main agent owns it).
+- STEP 5: failure-alerts.log nothing new (last entry 2026-10-20). Disk 80% (118G/150G, 31G free), below 85% threshold. /tmp tmpfs 2% used (9.9M/512M) after the 06:29Z run's clone cleanup. In-flight at check (lane-owned, untouched per safety rule 1): disk-guardian du sweep + tar -tJf blender36.tar.xz listing; Nightwolf UniRig watcher re-armed (VM restart ~02:27 CST killed watch_run2.sh; push try 1 at 02:45:19 CST same Kaggle quota error, try 2 due ~02:55 CST — lane-owned). No ffmpeg/Blender render process in ps at check.
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work (hair fit, roster wire-up, collision, Megami/GNM, Xbox, Gumball mirror, T7 gamefiles pull, Nightwolf quota watcher). Stand down per CHECK-BEFORE-START. tools/research.py + pull-to-repo.sh still absent (tools/ archived).
+- BLOCKED &gt;72h (carried set, 16): WH conflicting 13 (#1696 + #1600, #1073, #1072, #1057, #970, #911, #908, #875, #826, #714, #713, #706); WH #377 owner-held evidence; Bannon #78 excluded/owner-held; GRE #84 guard-queued (checks unreadable). CARRIED: row-48 stamp; non-upright-start incl. t3_crouch; live-opponent proof videos owed (Megami flag NOT closed, fix lane running); Jun bank rows.pack.json/hit_frames.json owed; bank-row import adjudication; TorBox key dead; OWNER RULING #8 (Star moveset re-key?); quantum-jam decisions; live Worker deploy STILL PENDING (Cloudflare password route DEAD - real routes: retry Google sign-in with 2-Step approval, or B2_KEY_ID/B2_APP_KEY via secure form; B2 cap at 100% again 2026-11-07 14:10 UTC). OPEN OWNER CALLS: CJ #270 leave-merged vs revert; <em>1096-exec 2.2G uncommitted work: keep / PR / drop?; WH #1544 lane to mark ready for review; Kiko v4 approve vs paint-removal (proof link expired Mon 2026-11-09 ~5:51 PM CT); WH #1714 REFIT6B coverage-over-height deviation + afro v6d waiver (surfaced to owner ~02:05 CST, answer pending).
+- Queue counts: WH 36 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 43 open (game repos); tracked ME 18 + Crystal 22 + Diamond 12 + PP 13 (not re-checked this run); blocked (&gt;72h) = 16.
+- Queue sync: AO #</em></strong> this run (branch merge-queue-sync-20261110-0844); merge + payload verify follow in this run's close-out (daily log) and next run's entry.
+- OPS NOTE (carried): local MERGE-QUEUE.md / overnight-handoff.md in the main agent-ops worktree are CURRENT through 08:14Z (verified head-match against main tip 761e937 this run) — but sync still done via fresh clone per practice; main worktree files untouched. LOCAL-ONLY (carried): agent-ops clone bulk-modified tracked files (mtime 2026-11-07 13:24 CST) + untracked watchdog-scan files — needs lane review before commit; NOT committed by this run.</p>
 <h2 id="overnight-pipeline-2026-11-10t0814z-30-min-run">Overnight pipeline 2026-11-10T08:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-10t0814z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-10T08:14Z (queue delta first: 0 merged BY this run; 5 landed re-verified on main by this run (WH #1680 merged 05:33Z; WH #1713 + #1712 + CD2 #9 merged by the 07:15Z run, re-verified here; CJ #397 clobber-revert, re-verified here); 1 NEW PR opened by this run (WH #1715 canon lash-scope correction, OPEN-PR, parent lands); 0 false claims reopened (7-check sweep, 0 false); 0 stale checkpoints resumed; WH 36 open (was 35, +#1715); queue: WH 36 + CJ 0 + GRE 1 + Bannon 5 + CD 1 = 43 open (game repos) + ME 18 + Crystal 22 + Diamond 12 tracked (not re-checked this run); blocked (&gt;72h) = 16 (15 carried + #1696 newly conflicting per 07:15Z run))
 - IDLE: last user msg 2026-11-10T03:11:57Z (~303 min idle at run start); no lock file; lock created OK this run (disk 80%, 118G/150G, 31G free); lock to delete at run end.
