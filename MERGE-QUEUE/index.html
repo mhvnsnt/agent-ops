@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-10t2145z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-11t0114z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -859,6 +859,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-11t0114z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-11T01:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-10t2145z-30-min-run" class="md-nav__link">
@@ -3577,6 +3588,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-11t0114z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-11T01:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-10t2145z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4380,6 +4402,21 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-11t0114z-30-min-run">Overnight pipeline 2026-11-11T01:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-11t0114z-30-min-run" title="Permanent link">&para;</a></h2>
+<p>Overnight pipeline 2026-11-11T01:14Z (queue delta first: 0 merged BY this run; 5 verified landed by other parties (PP #174, #175, #176, #177, #178 — merge commits verified ancestors of PP tip 2bb03be by this run); PP #172 CLOSED unmerged (life-cut film PR, superseded by life-cut-v2 fix lane); 0 false claims reopened (11-check sweep, 0 false); 0 stale checkpoints resumed; WH 33 open (unchanged); queue: WH 33 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 40 open (game repos); blocked (&gt;72h) = 16 carried)
+- DISK QUOTA BLOCKER (NEW, this run): local writes to /home/hatch FAIL with "Disk quota exceeded" (touch/append both fail) even though df shows 30G free — btrfs qgroup/subvolume quota hit at ~119-120G used. /tmp tmpfs is 98% full (13M free). CONCRETE EFFECTS THIS RUN: lock file could NOT be created (ran without lock); overnight-log.md and ~/memory/2026-11-10.md could NOT be appended locally; queue/handoff sync done via /var/tmp scratch clone instead (2.0G free there). NEXT RUNS WILL HIT THE SAME WALL until disk is cleared or the quota is raised — disk-guardian action needed; in-flight lane downloads (gumball mirror, T7 pakchunk, sitting_pose_library.blend) are still growing disk. Do NOT treat df-free-space as headroom while the quota is hit.
+- IDLE: last user msg 2026-11-11T00:21:40Z (~53 min idle at run start per DB); no lock file; lock creation FAILED (disk quota, see above) — proceeded without lock, wrapped promptly.
+- STEP 1 (fresh gh sweep): WH 33 open — NO clean+green non-draft, non-excluded PR exists in any game repo this run. #1714 instruction-gate still FAIL (re-checked this run; other 13 checks pass; deviations lack owner-approval refs). #1709/#1708/#1703/#1702/#1701/#1678 instruction-gate fail (lane-owned / PROOF do-not-merge). #1696 gate pass but DIRTY (conflicting, parent lands) + 12 older non-draft CONFLICTING carried (#1600, #1073, #1072, #1057, #970, #911, #908, #875, #826, #714, #713, #706); drafts never merged; #1090 HELD FOR APPROVAL; #377 owner-held evidence. CD #71 BLOCKED (gate fail only, verbatim Xbox instruction still absent). GRE #84 UNSTABLE head caeddb0 unchanged, checks 403-unreadable, NOT merged. Bannon 5 unchanged (#22 head bca19c4 = tip, checks 403-unreadable, NOT merged; #78 draft owner-held; #45/#44/#43 drafts). CJ/CD2/wrestling 0 open. PP: #172 CLOSED unmerged (below); #161 OPEN parent-gated, checks 403-unreadable, NOT merged; #150/#50/#49/#48/#45/#20/#19 also open, parent-gated/UNSTABLE/UNKNOWN, NOT merged; drafts #47/#46/#44/#43/#42/#41 never merged. AO 0 open at sweep.
+- LANDED-VERIFIED BY OTHER PARTIES (payload confirmed on main BY THIS RUN): PP #174 "Mocap cleanup stack" merge 4bed535d; #175 "TATTOOS-ON-GRAFT-V2" merge c61e4a0; #176 "FACE-ON-BODY V2.1 seat fix" merge e01bbd7; #177 "Storage manifest" merge 6b23108; #178 "addendum 3: fringe ruling + two-afro context" merge 16c9613 — all five verified ANCESTORS of PP tip 2bb03be ("Add docs/delivery-rule.md", 2026-11-11T01:03:40Z, author mhvnsnt). PP tip advanced 14 commits since prior recorded tip 96ae0f4 (the five merges + direct commits 873b201 fb-downloader, 2bb03be delivery-rule, plus in-between commits).
+- PP #172 CLOSED UNMERGED (mergedAt null, state CLOSED): life-cut film landing PR — closed after the owner rejected the film ~15:56 CST 2026-11-10 (proxy presentation). The life-cut-v2 fix lane (presentation-only rebuild) owns the replacement; do NOT reopen #172.
+- VERIFY-DONE SWEEP (11 checks, 0 false): PP #174/#175/#176/#177/#178 merge ancestry (above); AO tip 8b5466b == #699 queue sync merge; GRE tip e9ffb91 unchanged + teardown/WIRING.md 173dae2/9264 MATCH; CJ tip a40463e == #401 merge; CD2 tip 4523ff1 + docs/VERTICAL-SLICE.md 5bded96/2578 MATCH; CD tip 5280d74 unchanged; Bannon tip bca19c4 unchanged; WH tip f7c4fe7 == #1737 merge.
+- CHECKPOINTS: direct python scan of 1,231 files (checkpoint_audit.py still absent, tools/ archived): 1 running, 0 watchdog+running+&gt;60m stale; 2 unparseable zero-byte pre-existing. The 1 running checkpoint is disk-repo-sweep.json (watchdog true, updated 00:55:12Z, ~40 min old — FRESH, the owner-ordered disk-staging lane from 17:08 CST; live, not stale, not touched). Nothing to resume.
+- CANON-SYNC: nothing new to commit. MEMORY.md tail entries all previously synced (lash v7, Dream Girl, NEXT-MOVES-AUTOMATIC law, afro v2 verdict + life-cut rejection — owner verdicts with live lanes, not canon to commit). NOTE (carried): MEMORY.md tail still says WH #1680 "is still clean and green but unmerged" — STALE, #1680 landed 05:33Z (6792647); memory file not edited by this run (curated, main agent owns it). No personal/legal/family/financial material committed anywhere.
+- STEP 5: failure-alerts.log nothing new (last entry 2026-10-20). Disk 80-81% (119-120G/150G, 30G free per df) BUT quota-blocked for writes (see top). research.py + pull-to-repo.sh still absent (tools/ archived). In-flight at check (lane-owned, untouched per safety rule 1): curl downloading sitting_pose_library.blend to /tmp/blends; life-cut-v2 http server port 8981. No ffmpeg/Blender render process in ps at check.
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work; disk quota blocks pulls/staging anyway.
+- BLOCKED &gt;72h (carried set, unchanged): WH conflicting 13 (#1696 + #1600, #1073, #1072, #1057, #970, #911, #908, #875, #826, #714, #713, #706); WH #377 owner-held evidence; Bannon #78 excluded/owner-held; GRE #84 guard-queued (checks unreadable); CD #71 (verbatim instruction absent). CARRIED: row-48 stamp; non-upright-start incl. t3_crouch; live-opponent proof videos owed (Megami flag NOT closed); Jun bank rows.pack.json/hit_frames.json owed; bank-row import adjudication; TorBox key dead; OWNER RULING #8; quantum-jam decisions; live Worker deploy STILL PENDING; CJ #270 leave-merged vs revert; <em>1096-exec 2.2G uncommitted work: keep / PR / drop?; WH #1544 lane to mark ready; Kiko v4 approve vs paint-removal. NEW CARRIED: disk quota hit — local writes blocked, /tmp 98% full (disk-guardian action needed).
+- Queue counts: WH 33 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 40 open (game repos); blocked (&gt;72h) = 16 carried.
+- Queue sync: AO #</em>__ this run (branch merge-queue-sync-20261111-0114, via /var/tmp scratch clone — workspace disk quota-blocked); merge + payload verify follow in this run's close-out and next run's entry.</p>
 <h2 id="overnight-pipeline-2026-11-10t2145z-30-min-run">Overnight pipeline 2026-11-10T21:45Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-10t2145z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-10T21:45Z (queue delta first: 1 LANDED-VERIFIED by this run (WH #1711 roster wire-up B+C — found ALREADY on main via manual merge 92066806, payload-verified, PR closed as landed); 0 merged by this run; 0 false claims reopened (7-check sweep, 0 false); 0 stale checkpoints resumed; WH 33 open (34 at sweep, -#1711 closed-landed); queue: WH 33 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 40 open (game repos); blocked (&gt;72h) = 16 carried)
 - IDLE: last user msg 2026-11-10T18:37:47Z (~187 min idle at run start per DB); no lock file; lock created OK this run (disk 76%, 113G/150G, 37G free). NOTE: owner verdicts landed in MEMORY.md DURING this run (~15:56/15:57 CST — life-cut rejected, afro v2 accepted-with-shoulder-fix), i.e. owner active in main chat while this run worked; run wrapped promptly, no Step 6 thread pickup (live lanes own the work).
