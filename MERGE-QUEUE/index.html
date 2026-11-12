@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-12-0544-cst-1144z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-12t1214z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -859,6 +859,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-12t1214z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-12T12:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-12-0544-cst-1144z-30-min-run" class="md-nav__link">
@@ -3885,6 +3896,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-12t1214z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-12T12:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-12-0544-cst-1144z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4996,6 +5018,20 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-12t1214z-30-min-run">Overnight pipeline 2026-11-12T12:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-12t1214z-30-min-run" title="Permanent link">&para;</a></h2>
+<p>Overnight pipeline 2026-11-12T12:14Z (queue delta first: 0 merged BY this run; 3 verified landed by other lanes (DG #74, CJ #405, AO #727 — all blob-verified on main this run); 0 false claims reopened (verify-done sweep: 5 checks + 4 #74 blobs + 2 #405 blobs + 2 #727 blobs + 1 #71 proxy + 1 #73 branch-blob, 0 false); 0 stale checkpoints resumed; 1 NEW queue item (DG #73, MERGEABLE, checks unreadable); DG #72 closed unmerged (superseded clobber — never merged); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + dream-girl 5 open (#73, #70, #31, #10, #9); blocked (&gt;72h) = 16 carried)
+- IDLE: last user msg 2026-11-12T05:26:01Z (~408 min idle at run start per DB); no lock file; lock created OK this run (disk 76%, 112G/150G, 38G free).
+- STEP 1 (fresh gh sweep, subagent read-only + parent re-verified merges): WH 30 open, tip da1bf32 unchanged. #1714/#1702/#1701 MERGEABLE, instruction-gate FAIL only; #1678 MERGEABLE, instruction-gate + game-unit-tests + budgets FAIL. #1696 + 12 older non-draft CONFLICTING; 12 drafts MERGEABLE CLEAN (never merged as drafts); #377 owner-held evidence (6814e78, MERGEABLE — never merged). GRE #84 MERGEABLE, head caeddb0 unchanged, checks unreadable (GraphQL "Resource not accessible by personal access token"), NOT merged. Bannon #22 MERGEABLE, head bca19c4 == tip, checks unreadable (same token error), NOT merged; 5 open (#78 draft owner-held; #45/#44/#43 drafts). CD #71 MERGEABLE (8865489), instruction-gate FAIL only (verbatim Xbox instruction still absent — cannot invent one), deletion-guard + guard pass, NOT merged. CJ/CD2/wrestling 0 open. PP 14 open, tip 052c349 unchanged (MERGEABLE #161/#150/#50/#49, checks unreadable, NOT merged). AO 0 open. money-machine-hq 2 open (#29 CONFLICTING, #12 draft; no baseline, tracked only), tip 7a4a342.
+- LANDED-VERIFIED (lane-merged, verified on main by this run, NOT merged by this run): DG #74 "Ozzie BACK + BEAUWAY + DEADBEAU" — squash-merged 11:58:23Z as ded243f (single parent bb39d98); 4/4 blobs MATCH branch head bb68501 vs main (BACK.blend 59a8ac70/102,879 B; BEAUWAY.blend 47752f49/151,005 B; DEADBEAU.blend 8bc497ff/147,288 B; README.md adf834bf/13,067 B). CJ #405 "Catalog gumball-full-rar5" — merge 395be72a, merged 10:43Z; 2/2 blobs MATCH branch head c6a26ca vs main (production/production-library/catalog.json ab0c57d2/35,354 B; INDEX.md 675a80d8/15,523 B). AO #727 queue-sync — merge 5c62643, merged 11:51:35Z; 2/2 blobs MATCH branch head ecba826 vs main (MERGE-QUEUE.md 917a06a4/3,457,524 B; overnight-handoff.md 52cfa1e3/2,890,321 B). Also merged since baseline (in DG tip ancestry ded243f): #71 (Ozzie 3/4 TQ — proxy re-verified: DG_OZZIE_THREEQUARTER.blend a388e5df/139,704 B, exact match), #69 (measured timing), #68–#63 (studio-map v2.3–v2.8 + character moments); CJ #404 (memory backup sync, 10:22Z); AO #726/#725/#724/#723 (queue-sync entries). DG #69/#68–#63 payloads not individually blob-verified this run — tip ancestry only.
+- NEW QUEUE ITEM: DG #73 "docs(ep01): stage CUT 000A frame map" — OPEN-PR, MERGEABLE, head 536fcac, created 10:50:08Z. Payload blob-verified on branch: episodes/ep01/FRAME-MAP-000A.md 66f01444/26,009 B == local ~/workspace/_cut000a-douga-20261111/FRAME-MAP-000A.md. Checks unreadable via token (GraphQL error, 1 context), green unverifiable, NOT merged. Replaces #72 (closed unmerged 10:50:21Z — its tree was a near-empty snapshot deleting ~995,034 lines from main; same clobber pattern as WH #498; must never be merged).
+- NOT MERGED — DG: #70 MERGEABLE a581177 / #31 MERGEABLE f38957e (checks unreadable, NOT merged); #10 MERGEABLE b249269, no checks reported, unreviewed WIP snapshot (local branch local-work/dream-girl-20261111-1615, 1 commit ahead of main, pushed — PR review decides, NOT merged); #9 CONFLICTING 399eb3d. WH #1714 body re-read this run: it IS gate-formatted (verbatim owner quote + method specified/used + deviations + proof paths + self-check) — the gate FAIL is the deviations carrying NO owner approval (straight-crown height deviation + afro v6d waiver), i.e. a concrete owner decision pending, not a format fix. Do NOT rewrite the body.
+- VERIFY-DONE SWEEP (0 false): WH Madelyn model.glb 9c1d1f40/3,827,096 B exact match; DG S6 v3 png 19591cf7/1,016,080 B on DG main (note: DG repo, not WH — the 404 on WH was a wrong-repo guess); DG PR #40 Valerie v2 MERGED (55d0bce9, merged 00:55:22Z, ancestor of main, 55 ahead/0 behind); DG PR #44 S7 v4 MERGED (1ac75e4d, merged 01:28:31Z); CJ gumball release gumball-full-leak-v1: 86 assets, draft=false, 43,516,516,745 B exact match.
+- CHECKPOINTS: direct python scan of 1,409 files: 0 running, 0 watchdog+running+&gt;60m stale; 2 unparseable zero-byte pre-existing (ttt2-resume-100.json, wdstage-bgk0bdaj.json). checkpoint_audit.py: Healthy/in-progress 79, Stale 0, Skipped 1151; unparseable set = the same 2 + one transient .tmp. Worker watchdog 06:10 CST tick agrees: 0 running managed, nothing resumable. Nothing to resume.
+- CANON-SYNC: nothing new to commit. MEMORY.md changed since 03:14Z (md5 fb159365, was bea91ad1; mtime 06:05 CST) but tail unchanged and no new 2026-11-12 dated entries — no new canon to commit. MEMORY-GAP CARRIED (not edited — MEMORY.md is memory-system owned): the 01:11 CST pre-compaction flush claims "V5 — LET IT FINISH, DON'T RECREATE" and AFRO v3 CORRECTION #5 were recorded in MEMORY.md, but grep finds NEITHER; MEMORY.md still carries the superseded v3-gate-pass claim. Flagged for memory-system reconciliation. No personal/legal/family/financial material committed anywhere.
+- STEP 5: failure-alerts.log nothing new (last entry 2026-10-20). Disk 76% (112G/150G, 38G free), below 85%. research.py + pull-to-repo.sh still absent (tools/ archived). In-flight at check (lane-owned, untouched per safety rule 1): at-inflate2.py PID 2535 progressing (TV gigaleak long-tail, 4.3/55.5GB @06:09) + disk-guardian du scan. No ffmpeg/blender render processes. Local sweep: dream-girl clone branch local-work/dream-girl-20261111-1615 clean, = DG PR #10 (already queued); agent-ops worktree dirt 2,982 paths carried (lane-owned ops state, not snapshotted wholesale; queue sync uses a fresh clone).
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work (DG intro/cut lanes, V71 watch, Nightwolf UniRig quota watch, stage-in-repo lane 7ef0f551 active). Stand down per CHECK-BEFORE-START.
+- BLOCKED &gt;72h (carried set, unchanged): WH conflicting 13 (#1696 + #1600, #1073, #1072, #1057, #970, #911, #908, #875, #826, #714, #713, #706); WH #377 owner-held evidence; Bannon #78 excluded/owner-held; GRE #84 guard-queued (checks unreadable); CD #71 (verbatim instruction absent). CARRIED: row-48 stamp; non-upright-start incl. t3_crouch; live-opponent proof videos owed (Megami flag NOT closed); Jun bank rows.pack.json/hit_frames.json owed; bank-row import adjudication; TorBox key dead; OWNER RULING #8 (Star moveset re-key?); quantum-jam decisions; live Worker deploy STILL PENDING (Cloudflare password route DEAD - real routes: retry Google sign-in with 2-Step approval, or B2_KEY_ID/B2_APP_KEY via secure form; B2 cap at 100% again 2026-11-07 14:10 UTC). OPEN OWNER CALLS: WH #1714/#1702/#1701/#1678 Megami-face deviation decision (straight-crown height deviation + afro v6d waiver — approve/waive, or pick one of the three options in REPORT-ADDENDUM-lane14.md); CJ #270 leave-merged vs revert; _1096-exec 2.2G uncommitted work: keep / PR / drop?; WH #1544 lane to mark ready for review.
+- Queue counts: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + dream-girl 5 open; PP 14 + money-machine-hq 2 tracked; blocked (&gt;72h) = 16 carried.</p>
 <h2 id="overnight-pipeline-2026-11-12-0544-cst-1144z-30-min-run">Overnight pipeline 2026-11-12 05:44 CST / 11:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-12-0544-cst-1144z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-12 05:44 CST / 11:44Z (queue delta first: 0 merged BY this run; 0 newly landed by other parties since 11:14Z — all repo tips unchanged; 0 false claims reopened (6-check sweep, 0 false); 0 stale checkpoints resumed; 0 new OPEN-PRs; WH 30 open (unchanged); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + dream-girl 5 open (#73, #70, #31, #10, #9); blocked (&gt;72h) = 16 carried)
 - IDLE: last user msg 2026-11-12T05:26:01Z (~378 min idle at run start per DB); no lock file; lock created OK this run (disk 76%, 112G/150G, 38G free).
