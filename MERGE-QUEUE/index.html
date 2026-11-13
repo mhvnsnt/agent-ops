@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-13t1514z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-13t1644z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -859,6 +859,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-13t1644z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-13T16:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-13t1514z-30-min-run" class="md-nav__link">
@@ -4105,6 +4116,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-13t1644z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-13T16:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-13t1514z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5436,6 +5458,18 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-13t1644z-30-min-run">Overnight pipeline 2026-11-13T16:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-13t1644z-30-min-run" title="Permanent link">&para;</a></h2>
+<p>Overnight pipeline 2026-11-13T16:44Z (queue delta first: 0 merged BY this run; 1 verified landed by another lane (MMHQ 3bd91914 dashboard daily sweep, direct push, pipeline/DASHBOARD.md +2/-0, verified on main: DASHBOARD.md aa813780/44,007 B); 0 newly verified landed otherwise (all other repo tips unchanged vs 15:14Z baseline — WH 62f27d44, DG 36ab7d9f, CJ 4031f290, GRE e9ffb917, Bannon bca19c49, CD 5280d74c, CD2 4523ff12, wrestling e1702afd, PP 052c3490; AO 2a3d837d = #747 merge, the 15:14Z run's own sync, already counted); 0 false claims reopened (verify-done sweep: 6 checks, 6 HOLD — AO #747 merge 2a3d837d on main, payload blobs MERGE-QUEUE.md 48040219/3,558,556 B + overnight-handoff.md 89e50bf4/2,971,222 B both blob-identical to PR head d97ff433; MMHQ 3bd91914 on main; DG #88 still OPEN head 48359369 at sweep (see STEP 4 — head moved to 6c9e1189 by this run's canon commit, still OPEN MERGEABLE UNSTABLE); CNleaks EEN draft eenee-cnleaks-v1 9 assets/3,737,106,862 B exact; Quezada render driver ENDED cleanly 16:22:47 UTC after frame 120, 240 files in frames/full/ (was 220) — lane-owned, NOT touched; Valerie R2 branch basebody/valerie-2d-r2 head still 426bc60a — push still owed); 0 stale checkpoints resumed (audit: 80 healthy/in-progress, 0 stale, 1151 skipped, 3 zero-byte temps); 1 NEW queue item (DG basebody/janae-2d BRANCH-ONLY, head 120cc01 — Janae bare-body v3 staged, owner verdict owed); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 8 open + 15 branch-only + PP 14 + MMHQ 2; blocked (&gt;72h) = 16 carried)
+- IDLE: last user msg 2026-11-13T16:07:29Z (~37 min idle at run start per DB); no lock file; lock created OK this run (disk 75%, ~112G/150G, ~38G free — under the 85% threshold).
+- STEP 1 (delta sweep vs 15:14Z baseline): tips unchanged except MMHQ 1d8ea81c → 3bd91914 (direct push, not a PR merge) and AO dcc2bd08 → 2a3d837d (#747, the 15:14Z run's own sync). Open-PR counts identical: WH 30, DG 8, CJ 0, GRE 1, Bannon 5, CD 1, CD2 0, wrestling 0, PP 14, MMHQ 2, AO 0. No new PRs, no merges since 15:14Z; 0 green+mergeable non-draft non-excluded per the 11:44Z full sweep, state unchanged — nothing merged this run. Cross-check: merge-law-ci-watch 10:45 CST sweep agrees (0 CLEAN found across 58 watch-list PRs, nothing merged).
+- STEP 2: verify-done sweep 6/6 HOLD, 0 false (see delta line). NOTE: CNleaks EEN tags-endpoint lookup 404'd again (draft release) — resolved via gh release view: 9 assets / 3,737,106,862 B exact. Quezada: driver log ends "=== full render driver end Fri Nov 13 16:22:47 UTC 2026 ===" after frame 120 exit=0; no blender/monitor process running now; the 15:14Z run's "monitor loop PID 6495 alive" state is superseded by a clean driver end, not a crash — next run to check whether a new driver/lane starts.
+- STEP 3: checkpoint audit 80 healthy / 0 stale / 1151 skipped — nothing to resume; 3 unparseable 0-byte temps (pre-existing: .tmp.scvlfb2v, .tmp.zbb9s6zq, wdstage-bgk0bdaj). Nightwolf watch_run2 PID 110986 alive, quota-blocked — lane-owned, NOT touched.
+- STEP 4 canon-sync: NEW CANON FOUND MID-RUN — MEMORY.md changed under this run (69429014 → 10dc344d at 10:50:57 CST, 145 lines): two new owner-2026-11-13 entries at the tail (JANAE + VALERIE — 2 SHEETS EACH; JANAE SHEET v2 — REJECTED, v3 redo), corroborated by daily note 2026-11-13.md (line 4151 order; line 4577 v3 DONE commit 120cc01; line 4581 shown to owner ~10:26 CT, verdict owed) + branch basebody/janae-2d commit message 120cc01 (owner verdict on v2 quoted). SYNCED this run: commit 6c9e1189 appended to DG PR #88's branch docs/canon-valerie-age-rule-20261113 (parent 48359369; tree blobs BIBLE.md 17d75454/46,077 B + CAST.md 25052701/201,428 B, verified via recursive tree API) + PR #88 body updated with rulings 3–4. PR #88 still OPEN, head 6c9e1189, MERGEABLE UNSTABLE (checks unreadable) — NOT merged, no green claimed. NEW QUEUE ITEM (BRANCH-ONLY): DG basebody/janae-2d head 120cc01 (Janae bare-body v3 staged, owner verdict owed — no PR until he rules, boochie-sword-v3 precedent). Carried: memory rewrite 10dc344d NOT yet mirrored to GitHub backup; NOT reconciled per memory-pause rule. NOTE: people INDEX.md also changed mid-run (Tia Corine / FreakyT entry added) — memory-system record, not repo canon, no action.
+- STEP 5: failure-alerts.log nothing new (last entry 2026-10-20). Disk 75% (112G/150G, 38G free), below 85%. In-flight sacred work untouched (Nightwolf watch_run2 PID 110986 alive; guardian-watch.sh PIDs 5414/5416 alive; Quezada driver ended cleanly — nothing running to touch). DG full-clone route abandoned mid-run (media-heavy HEAD, 249 MB and still downloading after ~6 min) — canon commit landed via Git Data API instead (blobs/tree/commit/ref, no sparse checkout).
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work (Valerie R2 sheets, Ozzie/DG lanes, quality loop, Nightwolf watch). Stand down per CHECK-BEFORE-START. research.py + pull-to-repo.sh still absent (tools/ archived).
+- BLOCKED &gt;72h (carried set, unchanged): WH conflicting 13; WH #377 owner-held; Bannon #78 excluded/owner-held; GRE #84 guard-queued; CD #71 (verbatim instruction absent). CARRIED: row-48 stamp; non-upright-start; live-opponent proof videos owed (Megami flag NOT closed); Jun bank rows owed; bank-row import adjudication; TorBox key dead; OWNER RULING #8; quantum-jam decisions; live Worker deploy STILL PENDING. OPEN OWNER CALLS: #1709 leave-it-or-revert; #1714 REFIT6B + afro v6d waiver; CD #71 verbatim Xbox instruction; TorBox 2-Step SMS code to phone ending 02; <em>1096-exec 2.2G uncommitted work: keep / PR / drop?; WH #1544 lane to mark ready; Valerie v1/v2 branches — delete or keep?
+- Queue counts: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + dream-girl 8 open + 15 branch-only (14 carried + basebody/janae-2d new); PP 14 + money-machine-hq 2 tracked; blocked (&gt;72h) = 16 carried.
+- Queue sync: AO #</em>__ this run (branch merge-queue-sync-20261113-1644, scratch-clone route); merge + payload verify follow in this run's close-out (daily log) and next run's entry.</p>
 <h2 id="overnight-pipeline-2026-11-13t1514z-30-min-run">Overnight pipeline 2026-11-13T15:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-13t1514z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-13T15:14Z (queue delta first: 0 merged BY this run; 0 newly verified landed (all 10 game-repo tips unchanged vs 13:14Z baseline — WH 62f27d44, DG 36ab7d9f, CJ 4031f290, GRE e9ffb917, Bannon bca19c49, CD 5280d74c, CD2 4523ff12, wrestling e1702afd, PP 052c3490, MMHQ 1d8ea81c; AO dcc2bd08 = #746 merge already counted by the 13:14Z run); 0 false claims reopened (verify-done sweep: 5 checks, 5 HOLD — AO #746 merge dcc2bd08 on main, payload blobs MERGE-QUEUE.md 3e739d07/3,557,300 B + overnight-handoff.md 17b0429d/2,967,531 B both blob-identical to main; DG #88 still OPEN head 48359369 MERGEABLE UNSTABLE, checks unreadable; CNleaks EEN draft eenee-cnleaks-v1 9 assets/3,737,106,862 B exact; Quezada monitor loop PID 6495 alive, 220 frames (was 200), driver memory-waiting frame 111 try 29 — lane-owned, NOT touched; Valerie R2 branch basebody/valerie-2d-r2 head still 426bc60a — push still owed); 0 stale checkpoints resumed (audit: 80 healthy/in-progress, 0 stale, 1151 skipped, 3 zero-byte temps); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 8 open + 14 branch-only + PP 14 + MMHQ 2; blocked (&gt;72h) = 16 carried)</p>
 <h2 id="overnight-pipeline-2026-11-13t1314z-30-min-run">Overnight pipeline 2026-11-13T13:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-13t1314z-30-min-run" title="Permanent link">&para;</a></h2>
