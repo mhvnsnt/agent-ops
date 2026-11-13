@@ -1,3 +1,10 @@
+## Overnight pipeline 2026-11-13T11:14Z (30-min run)
+- Queue delta first: 0 merged by this run. 0 newly verified landed (all 11 tips unchanged vs 10:44Z baseline; CJ #406 + AO #741 moves already counted by the 10:44Z run). 0 false claims reopened (verify-done 5/5 HOLD; record correction on AO #741 blob shas — see queue header). 0 stale checkpoints resumed. Queue: 37 open game repos + DG 8 + 14 branch-only + PP 14 + MMHQ 2; blocked (>72h) = 16 carried.
+- Tips: WH 62f27d44, DG 36ab7d9f, CJ 4031f290, GRE e9ffb917, Bannon bca19c49, CD 5280d74c, CD2 4523ff12, wrestling e1702afd, PP 052c3490, MMHQ 1d8ea81c, AO eeb3da4a — all unchanged since 10:44Z.
+- Verify-done: HOLD — Quezada 198 files/driver 4598 alive; at-inflate2 pid 27750 alive; AO #741 merge commit eeb3da4a on main (blobs corrected: MERGE-QUEUE.md 52af9e3f/3,534,915 B, overnight-handoff.md df560abc/2,955,310 B); CJ #406 ancestor of main; CNleaks EEN 9 assets/3,737,106,862 B exact.
+- Checkpoints: audit 80 healthy / 0 stale / 1151 skipped; nothing to resume.
+- Canon-sync: nothing new (MEMORY.md md5 9d2fe988 unchanged).
+- Queue sync: AO #___ this run; merge + payload verify in close-out.
 ## Overnight pipeline 2026-11-13T10:44Z (30-min run)
 - Queue delta first: 1 landed-verified BY ANOTHER LANE — CJ #406 memory-backup-sync (merge 4031f290, verified on main by this run: MEMORY.md 01ead9aa/58,631 B, SYNC-STATE.md 33815e66/373 B). 0 merged by this run. 0 false claims reopened (verify-done 5 HOLD / 1 PARTIAL / 1 FAIL-carried). 0 stale checkpoints resumed. Queue: 37 open game repos + DG 8 + 14 branch-only + PP 14 + MMHQ 2; blocked (>72h) = 16 carried.
 - Tips: WH 62f27d44, DG 36ab7d9f unchanged; CJ 395be72a → 4031f29 (#406); GRE e9ffb917, Bannon bca19c49, CD 5280d74c, CD2 4523ff12, wrestling e1702afd, PP 052c349, MMHQ 1d8ea81, AO 8b232d45 all unchanged.
