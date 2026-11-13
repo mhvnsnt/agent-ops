@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-13t0814z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-13t0844z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -859,6 +859,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-13t0844z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-13T08:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-13t0814z-30-min-run" class="md-nav__link">
@@ -3984,6 +3995,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-13t0844z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-13T08:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-13t0814z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5194,6 +5216,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-13t0844z-30-min-run">Overnight pipeline 2026-11-13T08:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-13t0844z-30-min-run" title="Permanent link">&para;</a></h2>
+<p>Overnight pipeline 2026-11-13T08:44Z (queue delta first: 0 merged BY this run; 0 newly verified landed (all 11 repo tips unchanged vs 08:14Z run baseline — WH 62f27d44, DG 36ab7d9f, CJ 395be72a, GRE e9ffb917, Bannon bca19c49, CD 5280d74c, CD2 4523ff12, wrestling e1702afd, PP 052c349, money-machine-hq 1d8ea81, AO 475cfc7a); 1 false claim reopened with a new queue item (Ozzie v3 — not on DG main); 1 false claim already tracked as branch-only (Tahoma2D); 1 NEW queue item (DG cuts/ozzie-transformation BRANCH-ONLY); 0 stale checkpoints resumed (audit: 80 healthy / 0 stale / 1151 skipped; 3 unparseable empty temps); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 8 open + 14 branch-only + PP 14 + MMHQ 2; blocked (&gt;72h) = 16 carried)
+- IDLE: last user msg 2026-11-13T07:42:01Z (~62 min idle at run start per DB); no lock file; lock created OK this run (disk 76%, ~113G/150G, ~36G free — under the 85% threshold; disk-cleanup lanes freed ~12.5G earlier today, usage since climbed ~3G).
+- STEP 1 (fresh full sweep, 3 read-only subagents + parent re-checks): WH tip 62f27d44 unchanged, 30 open, 0 green+mergeable non-draft — #1714/#1702/#1701/#1678 MERGEABLE BLOCKED (instruction-gate FAIL only; #1702/#1701/#1678 also explicitly do-not-merge in title/body pending parent own-eyes/proof pass; #1678 also game-unit-tests FAIL); #1696 + 12 older non-draft CONFLICTING; 12 drafts (6 MERGEABLE CLEAN: #863, #1544, #1546, #1547, #1566, #1596 — never merged as drafts, #1546 the only head with zero failing check-runs; 6 CONFLICTING: #182, #1090, #1525, #1526, #1527, #1569); #377 owner-held evidence (MERGEABLE, UNSTABLE). Checks READABLE this run via gh pr checks for WH (no 403); legacy combined-status returns pending for all 30 heads — not a green signal. DG tip 36ab7d9f unchanged, 8 open — #88 MERGEABLE UNSTABLE (opened 08:24Z by the 08:14Z run, not merged); #86/#84/#83/#73/#31 MERGEABLE UNSTABLE; #10 MERGEABLE CLEAN unreviewed WIP (NOT merged); #9 CONFLICTING "review, don't merge". CJ 0 open — CORRECTION (from 08:14Z run, carried): #156/#157 CLOSED 2026-10-23, #167 MERGED 2026-10-23; no CJ owner-held items remain open; the body's CJ exclusion list is stale. GRE #84 MERGEABLE UNSTABLE, head caeddb0, checks unreadable — NOT merged. Bannon 5 unchanged; #22 head == main tip (no-op), #78 draft owner-held; drafts #43/#44/#45. CD #71 MERGEABLE BLOCKED, instruction-gate FAIL only (verbatim Xbox instruction absent — cannot invent) — NOT merged. CD2 repo is mhvnsnt/ConcreteDragon2, 0 open. PP 14 unchanged (main 052c349); MMHQ 2 unchanged (#29 CONFLICTING, #12 draft MERGEABLE CLEAN — never merged as draft). AO 0 open (tip 475cfc7a = #736 merge). No green claimed for any PR with unreadable checks.
+- NEW QUEUE ITEM (BRANCH-ONLY): DG <code>cuts/ozzie-transformation</code> — "Ozzie transformation v3 (owner-confirmed version of record) + v3.1 REJECTED", head d72082333ab2bbc0bca1145da1be8fbf210fe04a, parent main 36ab7d9f, no PR, NOT merged. Branch log: 5db4cfb3 v3 (288f/12s) → 1dd9117 v3.1 (10.0 dps on B+F) → d7208233 "Mark v3.1 REJECTED + UNUSED (owner 2026-11-13 00:25 CT) — v3 stands as the version of record". 0 hits for this branch in MERGE-QUEUE.md before this run — the 08:14Z run's 12-item branch sweep missed it. No PR opened by this run: the DG lane owns the merge decision (boochie-sword-v3 precedent); owner judgement for v3 is already in (00:26 CT "We can just use this one for now"), so the lane can open the PR. Tracked here so the work is not invisible.
+- STEP 2: verify-done sweep 6 checks, 4 hold / 2 fail. HOLD: AO #620 merge e1b3dd70 ancestor of main (ahead 0 / behind 238); DG release toolchain-nle-v1 exists, 3 assets, not draft; Nightwolf run1 skeleton FBX present, 1,589,052 B, md5 32d37f07473ec3e04b65bd6e72101407. FAIL (reopened): (1) Tahoma2D "research + routing + durability + wire-up all landed in the repo" — <code>tools/tahoma2d/</code> is 404 on DG main; commit 4854a70 lives only on branch <code>tools/tahoma2d</code> (head 55f4cb17). Already tracked as branch-only by the 08:14Z run — no new item, correction noted. (2) Ozzie v3 — <code>cuts/ozzie-transformation/ozzie-transformation-v3.mp4</code> is 404 on DG main; commit 5db4cfb3 lives only on branch <code>cuts/ozzie-transformation</code>. NEW queue item above. (3) Kdenlive branch <code>tools/kdenlive-storyboarder</code> (head c2ba66c2) also not on main — already tracked as branch-only by the 08:14Z run; the toolchain-nle-v1 release itself IS published (verified). Valerie R2 round-2 assembled sheet (valerie-basebody-full-sheet-v1.jpg, lane 3fcf738d) is NOT yet on branch <code>basebody/valerie-2d-r2</code> (head still 426bc60a) — push owed by the quality-loop lane, noted for next run.
+- STEP 3: checkpoint audit 80 healthy / 0 stale / 1151 skipped — nothing to resume; 3 unparseable 0-byte temps (pre-existing: .tmp.scvlfb2v, .tmp.zbb9s6zq, wdstage-bgk0bdaj). (08:14Z run's audit counted 0 running / 0 stale / 1 unparseable / 1230 skipped — different counting, same 0-stale conclusion.)
+- STEP 4 canon-sync: nothing new (MEMORY.md md5 2d5c5cd7 UNCHANGED since 08:14Z run; tail ends JANAE SHEET METHOD; carried gaps V5 "LET IT FINISH" + AFRO v3 CORRECTION #5 still 0 hits in MEMORY.md; Valerie age rule already in DG canon via open PR #88, opened by the 08:14Z run). Ozzie v3 owner confirmation (00:26 CT) is recorded in the daily note and in the branch head commit message (d7208233); DG-lane canon doc update is lane-owned — carried for next run to verify, not duplicated here.
+- STEP 5: failure-alerts.log nothing new (last entry 2026-10-20). Disk 76% (113G/150G, 36G free), below 85%. research.py + pull-to-repo.sh still absent (tools/ archived). In-flight sacred work untouched (Blender Quezada render PID 131620 render_full_frame.py + Blender GUI PID 2100 in ~/workspace/<em>cut001r-v3-20261111/; disk-guardian du scan).
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work (Valerie R2 sheets, Quezada guardian render lane 8, Ozzie/DG lanes, quality loop). Stand down per CHECK-BEFORE-START.
+- BLOCKED &gt;72h (carried set, unchanged): WH conflicting 13 (#1696 + #1600, #1073, #1072, #1057, #970, #911, #908, #875, #826, #714, #713, #706); WH #377 owner-held evidence; Bannon #78 excluded/owner-held; GRE #84 guard-queued (checks unreadable); CD #71 (verbatim instruction absent). CARRIED: row-48 stamp; non-upright-start incl. t3_crouch; live-opponent proof videos owed (Megami flag NOT closed); Jun bank rows.pack.json/hit_frames.json owed; bank-row import adjudication; TorBox key dead; OWNER RULING #8; quantum-jam decisions; live Worker deploy STILL PENDING; CJ #270 leave-merged vs revert; <em>1096-exec 2.2G uncommitted work: keep / PR / drop?; WH #1544 lane to mark ready; Kiko v4 approve vs paint-removal; DG #73 CI-unverifiable. OPEN OWNER CALLS: #1709 leave-it-or-revert; #1714 REFIT6B + afro v6d waiver; CD #71 verbatim Xbox instruction; TorBox 2-Step SMS code to phone ending 02.
+- Queue counts: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + dream-girl 8 open (#88, #86, #84, #83, #73, #31, #10, #9) + 14 branch-only (13 carried + cuts/ozzie-transformation new); PP 14 + money-machine-hq 2 tracked; blocked (&gt;72h) = 16 carried.
+- Queue sync: AO #</em></em>_ this run (branch merge-queue-sync-20261113-0844, scratch-clone route); merge + payload verify follow in this run's close-out (daily log) and next run's entry.</p>
 <h2 id="overnight-pipeline-2026-11-13t0814z-30-min-run">Overnight pipeline 2026-11-13T08:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-13t0814z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-13T08:14Z (queue delta first: 0 merged BY this run; 3 verified landed by other lanes/direct pushes (AO #734 merge a5eaf7ec = the 22:16Z run's own queue sync, payload 5ecfa44e ancestor of main; AO #735 friction research merged 04:30:20Z, payload FRICTION-RESEARCH-LOG.md 26195f02/23,132 B on main; DG Valerie v1/v2 deletions on main — 516fe54e + tip 36ab7d9f, both files 404); 0 false claims reopened (verify-done sweep: 7 checks + Valerie deletion check, all PASS — DG #87 weights_registry.json 773d298a/7,101 B, WH #1743 merge 62f27d44 == WH tip, MMHQ #31 RENDER-ORIENTATION.md b8a32253/3,509 B, WH #743 merged, DG boochie-sword-v3 branch d466aee, AO #735 payload, AO 22:16Z sync ancestor); 0 stale checkpoints resumed (audit: 0 running / 0 stale / 1 unparseable / 1230 skipped); 1 NEW DG PR opened by this run (#88 canon, see STEP 4); 12 NEW DG branch-only queue items (verified on origin); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 8 open + 13 branch-only + PP 14 + MMHQ 2; blocked (&gt;72h) = 16 carried)
 - IDLE: last user msg 2026-11-13T07:42:01Z (~32 min idle at run start per DB); no lock file; lock created OK this run (disk 77%, ~114G/150G, ~36G free — under the 85% threshold; disk-cleanup lanes freed ~12.5G earlier, 121G→110G, since climbed ~4G).
