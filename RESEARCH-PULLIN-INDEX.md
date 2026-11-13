@@ -268,3 +268,26 @@ Doc: `agent-ops/research-friction-20261025/01-deploy-pages-limit.md` (local only
 | Vercel Hobby: non-commercial only | 2026 pricing roundups | ❌ excluded — disqualifies a money-making game |
 | Backblaze B2 free 10 GB + 1 GB/day egress | official pricing via 2026 roundups | 📄 viable fallback if R2 signup blocks |
 | Shell-only deploy floor ≈ 70–170 MB (code ~10 MB + UI/portraits ~7.5 MB + 1 stage + 2 fighters + movesets/music) — measured from live git-trees API | live `gh api .../git/trees/main?recursive=1` 2026-10-26 (truncated, lower bounds) | 📄 documented — no content needs cutting, only the deploy splits |
+
+## Friction research — free headless image generation · supervisor deaths · 100 MB upload wrapper (2026-11-12)
+
+Docs: agent-ops `research-friction-20261112/01-free-headless-imagegen.md`,
+`02-supervisor-deaths.md`, `03-release-upload-wrapper.md` +
+`pollinations-imggen.sh` + `gh-release-upload-100mb.sh` (both tested live
+this pass). Log: `FRICTION-RESEARCH-LOG.md` 2026-11-12 entry.
+
+| Finding / candidate | Source (license) | Status |
+|---|---|---|
+| Pollinations.ai anonymous text-to-image + flux img2img | pollinations/pollinations (open source); no key/signup/card for anonymous path | ✅ **wired + tested** — `pollinations-imggen.sh` (45 s pacing, retries, image verify); live: 512×512 JPEG in ~6 s, own-eyes verified; anonymous tier serves Sana model (EXIF manufacturer=sana), watermarked |
+| Pollinations `kontext` (FLUX.1 Kontext Pro edits) | same | 📄 queued — needs free Pollen key (enter.pollinations.ai signup, no card stated); helper already switches endpoints on `POLLINATIONS_KEY` |
+| Cloudflare Workers AI FLUX.1 schnell (~57 imgs/day free) | Cloudflare docs; connector custom.cloudflare (token valid, 200) | 📄 queued — Workers AI call 401s (token-scope gap, Pages scope only); needs re-scoped token, then the exact call in `cf-flux-body.json` is ready |
+| fal.ai signup credit ($5–$20, sources disagree) | fal.ai/pricing via Nov 2026 roundups | 📄 queued — signup (email+GitHub), test schnell + Kontext |
+| HF Inference API monthly credits | huggingface docs | 📄 queued — no token on this VM (no token file, no env var) |
+| Leonardo.Ai free tier | leonardo.ai/pricing | ❌ excluded for headless use — web-only; API is separate pay-as-you-go, zero free API access; free creations public, model Auto Only |
+| Together AI | together.ai + 2026 billing docs | ❌ excluded — free tier gone in 2026, new accounts read-only until deposit |
+| Replicate / Stability AI | replicate.com/pricing; stability docs | ❌ excluded — no free tier (Replicate) / 25 credits trivial (Stability) |
+| Gemini API new key | owner order 2026-11-11 19:48 CT | ❌ excluded — key loop DEAD, not re-tested |
+| OpenArt retry | Turnstile evidence, ~/memory/2026-11-11.md | ❌ excluded — fails for the owner's own click; network flagged |
+| M. Engine supervisor ~2 h deaths (300 restarts lifetime) | own log + server.js/watchdog.sh | 📄 diagnosed — 166 SIGTERM-graceful, 207 stale-PID silent, only 4 watchdog health-kills (watchdog ruled out as killer); recommend `setsid nohup` start + death-mode/uptime logging; fix duplicate SIGTERM log line; no code changed (live daemon) |
+| `gh-release-upload-100mb.sh` (100 MB standard enforcer) | own code, stdlib + gh CLI | ✅ **wired + tested** — 120 MB file → 2 parts, both VERIFIED (state=uploaded, exact size, sha256 after pull-back), exit 0, ~5 min; scratch release created + deleted; starter-delete path code-reviewed only (no starter existed to delete) |
+| GHA runner upload path | 2026-11-06 prototype | 📄 still queued — blocked on fine-grained PAT mint (browser step); API core limit healthy (4928/5000), not the blocker |

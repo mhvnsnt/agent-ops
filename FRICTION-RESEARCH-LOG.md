@@ -251,3 +251,80 @@ RESEARCH-PULLIN-INDEX.md — the file was confirmed intact, no clobber).
 **Pulled in:** nothing (research only, per task). **Recommended:** B2 as the fallback with exact setup steps in the doc (bucket `western-heart-assets`, public, CORS `["https"]` rule, Caps & Alerts recorded in-repo); R2 stays 1st choice for its unlimited $0 egress.
 **Blocked:** owner decision 2026-10-27 ~10:04 CDT: WAIT for the no-card fallback — do NOT accept R2 subscription/preauthorization terms; R2 untouched. No B2 account created — standing up B2 needs his word (research task forbade signups).
 **Correction 2026-10-27 (same day, ~11:09 CDT):** the doc's central claim was falsified live. Owner tapped "Stand up B2 now" (~10:20 CDT); the stand-up attempt found the account already existed (4 private buckets, Oct 9–10) and creating a **public** bucket demands payment: "A payment history is required, or pay a one-time fee ($1.00 + appl. taxes) that is credited to your account" — card fields + "Purchase and Make Bucket" button; no card entered, no bucket created. Backblaze's own help docs say the same. **Doc corrected (PR, this pass):** B2 verdict is now CONDITIONAL (public bucket needs the $1 card payment; private buckets card-free); new §4 documents the fully card-free path — **private B2 bucket + Cloudflare Worker proxy** (Worker holds the app key as an encrypted secret, signs requests, serves publicly with CORS; Backblaze's own docs; Workers Free 100,000 req/day hard stop; Bandwidth Alliance free-egress treatment for the Worker path NOT verified byte-for-byte — check B2 usage after stand-up). **IDrive e2 settled, SKIP:** IDrive's own e2 page prices "$6/TB/Month (Try with 10 GB Free)" — a trial allowance, not a permanent free tier; the "permanently free" claims describe IDrive's *backup* Basic plan, a different product. No accounts created, no cards entered in either pass.
+
+## 2026-11-12 ~22:05–22:35 CST — Free headless image generation (all routes down) · M. Engine supervisor ~2 h deaths · 100 MB upload wrapper tested (continuous-friction-research)
+
+**Docs:** `research-friction-20261112/01-free-headless-imagegen.md`,
+`02-supervisor-deaths.md`, `03-release-upload-wrapper.md` +
+`pollinations-imggen.sh` (tested) + `gh-release-upload-100mb.sh`
+(tested) + live test evidence (`pol-*.png/jpg`, `cf-flux-*.json/txt`,
+`upload-test-*`). Research + two tested tools only — no PRs opened by
+this pass in the dirty workdir (3,024 modified entries on branch
+`lindy-privacy-policy-20261107`; a clean-room clone PR is the merge
+lane's step, per the 2026-10-31/11-03/11-06 precedent). No live lane
+touched, nothing uploaded/deleted/restarted except the scratch test
+release (created + deleted this pass). Dedupe checked via
+`research-check.sh` + index (image-gen APIs, supervisor log, upload
+wrapper all new; 100 MB standard, 408, starter-trap, aria2, dedup,
+Kaggle-GPU-alternatives already decided — not re-researched).
+**Problems targeted (from ~/memory/2026-11-11.md + 2026-11-12.md +
+disk-cleanup-log, last ~24 h):** (1) every Dream Girl image-generation
+route died at once — Gemini key revoked + zero image quota, Lightning
+outage + CLI 403, HF ZeroGPU exhausted, Horde banned, OpenArt Turnstile
+dead for human and automated clicks alike (~27 attempts); Valerie heads,
+back-gap inpaint, clothed v2 all blocked; (2) M. Engine supervisor died
+~10× on 2026-11-12, roughly every 2 h, 300 restarts lifetime, sender
+unknown; (3) wgpl mirror lane's 1.99 GB `part00` upload stalled ~24 min
+behind the egress proxy while disk sits at 80% — lanes keep using 1.9 GB
+parts despite the owner 100 MB standard.
+**Verified live this pass:** Pollinations anonymous text-to-image =
+HTTP 200, real 512×512 JPEG in 6.0 s, own-eyes verified (anime black cat
+on pink cushion; `pol-flux-test.png`, sha256 `c1e91816…ae8690e`);
+Pollinations flux img2img (`?image=` param) = HTTP 200, real JPEG in
+5.4 s (`pol-flux-img2img-test.jpg`); Pollinations `kontext` = HTTP 403
+"isn't part of the Classic API. Use it with a pollen key"; Cloudflare
+token valid (`cf_check.py` 200/200) but Workers AI call = HTTP 401 code
+10000 (token-scope gap — Pages scope only); Leonardo free = web-only
+(API is separate pay-as-you-go, zero free API access); Together AI free
+tier gone in 2026 (deposit required); Replicate = no free tier; HF =
+no token file, no HF env var on this VM; supervisor log counts: 300
+starts, 166 SIGTERM-graceful, 207 stale-PID silent, only 4 watchdog
+health-kills (last 2026-11-10) — the watchdog is NOT the killer;
+`gh api rate_limit` core 4928/5000 (healthy); wgpl release now holds
+`part01` uploaded (39,731,200 B) + MANIFEST, `part00` absent (stalled
+1.9 GB POST left no trace); disk 119G/150G (80%) at 22:12 CST.
+**Pulled in / wired:** (1) `pollinations-imggen.sh` — anonymous
+Pollinations text-to-image + img2img with 45 s pacing, retries, and
+image verification; tested live (pink diary prompt → real JPEG,
+28,695 B, sha256 `b5cd302e…a8dc`). (2) `gh-release-upload-100mb.sh` —
+100 MB splits, per-part state check (skip uploaded, delete `starter`,
+never clobber verified), 3-attempt retry, verify by state+size+full
+re-download sha256; tested live on a 120 MB file → 2 parts, both
+VERIFIED (104,857,600 + 15,142,400 B, sha256 match after pull-back),
+exit 0, ~5 min; scratch release `friction-test-20261112` created and
+deleted after (404 confirmed), test file + parts removed.
+**Recommended:** (1) lanes use Pollinations anonymous NOW for neutral
+generations (intro scenes, Tammy/Janae drafts) — draft-grade Sana
+quality + watermark, not a likeness tool; (2) create a free Pollinations
+Pollen key (enter.pollinations.ai, signup, no card stated) → unlocks
+Kontext, the likeness-holding edit route; helper already switches
+endpoints on `POLLINATIONS_KEY`; (3) re-scope the Cloudflare token with
+Workers AI permission → ~57 free FLUX images/day, no browser, no signup;
+(4) fal.ai signup (email+GitHub) to test the $5–$20 one-time credit on
+schnell + Kontext; (5) lanes adopt the upload wrapper / retire
+`PART=1900000000` at the source; (6) supervisor: start with `setsid
+nohup` (leaves the cron session's process group) + log death mode and
+uptime per restart to correlate with cell restarts; fix the duplicate
+SIGTERM log line.
+**Excluded:** Leonardo free for headless use (web-only API terms);
+Together AI (free tier gone); Replicate (no free tier); Stability AI
+(25 credits, trivial); Gemini new-key loop (owner order 2026-11-11
+19:48 CT — DEAD, not re-tested); OpenArt retry (network flagged);
+supervisord/s6 second watchdog (already excluded 2026-10-28).
+**Blocked / not done here:** Pollen key + Cloudflare re-scope + fal.ai
+/ HF signup (account/dashboard steps, lane or owner); no Valerie spicy
+image attempted through any new route (filters + visual embargo);
+Gemini 08:00 CT Nov 12 quota-reset retry still has no recorded result;
+no lane script modified; no in-flight upload touched; disk freed 0 by
+design (nothing verified 100% yet); agent-ops docs left local pending
+the clean-room clone PR (workdir dirty, 3,024 entries).

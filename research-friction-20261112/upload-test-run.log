@@ -1,0 +1,4 @@
+split 120000000 bytes into 2 part(s) of 100M
+VERIFIED upload-test-120mb.bin.part00 state=uploaded size=104857600 sha256 match
+VERIFIED upload-test-120mb.bin.part01 state=uploaded size=15142400 sha256 match
+ALL PARTS DONE: upload-test-120mb.bin (friction-test-20261112) — manifest at upload-test-120mb.bin.parts/MANIFEST.sha256
