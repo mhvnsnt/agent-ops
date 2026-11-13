@@ -1220,6 +1220,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#friction-research-free-headless-image-generation-supervisor-deaths-100-mb-upload-wrapper-2026-11-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Friction research — free headless image generation · supervisor deaths · 100 MB upload wrapper (2026-11-12)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3291,6 +3302,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#friction-research-free-headless-image-generation-supervisor-deaths-100-mb-upload-wrapper-2026-11-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Friction research — free headless image generation · supervisor deaths · 100 MB upload wrapper (2026-11-12)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4317,6 +4339,87 @@ Note: branch <code>3d-pipeline-research-pullin</code> (orphaned from main) still
 <td>Shell-only deploy floor ≈ 70–170 MB (code ~10 MB + UI/portraits ~7.5 MB + 1 stage + 2 fighters + movesets/music) — measured from live git-trees API</td>
 <td>live <code>gh api .../git/trees/main?recursive=1</code> 2026-10-26 (truncated, lower bounds)</td>
 <td>📄 documented — no content needs cutting, only the deploy splits</td>
+</tr>
+</tbody>
+</table>
+<h2 id="friction-research-free-headless-image-generation-supervisor-deaths-100-mb-upload-wrapper-2026-11-12">Friction research — free headless image generation · supervisor deaths · 100 MB upload wrapper (2026-11-12)<a class="headerlink" href="#friction-research-free-headless-image-generation-supervisor-deaths-100-mb-upload-wrapper-2026-11-12" title="Permanent link">&para;</a></h2>
+<p>Docs: agent-ops <code>research-friction-20261112/01-free-headless-imagegen.md</code>,
+<code>02-supervisor-deaths.md</code>, <code>03-release-upload-wrapper.md</code> +
+<code>pollinations-imggen.sh</code> + <code>gh-release-upload-100mb.sh</code> (both tested live
+this pass). Log: <code>FRICTION-RESEARCH-LOG.md</code> 2026-11-12 entry.</p>
+<table>
+<thead>
+<tr>
+<th>Finding / candidate</th>
+<th>Source (license)</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pollinations.ai anonymous text-to-image + flux img2img</td>
+<td>pollinations/pollinations (open source); no key/signup/card for anonymous path</td>
+<td>✅ <strong>wired + tested</strong> — <code>pollinations-imggen.sh</code> (45 s pacing, retries, image verify); live: 512×512 JPEG in ~6 s, own-eyes verified; anonymous tier serves Sana model (EXIF manufacturer=sana), watermarked</td>
+</tr>
+<tr>
+<td>Pollinations <code>kontext</code> (FLUX.1 Kontext Pro edits)</td>
+<td>same</td>
+<td>📄 queued — needs free Pollen key (enter.pollinations.ai signup, no card stated); helper already switches endpoints on <code>POLLINATIONS_KEY</code></td>
+</tr>
+<tr>
+<td>Cloudflare Workers AI FLUX.1 schnell (~57 imgs/day free)</td>
+<td>Cloudflare docs; connector custom.cloudflare (token valid, 200)</td>
+<td>📄 queued — Workers AI call 401s (token-scope gap, Pages scope only); needs re-scoped token, then the exact call in <code>cf-flux-body.json</code> is ready</td>
+</tr>
+<tr>
+<td>fal.ai signup credit ($5–$20, sources disagree)</td>
+<td>fal.ai/pricing via Nov 2026 roundups</td>
+<td>📄 queued — signup (email+GitHub), test schnell + Kontext</td>
+</tr>
+<tr>
+<td>HF Inference API monthly credits</td>
+<td>huggingface docs</td>
+<td>📄 queued — no token on this VM (no token file, no env var)</td>
+</tr>
+<tr>
+<td>Leonardo.Ai free tier</td>
+<td>leonardo.ai/pricing</td>
+<td>❌ excluded for headless use — web-only; API is separate pay-as-you-go, zero free API access; free creations public, model Auto Only</td>
+</tr>
+<tr>
+<td>Together AI</td>
+<td>together.ai + 2026 billing docs</td>
+<td>❌ excluded — free tier gone in 2026, new accounts read-only until deposit</td>
+</tr>
+<tr>
+<td>Replicate / Stability AI</td>
+<td>replicate.com/pricing; stability docs</td>
+<td>❌ excluded — no free tier (Replicate) / 25 credits trivial (Stability)</td>
+</tr>
+<tr>
+<td>Gemini API new key</td>
+<td>owner order 2026-11-11 19:48 CT</td>
+<td>❌ excluded — key loop DEAD, not re-tested</td>
+</tr>
+<tr>
+<td>OpenArt retry</td>
+<td>Turnstile evidence, ~/memory/2026-11-11.md</td>
+<td>❌ excluded — fails for the owner's own click; network flagged</td>
+</tr>
+<tr>
+<td>M. Engine supervisor ~2 h deaths (300 restarts lifetime)</td>
+<td>own log + server.js/watchdog.sh</td>
+<td>📄 diagnosed — 166 SIGTERM-graceful, 207 stale-PID silent, only 4 watchdog health-kills (watchdog ruled out as killer); recommend <code>setsid nohup</code> start + death-mode/uptime logging; fix duplicate SIGTERM log line; no code changed (live daemon)</td>
+</tr>
+<tr>
+<td><code>gh-release-upload-100mb.sh</code> (100 MB standard enforcer)</td>
+<td>own code, stdlib + gh CLI</td>
+<td>✅ <strong>wired + tested</strong> — 120 MB file → 2 parts, both VERIFIED (state=uploaded, exact size, sha256 after pull-back), exit 0, ~5 min; scratch release created + deleted; starter-delete path code-reviewed only (no starter existed to delete)</td>
+</tr>
+<tr>
+<td>GHA runner upload path</td>
+<td>2026-11-06 prototype</td>
+<td>📄 still queued — blocked on fine-grained PAT mint (browser step); API core limit healthy (4928/5000), not the blocker</td>
 </tr>
 </tbody>
 </table>
