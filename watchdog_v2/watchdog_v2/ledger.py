@@ -132,6 +132,11 @@ class Ledger:
                         (time.time(), disk_percent, total, new_issues, score_delta))
         self.db.commit()
 
+    def last_disk_percent(self) -> float | None:
+        row = self.db.execute(
+            "SELECT disk_percent FROM runs ORDER BY id DESC LIMIT 1").fetchone()
+        return float(row[0]) if row else None
+
     def total_score(self) -> int:
         row = self.db.execute("SELECT COALESCE(SUM(points),0) FROM scores").fetchone()
         return int(row[0])
