@@ -110,6 +110,34 @@ def test_proxy_env_sanitizer_strips_ipv6_literals(monkeypatch):
     assert os.environ["no_proxy"] == "localhost,example.com"
 
 
+def test_dot_temp_files_are_skipped_not_flagged(tmp_path):
+    # Regression, 2026-11-11 run 34: two 0-byte .tmp.*.json write-temps
+    # surfaced as corrupt_checkpoint. Temps are write debris, not
+    # checkpoints — the scan must not see them at all.
+    led = _ledger(tmp_path)
+    ck = tmp_path / "ck"
+    ck.mkdir()
+    _ckpt(ck, ".tmp.abcdef.json", "")
+    _ckpt(ck, "real.json", {"status": "completed"})
+    rep = scan(ck, led, disk_path=str(tmp_path), check_http=False)
+    assert rep["total_checkpoints"] == 1
+    assert rep["skipped_temp_files"] == 1
+    assert rep["new_issues"] == []
+    led.close()
+
+
+def test_disk_trend_tracks_previous_run(tmp_path):
+    led = _ledger(tmp_path)
+    ck = tmp_path / "ck"
+    ck.mkdir()
+    rep1 = scan(ck, led, disk_path=str(tmp_path), check_http=False)
+    assert rep1["disk_trend"] == "unknown"
+    rep2 = scan(ck, led, disk_path=str(tmp_path), check_http=False)
+    assert rep2["disk_delta"] == 0.0
+    assert rep2["disk_trend"] == "flat"
+    led.close()
+
+
 def test_rewards_accrue_and_penalty_applies(tmp_path):
     led = _ledger(tmp_path)
     assert led.award("clean_heartbeat") == 2

@@ -99,7 +99,13 @@ def scan(checkpoints_dir: Path, ledger: Ledger, *, disk_path: str,
     # ---- checkpoint registry -------------------------------------------
     counts: dict[str, int] = {}
     active_watch: list[str] = []
-    files = sorted(checkpoints_dir.glob("*.json"))
+    # Skip dot-prefixed files: the lanes' atomic-write temps (.tmp.*.json,
+    # .gitkeep) are write debris, not checkpoints. v2.0 counted them and
+    # surfaced two 0-byte temps as corrupt_checkpoint on 2026-11-11 —
+    # a false alarm, verified own-eyes (no checkpoint data was lost).
+    all_json = sorted(checkpoints_dir.glob("*.json"))
+    skipped_temp = [p for p in all_json if p.name.startswith(".")]
+    files = [p for p in all_json if not p.name.startswith(".")]
     for path in files:
         cls, cp, detail = classify_file(path, now=now)
         counts[cls.value] = counts.get(cls.value, 0) + 1
@@ -122,11 +128,24 @@ def scan(checkpoints_dir: Path, ledger: Ledger, *, disk_path: str,
         # cls == DEAD: old zero/corrupt — logged in counts, never surfaced.
     report["counts"] = counts
     report["total_checkpoints"] = len(files)
+    report["skipped_temp_files"] = len(skipped_temp)
     report["active_watch"] = sorted(active_watch)
 
     # ---- disk ------------------------------------------------------------
     disk = psutil.disk_usage(disk_path)
     report["disk_percent"] = disk.percent
+    # Disk trend: which way the number is heading since the last run,
+    # so a slow climb (66% -> 81% over two days in Nov 2026) is visible
+    # before it trips a threshold, not only after.
+    prev_disk = ledger.last_disk_percent()
+    if prev_disk is None:
+        report["disk_delta"] = None
+        report["disk_trend"] = "unknown"
+    else:
+        delta = round(disk.percent - prev_disk, 1)
+        report["disk_delta"] = delta
+        report["disk_trend"] = "rising" if delta >= 1 else (
+            "falling" if delta <= -1 else "flat")
     if disk.percent >= DISK_SURFACE:
         surface("disk_high", disk_path, f"{disk.percent:.0f}% used", "early_disk_warning")
     elif disk.percent >= DISK_WARN:

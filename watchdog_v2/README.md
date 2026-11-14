@@ -75,6 +75,18 @@ says nothing.
 - **Old dead is not news.** Zero/corrupt files older than 72h classify as
   DEAD (counted, never alarmed) — the ttt2-resume-100 corpse is the
   canonical example.
+- **Temp debris is not a checkpoint (v2.1).** Dot-prefixed files
+  (`.tmp.*.json` atomic-write leftovers, `.gitkeep`) are skipped before
+  classification and counted in `skipped_temp_files`. v2.0 flagged two
+  0-byte temps as corrupt on 2026-11-11 — a false alarm; nothing was lost.
+
+## Disk trend (v2.1)
+
+The report carries `disk_percent`, `disk_delta` (points since the last
+run), and `disk_trend` (`rising` / `falling` / `flat`, ±1 point). A slow
+climb is visible before it trips the 80%/85% thresholds — disk went
+66% → 81% over two days in Nov 2026 while the number alone looked fine
+run to run.
 - **Lock or exit.** A second concurrent run exits 75 immediately.
 - **Bounded everything.** 2 HTTP attempts, 15s timeouts, one pass over
   the registry, no recursion into lane workdirs.
