@@ -1,3 +1,13 @@
+## Overnight pipeline 2026-11-14T09:44Z (30-min run)
+- Queue delta first: 0 merged by this run. 1 verified landed by another lane (AO #758 merge 5c1c8e50 — the 09:14Z run's own queue sync, payload blobs MERGE-QUEUE.md 9cb9c8c0/3,602,502 B + overnight-handoff.md a52c1c1f/2,996,109 B both blob-identical to local files).
+- Tips: AO 1662ba31 -> 5c1c8e50 (#758); all other tips unchanged since 09:14Z (WH 62f27d44, CJ 4031f290, GRE e9ffb917, Bannon bca19c49, CD 5280d74c, CD2 4523ff12, wrestling e1702afd, PP 052c3490, MMHQ 3bd91914, DG 8640b607). Open-PR counts identical across all 11 repos. WH #1714/#1702/#1701/#1678 + CD #71 MERGEABLE BLOCKED; GRE #84 + DG #88 MERGEABLE UNSTABLE — 0 green+mergeable, nothing merged.
+- STEP 2: verify-done sweep 5/5 HOLD — AO #758 on main; DG #88 OPEN head 6de78b65; CNleaks EEN draft 9 assets/3,737,106,862 B exact; DG branch heads unchanged; Quezada AMV v2 master 78,240,259 B, ffprobe 150.000000s.
+- STEP 3 checkpoints: 80 healthy / 0 stale / 1151 skipped, 3 pre-existing 0-byte temps. Nothing to resume.
+- STEP 4 canon-sync: nothing new (MEMORY.md md5 b1f87ec9 unchanged).
+- STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 64% (95G/150G, 54G free).
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down.
+- BLOCKED >72h (16 carried, unchanged): WH conflicting 12 + #713 + #377 owner-held; Bannon #78 owner-held; GRE #84 checks-unreadable; WH #1714/#1702/#1701/#1678 gate-fail (Megami-face deviation, owner decision pending); CD #71 gate-fail.
+- Queue sync: AO #___ this run (branch merge-queue-sync-20261114-0944, scratch-clone route); merge + payload verify follow in this run's close-out (daily log) and next run's entry.
 ## Overnight pipeline 2026-11-14T09:14Z (30-min run)
 - Queue delta first: 0 merged by this run. 1 verified landed by another lane (AO #756 merge 1662ba31 — the 08:44Z run's own queue sync, payload blobs MERGE-QUEUE.md d4181213/3,598,390 B + overnight-handoff.md d94a91c0/2,993,714 B both blob-identical to local files). 0 false claims reopened (verify-done sweep 5/5 HOLD). 0 new queue items. 0 stale checkpoints resumed.
 - Tips: AO 5eae5606 -> 1662ba31 (#756); all other tips unchanged since 08:44Z (WH 62f27d44, CJ 4031f290, GRE e9ffb917, Bannon bca19c49, CD 5280d74c, CD2 4523ff12, wrestling e1702afd, PP 052c3490, MMHQ 3bd91914, DG 8640b607). Open-PR counts identical (WH 30, DG 8, CJ 0, GRE 1, Bannon 5, CD 1, CD2 0, wrestling 0, PP 14, MMHQ 2, AO 0). WH #1714 + CD #71 still MERGEABLE BLOCKED (instruction-gate FAIL); GRE #84 + DG #88 MERGEABLE UNSTABLE. Nothing mergeable.
