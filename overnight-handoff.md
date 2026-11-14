@@ -1,3 +1,13 @@
+## Overnight pipeline 2026-11-14T10:14Z (30-min run)
+- Queue delta first: 0 merged by this run. 1 verified landed by another lane (AO #759 merge 6e48ed8b — the 09:44Z run's own queue sync, payload blobs MERGE-QUEUE.md 7de7257e/3,605,904 B + overnight-handoff.md e8ec8803/2,997,820 B both blob-identical to local files).
+- Tips: AO 5c1c8e50 -> 6e48ed8b (#759); all other tips unchanged since 09:44Z (WH 62f27d44, CJ 4031f290, GRE e9ffb917, Bannon bca19c49, CD 5280d74c, CD2 4523ff12, wrestling e1702afd, PP 052c3490, DG 8640b607). CORRECTION: baseline 'MMHQ 3bd91914' unresolvable (API 422, no such commit); M.-Engine- main is 0adacedf (2026-10-27 merge) — no movement. Open-PR counts identical across all 11 repos; full clean-scan: 0 PRs mergeable_state clean. WH #1714/#1702/#1701/#1678 + CD #71 MERGEABLE BLOCKED; GRE #84 + DG #88 MERGEABLE UNSTABLE — 0 green+mergeable, nothing merged.
+- STEP 2: verify-done sweep 5/5 HOLD, 0 false. CNleaks EEN draft verified in the CORRECT repo mhvnsnt/cn-gigaleak-ed-edd-n-eddy (9 assets/3,737,106,862 B exact; 'cnleaks' repo does not exist; get-by-tag 404s for drafts — use the list endpoint). Quezada AMV v2 master 78,240,259 B / 150.000000s, staged copy same size.
+- STEP 3: checkpoint audit 80 healthy / 0 stale / 1151 skipped, 3 unparseable pre-existing 0-byte temps. Nothing to resume.
+- STEP 4 canon-sync: nothing new (MEMORY.md md5 b1f87ec9 unchanged).
+- STEP 5: failure-alerts.log nothing new (last entry 2026-10-20). Disk 64%. In-flight sacred work untouched.
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down.
+- BLOCKED >72h (16 carried, unchanged): see MERGE-QUEUE.md entry this run.
+- Queue sync: AO #___ this run (branch merge-queue-sync-20261114-1014, scratch-clone route); merge + payload verify follow in this run's close-out (daily log) and next run's entry.
 ## Overnight pipeline 2026-11-14T09:44Z (30-min run)
 - Queue delta first: 0 merged by this run. 1 verified landed by another lane (AO #758 merge 5c1c8e50 — the 09:14Z run's own queue sync, payload blobs MERGE-QUEUE.md 9cb9c8c0/3,602,502 B + overnight-handoff.md a52c1c1f/2,996,109 B both blob-identical to local files).
 - Tips: AO 1662ba31 -> 5c1c8e50 (#758); all other tips unchanged since 09:14Z (WH 62f27d44, CJ 4031f290, GRE e9ffb917, Bannon bca19c49, CD 5280d74c, CD2 4523ff12, wrestling e1702afd, PP 052c3490, MMHQ 3bd91914, DG 8640b607). Open-PR counts identical across all 11 repos. WH #1714/#1702/#1701/#1678 + CD #71 MERGEABLE BLOCKED; GRE #84 + DG #88 MERGEABLE UNSTABLE — 0 green+mergeable, nothing merged.
