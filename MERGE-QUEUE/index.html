@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-13t1830z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-14t0514z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -859,6 +859,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-14t0514z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-14T05:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-13t1830z-30-min-run" class="md-nav__link">
@@ -4127,6 +4138,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-14t0514z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-14T05:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-13t1830z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5480,6 +5502,18 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-14t0514z-30-min-run">Overnight pipeline 2026-11-14T05:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-14t0514z-30-min-run" title="Permanent link">&para;</a></h2>
+<p>Overnight pipeline 2026-11-14T05:14Z (queue delta first: 0 merged BY this run; 2 verified landed by another lane (DG studio presets merge 8640b607 — direct-push merge, commits cf037c2f + f5afc79d, ~30 files under show/production/tooling/studio-presets/ (Male Singer 1 tenor RAW+MIXED, Producer Pack One, engineering chains), verified on main via compare; AO #749 merge 1bf3104e, the 18:30Z run's own queue sync, payload blobs MERGE-QUEUE.md 6ff39c3c/3,569,948 B + overnight-handoff.md 25a96c61/2,978,414 B both blob-identical to local files); 0 false claims reopened (verify-done sweep: 5 checks, 5 HOLD — AO #749 on main; DG studio presets on main; DG #88 still OPEN head 6de78b6; CNleaks EEN draft eenee-cnleaks-v1 9 assets/3,737,106,862 B exact; Quezada 240 files in frames/full/, stand driver ended cleanly 16:22:47 UTC, AMV v1 assembled quezada-amv-v1.mp4 uploading via remote-storage PID 4965, lane-owned, NOT touched); 2 NEW queue items (DG cuts/intro-assembly BRANCH-ONLY head 11e60436, diverged ahead 4/behind 3, release intro-extended-unused-20261113 1 asset; DG music/theme-song-v2-vocal BRANCH-ONLY head ab0d53ea, diverged ahead 7/behind 3, release theme-song-v2-vocal 34 assets — both lanes actively pushing, heads moved since 23:12 CT watchdog note, no PR opened this run: DG lanes land completed work via direct-push merge per tonight's studio-presets precedent); 0 stale checkpoints resumed (audit: 1231 scanned, 0 running, 0 stale, 1 unparseable 0-byte temp wdstage-bgk0bdaj.json pre-existing; watchdog tick agrees 80 healthy, 0 stale, 0 STUCK); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 8 open + 17 branch-only + PP 14 + MMHQ 2; blocked (&gt;72h) = 16 carried)
+- IDLE: last user msg 2026-11-14T04:34:24Z (~40 min idle at run start per DB); no lock file; lock created OK this run (disk 80%, ~119G/150G, ~31G free — under the 85% threshold).
+- STEP 1 (delta sweep vs 18:30Z baseline): tips changed only DG 36ab7d9f -&gt; 8640b607 (studio presets direct-push merge, verified) and AO 28704ff9 -&gt; 1bf3104e (#749, 18:30Z run's own sync, verified); all other tips unchanged (WH 62f27d44, CJ 4031f290, GRE e9ffb917, Bannon bca19c49, CD 5280d74c, CD2 4523ff12, wrestling e1702afd, PP 052c3490, MMHQ 3bd91914). Open-PR counts identical: WH 30, DG 8, CJ 0, GRE 1, Bannon 5, CD 1, CD2 0, wrestling 0, PP 14, MMHQ 2, AO 0. Targeted re-check: WH #1714/#1702/#1701/#1678 still MERGEABLE BLOCKED (instruction-gate FAIL); CD #71 MERGEABLE BLOCKED; GRE #84 MERGEABLE UNSTABLE; DG #88 MERGEABLE UNSTABLE — 0 green+mergeable non-draft non-excluded, nothing merged this run.
+- STEP 2: verify-done sweep 5/5 HOLD, 0 false (see delta line). Valerie R2 branch basebody/valerie-2d-r2 head still 426bc60a — push still owed. Janae branch basebody/janae-2d head still ff222e96 — owner verdict still owed, no PR until he rules.
+- STEP 3: checkpoint audit 1231 scanned (direct python; checkpoint_audit.py still absent, tools/ archived 2026-10-31): 0 running, 0 stale, 1 unparseable; watchdog 23:1x tick agrees (80 healthy/in-progress, 0 stale, 0 STUCK). Nothing to resume.
+- STEP 4 canon-sync: nothing new (MEMORY.md md5 b1f87ec9, mtime 22:48 CST — diff vs agent-memory mirror is the memory-system rewrite only, same facts, tail ends JANAE SHEET v2 — REJECTED; no studio-preset/singer/producer-pack entry in MEMORY.md — the owner order lives in the DG merge commits themselves, already on main; daily-note additions since 18:30Z are watchdog/lane entries only, no new game canon). Carried: memory rewrite NOT yet mirrored to GitHub backup (mirror still pre-rewrite 9d2fe988-era, 146 lines); NOT reconciled per memory-pause rule.
+- STEP 5: failure-alerts.log nothing new (last entry 2026-10-20). Disk 80% (119G/150G, 31G free), below 85%. In-flight sacred work untouched: remote-storage upload of quezada-amv-v1.mp4 (PID 4965, started 23:06); curl DG release-asset download PID 19402 (disk-offload verify-c3); guardian-watch PIDs 3350/3356 alive; at-inflate2 PID 18824 relaunched 23:11 (2.1/55.5GB). research.py + pull-to-repo.sh still absent (tools/ archived).
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work (DG intro/theme-song landing, Valerie v5 time-gated to Qwen reset ~06:40 CT Nov 14, Quezada puppet fix run15 wait alive PID 4875, Nightwolf watch quota-blocked). Stand down per CHECK-BEFORE-START.
+- BLOCKED &gt;72h (carried set, unchanged): WH conflicting 12 (#1517, #1073, #1072, #1057, #970, #911, #908, #875, #826, #714, #706, #1600); WH #713 (game-unit-tests fail + conflicting); WH #377 owner-held evidence; Bannon #78 excluded/owner-held; GRE #84 guard-queued (checks unreadable); WH #1714/#1702/#1701/#1678 gate-fail (Megami-face deviation decision pending with owner); CD #71 gate-fail (verbatim Xbox instruction absent). CARRIED: row-48 stamp; non-upright-start incl. t3_crouch; live-opponent proof videos owed; Jun bank rows.pack.json/hit_frames.json owed; bank-row import adjudication; TorBox key dead; OWNER RULING #8; quantum-jam decisions; live Worker deploy STILL PENDING.
+- Queue counts: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + dream-girl 8 open + 17 branch-only (15 carried + cuts/intro-assembly + music/theme-song-v2-vocal new); PP 14 + money-machine-hq 2 tracked; blocked (&gt;72h) = 16 carried.
+- Queue sync: AO #___ this run (branch merge-queue-sync-20261113-2314, scratch-clone route); merge + payload verify follow in this run's close-out (daily log) and next run's entry.</p>
 <h2 id="overnight-pipeline-2026-11-13t1830z-30-min-run">Overnight pipeline 2026-11-13T18:30Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-13t1830z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-13T18:30Z (queue delta first: 0 merged BY this run; 1 verified landed by another lane (AO #748 merge 28704ff9, the 16:44Z run's own queue sync, verified on main this run); 0 false claims reopened (verify-done sweep: 5 checks, 5 HOLD — AO #748 on main; DG #88 branch head 6de78b6 blobs BIBLE.md 18a84c1b/46,325 B + CAST.md 17410473/201,665 B verified; WH tip 62f27d44 unchanged; CNleaks EEN draft eenee-cnleaks-v1 on mhvnsnt/cn-gigaleak-ed-edd-n-eddy 9 assets/3,737,106,862 B exact; Quezada NEW render driver running since 18:14 UTC, 240 files in frames/full/, lane-owned, NOT touched); 1 canon commit (DG #88 branch 6de78b6, CUT 000B ruling, PR body updated — still OPEN MERGEABLE UNSTABLE, NOT merged); 0 stale checkpoints resumed (audit: 1231 scanned, 0 running, 0 stale, 1 unparseable 0-byte temp wdstage-bgk0bdaj.json + 2 hidden .tmp 0-byte temps, all pre-existing); queue-item update: DG basebody/janae-2d head 120cc01 -&gt; ff222e96 (lane pushed new work, owner verdict still owed, no PR until he rules); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 8 open + 15 branch-only + PP 14 + MMHQ 2; blocked (&gt;72h) = 16 carried)
 - IDLE: last user msg 2026-11-13T17:41:50Z (~33 min idle at run start per DB); no lock file; lock created OK this run (disk 80%, ~118G/150G, ~31G free — under the 85% threshold).
