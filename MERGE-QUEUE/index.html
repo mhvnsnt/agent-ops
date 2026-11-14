@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-14t0844z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-14t0914z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -859,6 +859,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-14t0914z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-14T09:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-14t0844z-30-min-run" class="md-nav__link">
@@ -4204,6 +4215,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-14t0914z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-14T09:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-14t0844z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5634,6 +5656,17 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-14t0914z-30-min-run">Overnight pipeline 2026-11-14T09:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-14t0914z-30-min-run" title="Permanent link">&para;</a></h2>
+<p>Overnight pipeline 2026-11-14T09:14Z (queue delta first: 0 merged BY this run; 1 verified landed by another lane (AO #756 merge 1662ba31 — the 08:44Z run's own queue sync, payload blobs verified by THIS run against main: MERGE-QUEUE.md d4181213/3,598,390 B + overnight-handoff.md d94a91c0/2,993,714 B both blob-identical to local files); 0 false claims reopened (verify-done sweep: 5 checks, 5 HOLD — AO #756 on main; DG #88 still OPEN head 6de78b65 UNSTABLE; CNleaks EEN draft eenee-cnleaks-v1 9 assets/3,737,106,862 B exact; DG branch-only heads unchanged (cuts/intro-assembly 11e60436, music/theme-song-v2-vocal ab0d53ea, Valerie 426bc60a, Janae ff222e96); Quezada AMV v2 master assembly/quezada-amv-v2.mp4 78,240,259 B, ffprobe duration 150.000000s, staged copy in stage-worktree/episodes/ep01/quezada-amv/ same size 02:50 — gate report confirms CRF 24 delivery encode); 0 new queue items; 0 stale checkpoints resumed (audit: 80 healthy / 0 stale / 1151 skipped, 3 unparseable pre-existing 0-byte temps); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 8 open + 17 branch-only + PP 14 + MMHQ 2; blocked (&gt;72h) = 16 carried)
+- IDLE: last user msg 2026-11-14T06:06:21Z (~188 min idle at run start per DB); no lock file; lock created OK this run (disk 64%, ~95G/150G, ~54G free — under the 85% threshold).
+- STEP 1 (delta sweep vs 08:44Z baseline): tips changed only AO 5eae5606 -&gt; 1662ba31 (#756, the 08:44Z run's own sync, verified this run); all other tips unchanged (WH 62f27d44, CJ 4031f290, GRE e9ffb917, Bannon bca19c49, CD 5280d74c, CD2 4523ff12, wrestling e1702afd, PP 052c3490, MMHQ 3bd91914, DG 8640b607). Open-PR counts identical: WH 30, DG 8, CJ 0, GRE 1, Bannon 5, CD 1, CD2 0, wrestling 0, PP 14, MMHQ 2, AO 0. Targeted re-check: WH #1714 + CD #71 still MERGEABLE BLOCKED (instruction-gate FAIL); GRE #84 + DG #88 MERGEABLE UNSTABLE — 0 green+mergeable non-draft non-excluded, nothing merged this run.
+- STEP 2: verify-done sweep 5/5 HOLD, 0 false (see delta line). NOTE: the 08:44Z entry named the AMV v2 file "quezada-amv-v2-crf24.mp4" — the actual master filename is assembly/quezada-amv-v2.mp4 (gate report: CRF 24 delivery encode); size/duration match exactly, HOLD stands. No ffmpeg/blender/curl/aria2c/wget process running at check; DG release-asset curl gone (completion unverified, lane-owned, NOT touched); du disk-size scan PID 6462 running (lane-owned).
+- STEP 3: checkpoint audit (checkpoint_audit.py ran: 80 healthy / 0 stale / 1151 skipped, 3 unparseable 0-byte temps pre-existing); watchdog 03:10 CST tick agrees (nothing resumed, parked candidates fresher than threshold). Nothing to resume.
+- STEP 4 canon-sync: nothing new (MEMORY.md md5 b1f87ec9 unchanged, mtime 22:48 CST Nov 13; daily-note additions since 08:44Z are watchdog/lane entries only — no new game canon). Merge-law CI watch 03:12 CST: money-machine-hq #31 confirmed MERGED 2026-10-30, pruned from its watch list (was never a queue open item; queue MMHQ count unchanged at 2).
+- STEP 5: failure-alerts.log nothing new (last entry 2026-10-20). Disk 64% (95G/150G, 54G free), below 85%. In-flight sacred work untouched: du scan PID 6462; tv-gigaleak at-inflate2 relaunched 03:11 PID 5056 (~14.3GB in, lane-owned); Quezada puppet fix run21 wait alive PID 2716. No render/download touched.
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down.
+- BLOCKED &gt;72h (16 carried, unchanged): WH conflicting 12 + #713 + #377 owner-held; Bannon #78 owner-held; GRE #84 checks-unreadable; WH #1714/#1702/#1701/#1678 gate-fail (Megami-face deviation, owner decision pending); CD #71 gate-fail. Plus carried items: row-48 stamp, non-upright-start, live-opponent proof videos, Jun bank rows, bank-row import adjudication, TorBox key dead, OWNER RULING #8, quantum-jam decisions, live Worker deploy pending.
+- Queue sync: AO #___ this run (branch merge-queue-sync-20261114-0914, scratch-clone route); merge + payload verify follow in this run's close-out (daily log) and next run's entry.</p>
 <h2 id="overnight-pipeline-2026-11-14t0844z-30-min-run">Overnight pipeline 2026-11-14T08:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-14t0844z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-14T08:44Z (queue delta first: 0 merged BY this run; 1 verified landed by another lane (AO #755 merge 5eae5606 — the 08:14Z run's own queue sync, payload blobs verified by THIS run against main: MERGE-QUEUE.md 5777d177/3,594,663 B + overnight-handoff.md e5e4f958/2,992,492 B both blob-identical to local files); 0 false claims reopened (verify-done sweep: 5 checks, 5 HOLD — AO #755 on main; DG #88 still OPEN head 6de78b65; CNleaks EEN draft eenee-cnleaks-v1 9 assets/3,737,106,862 B exact; DG branch-only heads unchanged (cuts/intro-assembly 11e60436, music/theme-song-v2-vocal ab0d53ea, Valerie 426bc60a, Janae ff222e96); Quezada AMV v2 crf24 ffmpeg encode FINISHED during this run (02:47:12 CST, 78,240,259 B, ffprobe duration 150.000000s == source 150.000000s, lane-owned, NOT touched)); 0 new queue items; 0 stale checkpoints resumed (audit: 80 healthy / 0 stale / 1151 skipped, 3 unparseable pre-existing 0-byte temps); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 8 open + 17 branch-only + PP 14 + MMHQ 2; blocked (&gt;72h) = 16 carried)
 - IDLE: last user msg 2026-11-14T06:06:21Z (~158 min idle at run start per DB); no lock file; lock created OK this run (disk 71%, ~106G/150G, ~44G free — under the 85% threshold).
