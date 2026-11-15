@@ -1,3 +1,12 @@
+## Overnight pipeline 2026-11-15T22:14Z
+- Queue delta: 0 merged by this run; 1 verified landed by another lane — AO #799 merge a9ef0054 (21:44Z run's queue sync; MERGE-QUEUE.md blob de832ecf/3,768,192 B exact-match on main).
+- Verify-done sweep 5/5 HOLD, 0 false claims reopened.
+- All tips unchanged vs 21:44Z except AO (411f58fc -> a9ef0054, #799). Open PR counts identical. Carried blockers re-checked, heads unchanged.
+- Checkpoints: 80 healthy / 0 stale / 1150 skipped; 2 unparseable carried.
+- DG cuts/panels-fill BRANCH-ONLY unchanged (27 ahead / 122 behind); DG LOCAL-ONLY 362 dirty, HEAD 8cbb6b8, untouched.
+- Quota wall still hard-failing home writes (lock + overnight-log + memory-note appends all EDQUOT); ran with /tmp lock; run record lives in this queue sync only. Disk 82%.
+- Blocked >72h: 16 carried, unchanged (see MERGE-QUEUE.md).
+- Queue sync: AO #___ this run (pending...).
 ## Overnight pipeline 2026-11-15T21:44Z
 - Queue delta: 0 merged by this run; 0 new landings — all tips unchanged vs 21:14Z; independent re-verification of the 21:14Z run's claims 5/5 HOLD (WH #1745 528aeea8 payload; DG 2cdf4d12 payload; AO #798 411f58fc on main; PPWA 9f33a7e0 + MASTER-INDEX.json ec5b2ee1; MMHQ DASHBOARD.md 4d6de705).
 - Verify-done sweep 5/5 HOLD, 0 false claims reopened.
