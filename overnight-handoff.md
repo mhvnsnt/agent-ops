@@ -1,3 +1,13 @@
+## Overnight pipeline 2026-11-15T23:14Z
+- Queue delta: 0 merged by this run; 3 verified landed by another lane — AO #801 merge 2c36d466 (22:44Z run's queue sync), PPWA 23967518 (6 direct commits: hold-none, deformation, anatomytool, all-models-fix, walk-fix-2026-11-03, bare-base), WH #1745 merge 528aeea8 re-verified (material_gate.mjs 9c23b3fe + assets.js cf9262a0).
+- Verify-done sweep 5/5 HOLD, 0 false claims reopened.
+- All tips unchanged vs 22:44Z except AO (990d18ef -> 2c36d466, #801) and PPWA (05887660 -> 23967518). Open PR counts identical. Targeted re-check: WH #1714, CD #71, GRE #84, DG #9, DG #89 — states unchanged.
+- Checkpoints: 79 healthy / 0 stale / 1151 skipped; 2 unparseable carried (wdstage + .progress-state.json). cn-gigaleak file no longer unparseable.
+- DG cuts/panels-fill BRANCH-ONLY unchanged (27 ahead / 123 behind); DG LOCAL-ONLY carried (362 dirty, HEAD 8cbb6b8).
+- Quota wall still hard-failing home writes (lock + overnight-log appends EDQUOT); ran with /tmp lock; run record lives in this queue sync only. Disk 82%. VM rebooted ~23:00 UTC; /tmp wiped.
+- NEW: /tmp/ql108-resume-hold/ GONE after the ~23:00 UTC reboot — show-prod resume lane's held files may be lost; guardian must confirm whether they survive elsewhere.
+- Blocked >72h: 16 carried, unchanged (see MERGE-QUEUE.md).
+- Queue sync: AO #___ this run (pending...).
 ## Overnight pipeline 2026-11-15T22:44Z
 - Queue delta: 0 merged by this run; 3 verified landed by another lane — AO #800 merge 990d18ef (22:14Z run's queue sync), DG 76819601 (Akafuyu generation-attempt records, 4 files), PPWA 05887660 (5 direct commits: Pond boots x2, five-other-v2, rig-motion-pass, Kiriko here-work).
 - Verify-done sweep 5/5 HOLD, 0 false claims reopened.
@@ -7,7 +17,7 @@
 - Quota wall still hard-failing home writes (lock + overnight-log appends EDQUOT); ran with /tmp lock; run record lives in this queue sync only. Disk 82%.
 - NEW carried finding: M.-Engine- supervisor watchdog pid-file mismatch (stale supervisor.pid vs live /tmp/m-engine-supervisor.pid; duplicate node EADDRINUSE loop; service unaffected).
 - Blocked >72h: 16 carried, unchanged (see MERGE-QUEUE.md).
-- Queue sync: AO #___ this run (pending...).
+- Queue sync: AO #801 this run (merge 2c36d466, verified landed by the 23:14Z run).
 ## Overnight pipeline 2026-11-15T22:14Z
 - Queue delta: 0 merged by this run; 1 verified landed by another lane — AO #799 merge a9ef0054 (21:44Z run's queue sync; MERGE-QUEUE.md blob de832ecf/3,768,192 B exact-match on main).
 - Verify-done sweep 5/5 HOLD, 0 false claims reopened.
@@ -25,7 +35,7 @@
 - DG cuts/panels-fill BRANCH-ONLY unchanged (27 ahead / 122 behind); DG LOCAL-ONLY 362 dirty, HEAD 8cbb6b8, untouched.
 - Quota wall still hard-failing home writes (lock + overnight-log + memory-note appends all EDQUOT); ran with /tmp lock; run record lives in this queue sync only. Disk 82%. PPWA = mhvnsnt/physics-playground-pwa, MMHQ = mhvnsnt/money-machine-hq (mapping recorded this run).
 - Blocked >72h: 16 carried, unchanged (see MERGE-QUEUE.md).
-- Queue sync: AO #___ this run (pending...).
+- Queue sync: AO #799 this run (merge a9ef0054, verified landed by the 22:14Z run).
 ## Overnight pipeline 2026-11-15T21:14Z
 - Queue delta: 1 merged by this run — WH #1745 merge 528aeea8 (4 packed -cdn models under the jsDelivr limit; assets.js cf9262a0 + king-tyrant GLB e5efa285/15,083,972 B + menajerii GLB 1f0d65d5/13,659,760 B verified on main); 3 verified landed by another lane — AO #797 merge c9f3f948 (20:44Z run's queue sync; MERGE-QUEUE.md 5d85b40f/3,758,081 B + overnight-handoff.md 67edd013/3,116,463 B exact-match on main), DG 2cdf4d12 (bare-body sheet pipeline doc + script), PPWA 9f33a7e0 (batch-12 manifest + 6 held GLBs).
 - Verify-done sweep 5/5 HOLD, 0 false claims reopened.
