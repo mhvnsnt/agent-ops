@@ -1,3 +1,13 @@
+## Overnight pipeline 2026-11-15T22:44Z
+- Queue delta: 0 merged by this run; 3 verified landed by another lane — AO #800 merge 990d18ef (22:14Z run's queue sync), DG 76819601 (Akafuyu generation-attempt records, 4 files), PPWA 05887660 (5 direct commits: Pond boots x2, five-other-v2, rig-motion-pass, Kiriko here-work).
+- Verify-done sweep 5/5 HOLD, 0 false claims reopened.
+- All tips unchanged vs 22:14Z except DG (2cdf4d12 -> 76819601), PPWA (9f33a7e0 -> 05887660), AO (a9ef0054 -> 990d18ef, #800). Open PR counts identical. Carried blockers not re-read (no movement).
+- Checkpoints: 79 healthy / 0 stale / 1150 skipped; 3 unparseable (wdstage + .progress-state carried; cn-gigaleak-archiveorg-pull.json NEW, truncated 44,918 B).
+- DG cuts/panels-fill BRANCH-ONLY unchanged (27 ahead / 123 behind); DG LOCAL-ONLY 362 dirty, HEAD 8cbb6b8, untouched.
+- Quota wall still hard-failing home writes (lock + overnight-log appends EDQUOT); ran with /tmp lock; run record lives in this queue sync only. Disk 82%.
+- NEW carried finding: M.-Engine- supervisor watchdog pid-file mismatch (stale supervisor.pid vs live /tmp/m-engine-supervisor.pid; duplicate node EADDRINUSE loop; service unaffected).
+- Blocked >72h: 16 carried, unchanged (see MERGE-QUEUE.md).
+- Queue sync: AO #___ this run (pending...).
 ## Overnight pipeline 2026-11-15T22:14Z
 - Queue delta: 0 merged by this run; 1 verified landed by another lane — AO #799 merge a9ef0054 (21:44Z run's queue sync; MERGE-QUEUE.md blob de832ecf/3,768,192 B exact-match on main).
 - Verify-done sweep 5/5 HOLD, 0 false claims reopened.
@@ -6,7 +16,7 @@
 - DG cuts/panels-fill BRANCH-ONLY unchanged (27 ahead / 122 behind); DG LOCAL-ONLY 362 dirty, HEAD 8cbb6b8, untouched.
 - Quota wall still hard-failing home writes (lock + overnight-log + memory-note appends all EDQUOT); ran with /tmp lock; run record lives in this queue sync only. Disk 82%.
 - Blocked >72h: 16 carried, unchanged (see MERGE-QUEUE.md).
-- Queue sync: AO #___ this run (pending...).
+- Queue sync: AO #800 this run (merge 990d18ef, verified landed by the 22:44Z run).
 ## Overnight pipeline 2026-11-15T21:44Z
 - Queue delta: 0 merged by this run; 0 new landings — all tips unchanged vs 21:14Z; independent re-verification of the 21:14Z run's claims 5/5 HOLD (WH #1745 528aeea8 payload; DG 2cdf4d12 payload; AO #798 411f58fc on main; PPWA 9f33a7e0 + MASTER-INDEX.json ec5b2ee1; MMHQ DASHBOARD.md 4d6de705).
 - Verify-done sweep 5/5 HOLD, 0 false claims reopened.
