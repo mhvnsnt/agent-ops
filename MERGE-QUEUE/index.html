@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-15t1614z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-15t1644z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -859,6 +859,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-15t1644z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-15T16:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-15t1614z-30-min-run" class="md-nav__link">
@@ -4534,6 +4545,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-15t1644z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-15T16:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-15t1614z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6294,6 +6316,17 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-15t1644z-30-min-run">Overnight pipeline 2026-11-15T16:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-15t1644z-30-min-run" title="Permanent link">&para;</a></h2>
+<p>Overnight pipeline 2026-11-15T16:44Z (queue delta first: 0 merged BY this run; 1 verified landed by another lane (AO #788 merge b1096e06 — the 16:14Z run's queue sync, merged 16:30Z, payload verified on main by THIS run: MERGE-QUEUE.md head on main carries the 16:14Z entry; this run's sync fills the 16:14Z entry's placeholder with #788); 0 false claims reopened (verify-done sweep: 5 checks, 5 HOLD — AO #788 b1096e06 on main; DG docs/BIBLE.md 51afc6ca/46,561 B; PPWA tip 5b348b7b; M.-Engine- tip 0adacedf; MMHQ tip b3b96a16 "dashboard: 2026-11-15 daily sweep"); 0 new queue items; 0 stale checkpoints resumed (audit: 80 healthy / 0 stale / 1151 skipped, 1 unparseable pre-existing 0-byte temp wdstage-bgk0bdaj.json); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 2 open + DG 1 branch-only + MMHQ 2 + PPWA 14 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked (&gt;72h) = 16 carried)
+- IDLE: last user msg 2026-11-15T14:38:14Z (~126 min idle at run start per DB); home lock creation FAILED twice (EDQUOT — quota wall; /tmp writes OK) — ran with lock in /tmp per 16:14Z precedent; no workspace lock left behind. Disk 82% (122G/150G, 28G free) — above 80%, below 85%, no action per guardian. Local MERGE-QUEUE.md still a truncated 307,200 B prefix — authoritative copy on main; this run's sync built from main via scratch clone in /tmp.
+- STEP 1 (delta sweep vs 16:14Z baseline): AO tip moved 0cc5ecfb -&gt; b1096e06 (#788, 16:14Z run's sync, verified above); all other tips unchanged (WH 62f27d44, DG ff4870ed, CJ d11f0e1f, GRE bbef101d, Bannon bca19c49, CD 5280d74c, CD2 4523ff12, wrestling e1702afd, M.-Engine- 0adacedf, PPWA 5b348b7b, MMHQ b3b96a16). Open-PR counts identical: WH 30, DG 2, CJ 0, GRE 1, Bannon 5, CD 1, CD2 0, wrestling 0, AO 0, PPWA 14, MMHQ 2, M.-Engine- 19. Targeted re-check: DG #9 mergeable=false/dirty (conflicting, unchanged); WH #1714 mergeable=true/blocked (gate-fail, owner decision pending, unchanged). 0 green+mergeable non-draft non-excluded, nothing merged in game repos. Excluded/owner-held untouched: Bannon #78 draft, WH #377, CJ #156/#157/#167, DG #89.
+- STEP 2: verify-done sweep 5/5 HOLD, 0 false (see delta line).
+- STEP 3: checkpoint audit 80 healthy / 0 stale / 1151 skipped, 1 unparseable pre-existing 0-byte temp (wdstage-bgk0bdaj.json, 0 B, Oct 30). Nothing to resume.
+- STEP 4 canon-sync: nothing new to commit (MEMORY.md md5 be09e197 unchanged since 11:14Z verification; daily-note additions are lane status, watchdog pulses — not committable canon).
+- STEP 5: failure-alerts.log nothing new (last entry 2026-10-20). Disk 82%. Sacred work untouched: no ffmpeg/blender renders in flight at check (guardian du scan + curl tunnel probe only); DG CUT 112 lane, GECS/dark-feminine finisher lanes — lane-owned, untouched.
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down.
+- BLOCKED &gt;72h (16 carried, unchanged): WH conflicting 12 + #713 + #377 owner-held; Bannon #78 owner-held; GRE #84 checks-unreadable; WH #1714/#1702/#1701/#1678 gate-fail (Megami-face deviation, owner decision pending); CD #71 gate-fail. Plus carried items: row-48 stamp, non-upright-start, live-opponent proof videos, Jun bank rows, bank-row import, DG cuts/panels-fill BRANCH-ONLY (owner judgement pending), show-prod resume lane BLOCKED ON QUOTA holding files in /tmp/ql108-resume-hold/ at risk on reboot — guardian-owned, carried.
+- Queue sync: AO #___ this run (pending — filled in after merge).</p>
 <h2 id="overnight-pipeline-2026-11-15t1614z-30-min-run">Overnight pipeline 2026-11-15T16:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-15t1614z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-15T16:14Z (queue delta first: 0 merged BY this run; 1 verified landed by another lane (AO #787 merge 0cc5ecfb — the 15:44Z run's queue sync, merged 15:57Z, payload MERGE-QUEUE.md + overnight-handoff.md 12+/1- each, no unexplained deletions, verified on main by THIS run; this run's sync fills the 15:44Z entry's placeholder with #787); 0 false claims reopened (verify-done sweep: 5 checks, 5 HOLD — AO #787 0cc5ecfb on main; DG docs/BIBLE.md 51afc6ca/46,561 B; PPWA tip 5b348b7b; M.-Engine- tip 0adacedf; MMHQ tip b3b96a16 "dashboard: 2026-11-15 daily sweep"); 0 new queue items; 0 stale checkpoints resumed (audit: 80 healthy / 0 stale / 1151 skipped, 3 unparseable pre-existing 0-byte temps); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 2 open + DG 1 branch-only + MMHQ 2 + PPWA 14 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked (&gt;72h) = 16 carried)
 - IDLE: last user msg 2026-11-15T14:38:14Z (~96 min idle at run start per DB); home lock creation FAILED (EDQUOT — new-file creation blocked under /home/hatch at the quota wall; /tmp writes OK) — ran with lock in /tmp per precedent. Disk 82% (122G/150G, 28G free) — above 80%, below 85%, no action per guardian. Local MERGE-QUEUE.md still a truncated 307,200 B prefix — authoritative copy on main; this run's sync built from main via scratch clone in /tmp.
@@ -6304,7 +6337,7 @@
 - STEP 5: failure-alerts.log nothing new (last entry 2026-10-20). Disk 82%. Sacred work untouched: setteidreams curl downloader (pid 52885) in-flight at check — lane-owned, NOT touched.
 - STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down.
 - BLOCKED &gt;72h (16 carried, unchanged): WH conflicting 12 + #713 + #377 owner-held; Bannon #78 owner-held; GRE #84 checks-unreadable; WH #1714/#1702/#1701/#1678 gate-fail (Megami-face deviation, owner decision pending); CD #71 gate-fail. Plus carried items: row-48 stamp, non-upright-start, live-opponent proof videos, Jun bank rows, bank-row import, DG cuts/panels-fill BRANCH-ONLY (owner judgement pending), show-prod resume lane BLOCKED ON QUOTA holding files in /tmp/ql108-resume-hold/ at risk on reboot — guardian-owned, carried.
-- Queue sync: AO #___ this run (pending — filled in after merge).</p>
+- Queue sync: AO #788 this run (merge b1096e06, verified landed by the 16:44Z run).</p>
 <h2 id="overnight-pipeline-2026-11-15t1544z-30-min-run">Overnight pipeline 2026-11-15T15:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-15t1544z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-15T15:44Z (queue delta first: 0 merged BY this run; 1 verified landed by another lane (AO #786 merge 89227f71 — the 15:14Z run's queue sync, payload MERGE-QUEUE.md blob 9d37f4a6/3,710,264 B + overnight-handoff.md blob 7e7db150/3,071,946 B verified exact-match on main by THIS run); 0 false claims reopened (verify-done sweep: 5 checks, 5 HOLD — AO #786 89227f71 on main; DG docs/BIBLE.md 51afc6ca/46,561 B; PPWA tip 5b348b7b; M.-Engine- tip 0adacedf; MMHQ tip b3b96a16 "dashboard: 2026-11-15 daily sweep"); 0 new queue items; 0 stale checkpoints resumed (audit: 80 healthy / 0 stale / 1151 skipped, 3 unparseable pre-existing 0-byte temps); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 2 open + DG 1 branch-only + MMHQ 2 + PPWA 14 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked (&gt;72h) = 16 carried)
 - IDLE: last user msg 2026-11-15T14:38:14Z (~66 min idle at run start per DB); no lock file; lock creation FAILED (EDQUOT) — ran without lock per precedent. Disk 82% (122G/150G, 28G free) — above 80%, below 85%, no action per guardian. VM rebooted ~14:56Z (uptime 51 min at 10:47 EST); live-view + zrok up per prior watchdog checks.
