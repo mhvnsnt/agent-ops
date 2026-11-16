@@ -328,3 +328,88 @@ Gemini 08:00 CT Nov 12 quota-reset retry still has no recorded result;
 no lane script modified; no in-flight upload touched; disk freed 0 by
 design (nothing verified 100% yet); agent-ops docs left local pending
 the clean-room clone PR (workdir dirty, 3,024 entries).
+
+## 2026-11-15 ~23:15 EST — tmpfs render-output loss (001R 6B, twice) · zrok stable share 401 + futile restart loop (continuous-friction-research)
+
+**Docs:** `research-friction-20261115/01-stage-as-it-lands.md`,
+`02-zrok-401-restart-loop.md` + `tmpfs-guard.sh` + `stage-as-it-lands.sh`.
+Research + two tested tools only — no PRs opened from the dirty workdir
+(2,588 modified entries on branch `lindy-privacy-policy-20261107`); a
+clean-room clone PR carries this pass, per the 2026-10-31/11-03/11-06/11-12
+precedent. No live lane touched, nothing uploaded/deleted/restarted.
+Dedupe checked via `research-check.sh` (tmpfs, stage-as-it-lands, zrok,
+inotify — all new; 100 MB standard, gh-no-retry, 408, starter-trap, aria2,
+supervisor-deaths already decided — not re-researched).
+**Problems targeted (from ~/MEMORY.md + disk-cleanup-log + live state,
+last ~24 h):** (1) Dream Girl 001R 6B render lost 69 finished character
+frames TWICE to VM restarts because output lived in /var/tmp (tmpfs) —
+and the re-render rebuilt in /var/tmp AGAIN the same night, with Blender
+5.2.4 itself (1.2 GB) on tmpfs; (2) the stable live-view URL
+fmmg-live.shares.zrok.io is down tonight (502) — the watchdog restarts
+the zrok share every 5 min and every restart dies instantly with
+`401 unauthorized; check the account token`.
+**Verified live this pass:** /tmp tmpfs 512 MB (67% used), /var/tmp tmpfs
+~2 GB (wiped by the 20:53 EST VM restart); 6B gate script (PID 106385,
+since 22:24) running with OUT=/var/tmp/cut001r, 0 frames yet, gate waiting
+(mem ~2.1 GB < 3 GB bar); gate script line 14 already says "/var/tmp is
+tmpfs, NOT durable — staging IS the save" and stages per batch to the
+dream-girl branch — the gap is the script + log + Blender binary on
+tmpfs with no guard; `zrok2 list shares` → panic `[GET /shares][401]
+listSharesUnauthorized` (live), `zrok2 list names` same 401,
+`zrok2 status` shows the token SET but the controller rejects it;
+zrok-share.log 03:37–04:12 UTC shows the restart→401 loop every 5 min;
+`zrok-share-proxied.sh` has no 401 handling, no backoff, no stop
+condition; localhost.run rotating tunnel is the working live-view path
+tonight. Memory update tonight adds a third data point for the same
+"lost finals" family: owner rule "any final he approves goes into the
+repo/releases the SAME day" after the Cape Jones v2 dance mixes were
+found lost (JP mix recovered from his phone 2026-11-15).
+**Pulled in / wired:** (1) **entr 5.9** (ISC, LICENSE file read live;
+5,731★) — built from source on this VM (`./configure` + `make`, cc),
+installed at `~/.local/bin/entr`; smoke-tested (modify → hook runs;
+`-d` exits on new file). **Found in testing: entr needs `-n` in
+non-TTY sessions** (all exec/cron sessions) or it dies on terminal
+attributes. (2) `tmpfs-guard.sh` — tested: /var/tmp + /tmp → UNSAFE
+rc 2; ~/workspace → ok (btrfs) rc 0; nonexistent path under /var/tmp →
+UNSAFE via parent check. (3) `stage-as-it-lands.sh` — polling stager
+(stable-size check + restart-safe state file; --once/--drain/daemon);
+tested end-to-end in scratch with a slow producer: 4/4 files staged,
+sha256 match on all 4, second drain staged 0. **Two bugs found by the
+test and fixed:** --once is a single sweep (documented), and --drain
+first exited while the producer was still writing — now stops only when
+a sweep stages nothing AND nothing is still being written.
+**Recommended:** (1) 6B lane: move Blender 5.2.4 + gate script + log to
+durable disk and add `tmpfs-guard.sh "$OUT" || exit 2` at gate start;
+(2) render lanes adopt `stage-as-it-lands.sh` (or per-batch staging like
+the 6B gate) for any output the render script does not stage itself;
+(3) checkpoint protocol follow-up: tmpfs check on OUT dir at lane start;
+(4) zrok: fresh enable token from the myzrok.io console → `zrok2
+disable && zrok2 enable <token> --headless` (browser step — owner/main
+agent), then verify `zrok2 list shares` clears 401; (5) live-view lane:
+401-circuit-breaker in `zrok-share-proxied.sh` (on 401, stop restarting,
+log NEEDS-REENABLE once, re-check hourly); after re-enable, check the
+share count against the free 5-share limit and release stale ones from
+the console if at the limit.
+**Excluded:** inotify-tools (GPL-2.0 — apt broken, source build needs
+autotools, absent; entr covers the slot); lsyncd (GPL-2.0 — needs lua,
+absent; host-to-host sync, wrong shape); fswatch (GPL-3.0 — big C++
+build for a 41 KB job); Python watchdog (Apache-2.0 — install untested);
+rclone as stager trigger (no watch mode); syncthing (MPL-2.0 — needs a
+peer); `zrok2 agent` as supervisor (cannot fix a dead token either);
+deleting local zrok state blindly (the verified fix is disable +
+re-enable); re-reserving the name `fmmg-live` (failure is auth, not the
+name).
+**Blocked / not done here:** 6B lane path moves + watchdog 401-breaker
+(lane owners apply; both targets live); zrok re-enable (needs a fresh
+console token — browser step; no token read/printed/recorded here);
+Python watchdog install; inotify-tools source build. **Related finding
+while verifying:** the `stream-stage.sh` PIPESTATUS bug (exit 1 after
+upload under `set -u`, found 2026-11-15 ~03:35Z) is still present in the
+local workdir copy — but that copy is **untracked local-only, never
+committed**, so no repo PR can fix it; the overlay copy at
+/opt/disk-stage-r3/ is already patched. NOT patched here: the disk-stage
+round-3 lane is live and the file is its running script — lane owner to
+commit-then-fix or patch in place. **Still queued from 2026-11-12:**
+M. Engine supervisor `setsid nohup` fix was NOT applied (`watchdog.sh`
+line 47 still plain `nohup`); deaths continue (restart 23:58:50 Nov 14).
+Disk freed 0 by design (nothing verified 100%, nothing moved/deleted).

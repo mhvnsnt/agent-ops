@@ -291,3 +291,26 @@ this pass). Log: `FRICTION-RESEARCH-LOG.md` 2026-11-12 entry.
 | M. Engine supervisor ~2 h deaths (300 restarts lifetime) | own log + server.js/watchdog.sh | 📄 diagnosed — 166 SIGTERM-graceful, 207 stale-PID silent, only 4 watchdog health-kills (watchdog ruled out as killer); recommend `setsid nohup` start + death-mode/uptime logging; fix duplicate SIGTERM log line; no code changed (live daemon) |
 | `gh-release-upload-100mb.sh` (100 MB standard enforcer) | own code, stdlib + gh CLI | ✅ **wired + tested** — 120 MB file → 2 parts, both VERIFIED (state=uploaded, exact size, sha256 after pull-back), exit 0, ~5 min; scratch release created + deleted; starter-delete path code-reviewed only (no starter existed to delete) |
 | GHA runner upload path | 2026-11-06 prototype | 📄 still queued — blocked on fine-grained PAT mint (browser step); API core limit healthy (4928/5000), not the blocker |
+
+## Friction research — tmpfs render loss + zrok 401 (2026-11-15)
+
+Docs: agent-ops `research-friction-20261115/01-stage-as-it-lands.md`,
+`02-zrok-401-restart-loop.md` + `tmpfs-guard.sh` + `stage-as-it-lands.sh`.
+Research + two tested tools — no live lane touched (6B gate script only read;
+zrok share loop only observed; no disable/enable, no restart by this pass).
+
+| Finding / candidate | Source (license) | Status |
+|---|---|---|
+| 001R 6B render lost 69 frames twice to /var/tmp (tmpfs) wipes; re-render rebuilt in /var/tmp again the same night; Blender 5.2.4 binary itself on tmpfs | Live state this pass + `CUT001R-6B-VM-RESTART-LOSS-20261115.md` | 📄 diagnosed — 6B gate already stages per batch to the dream-girl branch; the gap is the gate script + log + Blender on tmpfs with no guard |
+| entr 5.9 (event-driven file watcher) | eradman/entr — **ISC** (LICENSE file read live; GitHub SPDX says NOASSERTION) | ✅ **wired** — built from source on this VM (`./configure` + `make`, cc), installed at `~/.local/bin/entr`; smoke-tested (modify → hook runs; `-d` exits on new file). **Requires `-n` in non-TTY sessions** — without it dies on terminal attributes |
+| `tmpfs-guard.sh` (refuse tmpfs output paths, exit 2) | Own glue (this pass) | ✅ **wired + tested** — /var/tmp + /tmp → UNSAFE rc 2; ~/workspace → ok (btrfs) rc 0; nonexistent path under /var/tmp → UNSAFE via parent check |
+| `stage-as-it-lands.sh` (polling stager: stable-size check + state file, --once/--drain/daemon) | Own glue (this pass) | ✅ **wired + tested** — scratch end-to-end: 4/4 files staged, sha256 match, second drain staged 0; `--drain` early-exit bug (exited while producer still writing) found by the test and fixed (drain stops only when nothing staged AND nothing mid-write) |
+| inotify-tools (inotifywait -m) | inotify-tools/inotify-tools — **GPL-2.0** (GitHub API) | 📄 documented, not installed — apt broken; source build needs autotools (absent). entr covers the slot |
+| lsyncd | axkibe/lsyncd — **GPL-2.0** (GitHub API) | ❌ excluded — needs lua (absent); live-sync between hosts, wrong shape for repo/release staging |
+| fswatch | emcrisostomo/fswatch — **GPL-3.0** (GitHub API) | ❌ excluded — large C++ build for a job a 41 KB entr binary does |
+| Python watchdog | gorakhargosh/watchdog — **Apache-2.0** (GitHub API) | 📄 documented, not installed — `pip install --user` untested; polling script needs nothing |
+| rclone as the stager trigger | rclone 1.75.2 (on box) — MIT | ❌ excluded — no watch mode; one-shot copy (and no cross-invocation resume, proven 2026-11-09) |
+| syncthing | syncthing/syncthing — MPL-2.0 | ❌ excluded — syncs between peers; staging target is a repo/release, no peer exists |
+| zrok stable share 401 unauthorized + 5-min futile restart loop (stable URL 502 tonight) | Live `zrok2 list shares` 401 panic + `zrok-share.log`; OpenZiti Discourse thread 2764 | 📄 diagnosed — fix is `zrok disable` + `zrok enable <fresh console token>` (browser step, not done here); recommended watchdog 401-circuit-breaker (stop restarting, log NEEDS-REENABLE once) queued with the live-view lane; free 5-share limit + stuck-share release via console/unshare API documented |
+| stream-stage.sh PIPESTATUS bug (exit 1 after upload under `set -u`) | Found 2026-11-15 ~03:35Z by disk-stage lane; overlay copy at /opt/disk-stage-r3/ already patched | 📄 queued — the repo copy does not exist: the script is **untracked local-only** in the dirty workdir (never committed), so no PR can fix it; fix is one line (`RC=("${PIPESTATUS[@]}")` first). NOT patched here — the disk-stage round-3 lane is live and the file is its running script; lane owner to commit-then-fix or patch in place |
+| M. Engine supervisor ~2 h deaths | 2026-11-12 doc (02-supervisor-deaths.md) | 📄 still queued — verified this pass the recommended `setsid nohup` fix was NOT applied (`watchdog.sh` line 47 still plain `nohup`); deaths continue (restart 23:58:50 Nov 14). Not re-researched; lane owner applies |
