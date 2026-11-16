@@ -1231,6 +1231,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#friction-research-tmpfs-render-loss-zrok-401-2026-11-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Friction research — tmpfs render loss + zrok 401 (2026-11-15)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3313,6 +3324,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#friction-research-tmpfs-render-loss-zrok-401-2026-11-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Friction research — tmpfs render loss + zrok 401 (2026-11-15)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4420,6 +4442,87 @@ this pass). Log: <code>FRICTION-RESEARCH-LOG.md</code> 2026-11-12 entry.</p>
 <td>GHA runner upload path</td>
 <td>2026-11-06 prototype</td>
 <td>📄 still queued — blocked on fine-grained PAT mint (browser step); API core limit healthy (4928/5000), not the blocker</td>
+</tr>
+</tbody>
+</table>
+<h2 id="friction-research-tmpfs-render-loss-zrok-401-2026-11-15">Friction research — tmpfs render loss + zrok 401 (2026-11-15)<a class="headerlink" href="#friction-research-tmpfs-render-loss-zrok-401-2026-11-15" title="Permanent link">&para;</a></h2>
+<p>Docs: agent-ops <code>research-friction-20261115/01-stage-as-it-lands.md</code>,
+<code>02-zrok-401-restart-loop.md</code> + <code>tmpfs-guard.sh</code> + <code>stage-as-it-lands.sh</code>.
+Research + two tested tools — no live lane touched (6B gate script only read;
+zrok share loop only observed; no disable/enable, no restart by this pass).</p>
+<table>
+<thead>
+<tr>
+<th>Finding / candidate</th>
+<th>Source (license)</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>001R 6B render lost 69 frames twice to /var/tmp (tmpfs) wipes; re-render rebuilt in /var/tmp again the same night; Blender 5.2.4 binary itself on tmpfs</td>
+<td>Live state this pass + <code>CUT001R-6B-VM-RESTART-LOSS-20261115.md</code></td>
+<td>📄 diagnosed — 6B gate already stages per batch to the dream-girl branch; the gap is the gate script + log + Blender on tmpfs with no guard</td>
+</tr>
+<tr>
+<td>entr 5.9 (event-driven file watcher)</td>
+<td>eradman/entr — <strong>ISC</strong> (LICENSE file read live; GitHub SPDX says NOASSERTION)</td>
+<td>✅ <strong>wired</strong> — built from source on this VM (<code>./configure</code> + <code>make</code>, cc), installed at <code>~/.local/bin/entr</code>; smoke-tested (modify → hook runs; <code>-d</code> exits on new file). <strong>Requires <code>-n</code> in non-TTY sessions</strong> — without it dies on terminal attributes</td>
+</tr>
+<tr>
+<td><code>tmpfs-guard.sh</code> (refuse tmpfs output paths, exit 2)</td>
+<td>Own glue (this pass)</td>
+<td>✅ <strong>wired + tested</strong> — /var/tmp + /tmp → UNSAFE rc 2; ~/workspace → ok (btrfs) rc 0; nonexistent path under /var/tmp → UNSAFE via parent check</td>
+</tr>
+<tr>
+<td><code>stage-as-it-lands.sh</code> (polling stager: stable-size check + state file, --once/--drain/daemon)</td>
+<td>Own glue (this pass)</td>
+<td>✅ <strong>wired + tested</strong> — scratch end-to-end: 4/4 files staged, sha256 match, second drain staged 0; <code>--drain</code> early-exit bug (exited while producer still writing) found by the test and fixed (drain stops only when nothing staged AND nothing mid-write)</td>
+</tr>
+<tr>
+<td>inotify-tools (inotifywait -m)</td>
+<td>inotify-tools/inotify-tools — <strong>GPL-2.0</strong> (GitHub API)</td>
+<td>📄 documented, not installed — apt broken; source build needs autotools (absent). entr covers the slot</td>
+</tr>
+<tr>
+<td>lsyncd</td>
+<td>axkibe/lsyncd — <strong>GPL-2.0</strong> (GitHub API)</td>
+<td>❌ excluded — needs lua (absent); live-sync between hosts, wrong shape for repo/release staging</td>
+</tr>
+<tr>
+<td>fswatch</td>
+<td>emcrisostomo/fswatch — <strong>GPL-3.0</strong> (GitHub API)</td>
+<td>❌ excluded — large C++ build for a job a 41 KB entr binary does</td>
+</tr>
+<tr>
+<td>Python watchdog</td>
+<td>gorakhargosh/watchdog — <strong>Apache-2.0</strong> (GitHub API)</td>
+<td>📄 documented, not installed — <code>pip install --user</code> untested; polling script needs nothing</td>
+</tr>
+<tr>
+<td>rclone as the stager trigger</td>
+<td>rclone 1.75.2 (on box) — MIT</td>
+<td>❌ excluded — no watch mode; one-shot copy (and no cross-invocation resume, proven 2026-11-09)</td>
+</tr>
+<tr>
+<td>syncthing</td>
+<td>syncthing/syncthing — MPL-2.0</td>
+<td>❌ excluded — syncs between peers; staging target is a repo/release, no peer exists</td>
+</tr>
+<tr>
+<td>zrok stable share 401 unauthorized + 5-min futile restart loop (stable URL 502 tonight)</td>
+<td>Live <code>zrok2 list shares</code> 401 panic + <code>zrok-share.log</code>; OpenZiti Discourse thread 2764</td>
+<td>📄 diagnosed — fix is <code>zrok disable</code> + <code>zrok enable &lt;fresh console token&gt;</code> (browser step, not done here); recommended watchdog 401-circuit-breaker (stop restarting, log NEEDS-REENABLE once) queued with the live-view lane; free 5-share limit + stuck-share release via console/unshare API documented</td>
+</tr>
+<tr>
+<td>stream-stage.sh PIPESTATUS bug (exit 1 after upload under <code>set -u</code>)</td>
+<td>Found 2026-11-15 ~03:35Z by disk-stage lane; overlay copy at /opt/disk-stage-r3/ already patched</td>
+<td>📄 queued — the repo copy does not exist: the script is <strong>untracked local-only</strong> in the dirty workdir (never committed), so no PR can fix it; fix is one line (<code>RC=("${PIPESTATUS[@]}")</code> first). NOT patched here — the disk-stage round-3 lane is live and the file is its running script; lane owner to commit-then-fix or patch in place</td>
+</tr>
+<tr>
+<td>M. Engine supervisor ~2 h deaths</td>
+<td>2026-11-12 doc (02-supervisor-deaths.md)</td>
+<td>📄 still queued — verified this pass the recommended <code>setsid nohup</code> fix was NOT applied (<code>watchdog.sh</code> line 47 still plain <code>nohup</code>); deaths continue (restart 23:58:50 Nov 14). Not re-researched; lane owner applies</td>
 </tr>
 </tbody>
 </table>
