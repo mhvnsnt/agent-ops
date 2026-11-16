@@ -1,3 +1,11 @@
+## Overnight pipeline 2026-11-16T00:44Z
+- Queue delta: 1 merged by this run — PPWA #185 (restore full tree clobbered by c9f1a7c8 + keep likeness-pilot1), merge 494ddec4, tree 301519e7 verified on main (README f6f465ba, MASTER-INDEX ec5b2ee1, ICT 910a947c); 2 verified landed by another lane — AO #804 merge 3cb09367 (00:14Z run's queue sync, MERGE-QUEUE.md blob f4d88197 exact-match); PPWA c6af42e5 (lane merge of models-do-top15 face-test stills, 22 PNGs, kiriko-face.png 15eb8d77 on main).
+- INCIDENT: PPWA c9f1a7c8 (00:43:38Z) replaced the whole main tree with work/ only — second full-tree clobber on PPWA in ~80 min (first 0a2c4bbb). 66 likeness-pilot1 files did land; everything else dropped. Restored same run by #185, verified on main. Lane-side push-method fix still owed.
+- Verify-done sweep 5/5 HOLD (AO #804, PPWA likeness-pilot1 66 blobs, DG c7d4af7c both files, WH #1745 material_gate.mjs, MMHQ DASHBOARD.md). 0 stale checkpoints (79 healthy / 1151 skipped, 2 unparseable carried). DG cuts/panels-fill BRANCH-ONLY unchanged (dbcf0e4d, 27 ahead / 124 behind).
+- Quota wall still hard-failing home writes (lock + overnight-log + daily-note appends EDQUOT); ran with /tmp lock; run record lives in this queue sync only. Disk 82%.
+- Carried: /tmp/ql108-resume-hold/ GONE after ~23:00 UTC reboot; M.-Engine- supervisor pid-file mismatch; PPWA batch-12 CSVs still blocked.
+- Blocked >72h: 17 carried.
+- Queue sync: AO #___ this run (pending...).
 ## Overnight pipeline 2026-11-16T00:14Z
 - Queue delta: 0 merged by this run; 3 verified landed by another lane — AO #803 merge d142de42 (23:44Z run's queue sync, MERGE-QUEUE.md blob a1f539a2 exact-match); DG c7d4af7c (Akafuyu naked leaning pin-up saved as unused art, README f5c2bd00); PPWA 8ae7b6d5 (models-do-top15 STATUS/plan/scripts/mp4s/jsons/logs, STATUS.md 2c213ff0).
 - Verify-done sweep 5/5 HOLD, 0 false claims reopened (AO #803, DG c7d4af7c, PPWA 8ae7b6d5, WH #1745 material_gate.mjs 9c23b3fe re-confirmed, PPWA README.md f6f465ba re-confirmed).
@@ -6,7 +14,7 @@
 - Quota wall still hard-failing home writes (lock + overnight-log appends EDQUOT); ran with /tmp lock; run record lives in this queue sync only. Disk 82%. Local overnight-log gap 19:44Z–23:44Z is log-only — all runs happened and synced via main.
 - Carried: /tmp/ql108-resume-hold/ GONE after ~23:00 UTC reboot (guardian must confirm survival); M.-Engine- supervisor pid-file mismatch (service unaffected).
 - Blocked >72h: 17 carried (16 + PPWA batch-12 CSVs).
-- Queue sync: AO #___ this run (pending...).
+- Queue sync: AO #804 this run (merge 3cb09367, verified landed by the 00:44Z run).
 ## Overnight pipeline 2026-11-15T23:44Z
 - Queue delta: 0 merged by this run; 2 verified landed by another lane — AO #802 merge 76f59abe (23:14Z run's queue sync); PPWA 4bd038f7, the owning lane's own restore of the app tree after the batch-12 tree clobber (README.md back byte-identical f6f465ba, tip tree 16,073 entries).
 - INCIDENT (this run): PPWA commit 0a2c4bbb (23:40:30Z, "Land batch-12 mocap CSVs (2,142 files, 1.34 GB)") replaced the whole main tree with docs/ only — app gone from main for ~25 min. Lane restored it themselves in 4bd038f7. This run built a parallel API restore (PR #184, +911,820/0) and closed it as superseded once the lane's restore landed; branch deleted.
