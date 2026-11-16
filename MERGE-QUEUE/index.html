@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-16t0044z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-16t0114z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -859,6 +859,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-16t0114z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-16T01:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-16t0044z-30-min-run" class="md-nav__link">
@@ -4721,6 +4732,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-16t0114z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-16T01:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-16t0044z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6668,6 +6690,17 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-16t0114z-30-min-run">Overnight pipeline 2026-11-16T01:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-16t0114z-30-min-run" title="Permanent link">&para;</a></h2>
+<p>Overnight pipeline 2026-11-16T01:14Z (queue delta first: 0 merged BY this run; 1 NEW PR opened by a live lane during this run (WH #1746 "Pack 5 more big models under the jsDelivr limit (batch 2)", head 21989def, +33/-6, 18 files, created 01:22:13Z); instruction-gate FAILED on body at 01:22:19Z (8 backticked non-path tokens: yukihyo-attire2/attire3, dxmmii-tripo, megami, megami-attire1, cyborg-x, -cdn) — the LANE fixed the body itself at 01:24:52Z and the gate re-ran green 01:24:58Z (this run did not edit the body; its own fix attempt found the body already corrected); 12/14 checks green at 01:40Z, speed-quality + budgets still in_progress — merge candidate, merge when green (next run); diff verified clean (5 GLBs + 10 proof PNGs added, assets.js +6/-6 in-place repoint, WORKLOG +19, material_gate +8, no unexplained deletions); 1 verified landed by another lane (AO #805 merge db52668d — the 00:44Z run's queue sync, 2 parents (3cb09367 + 141a5c18), MERGE-QUEUE.md + overnight-handoff.md, main now carries the 00:44Z entry as line 1 — verified via fresh /tmp download from main, 3,801,177 B); 0 false claims reopened (verify-done sweep: 5 checks, 5 HOLD — AO #805 db52668d on main; WH #1745 king-tyrant cdn GLB e5efa285/15,083,972 B exact-match on main; DG c7d4af7c README f5c2bd00/295 B exact-match; PPWA root still 32 entries (restore intact); CJ memory-backup/MEMORY.md 10370391/52,939 B on main); 0 new queue items besides WH #1746; DG cuts/panels-fill BRANCH-ONLY HEAD dbcf0e4d unchanged (27 ahead / 124 behind main, no PR, owner judgement pending); 0 stale checkpoints resumed (audit: 79 healthy / 0 stale / 1151 skipped, 2 unparseable carried); queue: WH 31 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 38 open (game repos) + DG 2 open + DG 1 branch-only + MMHQ 2 + PPWA 14 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked (&gt;72h) = 17 carried (16 + PPWA batch-12 CSVs))
+- IDLE: last user msg 2026-11-15T14:38:14Z (~636 min idle at run start per DB); no home lock file; home lock creation FAILED (EDQUOT — quota wall still hard-failing; lock in /tmp per precedent). Disk 82% (122G/150G, 28G free) — above 80%, below 85%, no action per guardian. NOTE: local overnight-log.md + daily-note appends both failed EDQUOT this run (retry at run end); run record lives in this queue sync only. /tmp/ql108-resume-hold/ CONFIRMED GONE (ls: No such file or directory) — the show-prod resume lane's held files are lost; guardian must confirm survival — carried. /tmp fallback notes also swept (10 files gone, per daily note EDQUOT BLOCK #9).
+- STEP 1 (delta sweep vs 00:44Z baseline): all 12 repo tips UNCHANGED (WH 528aeea8, DG c7d4af7c, CJ d11f0e1f, GRE bbef101d, Bannon bca19c49, CD 5280d74c, CD2 4523ff12, wrestling e1702afd, M.-Engine- 0adacedf, MMHQ b3b96a16, PPWA c6af42e5, AO db52668d). Open-PR counts: WH 30-&gt;31 (new #1746, see delta line), all others identical (DG 2, CJ 0, GRE 1, Bannon 5, CD 1, CD2 0, wrestling 0, AO 0, PPWA 14, MMHQ 2, M.-Engine- 19). Targeted re-check: WH #1714/#1702/#1701/#1678 mergeable=true/blocked (gate-fail, owner decision pending); CD #71 mergeable=true/blocked (gate-fail); GRE #84 mergeable=true/unstable (checks 403-unreadable); DG #9 mergeable=false/dirty (conflicting); DG #89 draft DO-NOT-MERGE — 0 green+mergeable non-draft non-excluded in game repos besides #1746 (still CI-pending). Excluded/owner-held untouched: Bannon #78 draft, WH #377, CJ #156/#157/#167, DG #89.
+- STEP 2: verify-done sweep 5/5 HOLD, 0 false (see delta line).
+- STEP 3: checkpoint audit 79 healthy / 0 stale / 1151 skipped, 2 unparseable carried. Nothing to resume.
+- STEP 4 canon-sync: nothing new to commit (MEMORY.md md5 10d0b6b8... unchanged since 19:14Z verification, mtime 18:56Z; daily-note additions are lane status, watchdog/quota notes — not committable canon).
+- STEP 5: failure-alerts.log nothing new (last entry 2026-10-20). Disk 82%. Quota wall still hard-failing home writes (lock + overnight-log + daily-note appends EDQUOT at run start; /tmp OK). Sacred work untouched: no ffmpeg/blender/aria2c/wget/curl running at check. PPWA/DG lanes quiet this run (no tip movement).
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down.
+- BLOCKED &gt;72h (17 carried, unchanged): WH conflicting 12 + #713 + #377 owner-held; Bannon #78 owner-held; GRE #84 checks-unreadable; WH #1714/#1702/#1701/#1678 gate-fail (Megami-face deviation, owner decision pending); CD #71 gate-fail; PPWA batch-12 CSVs (2,142 files never landed — owning lane must re-land from local). Plus carried items: row-48 stamp, non-upright-start, live-opponent proof videos, Jun bank rows, bank-row import, DG cuts/panels-fill BRANCH-ONLY (owner judgement pending), show-prod resume lane files in /tmp/ql108-resume-hold/ GONE after ~23:00 UTC reboot (guardian must confirm survival — carried), M.-Engine- supervisor pid-file mismatch (service unaffected — carried). NEW this run: WH #1746 merge candidate (CI-pending, merge when green).
+- Queue sync: AO #___ this run (pending...).</p>
 <h2 id="overnight-pipeline-2026-11-16t0044z-30-min-run">Overnight pipeline 2026-11-16T00:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-16t0044z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-16T00:44Z (queue delta first: 1 merged BY this run — PPWA #185 merge 494ddec4 "Restore full tree clobbered by c9f1a7c8 + keep likeness-pilot1 (66 files)", restore commit 7d0d78c4, tree 301519e7, verified on main by THIS run: merge commit 2 parents (c9f1a7c8 + 7d0d78c4), README.md f6f465ba/12,634 B + docs/mocap-library/MASTER-INDEX.json ec5b2ee1/567,999 B + work/likeness-pilot1/ICT-FIT-REPORT-2026-11-08.md 910a947c/5,369 B exact-match on main, root 32 entries; 1 verified landed by another lane (AO #804 merge 3cb09367 — the 00:14Z run's queue sync, merge commit, 2 parents (d142de42 + 4d7db503), files MERGE-QUEUE.md + overnight-handoff.md, main MERGE-QUEUE.md blob f4d88197/3,794,746 B exact-match to this run's /tmp download); 1 NEW BLOCKED item opened + resolved same run (PPWA c9f1a7c8 tree clobber #2 — see INCIDENT below); 1 more verified landed by another lane after the restore (PPWA c6af42e5 "Merge land/ppw-bigtwo-20261115: models-do-top15 face-test stills", 2 parents, 22 PNGs, kiriko-face.png 15eb8d77/370,203 B on main, root still 32 entries, key blobs intact); 0 false claims reopened besides the clobber (verify-done sweep: 5 checks, 5 HOLD — AO #804 3cb09367; PPWA c9f1a7c8 likeness-pilot1 66 blobs + ICT 910a947c; DG c7d4af7c designs/posters/unused/README.md f5c2bd00/295 B + PNG 61a4ad70/79,178 B; WH #1745 material_gate.mjs 9c23b3fe/12,033 B re-confirmed; MMHQ b3b96a16 pipeline/DASHBOARD.md 4d6de705/47,338 B re-confirmed); 0 new queue items besides the resolved clobber; DG cuts/panels-fill BRANCH-ONLY HEAD dbcf0e4d unchanged (27 ahead / 124 behind main, no PR, owner judgement pending); 0 stale checkpoints resumed (audit: 79 healthy / 0 stale / 1151 skipped, 2 unparseable carried); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 2 open + DG 1 branch-only + MMHQ 2 + PPWA 14 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked (&gt;72h) = 17 carried (16 + PPWA batch-12 CSVs))
 - IDLE: last user msg 2026-11-15T14:38:14Z (~606 min idle at run start per DB); no home lock file; home lock creation FAILED (EDQUOT — quota wall still hard-failing; lock in /tmp per precedent). Disk 82% (122G/150G, 28G free) — above 80%, below 85%, no action per guardian. NOTE: local overnight-log.md + daily-note appends both failed EDQUOT this run — run record lives in this queue sync only.
