@@ -1,3 +1,12 @@
+## Overnight pipeline 2026-11-16T01:14Z
+- Queue delta: 0 merged by this run. 1 new PR (WH #1746, batch-2 CDN pack, opened by live lane 01:22:13Z; instruction-gate failed on body, lane fixed it, gate green 01:24:58Z; 12/14 checks green, speed-quality + budgets still running at 01:40Z — merge when green). 1 verified landed by another lane: AO #805 merge db52668d (00:44Z run's queue sync, 2 parents, main carries the 00:44Z entry). 0 false claims reopened (verify-done sweep 5/5 HOLD: AO #805; WH #1745 king-tyrant cdn GLB e5efa285/15,083,972 B; DG c7d4af7c README f5c2bd00/295 B; PPWA root 32 entries; CJ memory-backup/MEMORY.md 10370391/52,939 B).
+- STEP 1: all 12 repo tips unchanged vs 00:44Z baseline. Open-PR counts: WH 30->31 (#1746 new); others identical. No green+mergeable non-draft non-excluded PR besides #1746 (CI-pending). Excluded/owner-held untouched.
+- STEP 2 verify-done 5/5 HOLD (see delta line). STEP 3 checkpoints: audit 79 healthy / 0 stale / 1151 skipped, 2 unparseable carried. Nothing to resume. STEP 4 canon-sync: nothing new (MEMORY.md md5 10d0b6b8 unchanged).
+- STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 82% (122G/150G, 28G free). Quota wall still hard-failing home writes (lock + logs EDQUOT); /tmp OK. No in-flight sacred work.
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down.
+- Carried: /tmp/ql108-resume-hold/ CONFIRMED GONE (show-prod resume lane files lost; guardian must confirm survival); /tmp fallback notes swept (10 files, EDQUOT BLOCK #9); M.-Engine- supervisor pid-file mismatch; PPWA batch-12 CSVs still blocked; WH #1746 merge candidate (CI-pending).
+- Blocked >72h: 17 carried.
+- Queue sync: AO #___ this run (pending...).
 ## Overnight pipeline 2026-11-16T00:44Z
 - Queue delta: 1 merged by this run — PPWA #185 (restore full tree clobbered by c9f1a7c8 + keep likeness-pilot1), merge 494ddec4, tree 301519e7 verified on main (README f6f465ba, MASTER-INDEX ec5b2ee1, ICT 910a947c); 2 verified landed by another lane — AO #804 merge 3cb09367 (00:14Z run's queue sync, MERGE-QUEUE.md blob f4d88197 exact-match); PPWA c6af42e5 (lane merge of models-do-top15 face-test stills, 22 PNGs, kiriko-face.png 15eb8d77 on main).
 - INCIDENT: PPWA c9f1a7c8 (00:43:38Z) replaced the whole main tree with work/ only — second full-tree clobber on PPWA in ~80 min (first 0a2c4bbb). 66 likeness-pilot1 files did land; everything else dropped. Restored same run by #185, verified on main. Lane-side push-method fix still owed.
