@@ -1,3 +1,12 @@
+## Overnight pipeline 2026-11-16T00:14Z
+- Queue delta: 0 merged by this run; 3 verified landed by another lane — AO #803 merge d142de42 (23:44Z run's queue sync, MERGE-QUEUE.md blob a1f539a2 exact-match); DG c7d4af7c (Akafuyu naked leaning pin-up saved as unused art, README f5c2bd00); PPWA 8ae7b6d5 (models-do-top15 STATUS/plan/scripts/mp4s/jsons/logs, STATUS.md 2c213ff0).
+- Verify-done sweep 5/5 HOLD, 0 false claims reopened (AO #803, DG c7d4af7c, PPWA 8ae7b6d5, WH #1745 material_gate.mjs 9c23b3fe re-confirmed, PPWA README.md f6f465ba re-confirmed).
+- All tips unchanged vs 23:44Z except AO (76f59abe -> d142de42, #803), DG (76819601 -> c7d4af7c), PPWA (4bd038f7 -> 8ae7b6d5). Open PR counts identical. Targeted re-check: WH #1714/#1702/#1701/#1678, CD #71, GRE #84, DG #9, DG #89 — states unchanged.
+- Checkpoints: 79 healthy / 0 stale / 1151 skipped; 2 unparseable carried. DG cuts/panels-fill BRANCH-ONLY unchanged (dbcf0e4d); DG LOCAL-ONLY carried (362 dirty, HEAD 8cbb6b8 — local fetch blocked by quota, state carried from prior runs).
+- Quota wall still hard-failing home writes (lock + overnight-log appends EDQUOT); ran with /tmp lock; run record lives in this queue sync only. Disk 82%. Local overnight-log gap 19:44Z–23:44Z is log-only — all runs happened and synced via main.
+- Carried: /tmp/ql108-resume-hold/ GONE after ~23:00 UTC reboot (guardian must confirm survival); M.-Engine- supervisor pid-file mismatch (service unaffected).
+- Blocked >72h: 17 carried (16 + PPWA batch-12 CSVs).
+- Queue sync: AO #___ this run (pending...).
 ## Overnight pipeline 2026-11-15T23:44Z
 - Queue delta: 0 merged by this run; 2 verified landed by another lane — AO #802 merge 76f59abe (23:14Z run's queue sync); PPWA 4bd038f7, the owning lane's own restore of the app tree after the batch-12 tree clobber (README.md back byte-identical f6f465ba, tip tree 16,073 entries).
 - INCIDENT (this run): PPWA commit 0a2c4bbb (23:40:30Z, "Land batch-12 mocap CSVs (2,142 files, 1.34 GB)") replaced the whole main tree with docs/ only — app gone from main for ~25 min. Lane restored it themselves in 4bd038f7. This run built a parallel API restore (PR #184, +911,820/0) and closed it as superseded once the lane's restore landed; branch deleted.
@@ -8,7 +17,7 @@
 - Quota wall still hard-failing home writes (lock + overnight-log appends EDQUOT); ran with /tmp lock; run record lives in this queue sync only. Disk 82%. PPWA clone failed (index-pack) — API route used instead.
 - Carried: /tmp/ql108-resume-hold/ GONE after ~23:00 UTC reboot (guardian must confirm survival); M.-Engine- supervisor pid-file mismatch (service unaffected).
 - Blocked >72h: 16 carried + 1 new (PPWA batch-12 CSVs).
-- Queue sync: AO #___ this run (pending...).
+- Queue sync: AO #803 this run (merge d142de42, verified landed by the 00:14Z run).
 ## Overnight pipeline 2026-11-15T23:14Z
 - Queue delta: 0 merged by this run; 3 verified landed by another lane — AO #801 merge 2c36d466 (22:44Z run's queue sync), PPWA 23967518 (6 direct commits: hold-none, deformation, anatomytool, all-models-fix, walk-fix-2026-11-03, bare-base), WH #1745 merge 528aeea8 re-verified (material_gate.mjs 9c23b3fe + assets.js cf9262a0).
 - Verify-done sweep 5/5 HOLD, 0 false claims reopened.
@@ -18,7 +27,7 @@
 - Quota wall still hard-failing home writes (lock + overnight-log appends EDQUOT); ran with /tmp lock; run record lives in this queue sync only. Disk 82%. VM rebooted ~23:00 UTC; /tmp wiped.
 - NEW: /tmp/ql108-resume-hold/ GONE after the ~23:00 UTC reboot — show-prod resume lane's held files may be lost; guardian must confirm whether they survive elsewhere.
 - Blocked >72h: 16 carried, unchanged (see MERGE-QUEUE.md).
-- Queue sync: AO #___ this run (pending...).
+- Queue sync: AO #802 this run (merge 76f59abe, verified landed by the 23:44Z run).
 ## Overnight pipeline 2026-11-15T22:44Z
 - Queue delta: 0 merged by this run; 3 verified landed by another lane — AO #800 merge 990d18ef (22:14Z run's queue sync), DG 76819601 (Akafuyu generation-attempt records, 4 files), PPWA 05887660 (5 direct commits: Pond boots x2, five-other-v2, rig-motion-pass, Kiriko here-work).
 - Verify-done sweep 5/5 HOLD, 0 false claims reopened.
