@@ -1,3 +1,14 @@
+## Overnight pipeline 2026-11-15T23:44Z
+- Queue delta: 0 merged by this run; 2 verified landed by another lane — AO #802 merge 76f59abe (23:14Z run's queue sync); PPWA 4bd038f7, the owning lane's own restore of the app tree after the batch-12 tree clobber (README.md back byte-identical f6f465ba, tip tree 16,073 entries).
+- INCIDENT (this run): PPWA commit 0a2c4bbb (23:40:30Z, "Land batch-12 mocap CSVs (2,142 files, 1.34 GB)") replaced the whole main tree with docs/ only — app gone from main for ~25 min. Lane restored it themselves in 4bd038f7. This run built a parallel API restore (PR #184, +911,820/0) and closed it as superseded once the lane's restore landed; branch deleted.
+- FALSE CLAIM REOPENED: 0a2c4bbb's batch-12 CSVs never landed — only the manifest is on main. New BLOCKED queue item: owning lane must re-land the 2,142 CSVs from local.
+- Verify-done sweep 5/5 HOLD (WH #1745, DG 76819601, AO #802, PPWA MASTER-INDEX, MMHQ DASHBOARD).
+- All tips unchanged vs 23:14Z except AO (2c36d466 -> 76f59abe, #802) and PPWA (23967518 -> e282978f -> 4bd038f7). Open PR counts identical at final check.
+- Checkpoints: 79 healthy / 0 stale / 1151 skipped; 2 unparseable carried. DG cuts/panels-fill BRANCH-ONLY unchanged (27 ahead / 123 behind); DG LOCAL-ONLY carried (362 dirty, HEAD 8cbb6b8).
+- Quota wall still hard-failing home writes (lock + overnight-log appends EDQUOT); ran with /tmp lock; run record lives in this queue sync only. Disk 82%. PPWA clone failed (index-pack) — API route used instead.
+- Carried: /tmp/ql108-resume-hold/ GONE after ~23:00 UTC reboot (guardian must confirm survival); M.-Engine- supervisor pid-file mismatch (service unaffected).
+- Blocked >72h: 16 carried + 1 new (PPWA batch-12 CSVs).
+- Queue sync: AO #___ this run (pending...).
 ## Overnight pipeline 2026-11-15T23:14Z
 - Queue delta: 0 merged by this run; 3 verified landed by another lane — AO #801 merge 2c36d466 (22:44Z run's queue sync), PPWA 23967518 (6 direct commits: hold-none, deformation, anatomytool, all-models-fix, walk-fix-2026-11-03, bare-base), WH #1745 merge 528aeea8 re-verified (material_gate.mjs 9c23b3fe + assets.js cf9262a0).
 - Verify-done sweep 5/5 HOLD, 0 false claims reopened.
