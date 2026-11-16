@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-16t0252z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-16t0314z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -859,6 +859,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-16t0314z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-16T03:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-16t0252z-30-min-run" class="md-nav__link">
@@ -4743,6 +4754,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-16t0314z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-16T03:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-16t0252z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6712,6 +6734,17 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-16t0314z-30-min-run">Overnight pipeline 2026-11-16T03:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-16t0314z-30-min-run" title="Permanent link">&para;</a></h2>
+<p>Overnight pipeline 2026-11-16T03:14Z (queue delta first: 0 merged BY this run; 0 verified landed by another lane (all 12 repo tips unchanged vs 02:52Z baseline; AO tip fcac2721 = #807, already verified by the 02:52Z run); 0 false claims reopened (verify-done sweep: 5 checks, 5 HOLD — AO #807 fcac2721 2-parent merge on main; WH #1747 merge 2798c177 2-parent on main; MMHQ DASHBOARD.md blob 4d6de705/47,338 B on main; DG ac3077c7 4 payload files on main; DG cuts/panels-fill head 6c842e07 unchanged, 284 ahead/128 behind, diverged, no PR); 0 new queue items; 0 stale checkpoints resumed (audit: 79 healthy / 0 stale / 1152 skipped, 1 unparseable pre-existing 0-byte temp carried); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 2 open + DG 1 branch-only + MMHQ 2 + PPWA 14 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked (&gt;72h) = 16 carried)
+- IDLE: last user msg 2026-11-16T01:50:28Z (~84 min idle at run start per DB); no lock file; lock created OK this run. Disk 80% (118G/150G, 32G free) — below 85%, no action.
+- STEP 1 (delta sweep vs 02:52Z baseline): all 12 tips UNCHANGED (WH 2798c177, DG ac3077c7, CJ d11f0e1f, GRE bbef101d, Bannon bca19c49, CD 5280d74c, CD2 4523ff12, wrestling e1702afd, M.-Engine- 0adacedf, MMHQ b3b96a16, PPWA de260af7, AO fcac2721). Open-PR counts identical (WH 30, DG 2, CJ 0, GRE 1, Bannon 5, CD 1, CD2 0, wrestling 0, AO 0, PPWA 14, MMHQ 2, M.-Engine- 19). Note: PPWA = mhvnsnt/physics-playground-pwa, MMHQ = mhvnsnt/money-machine-hq (short names 404 under mhvnsnt/PPWA and mhvnsnt/MMHQ — resolved this run). Targeted re-check: WH #1696 latest instruction-gate success (2026-11-09) but queue records it CONFLICTING with 12 older non-draft — carried, not merged; #1600 menu-touch-e2e FAIL; #1073 game-unit-tests FAIL; #1072 instruction-gate + game-unit-tests FAIL; #1714/#1702/#1701/#1678 gate-fail owner-decision pending; CD #71 gate-fail; GRE #84 checks-unreadable; DG #9 conflicting; MMHQ #29 dirty. 0 green+mergeable non-draft non-excluded, nothing merged in game repos. Excluded/owner-held untouched: Bannon #78 draft, WH #377, CJ #156/#157/#167, DG #89.
+- STEP 2: verify-done sweep 5/5 HOLD, 0 false (see delta line).
+- STEP 3: checkpoint audit 79 healthy / 0 stale / 1152 skipped, 1 unparseable pre-existing 0-byte temp. Nothing to resume.
+- STEP 4 canon-sync: nothing new (MEMORY.md md5 83297e72 unchanged since 02:52Z run). Daily-note additions are lane status / watchdog passes — not committable canon.
+- STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 80% (118G/150G, 32G free). Sacred work untouched: other lanes' curl release download (dream-girl assets), Blender 5.2.4 download + du scan running at check.
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down. DG 285-piece staging + 6B follow-up still running per 22:17 EST watchdog note.
+- ALERT CARRIED (not new — from 22:16 EST watchdog, in daily note): zrok stable share DOWN (401 unauthorized, token dead since 20:01 EST; plural fmmg-live.shares.zrok.io -&gt; 502; rotating localhost.run tunnel https://225aa7e2152020.app.lhr.life/vnc.html working as public path for now). Needs a zrok token fix, not restarts — owner-side credential decision.
+- BLOCKED &gt;72h (16 carried, unchanged): WH conflicting 12 + #713 + #377 owner-held; Bannon #78 owner-held; GRE #84 checks-unreadable; WH #1714/#1702/#1701/#1678 gate-fail (Megami-face deviation, owner decision pending); CD #71 gate-fail. Plus carried items: row-48 stamp, non-upright-start, live-opponent proof videos, Jun bank rows, bank-row import adjudication, TorBox key dead, OWNER RULING #8, quantum-jam decisions, live Worker deploy pending.</p>
 <h2 id="overnight-pipeline-2026-11-16t0252z-30-min-run">Overnight pipeline 2026-11-16T02:52Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-16t0252z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-16T02:52Z (queue delta first: 0 merged BY this run; 5 verified landed by another lane (WH #1745 merge 528aeea8 + #1746 merge 7847f735 + #1747 merge 2798c177, payloads verified on main by THIS run: #1747 lazy.js 90119f82/7,716 B + main.js d675688c/85,291 B + modes-load-timeout.test.mjs 6a6ecb27/3,856 B; #1745 cain-elias-packed.png 397df757; #1746 WORKLOG.md 0f972352/479,274 B; DG direct-push ac3077c7 "Unused pin-up art: Akafuyu naked pin-ups front/twirling/back + extended unused README", 4 files, all blobs exact-match on main; PPWA merge de260af7 "Merge land/mocap-index-20261116: mocap index + CSVs", payload verified: batch101_105_results.json f2b54b64 + mocap-manifest.json 409b5b11 exact-match, MASTER-INDEX.json ec5b2ee1/567,999 B unchanged; AO #806 merge 98106ac5 — the 01:14Z run's queue sync, 2 parents, main MERGE-QUEUE.md blob 1d6a7540/3,806,267 B); 0 false claims reopened (verify-done sweep: 5 checks, 5 HOLD — WH #1747 payload; WH #1745/#1746 payloads; DG ac3077c7 payload; PPWA de260af7 payload; AO #806 on main); 0 new queue items; DG cuts/panels-fill BRANCH-ONLY MOVED (head dbcf0e4d -&gt; 6c842e07, 02:25:05Z, ahead 27 -&gt; 284 / behind 121 -&gt; 128, still diverged, no PR, owner judgement pending — lane actively pushing, untouched); 0 stale checkpoints resumed (audit: 79 healthy / 0 stale / 1152 skipped, 1 unparseable pre-existing 0-byte temp wdstage-bgk0bdaj.json); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 2 open + DG 1 branch-only + MMHQ 2 + PPWA 14 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked (&gt;72h) = 16 carried)
 - IDLE: last user msg 2026-11-16T01:50:28Z (~54 min idle at run start per DB); no lock file; lock created OK this run. Disk 81% (120G/150G, 30G free) — above 80%, below 85%, no action per guardian.
