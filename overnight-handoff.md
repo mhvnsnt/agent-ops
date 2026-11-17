@@ -1,3 +1,13 @@
+## Overnight pipeline - 2026-11-17T06:44Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: AO #830 (06:14Z run's own queue sync, merge 211e4b48, 2 parents, payload 2/2 blob-identical on main). 0 false claims (verify-done sweep 7/7 HOLD + 2 unverifiable-this-run carried). Queue: 78 open (PPWA 14 + MMHQ 2 unverifiable this run), 16 blocked >72h (carried).
+- STEP 1: delta sweep - AO tip 58e700ca -> 211e4b48 (#830, verified above); all other 9 reachable tips + all open-PR counts unchanged. MMHQ + PPWA 404 AGAIN (fifth occurrence of the transient pattern; both verified live at 05:19Z). Full PR-state sweep: 0 green+mergeable non-draft non-excluded. WH #1714/#1702/#1701/#1678 gate-fail (owner decision pending); WH #1696/#1600 conflicting; WH #713/#908/#875/#826/#714/#706 mergeable UNKNOWN; CD #71 gate-fail; GRE #84 UNSTABLE; DG #91 UNSTABLE (DG CI validate red-on-main), DG #9 conflicting, DG #89 draft DO-NOT-MERGE; Bannon #22 UNSTABLE; ME 14x UNSTABLE (SDK-setup failure) + 3 conflicting. Excluded/owner-held untouched.
+- STEP 2 verify-done (7 HOLD): AO #830 + WH #1747 + DG #88 + CJ #409 + CD #70 + GRE #95 + ME #23 (all merges ancestors of main, behind=0, spot payload blob-matches). PPWA #227/#228 unverifiable this run (repo 404) - NOT false: both verified landed on main at 05:19Z.
+- STEP 3 checkpoints: audit 79 healthy / 0 stale / 1152 skipped. Nothing to resume. Live lanes: P2 Da'Ree Blender shoot + P3 SquishyFX web batch in flight, left alone.
+- STEP 4 canon-sync: nothing new (MEMORY.md md5 a09ca459 unchanged).
+- STEP 5: failure-alerts.log nothing new. Disk 79%. No in-flight work touched.
+- STEP 6/7/8: no new thread, no new pulls - live lanes own the work; stand down.
+- BLOCKED >72h (16 carried, unchanged - see queue file). UPDATE: live-view public access DOWN again (daily note 01:47 EST - localhost.run 502, zrok 404/401; owner has NO working public live-view URL; watchdog regenerating). MMHQ + PPWA 404 transient (fifth occurrence, re-confirmed).
+- Queue sync: AO #___ this run.
 ## Overnight pipeline - 2026-11-17T06:14Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: AO #829 (05:44Z run's own queue sync, merge 58e700ca, 2 parents, confirmed on main by this run). 0 false claims (verify-done sweep 6/6 HOLD + 2 unverifiable-this-run carried). Queue: 78 open (PPWA 14 + MMHQ 2 unverifiable this run), 16 blocked >72h (carried).
 - STEP 1: delta sweep - AO tip 15570a54 -> 58e700ca (#829, verified above); all other 9 reachable tips + all open-PR counts unchanged. MMHQ + PPWA 404 AGAIN (re-probed after 20s, confirmed) - fourth occurrence of the transient pattern; both verified live at 05:19Z (PPWA 89db6b0c, MMHQ 4560e1b4). CARRIED BLOCKER, not a deletion; their 16 queue items unverifiable this run. Targeted re-check: WH #1714/#1702/#1701/#1678 mergeable=true/BLOCKED gate-fail; WH #1696/#1600 mergeable=null conflicting; CD #71 gate-fail; GRE #84 UNSTABLE; DG #9 conflicting; Bannon #22 UNSTABLE; ME #10 UNSTABLE. 0 green+mergeable non-draft non-excluded. Excluded/owner-held untouched.
@@ -7,7 +17,8 @@
 - STEP 5: failure-alerts.log nothing new. Disk 81%. No in-flight work touched (Blender V25 elbow-fix shoot + P3 SquishyFX web batch in flight).
 - STEP 6/7/8: no new thread, no new pulls - live lanes own the work; stand down.
 - BLOCKED >72h (16 carried, unchanged - see queue file). NEW: MMHQ + PPWA 404 transient (fourth occurrence, re-confirmed).
-- Queue sync: AO #___ this run (pending...).
+- Queue sync: AO #830 this run.
+- ADDENDUM: AO #830 (this run's queue sync) LANDED-VERIFIED BY THIS RUN - merged 211e4b48 (parents [58e700ca main, 7e0d0d65 branch]); payload 2/2 blob-identical on main (MERGE-QUEUE.md 3c164efb, overnight-handoff.md ef8414ec); instruction-gate PASS + guard PASS; mergeable clean.
 ## Overnight pipeline - 2026-11-17T05:44Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 0 verified landed by another lane (all 10 reachable tips + all open-PR counts unchanged vs 05:19Z; AO tip 15570a54 = 05:19Z run's own #828 sync, already verified by that run). 0 false claims (verify-done sweep 6/6 HOLD + 2 unverifiable-this-run carried). Queue: 78 open (PPWA 14 + MMHQ 2 unverifiable this run), 16 blocked >72h (carried).
 - STEP 1: delta sweep - 0 tips moved among reachable repos. MMHQ + PPWA 404 AGAIN (repo view, commits, pulls all 404, re-probed after 20s and confirmed) - third occurrence of the transient pattern; both verified live at 05:19Z (PPWA 89db6b0c, MMHQ 4560e1b4) ~25 min before this 404. CARRIED BLOCKER, not a deletion; their 16 queue items unverifiable this run. Carried PRs unchanged, no re-probe. DG #91 still blocked (DG CI validate red-on-main).
