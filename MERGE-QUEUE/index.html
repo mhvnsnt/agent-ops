@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-17t0844z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-17t0914z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -886,6 +886,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-17t0914z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-17T09:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-17t0844z-30-min-run" class="md-nav__link">
@@ -5067,6 +5078,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-17t0914z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-17T09:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-17t0844z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7333,6 +7355,17 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-17t0914z-30-min-run">Overnight pipeline 2026-11-17T09:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-17t0914z-30-min-run" title="Permanent link">&para;</a></h2>
+<p>Overnight pipeline 2026-11-17T09:14Z (queue delta first: 0 merged BY this run; 1 verified landed by another lane (PPWA #235 c2082ba5, 8/8 payload blobs); 0 false claims reopened (verify-done sweep 7/7 HOLD); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 3 open + DG 2 branch-only + MMHQ 2 + PPWA 14 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked (&gt;72h) = 16 carried)
+- IDLE: last user msg 2026-11-17T04:13:31Z (~301 min idle at run start per DB); no lock file, lock created OK. Disk 81% (120G/150G, 30G free) - over 80%, guardian owns action; no pulls this run.
+- STEP 1 (delta sweep vs 08:44Z baseline): 1 tip MOVED - PPWA b6bc407b -&gt; c2082ba5 (#235, lane merge 09:01:19Z, created+merged in-window; open count stays 14). All other tips unchanged (WH ee3c0806, DG 17be49b2, CJ 6a3fb2b6, GRE bbef101d, Bannon c1fba777, CD 5280d74c, CD2 0966baf4, wrestling e1702afd, M.-Engine- 0adacedf, MMHQ 4560e1b4, AO 48fa2015). Open-PR counts identical across all 12 repos. PPWA #235 LANDED (lane): merge c2082ba5, 2 parents [b6bc407b main, 50770055 branch], 8/8 payload files blob-identical on main (TOOLKIT-FIX-v1.3.3-REPORT.md f1ff8aae, <strong>init</strong>.py 4cf461b2, corrective_keys.py 68df6d33, joints_fans.py 2d8b50c0, layer_guard.py 95fedbcf, test_joints_fans.py 2b0ee184, test_toolkit_fixes.py 113c1a21, test_toolkit_fixes_results.json 5120013e); diff +1518/-21, the -21 are small edits inside the 4 modified toolkit files, no unexplained deletions. Targeted re-check carried: GRE #84 / Bannon #22 / ME #10 still UNSTABLE (green unverifiable); physics-playground-pwa #50 (ex-PPWA #50) NOT merged (188 files, 12 days stale, instruction-gate unreadable via this token, prior runs' call stands). Excluded/owner-held untouched: Bannon #78 draft, WH #377, CJ #156/#157/#167, DG #89. Merge-law CI watch 04:12 EST swept all 58 watch-list PRs, 0 CLEAN, nothing merged.
+- STEP 2: verify-done sweep 7/7 HOLD, 0 false - PPWA #235 (8/8 blobs, above) + AO #836 (tip 48fa2015 IS the #836 merge, 2 parents) + WH #1748 + DG #90 + CJ #410 + Bannon #94 + CD2 #10 (merge commits == main tips).
+- STEP 3: checkpoints audit 79 healthy / 0 stale / 1152 skipped (checkpoint_audit.py); direct scan 0 running-watchdog-stale / 0 unparseable. Nothing to resume. Live lanes active: Quezada delta pullback in-flight (part-36 curl downloading at check) + Blender 5.2.4 download curl + du scan - sacred, untouched. ROUND 6 coordinator CHECKPOINT.md stale since 02:12 EST, underlying queue process alive - NOT resumed (duplicate-runner risk), carried observation.
+- STEP 4 canon-sync: nothing new (MEMORY.md md5 8e687cb4 unchanged since 07:14Z). No repo canon commit this run.
+- STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 81%. No in-flight sacred work touched.
+- STEP 6/7/8: no new thread, no new pulls - live lanes own the work; stand down.
+- BLOCKED &gt;72h (16 carried, unchanged): WH conflicting 12 + #713 + #377 owner-held; Bannon #78 owner-held; GRE #84 checks-unreadable; WH #1714/#1702/#1701/#1678 gate-fail (Megami-face deviation, owner decision pending); CD #71 gate-fail; M.-Engine- Autonomous CI/CD SDK-setup failure blocks ME #25/#24/#10/#6/#21. Plus carried items: row-48 stamp, non-upright-start, live-opponent proof videos, Jun bank rows, bank-row import adjudication, TorBox key dead, OWNER RULING #8, quantum-jam decisions, live Worker deploy pending, zrok stable share still down (401/502). Plus physics-playground-pwa #50 (ex-PPWA #50, instruction-gate unreadable via this token + 12-day-stale 188-file diff; needs a lane/token that can read the gate, or owner call).
+- Queue sync: AO #837 this run.</p>
 <h2 id="overnight-pipeline-2026-11-17t0844z-30-min-run">Overnight pipeline 2026-11-17T08:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-17t0844z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-17T08:44Z (queue delta first: 0 merged BY this run; 0 verified landed by another lane; 0 false claims reopened (verify-done sweep 7/7 HOLD); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 3 open + DG 2 branch-only + MMHQ 2 + PPWA 14 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked (&gt;72h) = 16 carried)
 - IDLE: last user msg 2026-11-17T04:13:31Z (~271 min idle at run start per DB); no lock file, lock created OK. Disk 79% (117G/150G, 32G free) - under 85%, guardian owns action; no pulls this run.
@@ -7344,7 +7377,8 @@
 - STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 79%. No in-flight sacred work touched.
 - STEP 6/7/8: no new thread, no new pulls - live lanes own the work; stand down.
 - BLOCKED &gt;72h (16 carried, unchanged): WH conflicting 12 + #713 + #377 owner-held; Bannon #78 owner-held; GRE #84 checks-unreadable; WH #1714/#1702/#1701/#1678 gate-fail (Megami-face deviation, owner decision pending); CD #71 gate-fail; M.-Engine- Autonomous CI/CD SDK-setup failure blocks ME #25/#24/#10/#6/#21. Plus carried items: row-48 stamp, non-upright-start, live-opponent proof videos, Jun bank rows, bank-row import adjudication, TorBox key dead, OWNER RULING #8, quantum-jam decisions, live Worker deploy pending, zrok stable share still down (401/502). Plus physics-playground-pwa #50 (ex-PPWA #50, instruction-gate unreadable via this token + 12-day-stale 188-file diff; needs a lane/token that can read the gate, or owner call).
-- Queue sync: AO #836 this run.</p>
+- Queue sync: AO #836 this run.
+- ADDENDUM: AO #836 (this run's queue sync) LANDED-VERIFIED BY THIS RUN - merged 48fa2015 (parents [f626daac main, 91a36f9f branch]); payload 2/2 blob-identical on main (MERGE-QUEUE.md aa9754c7, overnight-handoff.md e24a03b9); instruction-gate PASS + guard PASS; mergeable clean. Repo renames (PPWA -&gt; physics-playground-pwa, MMHQ -&gt; money-machine-hq) now on main via this sync.</p>
 <h2 id="overnight-pipeline-2026-11-17t0814z-30-min-run">Overnight pipeline 2026-11-17T08:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-17t0814z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-17T08:14Z (queue delta first: 0 merged BY this run; 1 verified landed by another lane (AO #834 784733c7, 3/3 payload blobs); 0 false claims reopened (verify-done sweep 6/6 HOLD); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 3 open + DG 2 branch-only + MMHQ 2 + PPWA 14 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked (&gt;72h) = 16 carried)
 - IDLE: last user msg 2026-11-17T04:13:31Z (~241 min idle at run start per DB); no lock file, lock created OK. Disk 78% (116G/150G, 33G free) - under 85%, guardian owns action; no pulls this run.
