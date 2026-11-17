@@ -1,3 +1,13 @@
+## Overnight pipeline - 2026-11-17T09:14Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: PPWA #235 (merge c2082ba5, 8/8 payload blobs on main) - W17/Spec-C corrective toolkit bug-fix v1.3.3. 0 false claims (verify-done sweep 7/7 HOLD). Queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open + DG 3 open + DG 2 branch-only + MMHQ 2 + PPWA 14 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked >72h = 16 carried.
+- STEP 1: delta sweep - PPWA tip b6bc407b -> c2082ba5 (#235, lane merge 09:01:19Z, verified). All other tips + open-PR counts unchanged. GRE #84 / Bannon #22 / ME #10 still UNSTABLE; PPWA #50 NOT merged (prior call stands). Excluded/owner-held untouched. Merge-law CI watch 04:12 EST: 0 of 58 watch-list PRs CLEAN.
+- STEP 2 verify-done (7 HOLD): PPWA #235 (8/8) + AO #836 + WH #1748 + DG #90 + CJ #410 + Bannon #94 + CD2 #10 (tips == merge commits).
+- STEP 3 checkpoints: audit 79 healthy / 0 stale / 1152 skipped. Nothing to resume. Quezada delta pullback (part-36) + Blender 5.2.4 download in-flight - untouched.
+- STEP 4 canon-sync: nothing new (MEMORY.md md5 8e687cb4 unchanged).
+- STEP 5: failure-alerts.log nothing new. Disk 81%. No in-flight work touched.
+- STEP 6/7/8: no new thread, no new pulls - live lanes own the work; stand down.
+- BLOCKED >72h (16 carried, unchanged): WH conflicting 12 + #713 + #377 owner-held; Bannon #78 owner-held; GRE #84 checks-unreadable; WH #1714/#1702/#1701/#1678 gate-fail (Megami-face deviation, owner decision pending); CD #71 gate-fail. Plus carried items: row-48 stamp, non-upright-start, live-opponent proof videos, Jun bank rows, bank-row import adjudication, TorBox key dead, OWNER RULING #8, quantum-jam decisions, live Worker deploy pending, zrok stable share still down (401/502), PPWA #50 gate-unreadable.
+- Queue sync: AO #837 this run.
 ## Overnight pipeline - 2026-11-17T08:44Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 0 verified landed by another lane. 0 false claims (verify-done sweep 7/7 HOLD). Queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open + DG 3 open + DG 2 branch-only + MMHQ 2 + PPWA 14 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked >72h = 16 carried.
 - STEP 1: delta sweep - 0 tips moved, open-PR counts identical across all 12 repos. GRE #84 / Bannon #22 / ME #10 still UNSTABLE; physics-playground-pwa #50 (ex-PPWA #50) NOT merged (prior call stands). Excluded/owner-held untouched.
