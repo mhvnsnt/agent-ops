@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-17t0544z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-17t0614z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -859,6 +859,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-17t0614z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-17T06:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-17t0544z-30-min-run" class="md-nav__link">
@@ -4974,6 +4985,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-17t0614z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-17T06:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-17t0544z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7174,6 +7196,17 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-17t0614z-30-min-run">Overnight pipeline 2026-11-17T06:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-17t0614z-30-min-run" title="Permanent link">&para;</a></h2>
+<p>Overnight pipeline 2026-11-17T06:14Z (queue delta first: 0 merged BY this run; 1 verified landed by another lane (AO #829, merge 58e700ca - the 05:44Z run's own queue sync, confirmed on main by this run); 0 false claims reopened (verify-done sweep 6/6 HOLD + 2 unverifiable-this-run carried, see STEP 2); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 3 open + DG 2 branch-only + MMHQ 2 + PPWA 14 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked (&gt;72h) = 16 carried)
+- IDLE: last user msg 2026-11-17T04:13:31Z (~121 min idle at run start per DB); no lock file, lock created OK. Disk 81% (119G/150G, 30G free) - at/above 80%, guardian owns action; no pulls this run.
+- STEP 1 (delta sweep vs 05:44Z baseline): 1 tip MOVED - AO 15570a54 -&gt; 58e700ca (#829, the 05:44Z run's own queue sync, verified above). All other 9 reachable tips unchanged (WH ee3c0806, DG 17be49b2, CJ 6a3fb2b6, GRE bbef101d, Bannon c1fba777, CD 5280d74c, CD2 0966baf4, wrestling e1702afd, M.-Engine- 0adacedf). Open-PR counts identical (WH 30, DG 3, CJ 0, GRE 1, Bannon 5, CD 1, CD2 0, wrestling 0, M.-Engine- 19, AO 0). MMHQ + PPWA 404 AGAIN (re-probed after 20s, confirmed) - fourth occurrence of the transient pattern (2026-11-16 05:44Z-&gt;08:14Z, 12:44Z-&gt;17:14Z, 2026-11-17 05:44Z-&gt;06:14Z); both were verified live at 05:19Z (PPWA tip 89db6b0c, MMHQ tip 4560e1b4). CARRIED BLOCKER, not a deletion: their 16 queue items (MMHQ 2 + PPWA 14) cannot be verified this run. Targeted re-check: WH #1714/#1702/#1701/#1678 mergeable=true/BLOCKED (gate-fail, owner decision pending); WH #1696/#1600 mergeable=null (conflicting, unchanged); CD #71 mergeable=true/BLOCKED (gate-fail); GRE #84 mergeable=true/UNSTABLE (checks-unreadable); DG #9 mergeable=null (conflicting); DG #89 draft DO-NOT-MERGE; Bannon #22 mergeable=true/UNSTABLE; ME #10 mergeable=true/UNSTABLE; MMHQ #29 conflicting, #12 draft; DG #91 blocked on DG CI validate red-on-main. 0 green+mergeable non-draft non-excluded, nothing merged in game repos BY this run. Excluded/owner-held untouched: Bannon #78 draft, WH #377, CJ #156/#157/#167, DG #89.
+- STEP 2: verify-done sweep 6/6 HOLD, 0 false - AO #829 (tip 58e700ca IS the #829 merge, 2 parents) + WH #1748 (tip ee3c0806, 2 parents) + DG #90 (tip 17be49b2, 2 parents) + CJ #410 (tip 6a3fb2b6, 2 parents) + Bannon #94 (tip c1fba777, 2 parents) + CD2 #10 (tip 0966baf4, 2 parents). PPWA #227/#228 UNVERIFIABLE this run (repo 404) - NOT false claims: both were verified landed on main at 05:19Z (#227 merge 89db6b0c, RULES.md blob cfb56795; #228 merge 1007c134, 26/26 blobs). Carried as unverifiable-this-run.
+- STEP 3: checkpoints audit 79 healthy / 0 stale / 1152 skipped (checkpoint_audit.py); direct scan 0 running stale. Nothing to resume. Daily note: live lanes active (P2 resume #4 Kiriko re-shoot, P3 resume, W10 FSMP finisher, toolkit bug-fix, V25 elbow successor launching - Blenders live at check).
+- STEP 4 canon-sync: nothing new (MEMORY.md md5 a09ca459 unchanged since 04:44Z). No repo canon commit this run.
+- STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 81%. No in-flight sacred work touched (Blender V25 elbow-fix shoot + P3 SquishyFX web batch running at check, left alone).
+- STEP 6/7/8: no new thread, no new pulls - live lanes own the work; stand down.
+- BLOCKED &gt;72h (16 carried, unchanged): WH conflicting 12 + #713 + #377 owner-held; Bannon #78 owner-held; GRE #84 checks-unreadable; WH #1714/#1702/#1701/#1678 gate-fail (Megami-face deviation, owner decision pending); CD #71 gate-fail; M.-Engine- Autonomous CI/CD SDK-setup failure blocks ME #25/#24/#10/#6/#21. Plus carried items: row-48 stamp, non-upright-start, live-opponent proof videos, Jun bank rows, bank-row import adjudication, TorBox key dead, OWNER RULING #8, quantum-jam decisions, live Worker deploy pending, zrok stable share still down (401/502). NEW: MMHQ + PPWA 404 transient (re-confirmed, fourth occurrence) - their 16 queue items unverifiable this run; DG #91 still blocked on DG CI validate red-on-main.
+- Queue sync: AO #___ this run (pending...).</p>
 <h2 id="overnight-pipeline-2026-11-17t0544z-30-min-run">Overnight pipeline 2026-11-17T05:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-17t0544z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-17T05:44Z (queue delta first: 0 merged BY this run; 0 verified landed by another lane (all 10 reachable repo tips + all open-PR counts unchanged vs 05:19Z baseline; AO tip 15570a54 = 05:19Z run's own #828 sync, already verified by that run); 0 false claims reopened (verify-done sweep 6/6 HOLD + 2 unverifiable-this-run carried, see STEP 2); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 3 open + DG 2 branch-only + MMHQ 2 + PPWA 14 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked (&gt;72h) = 16 carried)
 - IDLE: last user msg 2026-11-17T04:13:31Z (~91 min idle at run start per DB); no lock file, lock created OK. Disk 80% (118G/150G, 31G free) - at 80%, guardian owns action; no pulls this run.
@@ -7184,7 +7217,8 @@
 - STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 80%. No in-flight sacred work touched (Blender P3 SquishyFX + toolkit-fix + proof_model_v2 scarlett + V25 elbow-fix renders + release-asset curl download running at check, left alone).
 - STEP 6/7/8: no new thread, no new pulls - live lanes own the work; stand down.
 - BLOCKED &gt;72h (16 carried, unchanged): WH conflicting 12 + #713 + #377 owner-held; Bannon #78 owner-held; GRE #84 checks-unreadable; WH #1714/#1702/#1701/#1678 gate-fail (Megami-face deviation, owner decision pending); CD #71 gate-fail; M.-Engine- Autonomous CI/CD SDK-setup failure blocks ME #25/#24/#10/#6/#21. Plus carried items: row-48 stamp, non-upright-start, live-opponent proof videos, Jun bank rows, bank-row import adjudication, TorBox key dead, OWNER RULING #8, quantum-jam decisions, live Worker deploy pending, zrok stable share still down (401/502). NEW: MMHQ + PPWA 404 transient (re-confirmed, third occurrence) - their 16 queue items unverifiable this run; DG #91 still blocked on DG CI validate red-on-main.
-- Queue sync: AO #___ this run (pending...).</p>
+- Queue sync: AO #829 this run.
+- ADDENDUM: AO #829 (this run's queue sync) LANDED-VERIFIED BY THIS RUN - merged 58e700ca (parents [15570a54 main, deb3c9ec branch]); payload 2/2 blob-identical on main (MERGE-QUEUE.md 4bd43e5c, overnight-handoff.md 8638b75e); instruction-gate PASS + guard PASS; mergeable clean.</p>
 <h2 id="overnight-pipeline-2026-11-17t0519z-30-min-run">Overnight pipeline 2026-11-17T05:19Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-17t0519z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-17T05:19Z (queue delta first: 1 merged BY this run (PPWA #227 canon sync, 89db6b0c); 1 verified landed by another lane (PPWA #228 Mae knee-black-patch, 1007c134, 26/26 payload blobs - see STEP 1/2); 0 false claims reopened (verify-done sweep 8/8 HOLD); queue: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open (game repos) + DG 3 open + DG 2 branch-only + MMHQ 2 + PPWA 14 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked (&gt;72h) = 16 carried)
 - IDLE: last user msg 2026-11-17T04:13:31Z (~65 min idle at run start per DB); no lock file, lock created OK. Disk 79% (117G/150G, 33G free) - below 80%, guardian owns action; no pulls this run.
