@@ -24,7 +24,7 @@ mkdir -p "$FIX"
 expect() {
   local name="$1" want="$2" want_reason="$3"; shift 3
   local out code
-  out="$("$GUARD" "$@" 2>&1)"; code=$?
+  out="$("$GUARD" --no-log "$@" 2>&1)"; code=$?
   if [ "$code" -eq "$want" ] && { [ -z "$want_reason" ] || echo "$out" | grep -q -F "$want_reason"; }; then
     echo "PASS $name (exit $code)"
     PASS=$((PASS+1))

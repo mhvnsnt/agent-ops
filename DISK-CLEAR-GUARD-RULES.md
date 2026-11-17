@@ -53,8 +53,10 @@ answer.
 
 ```bash
 # every candidate, every time, before any delete:
-./disk-clear-guard.sh --stored-manifest <manifest> --log <dir>
+./disk-clear-guard.sh --stored-manifest <manifest> <dir>
 # exit 0 = CLEARABLE, 1 = BLOCKED (reasons printed), 2 = ERROR (treat as BLOCKED)
+# every verdict is appended to disk-cleanup-log.md by default;
+# --no-log is for dry runs and tests only.
 ```
 
 ## What the gate checks
@@ -100,8 +102,8 @@ the dir itself. Both mechanisms are cheap; the guard enforces both.
 - It does not replace the ONE-STORE RULE, the NEVER-KILL-IN-PROGRESS law,
   or the SAFE-STORAGE-FIRST law — it enforces them mechanically.
 - It does not delete, move, or modify anything. It only reads and returns
-  a verdict. The `--log` flag appends one verdict line to
-  `disk-cleanup-log.md`; dry runs omit it.
+  a verdict. Every verdict is appended to `disk-cleanup-log.md` by default;
+  `--no-log` is for dry runs and tests only.
 
 ## Cron update required (parent action)
 

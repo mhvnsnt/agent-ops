@@ -24,9 +24,11 @@
 #                           TeraBox / repo). A whole-dir clear requires it:
 #                           EVERY file in DIR must be listed. Any file not
 #                           in the manifest blocks the clear and is named.
-#   --log                   append the verdict line to
-#                           ~/workspace/agent-ops/disk-cleanup-log.md.
-#                           (Dry runs omit --log.)
+#   --log / --no-log        verdicts are appended to
+#                           ~/workspace/agent-ops/disk-cleanup-log.md by
+#                           DEFAULT (every decision is logged, per the
+#                           charter); --no-log is for dry runs and tests
+#                           only.
 #
 # The script NEVER deletes, moves, or modifies anything. It only reads and
 # prints a verdict. Exit codes:
@@ -68,12 +70,13 @@ usage() {
 }
 
 MANIFEST=""
-DO_LOG=0
+DO_LOG=1
 TARGET=""
 while [ $# -gt 0 ]; do
   case "$1" in
     --stored-manifest) [ $# -ge 2 ] || usage; MANIFEST="$2"; shift 2;;
     --log) DO_LOG=1; shift;;
+    --no-log) DO_LOG=0; shift;;
     --help|-h) usage;;
     --*) echo "unknown flag: $1" >&2; usage;;
     *) [ -z "$TARGET" ] || usage; TARGET="$1"; shift;;
