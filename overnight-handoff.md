@@ -1,3 +1,13 @@
+## Overnight pipeline - 2026-11-17T05:44Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 0 verified landed by another lane (all 10 reachable tips + all open-PR counts unchanged vs 05:19Z; AO tip 15570a54 = 05:19Z run's own #828 sync, already verified by that run). 0 false claims (verify-done sweep 6/6 HOLD + 2 unverifiable-this-run carried). Queue: 78 open (PPWA 14 + MMHQ 2 unverifiable this run), 16 blocked >72h (carried).
+- STEP 1: delta sweep - 0 tips moved among reachable repos. MMHQ + PPWA 404 AGAIN (repo view, commits, pulls all 404, re-probed after 20s and confirmed) - third occurrence of the transient pattern; both verified live at 05:19Z (PPWA 89db6b0c, MMHQ 4560e1b4) ~25 min before this 404. CARRIED BLOCKER, not a deletion; their 16 queue items unverifiable this run. Carried PRs unchanged, no re-probe. DG #91 still blocked (DG CI validate red-on-main).
+- STEP 2 verify-done (6 HOLD): AO #828 + WH #1748 + DG #90 + CJ #410 + Bannon #94 + CD2 #10 (all current tips ARE their merge commits, 2 parents each). PPWA #227/#228 unverifiable this run (repo 404) - NOT false: both verified landed on main at 05:19Z (#227 89db6b0c RULES.md cfb56795; #228 1007c134 26/26 blobs).
+- STEP 3 checkpoints: audit 79 healthy / 0 stale / 1152 skipped. Direct scan 0 running / 0 unparseable. Nothing to resume.
+- STEP 4 canon-sync: nothing new (MEMORY.md md5 a09ca459 unchanged).
+- STEP 5: failure-alerts.log nothing new. Disk 80%. No in-flight work touched (Blender renders + release-asset curl in flight).
+- STEP 6/7/8: no new thread, no new pulls - live lanes own the work; stand down.
+- BLOCKED >72h (16 carried, unchanged - see queue file). NEW: MMHQ + PPWA 404 transient (third occurrence, re-confirmed).
+- Queue sync: AO #___ this run (pending...).
 ## Overnight pipeline - 2026-11-17T05:19Z (30-min run)
 - QUEUE DELTA: 1 merged by this run: PPWA #227 (canon sync, proof-quality law, merge 89db6b0c, RULES.md blob cfb56795 verified on main). 1 verified landed by another lane: PPWA #228 (Mae knee black-patch, merge 1007c134, 26/26 blobs verified on main). 0 false claims (verify-done sweep 8/8 HOLD). Queue: 78 open (PPWA 15 -> 14), 16 blocked >72h (carried).
 - STEP 1: delta sweep - PPWA tip 558503f3 -> 89db6b0c; all other tips + counts unchanged. PPWA #227 unblocked this run: Vercel pending -> success, combined status success, mergeable=true, add-only diff. Carried PRs unchanged, no re-probe. DG #91 still blocked (DG CI validate red-on-main).
@@ -7,7 +17,8 @@
 - STEP 5: failure-alerts.log nothing new. Disk 79%. No in-flight work touched.
 - STEP 6/7/8: no new thread, no new pulls - live lanes own the work; stand down.
 - BLOCKED >72h (16 carried, unchanged - see queue file). NEW: none.
-- Queue sync: AO #___ this run (pending...).
+- Queue sync: AO #828 this run.
+- ADDENDUM: AO #828 (this run's queue sync) LANDED-VERIFIED BY THIS RUN - merged 15570a54 (parents [34d8ec31 main, cbd601aa branch]); payload 2/2 blob-identical on main (MERGE-QUEUE.md f1a09557, overnight-handoff.md 0d0bf95d); instruction-gate PASS + guard PASS first try; mergeable clean.
 ## Overnight pipeline — 2026-11-17T04:44Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 8 verified landed by another lane: PPWA #219 (W18C joints-fans tool, merge 37dbc0f5) + #220 (W18C secondary controllers, 1fb630f0) + #221 (W17 physics roll-out, 13bebae2) + #222 (W17 presets path fix, 61105035) + #223 (W17 knee-fix, 5ff373e1) + #224 (W10 FSMP port, 00375ae1) + #225 (P1 served-Megami repair, 32fdfc96) + #226 (W10 FSMP hook fix, 558503f3) — 11/11 payload spot-checks on main (10 exact blob matches + W17-REPORT.md superseded by #222, diff-confirmed); merge diffs reviewed, no unexplained deletions. 1 NEW queue item: PPWA #227 (canon PR, OPEN-PR). 0 false claims reopened (verify-done sweep 8/8 HOLD). Queue counts: WH 30 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 37 open + DG 3 + DG 2 branch-only + MMHQ 2 + PPWA 15 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
 - STEP 1: delta sweep — 2 tips moved (PPWA fefbaab7 -> 558503f3, AO 543eaf6b -> f0c4c1d9 = #825 prior sync); all others unchanged. All carried PRs unchanged, no re-probe. PPWA #227 mergeable=true/UNSTABLE, checks unreadable (403) + Vercel pending, NOT merged. No green+mergeable non-draft non-excluded PR. Excluded/owner-held untouched.
