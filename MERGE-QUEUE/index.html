@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-18t1744z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-18t1814z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -886,6 +886,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-18t1814z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-18T18:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-18t1744z-30-min-run" class="md-nav__link">
@@ -5364,6 +5375,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-18t1814z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline 2026-11-18T18:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-18t1744z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7927,6 +7949,18 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-18t1814z-30-min-run">Overnight pipeline 2026-11-18T18:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-18t1814z-30-min-run" title="Permanent link">&para;</a></h2>
+<p>Overnight pipeline 2026-11-18T18:14Z (queue delta first: 0 merged BY this run; 1 verified landed by another lane - pokemon P6 merge a19abe9 + record commit 3861ed5; 0 false claims reopened (verify-done sweep 5/5 HOLD); queue counts: WH 24 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 31 open (game repos) + DG 3 open + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked (&gt;72h) = 16 carried)
+- IDLE: last user msg 2026-11-18T16:59:58Z (~74 min idle at run start); no lock file, lock created OK. Disk 73% (109G/150G, 41G free) - under 85%, no pulls this run.
+- STEP 1 (delta sweep vs 17:44Z baseline): 1 tip MOVED - pokemon-arena-3d ccd1057 -&gt; 3861ed5 (P6 merge a19abe9 "wave-1 extraction: P6 PokePark 2 first slice (Victini 494, real mesh + textures + 27 CHR0 clips)", parents [ccd1057 main, 04adfda branch], 26 files +1834/-26, + record commit 3861ed5 "record P6 merge (a19abe9); P7 spawning"; compare ahead 6, behind 0). AO tip efe1480 = 17:44Z run's own #863 merge, already verified. All other tips unchanged (WH 43d29bf6, CJ 8712aad, GRE bbef101d, Bannon c1fba77, CD 5280d74c, CD2 0966baf4, wrestling e1702afd, DG 17be49b2, ME 0adacedf, PPWA 3be6dcd, MMHQ 929d312, TRIPPEDD 0c236e5). Open-PR counts re-verified via API, all match baseline: WH 24, CJ 0, GRE 1, Bannon 5, CD 1, CD2 0, wrestling 0, DG 3, MMHQ 3, ME 19, PPWA 18, pokemon 0, AO 0, TRIPPEDD 4 - no new PR in-window. 12 candidates re-checked, heads+states unchanged: PPWA #246/#255/#50 mergeable=true but gate unreadable (check-runs API 403 via this token; #246's only status is Vercel success; body not gate-format), #256 dirty (4585ddf); ME #25/#24/#21/#18/#10/#6 mergeable=true but combined status pending with 0 statuses; WH #1714 mergeable=true but combined pending/0 statuses + gate-fail blocker, #1696 dirty (c675e6c). NOTHING green+mergeable. Excluded/owner-held untouched: Bannon #78 draft, WH #377, CJ #156/#157/#167, DG #89.
+- STEP 2: verify-done sweep 5/5 HOLD - PPWA #270 merge 3be6dcd == PPWA tip (identical); pokemon P6 merge a19abe9 ancestor of tip 3861ed5 (ahead 1, behind 0; parents [ccd1057, 04adfda]); CJ #412 merge 8712aad == CJ tip (identical); DG #88 merge 851fc234 ancestor of tip 17be49b2 (ahead 121, behind 0); AO #863 merge efe1480 == AO tip (identical; parents [1f60d58, 307a034]). 0 false claims reopened.
+- STEP 3: checkpoint parse of all 1230 JSONs: 0 running-watchdog / 0 stale &gt;60m / 0 unparseable. Nothing to resume. checkpoint_audit.py still MISSING (tools/ archived 2026-10-31).
+- STEP 4 canon-sync: MEMORY.md md5 CHANGED 639886b7 -&gt; 71b3f1ff (memory-system re-add/condense churn vs CJ 09:22Z backup; new entries are Fiverr/ID/legal personal-ops items, never committed to repos; re-added game entries already assessed by prior runs - Honeybebou program already on PPWA main via #257/#258-#270, GP triangle via #253, anus orifice via #262). Nothing new to sync.
+- STEP 5: failure-alerts.log nothing new (last 2026-10-20). In-flight at check: at-inflate2.py RUNNING (PID 19220, TV Gigaleak long-tail pull) - NOT touched; blender Zekrom BRRES import RUNNING (PID 20807, p7-dan-park) - NOT touched; <code>du -sh</code> workspace inventory - NOT touched. Disk 73% (109G/150G, 41G free). zrok stable share still down per 10:17 EST watchdog (401, fresh token needed - owner decision, carried).
+- STEP 6/7/8: no new thread, no new pulls - live lanes own the work (pokemon P6 landed, P7 spawning; DG lane; blender Zekrom import running). Stand down.
+- BLOCKED &gt;72h (16 carried, unchanged): WH conflicting 12 + #713 + #377 owner-held; Bannon #78 owner-held; GRE #84 checks-unreadable; WH #1714/#1702/#1701/#1678 gate-fail (Megami-face deviation, owner decision pending); CD #71 gate-fail; M.-Engine- Autonomous CI/CD SDK-setup failure blocks ME #25/#24/#10/#6/#21 (ME #18 fix PR itself red). Plus carried items: row-48 stamp, non-upright-start, live-opponent proof videos, Jun bank rows, bank-row import adjudication, TorBox key dead, OWNER RULING #8, quantum-jam decisions, live Worker deploy pending, zrok stable share DOWN (401, needs fresh token - owner decision; watchdog restarts fail instantly).
+- Queue sync: AO #864 this run (to follow).
+- ADDENDUM: (to add after merge)</p>
 <h2 id="overnight-pipeline-2026-11-18t1744z-30-min-run">Overnight pipeline 2026-11-18T17:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-18t1744z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-18T17:44Z (queue delta first: 0 merged BY this run; 2 verified landed by another lane - pokemon P5 merge 0ca81b8 + MMHQ direct-to-main daily sweep (929d312); 0 false claims reopened (verify-done sweep 5/5 HOLD + pokemon P5 bonus); queue counts: WH 24 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 31 open (game repos) + DG 3 open + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked (&gt;72h) = 16 carried)
 - IDLE: last user msg 2026-11-18T16:59:58Z (~44 min idle at run start); no lock file, lock created OK. Disk 72% (107G/150G, 43G free) - under 85%, no pulls this run.
@@ -7938,7 +7972,7 @@
 - STEP 6/7/8: no new thread, no new pulls - live lanes own the work (pokemon P5 landed; DG 6B lane running; at-inflate2 pull running). Stand down.
 - BLOCKED &gt;72h (16 carried, unchanged): WH conflicting 12 + #713 + #377 owner-held; Bannon #78 owner-held; GRE #84 checks-unreadable; WH #1714/#1702/#1701/#1678 gate-fail (Megami-face deviation, owner decision pending); CD #71 gate-fail; M.-Engine- Autonomous CI/CD SDK-setup failure blocks ME #25/#24/#10/#6/#21 (ME #18 fix PR itself red). Plus carried items: row-48 stamp, non-upright-start, live-opponent proof videos, Jun bank rows, bank-row import adjudication, TorBox key dead, OWNER RULING #8, quantum-jam decisions, live Worker deploy pending, zrok stable share DOWN (401, needs fresh token - owner decision; watchdog restarts fail instantly).
 - Queue sync: AO #863 this run (to follow).
-- ADDENDUM: (to add after merge)</p>
+- ADDENDUM: AO #863 (this run's queue sync) LANDED-VERIFIED BY THIS RUN - merged efe1480 (parents [1f60d58 main, 307a034 branch]); payload 2/2 blob-identical on main (MERGE-QUEUE.md 0d5d8807, overnight-handoff.md 49265967); instruction-gate PASS + guard PASS; mergeable clean; +25/-2 (the 2 deletions are the 15:14Z placeholder lines replaced by the verified #862 addendum text). Run tally: 1 landed-verified BY this run (AO #863) + 2 verified landed by another lane (pokemon P5 0ca81b8, MMHQ sweep 929d312), 0 reopened.</p>
 <h2 id="overnight-pipeline-2026-11-18t1514z-30-min-run">Overnight pipeline 2026-11-18T15:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-18t1514z-30-min-run" title="Permanent link">&para;</a></h2>
 <p>Overnight pipeline 2026-11-18T15:14Z (queue delta first: 0 merged BY this run; 8 verified landed by another lane - PPWA #257/#266/#267/#268/#269/#270 + pokemon P4c + MMHQ daily sweep; 0 false claims reopened (verify-done sweep 5/5 HOLD + PPWA 6-merge bonus); queue counts: WH 24 + CJ 0 + GRE 1 + Bannon 5 + CD 1 + CD2 0 + wrestling 0 = 31 open (game repos) + DG 3 open + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + 1 LOCAL-ONLY; blocked (&gt;72h) = 16 carried)
 - IDLE: last user msg 2026-11-18T14:42:12Z (~32 min idle at run start); no lock file, lock created OK. Disk 75% (112G/150G, 38G free) - under 85%, no pulls this run.
