@@ -8,6 +8,7 @@
 - STEPS 6–8: no new thread, no new pulls. Stand down.
 - NOTE: local agent-ops copies of the queue/handoff remain three entries behind main (head 07:14Z); this run synced from main's copies via a git worktree. Authoritative copy is on main.
 - Queue sync: AO #891 this run (to follow).
+- ADDENDUM: AO #891 LANDED-VERIFIED BY THIS RUN - merged b512ee5; payload 2/2 blob-identical on main; instruction-gate PASS + guard PASS.
 ## Overnight pipeline — 2026-11-19T08:44Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 0 newly landed by another lane since 08:14Z; re-verified landed this run: pokemon-arena-3d P17 (merge 3085f4e, payload 9/9 blob-identical on main, tip 76a4a77) + AO #888 (merge 5c52cb4, payload 2/2 blob-identical on main, merge == AO tip). 0 false claims reopened (verify-done sweep 5/5 HOLD + 2 bonus). Queue counts: game repos 32 open (WH 24, pokemon 1, GRE 1, Bannon 5, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
 - STEP 1: delta sweep vs 08:14Z — 0 tips moved, all 16 tips + all open-PR counts unchanged. 18 candidates re-checked; pokemon #3 flipped to mergeable_state=clean (first time) but combined still pending/0 statuses and check-runs 403-unreadable — NOT merged, no readable green; flagged as closest candidate. Nothing else green+mergeable. Excluded/owner-held untouched (Bannon #78, WH #377, CJ #156/#157/#167, DG #89).
