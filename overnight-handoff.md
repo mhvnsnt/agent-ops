@@ -1,3 +1,13 @@
+## Overnight pipeline — 2026-11-19T19:44Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 8 verified landed by another lane since 18:14Z: WH #1765/#1766/#1767 (Pantera throwfix), Bannon #109 (sourcing-rule doc), PPWA #277 (Adri anus orifice round 4), pokemon #3 (DIRECTION.md re-approval), AO #911/#912 (queue syncs; payload 2/2 blob-identical). 0 false claims reopened (verify-done sweep 5/5 HOLD + 1 bonus). Queue counts: game repos 29 open (WH 25, Bannon 1, GRE 1, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 0 + 1 LOCAL-ONLY; blocked (>72h) = 15 carried.
+- NEW: WH #1768 Docs sourcing rule (1 file +4/-0, mergeable=true state=blocked, combined pending n=0 - not merged, no green); Bannon #108 CI self-hosted runner (mergeable null/unknown, combined pending n=0 - not merged).
+- FLAG - BANNON #78: exclusion-merge (ff04cc1, 14:16:34Z) still unruled; confirmed ancestor of current Bannon tip e3f2d4b. OWNER RULING NEEDED: stays or reverted?
+- STEP 1: 5 tips moved (WH, Bannon, PPWA, pokemon, AO). 18 candidates re-checked; nothing green+mergeable (pokemon #3 merged; PPWA/ME/GRE/MMHQ/DG unstable or null; WH #1714/#1762 blocked, #1696/#256 dirty). Excluded/owner-held untouched.
+- STEP 2 verify-done (5 HOLD + 1 bonus): WH #1763, Bannon #105, PPWA #276, pokemon P20, MMHQ tip; bonus AO #908 - all merges ancestor of current tips, payload blobs identical on main.
+- STEP 3 checkpoints: 1230 JSONs, 0 stale running watchdog; nothing to resume.
+- STEP 4 canon-sync: MEMORY.md md5 unchanged ba6c8bc0. Nothing synced.
+- STEP 5: failure-alerts nothing new; disk 83%. In-flight untouched: pokemon p21 gh release download (PID 24113), DG live-view stack, node servers. zrok stable share still down (probe 502, owner decision, carried).
+- STEP 6/7/8: no new thread, no pulls - live lanes own the work. Stand down.
 ## Overnight pipeline — 2026-11-19T18:14Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 2 verified landed by another lane: AO #909 (merge e476c94) + AO #910 (merge 41ea2f7, the 17:44Z run's queue syncs; payload 2/2 blob-identical on main, merge == AO tip). 0 false claims reopened (verify-done sweep 5/5 HOLD). Queue counts: game repos 29 open (WH 26, Bannon 0, pokemon 1, GRE 1, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 0 + 1 LOCAL-ONLY; blocked (>72h) = 15 carried.
 - NEW: WH #1766 Pantera throw orientation (opened 18:16:18Z during this run; gate-format body, mergeable=true unstable, combined pending n=0 - not merged, no green).
