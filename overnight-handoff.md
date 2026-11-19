@@ -8,6 +8,7 @@
 - STEP 4 canon-sync: MEMORY.md md5 unchanged ba6c8bc0. Nothing synced.
 - STEP 5: failure-alerts nothing new; disk 83%. In-flight untouched: stream-c Blender render, Pantera throwfix lanes B/C, M. Engine supervisor :8771, DG live-view stack. zrok stable share still down (401, owner decision, carried).
 - STEP 6/7/8: no new thread, no pulls - live lanes own the work. Stand down.
+- ADDENDUM: AO #911 LANDED-VERIFIED BY THIS RUN - merged e58d309 (parents [41ea2f7, 93e7950]); payload 2/2 blob-identical on main; instruction-gate PASS + guard PASS; mergeable clean; +22/-0 add-only.
 ## Overnight pipeline — 2026-11-19T17:44Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 8 verified landed by another lane since 14:44Z: WH #1758/#1760/#1761/#1763/#1764 (tip 83b2e09) + Bannon #101-#107 (tip 55758c1) + PPWA #273/#274/#275/#276 (tip 7eadc89) + pokemon P20 (tip 6e3fb67) + AO #881 (tip c70897c). 0 false claims reopened (verify-done sweep 5/5 HOLD). Queue counts: game repos 28 open (WH 25, Bannon 0, pokemon 1, GRE 1, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 0 + 1 LOCAL-ONLY; blocked (>72h) = 15 carried.
 - FLAG — BANNON #78: exclusion-merge (ff04cc1, 14:16:34Z) still unruled; ancestor of current Bannon tip 55758c1. OWNER RULING NEEDED: stays or reverted?
