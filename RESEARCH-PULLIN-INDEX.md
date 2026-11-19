@@ -314,3 +314,25 @@ zrok share loop only observed; no disable/enable, no restart by this pass).
 | zrok stable share 401 unauthorized + 5-min futile restart loop (stable URL 502 tonight) | Live `zrok2 list shares` 401 panic + `zrok-share.log`; OpenZiti Discourse thread 2764 | 📄 diagnosed — fix is `zrok disable` + `zrok enable <fresh console token>` (browser step, not done here); recommended watchdog 401-circuit-breaker (stop restarting, log NEEDS-REENABLE once) queued with the live-view lane; free 5-share limit + stuck-share release via console/unshare API documented |
 | stream-stage.sh PIPESTATUS bug (exit 1 after upload under `set -u`) | Found 2026-11-15 ~03:35Z by disk-stage lane; overlay copy at /opt/disk-stage-r3/ already patched | 📄 queued — the repo copy does not exist: the script is **untracked local-only** in the dirty workdir (never committed), so no PR can fix it; fix is one line (`RC=("${PIPESTATUS[@]}")` first). NOT patched here — the disk-stage round-3 lane is live and the file is its running script; lane owner to commit-then-fix or patch in place |
 | M. Engine supervisor ~2 h deaths | 2026-11-12 doc (02-supervisor-deaths.md) | 📄 still queued — verified this pass the recommended `setsid nohup` fix was NOT applied (`watchdog.sh` line 47 still plain `nohup`); deaths continue (restart 23:58:50 Nov 14). Not re-researched; lane owner applies |
+## Friction research — live-view tunnels + social-video downloads + var/tmp adoption audit (2026-11-18)
+
+Docs: agent-ops `research-friction-20261118/01-live-view-tunnels.md`,
+`02-social-video-downloads.md`, `03-var-tmp-adoption-audit.md` +
+`var-tmp-audit.sh`. Research + live tests only — no PRs to live lanes
+(their owners apply the queued fixes); one tool wired (`var-tmp-audit.sh`).
+
+| Finding / candidate | Source (license) | Status |
+|---|---|---|
+| zrok stable URL still 502 / 401 loop (watchdog restarts every 5 min, ~288/day); Nov 15 circuit-breaker still unapplied | live log + `zrok-share.log` 2026-11-19 05:15 UTC | 📄 queued — live-view lane; owner step is the re-enable (fresh console token) |
+| localhost.run ALIVE (9883eb052a5810.app.lhr.life, ssh PID 138199) but burst-throttled ("Almost out of burst ... will be slowed"); paid custom-domain plan advertised | live `localhost-run-json.log` + ps, 2026-11-19 05:15 UTC | 📄 working-but-degraded — owner money decision (paid plan vs zrok re-enable) |
+| cloudflared 2026.11.1 Quick Tunnel | cloudflare/cloudflared (Apache-2.0); binary sha256-verified vs its own .deb (`97bb3b02…` identical) | ❌ excluded for this VM — `api.trycloudflare.com` POST → HTTP 403 "Your request was blocked" through the egress proxy; re-test if the egress allowlist changes |
+| localtunnel (npm) | localtunnel/localtunnel (MIT) | ❌ excluded for this VM — no URL in ~2 min; `server.localtunnel.me` empty reply through the egress proxy |
+| bore | ekzhang/bore (MIT) | ❌ already failed Nov 13 (`bore-test4.log`: connected, then "deadline has elapsed") |
+| cobalt hosted API (`co.wuk.sh`, `api.cobalt.tools`) | imputnet/cobalt (AGPL-3.0 code; branding copyrighted) | ❌ excluded for this VM — `co.wuk.sh` times out (0 bytes); `api.cobalt.tools` → HTTP 400 `error.api.auth.jwt.missing`; free for personal projects per README, commercial needs self-host |
+| cobalt self-hosted (Node) | imputnet/cobalt (AGPL-3.0) | 📄 queued, not wired — no Docker on this VM (Node 24 present); useless for the login-gated FB reel (needs FB session cookies, which live in the Muse browser profile, not on this VM) |
+| yt-dlp 2026.10.26 | yt-dlp/yt-dlp | ✅ already the chain's tool — current stable; per-post TikTok blocks are server-side, not version-fixable |
+| Browser DevTools network capture (signed-in reel playing) | technique, not a tool | 📄 the remaining route for reel 1481081410582657 — already queued from the 2026-11-18 23:31 EST browser failure; retry the follow-up |
+| Cookie bridge (signed-in browser session → VM-side downloader) | — | 📄 the actual gap — no downloader fixes login-gated content until this exists; a browser-lane + downloader-lane design question, not a research pull |
+| `var-tmp-audit.sh` (HARDCODED/OVERRIDABLE/GUARDED/MENTION sweep, exit 1 on hardcodes) | this pass, own code | ✅ wired — tested live on agent-ops: 7 HARDCODED + 3 OVERRIDABLE, exit 1, matches manual grep |
+| Quezada stage driver `PB="/var/tmp/pb-quezada"` + own comment "reassembled up to 2.4G: EXCEEDS tmpfs!" | live read of `disk-stage-20261116/quezada-stage-driver.sh` | 📄 queued — lane owner: PB env-override like pokemon's before the next pull-back |
+| tmpfs-guard adoption: zero lane scripts call it (only MERGE-QUEUE.md + .mq-main-tmp.md mention it) | live grep across agent-ops | 📄 queued — guardian/checkpoint-protocol follow-up from Nov 15 §4.3, still open |
