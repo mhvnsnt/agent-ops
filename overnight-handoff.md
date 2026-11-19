@@ -1,3 +1,13 @@
+## Overnight pipeline — 2026-11-19T09:44Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: CJ #413 memory-backup-sync (merge 29ca072 == CJ tip, payload 2/2 blob-identical on main). 0 false claims reopened (verify-done sweep 5/5 HOLD + 2 bonus). Queue counts: game repos 32 open (WH 24, pokemon 1, GRE 1, Bannon 5, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
+- STEP 1: delta sweep vs 09:14Z — 1 tip moved (CJ #413); other 15 unchanged. Open-PR counts re-verified; all match baseline. 14 candidates re-checked; pokemon #3 CLEAN/MERGEABLE but zero checks (repo has no CI) + self-check count nit — NOT merged, flagged closest candidate. Nothing else green+mergeable. Excluded/owner-held untouched.
+- STEP 2 verify-done (5 HOLD + 2 bonus): WH #1754, PPWA #272 == tips; AO #891, CJ #412, pokemon P15 ancestors of tips; WH #1753, AO #892 == tips.
+- STEP 3 checkpoints: 1230 scanned, 0 running-watchdog, 0 stale, 0 unparseable; 65 needs_owner untouched. Nothing to resume.
+- STEP 4 canon-sync: nothing new (MEMORY.md md5 changed via memory-system restore/re-curation; VALERIE canon already on DG main, Fiverr/payouts excluded as personal/financial).
+- STEP 5: failure-alerts nothing new; disk 82% (122G/150G, 28G free); /tmp 15%. In-flight NOT touched: node live-proof servers. zrok stable share still down (401, owner decision).
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down.
+- NOTE: local agent-ops copies of the queue/handoff remain behind main (head 07:14Z); this run synced from main's copies via git data API (raw fetch x2, md5-verified). Authoritative copy is on main.
+- Queue sync: AO #893 this run (to follow).
 ## Overnight pipeline — 2026-11-19T09:14Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 0 newly landed by another lane since 08:44Z; re-verified landed this run: AO #890 (merge 2150ab85 == AO tip) + pokemon P17 merge-record 76a4a77 (both checkpoint files on main record P17 merge 3085f4e). 0 false claims reopened (verify-done sweep 5/5 HOLD + 2 bonus). Queue counts: game repos 32 open (WH 24, pokemon 1, GRE 1, Bannon 5, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
 - STEP 1: delta sweep vs 08:44Z — 0 tips moved, all 16 tips + all open-PR counts unchanged. 14 candidates re-checked; pokemon #3 now CLEAN/MERGEABLE, gate-format body, +12/-0 docs-only, but repo has no CI (zero checks reported) so no readable green — NOT merged, flagged closest candidate (self-check says +13 vs actual +12). Nothing else green+mergeable. Excluded/owner-held untouched (Bannon #78, WH #377, CJ #156/#157/#167, DG #89).
