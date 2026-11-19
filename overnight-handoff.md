@@ -7,7 +7,7 @@
 - STEP 3 checkpoints: 1230 JSONs, 0 stale running watchdog; nothing to resume.
 - STEP 4 canon-sync: MEMORY.md md5 changed (re-curation, 228 -> 154 lines); no new game canon. Nothing synced.
 - STEP 5: failure-alerts nothing new; disk 83% (26G free). In-flight untouched: Blender stream-c render, DG 6B lane 133rd successor (run 37, gate deadline ~18:41 EST), Pantera throwfix lanes, pokemon p22 walkthrough, M. Engine supervisor :8771, DG live-view. zrok still down (401, owner decision).
-- STEP 6/7/8: stand down, no pulls. Queue sync AO #909 to follow.
+- STEP 6/7/8: stand down, no pulls. Queue sync AO #909 LANDED-VERIFIED (merge e476c94, payload 2/2 blob-identical on main).
 
 ## RESTORE 2026-11-19T14:59Z - AO #907 clobber reversed (this run)
 AO #907 (merge b5b18104, this run's own queue sync) replaced both queue files on main with entry-only stubs (MERGE-QUEUE.md +11/-10159, overnight-handoff.md +10/-10888) because the sync script used the contents API, which returns null `.content` for files over 1MB. Full content recovered byte-exact from parent commit cf53135c blobs (hash-object verified: 856b9159 / aefcca9d). This PR restores both files in full + the 14:44Z run entry. LESSON (standing): fetch these files only via the git blob API (raw), verify byte size + line count before committing; deletions in these files = hard stop.
