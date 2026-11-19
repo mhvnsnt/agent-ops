@@ -1,3 +1,11 @@
+## Overnight pipeline — 2026-11-19T12:44Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: pokemon P18 (merge 55640dd, re-verified independently this run: ancestor of tip 64953e2, 3/3 spot blobs identical). 0 false claims reopened (verify-done sweep 5/5 HOLD). Queue counts: game repos 33 open (WH 24, Bannon 6, pokemon 1, GRE 1, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
+- STEP 1: delta sweep vs 12:14Z — 2 tips moved (pokemon P18, AO own syncs #901/#902). Bannon open 5->6: NEW PR #95 (ZONE_HEIGHT_MISMATCH fix, opened 12:25Z, mergeable=true unstable, 0 statuses, gate-format body — NOT merged, no readable green). 20 candidates re-checked; nothing green+mergeable (pokemon #3 clean but 0 checks/no CI; PPWA #246/#255/#50 unstable + gate check-runs 403-unreadable; Bannon #22 empty-diff no-op). Excluded/owner-held untouched.
+- STEP 2: verify-done 5/5 HOLD (WH #1754, CJ #413, PPWA #272, DG #88, AO #898).
+- STEP 3: checkpoints 1230 JSONs, 0 running-watchdog/stale/unparseable; nothing to resume.
+- STEP 4: MEMORY.md md5 changed (curation pass, no new game canon — nothing synced). FLAG: local MEMORY.md differs from agent-memory backup copy; memory-backup-sync job owns re-sync, not touched here.
+- STEP 5: failure-alerts nothing new; disk 81%. In-flight untouched (DG 6B lane running; M. Engine supervisor healthy; DG live-view up). zrok still down (401, owner decision).
+- STEP 6/7/8: stand down, no pulls. Queue sync AO #903 to follow.
 ## Overnight pipeline — 2026-11-19T12:14Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: pokemon P18 (merge 55640dd, 257 clips / 200 species, payload 5/6 sampled blob-identical on main, tip now 64953e2). 0 false claims reopened (verify-done sweep 5/5 HOLD + 1 bonus). Queue counts unchanged: game repos 32 open (WH 24, pokemon 1, GRE 1, Bannon 5, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
 - STEP 1: delta sweep vs 11:14Z — 1 tip moved (pokemon only). All open-PR counts unchanged. 19 candidates re-checked; nothing green+mergeable (pokemon #3 clean but 0 checks/no CI; PPWA #246/#255/#50 unstable + gate check-runs 403-unreadable; Bannon #22 empty-diff no-op). Excluded/owner-held untouched.
