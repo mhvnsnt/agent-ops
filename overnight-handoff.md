@@ -1,3 +1,13 @@
+## Overnight pipeline — 2026-11-19T07:14Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 2 verified landed by another lane: pokemon P16 (direct push, tip 644bb49, per-arena battle-camera heights Azalea 2.6 / Classroom 3.9 / default 7 + camline proof + inventory, 5/5 sampled blobs blob-identical on main) + AO #884 (merge 08f0192, the 06:44Z run's queue sync, payload 2/2 blob-identical on main). 0 false claims reopened (verify-done sweep 5/5 HOLD + 2 bonus). Queue counts: game repos 32 open (WH 24, pokemon 1, GRE 1, Bannon 5, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
+- STEP 1: delta sweep — 2 tips moved (pokemon, AO); other 14 unchanged. Open-PR counts re-verified; all match baseline. 14 candidates re-checked; NOTHING green+mergeable. Excluded/owner-held untouched.
+- STEP 2 verify-done (5 HOLD + 2 bonus): WH #1754, pokemon P15, PPWA #272, AO #883, CJ #412; WH #1753, pokemon P16.
+- STEP 3 checkpoints: 1230 scanned, 0 running-watchdog, 0 stale, 0 unparseable; 65 needs_owner untouched. Nothing to resume.
+- STEP 4 canon-sync: nothing new (MEMORY.md md5 1880fda4 unchanged).
+- STEP 5: failure-alerts.log nothing new. Disk 80%. /tmp 8%. In-flight NOT touched: node live-proof servers, du inventory scan, pokemon wave-1 release download. zrok stable share still down (401, owner decision, carried).
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down.
+- BLOCKED >72h (16 carried, unchanged): see MERGE-QUEUE.md 07:14Z entry.
+- Queue sync: AO #885 this run (to follow).
 ## Overnight pipeline — 2026-11-19T06:44Z (30-min run)
 - QUEUE DELTA: 1 merged by this run: WH #1754 (canon Pantera T7-100, merge fbbbbc46, payload blob-identical on main). 2 verified landed by another lane: WH #1753 (merge 8249923, payload 2/2 blob-identical) + pokemon P15 (merge eb09772, 41 files, 4/4 sampled blob-identical). 0 false claims reopened (verify-done sweep 5/5 HOLD + 2 bonus). Queue counts: game repos 32 open (WH 24, pokemon 1, GRE 1, Bannon 5, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
 - STEP 1: delta sweep — 3 tips moved (WH, pokemon, AO); other 13 unchanged. Open-PR counts re-verified; WH 25 -> 24. 14 candidates re-checked; NOTHING green+mergeable besides #1754 (merged). Excluded/owner-held untouched.
