@@ -1,3 +1,13 @@
+## Overnight pipeline — 2026-11-19T06:44Z (30-min run)
+- QUEUE DELTA: 1 merged by this run: WH #1754 (canon Pantera T7-100, merge fbbbbc46, payload blob-identical on main). 2 verified landed by another lane: WH #1753 (merge 8249923, payload 2/2 blob-identical) + pokemon P15 (merge eb09772, 41 files, 4/4 sampled blob-identical). 0 false claims reopened (verify-done sweep 5/5 HOLD + 2 bonus). Queue counts: game repos 32 open (WH 24, pokemon 1, GRE 1, Bannon 5, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
+- STEP 1: delta sweep — 3 tips moved (WH, pokemon, AO); other 13 unchanged. Open-PR counts re-verified; WH 25 -> 24. 14 candidates re-checked; NOTHING green+mergeable besides #1754 (merged). Excluded/owner-held untouched.
+- STEP 2 verify-done (5 HOLD + 2 bonus): PPWA #272, WH #1751, AO #882, pokemon P14, CJ #412; WH #1753, AO #883.
+- STEP 3 checkpoints: 1230 scanned, 0 running-watchdog, 0 stale, 0 unparseable; 65 needs_owner untouched. Nothing to resume.
+- STEP 4 canon-sync: MEMORY.md md5 changed 75c23f29 -> 1880fda4; the new Pantera 100% order was SYNCED this run via WH #1754 (merged + verified fbbbbc46).
+- STEP 5: failure-alerts.log nothing new. Disk 79%. /tmp 6%. In-flight p16 live-proof server NOT touched.
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work.
+- BLOCKED >72h (16 carried, unchanged): see MERGE-QUEUE.md 06:44Z entry.
+- Queue sync: AO #884 this run (to follow).
 ## Overnight pipeline — 2026-11-19T06:14Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: PPWA #272 merge fed5bcf (Adri anus orifice smooth-out, merge == PPWA tip). 1 NEW queue item: WH #1753 (Lane E T7 6-frame crouch, created 06:08:50Z). 0 false claims reopened (verify-done sweep 5/5 HOLD + 1 bonus). Queue counts: game repos 33 open (WH 25, pokemon 1, GRE 1, Bannon 5, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
 - STEP 1: delta sweep — 1 tip moved (PPWA); other 15 unchanged. Open-PR counts re-verified; WH 24 -> 25, PPWA 19 -> 18. 13 candidates re-checked, heads+states unchanged; NOTHING green+mergeable. Excluded/owner-held untouched.
