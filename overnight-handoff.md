@@ -1,3 +1,13 @@
+## Overnight pipeline — 2026-11-19T17:44Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 8 verified landed by another lane since 14:44Z: WH #1758/#1760/#1761/#1763/#1764 (tip 83b2e09) + Bannon #101-#107 (tip 55758c1) + PPWA #273/#274/#275/#276 (tip 7eadc89) + pokemon P20 (tip 6e3fb67) + AO #881 (tip c70897c). 0 false claims reopened (verify-done sweep 5/5 HOLD). Queue counts: game repos 28 open (WH 25, Bannon 0, pokemon 1, GRE 1, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 0 + 1 LOCAL-ONLY; blocked (>72h) = 15 carried.
+- FLAG — BANNON #78: exclusion-merge (ff04cc1, 14:16:34Z) still unruled; ancestor of current Bannon tip 55758c1. OWNER RULING NEEDED: stays or reverted?
+- NOTE — 16:44 run died: stale lock removed (60 min old); no entries/commits from it; VM restart ~17:32 UTC likely killer (wiped /var/tmp, killed DG run 36). FLAG — disk quota wall: DG quality-loop run ~296 record could not be written to home disk ("Disk quota exceeded"); MemAvailable 1,249 MB below bar.
+- STEP 1: 5 tips moved (WH, Bannon, PPWA, pokemon, AO). 17 candidates re-checked; nothing green+mergeable (pokemon #3 unknown/0 checks; PPWA/ME/GRE/MMHQ/DG unstable; WH #1714/#1762 blocked, #1696 dirty). Excluded/owner-held untouched.
+- STEP 2 verify-done (5 HOLD): WH #1764, PPWA #276, pokemon P20, Bannon #107, AO #881 — all merges on/ancestor of current tips, payload files confirmed on main.
+- STEP 3 checkpoints: 1230 JSONs, 0 stale running watchdog; nothing to resume.
+- STEP 4 canon-sync: MEMORY.md md5 changed (re-curation, 228 -> 154 lines); no new game canon. Nothing synced.
+- STEP 5: failure-alerts nothing new; disk 83% (26G free). In-flight untouched: Blender stream-c render, DG 6B lane 133rd successor (run 37, gate deadline ~18:41 EST), Pantera throwfix lanes, pokemon p22 walkthrough, M. Engine supervisor :8771, DG live-view. zrok still down (401, owner decision).
+- STEP 6/7/8: stand down, no pulls. Queue sync AO #909 to follow.
 
 ## RESTORE 2026-11-19T14:59Z - AO #907 clobber reversed (this run)
 AO #907 (merge b5b18104, this run's own queue sync) replaced both queue files on main with entry-only stubs (MERGE-QUEUE.md +11/-10159, overnight-handoff.md +10/-10888) because the sync script used the contents API, which returns null `.content` for files over 1MB. Full content recovered byte-exact from parent commit cf53135c blobs (hash-object verified: 856b9159 / aefcca9d). This PR restores both files in full + the 14:44Z run entry. LESSON (standing): fetch these files only via the git blob API (raw), verify byte size + line count before committing; deletions in these files = hard stop.
