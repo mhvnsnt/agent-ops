@@ -1,3 +1,14 @@
+## Overnight pipeline — 2026-11-19T22:14Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 2 verified landed by another lane: WH #1776 (0bc373e == WH tip, payload 4/4 blob-identical on main, +2683/-0 add-only) + pokemon-arena-3d P22 (merge 36e27c6, 38/39 blobs identical + 1 checkpoint file superseded by later coordinator commits; ancestor of tip 940484c). 0 false claims reopened (verify-done sweep 5/5 HOLD + 1 bonus). Queue counts unchanged: game repos 50 open (WH 31, GRE 2, Bannon 13, CD 1, wrestling 1, pokemon-arena-2d 2) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 20 + M.-Engine- 19 + AO 0 + TRIPPEDD-Production 4 + TRIPPEDD-Animation 3 + 1 LOCAL-ONLY; blocked (>72h) = 15 carried.
+- STEP 1: delta sweep vs 21:44Z — 2 tips moved (WH, pokemon-arena-3d). All open-PR counts unchanged. New PR: PPWA #279 (test-fix, combined failure). pokemon-arena-2d #2/#1 CLEAN + 0 checks but NOT merged (#1 DO-NOT-MERGE body; #2 ambiguous body). Nothing else green+mergeable. Excluded/owner-held untouched.
+- FLAG - BANNON #78: exclusion-merge (ff04cc1) still unruled; ancestor of Bannon tip e3f2d4b (unchanged). OWNER RULING NEEDED: stays or reverted?
+- NOTE: 22:08Z run's own record never landed on main (its sync #922 added only the #921 addendum line); summary recovered from local overnight-log.md in the queue record.
+- STEP 2 verify-done (5 HOLD + 1 bonus): WH #1771, PPWA #277, AO #922, Bannon #109, CD #72, bonus pokemon-arena-2d #3 — all merges ancestor of / equal to current tips.
+- STEP 3 checkpoints: 1230 JSONs, 0 stale running watchdog; nothing to resume.
+- STEP 4 canon-sync: MEMORY.md md5 unchanged 392c88b1. Nothing synced.
+- STEP 5: failure-alerts nothing new; disk 80%. In-flight untouched: at-inflate2.py, Pantera proof servers, DG 6B 138th successor, live-view stack. zrok stable share still down (owner decision, carried).
+- STEP 6/7/8: no new thread, no new pulls - live lanes own the work. Stand down.
+- Queue sync: AO #923 this run (to follow).
 ## Overnight pipeline — 2026-11-19T21:44Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: pokemon-arena-3d Pokken full movesets (merge 07d4699, direct merge by muse-agent, no PR; 195/195 files blob-identical on main — 13 Pokken GLBs, SOURCES.md, proof PNGs/tests). 0 false claims reopened (verify-done sweep 5/5 HOLD + 1 bonus). Queue counts: game repos 50 open (WH 31, GRE 2, Bannon 13, CD 1, wrestling 1, pokemon-arena-2d 2) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 20 + M.-Engine- 19 + AO 0 + TRIPPEDD-Production 4 + TRIPPEDD-Animation 3 + 1 LOCAL-ONLY; blocked (>72h) = 15 carried.
 - NEW PRs: WH #1775 (W4 lane, YANM decode + YOBJ v2), Bannon #121 (W4 lane, wwe2k19 GLBs) — both fresh, unstable/blocked, pending; lane-owned, not touched.
