@@ -9,6 +9,7 @@
 - STEP 5: failure-alerts nothing new; disk 80%. In-flight untouched: at-inflate2.py, Pantera proof servers, DG 6B 138th successor, live-view stack. zrok stable share still down (owner decision, carried).
 - STEP 6/7/8: no new thread, no new pulls - live lanes own the work. Stand down.
 - Queue sync: AO #923 this run (to follow).
+- ADDENDUM: AO #923 LANDED-VERIFIED BY THIS RUN - merged 1580eb63 (parents [04e8036, 83cd6dcd]); payload 2/2 blob-identical on main (MERGE-QUEUE.md 7dddb51f, overnight-handoff.md 8da2c468); instruction-gate PASS + guard PASS; mergeable clean; +23/-0 add-only.
 ## Overnight pipeline — 2026-11-19T21:44Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: pokemon-arena-3d Pokken full movesets (merge 07d4699, direct merge by muse-agent, no PR; 195/195 files blob-identical on main — 13 Pokken GLBs, SOURCES.md, proof PNGs/tests). 0 false claims reopened (verify-done sweep 5/5 HOLD + 1 bonus). Queue counts: game repos 50 open (WH 31, GRE 2, Bannon 13, CD 1, wrestling 1, pokemon-arena-2d 2) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 20 + M.-Engine- 19 + AO 0 + TRIPPEDD-Production 4 + TRIPPEDD-Animation 3 + 1 LOCAL-ONLY; blocked (>72h) = 15 carried.
 - NEW PRs: WH #1775 (W4 lane, YANM decode + YOBJ v2), Bannon #121 (W4 lane, wwe2k19 GLBs) — both fresh, unstable/blocked, pending; lane-owned, not touched.
