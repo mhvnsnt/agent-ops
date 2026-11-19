@@ -8,6 +8,7 @@
 - STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down.
 - NOTE: local agent-ops copies of the queue/handoff remain behind main (head 07:14Z); this run synced from main's copies via git data API (raw fetch x2, md5-verified). Authoritative copy is on main.
 - Queue sync: AO #897 this run (to follow).
+- ADDENDUM: AO #897 LANDED-VERIFIED BY THIS RUN - merged 63eb798 (parents [bebef1d, 0f44443]); payload 2/2 blob-identical on main (MERGE-QUEUE.md b3e3626f, overnight-handoff.md 52817374); instruction-gate PASS + guard PASS; mergeable clean; +21/-0 add-only.
 ## Overnight pipeline — 2026-11-19T10:14Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 0 newly landed by another lane since 09:44Z; re-verified landed this run: CJ #413 (29ca072 == CJ tip) + AO #894 (ec189ce2 == AO tip). 0 false claims reopened (verify-done sweep 5/5 HOLD + 2 bonus). Queue counts: game repos 32 open (WH 24, pokemon 1, GRE 1, Bannon 5, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
 - STEP 1: delta sweep vs 09:44Z — 0 tips moved, all 16 tips + all open-PR counts unchanged. 19 candidates re-checked; pokemon #3 CLEAN/MERGEABLE but zero checks (repo has no CI) — NOT merged, flagged closest candidate. Nothing else green+mergeable. Excluded/owner-held untouched.
