@@ -1,3 +1,13 @@
+## Overnight pipeline — 2026-11-19T23:14Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: pokemon-arena-3d P23 (tip 940484c -> 54db129, payload 35/35 blob-identical on main). 0 false claims reopened (verify-done sweep 5/5 HOLD + 1 bonus). Queue counts: game repos 57 open (WH 31, GRE 2, Bannon 20, CD 1, wrestling 1, pokemon-arena-2d 2) + DG 3 open + DG 2 branch-only + MMHQ 3 + PPWA 20 + M.-Engine- 19 + AO 0 + TRIPPEDD-Production 4 + TRIPPEDD-Animation 3 + 1 LOCAL-ONLY; blocked (>72h) = 15 carried.
+- STEP 1: delta sweep vs 22:44Z — 1 tip moved (pokemon-arena-3d P23). Bannon open 17 -> 20: 3 new PRs #126/#127/#128 (all unstable, not merged; #128 created mid-run 23:18:51Z). Nothing green+mergeable. Excluded/owner-held untouched.
+- FLAG - BANNON #78: exclusion-merge (ff04cc1) still unruled; ancestor of Bannon tip e3f2d4b (tip unchanged). OWNER RULING NEEDED: stays or reverted?
+- STEP 2 verify-done (5 HOLD + 1 bonus): WH #1776, pokemon P22, AO #926, PPWA #277, CJ #413, bonus DG #88 — all merges ancestor of / equal to current tips. P23 payload 35/35 verified.
+- STEP 3 checkpoints: 1230 JSONs, 0 stale running watchdog; nothing to resume.
+- STEP 4 canon-sync: MEMORY.md md5 unchanged 392c88b1. Nothing synced.
+- STEP 5: failure-alerts nothing new; disk 81%. In-flight untouched: live-proof servers, du inventory scan, DG 6B 139th successor, live-view stack. zrok stable share still down (owner decision, carried).
+- STEP 6/7/8: no new thread, no new pulls - live lanes own the work. Stand down.
+- Queue sync: AO #927 this run (to follow).
 ## Overnight pipeline — 2026-11-19T22:44Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: AO #924 (merge 90f1391 == AO tip, payload 2/2 blob-identical on main). 0 false claims reopened (verify-done sweep 5/5 HOLD + 1 bonus). Queue counts: game repos 54 open (WH 31, GRE 2, Bannon 17, CD 1, wrestling 1, pokemon-arena-2d 2) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 20 + M.-Engine- 19 + AO 0 + TRIPPEDD-Production 4 + TRIPPEDD-Animation 3 + 1 LOCAL-ONLY; blocked (>72h) = 15 carried.
 - STEP 1: delta sweep vs 22:14Z — 1 tip moved (AO). Bannon open 13 -> 17: 4 new PRs #122-#125 (all unstable, not merged). Nothing green+mergeable. Excluded/owner-held untouched.
