@@ -1,3 +1,14 @@
+## Overnight pipeline — 2026-11-19T20:44Z (30-min run)
+- QUEUE DELTA: 1 merged BY this run: WH #1771 Pantera throw knee-pole (merge 868a1748 == WH tip, payload 8/8 blob-identical on main: fighter.js 69f82caf, README 52c17800, analysis txt 1eabcff9, mp4s bcd3ffb7/59bc99c6 + 3 more MATCH). 0 newly landed by another lane since 20:14Z. 0 false claims reopened (verify-done sweep 5/5 HOLD). Queue counts: game repos 45 open (WH 28, GRE 2, Bannon 10, CD 2, CD2 1, wrestling 1, pokemon 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 19 + M.-Engine- 19 + AO 0 + Wrestli6game-3 1 + 1 LOCAL-ONLY; blocked (>72h) = 15 carried.
+- NEW (8 PRs in 30 min, live lanes): WH #1769 (VPW2 teardown), #1770 (KoC2 teardown), #1771 (MERGED), Bannon #114-#118 (W1 fixes + W5 builds). WH #1769/#1770 blocked; Bannon #114-#118 unstable. Closest candidates (clean, 0 checks): CD2 #11, pokemon #4, Wrestli6game-3 #7 — NOT merged, no readable green.
+- FLAG - BANNON #78: exclusion-merge (ff04cc1, 14:16:34Z) still unruled; ancestor of current Bannon tip e3f2d4b (tip unchanged). OWNER RULING NEEDED: stays or reverted?
+- STEP 1: 1 tip moved (WH only, own merge #1771). 15 other tips unchanged. 8 new + standing candidates re-checked; nothing else green+mergeable. Excluded/owner-held untouched.
+- STEP 2 verify-done (5 HOLD): AO #916 == tip, DG #88, CJ #412, WH #1754, Bannon #107 — all merges ancestor of current tips.
+- STEP 3 checkpoints: 1230 JSONs, 0 stale running watchdog; nothing to resume.
+- STEP 4 canon-sync: MEMORY.md md5 unchanged ba6c8bc0. Nothing synced.
+- STEP 5: failure-alerts nothing new; disk 81%. In-flight untouched: DG 6B 137th successor, pokemon p21 download, tunnel probe. zrok stable share still down (owner decision, carried).
+- STEP 6/7/8: no new thread, no pulls - live lanes own the work. Stand down.
+- Queue sync: AO #917 this run (to follow).
 ## Overnight pipeline — 2026-11-19T20:14Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 2 verified landed by another lane: AO #913 (merge 7866b15) + AO #914 (merge 5c4fbc3, the 19:44Z run's addendum; payload 2/2 blob-identical on main). 0 false claims reopened (verify-done sweep 5/5 HOLD + 3 bonus). Queue counts: game repos 38 open (WH 26, GRE 2, Bannon 5, CD 2, CD2 1, wrestling 1, pokemon 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 19 + M.-Engine- 19 + AO 0 + Wrestli6game-3 1 + 1 LOCAL-ONLY; blocked (>72h) = 15 carried.
 - NEW (9 PRs in 30 min, live sourcing-rule / Land Muse sweep): WH #1768, GRE #96, Bannon #110/#111/#112/#113, CD #72, CD2 #11, wrestling #22, PPWA #278, pokemon #4, Wrestli6game-3 #7. Closest candidates (clean, 0 checks): CD2 #11, pokemon #4, Wrestli6game-3 #7 — NOT merged, no readable green. Bannon #110 CONFLICTING (+5450/-0) — queued BLOCKED-conflicting, not touched. PPWA #278 combined FAILURE (Vercel) — NOT merged, check-runs 403-unreadable.
