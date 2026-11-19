@@ -1,3 +1,12 @@
+## Overnight pipeline — 2026-11-19T08:14Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: pokemon-arena-3d P17 (merge 3085f4e, parents [644bb49, 83d1475], payload 9/9 blob-identical on main, +1338/-0 add-only; tip 76a4a77). 0 false claims reopened (verify-done sweep 5/5 HOLD + 2 bonus). Queue counts: game repos 32 open (WH 24, pokemon 1, GRE 1, Bannon 5, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
+- STEP 1: delta sweep vs 07:44Z — only pokemon tip moved (644bb49 -> 76a4a77, P17 verified). All other 15 tips + all open-PR counts unchanged. 18 candidates re-checked, heads+states unchanged, nothing green+mergeable. Excluded/owner-held untouched (Bannon #78, WH #377, CJ #156/#157/#167, DG #89).
+- STEP 2: verify-done 5/5 HOLD — WH #1754 (fbbbbc46 == tip), PPWA #272 (fed5bcf == tip), AO #887 (96d7134 == tip), CJ #412 (8712aad == tip), PPWA #271 (dd01713 ancestor of tip, ahead 2 behind 0). Bonus: WH #1753, pokemon P17 (9/9 blobs). 0 reopened.
+- STEP 3: checkpoints 1230 JSONs — 0 running-watchdog / 0 stale / 0 unparseable; 65 needs_owner untouched. Nothing to resume.
+- STEP 4: canon-sync nothing new (MEMORY.md md5 changed via memory-system demotion only; tail unchanged, newest game entries already landed on PPWA main).
+- STEP 5: failure-alerts nothing new; disk 81% (120G/150G, 30G free); no in-flight media processes touched; DG 6B lane running (live, untouched); zrok stable share still down (401, owner decision).
+- STEPS 6–8: no new thread, no new pulls. Stand down.
+- NOTE: local agent-ops copies of the queue/handoff remain one entry behind main (head 07:14Z); this run synced from main's copies via the git data API. Authoritative copy is on main.
 ## Overnight pipeline — 2026-11-19T07:44Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: AO #885 (merge 486c695, the 07:14Z run's queue sync, payload 2/2 blob-identical on main, parents [08f0192, ddd9719]). 0 false claims reopened (verify-done sweep 5/5 HOLD + 1 bonus). Queue counts: game repos 32 open (WH 24, pokemon 1, GRE 1, Bannon 5, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
 - STEP 1: delta sweep — 1 tip moved (agent-ops, #885); other 14 unchanged. Open-PR counts re-verified; all match baseline. 14 candidates re-checked; NOTHING green+mergeable (PPWA gate check-runs still 403-unreadable; ME/pokemon/WH/AO candidates combined pending). Excluded/owner-held untouched.
