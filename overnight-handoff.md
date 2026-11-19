@@ -8,6 +8,7 @@
 - STEP 4 canon-sync: MEMORY.md md5 unchanged ba6c8bc0. Nothing synced.
 - STEP 5: failure-alerts nothing new; disk 83%. In-flight untouched: pokemon p21 gh release download (PID 24113), DG live-view stack, node servers. zrok stable share still down (probe 502, owner decision, carried).
 - STEP 6/7/8: no new thread, no pulls - live lanes own the work. Stand down.
+- ADDENDUM: AO #913 LANDED-VERIFIED BY THIS RUN - merged 7866b15 (parents [3095245, 44c1e38]); payload 2/2 blob-identical on main; instruction-gate PASS + guard PASS; mergeable clean; +22/-0 add-only.
 ## Overnight pipeline — 2026-11-19T18:14Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 2 verified landed by another lane: AO #909 (merge e476c94) + AO #910 (merge 41ea2f7, the 17:44Z run's queue syncs; payload 2/2 blob-identical on main, merge == AO tip). 0 false claims reopened (verify-done sweep 5/5 HOLD). Queue counts: game repos 29 open (WH 26, Bannon 0, pokemon 1, GRE 1, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 0 + 1 LOCAL-ONLY; blocked (>72h) = 15 carried.
 - NEW: WH #1766 Pantera throw orientation (opened 18:16:18Z during this run; gate-format body, mergeable=true unstable, combined pending n=0 - not merged, no green).
