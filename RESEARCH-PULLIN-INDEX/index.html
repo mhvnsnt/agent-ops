@@ -4551,6 +4551,91 @@ zrok share loop only observed; no disable/enable, no restart by this pass).</p>
 <td>2026-11-12 doc (02-supervisor-deaths.md)</td>
 <td>📄 still queued — verified this pass the recommended <code>setsid nohup</code> fix was NOT applied (<code>watchdog.sh</code> line 47 still plain <code>nohup</code>); deaths continue (restart 23:58:50 Nov 14). Not re-researched; lane owner applies</td>
 </tr>
+<tr>
+<td>## Friction research — live-view tunnels + social-video downloads + var/tmp adoption audit (2026-11-18)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Docs: agent-ops <code>research-friction-20261118/01-live-view-tunnels.md</code>,
+<code>02-social-video-downloads.md</code>, <code>03-var-tmp-adoption-audit.md</code> +
+<code>var-tmp-audit.sh</code>. Research + live tests only — no PRs to live lanes
+(their owners apply the queued fixes); one tool wired (<code>var-tmp-audit.sh</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Finding / candidate</th>
+<th>Source (license)</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>zrok stable URL still 502 / 401 loop (watchdog restarts every 5 min, ~288/day); Nov 15 circuit-breaker still unapplied</td>
+<td>live log + <code>zrok-share.log</code> 2026-11-19 05:15 UTC</td>
+<td>📄 queued — live-view lane; owner step is the re-enable (fresh console token)</td>
+</tr>
+<tr>
+<td>localhost.run ALIVE (9883eb052a5810.app.lhr.life, ssh PID 138199) but burst-throttled ("Almost out of burst ... will be slowed"); paid custom-domain plan advertised</td>
+<td>live <code>localhost-run-json.log</code> + ps, 2026-11-19 05:15 UTC</td>
+<td>📄 working-but-degraded — owner money decision (paid plan vs zrok re-enable)</td>
+</tr>
+<tr>
+<td>cloudflared 2026.11.1 Quick Tunnel</td>
+<td>cloudflare/cloudflared (Apache-2.0); binary sha256-verified vs its own .deb (<code>97bb3b02…</code> identical)</td>
+<td>❌ excluded for this VM — <code>api.trycloudflare.com</code> POST → HTTP 403 "Your request was blocked" through the egress proxy; re-test if the egress allowlist changes</td>
+</tr>
+<tr>
+<td>localtunnel (npm)</td>
+<td>localtunnel/localtunnel (MIT)</td>
+<td>❌ excluded for this VM — no URL in ~2 min; <code>server.localtunnel.me</code> empty reply through the egress proxy</td>
+</tr>
+<tr>
+<td>bore</td>
+<td>ekzhang/bore (MIT)</td>
+<td>❌ already failed Nov 13 (<code>bore-test4.log</code>: connected, then "deadline has elapsed")</td>
+</tr>
+<tr>
+<td>cobalt hosted API (<code>co.wuk.sh</code>, <code>api.cobalt.tools</code>)</td>
+<td>imputnet/cobalt (AGPL-3.0 code; branding copyrighted)</td>
+<td>❌ excluded for this VM — <code>co.wuk.sh</code> times out (0 bytes); <code>api.cobalt.tools</code> → HTTP 400 <code>error.api.auth.jwt.missing</code>; free for personal projects per README, commercial needs self-host</td>
+</tr>
+<tr>
+<td>cobalt self-hosted (Node)</td>
+<td>imputnet/cobalt (AGPL-3.0)</td>
+<td>📄 queued, not wired — no Docker on this VM (Node 24 present); useless for the login-gated FB reel (needs FB session cookies, which live in the Muse browser profile, not on this VM)</td>
+</tr>
+<tr>
+<td>yt-dlp 2026.10.26</td>
+<td>yt-dlp/yt-dlp</td>
+<td>✅ already the chain's tool — current stable; per-post TikTok blocks are server-side, not version-fixable</td>
+</tr>
+<tr>
+<td>Browser DevTools network capture (signed-in reel playing)</td>
+<td>technique, not a tool</td>
+<td>📄 the remaining route for reel 1481081410582657 — already queued from the 2026-11-18 23:31 EST browser failure; retry the follow-up</td>
+</tr>
+<tr>
+<td>Cookie bridge (signed-in browser session → VM-side downloader)</td>
+<td>—</td>
+<td>📄 the actual gap — no downloader fixes login-gated content until this exists; a browser-lane + downloader-lane design question, not a research pull</td>
+</tr>
+<tr>
+<td><code>var-tmp-audit.sh</code> (HARDCODED/OVERRIDABLE/GUARDED/MENTION sweep, exit 1 on hardcodes)</td>
+<td>this pass, own code</td>
+<td>✅ wired — tested live on agent-ops: 7 HARDCODED + 3 OVERRIDABLE, exit 1, matches manual grep</td>
+</tr>
+<tr>
+<td>Quezada stage driver <code>PB="/var/tmp/pb-quezada"</code> + own comment "reassembled up to 2.4G: EXCEEDS tmpfs!"</td>
+<td>live read of <code>disk-stage-20261116/quezada-stage-driver.sh</code></td>
+<td>📄 queued — lane owner: PB env-override like pokemon's before the next pull-back</td>
+</tr>
+<tr>
+<td>tmpfs-guard adoption: zero lane scripts call it (only MERGE-QUEUE.md + .mq-main-tmp.md mention it)</td>
+<td>live grep across agent-ops</td>
+<td>📄 queued — guardian/checkpoint-protocol follow-up from Nov 15 §4.3, still open</td>
+</tr>
 </tbody>
 </table>
 
