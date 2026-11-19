@@ -8,6 +8,7 @@
 - STEP 5: failure-alerts nothing new; disk 81%. In-flight untouched: live-proof servers, du inventory scan, DG 6B 139th successor, live-view stack. zrok stable share still down (owner decision, carried).
 - STEP 6/7/8: no new thread, no new pulls - live lanes own the work. Stand down.
 - Queue sync: AO #927 this run (to follow).
+- ADDENDUM: AO #927 LANDED-VERIFIED BY THIS RUN - merged 008d7e46 (parents [62afa20, 4b527c6]); payload 2/2 blob-identical on main (MERGE-QUEUE.md 9020ffa2, overnight-handoff.md cf133d1e); instruction-gate PASS + guard PASS; mergeable clean; +12/-0 and +10/-0 add-only.
 ## Overnight pipeline — 2026-11-19T22:44Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: AO #924 (merge 90f1391 == AO tip, payload 2/2 blob-identical on main). 0 false claims reopened (verify-done sweep 5/5 HOLD + 1 bonus). Queue counts: game repos 54 open (WH 31, GRE 2, Bannon 17, CD 1, wrestling 1, pokemon-arena-2d 2) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 20 + M.-Engine- 19 + AO 0 + TRIPPEDD-Production 4 + TRIPPEDD-Animation 3 + 1 LOCAL-ONLY; blocked (>72h) = 15 carried.
 - STEP 1: delta sweep vs 22:14Z — 1 tip moved (AO). Bannon open 13 -> 17: 4 new PRs #122-#125 (all unstable, not merged). Nothing green+mergeable. Excluded/owner-held untouched.
