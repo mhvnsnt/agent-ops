@@ -1,3 +1,13 @@
+## Overnight pipeline — 2026-11-19T07:44Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: AO #885 (merge 486c695, the 07:14Z run's queue sync, payload 2/2 blob-identical on main, parents [08f0192, ddd9719]). 0 false claims reopened (verify-done sweep 5/5 HOLD + 1 bonus). Queue counts: game repos 32 open (WH 24, pokemon 1, GRE 1, Bannon 5, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
+- STEP 1: delta sweep — 1 tip moved (agent-ops, #885); other 14 unchanged. Open-PR counts re-verified; all match baseline. 14 candidates re-checked; NOTHING green+mergeable (PPWA gate check-runs still 403-unreadable; ME/pokemon/WH/AO candidates combined pending). Excluded/owner-held untouched.
+- STEP 2: verify-done 5/5 HOLD + 1 bonus (WH #1754, PPWA #272, AO #885, pokemon P16, CJ #412; bonus WH #1753 ancestor of tip).
+- STEP 3: 1230 checkpoints parsed: 0 running-watchdog / 0 stale / 0 unparseable; 65 needs_owner untouched; 1035 done. Nothing to resume.
+- STEP 4: MEMORY.md md5 changed (re-curation, tail unchanged, no new game canon). Nothing new to sync.
+- STEP 5: failure-alerts.log nothing new. Disk 80%. In-flight processes untouched (live-proof servers, du scan, p17 pull_rpx.py, at-inflate2.py). zrok stable share still down (401, owner decision).
+- STEP 6/7/8: no new thread, no pulls — live lanes own the work. Stand down.
+- BLOCKED >72h (16 carried, unchanged): WH conflicting 12 + #713 + #377 owner-held; Bannon #78; GRE #84; WH #1714/#1702/#1701/#1678 gate-fail; CD #71; M.-Engine- CI/CD SDK-setup failure; plus row-48 stamp, non-upright-start, live-opponent proof videos, Jun bank rows, bank-row import adjudication, TorBox key dead, OWNER RULING #8, quantum-jam decisions, live Worker deploy pending, zrok stable share DOWN.
+- Queue sync: AO #887 this run (to follow).
 ## Overnight pipeline — 2026-11-19T07:14Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 2 verified landed by another lane: pokemon P16 (direct push, tip 644bb49, per-arena battle-camera heights Azalea 2.6 / Classroom 3.9 / default 7 + camline proof + inventory, 5/5 sampled blobs blob-identical on main) + AO #884 (merge 08f0192, the 06:44Z run's queue sync, payload 2/2 blob-identical on main). 0 false claims reopened (verify-done sweep 5/5 HOLD + 2 bonus). Queue counts: game repos 32 open (WH 24, pokemon 1, GRE 1, Bannon 5, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
 - STEP 1: delta sweep — 2 tips moved (pokemon, AO); other 14 unchanged. Open-PR counts re-verified; all match baseline. 14 candidates re-checked; NOTHING green+mergeable. Excluded/owner-held untouched.
@@ -8,6 +18,7 @@
 - STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down.
 - BLOCKED >72h (16 carried, unchanged): see MERGE-QUEUE.md 07:14Z entry.
 - Queue sync: AO #885 this run (to follow).
+- ADDENDUM: AO #885 LANDED-VERIFIED BY THIS RUN - merged 486c695 (parents [08f0192, ddd9719]); payload 2/2 blob-identical on main (MERGE-QUEUE.md b8745665, overnight-handoff.md 952f8e09); instruction-gate PASS + guard PASS; mergeable clean; +22/-0 (add-only).
 ## Overnight pipeline — 2026-11-19T06:44Z (30-min run)
 - QUEUE DELTA: 1 merged by this run: WH #1754 (canon Pantera T7-100, merge fbbbbc46, payload blob-identical on main). 2 verified landed by another lane: WH #1753 (merge 8249923, payload 2/2 blob-identical) + pokemon P15 (merge eb09772, 41 files, 4/4 sampled blob-identical). 0 false claims reopened (verify-done sweep 5/5 HOLD + 2 bonus). Queue counts: game repos 32 open (WH 24, pokemon 1, GRE 1, Bannon 5, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
 - STEP 1: delta sweep — 3 tips moved (WH, pokemon, AO); other 13 unchanged. Open-PR counts re-verified; WH 25 -> 24. 14 candidates re-checked; NOTHING green+mergeable besides #1754 (merged). Excluded/owner-held untouched.
