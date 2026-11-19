@@ -1,3 +1,13 @@
+## Overnight pipeline — 2026-11-19T10:14Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 0 newly landed by another lane since 09:44Z; re-verified landed this run: CJ #413 (29ca072 == CJ tip) + AO #894 (ec189ce2 == AO tip). 0 false claims reopened (verify-done sweep 5/5 HOLD + 2 bonus). Queue counts: game repos 32 open (WH 24, pokemon 1, GRE 1, Bannon 5, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
+- STEP 1: delta sweep vs 09:44Z — 0 tips moved, all 16 tips + all open-PR counts unchanged. 19 candidates re-checked; pokemon #3 CLEAN/MERGEABLE but zero checks (repo has no CI) — NOT merged, flagged closest candidate. Nothing else green+mergeable. Excluded/owner-held untouched.
+- STEP 2 verify-done (5 HOLD + 2 bonus): CJ #413, WH #1754, PPWA #272, AO #894 == tips; pokemon P17 ancestor of tip; DG #88, AO #893 ancestors/parents of tips.
+- STEP 3 checkpoints: 1230 scanned, 0 running-watchdog, 0 stale, 0 unparseable; 65 needs_owner untouched. Nothing to resume.
+- STEP 4 canon-sync: nothing new (MEMORY.md md5 5e42d426 unchanged since 09:44Z).
+- STEP 5: failure-alerts.log nothing new; disk 81% (121G/150G, 29G free); /tmp 2%. In-flight NOT touched: Xvnc/websockify live-view, node :8771 live-proof server. zrok stable share still down (401, owner decision).
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down.
+- NOTE: local agent-ops copies of the queue/handoff remain behind main (head 07:14Z); this run synced from main's copies via git data API (raw fetch x2, md5-verified). Authoritative copy is on main.
+- Queue sync: AO #895 this run (to follow).
 ## Overnight pipeline — 2026-11-19T09:44Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: CJ #413 memory-backup-sync (merge 29ca072 == CJ tip, payload 2/2 blob-identical on main). 0 false claims reopened (verify-done sweep 5/5 HOLD + 2 bonus). Queue counts: game repos 32 open (WH 24, pokemon 1, GRE 1, Bannon 5, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
 - STEP 1: delta sweep vs 09:14Z — 1 tip moved (CJ #413); other 15 unchanged. Open-PR counts re-verified; all match baseline. 14 candidates re-checked; pokemon #3 CLEAN/MERGEABLE but zero checks (repo has no CI) + self-check count nit — NOT merged, flagged closest candidate. Nothing else green+mergeable. Excluded/owner-held untouched.
