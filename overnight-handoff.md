@@ -1,3 +1,14 @@
+## Overnight pipeline — 2026-11-19T21:44Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: pokemon-arena-3d Pokken full movesets (merge 07d4699, direct merge by muse-agent, no PR; 195/195 files blob-identical on main — 13 Pokken GLBs, SOURCES.md, proof PNGs/tests). 0 false claims reopened (verify-done sweep 5/5 HOLD + 1 bonus). Queue counts: game repos 50 open (WH 31, GRE 2, Bannon 13, CD 1, wrestling 1, pokemon-arena-2d 2) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 20 + M.-Engine- 19 + AO 0 + TRIPPEDD-Production 4 + TRIPPEDD-Animation 3 + 1 LOCAL-ONLY; blocked (>72h) = 15 carried.
+- NEW PRs: WH #1775 (W4 lane, YANM decode + YOBJ v2), Bannon #121 (W4 lane, wwe2k19 GLBs) — both fresh, unstable/blocked, pending; lane-owned, not touched.
+- NOT merged: everything else unstable/blocked/dirty; WH #1769/#1770/#1772/#1773/#1774 owner-review held; Bannon #110 conflict resolved by a lane (now true/unstable, still no green). Excluded/owner-held untouched.
+- FLAG - BANNON #78: exclusion-merge (ff04cc1) still unruled; ancestor of Bannon tip e3f2d4b (unchanged). OWNER RULING NEEDED: stays or reverted?
+- STEP 2 verify-done (5 HOLD + 1 bonus): WH #1771, Bannon #109, PPWA #277, CD #72, pokemon-arena-2d #3, bonus DG #88 — all merges ancestor of current tips.
+- STEP 3 checkpoints: 1230 JSONs, 0 stale running watchdog; nothing to resume.
+- STEP 4 canon-sync: MEMORY.md md5 unchanged 392c88b1. Nothing synced.
+- STEP 5: failure-alerts nothing new; disk 83%. In-flight untouched: Pantera throwfix serve :8823, du inventory scan, at-inflate2.py, DG 6B 138th successor, live-view stack. zrok stable share still down (owner decision, carried).
+- STEP 6/7/8: no new thread, no pulls - live lanes own the work. Stand down.
+- Queue sync: AO #921 this run (to follow).
 ## Overnight pipeline — 2026-11-19T21:14Z (30-min run)
 - QUEUE DELTA: 6 merged BY this run: CD2 #11 (a956516), pokemon-arena-2d #3 (16921c6), WH #1768 (38a6e40), CD #72 (bafe7fb), pokemon-arena-3d #4 (906991e), Wrestli6game-3 #7 (6bf4678) — all docs-only sourcing-rule PRs, all payload-verified on main. 2 verified landed by another lane since 20:44Z: AO #917 + AO #918 (queue syncs). 0 false claims reopened (verify-done sweep 5/5 HOLD + 1 bonus). Queue counts: game repos 48 open (WH 30, GRE 2, Bannon 12, CD 1, wrestling 1, pokemon-arena-2d 2) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 20 + M.-Engine- 19 + AO 0 + TRIPPEDD-Production 4 + TRIPPEDD-Animation 3 + 1 LOCAL-ONLY; blocked (>72h) = 15 carried.
 - MERGE NOTE: 4 of the 6 merges were on GitHub CLEAN with zero checks configured in those repos (CD2, both pokemon-arena repos, Wrestli6game-3) — CLEAN treated as green per the task-body STEP 1 rule; departs from the last three runs' conservative "no readable green" call, recorded in the queue entry for the next run. WH #1768 + CD #72 were genuinely all-checks-green after gate-body fixes.
