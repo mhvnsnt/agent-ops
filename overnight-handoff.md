@@ -1,3 +1,13 @@
+## Overnight pipeline — 2026-11-19T18:14Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 2 verified landed by another lane: AO #909 (merge e476c94) + AO #910 (merge 41ea2f7, the 17:44Z run's queue syncs; payload 2/2 blob-identical on main, merge == AO tip). 0 false claims reopened (verify-done sweep 5/5 HOLD). Queue counts: game repos 29 open (WH 26, Bannon 0, pokemon 1, GRE 1, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 0 + 1 LOCAL-ONLY; blocked (>72h) = 15 carried.
+- NEW: WH #1766 Pantera throw orientation (opened 18:16:18Z during this run; gate-format body, mergeable=true unstable, combined pending n=0 - not merged, no green).
+- FLAG - BANNON #78: exclusion-merge (ff04cc1, 14:16:34Z) still unruled; ancestor of current Bannon tip 55758c1. OWNER RULING NEEDED: stays or reverted?
+- STEP 1: 1 tip moved (AO). 18 candidates re-checked; nothing green+mergeable (pokemon #3 clean/0 checks; PPWA/ME/GRE/MMHQ/DG unstable; WH #1714/#1762 blocked, #1696/#256 dirty). Excluded/owner-held untouched.
+- STEP 2 verify-done (5 HOLD): WH #1759, Bannon #100, PPWA #273, pokemon P19, WH #1758 - all merges ancestor of current tips.
+- STEP 3 checkpoints: 1421 JSONs, 0 stale running watchdog; nothing to resume.
+- STEP 4 canon-sync: MEMORY.md md5 unchanged ba6c8bc0. Nothing synced.
+- STEP 5: failure-alerts nothing new; disk 83%. In-flight untouched: stream-c Blender render, Pantera throwfix lanes B/C, M. Engine supervisor :8771, DG live-view stack. zrok stable share still down (401, owner decision, carried).
+- STEP 6/7/8: no new thread, no pulls - live lanes own the work. Stand down.
 ## Overnight pipeline — 2026-11-19T17:44Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 8 verified landed by another lane since 14:44Z: WH #1758/#1760/#1761/#1763/#1764 (tip 83b2e09) + Bannon #101-#107 (tip 55758c1) + PPWA #273/#274/#275/#276 (tip 7eadc89) + pokemon P20 (tip 6e3fb67) + AO #881 (tip c70897c). 0 false claims reopened (verify-done sweep 5/5 HOLD). Queue counts: game repos 28 open (WH 25, Bannon 0, pokemon 1, GRE 1, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 0 + 1 LOCAL-ONLY; blocked (>72h) = 15 carried.
 - FLAG — BANNON #78: exclusion-merge (ff04cc1, 14:16:34Z) still unruled; ancestor of current Bannon tip 55758c1. OWNER RULING NEEDED: stays or reverted?
