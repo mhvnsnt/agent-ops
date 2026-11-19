@@ -1,3 +1,13 @@
+## Overnight pipeline — 2026-11-19T10:44Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 0 newly landed by another lane since 10:14Z; re-verified landed this run: CJ #413 (29ca072 == CJ tip) + AO #896 (bebef1d == AO tip). 0 false claims reopened (verify-done sweep 5/5 HOLD + 2 bonus). Queue counts unchanged: game repos 32 open (WH 24, pokemon 1, GRE 1, Bannon 5, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
+- STEP 1: delta sweep vs 10:14Z — 0 tips moved, all 16 tips + all open-PR counts unchanged. 19 candidates re-checked; TRIPPEDD #310 is MERGED (Nov 15, 351f820) — the 10:14Z header's "awaiting owner call" was a stale carryover, dropped from the candidate list. AO #881 mergeable UNKNOWN (transient). pokemon #3 CLEAN/MERGEABLE but zero checks (no CI) — NOT merged, flagged closest candidate. Nothing else green+mergeable. Excluded/owner-held untouched.
+- STEP 2 verify-done (5 HOLD + 2 bonus): CJ #413, WH #1754, PPWA #272, AO #896 == tips; pokemon P17 ancestor of tip; DG #88, AO #895 ancestors/parents of tips.
+- STEP 3 checkpoints: 1230 scanned, 0 running-watchdog, 0 stale, 0 unparseable; 65 needs_owner untouched. Nothing to resume.
+- STEP 4 canon-sync: MEMORY.md md5 CHANGED 5e42d426 -> e6bcda9a (memory-system re-curation, no new game canon). Nothing new to sync.
+- STEP 5: failure-alerts.log nothing new; disk 81% (121G/150G, 29G free); /tmp 5%. In-flight NOT touched: node :8771 live-proof server, Xvnc/websockify live-view. zrok stable share still down (401, owner decision).
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down.
+- NOTE: local agent-ops copies of the queue/handoff remain behind main (head 07:14Z); this run synced from main's copies via git data API (raw fetch x2, md5-verified). Authoritative copy is on main.
+- Queue sync: AO #897 this run (to follow).
 ## Overnight pipeline — 2026-11-19T10:14Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 0 newly landed by another lane since 09:44Z; re-verified landed this run: CJ #413 (29ca072 == CJ tip) + AO #894 (ec189ce2 == AO tip). 0 false claims reopened (verify-done sweep 5/5 HOLD + 2 bonus). Queue counts: game repos 32 open (WH 24, pokemon 1, GRE 1, Bannon 5, CD 1) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 18 + M.-Engine- 19 + AO 1 + 1 LOCAL-ONLY; blocked (>72h) = 16 carried.
 - STEP 1: delta sweep vs 09:44Z — 0 tips moved, all 16 tips + all open-PR counts unchanged. 19 candidates re-checked; pokemon #3 CLEAN/MERGEABLE but zero checks (repo has no CI) — NOT merged, flagged closest candidate. Nothing else green+mergeable. Excluded/owner-held untouched.
