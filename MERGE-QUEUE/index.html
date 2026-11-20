@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-20t0144z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-20t0214z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -886,6 +886,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-20t0214z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-20T02:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-20t0144z-30-min-run" class="md-nav__link">
@@ -5848,6 +5859,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-20t0214z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-20T02:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-20t0144z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8895,6 +8917,18 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-20t0214z-30-min-run">Overnight pipeline — 2026-11-20T02:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-20t0214z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE DELTA: 0 merged by this run. 2 verified landed by another lane: PA3D coordinator follow-up 098b854 (P26 gate proof + checkpoint, P27 spawned; parent P26 merge 1281e17 already verified 01:44Z) + AO #936/#937 (merges 19a8c56 / 49a8cdc == AO tip, payloads verified below). 0 false claims reopened (verify-done sweep 5/5 HOLD: PA3D P26 ancestor ahead 1, PPWA #279 == tip 8714b00, CD2 #11 == tip a956516, AO #935 ancestor ahead 4, CJ #413 == tip 29ca072). Queue counts: game repos 79 open (WH 33, GRE 2, Bannon 40, CD 1, CD2 0, wrestling 1, PA3D 0, PA2D 2, CJ 0) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 19 + M.-Engine- 19 + AO 0 + TRIPPEDD-Prod 4 + TRIPPEDD-Anim 3 + Wrestli6game-3 0 + 1 LOCAL-ONLY; blocked (&gt;72h) = 15 carried.</li>
+<li>STEP 1: delta sweep vs 01:44Z — 2 tips moved (PA3D 1281e17-&gt;098b854, AO ae39279-&gt;49a8cdc via #936 19a8c56 + #937 49a8cdc; both verified below). All other 15 tips unchanged (WH 0bc373e, CJ 29ca072, GRE bbef101, Bannon e3f2d4b, CD bafe7fb, CD2 a956516, wrestling e1702af, PA2D 16921c6, DG 17be49b, ME 0adaced, MMHQ 56b0db3, PPWA 8714b00, TRIPPEDD-Prod 0c236e5, TRIPPEDD-Anim a04e044, Wrestli6game-3 6bf4678). Open-PR counts all match baseline (WH 33, CJ 0, GRE 2, Bannon 40, CD 1, CD2 0, wrestling 1, PA3D 0, PA2D 2, DG 3, ME 19, MMHQ 3, PPWA 19, TRIPPEDD-Prod 4, TRIPPEDD-Anim 3, Wrestli6game-3 0, AO 0). Candidates re-checked, heads+states unchanged: WH #1778 true/unstable 796df7c combined pending n=0; #1777 true/blocked ddf19a5; #1714 true/blocked c6d4234; #1696 dirty c675e6c; Bannon #143-148 true/unstable; PPWA #246 true/unstable be206f5; ME #25 true/unstable 8b7748a; GRE #84 true/unstable caeddb0; MMHQ #36 true/unstable 13b32bf; DG #91 true/unstable aead7a8; PA2D #1/#2 true/clean BUT #1 body says "DO NOT MERGE — coordinator/owner decides" and #2 combined pending n=0 — NOT merged. NOTHING green+mergeable. Excluded/owner-held untouched: Bannon #78, WH #377, CJ #156/#157/#167, DG #89.</li>
+<li>STEP 2 verify-done (5 HOLD): as above; 0 false claims. Bonus: AO #937 payload 2/2 blob-identical on main (MERGE-QUEUE.md 126b6e21, overnight-handoff.md 40a5edee vs branch head e5cd29f); AO #936 payload verified by 01:44Z run (7bcd63aa/8e9a58ac) and merge 19a8c56 is parent of tip 49a8cdc.</li>
+<li>STEP 3 checkpoints: 1230 scanned, 0 watchdog-running, 0 stale, 0 unparseable; 65 needs_owner untouched; 1037 done. Nothing to resume. checkpoint_audit.py still missing (tools/ archived).</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 UNCHANGED 16e94ac0 since 01:44Z. Nothing new to sync.</li>
+<li>STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 82% (122G/150G, 28G free). No ffmpeg/blender/aria2c/wget/curl processes running. In-flight NOT touched: live lanes own the work (PA3D P27 spawned, DG 6B lane, Bannon lanes). zrok stable share still down (401, fresh token needed — owner decision, carried).</li>
+<li>STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down.</li>
+<li>BLOCKED &gt;72h (15 carried, unchanged): WH conflicting 12 + #713 + #377 owner-held; Bannon #78 owner-held; GRE #84 checks-unreadable; WH #1714/#1702/#1701/#1678 gate-fail (Megami-face deviation, owner decision pending); CD #71 gate-fail; M.-Engine- Autonomous CI/CD SDK-setup failure blocks ME #25/#24/#10/#6/#21 (ME #18 fix PR itself red). Plus carried items: row-48 stamp, non-upright-start, live-opponent proof videos, Jun bank rows, bank-row import adjudication, TorBox key dead, OWNER RULING #8, quantum-jam decisions, live Worker deploy pending, zrok stable share DOWN (401, needs fresh token - owner decision). FLAG CARRIED: Bannon #78 exclusion-merge ruling still owed; untracked siblings TRIPPEDD-Animation-Studio + Wrestli6game-3 decision owed.</li>
+<li>Queue sync: AO #938 this run (to follow).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-20t0144z-30-min-run">Overnight pipeline — 2026-11-20T01:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-20t0144z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE DELTA: 0 merged by this run. 4 verified landed by another lane: PA3D P26 (merge 1281e17, parents [b6df57a, 8bc3014], payload 3/3 sampled blob-identical, 18 files), PPWA #279 (merge 8714b00, parents [51a75c1, 975fc30], payload 3/3 sampled blob-identical, 36 files, merged 01:23:47Z), Wrestli6game-3 #7 (merge 6bf4678, AGENTS.md blob 30dcacf 1/1), AO #935 (merge ae39279 == AO tip, parents [f45ad8d, 6e0a143], payload 2/2 blob-identical, merged 01:27:18Z). AO #881 resolved: merged 2026-11-19T15:49:26Z (merge c70897c) — closes the long-standing mergeable-unknown carryover. 0 false claims reopened (verify-done sweep 5/5 HOLD: WH #1776 == tip 0bc373e, PA3D P25 ancestor of tip ahead 3, CD2 #11 == tip a956516, AO #933 ancestor of tip ahead 5, CJ #413 == tip 29ca072). Queue counts: game repos 79 open (WH 33, GRE 2, Bannon 40, CD 1, CD2 0, wrestling 1, PA3D 0, PA2D 2, CJ 0) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 19 + M.-Engine- 19 + AO 0 + TRIPPEDD-Prod 4 + TRIPPEDD-Anim 3 + Wrestli6game-3 0 + 1 LOCAL-ONLY; blocked (&gt;72h) = 15 carried.</li>
