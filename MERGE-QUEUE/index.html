@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-20t0114z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-20t0144z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -886,6 +886,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-20t0144z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-20T01:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-20t0114z-30-min-run" class="md-nav__link">
@@ -5837,6 +5848,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-20t0144z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-20T01:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-20t0114z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8873,6 +8895,18 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-20t0144z-30-min-run">Overnight pipeline — 2026-11-20T01:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-20t0144z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE DELTA: 0 merged by this run. 4 verified landed by another lane: PA3D P26 (merge 1281e17, parents [b6df57a, 8bc3014], payload 3/3 sampled blob-identical, 18 files), PPWA #279 (merge 8714b00, parents [51a75c1, 975fc30], payload 3/3 sampled blob-identical, 36 files, merged 01:23:47Z), Wrestli6game-3 #7 (merge 6bf4678, AGENTS.md blob 30dcacf 1/1), AO #935 (merge ae39279 == AO tip, parents [f45ad8d, 6e0a143], payload 2/2 blob-identical, merged 01:27:18Z). AO #881 resolved: merged 2026-11-19T15:49:26Z (merge c70897c) — closes the long-standing mergeable-unknown carryover. 0 false claims reopened (verify-done sweep 5/5 HOLD: WH #1776 == tip 0bc373e, PA3D P25 ancestor of tip ahead 3, CD2 #11 == tip a956516, AO #933 ancestor of tip ahead 5, CJ #413 == tip 29ca072). Queue counts: game repos 79 open (WH 33, GRE 2, Bannon 40, CD 1, CD2 0, wrestling 1, PA3D 0, PA2D 2, CJ 0) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 19 + M.-Engine- 19 + AO 0 + TRIPPEDD-Prod 4 + TRIPPEDD-Anim 3 + Wrestli6game-3 0 + 1 LOCAL-ONLY; blocked (&gt;72h) = 15 carried.</li>
+<li>STEP 1: delta sweep vs 01:14Z — 4 tips moved (PA3D b6df57a-&gt;1281e17 P26, PPWA 51a75c1-&gt;8714b00 #279, Wrestli6game-3 a1c4c49-&gt;6bf4678 #7, AO f45ad8d-&gt;ae39279 #935; all verified above). All other tips unchanged (WH 0bc373e, CJ 29ca072, GRE bbef101, Bannon e3f2d4b, CD bafe7fb, CD2 a956516, wrestling e1702af, PA2D 16921c6, DG 17be49b, ME 0adaced, MMHQ 56b0db3, TRIPPEDD-Prod 0c236e5, TRIPPEDD-Anim a04e044). New open PRs: WH #1778 (01:20:49Z, mergeable, unstable, head 796df7c), Bannon #148 (01:28:09Z, mergeable, unstable, head 0fac5cd). 22 candidates re-checked: WH #1777 mergeable=true state=blocked (was pending); #1714 blocked (gate-fail c6d4234); #1696 dirty; Bannon #143/#144/#145/#146/#147 mergeable unstable; Bannon #22 null/unknown; PPWA #246/#255/#256 null/unknown (transient), #50 unstable; ME #25/#24/#21/#18/#10/#6 unstable; GRE #84, MMHQ #36, DG #91 unstable. Nothing green+mergeable. Excluded/owner-held untouched: Bannon #78, WH #377, CJ #156/#157/#167. NOTE: PA3D branches wave1/p25-pokken-full-slice + wave1/p26-pokepark-attack-banks still exist post-merge (lane cleanup, not touched).</li>
+<li>STEP 2 verify-done (5 HOLD): as above; 0 false claims.</li>
+<li>STEP 3 checkpoints: 1230 scanned, 0 watchdog-running, 0 stale, 0 unparseable; 65 needs_owner untouched; 1035 done. Nothing to resume. checkpoint_audit.py still missing (tools/ archived).</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 changed cf0fda92 -&gt; 16e94ac0 (memory-system re-curation: Wizard Gang canon-ownership correction, Theory identity Niya Jae/@niya.west.50, Pantera 185/643 entries; Bannon #78 exception note). Pantera 185/643 already on WH main via #1754; P22 already on PA3D main; Theory identity is personal/contact — excluded from repos. Nothing new to sync.</li>
+<li>STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 82% (121G/150G, 28G free). QUOTA FLICKER: writes to /home/hatch failed "Disk quota exceeded" at run start (~01:44-01:50Z) despite 28G free; /tmp writes worked; cleared without action by ~01:52Z; lock created late. In-flight NOT touched: DG 6B 142nd successor running, Pokemon P27 lane running, at-inflate2.py alive (1.1/55.5GB). zrok stable share still down (401, fresh token needed — owner decision, carried).</li>
+<li>STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down.</li>
+<li>BLOCKED &gt;72h (15 carried, unchanged): WH conflicting 12 + #713 + #377 owner-held; Bannon #78 owner-held; GRE #84 checks-unreadable; WH #1714/#1702/#1701/#1678 gate-fail (Megami-face deviation, owner decision pending); CD #71 gate-fail; M.-Engine- Autonomous CI/CD SDK-setup failure blocks ME #25/#24/#10/#6/#21 (ME #18 fix PR itself red). Plus carried items: row-48 stamp, non-upright-start, live-opponent proof videos, Jun bank rows, bank-row import adjudication, TorBox key dead, OWNER RULING #8, quantum-jam decisions, live Worker deploy pending, zrok stable share DOWN (401, needs fresh token — owner decision). FLAG CARRIED: Bannon #78 exclusion-merge ruling still owed; untracked siblings TRIPPEDD-Animation-Studio + Wrestli6game-3 decision owed.</li>
+<li>Queue sync: AO #936 this run (to follow).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-20t0114z-30-min-run">Overnight pipeline — 2026-11-20T01:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-20t0114z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE DELTA: 0 merged by this run. 4 verified landed by another lane: CD #72 (merge bafe7fb, AGENTS.md blob f0e0a387 1/1), PA2D #3 (merge 16921c6, README.md blob 94c9dd96 1/1), PA3D P25 (merge 19ead86, Pokken full 2,052-clip slice, 89/89 blobs identical on main tip b6df57a), CD2 #11 (merge a956516, AGENTS.md blob 6d62a1cc 1/1). 0 false claims reopened (verify-done sweep 5/5 HOLD: AO #933 ancestor of tip ahead 2, WH #1776 == tip 0bc373e, CJ #413 == tip 29ca072, PPWA #271 ancestor of tip ahead 16, CD #72 / PA2D #3 / P25 / CD2 #11 bonus). Queue counts: game repos 75 open (WH 32, GRE 2, Bannon 37, CD 1, CD2 0, wrestling 1, PA3D 0, PA2D 2, CJ 0) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 20 + M.-Engine- 19 + AO 0 + TRIPPEDD-Prod 4 + TRIPPEDD-Anim 3 + Wrestli6game-3 0 + 1 LOCAL-ONLY; blocked (&gt;72h) = 15 carried.</li>
