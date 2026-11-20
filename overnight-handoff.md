@@ -8,6 +8,7 @@
 - STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down.
 - BLOCKED >72h (15 carried, unchanged). FLAG CARRIED: Bannon #78 ruling; untracked siblings TRIPPEDD-Animation-Studio + Wrestli6game-3 decision owed; MMHQ + PPWA slugs unresolvable.
 - Queue sync: AO #946 this run (to follow).
+- ADDENDUM: AO #946 LANDED-VERIFIED BY THIS RUN — merged 3743da1 (parents [b6744aa, 1be22f7c]); payload 2/2 blob-identical on main (MERGE-QUEUE.md 3d0626b, overnight-handoff.md f9af534); instruction-gate PASS + guard PASS; mergeable clean; +10/-0 and +10/-0 add-only.
 ## Overnight pipeline — 2026-11-20T03:44Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: PA3D coordinator commit 87faa9c (P27 gate in progress, direct push to main 03:29:57Z). AO tip move bab8c58 -> 7535b67 is the 03:14Z run's own #943 addendum merge, already verified. 0 new PRs. 0 false claims reopened (verify-done sweep 5/5 HOLD + PA3D P26 ancestor bonus). Queue counts unchanged: game repos 82 open (WH 33, GRE 2, Bannon 43, CD 1, CD2 0, wrestling 1, PA3D 0, PA2D 2, CJ 0) + DG 3 + DG 2 branch-only + MMHQ 3 + PPWA 19 + M.-Engine- 19 + AO 0 + TRIPPEDD-Prod 4 + TRIPPEDD-Anim 3 + Wrestli6game-3 0 + 1 LOCAL-ONLY; blocked (>72h) = 15 carried.
 - STEP 1: delta sweep vs 03:14Z — 2 tips moved (PA3D, AO, both accounted for); 14 tips unchanged; all open-PR counts match baseline. Candidates re-checked, heads+states unchanged; NOTHING green+mergeable (PA2D #1/#2 clean but #1 DO-NOT-MERGE by body, #2 has 0 checks). Excluded/owner-held untouched.
