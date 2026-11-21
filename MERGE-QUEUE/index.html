@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-21t1457z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-21t1735z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -886,6 +886,39 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-21t1735z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-21T17:35Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-21t1701z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-21T17:01Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-21t1614z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-21T16:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-21t1457z-30-min-run" class="md-nav__link">
@@ -6244,6 +6277,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-21t1735z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-21T17:35Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-21t1701z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-21T17:01Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-21t1614z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-21T16:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-21t1457z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9687,6 +9753,42 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-21t1735z-30-min-run">Overnight pipeline — 2026-11-21T17:35Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-21t1735z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE DELTA: 0 merged by this run. 1 NEW PR queued as OPEN-PR: Bannon #254 (Lane records: exertion-e + rig-mechanics + 2k-wireup, head 50be1fc5, +166,517/-0, 330 files, UNSTABLE/FAILURE — not merged). All other findings corroborate the 17:01Z run's entry (no new landings since): Bannon #220 head d47ebc26 verified ancestor of tip a27baf73 by THIS run (fold via #249, ahead 286 behind 0); fold-chain tip 6d3e9c5a (pr/236) ancestor of tip (ahead 11 behind 0) — the #219/#223/#225/#227-#230/#232-#236 fold landings stand. 0 false claims reopened (verify-done 6/6 HOLD/LANDED below).</li>
+<li>STEP 1: egress RECOVERED (GraphQL 2-13s, REST 2-13s/call; two transient HTML-error retries early). Tips ALL unchanged vs 17:01Z (WH cfaa3489, Bannon a27baf73, AO dbe2c836, PPWA 039c87c1, CJ 7e75d098, PA3D 4cca30e1, GRE 4c8e731, CD bafe7fb, CD2 a956516, PA2D 16921c6, DG 17be49b, wrestling e1702af, ME 0adaced). Open counts: WH 45, Bannon 26 (+1 #254), AO 3 (#952 + #963 + #975), PPWA 23, CJ 0, PA3D 1, GRE 3, CD 3, CD2 1, PA2D 3, DG 3, ME 19, wrestling 2. Nothing green+mergeable: all open Bannon/PPWA/WH candidates UNSTABLE/FAILURE or BLOCKED/FAILURE; WH #1792 green but OWNER-HELD — not merged. WH #1814 still BLOCKED/FAILURE with a 0-file diff (+0/-0) — needs lane look. Bannon #241 carries -58,444 deletions (3 files) — deletion-list review required before any merge. Excluded/owner-held untouched: WH #377, CJ #156/#157/#167, DG #89; PPWA #246 merge call stays owner's; Bannon #78 stay-vs-revert still owner's call; Bannon CI down for billing (carried).</li>
+<li>STEP 2 verify-done (6/6 HOLD/LANDED): AO #974 (dbe2c836 == tip), AO #970 (a8f478e7 ancestor, behind 0), WH #1815 (cfaa3489 == tip), PPWA #287 (05572f60 ancestor of 039c87c1, behind 0), CJ #416 (7e75d098 == tip), Bannon #223 (21e484dd ancestor, behind 0). 0 false claims reopened.</li>
+<li>STEP 3 checkpoints: 1230 scanned, 0 unparseable, 0 watchdog-running, 0 stale; done 996 + complete 39 = 1035; needs_owner 64 untouched. checkpoint_audit.py still missing (tools/ archived). Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 UNCHANGED 92fc48cd since 17:01Z. No new owner canon to sync. Log: canon-sync nothing new.</li>
+<li>STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 82% (122G/150G, 28G free) — under 85%. QUOTA WALL STILL ACTIVE: lock touch + log append failed "Disk quota exceeded" at 17:21 UTC; /tmp lock used; sync via API + /tmp only. In-flight NOT touched: Blender 5.2.3 render (pids 38954/38955, strip_bad_elbow.py). zrok/localhost.run still down (carried; owner's fresh token owed).</li>
+<li>STEP 6/7/8: no new thread, no new pulls — live lanes own the work (PA3D coordinator #10; DG 6B Run 58; Sato lanes; Bannon lanes; Adri R7 v7 finisher). Stand down.</li>
+<li>BLOCKED &gt;72h (15 carried, unchanged). FLAG CARRIED: Bannon #78 stay-vs-revert decision owed; untracked siblings TRIPPEDD-Animation-Studio + Wrestli6game-3 decision owed; AO #952 force-push reset decision owed. NEW owner decisions owed: WH #1792 P2 baek-master-white combo question (PR green, merge call owner's); TorBox re-sign-in (Turnstile — user's own click); zrok/live-view (egress recovery or fresh token). FLAG CARRIED: WH #1807/#1808/#1813 merged by lanes without a recorded owner merge call — payloads verified on main, stay unless owner says otherwise.</li>
+<li>Queue sync: AO #975 updated this run (this header + handoff) — merge when green.</li>
+</ul>
+<h2 id="overnight-pipeline-2026-11-21t1701z-30-min-run">Overnight pipeline — 2026-11-21T17:01Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-21t1701z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE DELTA: 17 newly LANDED-VERIFIED by this run (payloads confirmed on main): Bannon #220 (head d47ebc2 ancestor of tip a27baf7, via #249 fold), #227 (6f97f9e), #228 (5d79923), #229 (4726ee3), #230 (22879da), #232 (295ce07), #233 (2257ba0), #234 (65cdce8), #235 (a9dcf07), #236 (5c224fd), #238 (head 88c2d91 ancestor; MERGED phone-playtest fold); PPWA #289 (7d71890), #291 (039c87c == tip); CJ #416 (7e75d09 == tip, $UPEREGO study); AO #971 (38e266a), #972 (6d39290), #973 (4fac6bc). Re-verified this run (already recorded landed by the 16:14Z run): Bannon #219 (head now a682c89, ancestor), #223 (21e484d ancestor), #249 (a27baf7 == tip), WH #1815 (cfaa3489 == tip), PPWA #287 (05572f6 ancestor), AO #969/#970/#974. Total verified on main by this run: 25. 0 false claims reopened (verify-done 7/7 HOLD below).</li>
+<li>STEP 1: EGRESS RECOVERED — GraphQL 2-5s, REST 2-19s (was 60-120s/call). Tips: WH cfaa3489, Bannon a27baf7, AO dbe2c836 (== #974 merge; #975 open unmerged), PPWA 039c87c1 (#291 == tip), CJ 7e75d09 (#416 == tip, was ad576df5), PA3D 4cca30e1, GRE 4c8e731, CD bafe7fb, PA2D 16921c6, DG 17be49b, WG e1702af, ME 0adaced, CD2 a956516 — all unchanged except PPWA + CJ. Open counts: WH 45, Bannon 25, AO 3 (#975 sync + #963 + #952), PPWA 23, CJ 0, PA3D 1, GRE 3, CD 3, PA2D 3, DG 3, WG 2, ME 19, CD2 1. NEW PRs queued as OPEN-PR: WH #1816 (license rule doc, 3728e77, mergeable true/blocked, checks pending), PPWA #288 (VM sweep probe scripts, 2b28570, mergeable UNKNOWN), PPWA #290 (L3b OpenFaceFX face hub, 182c5f0, mergeable UNKNOWN), Bannon #240 (lane records joemashups-wireup + rigfix, a973e99). Bannon still-open 15 (handoff conflict list): #116/#123/#130/#140/#144/#166/#198/#218/#221/#222/#224/#226/#231/#237/#239 — GitHub now reports 13 MERGEABLE + #123/#237 UNKNOWN; handoff says they conflict on the src/dist pair and need author rebase — NOT merged (Bannon CI down for billing, no green checks possible; CLEAN-but-no-checks precedent). Other 10 open Bannon: #241/#242/#243/#244/#246/#250/#251/#252/#253 + #240. WH #1814/#1816 mergeable true/blocked, checks pending — NOT merged. WH #1792 green but OWNER-HELD — not merged. Excluded/owner-held untouched: WH #377, CJ #156/#157/#167, DG #89; PPWA #246 merge call stays owner's. Bannon #78 stay-vs-revert still owner's call.</li>
+<li>STEP 2 verify-done (7/7 HOLD/LANDED): WH #1815 (cfaa3489 == tip), AO #974 (dbe2c836 == tip), Bannon #249 (a27baf7 == tip), Bannon #223 (21e484d ancestor, behind 0), PPWA #287 (05572f6 ancestor, behind 0), CJ #416 (7e75d09 == tip), PPWA #291 (039c87c == tip). 0 false claims reopened.</li>
+<li>STEP 3 checkpoints: 1230 scanned, 0 unparseable, 0 watchdog-running, 0 stale; done 996 + complete 39 = 1035; needs_owner 64 (was 65 — one status changed by another lane). Nothing to resume. checkpoint_audit.py still missing (tools/ archived).</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 768f016f -&gt; 92fc48cd (memory-system re-curation 11:35 EST; tail re-read: PA3D Pyrite record + Adri R7 V7 — already on origin / lane-owned). No NEW owner game canon to sync. Log: canon-sync nothing new.</li>
+<li>STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 82% (122G/150G, 28G free) — under 85%. QUOTA WALL STILL ACTIVE: all /home/hatch writes failed this run (lock touch + log append — Disk quota exceeded; /tmp 99% full at run start). Sync via API + /tmp only. In-flight NOT touched: Blender strip_bad_elbow.py (pid 38955, started 16:48Z). zrok/localhost.run still down per 11:37/11:47 EST watchdog passes (localhost.run banner-exchange timeouts; zrok 401, owner's fresh token owed).</li>
+<li>STEP 6/7/8: no new thread, no new pulls — live lanes own the work (PA3D coordinator #10; DG 6B Run 58; Sato lanes; Bannon lanes; Adri R7 v7 finisher; round-8 lanes A/B). Stand down.</li>
+<li>BLOCKED &gt;72h (15 carried, unchanged). FLAG CARRIED: Bannon #78 stay-vs-revert decision owed; untracked siblings TRIPPEDD-Animation-Studio + Wrestli6game-3 decision owed; AO #952 force-push reset decision owed. NEW owner decisions owed: WH #1792 P2 baek-master-white combo question (PR green, merge call owner's); TorBox re-sign-in (Turnstile — user's own click); zrok/live-view (egress recovery or fresh token). FLAG CARRIED: WH #1807/#1808/#1813 merged by lanes without a recorded owner merge call — payloads verified on main, stay unless owner says otherwise. NEW FLAG: Bannon CI down for billing — no PR CI-verified since ~Oct 23; owner decided 2026-11-21 to make the repo public (per Bannon handoff) — owner clicks it, agents can't.</li>
+<li>Queue sync: AO #975 updated this run (this header + handoff) — merge when green.</li>
+</ul>
+<h2 id="overnight-pipeline-2026-11-21t1614z-30-min-run">Overnight pipeline — 2026-11-21T16:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-21t1614z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE DELTA: 1 merged by this run, LANDED-VERIFIED on main: AO #974 (dbe2c836, prior run's queue sync). BIG CORRECTION: Bannon main jumped 49b07da4 -&gt; a27baf73 via integration PR #249 (claude/aaa-bannon-leg-stepping-sdwcjb) — ~91 PRs landed through it; Bannon open 113 -&gt; 22. LANDED via integration (verified ancestors of tip this run): Bannon #219 (3a12191d), #223 (05e1efd8), #225 (233739f5), #249 itself (a27baf73 == tip). 0 false claims reopened (verify-done 7/7 HOLD below).</li>
+<li>STEP 1: egress DEGRADED but working via gh api (REST 40-120s/call; GraphQL 2-85s). Tips: WH cfaa3489 (== #1815 merge, unchanged since 13:27Z), Bannon a27baf73, AO dbe2c836 (this run's #974 merge), PA3D 4cca30e1 (unchanged). WH open 45, Bannon open 22, AO open 2 (#963, #952), PA3D open 1. WH #1814 + Bannon #221/#222/#224 OPEN + MERGEABLE but checks FAILURE — NOT merged. Excluded/owner-held untouched: WH #377, CJ #156/#157/#167, DG #89; PPWA #246 merge call stays owner's; WH #1792 owner-held. NEW BRANCH-ONLY: PA3D wave1/pyrite-town f041a01e (Pyrite Town built+saved on origin, all 6 blob SHAs verified) — wave-1 audit NO-GO, coordinator #10 owns; do NOT PR until gaps G1-G8 close or owner waives.</li>
+<li>STEP 2 verify-done (7/7 HOLD): WH #1815 (merge cfaa3489 == tip), AO #969 (85a65bce ancestor, ahead 9 behind 0), AO #970 (a8f478e7 ancestor, ahead 7 behind 0), Bannon #249 (a27baf73 == tip), Bannon #219 (3a12191d ancestor), #223 (05e1efd8 ancestor), #225 (233739f5 ancestor). 0 false claims reopened.</li>
+<li>STEP 3 checkpoints: 1229 scanned, 1 unparseable (cn-gigaleak-archiveorg-pull.json, truncated mid-string line 523 — data file, no watchdog field, left untouched), 0 watchdog-running, 0 stale; done 996 + complete 39 = 1035; needs_owner 64 untouched. checkpoint_audit.py still missing (tools/ archived). Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 changed mid-run 768f016f -&gt; 92fc48cd (memory-system re-curation: PA3D Pyrite Town built+saved, wave-1 audit NO-GO, coordinator #10 owns follow-up). Pyrite recorded above as BRANCH-ONLY; no new canon PR opened (coordinator #10 owns the wave-1 follow-up). Log: canon-sync partial — Pyrite queued, no PR.</li>
+<li>STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 82% (122G/150G, 28G free) — under 85%. Quota wall FLICKERING: lock/log writes failed 16:14Z (Disk quota exceeded), worked 16:38Z, mkdir failed ~16:42Z — local writes unreliable; sync via API only. In-flight NOT touched: DG 6B render chain CUT 001R (d95d5e49, still running), Blender afro-refit/l8/Adri R7 renders, P36b soak server, PA3D blob curls. VM restarted ~11:19 EST (per daily note); /tmp wiped twice this run (11M free, 98%).</li>
+<li>STEP 6/7/8: no new thread, no new pulls — live lanes own the work (PA3D coordinator #10; DG 6B Run 50/56; Sato lanes; Bannon lanes; Adri R7 v7 finisher).</li>
+<li>BLOCKED &gt;72h (15 carried, unchanged). FLAG CARRIED: Bannon #78 stay-vs-revert decision owed; untracked siblings TRIPPEDD-Animation-Studio + Wrestli6game-3 decision owed; AO #952 force-push reset decision owed. NEW owner decisions owed: WH #1792 P2 baek-master-white combo question (PR green, merge call owner's); TorBox re-sign-in (Turnstile — user's own click); zrok/live-view (egress recovery or fresh token). FLAG CARRIED: WH #1807/#1808/#1813 merged by lanes without a recorded owner merge call — payloads verified on main, stay unless owner says otherwise.</li>
+<li>Queue sync: AO #975 this run (to follow).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-21t1457z-30-min-run">Overnight pipeline — 2026-11-21T14:57Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-21t1457z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE DELTA: 1 merged by this run, LANDED-VERIFIED: AO #973 (4fac6bc1, 14:30Z queue sync; +10/-0, rollup SUCCESS). 2 verified landed by other lanes: WH #1815 (cfaa3489 == WH tip, community-cracked rule doc), PPWA #287 (05572f60 == PPWA tip, Adri R7 V3 partial). AO #969 (85a65bce) + #970 (a8f478e7) ancestors of tip, behind 0. 11 NEW Bannon PRs queued as OPEN-PR (#226-#236, all UNSTABLE/FAILURE — not merged). 0 false claims reopened (verify-done 5/5 HOLD).</li>
