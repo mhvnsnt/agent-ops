@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-21t1316z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-21t1353z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -886,6 +886,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-21t1353z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-21T13:53Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-21t1316z-30-min-run" class="md-nav__link">
@@ -6211,6 +6222,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-21t1353z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-21T13:53Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-21t1316z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9621,6 +9643,18 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-21t1353z-30-min-run">Overnight pipeline — 2026-11-21T13:53Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-21t1353z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE DELTA: 1 merged by this run, LANDED-VERIFIED: AO #971 (queue sync 13:16Z, merge 38e266a6; payload MERGE-QUEUE.md 5387a655 4,424,077 B + overnight-handoff.md be6148cd 3,498,193 B on main). 3 verified landed by other lanes, all confirmed on main BY THIS RUN: WH #1815 (merge cfaa348 == WH tip, community-cracked rule doc 014f785), PPWA #287 (merge 05572f6 == PPWA tip, Adri anus R7 V3 c72dc9c), AO #970 (merge a8f478e == AO tip). 6 NEW Bannon PRs queued as OPEN-PR: #226 (Island .jsfb, ee88f9d), #227 (2K26 SDB strings, 6f97f9e), #228 (lane records 3a+3c, 5d79923), #229 (Creator v8, 4726ee3), #230 (lane records pr198-fix, 22879da), #231 (2K26 anim clips, ef589e1). 0 false claims reopened (verify-done 5/5 HOLD + 3 landed above).</li>
+<li>STEP 1: egress DEGRADED but working via gh api (GraphQL tips ~80s; REST 60-120s/call; rate_limit 4998). Tips moved: WH e82d76bf-&gt;cfaa3489 (#1815), PPWA 5d59882-&gt;05572f6 (#287), AO 92458a06-&gt;a8f478e7 (#970, then 38e266a6 #971 merged this run); all other tips unchanged (Bannon 49b07da4 open 113-&gt;121, PA3D 4cca30e1 open 1, GRE 4c8e731 open 3, CD bafe7fb open 3, CJ ad576df5 open 0, PA2D 16921c6 open 3, DG 17be49b open 3, wrestling-game e1702afd open 2). WH #1814 mergeable true but BLOCKED (head 22bbad2 unchanged) — NOT merged. WH #1792 green but OWNER-HELD — not merged. Excluded/owner-held untouched: WH #377, CJ #156/#157/#167, DG #89; PPWA #246 merge call stays owner's. AO open now: #952 (blocked) + #963 (PRE-MADE PARTS FIRST, bf2da80) + this run's sync PR (to follow). CD2 repo name mhvnsnt/concrete-dragon-2 404s in GraphQL — carried; W6 repo name still unresolved (wrestling-game IS e1702af).</li>
+<li>STEP 2 verify-done (5/5 HOLD + 3 landed): WH #1815 LANDED (cfaa348 == tip); PPWA #287 LANDED (05572f6 == tip); AO #970 LANDED (a8f478e == tip); AO #969 HOLD (85a65bc ancestor, compare ahead 6 behind 0); WH #1814 still OPEN (head 22bbad2, blocked); Bannon #224/#225 still OPEN (in newest-10 list). 0 false claims reopened.</li>
+<li>STEP 3 checkpoints: 1230 scanned, 1 UNPARSEABLE (NEW — see below), 0 watchdog-running, 0 stale; done 996 + complete 39 = 1035; needs_owner 65 untouched. checkpoint_audit.py still missing (tools/ archived). NEW: checkpoints/cn-gigaleak-archiveorg-pull.json is corrupt (unterminated string line 523 col 5, 659,456 B, mtime ~13:37Z) — likely truncated by the quota-wall flicker or mid-write by an active lane; NOT deleted, flagged for its lane/owner.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 UNCHANGED 768f016f since 11:40Z. No new owner canon to sync. Log: canon-sync nothing new.</li>
+<li>STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 82% (122G/150G, 28G free) — under 85%. QUOTA WALL ACTIVE all run: every workspace write failed (lock, log, probes — Disk quota exceeded, os error 122); /tmp writes fine; this run is API-only. In-flight NOT touched: Blender afro-refit render driver (pid 3409), DG 6B Run 50 lane d95d5e49, Adri R7 work. zrok/localhost.run still down (carried; owner's fresh token owed).</li>
+<li>STEP 6/7/8: no new thread, no new pulls — live lanes own the work (PA3D coordinator #9; DG 6B Run 50; Sato lanes; Bannon lanes; Adri R7 v7 finisher). Stand down.</li>
+<li>BLOCKED &gt;72h (15 carried, unchanged). FLAG CARRIED: Bannon #78 stay-vs-revert decision owed; untracked siblings TRIPPEDD-Animation-Studio + Wrestli6game-3 decision owed; AO #952 force-push reset decision owed. NEW owner decisions owed: WH #1792 P2 baek-master-white combo question (PR green, merge call owner's); TorBox re-sign-in (Turnstile — user's own click); zrok/live-view (egress recovery or fresh token). FLAG CARRIED: WH #1807/#1808/#1813 merged by lanes without a recorded owner merge call — payloads verified on main, stay unless owner says otherwise. NEW FLAG: PPWA #287 merged by its lane (Adri R7) — payload verified on main, stays unless owner says otherwise.</li>
+<li>Queue sync: this run's sync PR (to follow).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-21t1316z-30-min-run">Overnight pipeline — 2026-11-21T13:16Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-21t1316z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE DELTA: 2 merged by this run, both LANDED-VERIFIED on main: AO #970 (queue sync, merge a8f478e7 == AO tip; MERGE-QUEUE.md +10/-0, overnight-handoff.md +10/-0, add-only) + PPWA #287 (R7 V3 checkpoint/proof pack, merge 05572f60 == PPWA tip; 17 files, +37,957/-0, zero deletions; PARTIAL per title — hole closed, bore still hard; landed as a checkpoint, R7 not done). 2 verified landed by other lanes, payload confirmed on main by this run: AO #969 (merge 85a65bce == AO tip, merged 12:24:51Z) + WH #1815 (merge cfaa3489 == WH tip, merged 12:51:48Z; docs-only AGENTS.md). 0 new PRs queued. 0 false claims reopened (verify-done 5/5 HOLD below).</li>
