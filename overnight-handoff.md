@@ -1,3 +1,13 @@
+## Overnight pipeline — 2026-11-21T09:05Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 5 verified landed by other lanes/coordinator: WH #1813 (merge 38b0dba3 == WH tip); Bannon #191 (merge 49b07da4 == Bannon tip, Mars-approved); PA3D P34b (5e067098), P38 (8bb9a7d), P40 (9ff3065) — all on remote main under coordinator-recreated shas. CORRECTION: P34b/P38/P40 were never missing — local shas 404 on compare because the coordinator recreates commits via API (new shas, same messages). Verify PA3D by subject + ancestry, never by local sha. Bannon #217 open/unstable, NOT merged.
+- STEP 1: WH #1792 P2 CLEAN (head 7f7bf8b5) — merge call owner's, NOT merged. WH #1806/#1810/#1811/#1812/#1802 open, mergeable, blocked — NOT merged. AO tip unchanged 02a34b52.
+- STEP 2: 5/5 HOLD/LANDED (#1813, #965, #1807 HOLD; #191 LANDED; P34b corrected to LANDED). 0 false claims reopened.
+- STEP 3: 1230 checkpoints, 0 stale/running. Nothing to resume.
+- STEP 4: MEMORY.md re-curated mid-run (Adri R7 V5 verified/V6 built; appeal lines) — no new owner game canon to sync.
+- STEP 5: disk 82%, failure-alerts quiet. In-flight renders/curls untouched. zrok/localhost.run still down (carried).
+- STEP 6/7/8: stand down — live lanes own the work.
+- BLOCKED >72h (15 carried). Owner decisions owed: Bannon #78 stay-vs-revert; WH #1792 merge call; TorBox re-sign-in; zrok/live-view; AO #952 reset.
+- Queue sync: API sync owed (merge-queue-sync-20261121-0515 + new PR) — see log line for outcome.
 ## Overnight pipeline — 2026-11-21T07:50Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: WH #1807 (King T3 pack re-baked, merge df8a5ed == WH main tip, parents [5a14848, 97ff6d5]). 1 NEW Bannon PR: #217 (2K26 universal rig + mechanics) — queued OPEN-PR. PA3D remote tip 2ac76c1d->31d219e (P38 record commit); P34b merge 67ae0ee STILL absent from remote (compare 404) — stays LOCAL-ONLY, coordinator #8 owns the push. Queue counts: WH 48 open (API); Bannon 107 open (API); blocked >72h = 15 carried.
 - STEP 1: egress degraded but working (~60–180s/call; git protocol broken). WH #1806 open, mergeable, blocked (head 56e55a5) — NOT merged. WH #1792 P2 GREEN 17/17 — merge call owner's, NOT merged. AO #965 body fixed + branch updated this run; merge only if gate goes green.
