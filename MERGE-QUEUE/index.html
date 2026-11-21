@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-21t1255z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-21t1316z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -886,6 +886,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-21t1316z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-21T13:16Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-21t1255z-30-min-run" class="md-nav__link">
@@ -6200,6 +6211,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-21t1316z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-21T13:16Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-21t1255z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9599,6 +9621,18 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-21t1316z-30-min-run">Overnight pipeline — 2026-11-21T13:16Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-21t1316z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE DELTA: 2 merged by this run, both LANDED-VERIFIED on main: AO #970 (queue sync, merge a8f478e7 == AO tip; MERGE-QUEUE.md +10/-0, overnight-handoff.md +10/-0, add-only) + PPWA #287 (R7 V3 checkpoint/proof pack, merge 05572f60 == PPWA tip; 17 files, +37,957/-0, zero deletions; PARTIAL per title — hole closed, bore still hard; landed as a checkpoint, R7 not done). 2 verified landed by other lanes, payload confirmed on main by this run: AO #969 (merge 85a65bce == AO tip, merged 12:24:51Z) + WH #1815 (merge cfaa3489 == WH tip, merged 12:51:48Z; docs-only AGENTS.md). 0 new PRs queued. 0 false claims reopened (verify-done 5/5 HOLD below).</li>
+<li>STEP 1: egress DEGRADED but working via gh api (GraphQL tips 63-84s; REST 35-90s/call; rate_limit remaining 4969). Tips moved: AO 85a65bce-&gt;a8f478e7 (#970, merged+verified this run); PPWA 5d59882-&gt;05572f60 (#287, merged+verified this run); WH e82d76bf-&gt;cfaa3489 (#1815, verified this run). All other tips unchanged vs 12:55Z baselines (Bannon 49b07da4, PA3D 4cca30e1, GRE 4c8e731, CD bafe7fb, CJ ad576df5, PA2D 16921c6). Counts: WH 44, Bannon 115, PPWA 22-&gt;21 (#287 merged), AO 2 (#969 merged, #970 merged, #971 to follow = 2); others carried. WH #1792 green (rollup SUCCESS) but OWNER-HELD — not merged. WH #1814 BLOCKED + FAILURE (instruction-gate only; 13/14 checks green) — NOT merged: body not in gate format AND body itself says "No merges without Mars's visual check" (Phase 5 running) — lane owns the body fix (no verbatim owner quote found in memory; will not fabricate one). Bannon #219/#220/#221/#222/#223/#224/#225 all UNSTABLE + FAILURE — NOT merged; heads MOVED for #219 (3a12191-&gt;a682c89) and #220 (8d5526c-&gt;d47ebc2), lanes pushing. Bannon check-runs unreadable via this token (403 "Resource not accessible by personal access token") — rollup FAILURE is the only signal; recorded, not chased. Excluded/owner-held untouched: WH #377, CJ #156/#157/#167, DG #89; PPWA #246 merge call stays owner's. PA3D #5, PA2D #4/#2, CD2 #12 not re-checked this run (carried CLEAN-but-no-checks, not merged per precedent).</li>
+<li>STEP 2 verify-done (5/5 HOLD): WH #1812 (compare e82d76bf...cfaa3489 ahead 2 behind 0), WH #1815 (merge cfaa3489 == tip), AO #968 (compare 92458a06...85a65bce ahead 4 behind 0), Bannon #191 (merge 49b07da4 == tip), PA3D P41 (compare d04634d...4cca30e1 ahead 4 behind 0). 0 false claims reopened.</li>
+<li>STEP 3 checkpoints: 1230 scanned, 1 unparseable (cn-gigaleak-archiveorg-pull.json — ACTIVE lane file, mid-write at 13:17, run #1702 in flight; not corrupt, skipped per protocol), 0 watchdog-running, 0 stale; done 996 + complete 39 = 1035; needs_owner 65 untouched. Nothing to resume. checkpoint_audit.py still missing (tools/ archived).</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 UNCHANGED 768f016f since 11:40Z. No new owner canon to sync. Log: canon-sync nothing new.</li>
+<li>STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 82% (122G/150G, 28G free) — under 85%. Quota-wall flicker: lock touch failed once (EDQUOT) then succeeded on retry; log append OK this run (intermittent, improving vs 12:55Z run's total block). In-flight NOT touched: Blender afro-refit driver, Vielra render (Blender 5.2.3, started 13:13), P36b soak server (port 8366), GRE/jak-project blob-upload gh processes. zrok/localhost.run still down (carried; owner's fresh token owed). tv-gigaleak at-inflate2 DEAD (carried from 07:52 EST watchdog; relaunch blocked by EDQUOT).</li>
+<li>STEP 6/7/8: no new thread, no new pulls — live lanes own the work (PA3D coordinator #9; DG 6B Run 50/56; Sato lanes; Bannon lanes; Adri R7 v7 finisher). Stand down.</li>
+<li>BLOCKED &gt;72h (15 carried, unchanged). FLAG CARRIED: Bannon #78 stay-vs-revert decision owed; untracked siblings TRIPPEDD-Animation-Studio + Wrestli6game-3 decision owed; AO #952 force-push reset decision owed. NEW owner decisions owed: WH #1792 P2 baek-master-white combo question (PR green, merge call owner's); TorBox re-sign-in (Turnstile — user's own click); zrok/live-view (egress recovery or fresh token). FLAG CARRIED: WH #1807/#1808/#1813/#1815 merged by lanes without a recorded owner merge call — payloads verified on main, stay unless owner says otherwise. NEW: WH #1814 blocked on instruction-gate body + owner's visual check (Phase 5) — lane-owned fix. NEW: Bannon check-runs 403 via this token — Bannon failures readable only as rollup FAILURE until token scope is fixed (main-agent matter).</li>
+<li>Queue sync: AO #971 this run (to follow).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-21t1255z-30-min-run">Overnight pipeline — 2026-11-21T12:55Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-21t1255z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE DELTA: 0 merged by this run. 2 LANDED-VERIFIED by this run (merged by other lanes, payload confirmed on main by this run): AO #969 (merge 85a65bce == AO tip; parents [92458a06, faade334]; prior run's queue sync) + WH #1815 (merge cfaa3489 == WH tip; parents [e82d76bf, 014f7851]; "Docs: add the community-cracked rule to AGENTS.md", AGENTS.md only). 3 NEW PRs queued as OPEN-PR, mergeable null (fresh, checks pending), NOT merged: Bannon #224 (2K26 CAS jtable decode, head 6133a30), Bannon #225 (2K ropes BANNON_ROPES_2K, head 233739f), PPWA #287 (Round 7 V3 Adri anus, head c72dc9c). 0 false claims reopened (verify-done 5/5 HOLD below).</li>
