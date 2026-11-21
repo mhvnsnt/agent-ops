@@ -49,3 +49,11 @@ Read this if you work on western-heart or agent-ops. Nothing changes today. This
 **How to confirm:** reply "merge-queue briefing confirmed" in your chat, or drop that line as a comment on your PR, or tell the merge coordinator at your next check-in. Confirmations are tracked in mhvnsnt/agent-ops at `MERGE-QUEUE-BRIEFING-CONFIRMATIONS-2026-10-24.md`.
 
 **Status 2026-10-24:** the queue plumbing is ready on both repos (western-heart PR #742 and agent-ops PR #39 both merged the merge_group triggers). The flip itself has NOT happened. No branch protection has changed.
+
+## NO-TEMP-STORAGE LAW (owner 2026-11-21 ~16:33 EST — "why are u storing things in temporary where they can get wiped anyway?")
+NEVER store work in /tmp or any temporary location that can be wiped. /tmp is a 512 MB tmpfs and a VM restart wipes it to zero — on 2026-11-21 it destroyed the Pyrite checkpoint, worktree, 8 proof shots, capture driver, suite log, and the Colosseum M2 extracts. That loss is the proof: anything stored in temp is already lost, it just doesn't know it yet.
+1. EVERYTHING goes straight into the repo or a durable workspace directory the second it exists — checkpoints, captures, scripts, extracts, logs, proofs. Finished work belongs in the repo; nothing finished ever sits only in /tmp or only on local disk.
+2. /tmp is for truly disposable scratch ONLY — something that can be regenerated in seconds and whose loss costs nothing. If losing it would cost even one minute of rework, it does not go in /tmp.
+3. Any lane caught staging work in /tmp has violated the order — same as staging on local disk. Parents verify: no checkpoint, capture, script, or extract path in any brief points at /tmp.
+4. Recovery from a wipe is re-derivation from the repo/release, never a shrug — the work survives because it was pushed, the temp copy is gone and stays gone.
+Strengthens DIRECT-TO-REPO + CHECKPOINT-AND-SAVE: the repo is the save, temp is not storage.
