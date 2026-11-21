@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-21t1430z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-21t1457z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -886,6 +886,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-21t1457z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-21T14:57Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-21t1430z-30-min-run" class="md-nav__link">
@@ -6233,6 +6244,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-21t1457z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-21T14:57Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-21t1430z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9665,6 +9687,18 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-21t1457z-30-min-run">Overnight pipeline — 2026-11-21T14:57Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-21t1457z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE DELTA: 1 merged by this run, LANDED-VERIFIED: AO #973 (4fac6bc1, 14:30Z queue sync; +10/-0, rollup SUCCESS). 2 verified landed by other lanes: WH #1815 (cfaa3489 == WH tip, community-cracked rule doc), PPWA #287 (05572f60 == PPWA tip, Adri R7 V3 partial). AO #969 (85a65bce) + #970 (a8f478e7) ancestors of tip, behind 0. 11 NEW Bannon PRs queued as OPEN-PR (#226-#236, all UNSTABLE/FAILURE — not merged). 0 false claims reopened (verify-done 5/5 HOLD).</li>
+<li>STEP 1: egress degraded but working (GraphQL tips 66s; REST 60-120s/call). Tips moved: WH e82d76bf-&gt;cfaa3489 (#1815), AO 92458a06-&gt;8ada2931 (#969/#970/#971/#972/#973 + emergency-backup 8ada2931 on top), PPWA 5d59882-&gt;05572f60 (#287), MMHQ 5e72bdfe-&gt;f0676c67 (daily sweep commit). All other tips unchanged (Bannon 49b07da4 open 113-&gt;126, PA3D 4cca30e1, GRE 4c8e731, CD bafe7fb, CJ ad576df5, PA2D 16921c6, DG 17be49b, wrestling e1702af). WH #1792 CLEAN/SUCCESS but OWNER-HELD — not merged. Bannon newest-20 all UNSTABLE/FAILURE — not merged. WH #1814 BLOCKED/FAILURE — not merged. Excluded/owner-held untouched: WH #377, CJ #156/#157/#167, DG #89; PPWA #246 merge call stays owner's. CD2 repo name unresolvable as mhvnsnt/concrete-dragon-2 — carried.</li>
+<li>STEP 2 verify-done (5/5 HOLD): WH #1815, AO #969, AO #970, PPWA #287, MMHQ tip f0676c6 (daily sweep commit on main). 0 false claims reopened.</li>
+<li>STEP 3 checkpoints: 1230 scanned, 1 unparseable (cn-gigaleak-archiveorg-pull.json — truncated mid-string at line 523; skipped per protocol, lane/owner call), 0 watchdog-running, 0 stale; done 996 + complete 39; needs_owner 64 untouched. Nothing to resume. NOTE: emergency-backup commit 8ada2931 on main holds repaired screenshot-storeoff-20261020.json under checkpoints-emergency-backup/ (+114/-0); restore to disk pending quota-wall clearing.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 UNCHANGED 768f016f since 11:40Z. No new owner canon to sync. Log: canon-sync nothing new.</li>
+<li>STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 82% (122G/150G, 28G free) — under 85%. Quota wall ACTIVE this run (all /home/hatch writes fail Disk quota exceeded; lock never created — none existed, proceeded; /tmp 512M tmpfs 100% full, 1.6M free — sync via pipes only, no temp files). In-flight NOT touched: Blender afro-refit render driver, Blender 5.2.3 l8 shoot. zrok still down (carried; owner's fresh token owed).</li>
+<li>STEP 6/7/8: no new thread, no new pulls — live lanes own the work (PA3D coordinator #9; DG 6B Run 50/56; Sato lanes; Bannon lanes; Adri R7 v7 finisher). Stand down.</li>
+<li>BLOCKED &gt;72h (15 carried, unchanged). FLAG CARRIED: Bannon #78 stay-vs-revert decision owed; untracked siblings TRIPPEDD-Animation-Studio + Wrestli6game-3 decision owed; AO #952 force-push reset decision owed. NEW owner decisions owed: WH #1792 P2 baek-master-white combo question (PR green, merge call owner's); TorBox re-sign-in (Turnstile — user's own click); zrok/live-view (egress recovery or fresh token). FLAG CARRIED: WH #1807/#1808/#1813 merged by lanes without a recorded owner merge call — payloads verified on main, stay unless owner says otherwise.</li>
+<li>Queue sync: AO #974 this run (to follow).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-21t1430z-30-min-run">Overnight pipeline — 2026-11-21T14:30Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-21t1430z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE DELTA: 1 merged by this run, LANDED-VERIFIED: AO #972 (queue sync, merge 6d392904; payload 2/2 blob-identical on main: MERGE-QUEUE.md 12d66bd7 4,428,018 B, overnight-handoff.md 0b3c26d6 3,502,134 B). 5 verified landed by other lanes, all confirmed on main BY THIS RUN: WH #1815 (merge cfaa3489 == WH tip), PPWA #287 (merge 05572f60 == PPWA tip, Adri anus R7 V3 partial), AO #969 (merge 85a65bce ancestor of tip, behind 0), AO #970 (merge a8f478e7 ancestor, behind 0), AO #971 (merge 38e266a6 == AO tip). 2 NEW Bannon PRs queued as OPEN-PR: #232 (roster gap list + wiring audit, head 295ce07), #233 (exertion-c leftovers + wave3a unrigged Stings, head 2257ba0) — both UNSTABLE/FAILURE, NOT merged. 0 false claims reopened (verify-done 5/5 HOLD + 2 extra below).</li>
