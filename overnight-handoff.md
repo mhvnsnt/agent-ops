@@ -1,3 +1,6 @@
+## Overnight pipeline — 2026-11-21T17:01Z (30-min run)
+- QUEUE DELTA: 17 newly landed-verified (Bannon #220/#227/#228/#229/#230/#232/#233/#234/#235/#236/#238, PPWA #289/#291, CJ #416, AO #971/#972/#973) + 8 re-verified (Bannon #219/#223/#249, WH #1815, PPWA #287, AO #969/#970/#974). Bannon fold closed out: all 14 queued Bannon PRs from the #249 integration now LANDED-VERIFIED. Open now: WH 45, Bannon 25, AO 3, PPWA 23, CJ 0. New OPEN-PR: WH #1816, PPWA #288/#290, Bannon #240. Verify-done 7/7 HOLD, 0 false claims.
+- Egress recovered (2-19s/call). Quota wall still blocks all /home/hatch writes — sync via API + /tmp only. Disk 82%. Checkpoints: 1230 scanned, 0 stale. Canon-sync: nothing new. Bannon CI down for billing (owner to make repo public). zrok/localhost.run still down (owner token owed).
 ## Overnight pipeline — 2026-11-21T16:14Z (30-min run)
 - Landed-verified this run: AO #974 (dbe2c836, queue sync). Verified landed by lanes: WH #1815 (cfaa3489), AO #969 (85a65bce), AO #970 (a8f478e7), Bannon #249 (a27baf73) + #219/#223/#225 via integration. Verify-done 7/7 HOLD, 0 false claims.
 - Bannon main jumped 49b07da4 -> a27baf73 via integration PR #249; open PRs 113 -> 22. Still open, checks FAILURE (not merged): WH #1814, Bannon #221/#222/#224.
