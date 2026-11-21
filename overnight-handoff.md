@@ -1,3 +1,13 @@
+## Overnight pipeline — 2026-11-21T07:50Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: WH #1807 (King T3 pack re-baked, merge df8a5ed == WH main tip, parents [5a14848, 97ff6d5]). 1 NEW Bannon PR: #217 (2K26 universal rig + mechanics) — queued OPEN-PR. PA3D remote tip 2ac76c1d->31d219e (P38 record commit); P34b merge 67ae0ee STILL absent from remote (compare 404) — stays LOCAL-ONLY, coordinator #8 owns the push. Queue counts: WH 48 open (API); Bannon 107 open (API); blocked >72h = 15 carried.
+- STEP 1: egress degraded but working (~60–180s/call; git protocol broken). WH #1806 open, mergeable, blocked (head 56e55a5) — NOT merged. WH #1792 P2 GREEN 17/17 — merge call owner's, NOT merged. AO #965 body fixed + branch updated this run; merge only if gate goes green.
+- STEP 2: WH #1807/#1809/#1808/#1800 HOLD, PA3D P34b STILL-OPEN, AO #964 HOLD. 0 false claims reopened.
+- STEP 3: 1230 checkpoints, 0 stale, 0 running. Nothing to resume.
+- STEP 4: MEMORY.md unchanged (82150407). No new canon to sync; WH #1806 carries the canon fix.
+- STEP 5: disk 82%, failure-alerts quiet. In-flight renders/curls untouched. zrok/localhost.run still down (carried).
+- STEP 6/7/8: stand down — live lanes own the work.
+- BLOCKED >72h (15 carried). NEW FLAG: WH #1807 merged by its lane (X1) without a recorded owner merge call — same pattern as #1791; payload verified on main.
+- Queue sync: AO #965 this run (to follow).
 ## Overnight pipeline — 2026-11-21T06:48Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 2 verified landed by another lane: WH #1808 (merge bcafff1) + WH #1809 (merge 5a14848 == WH main tip). 3 NEW WH PRs (#1810/#1811/#1812) + 6 NEW Bannon PRs (#211–#216), all queued as OPEN-PR, none merged. STALE CLAIM CORRECTED: 01:40 EST pulse's "#1800 still awaits owner's merge call" is wrong — #1800 merge a9840f02 is an ancestor of tip 5a14848; #1800 IS on main. PA3D remote tip e208a6d0->2ac76c1d (coordinator record commit, not a merge); P34b merge 67ae0ee STILL absent from remote (compare 404) — stays LOCAL-ONLY, coordinator #8 owns the push. Queue counts: WH 49 open (API); Bannon count FAIL (carried 95 + 6 new); all other counts carried from 05:15Z; blocked >72h = 15 carried.
 - STEP 1: egress degraded but working (REST 60–180s/call; git protocol broken). WH #1806/#1807 mergeable but pending n=0 — NOT merged. AO #965 open, mergeable, pending n=0 — NOT merged; branch update via API attempted this run.
