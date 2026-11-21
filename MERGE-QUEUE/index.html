@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-21t1353z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-21t1430z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -886,6 +886,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-21t1430z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-21T14:30Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-21t1353z-30-min-run" class="md-nav__link">
@@ -6222,6 +6233,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-21t1430z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-21T14:30Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-21t1353z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9643,6 +9665,18 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-21t1430z-30-min-run">Overnight pipeline — 2026-11-21T14:30Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-21t1430z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE DELTA: 1 merged by this run, LANDED-VERIFIED: AO #972 (queue sync, merge 6d392904; payload 2/2 blob-identical on main: MERGE-QUEUE.md 12d66bd7 4,428,018 B, overnight-handoff.md 0b3c26d6 3,502,134 B). 5 verified landed by other lanes, all confirmed on main BY THIS RUN: WH #1815 (merge cfaa3489 == WH tip), PPWA #287 (merge 05572f60 == PPWA tip, Adri anus R7 V3 partial), AO #969 (merge 85a65bce ancestor of tip, behind 0), AO #970 (merge a8f478e7 ancestor, behind 0), AO #971 (merge 38e266a6 == AO tip). 2 NEW Bannon PRs queued as OPEN-PR: #232 (roster gap list + wiring audit, head 295ce07), #233 (exertion-c leftovers + wave3a unrigged Stings, head 2257ba0) — both UNSTABLE/FAILURE, NOT merged. 0 false claims reopened (verify-done 5/5 HOLD + 2 extra below).</li>
+<li>STEP 1: egress DEGRADED but working via gh api (GraphQL tips 87s; REST 40-130s/call). Tips moved: WH e82d76bf-&gt;cfaa3489 (#1815 merge), AO 92458a06-&gt;6d392904 (#969/#970/#971/#972 merges), PPWA 5d59882-&gt;05572f60 (#287 merge); all other tips unchanged (Bannon 49b07da4 open 110-&gt;123; GRE 4c8e731 open 3; CD bafe7fb open 3; CJ ad576df5 open 0; PA3D 4cca30e1 open 1; PA2D 16921c6 open 3; DG 17be49b open 3; MMHQ 5e72bdfe open 4; WG e1702af open 2; CD2 a956516 open 1; W6 5d8e9803 open 0). WH #1792 CLEAN+SUCCESS but OWNER-HELD — not merged. WH #1814 FAILURE — not merged. Bannon #219-#233 all UNSTABLE/FAILURE (incl. #229 UNKNOWN) — none merged. Excluded/owner-held untouched: WH #377, CJ #156/#157/#167, DG #89; PPWA #246 merge call stays owner's. DG repo name CONFIRMED mhvnsnt/dream-girl (tip 17be49b, open 3).</li>
+<li>STEP 2 verify-done (5/5 HOLD + 2 extra): WH #1815, PPWA #287, AO #969, AO #970, AO #971 (all above); extra: AO #972 (this run's merge, payload blobs verified), Bannon #191 (tip 49b07da4 unchanged == merge). 0 false claims reopened.</li>
+<li>STEP 3 checkpoints: 1230 scanned, 1 unparseable (cn-gigaleak-archiveorg-pull.json, unterminated string line 523 — NEW vs prior runs' 0; likely truncated by a lane write during the quota wall; lane-owned, not touched), 0 watchdog-running, 0 stale; done 996 + complete 39 = 1035; needs_owner 65 untouched. checkpoint_audit.py still missing (tools/ archived). Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 UNCHANGED 768f016f since 11:40Z. No new owner canon to sync. Log: canon-sync nothing new.</li>
+<li>STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 82% (122G/150G, 28G free) — under 85%. QUOTA WALL still blocking ALL /home/hatch writes (lock touch, log appends, daily-note appends all Disk quota exceeded; this run worked API-only with NO local lock file — none existed, no concurrent run detected). In-flight NOT touched: Blender afro-refit render driver, Blender Vielra l3g-face-hub render (275435, 99% CPU), P36b soak server. zrok + localhost.run still down (carried; owner's fresh token owed). TV Gigaleak at-inflate2 still dead (quota wall blocks its writes; lane not resumable until quota clears). PA3D coordinator #9 last activity ~79 min at 09:00 pulse — chat-owned, not resumable here.</li>
+<li>STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down.</li>
+<li>BLOCKED &gt;72h (15 carried, unchanged). FLAG CARRIED: Bannon #78 stay-vs-revert decision owed; untracked siblings TRIPPEDD-Animation-Studio + Wrestli6game-3 decision owed; AO #952 force-push reset decision owed. NEW owner decisions owed: WH #1792 P2 baek-master-white combo question (PR green, merge call owner's); TorBox re-sign-in (Turnstile — user's own click); zrok/live-view (egress recovery or fresh token). FLAG CARRIED: WH #1807/#1808/#1813 merged by lanes without a recorded owner merge call — payloads verified on main, stay unless owner says otherwise.</li>
+<li>Queue sync: AO #973 this run (to follow).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-21t1353z-30-min-run">Overnight pipeline — 2026-11-21T13:53Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-21t1353z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE DELTA: 1 merged by this run, LANDED-VERIFIED: AO #971 (queue sync 13:16Z, merge 38e266a6; payload MERGE-QUEUE.md 5387a655 4,424,077 B + overnight-handoff.md be6148cd 3,498,193 B on main). 3 verified landed by other lanes, all confirmed on main BY THIS RUN: WH #1815 (merge cfaa348 == WH tip, community-cracked rule doc 014f785), PPWA #287 (merge 05572f6 == PPWA tip, Adri anus R7 V3 c72dc9c), AO #970 (merge a8f478e == AO tip). 6 NEW Bannon PRs queued as OPEN-PR: #226 (Island .jsfb, ee88f9d), #227 (2K26 SDB strings, 6f97f9e), #228 (lane records 3a+3c, 5d79923), #229 (Creator v8, 4726ee3), #230 (lane records pr198-fix, 22879da), #231 (2K26 anim clips, ef589e1). 0 false claims reopened (verify-done 5/5 HOLD + 3 landed above).</li>
