@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-21t2044z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-21t2214z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -886,6 +886,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-21t2214z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-21T22:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-21t2044z-30-min-run" class="md-nav__link">
@@ -6343,6 +6354,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-21t2214z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-21T22:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-21t2044z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9885,6 +9907,18 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-21t2214z-30-min-run">Overnight pipeline — 2026-11-21T22:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-21t2214z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE DELTA: 2 merged BY THIS RUN, both LANDED-VERIFIED on main: AO #963 (merge 9c567821 == tip at merge; AGENTS.md blob cea339c0 on main; gate body fixed first — instruction-gate FAILURE on plain-summary body, then on the deviation #ref rule, patched per the gate script's exact rules, re-ran SUCCESS, then merged) + AO #982 (merge 03b7f18c == tip; NO-TEMP-STORAGE law, AGENTS.md blob e0af689d/7,472 B on main; gate+guard green first try). 5 verified LANDED by other lanes, verified on main BY THIS RUN: AO #981 (merge 134570b0 ancestor of tip feac1009, ahead 1 behind 0; payload MERGE-QUEUE.md 802a6c5d/4,472,191 B + overnight-handoff.md aba286a5/3,539,773 B match local exactly) + PA3D Agate Shrine (merge 4041d061 == tip; assets/models/M3_shrine_1F.glb 1e784506/3,343,824 B on main) + PA3D Colo M2 extracts (3c95276a; work/colo-m2/MANIFEST.md be62859f/49,642 B on main) + PPWA Somnia study (3a0bb5d6 == tip; docs/build-a-bitch/ceiling/somnia-roll-study/STUDY.md) + GRE decomp/recomp harvest Phase 2 (c94a4643 == tip; decomp-recomp/tekken5-recomp + fmodel on main). 1 NEW WH PR queued as OPEN-PR: #1819 NO-TEMP-STORAGE law (head 8951836d, +8 lines, 11/14 checks green incl. instruction-gate SUCCESS; menu-touch-e2e/material-gate/speed-quality still in_progress at run end — merge when green by a later run). 0 false claims reopened (verify-done 8/8 HOLD below).</li>
+<li>STEP 1: tips moved vs 20:44Z baseline: AO 7b6e053f -&gt; 03b7f18c (#981 + #963 + #982 merged); PPWA 0b46e784 -&gt; 3a0bb5d6 (Somnia study STUDY.md, direct push); PA3D 0f4d4d87 -&gt; 4041d061 (Colo M2 extracts + height-following merge + Pyrite suite proof 50,541/3 + Agate Shrine merge); GRE 4c8e731 -&gt; c94a4643 (decomp/recomp harvest Phase 2, ~100 commits, 6 harvest-branch merges; decomp-recomp/tekken5-recomp + fmodel verified on main). All other tips unchanged (WH 8dbd2975, Bannon a27baf73, CJ 7e75d098, DG 17be49b, PA2D 16921c6, CD bafe7fbd, wrestling e1702afd). Open counts: WH 47 (+1 #1819), Bannon 37 (+6 new #270-275, net +4), AO 1 (#952; #963/#982 merged), PPWA 25 (+2 #288/#294), CJ 0, PA3D 1, GRE 3, DG 3, PA2D 3, WG 2, CD 3. WH #1792 mergeable true/clean but OWNER-HELD — not merged. WH #1817/#1818 now BLOCKED on gate-body failure AND lane hold "Mars reviews before merge" — body fix needs a verbatim owner instruction for the VM sweep, none on file; owner review + merge call owed (not attempted). WH #1814 still BLOCKED, head 22bbad2c, +0/-0 empty diff, owner visual-check hold. PA3D #5 + PA2D #1/#2/#4 MERGEABLE/CLEAN but no checks ran — CLEAN-but-no-checks, NOT merged per precedent. AO #952 CONFLICTING — owner decision owed (force-push reset). Bannon #266/#267 MERGEABLE/UNSTABLE; #264/#265/#256/#258/#259/#262 now CONFLICTING; #268/#269 CONFLICTING unchanged — none green, none merged. Bannon web-upgrade now 44 ahead / 268 behind main (was 41 ahead), NO fold PR — fold still owed, lane-owned. Bannon CI down for billing (carried). New Bannon PRs: #270/#272 base muse/wrestling-arcade (true/unstable); #271/#274 base web-upgrade, +0/-0 EMPTY diffs; #273 base web-upgrade, DIRTY, +20,078/-124, 132 files; #275 base web-upgrade, true/unstable, +6,697/-2. New PPWA PRs: #288 (+2,473/-0, 26 files) + #294 (+133/-39, 17 files), both true/unstable. Excluded/owner-held untouched: WH #377, CJ #156/#157/#167, DG #89; PPWA #246 merge call stays owner's; PPWA #290/#293 CLEAN/SUCCESS but merge parked — owner's call; Bannon #78 stay-vs-revert still owner's call.</li>
+<li>STEP 2 verify-done (8/8 HOLD/LANDED): AO #981 (134570b0 ancestor, ahead 1 behind 0), AO #963 (9c567821 == tip at merge), AO #982 (03b7f18c == tip), PA3D Shrine (4041d061 == tip), PA3D Colo M2 (3c95276a, MANIFEST be62859f on main), PPWA Somnia (3a0bb5d6 == tip), GRE harvest (c94a4643 == tip), WH tip 8dbd2975 (#1816) unchanged HOLD (Bannon tip a27baf73 + CJ tip 7e75d098 also unchanged HOLD). 0 false claims reopened. NOTE: GRE harvest includes tekken5-recomp (NO LICENCE, all rights reserved, study use only) + tekken3recompiled (PolyForm Noncommercial) — licences logged honestly in lane commit messages; per owner LICENCE-NOT-A-GATE law, licence never gates; recorded here, no action.</li>
+<li>STEP 3 checkpoints: 1231 scanned (+1), 0 unparseable, 0 watchdog-running, 0 stale; done 996 + complete 39 = 1035; needs_owner 65 (+1, untouched). checkpoint_audit.py still missing (tools/ archived). Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md CHANGED since 20:44Z (md5 43aa6e4b -&gt; 801e8e69..., mtime 22:08Z) — new NO-TEMP-STORAGE LAW (owner 2026-11-21 ~16:33 EST) + new PA3D #10-queue-complete entry (17:26 EST, Agate Shrine merged 4041d061, all 6 wiped items recovered). SYNCED: NO-TEMP-STORAGE law to agent-ops AGENTS.md (AO #982, merged + verified) and western-heart AGENTS.md (WH #1819, OPEN-PR, checks 11/14 green, merge when green). PA3D entry is a status record, verified on main above (shrine 4041d061 == tip). Remaining rollout: NO-TEMP-STORAGE law to the other repos' AGENTS.md (Bannon, PPWA, GRE, DG, PA3D, PA2D, CD, WG, CJ) — queued as follow-up, lane pattern matches the PRE-MADE PARTS FIRST rollout.</li>
+<li>STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 79% (118G/150G, 32G free) — under 85%, improved from 82%. /tmp 2% (503M free) — VM RESTART ~22:11Z (uptime 14 min at 22:25Z) wiped /tmp and killed all in-flight renders: afro-refit render driver (was frames 83-87) + L4 deform-spec proof render + p39-wes blender all GONE from ps; no ffmpeg/blender processes running at 22:25Z. Relaunch owned by keep-working pulse (not running at check time — flag: verify pulse fires post-restart). DG quality loop already relaunched Run 61 (22:13:07Z) post-restart. zrok still 401 (carried; owner's fresh token owed); localhost.run tunnel regenerated 17:22 EST per DG watchdog (https://8e77fbd14fe301.app.lhr.life/vnc.html).</li>
+<li>STEP 6/7/8: no new thread, no new pulls — live lanes own the work (PA3D coordinator #11 owns it all per MEMORY.md 17:26 EST entry; DG 6B Run 61; Sato lanes; Bannon lanes; Adri R7 finisher). Stand down. New helper: ~/workspace/agent-ops/hidden_files/no-temp-sync-20261121/api-pr.py — Git Data API blob/tree/commit/ref/PR flow (py_compile clean); reuse for queue syncs instead of touching the dirty local agent-ops clone.</li>
+<li>BLOCKED &gt;72h (16 carried + WH #1817/#1818 newly flagged). FLAG CARRIED: Bannon #78 stay-vs-revert decision owed; untracked siblings TRIPPEDD-Animation-Studio + Wrestli6game-3 decision owed; AO #952 force-push reset decision owed. NEW owner decisions owed: WH #1792 P2 baek-master-white combo question (PR green, merge call owner's); WH #1817/#1818 VM sweep review + merge call (gate-body fix needs verbatim owner instruction for the VM sweep; bodies say "Mars reviews before merge"); WH #1814 KoC2 visual check (empty diff); TorBox re-sign-in (Turnstile — user's own click); zrok/live-view (egress recovery or fresh token). FLAG CARRIED: WH #1807/#1808/#1813/#1815/#1816 + PPWA #287/#292 merged by lanes without a recorded owner merge call — payloads verified on main, stay unless owner says otherwise. Bannon web-upgrade fold (PRs stranded off main; needs Bannon lane/coordinator fold PR to main).</li>
+<li>Queue sync: AO #983 this run (to follow).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-21t2044z-30-min-run">Overnight pipeline — 2026-11-21T20:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-21t2044z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE DELTA: 1 merged BY THIS RUN: AO #980 (merge 7b6e053f == tip; payload MERGE-QUEUE.md d3b1652d 4,467,851 B + overnight-handoff.md 2e7e5e54 3,535,433 B verified on main; gate body fixed first: instruction-gate was FAILURE on plain-summary body, patched to gate format, re-ran SUCCESS, then merged). 2 verified LANDED by other lanes, verified on main BY THIS RUN: PA3D Agate Village (merge 0f4d4d87 == tip; parents bcdce61f + a3f7e3f1; M3_out.glb 13556e12/4,053,804 B, src/world.js f9ad3992/106,237 B, proof/agate_raycast.json 1ab5320b/7,186 B, src/main.js f7319a61/103,551 B on main) + WH #1806 canon (merged 11:19:37Z, merge cb7196ef ancestor of main tip 8dbd2975, ahead 10 behind 0). 0 false claims reopened (verify-done 8/8 HOLD below).</li>
