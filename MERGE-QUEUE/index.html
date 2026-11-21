@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-21t0750z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-21t0905z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -886,6 +886,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-21t0905z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-21T09:05Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-21t0750z-30-min-run" class="md-nav__link">
@@ -6134,6 +6145,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-21t0905z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-21T09:05Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-21t0750z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9467,6 +9489,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-21t0905z-30-min-run">Overnight pipeline — 2026-11-21T09:05Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-21t0905z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE DELTA: 0 merged by this run. 5 verified landed by other lanes/coordinator, all confirmed on main BY THIS RUN: WH #1813 (docs close-out, merge 38b0dba3 == WH main tip); Bannon #191 (handoff-to-Claude doc, merge 49b07da4 == Bannon main tip, Mars-approved per merge message); PA3D P34b (merge 5e067098 on remote main, ancestor of tip 89f1684 — see CORRECTION below); PA3D P38 (merge 8bb9a7d on remote main); PA3D P40 (merge 9ff3065 on remote main). 0 false claims reopened; 1 false claim CORRECTED (P34b — see below). Bannon #217 open, mergeable, unstable (head 8aae5f66) — NOT merged.</li>
+<li>CORRECTION — P34b/P38/P40 were NEVER missing from remote main: the coordinator recreates commits via the Git Data API (new shas, same messages), so LOCAL shas (P34b 67ae0ee, P38 60de266, P40 5d0f3bb) 404 on compare — that is a sha mismatch, NOT absence. Remote main history (15 commits listed this run): tip 89f1684 record-P40, 9ff3065 Merge P40, cbe0959 record-P38-push, 31d219e record-P38, 8bb9a7d Merge P38, 75468e4 record-P37c-push, 2ac76c1 record-P37c, 4a1a878 Merge P37c, c34ab2f record-P33-push, e208a6d record-P33, 7141c05 Merge P33, 9268043 record-P36b-push, e8b158b record-P36b, 8190dfc Merge P36b, 4eb39d0 record-P34b-push (f4a11bfd). f4a11bfd = record P34b (parent 5e067098 = Merge P34b, 2 parents, compare f4a11bfd...89f1684 ahead 22 behind 0). RULE GOING FORWARD: verify PA3D landings by subject + ancestry on remote main, never by local sha. P34b/P38/P40 exit the queue as LANDED-VERIFIED (recreated shas). Local PA3D main d15c3a5 still ahead of remote in sha terms (local merges + record d15c3a5 vs remote 89f1684, same message) — coordinator owns reconciliation; do NOT push (git protocol broken; coordinator owns the sequence).</li>
+<li>STEP 1: egress degraded but working (REST 200, ~60–180s/call; git protocol broken). WH #1792 P2 CLEAN (mergeable true, state clean, head 7f7bf8b5 commit 5, 17/17 green) — merge call owner's, NOT merged. WH #1806/#1810/#1811/#1812/#1802 open, mergeable true, blocked (checks pending), heads unchanged — NOT merged. Bannon #217 open, mergeable, unstable — NOT merged. Excluded/owner-held untouched: WH #377, CJ #156/#157/#167, DG #89; PPWA #246 merge call stays owner's. AO tip unchanged 02a34b52 (#965 HOLD).</li>
+<li>STEP 2 verify-done (5/5): WH #1813 HOLD (tip == merge 38b0dba3); AO #965 HOLD (tip == merge 02a34b52); WH #1807 HOLD (compare df8a5ed...38b0dba3 ahead 2 behind 0); Bannon #191 LANDED (tip == merge 49b07da4); PA3D P34b CORRECTED to LANDED (see above). 0 false claims reopened; 1 stale "still-open" corrected.</li>
+<li>STEP 3 checkpoints: 1230 scanned, 0 unparseable, 0 watchdog-running, 0 stale; done/complete carried. Nothing to resume. checkpoint_audit.py still missing (tools/ archived).</li>
+<li>STEP 4 canon-sync: MEMORY.md re-curated twice mid-run (md5 82150407 -&gt; 1012d420 -&gt; 90be2c8e; appeal/pauper lines + Adri R7 V5-verified/V6-built). No NEW owner game canon to sync — appeal lines are personal/legal (never repo-synced); Adri R7 update is lane progress, PR not yet merged (v6v7 waiter + watcher cron own the finisher). WH #1806 still carries the Nov 20 canon fix (open, blocked).</li>
+<li>STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 82% (122G/150G, 28G free) — under 85%. In-flight NOT touched: Blender afro-refit driver (2143/2144), Blender renders (166626, 226983), PA3D coordinator curls, DG 6B Run 50/56, Adri R7 v5/v6v7 waiter. zrok/localhost.run still down (carried; 03:37 EST watchdog: 5 consecutive localhost.run regen failures, zrok 000).</li>
+<li>STEP 6/7/8: no new thread, no new pulls — live lanes own the work (PA3D coordinator #8; DG 6B Run 56; Sato lanes; Bannon lanes; Adri R7 v7 waiter); stand down.</li>
+<li>BLOCKED &gt;72h (15 carried, unchanged). FLAG CARRIED: Bannon #78 stay-vs-revert decision owed; untracked siblings TRIPPEDD-Animation-Studio + Wrestli6game-3 decision owed; AO #952 force-push reset decision owed. NEW owner decisions owed: WH #1792 P2 baek-master-white combo question (PR green, merge call owner's); TorBox re-sign-in (Turnstile — user's own click); zrok/live-view (egress recovery or fresh token). NEW FLAG: WH #1807/#1808 merged by lanes without a recorded owner merge call — payloads verified on main, stay unless owner says otherwise (carried).</li>
+<li>Queue sync: API sync owed this run (branch merge-queue-sync-20261121-0515 update + new PR; #965 merged, no open sync PR) — see log line for outcome.</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-21t0750z-30-min-run">Overnight pipeline — 2026-11-21T07:50Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-21t0750z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE DELTA: 0 merged by this run. 1 verified landed by another lane: WH #1807 (King T3 pack re-baked, merge df8a5ed == WH main tip, parents [5a14848, 97ff6d5]). 1 NEW Bannon PR: #217 (2K26 universal rig + mechanics, 175-joint rig) — queued as OPEN-PR, not merged. PA3D remote tip 2ac76c1d-&gt;31d219e (coordinator record "P38 merge (amended 60de266) + suite 50,410/3 on main"); P34b merge 67ae0ee STILL absent from remote (compare 404, second run in a row) — stays LOCAL-ONLY; coordinator #8 owns the push sequence. Local PA3D main bccdb5a (record P38 push landed on origin 31d219e9), 5 modified proof files (coordinator-owned, untouched). Queue counts (verified this run unless noted): WH 48 open (API); Bannon 107 open (API); all other counts carried from 05:15Z (game repos 157 open baseline); blocked (&gt;72h) = 15 carried.</li>
@@ -9478,6 +9513,7 @@
 <li>STEP 6/7/8: no new thread, no new pulls — live lanes own the work (PA3D coordinator #8; scramble Phase 2; DG 6B Run 56; Sato lanes; Bannon lanes; Adri R7 v5 waiter); stand down.</li>
 <li>BLOCKED &gt;72h (15 carried, unchanged). FLAG CARRIED: Bannon #78 stay-vs-revert decision now owed; untracked siblings TRIPPEDD-Animation-Studio + Wrestli6game-3 decision owed; AO #952 force-push reset decision owed. NEW owner decisions owed: WH #1792 P2 baek-master-white combo question (PR green, merge call owner's); TorBox re-sign-in (Turnstile — user's own click); zrok/live-view (egress recovery or fresh token). NEW FLAG: WH #1807 merged by its lane (X1) without a recorded owner merge call — same pattern as #1791; payload verified on main, stays unless owner says otherwise.</li>
 <li>Queue sync: AO #965 this run (to follow).</li>
+<li>ADDENDUM: AO #965 LANDED-VERIFIED BY THIS RUN — merged 02a34b52 (parents [5ee2eed, 99872f2b]); payload 2/2 blob-identical on main (MERGE-QUEUE.md 992050ce, overnight-handoff.md d766439e); instruction-gate PASS (body fixed: spurious Git Data API deviation bullet removed) + guard PASS; mergeable clean; +10/-0 per file (+20/-0 total). Same branch merge-queue-sync-20261121-0515 updated (not a new branch) — #952 stays open BLOCKED.</li>
 </ul>
 <h2 id="overnight-pipeline-2026-11-21t0648z-30-min-run">Overnight pipeline — 2026-11-21T06:48Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-21t0648z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
