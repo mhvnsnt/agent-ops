@@ -1,0 +1,9 @@
+{
+  "task": "Fix western-heart/game/ select portraits: re-render 36 portraits correctly (current set is all black), make cards actually bigger, verify visually before deploy. Branch->PR->merge, redeploy gh-pages.",
+  "repo": "/home/hatch/workspace/western-heart",
+  "resume_brief": "Fix the western-heart select screen portraits: (1) ALL 36 PNGs in game/assets/portraits/ are BLACK renders \u2014 re-render from game/assets/models/pantera.glb + demonio.glb with per-fighter tints, fixing the black output (likely metallic=1.0 materials with no env lighting \u2014 use non-metallic override or studio HDRI, verify EACH render shows the actual fighter before saving); (2) make the select cards ACTUALLY bigger \u2014 owner asked twice, current 3-col narrow strip is still small; (3) screenshot-verify the select screen locally or via the portrait files with YOUR OWN EYES before committing \u2014 a false 'verified' caused this. Branch from main, PR->merge, redeploy gh-pages, verify live. Heartbeat this checkpoint.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-14T06:50:00Z"
+}

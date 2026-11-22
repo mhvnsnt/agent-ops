@@ -1,0 +1,150 @@
+{
+ "bugs": [
+  {
+   "evidence": "results-live-pantera.json (run 3, contaminated): console 404s for game/assets/stages/thumbs/nm-lobby-glb.png, nm-arena-raw.png, nm-arena-smackdown.png, nm-arena-royal-rumble.png, nm-arena-wrestlemania.png, nm-arena-king-of-the-ring.png, nm-arena-summerslam.png, nm-arena-survivor-series.png, nm-arena-backlash.png, nm-arena-no-mercy.png, nm-arena-armageddon.png, nm-arena-cage.png, nm-backstage-*.png (17+). gh api confirms nm-arena-raw.png absent on BOTH main and gh-pages \u2014 stage defs reference thumbs never committed. Present in live build; code side exists on main too (verify stage def source during analysis).",
+   "id": "stage-thumbs-404",
+   "likely_source": "unknown (pre-dates the Oct-20 deploy; stage wiring PR unknown)",
+   "repro": "Open stage select on live site; No Mercy stage cards show broken thumbnails.",
+   "severity": "minor (visual, stage select)",
+   "where": "stage select screen, live build and main asset tree"
+  }
+ ],
+ "interim_findings": [
+  "LIVE != MAIN: live site is gh-pages deploy aea76adf (2026-10-20T20:16Z) built from main @ 113739ae (PR #384 select deploy). Current main is 4de38bb7 (PR #456). All merges #403-#456 are NOT on the public site. Key files differ substantially: fighter.js live 42,697B vs main 69,534B; t3anims.js live 7,885B vs main 45,566B. The owner, phone-only, most plausibly played the LIVE (stale) build \u2014 but symptom mapping differs per build, so both are being playtested.",
+  "Live t3anims.js is the OLD direct-bind version (no retargetClipToRig) \u2014 the T3 lane's NaN defect is MAIN-ONLY code. Live-build T-pose/sliding symptoms need a different mechanism; main-build symptoms may be exactly the NaN defect. Evidence per build will separate them.",
+  "Sandbox contamination event (run 3): WebGL context creation failed repeatedly in the test Chromium (VENDOR 0xffff) + ERR_INSUFFICIENT_RESOURCES on GLB fetches under box load (load avg ~15-18, ~1GB RAM free, many lanes). A fresh minimal WebGL probe passes (SwiftShader OK). Any run whose self-check fails is labeled contaminated and re-run; contaminated-run anomalies are NOT reported as game bugs.",
+  "Harness hardened after run 3: CDP screenshots (Playwright screenshot hangs on font-load wait), confirm-stage priority in the advance loop (run 3 wasted 34 clicks re-clicking #random-stage), per-call default timeout 25s, flush-on-sample + flush-on-crash, WebGL self-check step."
+ ],
+ "known_context": {
+  "last_clean_full_playtest": "2026-10-20 against main @ f09f72d9 (menu -> select -> Pantera fight, zero page errors)",
+  "live_build": "gh-pages HEAD STILL aea76adf (2026-10-20T20:16Z, from main 113739ae) \u2014 re-verified fresh by relaunch #4 via gh api at 2026-10-22T00:22Z. Sibling session's redeploy/auto-deploy (their PR #472-era work) has NOT landed on gh-pages as of this check.",
+  "main_head": "eeb59a8860176add39dcbdb12ec44e2e31689680 (PR #460 merge, 2026-10-22T00:19Z) \u2014 verified fresh by relaunch #4 via gh api",
+  "merges_since": [
+   "#403",
+   "#405",
+   "#419",
+   "#438",
+   "#443",
+   "#448",
+   "#455",
+   "#456"
+  ],
+  "prime_suspect": "T3 retargetClipToRig Hips.position-as-quaternion NaN crash (t3-crash-fix lane). That lane REPRODUCED the crash in its Node harness (pantera/king stance clip -> malformed duplicate Hips.quaternion with NaN -> mixer.update never returns). Fix exists on branch fix/t3-retarget-nan-20261021 (c58299d) but is NOT merged and regression sweep NOT done. Current main still carries the defect. This lane must confirm or clear it in the real browser game.",
+  "main_includes_since_456": [
+   "#469 T3 retarget NaN fix (03aa715f)",
+   "#465 Doc Frank bind fix (471a57c5)",
+   "#471 playability fixes B1/B4/B5 (c4c36bf9): B1 assets.js facing-gate guard (fight-start hang), B4 attack-state clear (stuck aura), B5 game.js surge guards",
+   "#472 Diablo doc (ef3fb614)",
+   "#460 Zen (eeb59a88)"
+  ]
+ },
+ "lane": "wh-playtest-triage",
+ "notes": [
+  "RELAUNCH #4 (2026-10-21 ~19:22 CDT): predecessors' playtest runs were all contaminated or incomplete: live run died at goto (ERR_TIMED_OUT, page never loaded); main469 run booted to menu then PAGE CRASHED under box load (ERR_INSUFFICIENT_RESOURCES + WebGL context lost) \u2014 NOT valid symptom evidence. Valid banked facts: live-vs-main hash compare (stale live) + stage-thumbs-404 bug. Relaunch #4 re-verifies hashes at CURRENT main eeb59a88 and re-runs playtests with a leaner harness (foot/timer/rAF probes added).",
+  "Server for main eeb59a88 running on :8906 (fetch-on-demand cache, cache-eeb59a88). Live-build server :8902 (aea76adf) also still running. playtest3.py = playtest2.py + foot world-Y / modelY / rootY / timer text / game timer fields / rAF counter / Box3 minY at fight-start."
+ ],
+ "owner_symptoms_checklist": {
+  "sliding_without_input": "NOT reproduced for P1 Kevin (vx=0 at fight start, resultsA-main469c); P2 AI walks in by design (vx=-2.8). Per-fighter/long-series verdict unresolved (sandbox).",
+  "select_preview_persists_into_fight": "NOT reproduced on current main (HUD-only fight frames; select display:none when inactive). Matches stale LIVE build. Duplicate id=screen-stage in index.html (L132+L236) noted.",
+  "tposed_frozen_fighters": "NOT reproduced for Kevin/Star on main (22 T3 actions each, animated frames). #469 NaN is dead code on main (zero call sites). Residual: samura1 static GLB; live build.",
+  "freeze_with_live_timer": "Mechanism proven in code (game.js:175 rAF-first + no try/catch + timer at L205-207 before fighter updates L277-278). Thrower unknown; no in-browser repro captured.",
+  "sunk_through_ground": "Kevin + Star measured standing (head y 1.482 / 1.451). Mechanism class code-confirmed: GROUND_Y=0 root clamp only (fighter.js:224/352/1011); floor correction only in T3 path (t3anims.js:683-684/~880) whose comment names Doc Frank/Phantom/JIN sunk."
+ },
+ "repo": "mhvnsnt/western-heart",
+ "started_at": "2026-10-21T16:12:00-05:00",
+ "status": "complete (relaunch #3) \u2014 report at _playtest-triage-work/TRIAGE-REPORT-20261021.md",
+ "steps": {
+  "checkpoint_created": true,
+  "clone_main": "blobless sparse clone at main HEAD 4de38bb7 (full checkout impossible: repo tree 7.5GB+, disk ~2-5GB free; main build served via fetch-on-demand cache server pinned to the commit)",
+  "live_playtest": "Attempted (Pantera vs Kevin, 8902 = live build, warm cache): booted to menu ~12s, select opened, then renderer crashed during preloadAll model-load timeouts (console: 'pantera/steve-fox/demonio/custom load failed, retrying: timeout' from live assets.js:233) \u2014 environment kill, same signature as main attempts. One clean MAIN select screenshot banked: triageR4-r4e-pantera-02-select-20261021.png (CHOOSE YOUR SOUL grid renders correctly, TRIPO ORIGINALS cards, select timer at 89).",
+  "live_vs_main_hash_compare": "TWO SNAPSHOTS: (1) 2026-10-22 ~00:24Z: live == gh-pages aea76adf (Oct-20 deploy of main 113739ae) byte-for-byte on index/fighter.js/t3anims.js/assets.js/game.js; live != main eeb59a88 on all five \u2014 OWNER PLAYED THE STALE BUILD. (2) FINAL ~02:10Z: a sibling deploy landed mid-session (gh-pages 3f730fd0, 2026-10-22T00:23:34Z). Live now matches main on index/fighter.js/t3anims.js/game.js (= eeb59a88 bytes) and assets.js matches main @ c4c36bf9 (PR #471 merge) exactly \u2014 i.e. the deploy tree = main @ c4c36bf9-era: includes #469 T3 fix + #471 B1/B4/B5, predates #472/#460. Main head at report time: 6d02746b (advanced past the deploy). The sibling session's 'live already serves current main' claim was FALSE at first check and became TRUE (for the c4c36bf9 tree) at 00:23:34Z.",
+  "local_playtest": "done for baek(kevin)/star on main 03aa715f (multiple runs; fight reached, numeric fight-start probe captured); pantera blocked at select-preview by sandbox renderer crashes; rin not attempted",
+  "ranked_bug_list_delivered": true,
+  "t3_checkpoint_read": true
+ },
+ "task": "Owner playtest verdict 2026-10-21 ~16:08 CDT: game 'unplayable with too many bugs'. Evidence-only triage of current main + live site. NO code fixes in this lane.",
+ "relaunch3_interim": {
+  "at": "2026-10-22T02:00Z",
+  "live_vs_main": "CONFIRMED STALE: gh-pages still aea76adf (2026-10-20, main@113739ae). sha256 fighter.js live 35850692.. (42697B) vs main 03aa715f fa9c2835.. (69534B); t3anims.js live db509cf7.. (7885B) vs main 4447545e.. (46298B); index.html live 2b4716f1.. vs main 1b12d715.. (15024B). Merges #403-#469 NOT on the public site.",
+  "t3_fix_status": "PR #469 guard IS in main t3anims.js (~L467-476) BUT retargetClipToRig has ZERO call sites on current main (definition L453; comments L506/L510 only). createT3Actions comment (L504-511) documents its call was removed earlier for hanging fight start. => NaN mechanism CANNOT fire in-game on current main; symptom (3)/(4) mechanisms must be sought elsewhere.",
+  "symptom4_mechanism_code": "game.js _loop re-arms rAF FIRST (L175); game.js contains NO try/catch. _update 'fight' branch decrements timer + setTimer (L205-207) BEFORE input handling and p1/p2.update (L277-278). Any per-frame throw after L207 = timer ticks forever while fighters+input stay dead and the same pageerror repeats every frame. Matches owner symptom (4) exactly. Specific throwing call per fighter: UNKNOWN, needs in-browser repro.",
+  "symptom5_code": "fighter.js:224 GROUND_Y=0; root set to GROUND_Y (L352); ground clamp acts on ROOT y only (L1011-1012) => sink is decided by model-internal origin. T3-path floor correction exists ONLY inside retargetT3Clips (t3anims.js L683-684 floorY, ~L880 clamp); its comment (~L873-879) names Doc Frank, Phantom, JIN as sunk through the stage by bank rest heights. Non-T3 fighters get no floor correction. Star geometry min-y -1.0502 (hip-origin; Rig Studio measurement).",
+  "symptom2_code": "main.js show() (L46-47) removes .active from all screens; confirm handler calls show('hud') then startMatch (L652). index.html has DUPLICATE id=screen-stage (L132 select-screen styled + L236). Main-build select header reads 'CHOOSE YOUR SOUL' (own-eyes screenshot triage3-main469-pantera-02-select-20261021.png, 190KB); probes found NO literal 'PLAYER SELECT' text element on main build. Owner's wording most plausibly = the LIVE build's older select layer; live in-browser repro still outstanding.",
+  "symptom1_candidates": "Locomotion vx-driven with strong friction (fighter.js L997-1005): persistent slide needs vx continuously set (tryMove L591 input path / stuck input state) OR hips root_t drift in T3 clips (t3anims.js L550/L803/L869-873 Hips follows bank root_t). Browser measurement outstanding.",
+  "minor_confirmed": "Portrait 404s on main select (assets/portraits/rave.png, charger*.png) from baek run console; stage-thumb 404 class (17+ nm-*.png) from predecessor, absent on main AND gh-pages.",
+  "sandbox_limits": "Renderer crashes at fighter-pick 3/3 (pantera x2, baek x1), zero pageerrors pre-crash, box load 12-20 (other lanes' Blender/du). /tmp 100% full broke Chromium launch (SIGTRAP) until TMPDIR redirected to workspace. All lane servers were wiped once by infra restart (~01:2x UTC) and restarted. Fight-phase browser evidence pending in-flight baek run."
+ },
+ "source_mechanisms_r4": [
+  "FREEZE-WITH-LIVE-TIMER (owner symptom 3) \u2014 mechanism confirmed at source level on the LIVE build: game.js _loop reschedules requestAnimationFrame BEFORE updating (live game.js: _loop rAF-first, same as main game.js:179), and the 'fight' branch of _update decrements the timer + ui.setTimer FIRST (live game.js ~196-199), then runs input/AI, then fighter updates. A deterministic throw anywhere in the input/fighter section therefore leaves: loop alive, timer counting, fighters frozen, inputs dead \u2014 the owner's exact description. Unguarded reads of this class existed on live: live game.js:230-231 reads this.p1.char.surge.color/.name with no guard inside the surge action handler (main fixed this class in PR #471 B5: 'guard char.surge.* reads in game.js'). The T3 NaN defect is a SECOND freeze-class mechanism, main-only pre-#469 (live t3anims.js is the old direct-bind build without retargetClipToRig).",
+  "INTRO GATE: round start sets roundState='intro', input disabled, and flips to 'fight' via setTimeout(1100ms) (main game.js ~166-173; live equivalent ~155-160). Timer does NOT run during intro \u2014 so a match stuck in intro shows a FROZEN timer, distinguishable from symptom 3. Owner's timer ran => his freeze state was roundState='fight' with a dead update path, not a stuck intro.",
+  "SINKING (owner symptom 4) \u2014 LIVE build: assets.js contains NO groundY/grounding code at all (grep groundY = 0 hits on live assets.js). Hip-origin GLBs therefore stand waist-deep by construction. Main added a measured correction 2026-10-20 (assets.js:589 groundY{} + 644-660 measure lowest skinned-vertex world Y at load + 747-748 createInstance lifts inner.position.y=-gy when |gy|>0.03) \u2014 AFTER the Oct-20 20:16Z live deploy cut, so the owner never had it. Main's own comment names the affected models: 'star / torch / michiko / diablo: vertices span y -1.05..0.8, so they stood waist-deep in the floor' \u2014 matches Rig Studio's Star min-y -1.0502 measurement and the owner's 'falling halfway through the ground... was not happening before' (regression window = when those models/attires shipped). RESIDUAL RISKS on main (source-level, untested in-browser): groundY is keyed by fighter id only, not per-attire; unskinned/static GLBs (samura1 class) measure y0=Infinity -> groundY=0 -> no lift; measurement happens once per id at first load.",
+  "SLIDING (owner symptom 1) \u2014 source candidates on main fighter.js: (a) _physics (fighter.js:1000-1005): vx decays (x0.0001^dt) ONLY when onGround AND state not in {walk, dodge, sidestep, grab-attack}; a fighter latched in 'walk' state keeps vx (state machine fighter.js ~994: state = |vx|>0.4 ? 'walk':'idle' \u2014 self-sustaining if vx is re-set each tick); (b) tryMove (fighter.js:591) sets vx = dir*stats.speed from input axisX every tick \u2014 a stuck/non-zero axisX (touch joystick never zeroed on release in input.js) walks forever; (c) PR #471 B4 ('clear attack/attackName when leaving attack state', stuck-aura fix) shows the latched-state family was live. In-browser confirmation blocked (see environment note).",
+  "SELECT PERSISTENCE (owner symptom 2) \u2014 main.js show(name) (main.js:43-55) removes .active from ALL screens then activates one; startFight calls show('hud') (main.js ~660). Select previews are PreviewPane instances with their OWN scenes/renderers (select-screen.js:49-93, canvases #pane-canvas-p1/p2 inside #screen-select), NOT the arena scene \u2014 so a center-screen T-posed model during a fight is NOT explained by preview-scene bleed IF show() ran. Alternative source candidates: (a) a fighter instance spawned at arena center (x=0) that never got positioned/animated \u2014 e.g. startFight's enemy resolution randomEnemy fallback or a transform/forms preload instance; (b) the parallel WH UI (main.js:688 mountWhUi when whUiEnabled()) manages screens separately from show() \u2014 two screen managers can disagree about #screen-select visibility. In-browser DOM confirmation blocked; the one clean partial run showed selectActive=True only while on select (correct), and arena children at select = ['Group:stage-shrine'] only.",
+  "SAMURA1 / IORI side cases: not reached in-browser this session. Source note: assets.js grounding traverse only counts SkinnedMesh \u2014 an unskinned model gets groundY=0 (see sinking risks)."
+ ],
+ "ranked_bugs_draft": [
+  {
+   "rank": 1,
+   "id": "fight-load-dead-end",
+   "severity": "blocker",
+   "status": "REPRODUCED in-browser on current main twice (results6 demonio-winged x6 retries/no completion in ~10min; results7 fight load failed cape-jones attempt 2, main.js:642)",
+   "what": "Fight load aborts/strands the player when any required model download exceeds the loader's 90s timeout: assets.js loadModels LOAD_TIMEOUT_MS=90000 (L581), one retry, sequential; second failure rejects; startFight catch writes the error to #select-hint (an element on the SELECT screen) while the player is on the stage/loading screen; stage confirm already consumed (pendingFight=null, main.js:469-475) so no forward/back path except reload. Loading overlay bar barely moves (progress only ticks per completed model).",
+   "sizes": "cape-jones.glb = 86,192,130 B; roster/demonio/attires/winged-devil/model.glb = 55,823,720 B (mandatory transform-target preload for ANY Demonio fight, main.js startFight need-list ~L593-600). On slow connections these exceed 90s -> dead end. In-sandbox the fetch-on-demand upstream leg made it deterministic."
+  },
+  {
+   "rank": 2,
+   "id": "freeze-with-live-timer",
+   "severity": "blocker (owner symptom 4)",
+   "status": "MECHANISM PROVEN IN CODE; specific throwing call unknown (no in-browser repro captured \u2014 sandbox renderer deaths; owner repro is on live/stale build or other fighters)",
+   "what": "game.js _loop re-arms requestAnimationFrame FIRST (L175) and game.js contains NO try/catch anywhere; _update 'fight' branch decrements timer + ui.setTimer (L205-207) BEFORE input handling and p1/p2.update (L277-278). Any per-frame exception thrown after L207 repeats every frame forever: HUD timer keeps counting, fighters + input never update again. Exactly the owner's description. Prime suspect class for the thrower: per-fighter T3 bind/update paths (cf. samura1 static GLB, Iori-rig bind failure from #469 gate sweep) \u2014 UNVERIFIED per fighter."
+  },
+  {
+   "rank": 3,
+   "id": "live-site-stale",
+   "severity": "blocker for the owner's play experience",
+   "status": "CONFIRMED by hash compare",
+   "what": "https://mhvnsnt.github.io/western-heart/ still serves gh-pages aea76adf (2026-10-20 deploy of main@113739ae). fighter.js/t3anims.js/index.html hashes all differ from current main 03aa715f. Every fix merged since (#403..#469 incl. fighter completeness + T3 work) is absent from the build the owner plays on his phone."
+  },
+  {
+   "rank": 4,
+   "id": "sinking-floor-origin",
+   "severity": "major (owner symptom 5, regression per owner)",
+   "status": "CODE-CONFIRMED mechanism class; per-fighter census incomplete (Kevin + Star measured standing correctly in-fight on main; see not-reproduced)",
+   "what": "fighter.js:224 GROUND_Y=0, root placed at GROUND_Y (L352), ground clamp acts on root y only (L1011-1012): whether a model sinks is decided by the model's internal origin. Floor correction exists ONLY in the T3 retarget path (t3anims.js floorY L683-684 + clamp ~L880), whose own comment names Doc Frank, Phantom and JIN as sunk through the stage by bank rest heights (~L873-879). Non-T3-path and hip-origin models (Star geometry min-y -1.0502 measured by Rig Studio) have no floor correction at root level. Owner framing recorded: placement/orientation must come from teardown files, not hand-tuned offsets \u2014 GROUND_Y=0 + per-path clamps are exactly that hand-set layer."
+  },
+  {
+   "rank": 5,
+   "id": "tpose-frozen (owner symptom 3)",
+   "severity": "major",
+   "status": "NOT REPRODUCED for Kevin/Star on current main (both animate: 22 real T3 actions each, bryan + xiaoyu banks; in-fight frames show stance/jump/attack poses). The #469 NaN CANNOT be the mechanism on current main: retargetClipToRig has zero call sites (definition t3anims.js:453; removal documented L504-511). Residual known cases: samura1 GLB static/unrigged on main (nodes=1, skins=0, #469 gate sweep) \u2014 a fighter with no skin cannot animate; Iori-rig bank bind failure (same sweep). Symptom likely lives on the STALE LIVE build (old direct-bind t3anims 7,885B) and/or specific fighters \u2014 per-fighter census still owed."
+  },
+  {
+   "rank": 6,
+   "id": "select-overlay-persists (owner symptom 2)",
+   "severity": "major",
+   "status": "NOT REPRODUCED on current main versus flow (fight frames run8: HUD only, no select layer, no center preview character; #screen-select display:none at menu, .active removed via show('hud')). Main-build select header is 'CHOOSE YOUR SOUL' \u2014 no literal PLAYER SELECT text exists in main-build probes. Consistent with the owner playing the STALE LIVE build whose select layer/teardown predates #384-#469. Secondary code smell: index.html has TWO id=screen-stage elements (L132 + L236); getElementById only ever returns the first."
+  },
+  {
+   "rank": 7,
+   "id": "sliding (owner symptom 1)",
+   "severity": "major",
+   "status": "PENDING numeric recorder (run B); code candidates identified",
+   "what": "Locomotion is vx-driven with strong friction (fighter.js L997-1005) \u2014 persistent uncommanded slide requires vx continuously set (tryMove/input path L591, stuck-input state) or hips root_t drift baked into T3 stance clips (t3anims.js: Hips follows bank root_t L550/L803/L869-873; Leopard King evidence: T3Stance f10 Hips pinned at bind height, feet floating \u2014 clips carry baked offsets). Versus P2 is AI-driven and DOES move/attack during player idle (observed: Star jumped at Kevin unprompted) \u2014 some of the owner's 'won't stop moving' may be AI/demo behavior, but P1-side measurement is the decider."
+  },
+  {
+   "rank": 8,
+   "id": "missing-assets-404",
+   "severity": "minor",
+   "status": "CONFIRMED in-browser on main",
+   "what": "Stage-select thumbnails 404 (nm-lobby-glb, nm-arena-*, nm-backstage-* \u2014 17+ files, absent on main AND gh-pages); select portraits 404 (assets/portraits/rave.png, charger*.png); customization profile fetches 404 (customization/profiles/star.json, baek-master-white.json \u2014 fail-silent by design but files absent on main)."
+  },
+  {
+   "rank": 9,
+   "id": "kevin-pick-resolves-master-white",
+   "severity": "note",
+   "status": "OBSERVED in run8 console",
+   "what": "Picking the KEVIN card fielded 'baek-master-white' (console: 'Fighter baek-master-white: 22 real T3 actions from bank bryan') \u2014 the parked Master White attire is what actually fights for the Kevin pick in versus. Provenance/ladder question for the parent (Doc Frank ladder rule context), not asserted as a bug."
+  }
+ ],
+ "live_vs_main_hash_compare": "DONE (relaunch #3) \u2014 live STALE: gh-pages aea76adf vs main 03aa715f; fighter.js 35850692../fa9c2835.., t3anims.js db509cf7../4447545e.., index.html 2b4716f1../1b12d715..."
+}

@@ -1,0 +1,9 @@
+{
+ "task": "God Molecule Mars head rigging: diagnose Marshead GLB and work it to animation-ready",
+ "repo": "/home/hatch/workspace/god-molecule-studio",
+ "resume_brief": "GOD MOLECULE UNBLOCK (owner 2026-10-09): Mars head model issues block episode production. Model: tools/character/Marshead_Tripo_63779a1f.glb in mhvnsnt/God-Molecule-Show-Studio (placed PR #4). DIAGNOSE FIRST per law: run the rig diagnostic suite before any repair (tools/rig-repair/diagnose_rig.py or equivalent in the workspace). Then work the rigging: skeleton, weight painting, facial controls, jaw/eyes \u2014 toward an animation-ready Mars head for the God Molecule show (bible: God-molecule-production-stage ShowBible.tsx is #1 canon). Work in mhvnsnt/God-molecule-production-stage (Blender tooling repo) and/or god-molecule-studio as appropriate. Deliver via branch->PR->merge (merge commits only, 0 open PRs). Incremental commits. Heartbeat checkpoint, mark done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-10T05:42:46.353131+00:00"
+}

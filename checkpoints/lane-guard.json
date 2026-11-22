@@ -1,0 +1,34 @@
+{
+  "task_id": "lane-guard",
+  "agent_id": null,
+  "repo": "mhvnsnt/agent-ops",
+  "branch": "lane-guard",
+  "goal": "lane-guard toolkit: worktree guard, checkpoint resume wrapper, protected-paths check",
+  "status": "stalled",
+  "spawned_at": "2026-10-20T04:13:20Z",
+  "last_heartbeat": "2026-10-20T04:43:07Z",
+  "steps_completed": [
+    {
+      "at": "2026-10-20T04:13:53Z",
+      "step": "research complete: 2026 durable-execution + git-worktree isolation patterns"
+    },
+    {
+      "at": "2026-10-20T04:21:29Z",
+      "step": "toolkit built + all 16 tests passed locally; branch pushed"
+    },
+    {
+      "at": "2026-10-20T04:43:07Z",
+      "step": "PR #33 opened with gate-compliant body; CI blocker documented on PR"
+    }
+  ],
+  "next_steps": [],
+  "key_paths": [],
+  "decisions": [],
+  "blockers": [
+    {
+      "at": "2026-10-20T04:43:07Z",
+      "blocker": "PR #33 open; merge blocked by repo-wide GitHub Actions outage (all PRs failing 2-4s since 2026-10-15). Both gates verified PASS locally (no-deletion-guard diff command + instruction_gate.check()). Merge when runners recover."
+    }
+  ],
+  "resume_prompt": null
+}

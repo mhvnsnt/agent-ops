@@ -1,0 +1,16 @@
+{
+ "task": "W4 WMXIX by-move-name survey: test owner hypothesis that WMXIX indexes moves by MOVE NAME not wrestler name; survey YOBJ/anim sets, move tables, DOL strings, file naming for Rock moves; deliver report + rock-moves-wmxix.json fragment + PR",
+ "status": "done",
+ "watchdog": true,
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "W4 gap-closure: WMXIX move-name survey fresh start after daemon restart killed prior lane. Checkpoint created, surveying extracted WMXIX teardown, DOL strings, ringmotion/YANM/YOBJ naming and tables for Rock Bottom/Peoples Elbow/etc plus full move-name vocabulary. Deliver survey doc + rock-moves-wmxix.json (do NOT edit ryuji-rock.json) + instruction-gate PR.",
+ "updated_at": "2026-10-21T10:05:00-05:00",
+ "attempts": 1,
+ "steps": {
+  "checkpoint_created": true,
+  "iso_range_pull": "main.dol 3,422,208B, menu.mpq 29,953,536B, move.mpc, common.mpc, Entrance/*.dat, tutorial msgs pulled via range reads from release wmxix-iso-v1 (NEW part layout verified: part_00+part_aa+part_ab; YOBJ magic proof at hhh.ymg)",
+  "hypothesis_verdict": "PARTIALLY CONFIRMED (sharper form): move names exist as data in menu.mpq (99 per-wrestler profile specials incl Rock Bottom/Peoples Elbow/Peoples Spine Buster for THE ROCK) and Entrance/EMotName.dat (177 code->name pairs); animation files indexed by those A/B/C/D codes, wrestler-keyed for entrances. Rock identified: A002 ROCK entrance = ML-A002-0A decoded, C000 ROCK trio entrance = ML-C000-0A decoded, D105 ROCK_01 / D106 ROCK_02 named but no ringmotion file. Gameplay move anims in motion/*.mpc YANM packages (move.mpc 1905 YANM markers), numeric index, name->clip mapping OPEN.",
+  "surfaces_searched": "FST file listing (4222 files), main.dol strings ASCII/UTF16/SJIS, menu.mpq strings, move.mpc/common.mpc strings, EMotName/CamName/Defwres.dat, tutorial tutmenumsg x4, WMXIX-MOVES.json, WMXIX-CLIP-INDEX.json, atr_all_events.json, decoded clip index",
+  "deliverables": "PR #439 MERGED (merge commit 0a0d861f982b47d07cbb8c4f1e41585b20c56661): teardown/wmxix/WMXIX-MOVE-NAME-SURVEY-2026-10-21.md + moveset-library/movesets/rock-moves-wmxix.json, +552/-0, instruction-gate + deletion-guard + guard all SUCCESS on final run"
+ }
+}

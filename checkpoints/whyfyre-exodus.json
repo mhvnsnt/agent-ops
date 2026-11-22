@@ -1,0 +1,9 @@
+{
+  "task": "WHYFYRE departure verification",
+  "status": "done",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/atlas-build",
+  "resume_brief": "Research the WHYFYRE departures - COMPLETE. Findings appended to ~/workspace/atlas-build/research/MUSIC-CAREER.md under '## 8. WHYFYRE Departures'.",
+  "updated_at": "2026-10-08T19:10:00Z",
+  "attempts": 0
+}

@@ -1,0 +1,10 @@
+{
+ "task": "Render 4 Tekken 7 King views at 1:1 square",
+ "repo": "~/workspace/game-reverse-engineering/tekken7",
+ "resume_brief": "All 4 views (front/back/left/right) re-rendered at 1500x1500 1:1 square via /tmp/render_views4.py (ortho_scale factor 1.35). Fingertips fully visible with clear margins on front and back (verified by reading the images). Done.",
+ "status": "done",
+ "notes": "watchdog 2026-10-12: worker finished renders but died before committing; watchdog verified all 4 views 1500x1500, front view visually confirmed, committed as 634b88c (local repo, no remote configured), checkpoint closed.",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-12T17:11:28.636839+00:00"
+}

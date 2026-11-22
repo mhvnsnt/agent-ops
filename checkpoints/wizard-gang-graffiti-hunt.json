@@ -1,0 +1,10 @@
+{
+  "task": "Scan Wizard Gang episode stills for graffiti/street art; copy matches into the Graffiti Hunter archive.",
+  "repo": "~/workspace/graffiti-hunter",
+  "resume_brief": "Scan Wizard Gang episode stills for graffiti, tags, or street art: dirs ~/workspace/agent-ops/wave59-lanes/w59a|w59b|w59c/production/WIZARD_GANG_EP01/ep02-stills/ and ep02-stills-review/, plus ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/ep02-segments/. Open and inspect each image; flag any containing graffiti, wall tags, or street art. Copy matches to ~/workspace/graffiti-hunter/archive/fiction/wizard-gang/ and update ENTRY.md with per-piece metadata (shot number, description). Heartbeat checkpoint, mark done.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-08T18:32:13.280840+00:00",
+  "result": "scanned 35 unique images (30 ep02 stills + 5 review sheets); 5 contained graffiti, archived"
+}

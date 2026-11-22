@@ -1,0 +1,10 @@
+{
+  "task": "Pull Nickelodeon 500GB leak + hunt ALL studio leaks/packs (animation, 3D, games, apps, VFX) for steal-like-artist playbook",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/animation-techniques/steal-like-artist",
+  "resume_brief": "Three-part mission: (1) Find and pull the Nickelodeon 500GB gigaleak (GhostyTongue X source, SpongeBob etc.) plus 2024 Nick Gigaleak (4GB) and nick.7z (6.7GB). Catalog at ~/workspace/animation-techniques/steal-like-artist/nickelodeon-gigaleak/. (2) Hunt ALL other animation production leaks: Disney TVA 2024 (Owl House, Gravity Falls bibles), Avatar 2026, Pixar/DreamWorks/Ghibli, Sony 2014 hack animation files, anime studio leaks (Trigger, MAPPA), free official art books, IA animation collections. (3) Hunt 3D/game/app/VFX leaks: Nintendo Gigaleak 2020, Insomniac 2023 (1.6TB), Rockstar GTA VI 2022, Capcom 2020, Pixar/DreamWorks/Illumination production leaks, ILM/Weta VFX leaks, app source leaks. For each: what it is, contents, source status, pull if accessible. Master index at ~/workspace/animation-techniques/steal-like-artist/LEAK-INDEX.md covering everything. Each entry: size, contents, source status, pull status, what it teaches. Game/3D stuff goes in B2 under own folders. Owner building full-spectrum reference library. Checkpoint at ~/workspace/agent-ops/checkpoints/all-leaks-hunt.json",
+  "updated_at": "2026-10-12T15:35:00Z",
+  "attempts": 0,
+  "notes": "ALL 4 LANES COMPLETE. Final playbook: 4.6GB. Nick: 359MB verified (SpongeBob/Hey Arnold bibles, model sheets, 235pp storyboard, Maya rig, animatic). 20+ shows catalogued. Disney TVA: 16 PDFs (~460MB) + 6 art books (~870MB) + 9 anime settei collections + Kill la Kill docs + Popeye animatic. Avatar 2026: piracy event, no production materials. Sony hack: no animation files. No Trigger/MAPPA/Pixar/DW/Ghibli/VFX production leaks exist. Game leaks: catalog + legal pulls (Humane Rigging, Godot). Insomniac/GTA warnings documented. LEAK-INDEX.md: 12 entries. DISK AT 84% \u2014 guardian cron will clean."
+}

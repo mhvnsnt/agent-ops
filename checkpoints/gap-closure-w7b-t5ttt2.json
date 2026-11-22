@@ -1,0 +1,12 @@
+{
+ "blockers": [],
+ "heartbeat": "2026-10-21T10:35:00-05:00",
+ "progress": "COMPLETE. PR mhvnsnt/western-heart#459 MERGED 2026-10-21T21:59Z (merge f1a210e0; branch commit fd9a8558 via Git Data API after git transport repeatedly timed out; 9 files, +697, 0 deletions; instruction-gate + deletion-guard + guard all SUCCESS after body-format fixes). Deliverables on main: customization/parts/tekken5/{CATALOG.json, README.md, T5-CUSTOMIZATION-SURVEY-2026-10-21.md, catalog.test.mjs (3/3 PASS vs real runtime), proof/ x4} + docs/TTT2-SELECTIVE-EXTRACTION-FEASIBILITY-2026-10-21.md. T5 verdicts: DATA1 extracted 1355/1571 checksum-verified (0 fail, 216 empty); NO per-slot item meshes in DATA1 (80 packs = costume model + low-poly body + TIM2); skull mask NOT FOUND in DATA1 (named gap; tekken7 gap untouched); ctype-5 VIF-0x82 models (16) undecoded; DATA0 layer1=LCG seed1 + second layer (named gap). TTT2: NOT FEASIBLE (one solid LZMA block; gate 89-96% vs <70%; STFS+console format behind it). Scout reconciliation: inventory output never landed; counts are own verified census (survey S8). Extracted DATA1 payloads cleared post-merge (reproducible; logged).",
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "W7b: Extract Tekken 5 customization items to customization/parts/tekken5/CATALOG.json Phase-1 shape with GLBs + test + proof render; TTT2 feasibility ONLY (no reassembly, disk gate <70%, disk ~89%). Coordinate with tekken5-teardown checkpoint (customization slice only).",
+ "status": "done",
+ "task": "W7b Tekken 5 customization items extraction + TTT2 selective-extraction feasibility (gap-closure W7)",
+ "updated_at": "2026-10-21T17:05:00-05:00",
+ "watchdog": true,
+ "coordination_note": "Parent 2026-10-21: other session running READ-ONLY tekken-customization-inventory scout (T5DR/T6/TTT2 counts), output NOT locatable yet, session resumes 13:01 CDT. Proceed without waiting; BEFORE finalizing T5 catalog counts and in TTT2 doc, re-check western-heart docs/tree + ~/workspace for tekken-customization-inventory; if landed, reconcile numbers and flag discrepancies in PR+report. Count reconciliation only."
+}

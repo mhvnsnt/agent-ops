@@ -1,0 +1,10 @@
+{
+ "task": "CONCRETE DRAGON MENU OVERHAUL: redesign game-3d/src/template.html on branch feature/cd-menu-combat-overhaul \u2014 tabbed #select screen, compact mission cards, cleaner title/results, pause overlay audit, back buttons everywhere, purple/gold menu art styling. HTML+CSS only, keep all IDs main.js uses.",
+ "repo": "~/workspace/ConcreteDragon",
+ "resume_brief": "MENU OVERHAUL HTML+CSS COMPLETE (commit 3374671, template.html only, main.js untouched). REMAINING: wire 2 new buttons in main.js near the other button binds (~line 3977): ... Then in-game verify: tabs switch, quit-to-title lands on title, and GEAR/PWA hunks carried in the same commit belong to the shared tree.",
+ "status": "done",
+ "attempts": 2,
+ "updated_at": "2026-10-10T02:34:50.163828+00:00",
+ "notes": "Execution timed out before Puppeteer verification finished. Wiring validated in src (commit 1bafe44). Concurrent worker resolved merge conflict and rebuilt dist at 19:38 CDT. Next run: finish in-game verify per resume_brief. | Watchdog 21:25 CDT: PR #35 merged to main; dist was stale (19:38) so rebuilding from branch HEAD then running Puppeteer verify (tabs/back/quit). | Watchdog 21:36 CDT: FINAL. Rebuilt dist from branch HEAD (node build.mjs, 59.95MB), ran qa/cd-menu-verify.mjs: 16/16 PASS (boot-to-title, tapStart->select, all 4 tabs switch panes with select still shown, selectBackBtn->title, pause overlay, quitTitleBtn->title+pause hidden). Screenshots /tmp/cd-menu-verify/*.png visually confirmed (tabbed FIGHTER/MOVES/STYLE/STATS select; title screen post-quit). Only console errors are file:// CORS manifest noise, expected in local testing. Menu overhaul HTML+CSS (3374671) + wiring (1bafe44) both merged to main via PR #35 (6802ad7). Task complete.",
+ "watchdog": true
+}

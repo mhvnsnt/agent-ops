@@ -1,0 +1,9 @@
+{
+ "task": "Build Preston Blair kits: red cap guy, glasses+bong guy (no commits)",
+ "repo": "~/workspace/trippedd-studio",
+ "resume_brief": "In ~/workspace/trippedd-studio (branch feat/preston-blair-kits \u2014 do NOT commit, parent commits): build Preston Blair kit part libraries per production/TRIPPEDD_EP01/goodville/kits/KIT-SPEC.md (READ IT FIRST \u2014 full piece inventory, two-tier workflow, manifest + drill-log formats) for 2 characters from the key art assets/references/ep01/source/Goodville - Not South Park.png (open and read it): (1) RED CAP GUY \u2014 5th from left: backwards red cap, green bottle prop. (2) GLASSES+BONG GUY \u2014 6th from left: black rectangular glasses, green shirt, bong prop. Visual design only \u2014 no invented personalities. Extract via tools/smart-extract/ (visual grounding bboxes, rembg ladder, verify loop \u2014 NEVER flood-fill); hand-build missing pieces in flat SP style with colors eyedropper-sampled from the key art; document extracted-vs-hand-built per piece in manifest.json with anchors + identity checklist; write drill-log.md per kit (Tier B vs Tier A notes). Verify EVERY PNG with own eyes. Write files only under production/TRIPPEDD_EP01/goodville/kits/<red-cap-guy|glasses-bong-guy>/. Do NOT touch other files. Do NOT commit. Report: parts per character, method per piece, eye-verification notes, gaps. Mark checkpoint done at end. Heartbeat every 10 min.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T15:22:14.184639+00:00"
+}

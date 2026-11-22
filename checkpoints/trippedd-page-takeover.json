@@ -1,0 +1,9 @@
+{
+  "task": "TRIPPEDD FB page: heaviest posting cadence + YouTube content pull",
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "TRIPPEDD FACEBOOK PAGE TAKEOVER (owner 2026-10-10): The TRIPPEDD page (page_id 1383891678138295) is the umbrella for ALL content \u2014 it must post MORE than the Wizard Gang page and Concrete Dragon page. Tasks: (1) Download 'IT IS WHAT IT IS' short films from YouTube \u2014 trailer https://youtu.be/3-LK1WlqH9s and full film https://youtu.be/8bJvelCTLpA (use yt-dlp) \u2014 archive originals to trippedd-studio repo (salvage law: assets/references/short-films/) via branch->PR->merge; (2) Create TRIPPEDD page social runner playbook at ~/workspace/goals/wizard-gang-animated-series-pilot/social-runner/ or better: ~/workspace/trippedd-social/ \u2014 voice = TRIPPEDD network umbrella voice (trippy, Adult Swim energy, promotes ALL shows); (3) Set up daily cron posting 2-3x the cadence of other pages \u2014 drafts for owner approval (same rule as WG page: NEVER auto-publish); (4) Content pool: IT IS WHAT IT IS films, LOTI commercial, WG EP02 clips, DSW materials, Goodville, behind-the-scenes, premise teasers; (5) First batch: draft 3 posts (IT IS WHAT IT IS trailer share, LOTI commercial, network umbrella intro). Use facebook-cli pages commands. Heartbeat checkpoint, mark done.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 1,
+  "updated_at": "2026-10-11T01:28:17.326100+00:00"
+}

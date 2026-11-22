@@ -1,0 +1,10 @@
+{
+  "task": "Research and document AI video generation defects (AI slop) field guide for Wizard Gang QC pipeline",
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "You are a subagent tasked with researching common AI video generation defects ('AI slop') and writing a comprehensive field guide at ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/AI_SLOP_FIELD_GUIDE.md. The parent agent's full task: research 7 defect types (synchronized motion, 3D/realistic drift, background morphing, face/body/hand instability, identity drift, prop instability, lighting/texture popping), with synchronized motion getting the deepest treatment (causes, prompting to avoid it, programmatic detection). Document detection methods (manual + automated via OpenCV/MediaPipe/optical flow) and fixes for each. Create a per-shot QC checklist template and prompt templates that avoid each defect. Check the existing EP02_AI_SLOP_AUDIT.md in the same directory and build on it without duplicating. From the EP02 audit: 19 of 29 shots drifted to realistic/photorealistic when unmasked faces appeared; hooded/robed characters held 2D style. Worst: 1:40 street crew, 3:20 basketball, 4:30 podcast studio. Complete the research and write the markdown guide.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T13:04:11Z",
+  "notes": "\n[2026-10-10] Research complete: 7 defect types researched. Writing AI_SLOP_FIELD_GUIDE.md.\n[2026-10-10] COMPLETE. Wrote AI_SLOP_FIELD_GUIDE.md (24KB, 7 defect types, sync motion deep dive, QC checklist, prompt templates, detection toolkit, regeneration decision tree). Built on EP02_AI_SLOP_AUDIT.md without duplicating."
+}

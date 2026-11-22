@@ -1,0 +1,10 @@
+{
+  "task": "Organize 5 new King 3D models from DeviantArt",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/western-heart",
+  "resume_brief": "5 King model archives were downloaded via browser to the download directory: Tekken_8_-_King_TK8_Base.7z (102MB, WhiteMageSunny), Tekken_8_-_King_S2.rar (114MB, WhiteMageSunny), Tekken8_King_Tekken3.7z (105MB, Sticklove), T7_King_1P.7z (1Vote4Sake), Tekken_8_-_Armor_King__Battle_Cloth_.rar (127MB, WhiteMageSunny). Find them in ~/workspace/browser_downloads/ or similar, verify archives, extract each to ~/workspace/game-reverse-engineering/tekken7/models/king-variants/<variant-name>/, write README.md, then commit to western-heart via branch->PR->merge (teardown/models/king-variants/, models to GitHub Release if too large). Checkpoint: ~/workspace/agent-ops/checkpoints/king-variants-organize.json",
+  "updated_at": "2026-10-13T21:55:00Z",
+  "attempts": 0,
+  "notes": "DONE 2026-10-13 ~17:55 EDT. All 5 archives verified (7z+unrar test OK), extracted to game-reverse-engineering/tekken7/models/king-variants/<5 dirs>. Poly counts: T8 base 33,021v/50,950p (5 FBX parts, Blender), T8 S2 29,507v/43,462p, T8 Tekken3 41,526v/66,052t (XPS ascii, 297 bones), T7 1P 34,909v/54,612t (XPS binary, 271 bones, custom parser), Armor King 30,361v/48,870p. T8 base + T8 S2 were byte-identical dupes of release assets; 3 NEW archives uploaded to Release king-variants-2026-10-13. README+SHA256SUMS committed via PR #59 merged to main. Zero open PRs."
+}

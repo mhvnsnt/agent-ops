@@ -1,0 +1,9 @@
+{
+ "task": "Fix 2 failing Bannon CI checks (APK assets gate + Unreal action)",
+ "repo": "/home/hatch/workspace/bannon-video-pipe/repo",
+ "resume_brief": "STANDALONE BRIEF \u2014 owner-directed 2026-10-09: 'Fix it.' Two Bannon repo CI checks are failing (pre-existing, NOT caused by PR #54 \u2014 verified: Autonomous Build loop was already failing on d392914b before the merge). FIX THESE TWO: (1) SHIPPING GATE \u2014 scripts/verify_shipping.cjs FAILs with 'APK ASSETS: assets/js \u2014 the game fetches this at runtime and the APK build never copies it in.' Fix per the check's own instruction: add assets/js to scripts/bundle_apk_assets.cjs, OR add it to the STREAMED list in verify_shipping.cjs if streaming it is the deliberate choice \u2014 read both files first and pick the correct one (if the game truly needs those files offline in the APK, bundle them; don't just silence the check). (2) COMPILE NATIVE UNREAL C++ \u2014 workflow fails with 'Unable to resolve action epicgames/unreal-engine-github-action, repository not found.' Find the workflow file referencing it, determine the correct action (or whether the step should be removed/disabled if the Unreal build isn't actually used), and fix it. DO NOT touch the Railway deploy failure ('Invalid RAILWAY_TOKEN') \u2014 that's a secrets issue for the owner, not a code fix; leave it alone. RULES: heartbeat THIS checkpoint every 15 min; branch -> PR -> merge per the no-open-PRs law (merge it when green); verify by re-running the checks (gh run / workflow dispatch) or at minimum confirming the gate script passes locally: node scripts/verify_shipping.cjs. Report what was fixed and the verification result.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-09T17:47:21.544598+00:00"
+}

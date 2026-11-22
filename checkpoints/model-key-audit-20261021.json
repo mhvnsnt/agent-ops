@@ -1,0 +1,11 @@
+{
+  "task": "MODEL-KEY AUDIT + FIX: sweep every fighter's default-model resolution chain in mhvnsnt/western-heart for model: keys pointed at the wrong character (Diablo bug class), fix the WRONG ones on their own lines only, add a regression guard.",
+  "repo": "mhvnsnt/western-heart",
+  "workdir": "~/workspace/_model-key-audit",
+  "status": "done",
+  "watchdog": false,
+  "attempts": 1,
+  "updated_at": "2026-10-21T01:08:00-05:00",
+  "resume_brief": "Audit game/js/assets.js MODEL_URLS + game/js/roster-full.js model: fields + game/js/attires.js ATTIRE_VARIANTS fallback against docs/MODEL-INVENTORY.md, roster/ tree, roster/TRIPO-REGISTRY.md. Classify every fighter OWN / BASE-BY-DESIGN / WRONG / COLLISION. Fix WRONG ones minimally on their own lines (PR #412 pattern), parse-verify JS, execute resolution in node per fixed fighter, add regression guard in repo test conventions, open instruction-gate PR with full audit table.",
+  "notes": "COMPLETE. PR #418 MERGED (merge commit 53104ba7, 2026-10-21T06:06:27Z; all gates green after a body-format fix). Audit executed in Node on main (58 fighters): OWN 33, BASE-BY-DESIGN 10, WRONG 13, NO-OWN-MODEL 2, collisions 0 unintentional. 13 fixes in game/js/roster-full.js (phantom->phantom, skull->skull, sakura->saku-ra, kinpo->kinpo, waterfall->waterfall, kingtyrant->king-tyrant, burger->burger + his forms key pantera->burger in his own entry, awapop->awa-pop, purplerain->purple-rain, nightwolf->nightwolf, cyborgx->cape-jones, negativo->n3g4tiv0, thor->thor). Post-fix executed proof: 13/13 PASS, WRONG remaining 0. Guard game/tests/model-key-guard.test.mjs: green on fixed tree, red on pre-fix tree (all 13), red on reproduced Diablo bug. Full table in docs/MODEL-KEY-AUDIT-2026-10-21.md on main. Fixes spot-verified live on main post-merge."
+}

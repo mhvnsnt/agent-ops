@@ -1,0 +1,10 @@
+{
+ "task": "BioMechania lane partsys: mecha contract v2 (N-mode, slots, AC6 lessons, README fix, balance-net docs)",
+ "repo": "/home/hatch/workspace/BioMechania",
+ "resume_brief": "Lane partsys of the theyard mecha customizer build. See the full lane brief in your handoff message; heartbeat this file after every commit/step.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T01:57:40.489581+00:00",
+ "notes": "COMPLETE: contract v2 merged (PR #4). N-mode schema, breach mode, docs."
+}

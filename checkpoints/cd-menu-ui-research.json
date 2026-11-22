@@ -1,0 +1,9 @@
+{
+ "task": "Research menu/UI design for Concrete Dragon",
+ "repo": "~/workspace/ConcreteDragon",
+ "resume_brief": "Research menu and UI design from Nintendo games (Mario, Zelda, Sunshine, SA2, Luigi's Mansion) and fighters (Street Fighter, Tekken): paged menus vs scrolling, menu art styling, fonts, text boxes, transitions, sound design. Owner hates vertical scrolling menus \u2014 wants pages (page 1/2/3) or horizontal. Produce concrete menu redesign plan for Concrete Dragon mapped to the actual game code. Write to ~/workspace/concrete-dragon-launch/research/menu-ui-redesign.md. Sourced facts only, no invention.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-10T00:10:00+00:00"
+}

@@ -1,0 +1,9 @@
+{
+  "task": "TEKKEN MODEL LIBRARY BATCH-3 \u2192 GITHUB RELEASE: survey local Tekken models, upload to GitHub Release tekken-models-batch-3 in mhvnsnt/western-heart, write MODELS-INDEX.md, commit on branch feat/tekken-models-batch-3, push, PR, merge. DO NOT delete local files.",
+  "status": "done",
+  "watchdog": true,
+  "repo": "mhvnsnt/western-heart (local: ~/workspace/game-reverse-engineering)",
+  "resume_brief": "Survey ~/workspace/game-reverse-engineering/tekken7/models/*/ for model files not already in repo teardown/models/tekken7/ or on Release tekken-models-batch-2. Stage them, create GitHub Release tekken-models-batch-3 in mhvnsnt/western-heart with all files as assets, verify byte-for-byte, then write teardown/models/tekken7/MODELS-INDEX.md (all 3 batches: character -> Western Heart name -> source -> location), commit on branch feat/tekken-models-batch-3, push, PR, merge. Do NOT delete local files.",
+  "updated_at": "2026-10-13T08:45:00-04:00",
+  "attempts": 0
+}

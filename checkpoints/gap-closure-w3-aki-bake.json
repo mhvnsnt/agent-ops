@@ -1,0 +1,14 @@
+{
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "W3 lane ran 2026-10-21 (recovery re-dispatch). Converter v3 SHIPPED in stacked PR (base feat/cornerstone-moves-20261021): aki_to_tekken3_v3.py = v2 + measured s8 modulo-256 unwrap fix; poses for all 11 Rock clips in teardown/wwf-no-mercy/aki-rock-v3/. Bank bake via tools/anim/aki_row_bake.py (full game pipeline + two-metric gate calibrated on king pack's 176 real rows) FAILED all 11 clips: attacks limb-whip 74-109 deg/f (gate 60.6), taunts collapsed peak root height 0.51-0.54 m (gate 0.70) \u2014 own-eyes stick render confirms crumpled pose. Pack byte-identical, no rows written, no t3_row wiring (would point at nonexistent rows). BLOCKER: AKI FK -> T3 IK targets (T3 limb slots are IK-overwritten; needs AKI player-code FK, Ghidra route). PENDING: (1) AKI FK->IK step, then re-run aki_row_bake.py --write and wire t3_row mk#### on the moves; (2) harness frames of CornerStone performing a baked Rock move (was also RAM-blocked: 5 other lanes' Blender jobs, ~1.9G free). Full report: docs/anim/AKI-BAKE-ROCK-2026-10-21.md in the PR.",
+ "status": "superseded-by-pr499",
+ "step": "pr_created",
+ "task": "W3 AKI BAKE: Bake all No Mercy Rock moves (MK-1240,2843,3473,1885,3120,3659 + taunts) into real playable clips for CornerStone in mhvnsnt/western-heart, wiring moveset refs, stacked PR if needed, harness proof or pending RAM note",
+ "updated_at": "2026-10-22T00:58:30-05:00",
+ "watchdog": true,
+ "pr": "mhvnsnt/western-heart#447 (stacked on feat/cornerstone-moves-20261021, commit d07b36b)",
+ "notes": [
+  "[watchdog 2026-10-22 ~00:58 CDT] W3 bake approach SUPERSEDED, not resumed. Verified live: mhvnsnt/western-heart#499 OPEN (title: W3c AKI CORRECTIVE ... supersedes #447/#458 - NEVER MERGE #447/#458); #447 CLOSED (not merged). W3c corrective (true game-exact clips, 0 rows, FAIL gate on true data) owns the forward path; live checkpoint gap-closure-w3c-aki-trueclips.json tracks it. This W3 wrong-window pipeline (converter v3 + gated bank bake, PR #447) is abandoned per standing owner rule. Not counted as an attempt - no work was re-run.",
+  "[watchdog 2026-10-23 04:55 CDT] RE-VERIFIED LIVE: mhvnsnt/western-heart#499 still OPEN ('W3c AKI CORRECTIVE: true clips ... supersedes #447/#458 - NEVER MERGE #447/#458'); #447 CLOSED. Supersession stands - this wrong-window pipeline stays abandoned per standing owner rule. Forward path tracked by gap-closure-w3c-aki-trueclips.json (corrective PR open, awaiting central review - not watchdog's to merge). Nothing to resume; attempts not incremented; status unchanged (terminal superseded)."
+ ]
+}

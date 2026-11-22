@@ -1,0 +1,11 @@
+{
+ "task": "Theyard mecha customizer lane: ui",
+ "repo": "/home/hatch/workspace/BioMechania",
+ "resume_brief": "Verify Mecha Bay UI in BioMechania: run dev server, exercise /mecha flow (part pick, 3D preview, mode tabs, transform preview, save/reload), fix migration breakage, confirm free respec, human-perspective UX check. Branch feature/mecha-ui-verify, incremental commits, push, PR, merge.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T01:57:40.489581+00:00",
+ "note": "DONE: PR #3 merged to main (96d4c3e). E2E verified, tsc clean, build passes.",
+ "notes": "COMPLETE: PR #3 merged (breach UI, N-mode cycle, e2e verified)."
+}

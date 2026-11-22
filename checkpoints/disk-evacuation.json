@@ -1,0 +1,88 @@
+{
+  "blocked": [
+    {
+      "path": "wmxix-iso/",
+      "reason": "checkpoint claims GitHub backup but release not found \u2014 cannot verify, cannot delete",
+      "size": "1.4G"
+    },
+    {
+      "path": "cn-gigaleak-pull/staging/",
+      "reason": "upload status unclear, cannot verify",
+      "size": "2.4G"
+    }
+  ],
+  "close_note": "Keep-working pulse 2026-10-19 02:35 CDT: trigger condition gone (disk now 1%, was 100% on 2026-10-16). Evacuation lane obsolete; nothing to resume. Stale in-progress marker closed by watchdog bookkeeping. Re-open only if disk exceeds 85% again.",
+  "closed_at": "2026-10-19T07:40:00Z",
+  "deleted": [
+    {
+      "path": "tools/Tahoma2D/",
+      "reason": "vendor AppImage, re-downloadable",
+      "size": "1.5G"
+    },
+    {
+      "path": "tools/cascadeur-linux/",
+      "reason": "vendor installer, re-downloadable",
+      "size": "1.2G"
+    },
+    {
+      "path": "tools/krita-6.0.4/",
+      "reason": "vendor AppImage, re-downloadable",
+      "size": "966M"
+    },
+    {
+      "path": "tools/natron/",
+      "reason": "vendor installer, re-downloadable",
+      "size": "578M"
+    },
+    {
+      "path": "tools/ppsspp/",
+      "reason": "vendor AppImage, re-downloadable",
+      "size": "469M"
+    },
+    {
+      "path": "tools/storyboarder/",
+      "reason": "vendor AppImage, re-downloadable",
+      "size": "433M"
+    },
+    {
+      "path": "tools/inkscape-1.4.4/",
+      "reason": "vendor AppImage, re-downloadable",
+      "size": "428M"
+    }
+  ],
+  "disk_after": "97% (95G used, 3.8G free)",
+  "disk_before": "100% (98G used, 211M free)",
+  "freed": "~3G",
+  "log": "~/workspace/agent-ops/disk-cleanup-log.md",
+  "needs_terabox": "No TeraBox creds available to subagent \u2014 large file uploads need parent browser delegation",
+  "started_at": "2026-10-16T19:00:00Z",
+  "status": "completed",
+  "stood_down": [
+    {
+      "path": "game-reverse-engineering/",
+      "reason": "owned by game-re-terabox-upload lane",
+      "size": "23G"
+    },
+    {
+      "path": "cn-pull-bigend/",
+      "reason": "AT.zip upload running (chunked_pull.py)",
+      "size": "17G"
+    },
+    {
+      "path": "hero-parts-pull/",
+      "reason": "OK KO extraction active",
+      "size": "8.3G"
+    },
+    {
+      "path": "cn-pull-smallend/",
+      "reason": "paused, will resume when disk <85%",
+      "size": "4.6G"
+    },
+    {
+      "path": "tools/blender/",
+      "reason": "actively used for renders",
+      "size": "1.3G"
+    }
+  ],
+  "task": "Disk evacuation \u2014 owner order 2026-10-16 14:55 EDT"
+}

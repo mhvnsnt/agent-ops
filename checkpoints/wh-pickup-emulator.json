@@ -1,0 +1,9 @@
+{
+ "task": "Clone chimera-emulator-hub and work instant-load perf, YouTube link, live decrypt + Google login items",
+ "repo": "/home/hatch/workspace/chimera-emulator-hub",
+ "resume_brief": "Continue emulator hub pickup items. Clone https://github.com/mhvnsnt/chimera-emulator-hub to /home/hatch/workspace/chimera-emulator-hub if missing (git identity mhvnsnt / fmmg.mars@gmail.com repo-local). Branch feat/emulator-pickups-20261013. Items: (1) instant-load perf - owner says ROM load takes way too long, needs near-instant - implement preload/chunked ROM streaming, measure before/after; (2) YouTube link https://youtu.be/7VLjgvqCaPg - verify present, add if missing; (3) live decrypt + Google login - verify status, wire if missing. Verify each with evidence, no unverified claims. Branch->PR->merge, zero open PRs. Heartbeat this checkpoint after every step.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-14T02:58:00.000000+00:00"
+}

@@ -1,0 +1,9 @@
+{
+  "task": "Research and set up Wan 2.2 Animate for character replacement in the Wizard Gang EP02 repair pipeline",
+  "repo": "/home/hatch/workspace/video-fix-tools",
+  "resume_brief": "Research Wan 2.2 Animate (character replacement via driving video) for Wizard Gang EP02 photorealistic shot repair. Tasks: (1) research the model, requirements, how to run it (HuggingFace/GitHub/ComfyUI); (2) assess if it can run on the VM (check RAM/GPU via nvidia-smi, free -g); (3) if runnable, set up minimal pipeline in ~/workspace/video-fix-tools/wan-animate/ with test script; (4) if not runnable, document exact setup needed, create ready-to-run Colab notebook/script, identify cheapest free path; (5) research alternatives: Animate Anyone, MimicMotion, MagicAnimate \u2014 compare quality/requirements/accessibility. Write results to ~/workspace/video-fix-tools/wan-animate/README.md. Heartbeat checkpoint after each step. The parent (main agent) needs a plain-language summary of: can we run it, and if not, what's the free path.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 1,
+  "updated_at": "2026-10-10T13:03:13.178982+00:00"
+}

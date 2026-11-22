@@ -1,0 +1,31 @@
+{
+ "attempts": 2,
+ "plates_done": {
+  "branch": "muse/wh-pantera-entrance-v1",
+  "commit": "ef3f6b7",
+  "files": [
+   "emblem_panther_1080.png",
+   "titantron_plate_1920.png",
+   "logo_pantera_red_1920.png",
+   "lower_third_1.png",
+   "lower_third_2.png",
+   "lower_third_quote.png",
+   "end_card_1920.png",
+   "end_card_1080x1920.png",
+   "gfx_report_v1.json"
+  ],
+  "own_eyes_verified": 8,
+  "pushed": "2026-10-15T02:00Z"
+ },
+ "status": "superseded-by-kaggle-render",
+ "pre_render_package": "COMPLETE 2026-10-15T04:10Z: all creative work committed + pushed to origin/muse/wh-pantera-entrance-v1 (f7a08fe). Canon/kit/EDL + music (-14LUFS) + graphics (8 plates own-eyes) + build_v1.py (v4) + post_v1.py. Probes verified (character visible, walk working).",
+ "full_render": "PENDING ON COMPUTE: 1500-frame Cycles render infeasible on CPU-only VM (~130s/frame = 54h; Eevee broken headless, no EGL). Reproducible via: blender -b -P build/build_v1.py -- --mode full && python3 build/post_v1.py",
+ "probe_v4": "Character VISIBLE, not T-pose, walk cycle working. Cameras too close (cropped). Tail not visible in P2/P3 (behind him). Fixing cameras.",
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "Continue producing PANTERA's 50-second entrance/promo video for Western Heart in mhvnsnt/western-heart, following docs/production-bible/ENTRANCE_VIDEO_METHOD.md (Bannon/money-machine-hq copy) and the El Toro v1 blueprint: beat-grid cuts, titantron, name cards, lower thirds, generated music, post chain, proof standard. Canon (verify against western-heart CANON.md): PANTERA, The Panther Soul, Vessel of TOU (battle itself); black panther not leopard, yellow eyes, independently-moving black tail, purple tights, red metal PANTERA lettering, thigh tattoo-panther; quote 'The hold is honest. Everything else is negotiation.'; ring introductions are silence; element fire/Plains of Chi-U. No owner theme track exists, so generate music in code per the method (deterministic, seeded, -14 LUFS). Build a WH arena in code (no environment GLB exists; fire/Plains of Chi-U theme; do NOT use teardown models in the promo). Model: audit roster/pantera/pantera_rigged.glb vs game/assets/models/pantera.glb, use the better; the parallel rig-repair lane is fixing the mirrored-skin defect, so build everything through probe now and gate the FINAL render on the repaired model (version everything, never overwrite). Branch->PR->merge, claim in agent-ops CLAIMS.md, heartbeat this checkpoint, own-eyes proof + SHA-256 + PROOF.md/PROVENANCE.md, disk at ~93% (sparse clones, tiny scratch).",
+ "task": "Produce Pantera's entrance/promo video for Western Heart (first WH kit video)",
+ "updated_at": "2026-10-16T07:44:54.543753+00:00",
+ "music_track": "done: pantera_theme_v1.wav/mp3 + music_report_v1.json committed d1810a7, pushed to origin/muse/wh-pantera-entrance-v1 (-14.00 LUFS, -1.06 dBTP, 2400000 samples, bit-identical re-run verified)",
+ "watchdog": true,
+ "notes": "WATCHDOG 2026-10-15T20:41:45.445622+00:00: re-inspected stale checkpoint (prev heartbeat 12:11Z). PR #169 MERGED to main at 15:33:32Z (head f7a08fe, pre-render package: canon/kit/EDL + music -14LUFS + 8 own-eyes plates + Blender v4 + post script). Branch muse/wh-pantera-entrance-v1 still exists on origin. Remaining work = full 1500-frame Cycles render, infeasible on CPU-only VM (~54h; Eevee broken headless, no EGL) \u2014 BLOCKED on owner compute decision (he never called render compute). Repo is on local disk (~/workspace/western-heart). Nothing for the watchdog to resume; heartbeat updated, attempts incremented. Escalation path: attempts->3 => needs_owner + report.\n[Watchdog 2026-10-16 03:57 EDT] Remaining work (1500-frame Cycles render, infeasible on CPU) now owned by wh-pantera-kaggle-render (keep-working-pulse 2026-10-16 03:15 EDT): lane ALIVE \u2014 kaggle datasets download of marsfmmg/pantera-entrance-chunk0 in flight at 03:39. This checkpoint retired in favor of the Kaggle lane; no attempts increment."
+}

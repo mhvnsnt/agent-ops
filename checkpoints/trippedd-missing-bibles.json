@@ -1,0 +1,10 @@
+{
+ "task": "Write the two missing show bibles: SMOKE-MIRROR-S- show bible and In the Bushes series bible \u2014 additive, no duplicates",
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "Two missing bibles (owner 2026-10-09: audit-first, additive only, no duplicates). (1) SMOKE-MIRROR-S- show bible: repo ~/workspace/SMOKE-MIRROR-S- has docs/constitution/ (24 frozen sections, GAME design) but NO show bible \u2014 yet owner says it gets segments and a show. Write the show bible FROM the constitution (identity, immutable laws, act structure, world substrate, optics, color) without duplicating it: series concept, format, episode/segment structure, tone, how game footage becomes show segments, connection to TRIPPEDD network block (segment types per trippedd-studio/docs/TRIPPEDD-FORMAT.md). Place under SMOKE-MIRROR-S-/docs/show/ and open a branch->PR->merge in mhvnsnt/SMOKE-MIRROR-S-. (2) In the Bushes series bible: on the network slate (trippedd-studio/docs/TRIPPEDD-NETWORK-SLATE.md) as an established property but docs/series/ has only WIZARD-GANG.md and THE-BASTARD.md. Build from trippedd-studio/docs/production-conversations/2026-09-15-in-the-bushes-concept-art.md + slate context; model the format on docs/series/WIZARD-GANG.md. Write trippedd-studio/docs/series/IN-THE-BUSHES.md via branch->PR->merge. Do NOT touch God Molecule bibles (consolidation needs owner call) or the unmerged agent branches. Heartbeat checkpoint, mark done at end.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-09T22:28:03.409874+00:00",
+ "notes": "BIBLE 1: SMOKE-MIRROR-S-/docs/show/SHOW-BIBLE.md via PR #2 (commit f027f57e, merge 5f14e9c9). BIBLE 2: trippedd-studio docs/series/IN-THE-BUSHES.md via PR #82 (commit 7399575a, merge bbbe947d). Both verified live on main. Branches deleted. No PRs left open."
+}

@@ -1,0 +1,11 @@
+{
+ "attempts": 0,
+ "repo": "drive-storage",
+ "resume_brief": "Worker B of Drive->GitHub move lane. Batch: /home/hatch/workspace/agent-ops/drive-move/batch_b.json (80 files, ~7.06GB). Staging: /home/hatch/workspace/agent-ops/drive-move/staging-b/ (one file in flight, 250MB cap, delete staging after trash). Results: /home/hatch/workspace/agent-ops/drive-move/results_b.jsonl. Per-file: resume-check against results_b.jsonl; download via /opt/hatch/bin/hatch_gws_cli drive files get --params '{\"fileId\":\"<id>\",\"alt\":\"media\"}' --output <staging-path>; sha256sum local; gh release upload drive-bulk-move-2026-10-15 <asset> --repo mhvnsnt/drive-storage --clobber; verify via gh release view --json assets browserDownloadUrl then curl -sL url | sha256sum compare; only on match: hatch_gws_cli drive files update --params '{\"fileId\":\"<id>\"}' --json '{\"trashed\":true}'; delete staging; append success line to results_b.jsonl. On any failure: append {\"drive_id\":...,\"asset\":...,\"status\":\"FAILED\",\"error\":\"...\"}, delete staging, continue. Never trash unverified. Before each file run df -h /home/hatch; stop if >=85%. Heartbeat updated_at every 15 min; set status done at end.",
+ "status": "done",
+ "task": "Drive->GitHub move worker B (80 files)",
+ "updated_at": "2026-10-17T05:42:52.490838+00:00",
+ "watchdog": true,
+ "notes": "[Watchdog 2026-10-16 03:57 EDT] Superseded: drive-github-move.json coordinator is LIVE (worker_b.py pid 127013, resume_worker.py pid 127458, checkpoint heartbeated 03:31). This worker-b checkpoint had no notes and is retired; coordinator owns the lane.\n[watchdog 2026-10-17T05:42:52.490838+00:00] RETIRED: superseded by coordinator drive-github-move.json per 2026-10-16 note ('This worker-b checkpoint had no notes and is retired; coordinator owns the lane'). Disk now 4% (<85% resume gate). Lane resume happens on the coordinator checkpoint, not this worker. Marked done to stop it blocking the watchdog queue.",
+ "stop_reason": "Disk hit 85% at 06:20 EDT; worker stopped per task rule. 23/80 files complete (22 trashed + part_040 trashed), 1 UNTRASHABLE, 56 not started. Resume when disk <85%."
+}

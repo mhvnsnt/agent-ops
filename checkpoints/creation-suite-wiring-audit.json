@@ -1,0 +1,21 @@
+{
+  "task": "CREATION-SUITE WIRING AUDIT + GAP MAP (docs only, no building) for western-heart unified creation suite",
+  "repo": "mhvnsnt/western-heart",
+  "status": "done",
+  "watchdog": false,
+  "started": "2026-10-20T20:35:00-05:00",
+  "updated_at": "2026-10-21T03:00:00.493003+00:00",
+  "resume_brief": "Audit lane (this chat) produces an additions-only PR to western-heart with the creation-suite audit + gap map + UI layout evidence doc. Building is owned by creation-suite-pass lanes (checkpoint creation-suite-pass.json: Workers A conversion, B bake, C run4 UI). Do NOT duplicate them: no UI build, no conversion, no bake. Inventory via gh api; cite paths; flag unverified claims.",
+  "notes": [
+    "2026-10-20 20:35 CDT: audit started; creation-suite-pass.json checked first \u2014 it is the BUILD pass (A conversion UNVERIFIED-not-landed, B bake, C run4 UI), not an audit lane; proceeding with audit-only scope.",
+    "2026-10-20 20:39 CDT: SCOPE EXPANSION from owner via parent \u2014 after audit PR lands, proceed into WIRING PHASE 1 from own gap map in this chat; stand down only per-piece on live-heartbeat evidence. PARTS-REGISTRY verified first-hand: 1,148 parts (wmxix 1,050 unconverted .ymg, kind=None x1,120, part_class None x1,111, mesh_part only 6). WWE 2K in WH = docs only (zero assets, per wwe2k-caw/AUDIT-2026-10-19.md).",
+    "2026-10-20 20:52 CDT: AUDIT LANDED \u2014 PR #400 (docs/creation-suite-wiring-audit-20261020, commit 870ff15d) adds customization/CREATION-SUITE-WIRING-AUDIT-2026-10-20.md. Headline: 25,784 indexed parts, runtime sees 1,148 (4.5%), 1,120 registry parts kind=null. Phase 1 decision: NO MERCY wiring (682 indexed parts, OBJ geometry in-repo, no lane on it). Stand-downs: WMXIX converter (A), UI app (C run4), bake/schema/game-hook + eye schema (B), eye UI (C), moveset data merge (paused session).",
+    "2026-10-20 20:57 CDT: OWNER ACCEPTANCE TARGET \u2014 DONE = playable build: in-game suite opens, changes a fighter (parts/morphs/colors/attires), saves, swaps; fighter fights with working movesets/animations. Phase 1 (No Mercy) reframed to reach the game's fighter path end-to-end (catalog -> GLB -> runtime loader -> profile application), not stop at data files.",
+    "2026-10-20 ~21:57 CDT: DONE. Audit + Phase 1 (No Mercy) merged to western-heart main and verified by path (all key files HTTP 200 on main). Local worktree removed after merge verification; see disk-cleanup-log.md. Open follow-ups for the coordinator: gap #4 Def Jam (unowned, 22,360 parts, cross-repo), gap #3 WMXIX .tex batch (unassigned), gap #5 Tekken 6 item tables (unowned), gap #10 moveset editor UI (unowned). Note: node --test directory mode fails on this box even for main's pre-existing dna.test.js alone (pre-existing quirk, documented in PR #401); test files pass by filename."
+  ],
+  "outputs": [
+    "PR #400 MERGED 2026-10-21T02:55:53Z: customization/CREATION-SUITE-WIRING-AUDIT-2026-10-20.md (audit + 14-item gap map + UI evidence)",
+    "PR #401 MERGED 2026-10-21T02:57:04Z (merge commit 9414bed073): No Mercy wiring \u2014 CATALOG.json (682), 303 GLBs, conversion-report.json, 2 tools, catalogs.js runtime, catalogs.test.js (5/5 pass), WORKLOG.md",
+    "Both PRs: deletion-guard + guard + instruction-gate all green at merge (instruction-gate initially failed on section-heading format; bodies rewritten to the gate script's exact headings, re-ran green)"
+  ]
+}

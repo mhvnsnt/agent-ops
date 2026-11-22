@@ -1,0 +1,10 @@
+{
+  "task": "Build permanent free compute solution for voice renders via GitHub Actions",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/voice-clone-work",
+  "resume_brief": "Build a GitHub Actions voice render pipeline in private repo mhvnsnt/wizard-gang-voice-pipe. COMPLETED: Repo created (private), pipeline built with scripts/render_voice.py, refs/ audio, requirements.txt, .github/workflows/voice-render.yml, README.md. Workflow verified live on GitHub. LIMITATION: The gh PAT cannot trigger workflow_dispatch (403); owner must trigger from GitHub UI: Actions > Voice Render > Run workflow. To test: trigger with character=cipher, text='THE RAIN!', label=test1.",
+  "updated_at": "2026-10-09T23:45:00Z",
+  "attempts": 1,
+  "notes": "Repo: https://github.com/mhvnsnt/wizard-gang-voice-pipe (private). Workflow 'Voice Render' is live. Cannot auto-trigger due to PAT scope; owner triggers manually from UI."
+}

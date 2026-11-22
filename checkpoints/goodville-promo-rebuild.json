@@ -1,0 +1,9 @@
+{
+ "task": "Rebuild 15s Goodville promo in Blender (cutout rigs per SP study S8), sensorium-gated",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/trippedd-studio",
+ "resume_brief": "Rebuild the 15s Goodville promo in Blender on branch feat/goodville-promo-15s (PR #149 open, do not merge). Read docs/research/SOUTH-PARK-STUDY.md section 8 (free-only replication playbook) and tools/brain/sensorium/SENSORIUM.md first. Build flat-plane cutout rigs (orthographic camera, stepped animation, CONSTANT interpolation, paper grain) with separate rigged parts (eyes, heads, hands, mouths, bodies). Same content/timeline: old head bit -> dino reveal -> end card, 15.000s. Gate renders with sensorium taste/style_hold per frame and smell anomaly detection; fix flags (style_hold trained on EP02 labels = drift signal only, eyeball-verify). Update FRAME-CHECK.md with rebuild method + sensorium scores. Commit incrementally to the branch. TEMP voices generic-labeled; parody likeness OK per SOUTH-PARK-AI-USE.md overrides.",
+ "updated_at": "2026-10-11T09:24:56.595866+00:00",
+ "attempts": 0
+}

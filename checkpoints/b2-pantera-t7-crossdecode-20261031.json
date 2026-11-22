@@ -1,0 +1,11 @@
+{
+ "attempts": 1,
+ "notes": "COMPLETE. WH #1384 merged dd1a38d4 (19 promotions, census 174/63/389, CI green). WH doc #1403 merged 74d89449. GRE #78 merged 05578ee8 (alias+group doc + walker on GRE main, blobs verified). All deliverables landed; see final report.",
+ "repo": "mhvnsnt/western-heart (+ mhvnsnt/game-reverse-engineering sources)",
+ "resume_brief": "Lane B2 essentially complete. Deciphered: King T7 alias table @kinmot 0x28 + GROUP delegation (0x800B = group-pool start index, 0x800C delimited, 82 groups); group-correct walker in GRE PR #78 + scratch t7walk.py. WH PR #1384 MERGED (dd1a38d4): 19 Pantera step promotions from T7 proofs. Left to do: (1) merge WH doc PR #1403 (docs/movesets/T7-CROSSDECODE-PANTERA-2026-10-31.md) when its last checks go green, verify merge via gh api; (2) merge GRE PR #78 if possible (checks unreadable via token; only no-deletion-guard workflow; 0 deletions) and verify, else report open; (3) final report to parent. Scratch: ~/workspace/_b2-crossdecode-20261031/ (adjudication.json is the full 82-row record).",
+ "status": "complete",
+ "task": "B2 Pantera step promotions via Tekken 7 decipherment: prove/reject the 57 F9 REVIEW step candidates and the 4 F8 orphan strings from King's T7 move-link/branch data (kinmot cancel graph); decipher the alias table + requirement gating; land Pantera-only instruction-gate PRs for what proves.",
+ "updated_at": "2026-10-31T15:25:00Z",
+ "watchdog": true,
+ "workdir": "~/workspace/_b2-crossdecode-20261031/"
+}

@@ -1,0 +1,9 @@
+{
+  "task": "LOTI v3: cut out freeze-frame mascot, composite over real balcony background",
+  "repo": "~/workspace/trippedd-studio-loti-v2",
+  "resume_brief": "In ~/workspace/trippedd-studio-loti-v2 on branch feat/loti-commercial-v3 (PR #117 open, NOT merged): owner wants the 100% mascot freeze frame CUT OUT (background removed, clean sticker-style cutout) and composited ON TOP OF THE REAL photographic hotel-balcony background (not the cartoonized EbSynth version). Steps: (1) extract the mascot freeze frame; (2) background-remove with rembg (pip install if needed) + edge cleanup; (3) get the REAL background plate from the source footage at the freeze moment; (4) composite mascot over real background with a thin white sticker border, matching the freeze framing; (5) splice into the final MP4 via stream copy (don't re-encode the whole video); (6) eye-QC the freeze beat; (7) re-upload via remote-storage; (8) commit+push to feat/loti-commercial-v3 (--no-verify), do NOT merge. Report new SHA-256, URL+expiry, QC notes.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T22:32:24.743522+00:00"
+}

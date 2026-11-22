@@ -1,0 +1,12 @@
+{
+ "attempts": 0,
+ "repo": "western-heart",
+ "resume_brief": "DECRYPT RE AGENT ROUND 4: Tekken 6 PSP GZIP second layer CRACKED (mostly). The 76 GZIP files use a CUSTOM DEFLATE VARIANT, not encryption. EBOOT inflate at 0x8b55bf0 (wrapper 0x8b559c8, GZIP thunks at 0x89d26e4+) uses custom code-length order [16,19,27,0,8,7,9,6,10,5,11,4,12,3,13,2,14,1,15] from table at 0x8bd6340 (standard is [16,17,18,0,...]). Repeat codes: 16=repeat prev (2b/base3), 19=repeat zero (10b/base3), 27=repeat zero (18b/base11). Python decoder at decrypt4/custom_inflate.py decodes headers, code lengths, and main stream. Distance formula for high dsym (>=20) is still being refined: best found is base=1 + 4 extra bits (vs standard base+variable), giving 105944 bytes vs 105472 expected (472 over, 0.4% error). Output shows NDPP magic and structured data. Files: decrypt4/GZIP-CUSTOM-DEFLATE.md (full doc), custom_inflate.py (decoder), mips_dis.py, disassembly txts. Next: refine distance formula via EBOOT reverse or brute-force to hit exact sizes, then batch-decode all 76 and hunt for GMO models. Work dir ~/workspace/game-reverse-engineering/tekken6/work/decrypt4/. Disk 83%. bulk_decrypted.bin read-only.",
+ "status": "done",
+ "task": "Tekken 6 DATA401: GZIP custom deflate cracked - refine distance formula",
+ "updated_at": "2026-10-25T14:55:56.575178+00:00",
+ "watchdog": true,
+ "notes": [
+  "[watchdog 2026-10-25 09:55 CDT] VERIFIED COMPLETE: WH PR #446 MERGED 2026-10-25T10:07:20Z (merge 956d6a1d, 'Tekken 6 PSP SOLVED: 76/76 adler-exact', 13 checks green, all-additive). The decrypt6 lineage that superseded this round-4 checkpoint landed the work \u2014 distance formula solved, all 76 DATA401 files byte-exact on main. Nothing left to resume; status set done."
+ ]
+}

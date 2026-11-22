@@ -1,0 +1,22 @@
+{
+ "findings_so_far": [
+  "0x229008 = relocatable ELF loader: alloc 0x830, ELF section walk (0x28-byte headers, counts at hdr+0x30/0x32), gABI symbol hash build, type dispatch 2/3/8/9/10/11 + MIPS 0x70000005..0x7ffff421 range",
+  "0x228A08 = runtime relocator/symbol resolver: SHT_REL (type 9) sections, reloc-type switch 0..9 (case2=R_MIPS_32 add, case4=R_MIPS_26, case5/6=HI16/LO16), cross-object lookup 0x229bc8 + resolver callback at obj+0x20b*4 + registry 0x4a2ca8/0x4a2ce8; writes resolved addr - section base into entry+0x10, tag byte+0xd in {2,3,4,5}, flag +0xe=1",
+  "0x229EE8 = stub: jr ra / li v0,1 (return 1), 8 bytes",
+  "NO VIF/GIF/packet/vertex code anywhere in trio decompilation+disassembly (ghidra_out3.txt, 36K); CPU never touches vertex records in the entire CMorph load path - pass-through proven at load level, consumption is render-time VU1",
+  "LitGouraud0__EAGLMicroCode + IrradTexture_Skin0__EAGLMicroCode are UNDEFINED externs (value=0 size=0) in every sampled _C (110/111/113); SLUS_210.04 contains NO such names (only Particle0/HeatParticle0 __EAGLMicroCode strings at fileoff 0x2dc3f8/0x2dc418) - microcode definition ships in a separate runtime object/registry, not the exe by that name",
+  "_C GeoPrimState symbols declare SetPrimitiveType=EAGL::PT_TRIANGLESTRIP (corroborates strip framing; not an order crack)"
+ ],
+ "id": "gap-closure-w5d-defjam-vu",
+ "parent_checkpoint": "gap-closure-w5c-defjam-vertex",
+ "repo": "mhvnsnt/western-heart (converter+catalog), mhvnsnt/wrestling-game (.o data)",
+ "resume_brief": "W5d CONTINUATION #2 IN PROGRESS: decompile packet-build trio 0x229008/0x228A08/0x229EE8 in staged Ghidra project ~/workspace/_w5c-work/ghidra/DefJam (SLUS_210.04 sha256 4e65bf29..., r5900 -noanalysis targeted runs only, JDK_JAVA_OPTIONS -Xmx1200m, JAVA_HOME=~/workspace/tools/ghidra/jdk-21.0.12.1+1). If pass-through, extract EAGL VU1 microcode (LitGouraud0/IrradTexture_Skin0 __EAGLMicroCode) and read VU vertex loop = draw order. Gates: cross-letter topology identity, _C BBOX spans 17.44/19.33/9.0, Blender renders V2CP_110_0001_A + 111/112/113 own-eyes. PR #452 OPEN; W5d addendum stacks as spec 7.9.3. POINTS discipline stands until render proves otherwise.",
+ "status": "done",
+ "step": "DONE (resists branch): spec 7.9.3 addendum pushed to PR #452 branch as 62df9ff (OPEN/MERGEABLE) + instruction-gate comment; trio verdict proven, microcode stall point located (undefined extern, absent from exe), POINTS stands, no converter/catalog change",
+ "task": "W5d Def Jam VU1 microcode route: packet-trio verdict, VU vertex loop order, converter+catalog if cracked else spec 7.9.3 addendum PR",
+ "updated": "2026-10-21T16:55:00-05:00",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-21T21:53:00+00:00",
+ "notes": "\nWatchdog 2026-10-21 16:53 CDT: work already complete+pushed. Commit 62df9ff on branch w5c-defjam-vertex-addendum (== origin head, verified via ls-remote) adds spec 7.9.3 (80 lines, EAGL-FORMAT-SPEC.md): packet trio = ELF linker (loader/relocator/stub), microcode is undefined extern from separate runtime object; POINTS stands. PR mhvnsnt/western-heart#452 OPEN covers the branch. No lane action needed."
+}

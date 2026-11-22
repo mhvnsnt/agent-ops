@@ -1,0 +1,11 @@
+{"task":"republish-wh-f2137c06","status":"complete",
+"main_target":"f2137c0681e579906a50462f3f9804b338a2b69b",
+"deploy_set":"build_pages.py --shell-only --core from f2137c06 = 2128 files / 988762170 bytes (reproduced twice, deterministic in warm clone)",
+"what_happened":"While this lane worked, a Claude Code lane delta-deployed past the stale tip: fd7b81bb (05c5e851) -> 68632762 (main d27629c1, PR #1371). Tree comparison showed that chain already carried all 96 burn-down-changed files (buffalo-bill blob 226343c5 verified), but missed the entire game/assets/ttt2/ layer (58 files). This lane topped the live tree up instead of clobbering the newer deploy.",
+"deploy_commit":"6e56f2d32b0922bed4038d4679821dbeb79fc6f1 (parent 68632762, tree 8bfe03bb): +58 game/assets/ttt2/ files (2476550 B), manifest updated; 0 removed; fast-forward ref update, no force",
+"abandoned_commit":"e2f47eb63682f5a7faaaf6769320947091ec689b (full-set commit on fd7b81bb) - never pushed, superseded by events",
+"gate":"check_module_graph.py exit 0 on BOTH the f2137c06 full-set tree and the final top-up tree (147 files scanned, 0 hard missing, 3 benign warnings)",
+"live_manifest":"commit d27629c1, files 2165, bytes 992491550 (source main advanced past f2137c06 by PRs #1367/#1371 during the lane; ttt2 files verified byte-identical at both mains)",
+"live_verification":{"page":"200","game_page":"200","docfrank_model":"200 @ 25225856 B exact","buffalo-bill.json":"sha256 == main (ttt2_ref live)","ttt2/movesets/law.json":"sha256 == main","clip-maps burger+pantera":"sha256 == main"},
+"notes":"Route findings: (1) the live deploy recipe is build_pages.py --shell-only --core; plain --shell-only yields 5528 files/1120.7MB (over Pages cap). (2) build_pages plumbing mode is unreliable here (git write-tree stalls on lazy fetch through the proxy); Git Data API delta on the previous deploy tree is the working route. (3) build_pages set computation in a COLD blobless clone silently under-reads (failed cat-file = skipped refs) - warm the clone / prefetch first.",
+"updated":"2026-10-31T14:35:00Z"}

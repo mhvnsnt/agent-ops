@@ -1,0 +1,11 @@
+{
+  "task": "Build 2D animation rig packs (model sheets) for Sombra Negra, Theory, Kiko, Hollow \u2014 following Ashes pattern",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/character-rigs",
+  "resume_brief": "Build rig packs for 4 Wizard Gang characters (sombra-negra, theory, kiko, hollow) at ~/workspace/character-rigs/<name>/. Each: visemes/ (10 Preston Blair mouth cards from SINGLE base image), eyes/ (6 expression cards), hands/ (10 pose cards), <NAME>-MODEL-SHEET.md (filled template), <NAME>-ANIMATION-GUIDE.md. Likeness from EP02_LIKENESS_BIBLE.md. Read every card before done; regenerate failures. 4 child workers spawned, one per character.",
+  "updated_at": "2026-10-10T17:52:00-05:00",
+  "attempts": 1,
+  "notes": "All 4 character rig packs complete and verified. Parent spot-checked Sombra mbp + Theory ah cards.",
+  "kiko_notes": "[18:30 CDT] Kiko DONE: 10/10 visemes + 6/6 eyes + 10/10 hands, every card QC-read by worker, color model sampled, KIKO-MODEL-SHEET.md + KIKO-ANIMATION-GUIDE.md written. Likeness: older Mutoh only, masked primary, young versions rejected."
+}

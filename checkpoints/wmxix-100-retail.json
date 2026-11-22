@@ -1,0 +1,46 @@
+{
+ "task": "WMXIX 100% Retail \u2014 full retail-quality WrestleMania XIX in testbed (skinning, arena faces, textures, real assets). Owner directive 2026-10-15 ~23:18 EDT: no prototypes, full retail 100% before handoff.",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/wmxix-mod-testbed",
+ "resume_brief": "Coordinator for WMXIX 100% Retail. Repo ~/workspace/wmxix-mod-testbed (GitHub mhvnsnt/wrestlemania-xix-mod). Four lanes: (a) skinning weight decode \u2014 YOBJ per-vertex bone weights unsolved, see teardown/wwe-wrestlemania-xix/YOBJ-SKINNING-NOTES.md; (b) arena face index decode \u2014 point clouds need faces, see teardown/wmxix/arenas/ARENA-FORMAT.md; (c) texture decoding \u2014 TPL via teardown/wmxix/decode_tpl.py; (d) testbed rebuild with real assets. ISO: 1.46GB, check ~/workspace/game-reverse-engineering/wwe-wrestlemania-xix/ locally or TeraBox. Branch\u2192PR\u2192merge, never push to main. Do NOT present partial results to owner; only report at 100% retail quality verified with own eyes.",
+ "updated_at": "2026-10-17T11:43:55.931484+00:00",
+ "attempts": 2,
+ "lanes": {
+  "skinning": {
+   "status": "blocked",
+   "note": "PR #7 (docs-only, OPEN). 9 hypotheses rejected, all own-eyes rendered. Disproved prior false YOBJ-SKINNING-SOLUTION.md (renders as garbage). Next: DOL RE of YOBJ vertex loader \u2014 file-type table at main.dol 0x30B2B0 (YOBJ=2). Capstone PPC available. Spawning follow-up DOL-RE worker."
+  },
+  "arena_faces": {
+   "status": "done",
+   "note": "PR #8 merged. reconstruct_arena_faces.py (deterministic cascade). 37 faces OBJs + 840 parts + MANIFEST.json + FACES.md. ring.obj: 1092 faces own-eyes verified. 00/01/02 arenas meshed. 3 points-fallbacks documented. Meshes are honest approximations; true retail faces need YMG index records."
+  },
+  "textures": {
+   "status": "done",
+   "note": "PR #5 merged 2026-10-16T03:26:10Z. 1,167 PNGs inventoried (0 corrupt). TEXTURE-MANIFEST.md created. testbed/textures/ populated (02/ + ring/, 1.4MB). No wrestler textures local \u2014 ISO pull needed for //model/wrestler/*.tex (162 files)."
+  },
+  "testbed_rebuild": {
+   "status": "done",
+   "note": "PR #6 merged. Real strip OBJs replace capsules (rendered as-decoded, unassembled \u2014 honest, no retail claim). Arena = real 02.obj point cloud + temp mat. Controls untouched. Skinning lane owns assembly."
+  },
+  "dol_re": {
+   "status": "done",
+   "note": "PR #9 merged. PROVED s16x3 batches are triangle-strip positions (own-eyes). decode_yobj_verts() delivers 606v/531t. DOL loader pseudocode in YOBJ-DOL-DECODER-REPORT.md. main.dol extracted (3.26MB, local work dir)."
+  },
+  "arena_integrate": {
+   "status": "done",
+   "note": "PR #10 merged. Real ring faces (1092 tris) in testbed buildArena(); solid geometry verified own-eyes. Temp mat gone from success path. ring_p1 post plate staged unplaced (honest). Footer string now stale ('Mat plane is TEMPORARY') \u2014 batch fix with final integration."
+  },
+  "skinning_a3": {
+   "status": "blocked",
+   "note": "PR #11 opened (not merged). Table1 misparse corrected (no Table2; 58-record table). Strip threshold fixed 1000->1300 (536 tris). Batch->bone mapping UNRESOLVED: b0 (0-12) cannot be direct bone index (limbs at 18-69). Render proves non-assembly per PROOF LAW."
+  }
+ },
+ "blockers": [
+  "FINAL BLOCKER: batch b0->bone remap table not found in YMG or DOL. Wrestler meshes cannot assemble into humanoids.",
+  "Paths forward: (1) deeper DOL RE targeting YOBJ+0x60 batch-table consumer (a3 tried, 15 candidate functions, loop not isolated); (2) Dolphin memory dump of posed vertex buffer for ground truth \u2014 needs ISO from TeraBox (parent browser lane).",
+  "ISO (1.46GB) still not local; 0 YMG / 0 TEX local. Wrestler textures also need ISO pull.",
+  "PR #11 (a3 docs+tool) open, not merged \u2014 parent review."
+ ],
+ "notes": "2026-10-16 09:00 EDT watchdog: RESUMED (oldest eligible, 485m stale). No dead worker on parent; sublane wmxix-100-retail-skinning.json actively worked 08:35 EDT today. Advanced lane (a): extracted 6 edit_data/MODEL YMG parts from split ISO (byte-exact), decoded via a2 get_batches \u2014 all small CAW clothing layers (b0 0-4, <=5 batches), NOT limbs; //model/wrestler/*_2.ymg and 001_1/005_2 are DUMY placeholders (no hidden limb files); batch gap-data-as-u16x3-geometry hypothesis REJECTED with own-eyes render (scattered junk). New constraint: b0 is per-file, not a global bone palette. Committed locally 9eca8cd on lane/skinning-assembly-100-retail (no push; PR/merge lane). NEXT: census *.ymg in FILE-LISTING outside model/wrestler/ and edit_data/MODEL for arm/leg-sized files; else try Table1 (u16,0) payloads as geometry. Lane (a) batch->bone still unresolved \u2014 block stands.\n[watchdog 2026-10-17 06:45 CDT] BLOCK LIFTED + VERIFIED: owner merged PR #15 (2026-10-17 01:34Z) and PR #16 (01:43Z) from lane/skinning-assembly-100-retail. Working wrestler assembly (606v/580t, translation-only, (1,0,2) perm, bones/100, verts/2500, DOL-verified 2500.0/100.0 constants) now on origin/main. All four sub-lanes done: arena, dolre, textures, skinning (wmxix-100-retail-skinning.json done 01:43Z), testbed. Own-eyes verified: tools/assemble_wrestler_v2.py reproduces committed solution exactly (max diff 5e-05), bbox 0.77x2.22x1.27m. Render-proof sibling wh-wmxix-renders unblocked (geometry now on main) and left as its own checkpoint. No in-progress work remains in this lane; marking done."
+}

@@ -1,0 +1,43 @@
+{
+  "lane": "B",
+  "coordinator": "get-it-all-into-repos-20261121",
+  "started": "2026-11-21T19:31:59-05:00",
+  "updated": "2026-11-22T00:45-05:00",
+  "status": "inventory done, verifying release duplicates",
+  "disk_at_start": "150G total, 120G used, 30G free, 81%",
+  "dirs": {
+    "_ceiling-completion-20261117": {"size": "5.3G", "files": 9220, "newest_mtime": "2026-11-21 21:19 CHECKPOINT.md", "in_flight": false},
+    "_god-within-wireup-20261120": {"size": "3.2G", "files": 5990, "newest_mtime": "2026-11-21 02:49 ghidra-devil-rerun.log", "in_flight": "PAUSED - verification attempt 3, Ghidra run died with VM restart; ISO is PARTIAL (head only)"},
+    "_afro-refit-20261110": {"size": "3.0G", "files": 828, "newest_mtime": "2026-11-22 00:14 render log", "in_flight": "YES - v4 render driver active, frames f004-f126 banked, f127-f159 to go. LEAVE ENTIRE DIR ALONE."},
+    "_honeybebou-newmodel-20261117": {"size": "1.5G", "files": 8953, "newest_mtime": "2026-11-19 05:38", "in_flight": false, "note": "lanes merged #259/#260/#263/#264"},
+    "_adri-organ-id-20261117": {"size": "1.2G", "files": 1512, "newest_mtime": "2026-11-21 12:22 stage_pr_r7.log", "in_flight": "round7 stage PR in progress (not <30min, no running proc)"},
+    "_owner-fixes-20261117": {"size": "918M", "files": 4686, "newest_mtime": "2026-11-17 21:12", "in_flight": false, "note": "all streams complete, PRs #240/#250/#251 merged"}
+  },
+  "pr_verdicts_live_gh_api": {
+    "246": "OPEN (merge parked, Real's call)", "290": "OPEN (merge parked)", "293": "OPEN (merge parked)",
+    "292": "MERGED 2026-11-21T17:40:18Z", "259": "MERGED", "260": "MERGED", "263": "MERGED", "264": "MERGED",
+    "240": "MERGED", "250": "MERGED", "251": "MERGED", "238": "MERGED", "245": "MERGED", "247": "MERGED"
+  },
+  "steps": [
+    "checkpoint created; inventory all 6 dirs (sizes, types, mtimes, procs)",
+    "afro render confirmed ACTIVE (driver attempt 7 f126..129 started 00:11, VM restart ~00:14 killed driver; frames f004-f126 banked) - dir left alone",
+    "PR verdicts verified live via gh api (see pr_verdicts_live_gh_api)",
+    "L8: local GLB sizes match release l8-lafan1-motbin exactly (16 GLBs, 3 local copies: out/ + repo-sparse/examples/ + serve/glb/); GLBs NOT on main (404); local sha256 recorded to laneB-l8-local-shas.txt (32 entries)",
+    "Adri: r5/r6/r7 GLB+mp4+png local sizes match release assets exactly; local sha256 recorded to laneB-adri-local-shas.txt; r4 GLB 15219740 also matches release r4 size",
+    "God-within: western-heart releases tekken5-ps2-extract-v1 (0 assets) and tekken5-ps2-v1 (0 assets) exist but EMPTY; local ISO is PARTIAL head-only, lane paused - nothing deletable"
+  ],
+  "pending_verification": "stream-download release assets and sha256-compare vs local shas (L8 16 GLBs, Adri r4/r5/r6/r7 GLB+mp4+png)",
+  "moved_gb": 0,
+  "freed_gb": 0,
+  "repos_used": [],
+  "unplaced": [
+    {"item": "_afro-refit-20261110 (3.0G)", "reason": "IN FLIGHT - v4 render driver active, 33 frames to go"},
+    {"item": "_god-within-wireup-20261120/verify/Tekken5-sparse.iso (1.2G disk / 4.48G apparent)", "reason": "GAME FILE, PARTIAL (head 524MB only) - lane verification attempt 3 paused by VM restart; full ISO not on any release (tekken5-ps2-extract-v1 has 0 assets); TeraBox route needs browser lane"},
+    {"item": "_god-within-wireup-20261120/verify/disc (637M) + extracted (241M)", "reason": "same paused lane - disc parts of the same ISO build"},
+    {"item": "_god-within-wireup-20261120/verify/ghidra (878M) + jdk (347M)", "reason": "lane tool installs for paused verification; egress unreliable for re-download"},
+    {"item": "_ceiling-completion-20261117/closing/l4-deform-spec/mae-okyra-specb.glb (334M)", "reason": "LICENCE-BLOCKED from GitHub (CC BY-NC-ND) per MEMORY; PR #293 open"},
+    {"item": "_ceiling-completion-20261117/closing/l1-fsmp-reg/chrome (467M)", "reason": "reinstallable tool binary, not repo material; L1 proof still owed; egress unreliable"},
+    {"item": "_ceiling-completion-20261117/closing/l3a torch wheel (170M) + 3ddfa tarball (74M)", "reason": "upstream downloads, not repo material"}
+  ],
+  "next_step": "stream-download L8 + Adri release assets, sha256-compare, delete verified duplicates, log to disk-cleanup-log.md"
+}

@@ -1,0 +1,10 @@
+{
+  "task": "PULL DEF JAM: FIGHT FOR NY + PLAN WRESTLING GAME SEPARATION",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/game-reverse-engineering",
+  "resume_brief": "Owner directive 2026-10-13: Pull Def Jam: Fight for NY (most popular Def Jam game) from Archive.org, download to TeraBox /western-heart/def-jam-fight-for-ny/, start teardown focusing on animation system. Create new repo mhvnsnt/wrestling-game for ALL wrestler models (2,826 from WMXIX+No Mercy in wwe-wrestler-models repo). Document separation in western-heart/CHIMERA-ARCHITECTURE.md \u2014 wrestler models OUT of Western Heart, everything else stays. Steps: (1) checkpoint written, (2) search Archive.org for Def Jam FFNY PS2/Xbox/GameCube, (3) catalog findings, (4) check if mhvnsnt/wrestling-game repo exists via gh, (5) update CHIMERA-ARCHITECTURE.md with separation doc, (6) commit via branch/PR/merge. BLOCKED items needing parent: actual game download (large, disk tight), TeraBox upload (no API - needs browser task), repo creation (can try gh CLI).",
+  "updated_at": "2026-10-13T23:08:00Z",
+  "attempts": 1,
+  "notes": "COMPLETE: Def Jam FFNY PS2 source found (slus-210.04, 4.47GB ISO). wrestling-game repo created and pushed (README + DEF-JAM-PULL-PLAN). CHIMERA-ARCHITECTURE.md updated with wrestler separation (PR #63 merged). BLOCKED for parent: ISO download (4.47GB, disk tight) + TeraBox upload (no API, needs browser task)."
+}

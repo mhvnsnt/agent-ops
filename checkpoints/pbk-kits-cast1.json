@@ -1,0 +1,9 @@
+{
+ "task": "Build Preston Blair kits: kid, headband girl, crown hoodie (no commits)",
+ "repo": "~/workspace/trippedd-studio",
+ "resume_brief": "In ~/workspace/trippedd-studio (branch feat/preston-blair-kits \u2014 do NOT commit, parent commits): build Preston Blair kit part libraries per production/TRIPPEDD_EP01/goodville/kits/KIT-SPEC.md (READ IT FIRST \u2014 full piece inventory, two-tier workflow, manifest + drill-log formats) for 3 characters from the key art assets/references/ep01/source/Goodville - Not South Park.png (open and read it): (1) THE KID \u2014 2nd from left: blue/red bobble hat, cigarette, chin patch, blue jacket. (2) PURPLE HEADBAND GIRL \u2014 3rd from left: purple headband, hair puffs, gold hoop earrings, purple top. (3) CROWN HOODIE \u2014 center: black beanie, black TRIPPEDD crown hoodie, goatee \u2014 OWNER'S STAND-IN, likeness matters most. Visual design only \u2014 no invented personalities. Extract via tools/smart-extract/ (visual grounding bboxes, rembg ladder, verify loop \u2014 NEVER flood-fill); hand-build missing pieces in flat SP style with colors eyedropper-sampled from the key art; document extracted-vs-hand-built per piece in manifest.json with anchors + identity checklist; write drill-log.md per kit (Tier B vs Tier A notes). Verify EVERY PNG with own eyes. Write files only under production/TRIPPEDD_EP01/goodville/kits/<kid|headband-girl|crown-hoodie>/. Do NOT touch other files. Do NOT commit. Report: parts per character, method per piece, eye-verification notes, gaps. Mark checkpoint done at end. Heartbeat every 10 min.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T15:55:00Z"
+}

@@ -1,0 +1,9 @@
+{
+ "task": "Research Nintendo visual/cinematic/camera language for Concrete Dragon",
+ "repo": "~/workspace/ConcreteDragon",
+ "resume_brief": "Research how Nintendo games (Sonic Adventure 2, Super Mario Sunshine, Luigi's Mansion, Zelda, Mario) handle cinematics, cutscenes, camera angles, and key art composition. Produce a concrete incorporation plan for Concrete Dragon: specific camera techniques, cutscene structures, and art-direction applications. Write findings to ~/workspace/concrete-dragon-launch/research/nintendo-visual-language.md. Verify every claim against real sources (game footage, developer talks, art books). No invented facts.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-10T00:00:00+00:00"
+}

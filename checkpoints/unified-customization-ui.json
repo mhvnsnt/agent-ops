@@ -1,0 +1,12 @@
+{
+ "task": "UNIFIED CUSTOMIZATION SUITE UI \u2014 Tekken base + wrestling mix design spec",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/western-heart",
+ "resume_brief": "Owner directive 2026-10-13: design and build the combined character customization UI. Tekken's customization menu FEEL is the base, mixed with wrestling's deeper body/attire editing, plus good ideas from other games (DOA wardrobe, TTT2 Combot). Source material: T7 (17 slot IDs, 10 save slots/char, item shop, conflict system), T6 (~20 slots, Item Moves), TTT2 (Combot cross-roster move mixing), No Mercy (6 pages, 4 attire slots, 14M+9F bodies), WMXIX (2,690 edit_data, parametric body), DOA6 (10-slot wardrobe). Read CUSTOMIZATION-RESEARCH.md and CUSTOMIZATION-FILES-INDEX.json in ~/workspace/western-heart/customization/. Deliverable: UNIFIED-UI-SPEC.md with screen-by-screen layout, menu hierarchy, unified slot system, and flow diagrams. New fighter -> customize -> moveset -> save flow. Owner wants it to FEEL like Tekken's suite with wrestling parts mixed in.",
+ "updated_at": "2026-10-13T17:45:00Z",
+ "attempts": 0,
+ "notes": [
+  "UNIFIED-UI-SPEC.md written (22.7KB). All owner additions incorporated: DOA wardrobe tab, full-screen preview central pattern, complete-game/DLC philosophy, teardown art sourcing, functional behavior from real sources (T7 TKDataPatcher, T6 PSP manual, No Mercy re-docs)."
+ ]
+}

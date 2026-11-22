@@ -1,0 +1,10 @@
+{
+ "task": "Regenerate 3 EP02 scenes as proper 2D",
+ "repo": "~/workspace/trippedd-studio",
+ "resume_brief": "PARTIAL COMPLETE. Scene A street-crew-2d.mp4 (9.0s) and Scene B basketball-2d.mp4 (4.13s) delivered to ~/workspace/ep02-repair-work/regenerated/. Both are proper 2D cartoon via generated keyframes + limited animation (slow zoom/push, cross-dissolve). NO FILTERS. EbSynth was attempted but produced smearing and was too slow/unreliable, so switched to keyframe-based limited animation per the Animation Playbook. Scene C podcast-2d.mp4 NOT DELIVERED - media.generate_image refused the keyframe generation (policy block on photorealistic shirtless source). Cannot retry per instructions. Parent must decide: manual paint, alternate image service, or defer Scene C.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-10T21:58:34.236863+00:00",
+ "notes": "2026-10-10 watchdog: Scene C podcast-2d.mp4 delivered (9.0s, 1280x720 h264, written 16:38 CDT after last heartbeat); frames visually verified as proper 2D cartoon (ON AIR podcast studio, tattooed host). All 3 scenes now in ~/workspace/ep02-repair-work/regenerated/: street-crew-2d.mp4, basketball-2d.mp4, podcast-2d.mp4. Task complete."
+}

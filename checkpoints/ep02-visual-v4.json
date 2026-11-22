@@ -1,0 +1,10 @@
+{
+  "task": "EP02 visual fixes v4 - owner's review corrections, no filters",
+  "status": "done",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "Fix 9 visual issues from OWNER-REVIEW-2026-10-10.md in wizard-gang-ep02-final-v3.mp4. Output fixed clips to ~/workspace/ep02-repair-work/visual-fixes-v4/. Do NOT rebuild full episode. Issues: (1) S10 crop/glitch/animation, (2) Ashes mouth 1:53-2:00 grill stabilization, (3) Subway 3:41 desync, (4) Theory 5:04 3D->2D, (5) Sombra filter trim at 4:29. Street crew/podcast filter ranges are being regenerated as 2D by parallel task - do filter-removal fallback only if needed.",
+  "updated_at": "2026-10-10T21:45:00Z",
+  "attempts": 1,
+  "notes": "4 clips delivered: s10-fixed-8s.mp4, ashes-mouth-fixed-7s.mp4, subway-desync-7s.mp4, theory-2d-fixed-4s.mp4. See MANIFEST.md for details. Street crew/basketball/podcast left for parallel 2D regeneration task."
+}

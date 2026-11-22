@@ -1,0 +1,10 @@
+{
+  "task": "Extract poses from 19 drifted EP02 shots",
+  "status": "done",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/video-fix-tools",
+  "resume_brief": "Continue extracting MediaPipe poses from EP02 drifted shots. Pipeline at ~/workspace/video-fix-tools/pose-extract/extract_pose.py. Clips at ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/ep02-normalized/. Outputs go to ~/workspace/video-fix-tools/pose-extract/ep02-poses/. See manifest CSV for progress.",
+  "updated_at": "2026-10-10T14:10:57Z",
+  "attempts": 0,
+  "notes": "All 19/19 shots extracted. Detection rates 54.7%-100%, none below 50% threshold. Outputs in ~/workspace/video-fix-tools/pose-extract/ep02-poses/ with manifest.csv."
+}

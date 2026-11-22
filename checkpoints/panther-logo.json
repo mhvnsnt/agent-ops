@@ -1,0 +1,10 @@
+{
+  "task": "Extract panther tattoo logo from photo",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/western-heart",
+  "resume_brief": "Task complete. If re-running: extract black panther tattoo with red scratch marks from ~/workspace/western-heart/roster/pantera/panther-logo-ref.jpg to ~/workspace/western-heart/roster/pantera/panther-logo.png using the GrabCut + luminance threshold (110) + red color detection pipeline. Final script logic is in the subagent transcript.",
+  "updated_at": "2026-10-12T16:50:00-05:00",
+  "attempts": 1,
+  "notes": "Done. Output: panther-logo.png (436x890 RGBA, transparent bg). Panther solid, all red scratch marks preserved, no skin halo. Verified visually on magenta/white/black backgrounds."
+}

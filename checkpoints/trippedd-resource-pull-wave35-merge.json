@@ -1,0 +1,10 @@
+{
+    "task": "TRIPPEDD resource pull Wave 35 \u2014 merge lane branches via PR into trippedd-studio main, verify honest count 3100+, mark coordinator done",
+    "repo": "/home/hatch/workspace/trippedd-studio",
+    "status": "done",
+    "watchdog": true,
+    "updated_at": "2026-10-08T07:18:01.756306+00:00",
+    "attempts": 0,
+    "resume_brief": "Wave 35 merge step. PRECONDITION: both lane branches origin/wave35-lane-a and origin/wave35-lane-b must exist and be pushed (check with git ls-remote origin). If either is missing, do nothing \u2014 leave status running, update notes. Merge both branches into main via branch->PR->merge (gh pr create, owner-merge-gate pattern; only merge if CI-style checks pass: grep -c ^#### docs/RESOURCE_CATALOG.md must be >=3100, no >100MB binaries). Resolve RESOURCE_CATALOG.md tail-append conflicts by concatenation (Lane A entries then Lane B entries then summaries). After merge, append wave summary to docs/RESOURCE_CATALOG.md (wave 35 totals, honest count). Mark trippedd-resource-pull-wave35.json status done when merged.",
+    "notes": "merged as PR #72 @857f6dd; count 3101 verified on main"
+}

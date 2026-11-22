@@ -1,0 +1,10 @@
+{
+  "task": "Ruthless no-mockup audit of Pocket Studio v2",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/pocket-studio-v2",
+  "resume_brief": "Audit complete. Fixed 7 issues in app.html source (JS syntax verified clean). Fixes: (1) heat view skinIndex bug — si.getX(i*4+k) replaced with si.getComponent(i,k); (2) added 6 baked SFX/BGM reference clips to timeline (burger sizzle, fire/pencil, tongs stop, basketball, Kiko instrumental, fireworks) rendered dashed/locked, non-draggable, excluded from export; (3) project switching now actually switches timelines via LEAF_TIMELINES + loadLeafTimeline — EP02 keeps 16 clips, other leaves get empty timelines with own duration; (4) new Record tab with in-app video recording (MediaRecorder), photo capture, front/back flip — takes drop on timeline at playhead; (5) long-press clip menu now tags RGB split / glitch FX, exported in project JSON for agent render; (6) '+' Add button now actually adds items to project folders; (7) exportProject uses active leaf name and file path. Remaining gaps documented in punch list: MediaPipe real-time mesh warp demo not in-app (links to Effect House/MediaPipe present, honest 'ask agent' label); in-app background removal not built (CapCut + agent pipeline documented); asset-index.json won't load on hosted artifact (falls back to 10-item built-in list, labeled honestly); Blair sheets on expiring muse.ai URLs (alive now, need permanent hosting). Artifact needs rebuild from updated source to ship fixes.",
+  "updated_at": "2026-10-11T18:35:00Z",
+  "attempts": 1,
+  "notes": "All fixes applied to ~/workspace/pocket-studio-v2/app.html. JS syntax verified with node --check. Parent should trigger artifact.edit rebuild to ship."
+}

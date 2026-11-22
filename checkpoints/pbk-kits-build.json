@@ -1,0 +1,9 @@
+{
+ "task": "Build Preston Blair kit PNG parts + manifests for Amos Jr. and old head (no commits)",
+ "repo": "~/workspace/trippedd-studio",
+ "resume_brief": "In ~/workspace/trippedd-studio (branch feat/preston-blair-kits \u2014 do NOT commit, parent commits): build Preston Blair kit part libraries under production/TRIPPEDD_EP01/goodville/kits/amos-jr/ and kits/old-head/ (transparent PNGs + manifest.json each). REUSE tools/smart-extract/proving_run/ parts as donors (amos_full_body.png, amos_head.png, amos_beer_can.png, oldhead_head.png, oldhead_body.png). Extract additional pieces from the key art (assets/references/ep01/source/Goodville - Not South Park.png) with tools/smart-extract/extract.py (sense bboxes via muse.visual_grounding, rembg ladder, verify loop \u2014 NEVER flood-fill). HAND-BUILD pieces the key art lacks (new arm poses, eye/mouth variants, hands) in flat South Park cutout style with colors eyedropper-sampled from the key art. Document extracted-vs-hand-built per piece in manifest.json with key-art anchor measurements + identity checklist. Amos Jr. anchors: shaggy brown hair, mustache+chin goatee, white tank, arm tattoo, BEER can. CRITICAL promo piece: arm_folded_beer.png \u2014 his key-art pose (right arm bent, fist gripping BEER can in front of torso). Old head anchors: bald with fringe, aviator sunglasses, cigarette, black jacket collar/zipper; include mouth_canadian_flap.png (South Park Canadian-style flap mouth \u2014 owner-approved 2026-10-11). Verify EVERY part with own eyes by reading the PNGs. Write files only, no git commits. Report: parts list per character with method per piece, verification notes, anything that could not be built.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T15:15:49+00:00"
+}

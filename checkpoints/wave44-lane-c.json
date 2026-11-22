@@ -1,0 +1,10 @@
+{
+ "task": "Wave44 Lane C tool wiring (whisper.cpp + diarization) \u2014 DONE: committed ba63649, pushed wave44-lane-c",
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "Wave44 Lane C complete: tools/wave44_lane_c/ wired whisper.cpp (MIT) + webrtcvad/MFCC/F0 diarization with real proofs (PROOFS.md, SHA256SUMS); commit ba63649 pushed to origin/wave44-lane-c",
+ "status": "done",
+ "attempts": 1,
+ "notes": "Watchdog 2026-10-08 11:10 UTC: worker marked lane running but work was complete (commit ba63649 on origin/wave44-lane-c, merged to main as d586089, verified in main tree). Status corrected to done; no further work needed.",
+ "watchdog": true,
+ "updated_at": "2026-10-08T11:11:04.974533+00:00"
+}

@@ -1,0 +1,9 @@
+{
+  "attempts": 0,
+  "repo": "~/workspace/trippedd-studio",
+  "resume_brief": "Apply torso/head swap to Goodville EP01 punch frames f0240-f0280. Repo ~/workspace/trippedd-studio. Script: see task. Reference placement from f0280: torso at (574,307) size 444x372 (torso_no_viewerL_arm_CLEAN.png), head at (633,282) width 268px (kits/amos-jr/head.png). Per frame: detect head center via skin-tone centroid in x>600 region, compute dx/dy offset from f0280, cv2.inpaint old character, place torso+head with offset, save to production/TRIPPEDD_EP01/goodville/promo-15s/smart_frames_fixed/fNNNN.png. Commit when done.",
+  "status": "done",
+  "task": "Goodville EP01 punch sequence torso/head swap f0240-f0280",
+  "updated_at": "2026-10-12T17:39:33.730291+00:00",
+  "watchdog": true
+}

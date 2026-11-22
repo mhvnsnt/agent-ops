@@ -1,0 +1,30 @@
+{
+  "lane": "model-intake",
+  "status": "batch2-complete-with-queued-models",
+  "updated": "2026-11-02",
+  "deliverables": {
+    "inventory": "~/workspace/model-intake/INVENTORY.md",
+    "pipeline": "~/workspace/model-intake/INTAKE.md",
+    "setup": "~/workspace/model-intake/SETUP.md",
+    "batch1_manifest": "~/workspace/model-intake/batch1-manifest.json",
+    "batch2_manifest": "~/workspace/model-intake/batch2-manifest.json",
+    "batch2_dir": "~/workspace/model-intake/batch2/"
+  },
+  "inventory_count": {
+    "smutbase_in_pwa": 2,
+    "smutbase_six_in_western_heart": 6,
+    "quaternius_cc0_fbx": 6
+  },
+  "batch2_quota_table": {
+    "models_10": {"got": 0, "queued": 10, "items": ["Essi the Jester", "Poppy", "Qhala", "Eru", "Meru", "Liz", "Eleonore", "O'rn", "Vaira Bunny archetype base", "Vaira Guy archetype base"], "blocker": "SmutBase Anubis proof-of-work bot wall on all plain-HTTP paths (verified); site terms prohibit scraping; browser lane only"},
+    "props_10": {"got": 12, "queued": 0, "note": "quota 10 + 2 spares (Rockingchair_01, brass_vase_01); all Poly Haven CC0 glTF sets, refs resolved, sha256 verified"},
+    "other_10": {"got": 10, "queued": 0, "note": "7 HDRI environments + outdoor_table_chair_set_01 + large_castle_door + modular_chainlink_fence; all Poly Haven CC0, verified"}
+  },
+  "verification": {"files_hashed": 88, "total_bytes": 34568792, "method": "glTF JSON parse + asset.version 2.0 + all buffer/image refs resolve; HDR #?RADIANCE magic; sha256 per file"},
+  "queued_for_browser": {
+    "smutbase_models": "10 named items in batch2-manifest.json (3 with exact project URLs, 7 World of Vaira roster items with the creator's verified character-selection post as reference)",
+    "sketchfab": "no named items this pass; browser lane w/ saved login when picks are made",
+    "rigmodels": "no named items this pass; browser lane w/ saved login"
+  },
+  "blockers": ["SmutBase Anubis bot wall (no bypass attempted — site ToS prohibits scraping)", "/tmp tmpfs was 100% full during the run; one helper script lost only its results-dump write — all downloads were re-verified from disk"]
+}

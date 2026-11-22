@@ -1,0 +1,9 @@
+{
+ "task": "Full backup sweep: push all repos, upload bulk to B2/Drive (owner 2026-10-10)",
+ "repo": "~/workspace",
+ "resume_brief": "Owner 2026-10-10: 'Back it all up where we can I know there's so many permanent storages we have hooked up.' FULL BACKUP SWEEP. Disk is at 85%, blocked items identified by disk-space-guardian: (1) .worktrees/ep01cut (9.2G untracked made content, no cloud uploader), (2) bannon-video-pipe (8.6G unpushed), (3) trippedd-studio-loti-v2/attire-pull/merge-menu-v4 (6.8G dirty/unpushed). Available permanent storage: GitHub (all repos \u2014 push everything unpushed via branch\u2192PR\u2192merge), B2 bucket trippedd-show-footage (private, key used transiently before), Google Drive (episodes). ACTIONS: 1) git status every repo under ~/workspace, push all unpushed commits/branches via PR\u2192merge. 2) For large untracked media (ep01cut 9.2G): upload to B2 trippedd-show-footage bucket or Drive, verify byte-match, then trim local. 3) Document every backup location in ~/workspace/agent-ops/BACKUP-MAP.md. 4) After verified backups, delete local bulk to get disk below 75%. NEVER delete without verified backup. Log all to disk-cleanup-log.md.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-11T05:22:00.829755+00:00"
+}

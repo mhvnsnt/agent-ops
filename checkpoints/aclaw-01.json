@@ -1,0 +1,15 @@
+{
+ "task": "Anti-clobber law propagation batch 01: insert ANTI-CLOBBER LAWS into each repo's AGENTS.md via branch->PR->merge per MERGE-IT-YOURSELF LAW",
+ "repo": "~/workspace/_clobber-audit",
+ "resume_brief": "Continue anti-clobber law propagation for batch file ~/workspace/_clobber-audit/ac-batch-01 (one repo name per line). For each repo: (1) via gh REST API check AGENTS.md exists on main, skip if 404 or if it already contains the string 'ANTI-CLOBBER LAWS'; (2) create branch anti-clobber-laws off main; (3) insert the law text from ~/workspace/_clobber-audit/law-text/ANTI-CLOBBER-LAW.md into AGENTS.md immediately after its first top-level heading line; (4) commit via the contents API on that branch; (5) verify via the compare API that the diff is AGENTS.md-only, additions-only, zero deletions; (6) open PR titled 'ANTI-CLOBBER LAWS (owner 2026-10-17 \u2014 the DXMMII 54k-file wipe)' with a body explaining the law; (7) per MERGE-IT-YOURSELF LAW merge with a merge commit ONLY if mergeable AND CI green AND no deletions; otherwise post a blocker comment naming the GitHub Actions CI outage and leave the PR open. Never force-push, never rebase, never touch other branches or PRs. Heartbeat this checkpoint after every few repos. Final report: per repo one of MERGED (PR number + merge commit sha), OPEN-BLOCKED (PR number + blocker), SKIPPED (reason).",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-17T19:14:13.221029+00:00",
+ "batch_01_summary": {
+  "merged": 0,
+  "open_blocked": 23,
+  "skipped": 2,
+  "errors": 0
+ }
+}

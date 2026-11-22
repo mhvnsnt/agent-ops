@@ -1,0 +1,11 @@
+{
+ "task": "Migrate theyard mecha build into BioMechania (feature/mecha-foundation): part system + viewer + 28 parts + UI + research docs, with contract fixes and QC",
+ "repo": "/home/hatch/workspace/BioMechania",
+ "resume_brief": "Migration worker for the theyard->BioMechania mecha move. Full brief in handoff. Key facts: lanes all HOLD-CONFIRMED (work committed+pushed in theyard); primary source branch feature/mecha-os-pulls (superset) + feature/mecha-ui + feature/mecha-parts; research doc at theyard SHA ca869ee70f0fda658c5488b7f75f87ca8bbd5284 (docs/GENRE_RESEARCH.md, mirror \u00a711->docs/MECHA_CUSTOMIZER_SPEC.md, \u00a713->docs/TRANSFORMATION_MECHANICS.md); destination src/mecha/, docs/, public/mecha/parts/, src/routes/mecha.tsx, src/components/mecha-bay.tsx. MUST FIX during migration: (1) part.json slot plural (arms/legs/shoulders), (2) model=bare filename, (3) arm GLBs socket_weapon->socket_weapon_r + rebuild via tools/mecha-parts/build_parts.py, (4) pair-slot GLBs carry BOTH halves mirrored about socket midpoint. Fill public/mecha/parts/index.json with all 28 ids. Fix typecheck (routeTree regen, viewer private-field). Run QC renders (tools/mecha-parts/render_qc.py + mech_specs.json): 27 parts + 3 mechs x 2 modes x 2 views, inspect each. Reuse local branch feature/mecha-foundation (reset to origin/main first). tsc + build green, then push + open PR (no merge). Heartbeat this file.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T01:57:40.489581+00:00",
+ "note": "Docs done (MECHA_CONTRACT, GENRE_RESEARCH, MECHA_CUSTOMIZER_SPEC \u00a711, TRANSFORMATION_MECHANICS \u00a713). Copying 48 part dirs, then fixing build_parts.py (plural slot, bare model, pair-mirror helper) and rebuilding 12 pair-slot GLBs.",
+ "notes": "COMPLETE. BioMechania is canonical. Theyard retired."
+}

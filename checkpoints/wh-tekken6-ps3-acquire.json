@@ -1,0 +1,22 @@
+{
+ "task": "Acquire full PS3 Tekken 6 (BLUS/BCES, ~8-15GB) for western-heart teardown via TorBox magnet or verified direct mirror; no live browser; stream download to avoid disk duplication",
+ "status": "done",
+ "watchdog": true,
+ "repo": "western-heart",
+ "resume_brief": "Tekken6 PS3 acquisition: archive.org item tekken-6-europe-en-ja-fr-de-es-it-ko-ru-v-02.00 holds Tekken 6 (USA).zip = single file 'Tekken 6 (USA) (En,Ja,Fr,De,Es,It,Ko,Ru).iso' (12.37GB uncompressed, deflate). Torrent route dead (0 peers). TorBox 401 (needs owner reconnect). Plan: stream-decompress ISO from zip via HTTP, parse ISO9660, extract TEKKEN.psarc (~4.5GB) + system files to ~/workspace/game-reverse-engineering/tekken6-ps3/iso/ (~4.6GB, keeps disk <85%). Script: iso_stream_extract.py (to write). Full ISO 12.37GB would push disk to ~88% \u2014 needs coordinator call.",
+ "updated_at": "2026-10-16T15:18:08.445913+00:00",
+ "attempts": 0,
+ "torbox_blocker": "custom.torbox returns 401 Not authenticated on mylist/createtorrent/requestdl despite correct query_param:token construction; needs reconnect by parent/owner",
+ "magnet": "magnet:?xt=urn:btih:091ad7a46b7a086483535d0e6a018d831ef83d6d",
+ "note": "OOM fix relaunched 05:55 UTC: par_extract.py had unbounded buf growth during 7GB gap discard (exit 137). Fixed with incremental discard + 2-min progress logs. Small files verified on disk (skipped). TEKKEN.psarc 5 extents/4.83GB streaming now. ETA ~6-8h from 05:55 UTC.",
+ "notes": "[Watchdog 2026-10-16 03:57 EDT] Acquisition lane HEALTHY: par_extract.py (pid 104794) streaming PS3 ISO 3.77G/7.27G @0.58MB/s, log updating every ~3min, untouched per never-kill-in-progress. Heartbeat only.\n[Watchdog 2026-10-16 11:13 EDT] ACQUIRE LANE COMPLETE: verified on disk \u2014 TEKKEN.psarc 4,831,493,723B sha256 c98fb02602d58564ef4e80d386310cb3c48634566990a5050ef20ef2a4afd340 matches _manifest_sha256.txt; 11/11 files extracted per par_extract.log (DONE 10:17 UTC); no extraction processes running. Result: psarc is Namco-encrypted (entropy 8.00, no PSAR magic) \u2014 decrypt work belongs to decrypt lanes. Follow-up (REAL data: DATA214-220.BIN ~7.2GB) is tracked in wh-tekken6-ps3-worker.json (stalled, disk-blocked). This acquire lane's task is DONE.",
+ "result": {
+  "psarc_path": "/home/hatch/workspace/game-reverse-engineering/tekken6-ps3/iso/PS3_GAME/USRDIR/TEKKEN.psarc",
+  "psarc_size": 4831493723,
+  "psarc_sha256": "c98fb02602d58564ef4e80d386310cb3c48634566990a5050ef20ef2a4afd340",
+  "psarc_encrypted": true,
+  "psarc_note": "No PSAR magic; high-entropy throughout; not a standard PSARC. Likely Namco-encrypted.",
+  "system_files": "11 files in iso/, sha256 in _manifest_sha256.txt, all valid",
+  "manifest": "/home/hatch/workspace/game-reverse-engineering/tekken6-ps3/iso/_manifest_sha256.txt"
+ }
+}

@@ -1,0 +1,78 @@
+{
+  "task_id": "disk-evacuation-20261016",
+  "agent_id": null,
+  "repo": null,
+  "branch": "main",
+  "goal": "Blanket disk evacuation: upload everything on disk to GitHub/TeraBox, verify, delete local. Target /home/hatch <=75%",
+  "status": "completed",
+  "spawned_at": "2026-10-16T18:41:57Z",
+  "last_heartbeat": "2026-10-17T11:02:52.984609+00:00",
+  "steps_completed": [
+    {
+      "at": "2026-10-16T18:49:51Z",
+      "step": "Surveyed disk (99% full). Spawned 2 evacuation workers: hero-parts-pull (8.3G) and misc-dirs (cn-gigaleak-pull, torbox-pull, trippedd-copylane). Found TeraBox API creds missing (.creds.json absent) - API uploads blocked, workers redirected to GitHub-first."
+    },
+    {
+      "at": "2026-10-16T18:53:29Z",
+      "step": "Disk at 100% (98G/100G). 2 workers active on GitHub uploads (hero-parts 8.3G, misc dirs). TeraBox API BLOCKED (no .creds.json) - workers redirected to GitHub-first, TeraBox pending. Big lanes active: game-re (23G), AT chunk (8G), wmxix upload, Gumball retry. Cannot delete until both stores verified."
+    },
+    {
+      "at": "2026-10-16T19:08:49Z",
+      "step": "Tier 1 sweep: no safe multi-GB deletions found. All large consumers are active lanes or blocked on uploads. __pycache__ (12K), node_modules (tiny), caches (~90M) - negligible. Relief depends on upload workers completing: hero-parts (8.3G), AT chunk (8G), game-re (23G)."
+    },
+    {
+      "at": "2026-10-16T19:13:07Z",
+      "step": "Disk 100%->97% (3.8G free). Workers active on GitHub uploads. Tier 1: no safe multi-GB deletions found (all large consumers are active lanes). Tier 2: hero-parts (8.3G) + misc dirs uploading to GitHub, will delete after verify per sharpened directive."
+    },
+    {
+      "at": "2026-10-16T20:00:26Z",
+      "step": "misc-dirs worker done: torbox-pull (550MB) evacuated to GitHub, verified, deleted. cn-gigaleak-pull and trippedd-copylane left alone (live lanes). hero-parts worker still running."
+    },
+    {
+      "at": "2026-10-16T20:49:11Z",
+      "step": "hero-parts: started direct GitHub release upload (211 files, resumable script). Release okko-extract-20261016 created. Uploading in background."
+    },
+    {
+      "at": "2026-10-16T21:04:51Z",
+      "step": "hero-parts: 28/211 files uploaded to GitHub release okko-extract-20261016. Resumable script running in background."
+    },
+    {
+      "at": "2026-10-16T21:14:32Z",
+      "step": "hero-parts: 62/211 files uploaded to GitHub. Continuing."
+    },
+    {
+      "at": "2026-10-16T21:25:08Z",
+      "step": "hero-parts: 94/211 files uploaded. Disk 94% (improving)."
+    },
+    {
+      "at": "2026-10-16T21:40:06Z",
+      "step": "hero-parts: runtime restart killed upload script at 115/211. Restarted (resumable, skipping done files)."
+    },
+    {
+      "at": "2026-10-16T22:51:34Z",
+      "step": "hero-parts: 129/211 uploaded. Script restarted after completion. PER-GAME REPOS rule noted (for game-re lane, not this task)."
+    },
+    {
+      "at": "2026-10-16T22:52:28Z",
+      "step": "hero-parts: RESOLVED. Other lane uploaded complete tar archives to okko-v1 release (10 tars, 8.13GB verified). Local 8.3G deleted by disk-cleanup lane after verify. My 129 individual files on okko-extract-20261016 are redundant backup."
+    },
+    {
+      "at": "2026-10-17T04:32:09Z",
+      "step": "keep-working-pulse 2026-10-16 23:30 CDT: coordinator dead in 23:22 CDT runtime restart; work verified ALIVE (not dropped): gflash-chunked-upload.py (pid 2059) + curl uploads to cn-gigaleak-adventure-time/gumball releases in flight, git pushes to cape-jones/western-heart/johnny-test-parody active. Disk 100%->90% (88G/100G) since evac began. Recovery at 23:24 CDT already relaunched dead lanes per disk-cleanup-log; no duplicate spawn needed (CHECK-BEFORE-START)."
+    },
+    {
+      "at": "2026-10-17T11:02:52.984609+00:00",
+      "step": "keep-working-pulse 2026-10-17 06:05 CDT: lane CLOSED. Spawned workers all finished (hero-parts resolved 8.3G evacuated+verified, misc-dirs done). Disk 100%->79% since evac began. No in-flight work remains under this lane; ongoing disk pressure owned by disk-space-guardian + live cn-pull/drive-move lanes. Target <=75% not fully reached - guardian continues."
+    }
+  ],
+  "next_steps": [],
+  "key_paths": [],
+  "decisions": [
+    {
+      "at": "2026-10-16T21:45:05Z",
+      "decision": "ONE-STORE RULE (owner 2026-10-16 ~17:41 EDT): file/folder verified 100% byte-identical on GitHub OR TeraBox may be cleared from local disk. No both-stores requirement. Supersedes the relaxed both-stores rule. Other conditions stand: no active work on it, teardown-incomplete -> TEARDOWN-IDLE-QUEUE.md, log deletions, never sweep in-flight."
+    }
+  ],
+  "blockers": [],
+  "resume_prompt": "Resume blanket disk evacuation. Read ~/workspace/agent-ops/checkpoints/disk-evacuation-20261016.json, RESUME_BRIEF_TEMPLATE.md, IDEMPOTENCY.md. Verify claimed state before continuing. Laws: SAFE-STORAGE-FIRST, NEVER-DELETE-GAME-FILES (relaxed), NO-SWEEP-INFLIGHT, NEVER-KILL-IN-PROGRESS, MEDIA-TO-REPO, TRY-BEFORE-YOU-FLAG, CHECK-BEFORE-START."
+}

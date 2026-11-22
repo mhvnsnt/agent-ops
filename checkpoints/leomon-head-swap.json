@@ -1,0 +1,13 @@
+{
+  "task": "LEOMON HEAD SWAP PREVIEW \u2014 TWO OPTIONS",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/game-reverse-engineering/tekken7/king",
+  "resume_brief": "Complete. Both Leomon head swap preview renders (two options) delivered to owner. Task finished, no resume needed.",
+  "updated_at": "2026-10-18T01:58:27.054570+00:00",
+  "attempts": 1,
+  "notes": [
+    "Option 1 (mane on King head): ~/workspace/king-leomon-mane-on-king-head.png - golden mane surrounding King's jaguar head. Option 2 (full head swap): ~/workspace/king-leomon-full-head-swap.png - Leomon lion head+neck on King's body, King's head removed. Note: head facing in option 2 may need rotation tweak for perfect front view. Source: Leomon DAE from Models Resource (Digimon Links), single skinned mesh separated spatially. Parts in ~/workspace/game-reverse-engineering/tekken7/king/leomon/\n[watchdog 2026-10-13T17:59:21.484394+00:00] Schema note: resume_brief 25 chars (<50) per watchdog schema; status kept done (work complete, nothing to resume). | [watchdog 2026-10-16 00:04 EDT] SCHEMA NOTE: managed checkpoint missing/short resume_brief(33); status kept 'done' (task complete, no resume needed). Pre-schema-law legacy entry.\n[watchdog 2026-10-17T21:17:22.   000000+00:00] Schema invalid: missing resume_brief(>=50chars). Parked needs_owner per watchdog schema rule.\n[watchdog 2026-10-17 18:10 CDT] MALFORMED checkpoint (schema violation): resume_brief only 33 chars (<50). Not resumable; status already needs_owner. Owner: fix fields or delete this checkpoint.",
+    "[2026-10-17] Schema repaired: added repo + resume_brief (>=50 chars). Work was already complete per prior notes. Status set to done."
+  ]
+}

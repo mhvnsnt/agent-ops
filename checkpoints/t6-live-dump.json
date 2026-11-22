@@ -1,0 +1,10 @@
+{
+ "task": "T6 100%: live PPSSPP RAM dump via Xvfb to bypass PRNG blocker, extract all files (owner order 2026-10-14)",
+ "repo": "western-heart",
+ "watchdog": true,
+ "attempts": 3,
+ "status": "needs_owner",
+ "resume_brief": "Owner ordered T6 100% into western-heart. STATE CORRECTION (2026-10-15): DINF_400.BIN on disk is 120 bytes, NOT a 2169-entry manifest \u2014 the old brief claim was wrong. Actual state: EBOOT decrypted, 46 PMF videos extracted, DATA401.IDX (26KB) + data region still encrypted. K1/K2 derivation analyzed in tekken6/docs/K1K2-CALL-SITE-ANALYSIS.md (per-sector keys extracted from sector data via EBOOT tables; sites 4-5 = DATA401 path). BLOCKER: the AppImage live-dump path does NOT work on this VM \u2014 PPSSPPSDL is static-pie with SDL2 statically linked and its audio init hard-requires PulseAudio (not installed); SDL_AUDIODRIVER=dummy and SDL_AUDIODRIVER=alsa+null-asoundrc are both ignored (3 attempts, identical PulseAudio failure under xvfb-run). VIABLE PATH: build ppsspp-headless from source (no SDL audio/video; null GPU still runs the CPU emulation where KIRK/PRNG decryption happens) with a small patch to dump the 64MB emulated RAM after N frames, then scan for GMO/TIM2 magic. Needs owner call on build time vs accepting current TEARDOWN.md state. LAWS: NEVER-DELETE-GAME-FILES, NO-DEFERRAL, disk ceiling 88% (currently 69%).",
+ "notes": "2026-10-15 watchdog attempt 3: tried documented live-dump path \u2014 extracted PPSSPP.AppImage to squashfs-root (no FUSE on VM), booted tekken6-psp.iso under xvfb-run 3 ways: (a) default SDL \u2014 died \"Could not setup connection to PulseAudio\"; (b) SDL_AUDIODRIVER=dummy \u2014 same failure; (c) SDL_AUDIODRIVER=alsa with ~/.asoundrc null default \u2014 same failure. Static-pie SDL2 ignores SDL_AUDIODRIVER; no pulseaudio/pipewire binaries on VM. Conclusion: AppImage GUI path dead on this VM; headless-source build is the only live-dump route. Escalating per attempts>=3 rule.",
+ "updated_at": "2026-10-15T10:17:13.053114+00:00"
+}

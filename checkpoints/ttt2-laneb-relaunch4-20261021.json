@@ -1,0 +1,51 @@
+{
+ "attempt": 4,
+ "blockers": [
+  "restart wave (runs die ~35min); throttle (0.5MB/s)"
+ ],
+ "disk": "85% (15G free) \u2014 healthy",
+ "evidence": {
+  "7z": "ONE SOLID LZMA stream; strictly monotonic, no backward seeks; read_bytes math confirmed (stream + concat, not a re-read bug)",
+  "god": "GoD = Title ID 4E4D0859 (Namco EU); 52 DataXXXX x170MB; 45KB descriptor ALSO in repo extracted-small/ (2026-10-13) \u2014 fallback confirmed",
+  "network": "public release URL throttled; gh api range test 235KB/s (worse); 4 workers now (gentler)",
+  "release": "ttt2-7z-v1 26/26 chunks, 13,363,624,393 bytes total",
+  "xdvdfs": "game partition sector 129856; sector 32 = video partition (reader fixed)"
+ },
+ "last_update_utc": "2026-10-22T11:30:00Z",
+ "next": [
+  "Phase 2: per-fighter extraction from Namco dataNNN.bin containers (magic bytes first, no format names without them); extend ttt2_virtual_god.py --pull for sector-range pulls; per PHASE2-PLAN-DRAFT.md wave order"
+ ],
+ "phase": 2,
+ "progress": [
+  "COMMITTED + PUSHED 7a74248 (REMOTE7Z_WORKERS default 4)",
+  "run #2 killed by restart at 75min/3.6GB \u2014 no data lost, spool (chunks 6,7 + tail cache) intact",
+  "run #3 LAUNCHED with 4 workers (vs 8) to ease throttle pressure",
+  "fallback verified: GoD header already in repo extracted-small/, only Data0000/1 strictly need the stream",
+  "run #3 SURVIVED the runtime restart (proc_21d884b34310 alive, streaming chunk 3/26); stale kill notifications for runs #1/#2 disregarded",
+  "run #3 killed by runtime restart (~35min in, at chunk 3); run #4 LAUNCHED (proc_3ac25ebdf567) \u2014 spool resume: chunks 1-2 cached, chunk 3 partial resumes, chunks 6-7 stale-cached",
+  "run #4: stream reached chunk 8 (~3.7GB); cached chunks 6-7 consumed without re-download; targets at ~4.7GB (chunk 10); ~45-90 min remaining at throttle rate",
+  "BREAKTHROUGH: targets EMERGED at ~4.7GB (header 45,056B complete; Data0000 70% when run #4 killed by restart); run #5 LAUNCHED to re-stream and complete Data0000+Data0001 (chunks 8,9 cached)",
+  "PIVOT: killed run #5 (3min in) to pre-cache chunks 1-10 locally (5.24GB, disk 91% has headroom); future streams run at disk speed not throttle speed. Pre-cache live (proc_0e3a07d383a6).",
+  "run #6 LAUNCHED via nohup (PID 23066, survives wrapper death); LRU will evict cached 1-4 as stream advances, freeing disk before chunk 5 download",
+  "run #6 killed (curl empty-range transient + restart); run #7 LAUNCHED via nohup; spool has 4,5 cached",
+  "run #7 streaming (chunk 2/10 region); confirmed single solid block (numfolders=1, no seeking); disk healthy",
+  "run #7 killed by restart (at chunk 6 download); run #8 LAUNCHED via nohup; spool has 2,3,4,5",
+  "ATTEMPT 4: run #8 (PID 1729) VERIFIED ALIVE via /proc \u2014 attempt-3 claim of death was WRONG (shell died, process survived). NO relaunch: CHECK-BEFORE-START/NO-DUPLICATE-WORK laws. utime growing (16s/90s), re-downloaded chunk 1 @08:53Z, decompressing solid LZMA stream; spool chunks 1-5 intact, part_06.tmp r0-r3 at 0 bytes (stream not yet past chunk 5 region).",
+  "ATTEMPT 4: run #8 DIED at targets with XdvdfsError bad magic at sector 129856 \u2014 root cause found: GoD stream is a BARE GAME PARTITION (descriptor at image sector 32 = 0x10000), NOT XGD2 disc offset. xverter format notes confirm; verified empirically (sector 32 descriptor valid, root table sector 3231).",
+  "tools/ttt2_virtual_god.py + tools/xdvdfs_reader.py FIXED (GAME_PARTITION_SECTOR=32, evidence comments), synced to repo.",
+  "INNER LISTING COMPLETE: 78 files / 2 dirs / 8,402,073,168 bytes. 42 Namco dataNNN.bin (020-024,029-033,048-049 genuinely absent, raw-scan verified) + Default.xex + nrfo.bin + nxeart + AvatarAssetPack + 32-file $SystemUpdate. Walk verified by tree-walk AND linear raw-table scan (exact match).",
+  "COMMITTED+PUSHED bd2b393 on feat/ttt2-teardown-100 (INNER-LISTING.md, ttt2-inner-listing.json, 2 tool fixes). NOT merged (per instructions).",
+  "godwork/ keeps Data0000+Data0001 (340MB, disk 85%) for Phase 2 pulls; reproducible from release ttt2-7z-v1 at any time."
+ ],
+ "research_pullins": [
+  {
+   "license": "GPL-3.0 (do NOT vendor into western-heart without owner call; format-reference use only)",
+   "source": "https://github.com/Kiloutre/TekkenMovesetExtractor (ARCHIVED, OBSOLETE) -> successor Kiloutre/TKMovesets",
+   "status": "reference only, not vendored",
+   "unlocked": "TTT2 moveset binary layout (Tag2Aliases.py field map); Phase 2 moveset parsing plan",
+   "what": "Kiloutre TTT2 moveset format knowledge"
+  }
+ ],
+ "status": "phase1_complete",
+ "task": "store-first streaming extraction: full inner file listing of TTT2 GoD image from chunked 7z via gh API"
+}

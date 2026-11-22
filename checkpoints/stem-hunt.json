@@ -1,0 +1,10 @@
+{
+  "task": "Comprehensive stem hunt for Wizard Gang EP02 - find all dialogue clips, BGM, SFX, build scripts",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/pocket-studio-v2",
+  "resume_brief": "Continue the comprehensive stem hunt for Wizard Gang EP02 audio components. The task is to find: (1) all 16 dialogue clips and verify they exist with durations/sizes, (2) BGM/music including the Kiko instrumental cue, (3) SFX files (burger sizzle, fire, pencil, tongs, basketball, fireworks), (4) build scripts showing how v8b/v7/v6 were assembled, (5) any other stems like ambient beds. Output a complete inventory to ~/workspace/pocket-studio-v2/EP02-STEMS-INVENTORY.md organized by Dialogue/BGM/SFX/Ambient, note what's missing, copy all found stems to ~/workspace/pocket-studio-v2/assets/stems/ organized by category, and update the app timeline to reference these. Checkpoint file is ~/workspace/agent-ops/checkpoints/stem-hunt.json - update updated_at after each major step.",
+  "updated_at": "2026-10-11T22:00:00-05:00",
+  "attempts": 1,
+  "notes": "COMPLETE. Found and organized: 17 dialogue files (16 EP02 clips + N2), 4 BGM files (Kiko instrumental, Kiko 8s cue, music-bed-5min, ritual-drums), 20 SFX scene beds (s10-s29 with exact timeline positions), 3 ambient files. Total 44 files, 117MB in ~/workspace/pocket-studio-v2/assets/stems/. Inventory at ~/workspace/pocket-studio-v2/EP02-STEMS-INVENTORY.md. Key finding: Static lines existed as WAVs in voice-clone-work/static/ep02_lines/ (not as MP3s at the app-referenced path). Scene beds s10-s29 are the separate SFX stems with timestamps."
+}

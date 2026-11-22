@@ -1,0 +1,10 @@
+{
+ "task": "Rewrite teardown/wmxix/TEARDOWN.md to canonical doc reflecting all WMXIX teardown work; consolidate local docs/tools into repo; commit on branch feat/wmxix-teardown-rewrite, PR, merge.",
+ "repo": "~/workspace/western-heart",
+ "resume_brief": "WMXIX TEARDOWN.md rewrite for western-heart. Checkpoint schema written. Work so far: checkpoint created. Remaining: (1) read current TEARDOWN.md, ARENA-UNIVERSE-MAP.md, teardown/wwe-wrestlemania-xix/docs/, ~/workspace/game-reverse-engineering/wwe-wrestlemania-xix/, teardown/wmxix/arenas/ARENA-FORMAT.md; (2) rewrite teardown/wmxix/TEARDOWN.md as complete canonical doc (ISO verification, 5016-entry file structure, 70-bone skeleton, YOBJ wrestler s16x3/64 + arena f32 big-endian, YANM 56-byte header, 43 arena OBJs + universe map, tools, blocked: face indices, full YANM channel mapping, CAW edit_data); (3) copy best-of local docs/tools into teardown/wmxix/ or teardown/wwe-wrestlemania-xix/ per layout; (4) git checkout -b feat/wmxix-teardown-rewrite, commit, push --no-verify, open PR via gh, merge, verify zero open PRs; (5) mark checkpoint done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-13T12:28:48.138235+00:00",
+ "notes": "DONE 2026-10-13. TEARDOWN.md rewritten (53->153 lines, canonical). Consolidated into teardown/wwe-wrestlemania-xix/: WRESTLER-SKELETON.md, YANM-TEKKEN3-RETARGET.md, 6 JSONs, 3 render PNGs, 19 tools, 2 strip OBJs. Fixed stale ARENA-FORMAT.md wrestler section. Commit 56a4405 on feat/wmxix-teardown-rewrite -> PR #28 (https://github.com/mhvnsnt/western-heart/pull/28) merged as 6338654. Zero open PRs repo-wide."
+}

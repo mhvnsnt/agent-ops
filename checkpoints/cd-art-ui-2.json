@@ -1,0 +1,9 @@
+{
+ "task": "Full custom UI/HUD/menu art pass, all wired in-game, for Concrete Dragon",
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "CUSTOM UI ROUND 2 for Concrete Dragon (~/workspace/ConcreteDragon). Owner directive: full custom UI and HUDs, all custom art and menu art HOOKED UP and working in the game \u2014 not assets sitting in a folder. Round 1 (PR #17, merged) did: Saira Stencil One font, damage ghost bars, combo pop, KO glow. Round 2 goes further: (1) CUSTOM HUD REDESIGN \u2014 health bars, energy meter, combo counter, boss HP bars, score display: fully custom-styled, cohesive, wired into gameplay. (2) MENU ART \u2014 title screen, character select, pause menu: custom backgrounds/panels/frames in the game's blocky-fighter style, wired in. (3) CUSTOM UI ELEMENTS \u2014 buttons, panels, banners, popups, all styled to match. Everything must be IN the game and functional. Free-first: Kenney UI packs, game-icons.net (CC BY, credited), OFL fonts. Strictly the game's existing visual style. Use a dedicated worktree: git worktree add ~/workspace/ConcreteDragon-art-ui-2 art-ui-2. Branch art-ui-2 -> PR -> merge (never direct to main). Heartbeat ~/workspace/agent-ops/checkpoints/cd-art-ui-2.json after every step; incremental commits. Verify with playtests + captures of EVERY screen touched, your own eyes. Obvious-defect checklist every playtest.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-09T18:05:33.949991+00:00"
+}

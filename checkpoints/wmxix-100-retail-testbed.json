@@ -1,0 +1,9 @@
+{
+  "attempts": 0,
+  "repo": "~/workspace/wmxix-mod-testbed",
+  "resume_brief": "Continue WMXIX lane (d) TESTBED REBUILD: repo ~/workspace/wmxix-mod-testbed, branch fix/testbed-real-assets. Goal: testbed/ loads REAL WMXIX OBJs (wrestler_000.obj, wrestler_001.obj, arena_02.obj as Points) instead of procedural capsules. DO NOT touch controls (verified vs Prima guide). Replace buildWrestler capsule bodies with real meshes attached to Bip Pelvis groups; generalize loadHeadModel into loadOBJ(url,{color,scale}) with computeVertexNormals fallback. Keep temp mat plane marked TEMPORARY. Screenshot-verify via local-playwright-browser skill + python3 -m http.server. Then commit, push, open PR, MERGE-IT-YOURSELF LAW applies (clean green PR \u2192 merge). Checkpoint at ~/workspace/agent-ops/checkpoints/wmxix-100-retail-testbed.json.",
+  "status": "done",
+  "task": "WMXIX 100% Retail lane (d): rebuild testbed/ to load REAL WMXIX assets instead of procedural capsules \u2014 generalize OBJ loader, player=wrestler_000.obj, dummy=wrestler_001.obj, arena_02.obj as THREE.Points + temp mat plane, controls/HUD untouched, screenshot-verify with playwright, commit/push branch fix/testbed-real-assets, open PR, merge",
+  "updated_at": "2026-10-16T00:35:00-04:00",
+  "watchdog": true
+}

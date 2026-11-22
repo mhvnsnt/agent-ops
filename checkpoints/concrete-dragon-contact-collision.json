@@ -1,0 +1,11 @@
+{
+  "task": "Build REAL contact collision for Concrete Dragon: hitboxes on attacks + hurtboxes on bodies, zero interpenetration, hits connect with hit-stop and knockback",
+  "repo": "/home/hatch/workspace/ConcreteDragon",
+  "resume_brief": "Owner directive 2026-10-09 (angry, precise): bodies/heads/hands still phase through each other. PR #12's ground-plane circle colliders only separate body CENTERS - a punch's fist still passes through the opponent's head because there are no hitboxes. Build REAL brawler-standard contact collision in ~/workspace/ConcreteDragon: (1) HURTBOXES: every fighter gets a head sphere + torso capsule, positioned from actual joint/bone positions each frame. (2) HITBOXES: every attack (jab, heavy, lunge, special, boss attacks) defines a hitbox active ONLY during strike frames, positioned at the striking limb. (3) ON CONTACT: register hit once per attack; HIT-STOP both fighters ~90ms; impact VFX + damage (systems exist); KNOCKBACK/LAUNCH the defender away; the attacker STOPS advancing - the fist never continues through the head. (4) KEEP PR #12's ground-plane body separation as the base layer; run separation after knockback resolution. (5) GRAPPLES: positional lock with fixed offsets, no interpenetration. DEFINITION OF DONE: scripted playtest driving EVERY attack type into an idle defender, measuring min mesh distance during strike frames - must never go negative. A punch at a face shows fist STOPPING at the face with impact flash + defender knockback, never fist-inside-head. Verify with before/after captures, your own eyes on the frames. Must not break combos/counters/specials - full combat regression via the repo's playtest scripts. Branch contact-collision -> PR -> merge (never straight to main). NOTE: PR stack #1-13 is being merged into main right now - pull latest main and build on top (PR #12's circles are your foundation, keep them). Heartbeat ~/workspace/agent-ops/checkpoints/concrete-dragon-contact-collision.json after every step; incremental commits.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 1,
+  "updated_at": "2026-10-09T16:46:00+00:00",
+  "last_step": "DONE: PR #16 (contact-collision) merged into main. Hitbox/hurtbox system live. All verifications passed.",
+  "pr": "https://github.com/mhvnsnt/ConcreteDragon/pull/16"
+}

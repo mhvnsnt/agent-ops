@@ -1,0 +1,10 @@
+{
+ "attempts": 0,
+ "repo": "western-heart",
+ "resume_brief": "You are the DXMMII rig-transfer-fix worker. Read ~/workspace/dxmmii-limbs/KNOWN_ISSUE_EXTRA_ARMS.md, BUILD.md, and the real-transfer scripts in ~/workspace/dxmmii-limbs/scripts/. Fix three visible defects in ~/workspace/dxmmii-limbs/renders/real/: (1) state_attached.png \u2014 extra arms FLOAT above shoulders, must MEET torso at shoulder sockets (~z=0.28); (2) state_hidden.png \u2014 an extra arm visible when both should be hidden (hide_render keyframes likely target proxy object names, not real arm objects); (3) orphan fragments in growing/retracting states \u2014 re-run fragment assignment with the two-zone spatial filter from ~/workspace/dxmmii-limbs/viz/prep.py (z>0.38: |y|>=0.09 to arms; z in [0.33,0.38]: |y|>0.15; plus small-fragment proximity pass <5000 verts within 0.04 of arm boxes). Fix the RIG (bone positions, hide targets, fragment assignment), no hand-tooling, no faking frames. Acceptance: attached 4 arms connected at sockets, hidden 2 arms zero extra-arm geometry, growing/retracting mid-transition no orphans, detached arms free, detach/reattach deltas <1mm (no Pinv regression). Deliverable: fixed blend, 5 re-rendered state images (eyes-QC'd), updated measurements. NEVER-KILL-IN-PROGRESS (Track 2 Forge3D running). Disk ~81%, 88% ceiling \u2014 report df -h in heartbeats. Checkpoint file: ~/workspace/agent-ops/checkpoints/dxmmii-transfer-fix-worker.json (heartbeat updated_at every 15 min, mark done at end).",
+ "status": "done",
+ "task": "DXMMII rig-transfer-fix: fix floating extra arms at shoulder sockets, broken hide_render targets, and orphan fragments in the real-model rig transfer; re-render and QC all 5 states; preserve Pinv fix (<1mm deltas).",
+ "updated_at": "2026-10-16T12:37:29.951961+00:00",
+ "watchdog": true,
+ "result": "All 3 defects fixed. 5 states re-rendered and eyes-QC passed. Measurements PASS (<1mm). Committed d9bab06."
+}

@@ -1,0 +1,9 @@
+{
+ "task": "Wave 17: VFX variety (TIER 6 item 25) \u2014 Kenney particle-pack sprites for KO bursts, hit impacts, special VFX",
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "CONCRETE DRAGON pipeline driver wave 17. Repo: /home/hatch/workspace/ConcreteDragon (clone mhvnsnt/ConcreteDragon). State: waves 11-16 DONE, PRs #1-#6 all OPEN awaiting OWNER merge \u2014 NEVER merge. CI on main green. This tranche (TIER 6 item 25): wire kenney_particle-pack.zip (CC0 Kenney PNG sprites, staged at game/assets/staging/vfx/kenney_particle-pack.zip) into the 3D brawler's VFX: KO bursts (circle/smoke/spark sprites), hit-impact pops (muzzle/star/flare), special-move VFX (magic/flame), dust/smoke for edge-bounce wall thuds. Implement as billboarded sprite bursts in game-3d (no new deps; CC0 needs asset-manifest.json entries + ASSETS_CREDITS.md credit per license policy). Playtest headless per prior-wave convention (see qa/playtest-*.mjs scripts + game-3d shots dirs): boot, KO burst fires, hit impact pops, special VFX, zero console/page errors, screenshots saved and eyes-on verified by YOU (the worker) \u2014 per deliverable verification law, attach proof (which frames checked). Branch wave17-vfx off main, commit incrementally, push, open PR #7 \u2014 do NOT merge (owner is merge gate). Heartbeat this checkpoint every <=10 min (updated_at), mark status done at end. Laws: game must actually work, no fake gameplay, slow-mo only for big moments, style-not-power, CC0/manifest clean, localStorage save persists.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-09T09:10:34.206585+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "task": "Fix PWA icon 404 in Concrete Dragon build",
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "SMALL FIX for ConcreteDragon: the built HTML references dist/icons/icon-192.png but node build.mjs outputs icons to dist/pwa/icons/ \u2014 dist/icons/ doesn't exist, so PWA install icons 404 on boot. Fix the packaging: either output icons to dist/icons/ or update the HTML reference to dist/pwa/icons/. Verify: rebuild, confirm no 404, icons load. Use a dedicated worktree. Branch pwa-icon-fix -> PR -> merge (no open PRs law). Heartbeat ~/workspace/agent-ops/checkpoints/cd-pwa-icon-fix.json. Report when merged.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-09T19:52:54.394308+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "task": "Wire all leak research outputs into correct repos with documentation",
+ "repo": "~/workspace",
+ "status": "done",
+ "attempts": 0,
+ "resume_brief": "COMPLETE. All leak research wired: trippedd-studio PR #236 merged (master index + 7 per-show files + templates), God-molecule-production-stage PR #12 merged (Xavier/AT index + templates), wizard-gang-storage and God-Molecule-Show-Studio got docs/STEAL-LIKE-ARTIST-INDEX.md via GitHub API direct to main, pocket-studio-v2 app.html Study tab expanded to full spectrum. No further work needed.",
+ "watchdog": true,
+ "updated_at": "2026-10-12T14:03:05.766249+00:00"
+}

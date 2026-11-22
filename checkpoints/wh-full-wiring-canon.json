@@ -1,0 +1,215 @@
+{
+ "task": "FULL WIRING + CANON CONVERSION: Tekken 3, WWF No Mercy, WMXIX, Eastern Mind teardowns in mhvnsnt/western-heart \u2014 complete file inventory per game, wire everything not wired, canon-convert all third-party identity into WH canon (rename-map discipline), verify 100% accounted for.",
+ "repo": "mhvnsnt/western-heart",
+ "status": "COMPLETE \u2014 all four games wired+converted+verified; all 5 PRs merged to main",
+ "watchdog": false,
+ "attempts": 1,
+ "updated_at": "2026-10-20T16:58:10.460321+00:00",
+ "resume_brief": "Coordinator lane for owner order 2026-10-20 08:06 CDT. Fan out one sub-lane per game (tekken3 / wwf-no-mercy / wmxix+wwe-wrestlemania-xix reconcile / eastern-mind), each producing teardown/<game>/WIRING-INVENTORY.md + wiring PRs + CANON-CONVERSION.md; then a separate verification sub-lane re-walks all inventories so every file ends WIRED+CONVERTED or FLAGGED with a named reason. Inventories from git trees 2026-10-20: tekken3=19435 blobs, wwf-no-mercy=18544, wmxix=1560, wwe-wrestlemania-xix=148, eastern-mind=5707 (total 45394).",
+ "acceptance_bar": "Owner 2026-10-20 ~08:08 CDT: the end state of the wiring is a game that actually FEELS like playing Tekken when he plays it \u2014 his words: right now it doesn't. Wiring that doesn't move the build toward that feel is not done. Lanes flag feel-blocking gaps (input response, moveset completeness, animation playback) with specifics in per-game reports.",
+ "staging_law": "Owner 2026-10-20 ~08:08 CDT: the proprietary/canon layer is ADDITIVE on top of complete wiring. Conversion (renames, canon folding) must never degrade or break wired function: no hand-tooling damage, additions over alterations.",
+ "per_character_isolation_law": "Owner 2026-10-20 ~08:10 CDT: every character's skeleton, animations, and add-ons are SEPARATE and stay separate. Extra arms (Dxmmii), jiggle bones, wings, extra hands/wrists live ONLY on their own character's skeleton/animation set, added onto that character's own already-working Tekken-derived skeleton. NEVER edit a shared rig, shared animation data, or global pose/retarget code in a way that changes any other character's stance, pose, or animations. If wiring a character seems to require touching shared state, isolate per character instead and flag it in the report. Violations are breakage, not progress.",
+ "games": {
+  "tekken3": {
+   "teardown_blobs": 19435,
+   "status": "lane_complete_pending_verification",
+   "inventory": "teardown/tekken3/WIRING-INVENTORY.md (in PR #382; lane total 19,477 incl. 40 lane-added + 2 records)",
+   "wired_before": "87 WIRED (74 game-layer + 9 parsers + 4 extraction sources) + 20 PARTIAL; 19,301 SOURCE-ONLY reference (17,116 TIM decodes + 1,957 vendored recompile + renders/docs)",
+   "extraction_closed": "13 motion banks (not 10) sliced from in-repo TEKKEN3.BNS via teardown's own bns-table.pkl, EVERY bank triple-verified (size + header byte + SHA-256 prefix vs BNS-ORGANIZATION-PATTERN.md); movesets parsed for all 13 with tools/local/moveset_extract.py: 5,663 rows (paul 372, law 459, lei 604, nina 529, hwoarang 496, eddy 436, julia 360, kuma 303, ogre 330, anna 560, bosconovitch 647, gon 369, forestlaw 198)",
+   "newly_wired": "39 files at teardown/library layer (13 banks + 26 moveset files) + moveset-library index now consumes all 20 banks; Heihachi stance OBJ PARTIAL->bake-input. HONEST LIMIT: NOT game-layer wired \u2014 schema-v2 game-moveset conversion pending (flag)",
+   "converted": "6 files (CANON-CONVERSION.md, CANON.md appendix, RENAME-MAP.md appendix, ANIMATION-INDEX.json, MOVES-LIBRARY.md, MOVESET-SUMMARY.md) covering 20 banks + 20 movesets",
+   "claims_audited": "#243 MERGED verified (MOVESET_IDS 73 fighters, proxies honestly marked); #242/#261 MERGED (mode keys in modes.js); #247 T3 portion exact (15 stages, T3_RETRO registry). Brief errors corrected: PR #252 is DOA Bass NOT T3 round-2 (round-2 T3 movesets did not exist before this lane); extract_fighter.py does not exist (real parsers in tools/local/)",
+   "flagged": [
+    "Mokujin divmot15 \u2014 format blocker w/ evidence: BNS record 295 size 0, bank not on this disc image (owner source decision: needs different disc image)",
+    "Heihachi anim decode \u2014 format blocker w/ evidence: KMD rows for parts 2/9/13 carry 0 vertices in BOTH P1 (BNS 191) and P2 (BNS 195), verified by two parsers; shared bake tool deliberately NOT patched (isolation); Diablo keeps wired moveset, attack rows documented (38/64/182)",
+    "Law, Forest Law, Ogre, Gon, Panda UNMAPPED \u2014 owner canon decision (searched CANON.md/ROSTER.md/roster_canon.json/roster-full.js; Kuma reserved name URSA per CANON.md); nothing invented",
+    "Lei->BYOU vessel name \u2014 owner decision pending per CANON.md's own note",
+    "Julia three-way conflict \u2014 ROSTER.md: ZEN donor is Julia; CANON.md: Nightwolf base is Julia; roster-full.js: zen base/moveset is Heihachi. Lane changed none. Owner/coordinator call",
+    "Schema-v2 game movesets for 13 round-2 banks pending \u2014 #243 generator not in repo as runnable script; one-off converter would violate NO-HAND-TOOLING; extracted movesets are the complete verified input",
+    "Engine-owned surfaces not edited: stages.js labels ('T3 RETRO: KING'), t3anims.js heihachi registration, attires.js (T3 retro attires NOT wired at all)",
+    "TEARDOWN.md internal contradiction: its 'corrected' BNS table contradicts BNS-ORGANIZATION-PATTERN.md + model folders; pattern values are extraction-verified",
+    "RENAME-MAP 'iron-legacy 100% complete' was premature (7/21 banks then) \u2014 corrected via append-only appendix; teardown/tekken3/ -> teardown/iron-legacy/ directory rename PENDING coordinator sequencing (consumer refs + boot check)",
+    "UI art 23 files NOT-WIRED (extraction templates, no game consumer)"
+   ],
+   "pr": {
+    "number": 382,
+    "state": "OPEN, MERGEABLE, all checks green (lane forward-merged main itself, both sides kept)",
+    "note": "Lane forward-merged origin/main mid-lane and resolved CANON.md/RENAME-MAP.md conflicts keeping BOTH sides (main had moved with #374 appends)"
+   },
+   "feel_gaps": [
+    "TOU/KAI/GYOU still play PROXY movesets at game layer (tou->heihachi, kai->demonio, gyou->demonio) though their real banks+movesets now exist \u2014 schema-v2 conversion is the single biggest T3 feel step remaining",
+    "Diablo (boss) is the only T3-sourced Seven member with no decoded animation bank",
+    "13 of 20 banks have no game-layer presence yet \u2014 data ready, playback not",
+    "Engine-layer items barred to this lane: stages.js labels, t3anims.js registry, attires.js retro attires"
+   ],
+   "isolation": "Per-bank independent slicing + SHA verification; movesets parsed per-bank (only shared input = read-only divmot99 common bank, T3's own design). Shared bake tool left unpatched despite Heihachi blocker. Parallels (source-genuine, documented): divmot99 common bank; divmot08 shared Eddy/Tiger + divmot11 shared Kuma/Panda IN THE SOURCE; system-clip slot convention is a property of the game's move-index layout.",
+   "deviations": "Brief inaccuracies (extract_fighter.py, #252) handled with real parsers/fresh extraction; PR body rewritten to gate's exact headings after first fail; gitleaks absent on VM, disclosed; sparse checkout narrowed mid-task (game/ 1GB, roster/ 2GB, slow promisor) with tree+targeted-read audit instead; lane forward-merged main itself (conflict resolved, both sides kept).",
+   "pr_state": "MERGED 2026-10-20T21:50:43Z"
+  },
+  "wwf-no-mercy": {
+   "teardown_blobs": 18544,
+   "status": "lane_complete_pending_verification",
+   "inventory": "teardown/wwf-no-mercy/WIRING-INVENTORY.md (in PR #379; 18,544 files, 53,506,474 B; count verified two ways: git-tree API + git ls-tree)",
+   "wired_before": {
+    "fully": 2343,
+    "partial": 5030,
+    "note": "36 arenas wired on main (stages.js NO_MERCY/buildNoMercy); GLB/gallery layer WIRED-PENDING-MERGE #345 verified not duplicated; CAW banks 2,278 wired (986 files in customization/parts/no-mercy/, 682 indexed parts all resolve); textures/rom 5,030 partial (CAW faces/skins wired, titantron/UI not consumed); animations were index-only (range chunks summed 5,932 vs 5,787 real clips)"
+   },
+   "newly_wired": "5,787 animation clips via new moveset-library/movesets/mat-kings-move-database.json (4,409 move clips + 1,353 system + 507 Power/KO/Bleed joins + 25 tail clips missing from manifest.json now catalogued)",
+   "corrections": "3 anim_ref bugs proven against tools/NoMercy-FileTableDB.txt and fixed in MOVE-DATABASE.json + pantera-moveset.json + vendored create-fighter copy: NM-001 'Scoop Slam' pointed at anim_3351 (actually [Turnbuckle Attack] Front Kick 02) -> anim_339F; NM-002 Arm Drag null -> anim_33A9; NM-003 Piledriver 01 null -> anim_33E1",
+   "converted": "4,409 move IDs NM-### -> MK-####; Tekken-style inputs on 4,153 entries; slot eligibility on 1,966; universe sections appended to CANON.md + RENAME-MAP.md + MOVES-LIBRARY.md; full log in teardown/wwf-no-mercy/CANON-CONVERSION.md. No clip re-timed/re-posed/altered.",
+   "flagged": [
+    "17 stage display names still third-party in game/js/stages.js (owner canon decision + engine lane; conversion table staged in CANON-CONVERSION S4)",
+    "42 wrestler identities (docs/wrestler-id-table.json) \u2014 owner canon decision; zero invented",
+    "Persona-named move labels (Reverse Tazzplex, Misty Frankensteiner) \u2014 owner naming pass",
+    "Library-scale AKI->Tekken retarget owned by open PR #364 (proven on 1 clip; v1 map on misaligned bank superseded by corrected v2 bank)",
+    "ANIMATION-INDEX.json range-chunk categories inaccurate for No Mercy \u2014 SHARED FILE, coordinator decision; superseded for NM by label-true database",
+    "CAW save-record layout \u2014 format blocker w/ evidence (CAW-SAVE-RECORD-STATUS.md: needs emulator save dump, not decodable from ROM alone)",
+    "models/unlabeled/ 4,862 DB-unlabeled attire meshes \u2014 federated design keeps wrestler models out of WH game data; stay in teardown per owner law",
+    "recomp/ 164 files \u2014 third-party N64Recomp, reference-only by design",
+    "textures/characters + environments (350) \u2014 ACCOUNTED-ELSEWHERE (extracted from wrestler GLBs)",
+    "10 wrestler models / 13 GLBs \u2014 ACCOUNTED-ELSEWHERE confirmed absent from tree; TEARDOWN.md claim of 13 GLBs in re-docs is STALE (only 2 environment menu-scene GLBs present) \u2014 coordinator to fix doc"
+   ],
+   "pr": {
+    "number": 379,
+    "state": "OPEN, CONFLICTING (root-file appends collide with merged #374) \u2014 reconciliation assigned to verification lane",
+    "note": "Held unmerged for coordinator root-file reconciliation (CANON.md/RENAME-MAP.md/MOVES-LIBRARY.md appends)"
+   },
+   "feel_gaps": [
+    "No No Mercy clip can play in-engine (no .npy loader; retarget output = 1-clip proof via #364) \u2014 grappling feel unverifiable in a build today; biggest mat-kings gap vs Tekken-feel bar",
+    "Engine grappling is Tekken throws only (fighter.js 1+3/2+4); PR #147 grappling design is docs-only UFC-based, cites no NM data; data side now fixed by #379, engine consumption is engine lane's",
+    "MOVE-SLOTS.json still describes slots in wrestling notation; new database supplies Tekken inputs per move, slot doc needs same pass when editor lane consumes it",
+    "Stage select still displays third-party event names \u2014 most visible un-converted surface"
+   ],
+   "isolation": "Gated by construction: lane wrote only shared library data + per-game records; fighters opt into library entries via their own moveset JSONs (Oct 14-15 Pantera pattern). Only character-file edit = Pantera's own anim_ref correction in Pantera's own moveset file. Deliberate parallels sharing: none.",
+   "deviations": "Retarget pass + stage-display renames not executed (owned by #364 / engine lane / owner naming). Sparse checkout killed 3x by runtime restarts + /tmp full -> git-tree API + per-blob fetches, counts verified both ways; killed own stalled checkout process only.",
+   "pr_state": "MERGED 2026-10-20T20:16:55Z (coordinator merge after verifier reconciliation 73b2bd4 + gate body fix; all current checks pass)"
+  },
+  "wmxix": {
+   "teardown_blobs": 1708,
+   "status": "lane_complete_merged_pending_verification",
+   "reconciliation": "Folders complementary, NOT duplicates: teardown/wmxix/ = extracted asset store (canonical for asset data); teardown/wwe-wrestlemania-xix/ = research/solver store (canonical for format/research truth). 37 byte-identical overlap files; YANM-ITEM5-CYCLE.md divergent. Nothing deleted.",
+   "inventory": "teardown/wmxix/WIRING-INVENTORY.md (all 1,708 files listed with status)",
+   "wired_before": 0,
+   "wired_pending_merge_prior": "10 files via PR #332",
+   "newly_wired": 1385,
+   "converted": "170 canon clip IDs (ML-<CLIP>), 169 move entries w/ Tekken input map, 12 stage entries registered (9 with canon names), CAW catalog indexing 2,690 parts, mat-legends sections in CANON.md + RENAME-MAP.md",
+   "flagged": {
+    "accounted_elsewhere": "127 wrestler OBJs (federation: wrestling-game + wrestlemania-xix-mod)",
+    "owner_canon_decision": [
+     "wrestler identities slots 000-110 (WRESTLER-IDENTITY-MAP.md PENDING, zero names invented)",
+     "kaijo_x8 + bs/5_* stage names",
+     "Revenge Mode canon name + engine traversal mode"
+    ],
+    "format_blocker": [
+     "per-clip move-category decode open (TEARDOWN.md S5)",
+     "c138_0a 72-byte stub wrong magic",
+     "arena OBJs are vertex point clouds, face indices open; cage/hell/revenge .pac not decoded"
+    ]
+   },
+   "pr": {
+    "number": 374,
+    "state": "MERGED 2026-10-20T15:29:47Z (auto-merged by merge-law-ci-watch; green + mergeable + additions-only)",
+    "note": "mat-legends wiring + canon conversion is ON MAIN"
+   },
+   "feel_gaps": [
+    "No WMXIX animation plays in the build: 169 grapple moves library-registered but no fighter moveset references them; YANM->playback retarget path is moveset/anim-pipeline lane work",
+    "Arena traversal absent: modes.js has no traversal mode, stages.js has no WMXIX hook; XIX contributes zero playable space today",
+    "Grapple completeness semantics-blocked until per-clip category decode lands"
+   ],
+   "isolation": "No skeleton/rig/animation file/shared code touched; registry/data layer only. No parallels sharing introduced."
+  },
+  "eastern-mind": {
+   "teardown_blobs": 5707,
+   "status": "lane_complete_pending_verification",
+   "inventory": "teardown/eastern-mind/WIRING-INVENTORY.md (in PR #375; 5,707 files, 420,423,503 B: 5,321 PNG, 233 WAV, palettes, 24 MP4)",
+   "wired_before": 3817,
+   "newly_wired_pending_merge": 762,
+   "converted": "762 (prologue-ending 661 + soundtrack 4 + palettes 97) into append-only CANON.md S8 'THE HEAD-WORLD, AS THE TRIAL FOUND IT' + cross-cutting conversions (inter-land tunnels, per-land Kings, Versus-vs-Story Two Laws of Death made explicit in prose); CANON-CONVERSION.md with 98-row area table; new registry game/assets/stages/eastern-mind/stages.json",
+   "accounting": "3817 wired-before + 762 newly wired + 1128 flagged accounted-elsewhere = 5707 (full)",
+   "flagged": {
+    "accounted_elsewhere": "transcript-promo 1,128 files (source archive; owner decision if ever mined for canon)",
+    "engine_followup": "Asset-level engine consumption NOT WIRED for all 5,707 files: no game code loads teardown/eastern-mind files individually (verified assets.js/audio.js/main.js/stages.js/modes.js); stages are procedural, soundtrack never plays. stages.json is the map for the follow-up engine lane (game/js edits were outside this lane's brief).",
+    "owner_canon_decision": [
+     "ZEN/GYOU: CANON.md S4 says unvesseled, modes.js already has zen/gyou affinities + story pools \u2014 canon/code disagree",
+     "per-file WH asset names still pending per RENAME-MAP.md (stage dirs named; individual assets not renamed)",
+     "MARIPOSA: lane found exactly ONE header on main fa4f3757 (Sealed Soul, S7), no Butterfly Soul header \u2014 contradicts the standing two-header note; either resolved by another lane or lives on an unmerged branch; verification lane must pin this down"
+    ],
+    "land_level_only": "Ambiguous area codes converted at land level only, no invented meanings: G_SSAVER (317), G_CHIFA1/2, G_NONFAI, G_PURYAO, G_SHOWMI, G_TONGSI, L_WTOR, W_AUN/RMAUN, W_RMMAGA, W_RMDUMP, W_RMILL, R_RTOG (138), R_LETS/A/B, R_TOH, prologue DAMMY/MAIN/SHARED/PROF",
+    "source_gaps": "~7% BITD chunks unmatched to dimensions (pixel data preserved), Lingo not decompiled, THUM not extracted (redundant) \u2014 per TEARDOWN.md"
+   },
+   "pr": {
+    "number": 375,
+    "state": "OPEN, MERGEABLE (reconciled by verification attempt 1 before it died \u2014 merge commit itself unverified; recovery lane auditing)",
+    "branch": "wiring/eastern-mind-canon-20261020",
+    "note": "Left unmerged for coordinator CANON.md reconciliation across the four lanes"
+   },
+   "feel_gaps": [
+    "Reincarnation has no face: story promise (new face from 3 eyes/3 noses/3 mouths) implemented as vessel-swapping only; face bitmaps (D_FACE/CHARA/PORT) unused",
+    "Lands don't look like themselves: 0 of 5,321 extracted bitmaps sampled by any stage; identity carried by names/descriptions/procedural builders",
+    "Head-world is silent: 4 soundtrack files registered but audio.js plays none",
+    "Soul progression invisible between fights: forces alter stats in code, no diegetic surface; S8 Colour Is Law specifies the intended surface, unimplemented"
+   ],
+   "isolation": "No rig/skeleton/animation/model edits \u2014 canon, inventory, registry data only. No gating required; no parallels sharing.",
+   "deviations": "Sparse clone blob fetch died twice on agent-service restarts; branch built via GitHub git-data API off the same main commit (CANON.md hash-verified d096bd4d before append), additions only, verified by compare. Declared in PR #375.",
+   "pr_state": "MERGED 2026-10-20T16:56:52Z"
+  }
+ },
+ "notes": [
+  "2026-10-20 08:07 CDT coordinator dispatched; recon done (disk 82%, 18G free; repo 4.84GB; RENAME-MAP.md + CANON.md + ROSTER.md at repo root; moveset-library/ + roster/ (43) + customization/ (19) are wiring targets).",
+  "2026-10-20 08:08 CDT owner additions recorded: acceptance bar (Tekken feel), staging (canon additive, never degrades wiring), archive lane owns conversation-to-repo docs (do not duplicate).",
+  "2026-10-20 08:10 CDT per-character isolation law recorded; being pushed into every lane brief before spawn.",
+  "2026-10-20 08:13 CDT isolation refinement recorded (golden reference = Oct 14-15 Pantera/King setup; gating + parallels exception; say-so required in per-game reports). Four game lanes spawning with all laws baked into briefs.",
+  "2026-10-20 ~09:22 CDT WMXIX lane COMPLETE: 1,708 files inventoried, 1,385 newly wired at data/registry layer, PR #374 open+green. Verification pending the other three lanes.",
+  "2026-10-20 ~09:28 CDT Eastern Mind lane COMPLETE: 5,707 files fully accounted (3,817 wired-before + 762 newly wired/converted + 1,128 accounted-elsewhere), PR #375 open+green. Key flags: engine asset-consumption follow-up needed for ALL files; MARIPOSA single-header finding needs verification; ZEN/GYOU canon-code disagreement.",
+  "2026-10-20 ~10:24 CDT No Mercy lane COMPLETE: 18,544 inventoried; 5,787 clips newly wired into label-true mat-kings move database; 4,409 IDs converted MK-####; 3 proven anim_ref bugs fixed (incl. Pantera's Scoop Slam pointing at a front-kick clip). PR #379 open+mergeable. Coordinator items: ANIMATION-INDEX shared-file decision; TEARDOWN.md stale GLB claim fix. Tekken 3 lane still running; verification lane spawns when it lands.",
+  "2026-10-20 ~11:23 CDT Tekken 3 lane COMPLETE \u2014 ALL FOUR GAME LANES DONE. T3: 13 banks extracted+triple-verified (the 'not extracted' claim closed), 5,663 moveset rows, PR #382 open+green. Disk warning from lane: VM at 95% (5.3G free), not from this lane (~350MB). Next: verification lane across all four inventories (45,394 files) + PR merge-state check + root-file reconciliation + MARIPOSA pin-down.",
+  "2026-10-20 ~11:30 CDT MERGE STATE: #374 MERGED to main; #375 + #379 CONFLICTING on root files; #382 MERGEABLE. DISK: VM hit 96% (4.1G free) from aggregate parallel work; coordinator removed the four wh-wiring lane clones (2.1G) after verifying all four PRs exist on GitHub (all lane work pushed; local clones were disposable).",
+  "2026-10-20 ~11:30 CDT Verification lane spawned: re-walk all four inventories (45,394 files), verify lane claims + PR diff discipline, forward-merge/reconcile #375 + #379 root-file conflicts (keep ALL appends), pin down MARIPOSA Butterfly Soul location, verdict on ANIMATION-INDEX + stale TEARDOWN.md claims, final verification report PR + merge-order recommendation.",
+  "2026-10-20 ~11:56 CDT Verification attempt 1 ERRORED (daemon restart killed it, no runtime handle/checkpoint). Partial progress found on state check: #375 went CONFLICTING -> MERGEABLE (its forward-merge/reconciliation appears pushed by the dead lane \u2014 UNVERIFIED, recovery lane must audit that merge commit before trusting it); #379 still CONFLICTING; #382 still MERGEABLE; no verification PR or doc exists. Recovery verification lane re-dispatched per AUTO-RECOVERY STANDING APPROVAL (same brief + audit-first amendment).",
+  "2026-10-20 ~15:07 CDT: VERIFICATION COMPLETE (attempt 2, d8441a91). All four inventories reconcile to the file. PR #385 opened with verification report + 2 stale-doc fixes. C0 audit: attempt-1 #375 merge SOUND. Mariposa: \"Butterfly Soul\" exists nowhere reachable. ANIMATION-INDEX: annotate-superseded recommendation. Isolation PASS x4.",
+  "2026-10-20 ~15:17 CDT: Coordinator merged PR #379 (2026-10-20T20:16:55Z). Merge sequence remaining: #382 (forward-merge in progress), then #385.",
+  "2026-10-20 ~16:58 CDT: ALL FIVE PRs MERGED (#374, #375, #379, #382, #385). Full wiring + canon conversion program is on main, independently verified, every file accounted for. Coordinator merge incident owned: first #382 forward-merge commit (154ad4a) was built from the compare API file list, which caps at 300 of the real 468 main-side changes; guards failed, root cause found, merge rebuilt from full recursive trees (b5b406d, 468 entries, 0 deletions), PR diff restored to exactly 47 files/+1,116,706/-3, all checks green, merged. Lane scratch dirs removed (~40MB); disk 97% is other lanes activity, wiring lane footprint zero.",
+  "2026-10-20 ~16:58 CDT: ALL FIVE PRs MERGED (#374, #375, #379, #382, #385). Full wiring + canon conversion program is on main, independently verified, every file accounted for. Coordinator merge incident owned: first #382 forward-merge commit (154ad4a) was built from the compare API file list, which caps at 300 of the real 468 main-side changes; guards failed, root cause found, merge rebuilt from full recursive trees (b5b406d, 468 entries, 0 deletions), PR diff restored to exactly 47 files/+1,116,706/-3, all checks green, merged. Lane scratch dirs removed (~40MB); disk 97% is other lanes activity, wiring lane footprint zero."
+ ],
+ "per_character_isolation_refinement": "Owner 2026-10-20 ~08:13 CDT: (1) GOLDEN REFERENCE \u2014 the Oct 14-15 Pantera setup: Pantera with King's exact movements/attacks/stance attached per-character and working perfect (same period as Attire 2 'Leo man' + the select-screen build). That per-character attachment pattern is the model for all wiring. (2) GATING + PARALLELS EXCEPTION \u2014 per-character edits must be gated so they cannot leak/bleed into other characters, UNLESS it actually parallels: characters sharing a genuine Tekken source may share what truly parallels, deliberately through the shared source, never as an edit side effect. Every per-game report must state how isolation was gated and name any deliberate parallels sharing.",
+ "verification": {
+  "status": "complete",
+  "pr": 385,
+  "pr_state": "OPEN, MERGEABLE (clean), all checks pass \u2014 merge last in sequence",
+  "report": "docs/FULL-WIRING-VERIFICATION-2026-10-20.md (in PR #385)",
+  "accounting": {
+   "wmxix": "1,709 rows = 212 WIRED+CONVERTED + 1,172 WIRED + 325 FLAGGED \u2014 reconciles",
+   "eastern-mind": "5,707 = 3,817 WIRED + 762 WIRED+CONVERTED + 1,128 FLAGGED \u2014 lane split verifies EXACTLY",
+   "no-mercy": "18,544 baseline = 5,787 WIRED+CONVERTED + 2,343 WIRED + 10,414 FLAGGED \u2014 reconciles; current main 18,549 (+5 uninventoried files from another lane, FLAGGED-uninventoried; current-tree accounting also reconciles)",
+   "tekken3": "19,477 = 19,435 main + 42 lane-added; 90 WIRED + 19,387 FLAGGED \u2014 reconciles; verifier re-ran triple verification on 3 banks (paul 06f6447a, bosconovitch 130ee660, julia d4c8ce91) all pass; moveset rows re-summed 5,663 exactly"
+  },
+  "failed_claims_named": [
+   "WMXIX \"1,385 newly wired\" \u2014 rows give 1,381; 1,385 counts the 4 deliverable files too",
+   "WMXIX CAW by_category sums 2,682 not 2,690 (8 uncategorized .ycg files; total by extension correct)",
+   "WMXIX \"127 wrestler OBJs\" = 126 + 1 DOC/TOOLING file",
+   "NM \"-9 = exactly the 3 anim_ref corrections\" \u2014 actually 7 anim_ref line replacements (3 unique moves x 3 files) + 2 _note replacements; substance verified",
+   "Eastern Mind: no failed claims. Tekken 3: no failed claims."
+  ],
+  "c0_audit_375_merge": "SOUND \u2014 branch efbde06d + forward-merge 1cfaa6a3; CANON.md holds BOTH mat-legends section (markers intact) and complete EM section 8, zero conflict markers, final checks SUCCESS. PR #375 MERGED 2026-10-20T16:56:52Z.",
+  "isolation": "PASS for all four lanes (only character-file touch: Pantera own anim_ref fix; Heihachi blocker reported, shared bake tool NOT patched)",
+  "mariposa_answer": "\"Butterfly Soul\" exists NOWHERE reachable \u2014 CANON.md grepped at main + all 4 wiring branch heads: exactly ONE Mariposa header everywhere (### MARIPOSA \u2014 The Sealed Soul, section 7); the word Butterfly in section 7 is the Butterfly Default ATTIRE decision, not a second header. The standing two-header note appears stale/wrong.",
+  "animation_index_recommendation": "Annotate ANIMATION-INDEX.json as superseded per game; do NOT rewrite chunks in place; correct summary counts in a follow-up. Verified: NM entries are equal range-chunks with wrong labels; 170 WMXIX entries mixed in; index totals 5,932 vs real NM bank 5,787; 25 tail clips absent from index. Mat-kings DB supersedes it for NM.",
+  "stale_docs_fixed_in_385": [
+   "NM TEARDOWN.md: \"13 character GLBs in re-docs\" FALSE \u2014 exactly 2 GLBs there (environment menu scenes, 201,180 B each); manifest label claim, 4,434 move count, \"15 community GLBs\" also corrected (4 lines)",
+   "T3 TEARDOWN.md: its \"corrected\" BNS table is WRONG; BNS-ORGANIZATION-PATTERN.md is right (proven by model folders jin151/bryan183/heihachi191/gunjack215); root cause = index list omits TIGER (9) and PANDA (13); 4 wrong P1/P2 pairs corrected in both places + dated note"
+  ],
+  "merge_order_recommended": [
+   "#379 first",
+   "#382 after forward-merge",
+   "#385 last"
+  ]
+ },
+ "merge_sequence_final": {
+  "374_wmxix": "MERGED 2026-10-20T15:29:47Z",
+  "375_eastern_mind": "MERGED 2026-10-20T16:56:52Z",
+  "379_no_mercy": "MERGED 2026-10-20T20:16:55Z",
+  "382_tekken3": "MERGED 2026-10-20T21:50:43Z",
+  "385_verification": "MERGED 2026-10-20T21:58:15Z"
+ }
+}

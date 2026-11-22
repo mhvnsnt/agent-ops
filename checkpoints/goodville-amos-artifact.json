@@ -1,0 +1,9 @@
+{
+ "task": "Remove brown extraction artifact floating left of Amos Jr.'s head in promo",
+ "repo": "~/workspace/trippedd-studio",
+ "resume_brief": "In ~/workspace/trippedd-studio, branch feat/goodville-amos-likeness: there is a brown extraction artifact (stray hair/mask chunk) floating in mid-air to the LEFT of Amos Jr.'s head in the Broadway shots, visible at ~10.5s and ~12s, overlapping the TACOS sign area. It does not move with the head \u2014 it's a detached remnant. Find which asset/layer produces it (likely a masking leftover in assets/amos_tex/ or a misplaced sprite in blender/composite_amos.py), remove or fix it, re-render the affected shots, verify with your OWN eyes by reading the PNGs (the artifact must be GONE at 10.5s and 12s), commit, push to the same branch. Do not change anything else. Report: what the artifact was, frames verified, commit SHA. Mark ~/workspace/agent-ops/checkpoints/goodville-amos-artifact.json done at the end. Heartbeat every 10 min.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T13:50:10.260356+00:00"
+}

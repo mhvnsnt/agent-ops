@@ -1,0 +1,9 @@
+{
+ "task": "Push animation toolkit to all production/editing repos",
+ "repo": "~/workspace/video-fix-tools",
+ "resume_brief": "Wait for ~/workspace/agent-ops/checkpoints/animation-tools-ladder.json to read status done (the ladder worker is still adding tools \u2014 poll the JSON file, don't start packaging before it's done). Then package the animation toolkit from ~/workspace/video-fix-tools/ as a distributable: all scripts + TOOLS-REGISTRY.md + a fetch_models.sh that pulls model binaries on demand (NEVER commit model binaries \u2014 u2net/isnet/birefnet are 170MB-973MB; git can't take them) + README. Push it into every repo that does editing/production: (1) mhvnsnt/TRIPPEDD-Production-studios- (hub), (2) mhvnsnt/God-Molecule-Show-Studio, (3) mhvnsnt/God-molecule-production-stage. For each: branch feat/animation-toolkit off main, place under production/tools/animation-kit/ (check each repo's layout first), commit, push (--no-verify), open PR, MERGE (tool additions, not creative cuts \u2014 no open PRs left). NEVER disturb existing checkouts: ~/workspace/trippedd-studio is on another lane's branch (no checkout there \u2014 use a fresh worktree), ~/workspace/trippedd-studio-loti-v2 is on feat/loti-commercial-v3 (don't touch). Report per-repo PR URLs + merge commits.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T23:18:11.388169+00:00"
+}

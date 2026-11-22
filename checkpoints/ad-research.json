@@ -1,0 +1,9 @@
+{
+ "task": "Ad research: most effective ads 2006-2026, actionable techniques for our commercials, AD-RESEARCH.md in 4 repos",
+ "repo": "mhvnsnt/font-wizard",
+ "resume_brief": "Research most effective/memorable ads of last 20 years (2006-2026), extract actionable techniques for font pack ads/game trailers/network bumpers/show promos. Write tailored AD-RESEARCH.md in font-wizard (docs/), TRIPPEDD-Production-studios- (docs/, with Adult Swim bump section), God-Molecule-Show-Studio (docs/, with cosmic/weird ad grammar section), God-molecule-production-stage if it has docs/. Branch -> PR -> merge each, 0 open PRs.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T17:19:16.194184+00:00"
+}

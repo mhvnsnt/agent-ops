@@ -1,0 +1,11 @@
+{
+ "task": "Fix Pantera armpit/inner-thigh hatch tears via armpit.py (automatic) -> v3 GLB, before/after proof, gates",
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "Owner-spotted defect on pantera_repaired_v2.glb (/home/hatch/workspace/case2-work/out/pantera_repaired_v2.glb, sha256 d6ab2235...): arms-raised armpits split open like a hatch (verts hard-split 100% arm vs 100% torso, no blend zone); same class at inner thighs in wide stance. FIX: run tools/rig_repair/armpit.py from western-heart main (automatic: de-bleed arm weights beyond 0.14m of arm segments -> redistribute to torso; sharpen arm/torso blend in transition zone; topology smooth; normalize; 4-influence cap) on v2 -> pantera_repaired_v3.glb. Check inner-thigh zone the same way; if hard-split UpLegs/Hips with no blend, apply same logic (extend armpit.py or small sibling script, automatic only). VERIFY: render before/after pairs (arms-raised armpit close-up v2-vs-v3, wide-stance thigh close-up v2-vs-v3) to ~/workspace/defect-shots/v3/; gates: no visible hatch, stretch < 2.5 everywhere, v2 fixes still hold (cuffs track, logo clean, pants intact). Report v3 sha256 + picture paths. Claim in mhvnsnt/agent-ops CLAIMS.md first.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-15T15:45:52.693157-04:00",
+ "notes": "v3 built (armpit.py 117 verts + legpit 349 verts, grafted, images intact). Rendering proof pairs.",
+ "result": "v3 built and gated PASS 8/8. armpit.py de-bleed applied (117 verts). Thigh hard-split investigated; intervention reverted (harmful)."
+}

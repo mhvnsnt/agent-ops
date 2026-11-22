@@ -1,0 +1,9 @@
+{
+ "task": "DONE: Pulled game dev production leaks into western-heart repo and documented how to use them for character production pipeline",
+ "repo": "~/workspace/western-heart",
+ "resume_brief": "COMPLETE. Task finished 2026-10-12. All deliverables in ~/workspace/western-heart/ (mhvnsnt/western-heart, commits d294f26 + f3c755c): docs/production-study/ with README, 01-tekken-character-production, 02-moveset-data-structure, 03-character-design-philosophy, 04-capcom-leak-assessment, 05-nintendo-gigaleak-assessment, 06-western-heart-character-pipeline (7-stage pipeline), 07-blender-open-movies (BBB production files). Blender pull child done: ~/workspace/game-leaks-working/blender-open-movies/ has 5 BBB character .blends + STUDY-NOTES.md. Per long-pole queue directive, natural next step: run Pantera through the pipeline (create roster/ptr/ with IDENTITY.md/DESIGN.md). Per new memory (CHIMERA BUILD = TEMPLATE FOR ALL GAMES), this pipeline is the template for Bannon, AshLane, Concrete Dragon, Brutal Fist once proven on Western Heart.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-12T15:20:35.823927+00:00"
+}

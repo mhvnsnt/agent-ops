@@ -1,0 +1,10 @@
+{
+ "task": "YOBJ DOL reverse-engineering: find how WWE WrestleMania XIX GameCube main.dol decodes YOBJ vertex positions. Extract DOL from ISO, search for YOBJ magic/header field accesses, find vertex buffer decode loop, document exact position formula. Deliverable: decode formula implemented in tools/ with rendered OBJ proof, or precise blocker + next experiment.",
+ "repo": "~/workspace/agent-ops/worktrees/wrestling-teardown/wwe-wrestlemania-xix",
+ "resume_brief": "Respawn YOBJ DOL RE task: read docs/YOBJ-SKINNING-DECODER-REPORT.md and tools/yobj_decode.py in ~/workspace/agent-ops/worktrees/wrestling-teardown/wwe-wrestlemania-xix. Extract main.dol from the ISO (wmxix_range_iso.py or gcn_fst.py), search DOL for 0x594F424A or header field offsets (0x5AE0,0x7CA0,0xF3BC,0x10704), locate vertex decode loop reading s16x3 + Table1/Table2, document exact position formula, implement + OBJ proof, checkpoint ~/workspace/agent-ops/checkpoints/yobj-dol-re.json, commit to worktree.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-15T19:40:00-04:00",
+ "note": "Done. Commit fd64454 LOCAL ONLY - push to origin failed 3x (flaky GitHub network: HTTP/2 CANCEL, timeouts). Parent should push feat/ymg-skinning-decoder when network is healthy. All deliverables in worktree."
+}

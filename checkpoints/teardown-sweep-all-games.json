@@ -1,0 +1,10 @@
+{
+  "task": "Full teardown sweep \u2014 all games into western-heart",
+  "repo": "~/workspace/western-heart",
+  "resume_brief": "Teardown sweep complete. All 6 games have TEARDOWN.md in western-heart/teardown/. PRs #28 (WMXIX rewrite), #29 (Tekken 6), #30 (Tekken 3), #31 (sweep: No Mercy + Urban Reign + TTT2) all merged. Batch-3 models worker still running separately.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 1,
+  "updated_at": "2026-10-13T12:32:30.282824+00:00",
+  "notes": "Done 2026-10-13. PRs #28/#29/#30/#31 merged. Batch-3 models worker ran separately."
+}

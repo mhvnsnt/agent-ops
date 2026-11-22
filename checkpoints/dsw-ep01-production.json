@@ -1,0 +1,9 @@
+{
+  "task": "DSW EP01 'The Group Chat' production: character art + boards + temp VO + animatic, stop at stills gate",
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "DAMN SHIT'S WILD EP01 'The Group Chat' production (owner greenlit 2026-10-09: 'we do them all starting with the first 1 u wrote'). Script: production/DAMN_SHITS_WILD/EP01/EP01-THE-GROUP-CHAT.md. Bible: production/DAMN_SHITS_WILD/SHOW-BIBLE.md. William writer's profile: production/DAMN_SHITS_WILD/research/wave1/WILLIAM-STUDY.md. ART STYLE LOCK (law): Archer/Assy McGee/Simpsons/Family Guy 2D blend \u2014 no AI slop deviation, check every asset against the style. Produce: (1) Aaron Ruben character turnaround (front/side/back + 3-4 expressions, 2D locked style, grounded in William study looks), (2) key locations (apartment/couch, grocery bread aisle, park), (3) storyboard frames for every beat of the script in the locked style, (4) TEMP VO scratch track via local free TTS only (clearly marked TEMP \u2014 dry, deliberate, deadpan, pauses; NO voice clone, not approved), (5) animatic assembly (boards + temp VO). STOP AT THE STILLS GATE: present everything for owner approval; NO animation until he approves stills. The 3D reenactment beat: boards only \u2014 no 3D production (models must work perfectly first; not now). Deliver via branch->PR->merge in mhvnsnt/TRIPPEDD-Production-studios- (merge commits only, 0 open PRs). Update EP01 README status to IN PRODUCTION. Sparse-checkout ok, never /tmp worktrees, don't touch feature/ep02-visual-rebuild. Heartbeat checkpoint, mark done.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T05:00:57.669542+00:00"
+}

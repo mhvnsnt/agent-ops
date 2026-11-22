@@ -1,0 +1,10 @@
+{
+  "task": "FULL SURGICAL AUDIT: archive.org CN gigaleak items vs our holdings (GitHub+TeraBox). File-level accuracy, no estimates. Output: ~/workspace/agent-ops/CN-GIGALEAK-FULL-AUDIT-2026-10-15.md",
+  "repo": "/home/hatch/workspace/agent-ops",
+  "resume_brief": "Resume the CN gigaleak full audit. 1) Read ~/workspace/agent-ops/mirror-hunt/LEADS.md for known IA identifiers. 2) Use archive.org advancedsearch API (https://archive.org/advancedsearch.php?q=...&fl[]=identifier,title,description&output=json) to enumerate ALL CN gigaleak items; check for NEW items since 2026-10-14. 3) For each item, get file listings via https://archive.org/metadata/<identifier> (names+sizes; note DARK items). 4) Inventory GitHub holdings: all mhvnsnt/cn-gigaleak-* repos, releases+assets via gh api; also google-drive-repo, drive-storage. 5) TeraBox /CN-Gigaleak/ holdings from ~/memory/2026-10-15.md + recent browser task reports (mark UNVERIFIED if not verifiable). 6) Torrent manifest ~/workspace/hero-parts-pull/CNleaks.torrent (72,369 files) as ground truth for per-show %. 7) Write ~/workspace/agent-ops/CN-GIGALEAK-FULL-AUDIT-2026-10-15.md with: per-show table (show/torrent total/IA mirrors/we hold/missing/verdict), pull list by size with IA identifiers, shutdown list with evidence, dark list. 8) Audit ONLY, no pulling. Rules: no estimates, UNVERIFIED beats guessing.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 1,
+  "updated_at": "2026-10-15T19:19:54.597282+00:00",
+  "notes": "\n2026-10-15 ~15:30 EDT: Data gathering complete. Writing audit document."
+}

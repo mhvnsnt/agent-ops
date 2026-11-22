@@ -1,0 +1,10 @@
+{
+ "task": "MechaViewer tuning lane in BioMechania: retune playTransform to ~0.35-0.45s, smoke-test against real GLB parts, verify transform preview path, tsc clean, PR to merge",
+ "repo": "/home/hatch/workspace/BioMechania",
+ "resume_brief": "AWAITING REDIRECT to BioMechania (~/workspace/BioMechania). Viewer lane work in theyard is complete and pushed: branch feature/mecha-part-system, commit 05dc9ac (MechViewer with setBuild/setMode/setPart/playTransform API, socket assembly, placeholder boxes, animated transform). On redirect: port viewer.ts to BioMechania and continue there.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "notes": "COMPLETE: PR #2 merged (transform 0.85s\u21920.40s, 17/17 GLBs parse, modes read distinct, 31/31 tests pass).",
+ "updated_at": "2026-10-10T01:41:38.289792+00:00"
+}

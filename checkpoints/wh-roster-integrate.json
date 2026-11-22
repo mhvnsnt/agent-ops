@@ -1,0 +1,10 @@
+{
+ "task": "Integrate all non-T3 models into western-heart roster + game/assets/models (owner order 2026-10-15)",
+ "repo": "western-heart",
+ "resume_brief": "Owner ordered: get ALL non-T3 models into western-heart roster and models. PHASE 1 (on disk now): 28 T7-style fighters from ~/workspace/game-reverse-engineering/tekken7/models/ (Asuka, Bryan, Eddy, Heihachi, King variants, Steve Fox, Xiaoyu, Yoshimitsu, Lili, Lei, Baek, Zafina, etc.); 19 VF5 fighters from ~/workspace/western-heart-vf5/teardown/virtua-fighter-5/models/. PHASE 2 (when available): TTT2 (release ttt2-7z-v1, not extracted), Urban Reign 72 chars (release urban-reign-iso-v1, not extracted), Rashid SF5 (release rashid-models-20261013), T6 (not extracted), SC2 (partial). For each: convert to GLB if needed, place in game/assets/models/<fighter>.glb, create roster/<fighter>/ entry with kitbash JSON. WH PIPELINE: rename to proprietary names per CANON.md, log EVERY rename in RENAME-MAP.md. ATTIRE RULE: these are non-T3 so they are FRONT-LINE attires (T3 legacy goes at back only). Work from origin/main (wh-repo is on rig-repair branch - checkout main or new branch from main). Branch->PR->merge. Disk is 93% - keep staging minimal. LAWS: NEVER-DELETE-GAME-FILES, NO-DEFERRAL, TEARDOWN-TO-REPO.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-15T05:44:46.084097+00:00",
+ "notes": "DONE: Phase 1 complete. 23/26 T7 models -> GLB, PR #170 opened (https://github.com/mhvnsnt/western-heart/pull/170). Blocked 3 (RAR/XPS). VF5 + rest in Phase 2."
+}

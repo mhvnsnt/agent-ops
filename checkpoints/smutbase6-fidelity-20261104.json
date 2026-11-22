@@ -1,0 +1,231 @@
+{
+ "also_owed": [
+  "Face close-up EEVEE renders for pond/ryusan/tobi/chatur (front+3/4 landed; face passes timed out under CJ render contention)",
+  "Size management on rebuilds = established pack route AFTER faithful export, image sha256 sets verified identical pre/post pack"
+ ],
+ "lane": "smutbase6-fidelity-20261104",
+ "lane_scratch": "~/workspace/_smutbase6-fidelity-20261104/ (blends/, blends-raw/ decompressed, blend-inv-*.json, inventory-*.json/.md, renders/, scripts/)",
+ "owner_order": "2026-11-04 ~18:01 CST: the six must look EXACTLY like their source .blend files opened in Blender, full rigs from their own files, all textures and everything else. 48-bone MPFB template conversion is NOT the standard.",
+ "rebuild_order": [
+  "1 Tobi \u2014 faithful re-export from mirkoIK.blend, restore Eyes/Eyeshadow/Hair maps + 129 morphs, retarget Hwoarang bank onto blend rig deform set",
+  "2 Pond \u2014 restore boots+gloves, 82 morphs, retarget Raven T7 bank (20 actions)",
+  "3 Chatur \u2014 restore second arm pair + 98 morphs + full 9-image set; no True Ogre TTT2 bank exists (pose-only)",
+  "4 Ryusan \u2014 520-bone Rigify fidelity master, 71 morphs, all 10 images, retarget Lucky Chloe bank",
+  "5 Megami \u2014 UNBLOCKED 2026-11-05 (commission blend recovered byte-identical; see track1_recovery). Rebuild from Parvati(Commission).blend after Ryusan.",
+  "6 Menajerii \u2014 UNBLOCKED 2026-11-05 (commission blend recovered byte-identical; see track1_recovery). Rebuild from Vixen (Commission).blend after Megami."
+ ],
+ "report": "mhvnsnt/western-heart docs/handoffs/SMUTBASE6-FIDELITY-2026-11-04.md (14,425 B, blob a0fd0c6b88) + docs/proof/2026-11-04/smutbase6-fidelity/ (14 renders + 7 inventory JSONs)",
+ "sources": {
+  "chatur_rahkasa": {
+   "blend": "roster/rahkasa/intake/RahkasaV1.1.blend (WH repo)",
+   "bones": "983 full rig / 133 deform",
+   "bytes": 11459182,
+   "materials": 6,
+   "note": "FOUR ARMS in source (two deform arm chains per side; render proof) vs TWO in shipped GLB. RahkasaBody carries 99 shape keys. Authored flex pose + scene in blend.",
+   "packed_images": 9,
+   "sha256": "85610cee5dafc070bd9d05bc75b7ca33d3f96dc8987693b4d5a5cb232c97c7e3",
+   "shape_keys": 98,
+   "shipped_joints": 52
+  },
+  "megami_parvati": {
+   "blend": "RECOVERED 2026-11-05 \u2014 Parvati(Commission).blend 595,860,144 B, sha256 cfc9864a15b03989b9dcb559e5fffc02bde8075f26472eeb4308500f01a8612a, file version Blender 4.2, 66 scene objects, armature 'Parvati' 469 bones, GZM rig (GZM_* controllers), 474 shape keys on Parvati Mesh, 123/124 images packed. Original rar sha256 2601d9356f5e530cd0abb0956db99fc47e2b70bba4bec58908ce64fc8dc68ff7 \u2014 recovered rar matches EXACTLY. Stored: release megami-menajerii-smutbase-20261023 (rar whole + blend in 400MB parts per MANIFEST-recovered-blends.md); local ~/workspace/_smutbase6-fidelity-20261104/recovered-sources/. Old record deltas: 'Blender 4.02 / 90 objects' \u2014 file reads 4.2 / 66 scene objects.",
+   "interim_source": "parvati-full.glb 191,604,148 B (release megami-menajerii-smutbase-20261023): 25 meshes, 1,154,840 tris, 69 mats, 66 images, 0 skins (rigless)",
+   "note": "7 outfit materials empty pbr {} in source (source trait); 8 hair-strand mats textureless (source trait). Jun-bank tiny/crumpled defect = separate fix lane launched 2026-11-04.",
+   "shipped": "311,325 tris (-73.0%), 52 mats, 52-joint template"
+  },
+  "menajerii_vixen": {
+   "blend": "RECOVERED 2026-11-05 \u2014 Vixen (Commission).blend 984,617,116 B, sha256 085d914c6539e0bef89f881ba6887336a1d93115ee6bef792161ec737c375670, file version Blender 4.2, 67 scene objects, armature 'Vixen' 450 bones, GZM rig + 2,509 shape keys across 24 meshes, 124/125 images packed. Original rar sha256 e6d2754b09f6de050e8a586d6fca3c4ed49f57fcdc4c1f36abfdc41c2be5e5a7 \u2014 recovered rar matches EXACTLY. Stored: release megami-menajerii-smutbase-20261023 (rar whole + blend in 400MB parts per MANIFEST-recovered-blends.md); local ~/workspace/_smutbase6-fidelity-20261104/recovered-sources/. Old record deltas: 'Blender 4.02 / 88 objects' \u2014 file reads 4.2 / 67 scene objects.",
+   "interim_source": "vixen-full.glb release asset 629,742,368 B (local models/src copy 100,078,094 B is TRUNCATED \u2014 Blender rejects it); sibling model.glb 41,676,940 B / 854,295 tris is intact and rendered",
+   "note": "No DAZ textures exist in holdings; palette is the ceiling until the blend/textures are recovered.",
+   "shipped": "403,383 tris, 18 palette mats, 28 skins x 52 joints"
+  },
+  "pond_tsuyu": {
+   "blend": "roster/tsuyu-asui/intake/Tsuyu Asui IK/Tsuyu Asui IK.blend (WH repo)",
+   "bones": 224,
+   "bytes": 14248117,
+   "materials": 11,
+   "note": "Bulge+Penis hide_viewport+hide_render in blend \u2014 #1552 removal faithful. Boots (3,084v) + gloves (4,070v) objects in blend, absent from every shipped GLB.",
+   "packed_images": 12,
+   "sha256": "034d0972eafd2f9fb8766b8af9d92115b577ae0c49ac31d915bd42cabcfc2d05",
+   "shape_keys": 82,
+   "shipped_joints": 52
+  },
+  "ryusan_mina": {
+   "blend": "roster/mina-ashido/intake/Mina Ashido rigify/Mina Ashido rigify.blend (WH repo; local lane copy byte-identical)",
+   "bones": 520,
+   "bytes": 7396031,
+   "materials": 7,
+   "note": "Plus 65-bone backup-metarig. Penis author-hidden; Fur hide_render only.",
+   "packed_images": 10,
+   "sha256": "75f96a453d2b8a673232af91138a9160d8d0ff3e682c0bfce10ab662219e328d",
+   "shape_keys": 71,
+   "shipped_joints": 521,
+   "fidelity_note": "Rebuilt 2026-11-05 (#1574): game file now carries the full 520-bone skinning rig (521 joints), 64 morph targets; master adds the Penis mesh's 7 keys (71 total). See ryusan_rebuild."
+  },
+  "tobi_mirko": {
+   "blend": "roster/miruko/intake/miruko IK/mirkoIK.blend (WH repo)",
+   "bones": 254,
+   "bytes": 6310244,
+   "materials": 10,
+   "note": "Eyes/Eyeshadow/Hair/Face maps ARE packed in blend \u2014 prior 'flat by source design' closure REFUTED. Bulge+Penis author-hidden.",
+   "packed_images": 12,
+   "sha256": "7aba517fdb7f2b1cb3b09fc9fe5d36eb0e3a1a877c79db2ced5154a375a27269",
+   "shape_keys": 129,
+   "shipped_joints": "255 (fidelity rebuild, PR #1570 \u2014 was 73 template)"
+  }
+ },
+ "status": "ALL SIX fidelity rebuilds LANDED: Tobi (#1570), Pond (#1571), Chatur (#1572/#1573), Ryusan (#1574), Megami (#1576) and Menajerii (#1577, merge 3f63454e). The SmutBase 6 fidelity order is COMPLETE.",
+ "tobi_rebuild": {
+  "deviations_game_only": [
+   "22 core bones renamed canonical (retargeter matches no Blender names; master untouched)",
+   "tail armature object=None source defect repaired + orphan vgroup->Hips",
+   "author-hidden Bulge/Penis + helpers excluded from game file (master keeps)",
+   "neck fluff: no material in blend -> authored flat warm-white in game file",
+   "authored fit-key mix folded into basis",
+   "hero-suit Metallic/Roughness merged to one MR image by exporter"
+  ],
+  "game_file": "roster/miruko/attires/attire1/model-rerig-textured.glb REPLACED: 2,495,616 B (was 4,823,088), 255 joints (254 blend bones + exporter neutral_bone), 11 images, morphs body 54 / Hair 37 / tail 30 / Gloves 1 (338 target instances)",
+  "harness": "roster probe BASICS 10/10 press true, baseline damage parity; play-probe 10/10 OK, mixer weight 1.0, bindFrac 0.17, 22 T3 actions; material gate auditGltf 14/14 ok locally + CI material-gate pass",
+  "master_file": "roster/miruko/attires/attire1/model-blend-master.glb NEW: 2,874,744 B, original bone names, all objects incl author-hidden, 345 targets, 12 images, tail unskinned as authored",
+  "pr": "WH #1570 merged fcd71e7c, CI 14/14",
+  "proof": "docs/proof/2026-11-04/smutbase6-fidelity/tobi-fidelity-{front,q34,face}-20261104.png, tobi-pelvis-{blend,glb}-20261104.png, tobi-fight-probe-20261104.mp4 + .json (driver log: 1 dmg 2.4, 2 dmg 4, d/f+2 dmg 17.5, grapple 1+3 throwSeen 15 dmg)",
+  "scripts": "tools/anim/export_tobi_fidelity.py + tools/anim/scale_glb.mjs (landed in #1570); lane scratch ~/workspace/_smutbase6-tobi-20261104/"
+ },
+ "tooling": "Blender 5.2.3 LTS at ~/workspace/_smutbase6-fidelity-20261104/tools-dl/blender-5.2.3-linux-x64/blender (official tarball 385,331,224 B size-verified; tools-archive chunks 005/006 hold the same build \u2014 partial chunk downloads in tools-dl/ were stopped once the tarball verified, chunks remain the canonical restore). All four blends are Blender 5.0 zstd \u2014 Blender 4.0.2 CANNOT read them. CJ v5 render was never touched.",
+ "track1_recovery": {
+  "disk_search": "EXHAUSTED 2026-11-05 (read-only child agent): neither ParvatiCommission.rar (sha256 2601d935...c68ff7) nor Vixen_Commission.rar (e6d2754b...e5a7) nor any extracted blend survives anywhere searched on this machine",
+  "github_search": "EXHAUSTED 2026-11-05 (read-only child agent): 158 releases / 3,892 assets across western-heart, game-reverse-engineering, cape-jones, agent-ops + main-tree scans \u2014 NOT FOUND; only the two known full GLBs exist",
+  "interim_masters": {
+   "local_cache": "~/workspace/_smutbase6-fidelity-20261104/recovered-masters/ (origin: release megami-menajerii-smutbase-20261023 \u2014 the store copy remains the canonical one)",
+   "parvati-full.glb": "191,604,148 B, sha256 0165575bdf3000c15e230bcb2f4d452d557dbae7c6e9889aecd8514e7774d232 VERIFIED vs release digest; parses: 25 meshes, 1,154,840 tris, 69 mats, 66 images, 0 skins",
+   "vixen-full.glb": "629,742,368 B, sha256 7b4df9fb502b7ed4c537fcc38cb6081ed01627de889c2a11fe64bc96efaeeafa VERIFIED vs release digest; parses: 29 meshes, 986,895 tris, 69 mats, 0 images, 0 skins \u2014 INTACT, supersedes truncated local copy"
+  },
+  "still_open": [],
+  "status": "DONE 2026-11-05",
+  "recovered": {
+   "route": "SmutBase re-download (browser lane) of the original MilkGuy_3D listings \u2014 'Parvati Holcomb' (project 9ca4fe0b) + 'Vixen' (project c7db985f) \u2014 after disk/GitHub searches exhausted and TeraBox check negative",
+   "parvati_rar": "326,033,257 B sha256 2601d9356f5e530cd0abb0956db99fc47e2b70bba4bec58908ce64fc8dc68ff7 \u2014 EXACT match to the original intake record in this checkpoint",
+   "vixen_rar": "412,236,235 B sha256 e6d2754b09f6de050e8a586d6fca3c4ed49f57fcdc4c1f36abfdc41c2be5e5a7 \u2014 EXACT match to the original intake record (and to the SmutBase mirror page value)",
+   "hash_question_settled": "The SmutBase mirror page's stated Parvati 'source' hash (2601d935e1f8\u2026) is the artifact: the recovered archive matches the ORIGINAL record in full and its contents match the intake description (596MB blend, GZM rig, same character/outfit as parvati-full.glb, rendered + eye-checked)",
+   "store": "release megami-menajerii-smutbase-20261023: both rars whole (sizes+sha256 digests API-verified) + both blends as 300MB parts (Parvati part-00/01, Vixen part-00..03) with MANIFEST-recovered-blends.md \u2014 every part digest API-verified against local. NOTE: uploads >~412MB from this VM would not finalize (assets stuck 'starter', content 404) via gh CLI or curl despite reported success; 419,430,400-byte parts failed repeatedly, \u2264412,236,235 B succeeded; blends therefore stored as \u2264314,572,800-byte parts uploaded one at a time via direct API POST. Pull-back reassembly proof run by the lane.",
+   "local": "~/workspace/_smutbase6-fidelity-20261104/recovered-sources/ (extracted blends under original names + renamed rar copies + chunks/); browser-download originals untouched in ~/workspace/browser_downloads/sess-316653875/",
+   "proof": "docs/proof/2026-11-04/smutbase6-fidelity/parvati-src-{front,q34,face}-20261104.png, vixen-src-{front,face}-20261104.png, inventory-{parvati,vixen}-recovered.json"
+  }
+ },
+ "updated": "2026-11-05",
+ "pond_rebuild": {
+  "pr": 1571,
+  "merge_commit": "77e37bd3c9c6c8af2bc0f56037992df78758df96",
+  "ci": "14/14 green incl. instruction-gate + material-gate",
+  "game_file": "roster/tsuyu-asui/attires/attire1/model-rigged-textured.glb 7726484 B blob 2c73e7a465d8 (verified on main)",
+  "master_file": "roster/tsuyu-asui/attires/attire1/model-blend-master.glb 8098424 B blob 43c9c7a03be7 (verified on main)",
+  "bones": "blend 224 -> 224 joints in both files (shipped conversion had 52)",
+  "shape_keys": "blend 82 -> game 75 (body 66 + suit 9); +7 on author-hidden Penis (master only); 82 total",
+  "restored": "boots mesh (3084v) + gloves mesh (4070v) dropped entirely by the original conversion",
+  "images": "12 packed in blend -> 11 master / 10 game; sha256 sets identical pre/post pack",
+  "scale": "blend character 4.4476 -> uniform 0.404717 -> 1.80 m (shipped height); soles at y=0 via +0.1869 floor lift",
+  "bank": "T7 Raven 20 actions plan/play on the new rig; roster probe 10/10 at baseline damage parity; play-probe mixer weight 1.0, bindFrac 0.08-0.17; 1+3 throw 15.8 = baseline",
+  "proof": [
+   "pond-fidelity-front-20261105.png",
+   "pond-fidelity-q34-20261105.png",
+   "pond-fidelity-face-20261105.png",
+   "pond-pelvis-blend-20261105.png",
+   "pond-pelvis-glb-20261105.png",
+   "pond-fight-probe-20261105.mp4",
+   "pond-fight-probe-20261105.json"
+  ],
+  "deviations": "game file only: 22 core bone renames; author-hidden Bulge/Penis + 0-poly helpers dropped (#1552 precedent); floor lift +0.1869 applied in master too (placement only)",
+  "scratch": "~/workspace/_smutbase6-pond-20261105/"
+ },
+ "ryusan_rebuild": {
+  "pr": 1574,
+  "merge_commit": "bdf0f6d3df316723960ece2a75fb9034f7667873",
+  "ci": "14/14 pass (instruction-gate, material-gate, rig-guard, game-unit-tests, menu-touch-e2e, speed-quality, budgets + guards)",
+  "game_file": "roster/mina-ashido/attires/attire1/model-rerig.glb (3,267,036 B; was 5,079,568 B shipped) | blob on main 834c491f58c1b6935ebb92922710555d2f7eeca0",
+  "master_file": "roster/mina-ashido/attires/attire1/model-blend-master.glb (3,535,264 B) | blob on main 937c0b5e20937ff6991089339aff544ac80ce496",
+  "bones": "521 joints in both files (the blend's full 520-bone skinning rig 'Mina Ashido' + root; 169 deform bones ride inside the full rig). Deform-only export was measured and REJECTED: Blender re-roots ORG-parented DEF bones at the skin root, disconnecting arms/legs from the spine, and the engine's analyzeRig then returns null (bank never binds). The 65-bone backup-metarig skins nothing (no modifier references it).",
+  "shape_keys": "71/71 accounted: Mina 62 + Horns 1 + suit 1 in both files (64 targets); author-hidden Penis 7 in the master only. 32 driver fcurves stripped in the export copy after capturing rest-evaluated authored mixes (Mina NipplesFlat 1.0, suit 'nipples flat' 1.0 folded into bases).",
+  "images": "8 of 10 packed images export in BOTH files (Height->Displacement has no glTF slot; skin_head image's $bumpmap node is unlinked in the blend itself). Game 7 textures (Penis excluded), master 8. Embedded-image sha256 sets identical raw vs packed.",
+  "scale": "floor lift +0.0473 (soles at z=-0.0473 authored) + uniform x0.3128614551655725 to 1.992 m total (shipped stance span -0.996..+0.996)",
+  "material_gate": "game file auditGltf 10/10 prims ok, 0 missing/placeholder/untextured; master 11 ok + 1 missing = material-less template helper prim (source trait)",
+  "harness": "roster probe 10/10 press true, damage parity class vs shipped (u/f+4 higher: full multi-hit lands); play probe t3actions 20 = shipped, 12/13 OK at weight 1.0, identical plans, d+3 NOFIRE on both models; gatecheck vs live Pantera: fight reached, 20 T3 actions retargeted + 27 T7 clips; canvas grabs black (harness capture limitation, Pond precedent) - Blender EEVEE renders are the visual proof",
+  "proof": "docs/proof/2026-11-04/smutbase6-fidelity/ryusan-fidelity-{front,q34,face}-20261105.png"
+ },
+ "megami_rebuild": {
+  "pr": 1576,
+  "merge_commit": "9b19f48fa9a6ca573aa56b2e872fd4b802d77a43",
+  "ci": "14/14 green (instruction-gate + material-gate pass with the amended exemption; speed-quality first failure was a runner disk-full infra flake, green on re-run)",
+  "game_file": "roster/parvati/attires/attire1/model-rigged.glb \u2014 41,319,032 B, blob c661515b5237fff6863f6f892552be68ef5db856 (registry repointed from model-rigged-nooutfit.glb, which stays untouched as the named no-outfit option)",
+  "master_file": "roster/parvati/attires/attire1/model-blend-master.glb \u2014 61,156,276 B, blob 9309e617584d855e068ef99f8c12f4726e158d46; full-res master (314,555,688 B) on release megami-menajerii-smutbase-20261023 as megami-master-packed.glb",
+  "bones": "469 joints (full GZM rig; 23 canonical renames game-only; 6 constraint-intent reparents, bind delta 0.000001)",
+  "shape_keys": "474 non-Basis, all on Parvati Mesh, all carried as targets in both files (0 folded \u2014 all driver-driven, all evaluate 0)",
+  "images": "124 in blend (123 packed + Render Result); master 86 GLB entries / 91 distinct blend images; game 40 (authored-look subset); not-carried classes itemized in the handoff",
+  "authored_look": "blend view layer excludes Wearables 1/2/3 + Hair 2 + Public Hair \u2014 17 alternate-wardrobe objects are master-only (author-hidden, Pond #1552 precedent); game wears the Original outfit",
+  "scale": "x0.69382 to shipped sole->top 1.3597 m anchor; in-game 1.334 m at idle, feet grounded (minY -0.001), vs Pantera 1.85 m (~72% body-to-body; older ~85% compared spans incl. the old robe hem)",
+  "material_gate": "audit ok 26 / missing 0 / placeholder 0 / untextured 4 (EyeMoisture-3/-4, Cornea-2, Torso-6 \u2014 owner-exempted classes); exemption amended in game/js/material-runtime.js + tools/assets/material_gate.mjs (voids only on a TEXTURELESS 24_/25_ material; all seven carry textures in the rebuild)",
+  "harness": "BASICS 10/10 exact damage parity vs shipped; Jun bank 12 actions, bindFrac 0.08 identical to shipped rig; canvas grabs black in swiftshader harness (logged, scale verdict numeric)",
+  "proof": "docs/proof/2026-11-04/smutbase6-fidelity/megami-fidelity-{front,q34,face}-20261105.png (front/q34 EEVEE, face Cycles \u2014 EEVEE frosts the transmissive corneas; diagnostic strip-render verified the authored eye stack)",
+  "codec_finding": "repo codec prune() drops TextureInfo.texCoord + TEXCOORD_1 (A/B measured) \u2014 Megami files packed meshopt-only; any future texCoord>0 model hits this in the standard encode"
+ },
+ "menajerii_rebuild": {
+  "pr": 1577,
+  "merge_commit": "3f63454e0709fea92fe522a7c2cdb6b1a464f800",
+  "merged_at": "2026-11-05T11:49:58Z",
+  "ci": "14/14",
+  "game": {
+   "path": "roster/vixen/attires/attire1/model-rigged-noplane.glb",
+   "bytes": 39136632,
+   "blob": "1355691311d9cae261c5f605b23ebaf782ba64ff",
+   "sha256": "4a65068a0e209604ec79f630c5ce2694124d2afb2d8897c53b061e9404540465",
+   "joints": 450,
+   "morph_targets": 932,
+   "images": 26,
+   "materials": 21
+  },
+  "master": {
+   "in_repo": null,
+   "release": "megami-menajerii-smutbase-20261023",
+   "capped1024": {
+    "name": "menajerii-master-capped1024.glb",
+    "bytes": 114293416,
+    "sha256": "07b5428ea31f09c457825e5910f85128420012ec70eaba81c9443b171333bb20",
+    "joints": 451,
+    "morph_targets": 2509,
+    "images": 80,
+    "materials": 69
+   },
+   "fullres": {
+    "name": "menajerii-master-packed.glb",
+    "bytes": 493068228,
+    "sha256": "e4a425cc2ccc4260d730ccf39095a13803bcd4a550a85757e5af916c0248526e"
+   },
+   "note": "No in-repo master: 114 MB capped build exceeds GitHub's 100 MB per-file limit (PR #1577 deviation 14). Both digests verified on the release via gh api."
+  },
+  "shape_keys": {
+   "total": 2509,
+   "game": 932,
+   "master_only_author_hidden": 1577
+  },
+  "images": {
+   "blend": 125,
+   "packed": 124,
+   "game_distinct": 26,
+   "master_distinct": 89,
+   "not_carried": 35
+  },
+  "probes": {
+   "gatecheck": "fight reached, p1model true, err null",
+   "material_audit": "ok 21 / missing 0 / placeholder 0 / untextured 2 (EyeMoisture-2, Cornea-2 \u2014 exempted, PR deviation 15)",
+   "basics_damage": "7/10 exact parity vs shipped (incl. 1+3 33.5 throw); 2/3/4 hit-segment totals differ (PR deviation 16)",
+   "grabs": "1+3 33.5 throw connects; 2+4 0-damage anomaly identical to baseline",
+   "roger_bank_playprobe": "15 t3 actions, 15 mixer actions, all rows OK w=1 bf=0.08, row-identical to shipped-model control",
+   "scale": "idle 1.80 m, minY -0.0, vs Pantera 1.85 m = 97.3%"
+  },
+  "proof": [
+   "menajerii-fidelity-front-20261105.png",
+   "menajerii-fidelity-q34-20261105.png",
+   "menajerii-fidelity-face-20261105.png"
+  ],
+  "scratch": "~/workspace/_smutbase6-menajerii-20261105/"
+ }
+}

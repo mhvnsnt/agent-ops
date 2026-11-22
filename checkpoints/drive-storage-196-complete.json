@@ -1,0 +1,10 @@
+{
+ "task": "Complete drive-storage repo to 196/196 with honest placeholders for the 3 zero-byte losses; audit count+size for owner verification",
+ "repo": "mhvnsnt/drive-storage",
+ "resume_brief": "Finish the Drive-to-GitHub migration to a verifiable 196/196. (1) In repo mhvnsnt/drive-storage, find the exact original filenames of the 3 zero-byte losses (cain Elias wrestling gear, wreck Patterson attire 3, _Textbook_ Aaron Ruben \u2014 check docs/DRIVE-STORAGE-INDEX.md and local manifests under ~/workspace/drive-storage-work or ~/workspace/agent-ops/staging-leak-pull). (2) Add HONEST placeholder files for each: same folder the file would have lived in, named <original-basename>.MISSING.md, content stating what the file was supposed to be, that the original download was 0 bytes and the content never existed (not even in Drive trash), date 2026-10-12, and how to replace it (drop the real file at the original filename, delete the placeholder). NEVER fabricate fake model content \u2014 placeholders are clearly marked. (3) Via branch -> PR -> merge (no open PRs left). (4) Update docs/DRIVE-STORAGE-INDEX.md to 196/196 (193 real + 3 marked placeholders). (5) Audit and report: exact total file count and total bytes across repo-tracked files + release assets, plus the repo URL for owner browsing. (6) List what currently remains in his Google Drive matching the migrated set (read-only) to inform his later delete decision \u2014 DO NOT delete anything from Drive. Heartbeat this checkpoint; mark done at end.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-12T19:35:00+00:00",
+ "notes": "DONE. PR #15 merged. 196/196 accounted for (193 content + 3 placeholders). Audit: 159 git files ~1.92GB + 77 release assets ~3.24GB. Drive check: 0 models, 0 migrated animations remain; 7/8 audio still in Drive (~700KB). Awaiting owner delete decision."
+}

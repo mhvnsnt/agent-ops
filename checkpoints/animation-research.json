@@ -1,0 +1,9 @@
+{
+  "attempts": 0,
+  "repo": "/home/hatch/workspace/video-fix-tools",
+  "resume_brief": "Broad research task on animation repair and style-transfer techniques for Wizard Gang EP02. Context: repairing an AI-generated 2D cartoon episode that drifted into photorealistic/3D in 19 shots. Approved styles: 2D cartoon (Shadow Wizard Money Gang base) and painterly (dramatic beats only). Need co-authored manual+AI repair techniques. Research vertically: (1) cartoonization filters (White-box cartoonization, AnimeGAN \u2014 compare quality/temporal consistency), (2) temporal consistency techniques (EbSynth, RIFE interpolation, temporal smoothing), (3) fastest free rotoscoping workflow (Blender Grease Pencil, OpenToonz, SAM 2.1 masking). Research horizontally: (4) professional AI-assisted cleanup tools/studio pipelines, (5) comic/cartoon filters in real production (live-action ref to 2D), (6) style-lock prompting best practices with proven prompt templates for forcing image-to-video to stay 2D, (7) new 2025-2026 video style transfer tools. Deliverable: comprehensive research doc at ~/workspace/video-fix-tools/RESEARCH-ANIMATION-REPAIR.md with tool names, links, actionable recommendations, prioritizing free/accessible tools. Sections done so far: checkpoint written. Next: vertical research on cartoonization, then temporal consistency, rotoscoping, then horizontal research, then write the doc.",
+  "status": "done",
+  "task": "Broad research: animation repair and style-transfer techniques for Wizard Gang EP02 (vertical + horizontal)",
+  "updated_at": "2026-10-10T13:03:19Z",
+  "watchdog": true
+}

@@ -1,0 +1,10 @@
+{
+ "task": "LOTI v3: Porky-style mascot end button at 52.5",
+ "repo": "~/workspace/trippedd-studio-loti-v2",
+ "resume_brief": "In ~/workspace/trippedd-studio-loti-v2 on branch feat/loti-commercial-v3 (PR #117 open, NOT merged): replace the t52.5-to-end text card with a Looney-Tunes-ending-style gag. Reference: the classic Porky Pig 'That's all folks!' ending (concentric red/gold bullseye rings, character pops up through the center, stuttered sign-off line, hold, cut). Build: (1) concentric rings background plate (classic cartoon bullseye, red/gold on dark); (2) the 100% 2D leprechaun mascot (from v3/fx/sticker/ cutout) pops up through the center like Porky does; (3) he delivers the stuttered line 'Th-th-that's the Irish, folks!' timed like the reference bit, fitted between t52.5 and the end (~56.5s); (4) hold on mascot, then cut to black end. Audio: the line SPOKEN \u2014 use the best available TTS (elevenlabs skill if usable, else local) with a goofy cartoon delivery, stutter included; mark it TEMP and swappable in METHODS.md so the owner can redub with his own voice. Splice via stream copy (keep runtime ~56.53s), eye-QC the whole 52.5-end window (rings clean, pop-up lands, lip/motion sync with the line, no splice glitches), re-upload via remote-storage, commit+push to feat/loti-commercial-v3 (--no-verify), do NOT merge. Report new SHA-256, URL+expiry, QC notes.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T23:04:37.172356+00:00",
+ "notes": "added disclaimer-leak fix (t46-52) before end-button splice"
+}

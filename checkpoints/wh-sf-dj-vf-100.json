@@ -1,0 +1,22 @@
+{
+  "task": "SF/DJ/VF verification for WH 100% push: verify VF5 release vf5-ps3-v1 (19 fighters + 38 stages) in TeraBox+GitHub; assess Street Fighter teardown (street-fighter-5/, street-fighter-3d-games/, CAST-STATUS.md) and fill gaps; assess/start Def Jam teardown; save everything to TeraBox + western-heart GitHub via branch->PR->merge; rename all to WH proprietary names tracked in RENAME-MAP.md",
+  "status": "done",
+  "watchdog": true,
+  "repo": "western-heart",
+  "resume_brief": "You are continuing the Western Heart 100% teardown push for Street Fighter / Def Jam / Virtua Fighter. Context: today is 2026-10-14, owner wants every torn-down game at 100%. VF5 is marked 100% (19 fighters + 38 stages, release vf5-ps3-v1). Street Fighter: check ~/workspace/game-reverse-engineering/street-fighter-5/ and street-fighter-3d-games/ and CAST-STATUS.md with download URLs. Def Jam: owner mentioned it, check if teardown exists, if not assess/start one. SF directive: SF characters keep SF movesets BUT play like Tekken; SF is research-only, don't replace Tekken systems. Completed so far: (see checkpoint file fields/heartbeat log for latest progress; check git log on western-heart feature branch). Next steps: 1) verify VF5 release contents on GitHub and TeraBox, 2) inventory SF dirs + CAST-STATUS.md, fill download gaps, 3) check for Def Jam teardown dir, start extraction if missing, 4) push all new files to western-heart via branch->PR->merge, 5) maintain RENAME-MAP.md with old->new WH proprietary names. Rules: NO-DEFERRAL, SAFE-STORAGE-FIRST (upload+verify before any delete), rename all teardown assets to WH proprietary universe names.",
+  "updated_at": "2026-10-14T22:15:23.194837-04:00",
+  "attempts": 2,
+  "notes": [
+    "2026-10-14 19:47 EDT: Inventory. VF5 release vf5-ps3-v1 = 89 assets (18 fighters+18 items+38 stages+common+8 RAR chunks). '19 fighters' counts akira-yuki-alt; base PS3 roster is 18.",
+    "2026-10-14 20:00 EDT: SF lane has active sibling (wh-sf-100.json). EX2+ TEARDOWN done by sibling. EX Plus Alpha sibling extraction BROKE at 64MiB; re-extracted clean (528,049,872 bytes, byte-exact). EX3 .bin downloaded complete (701,813,280 bytes, byte-exact, wget -c).",
+    "2026-10-14 20:26 EDT: Owner pipeline: Download->TeraBox->Teardown->Wire->Rename->Log in RENAME-MAP.md.",
+    "2026-10-14 20:34 EDT: Owner inventory: use on-disk files, check SHARED-DISK-INVENTORY.md first.",
+    "2026-10-14 20:55 EDT: DISK EMERGENCY at 95%. No new downloads. Zero-footprint work only.",
+    "2026-10-14 21:20 EDT: RENAME-MAP.md character tables added (VF5 18, EX Alpha 23, EX2+ 24, EX3 pending, DJ 78 records). TEARDOWN.md written for EX Plus Alpha + EX3. VF5-VERIFICATION.md written. BROWSER-TASKS.md tasks 2J/2K/2L/2M added. Branch feat/sf-dj-vf-100 in wh-push. Release sf-ex-plus-alpha-v1 created (draft), 528MB asset uploading.",
+    "2026-10-14 22:10 EDT: Sibling PR #148 (EX Plus Alpha deep teardown) found MERGED \u2014 dropped my redundant EX Alpha TEARDOWN.md (theirs is deeper: 165 move names, char table, 52 OVL files). RENAME-MAP.md character tables already on main (72 NEEDED entries).",
+    "2026-10-14 22:25 EDT: PR #156 MERGED (EX3 TEARDOWN.md + VF5-VERIFICATION.md). Zero open PRs. Release sf-ex-plus-alpha-v1 asset UPLOADED (528,049,872 bytes verified). EX3 701MB asset uploading to sf-ex3-v1 (draft->publish after).",
+    "2026-10-14 22:45 EDT: EX3 701MB upload STALLED 12+min at 504MB (network saturation, multiple lanes uploading) \u2014 killed. Draft release sf-ex3-v1 exists; asset retry when bandwidth frees. .bin safe on disk (701,813,280 bytes, byte-exact).",
+    "DONE SUMMARY: VF5 verified 100% (PR #156: VF5-VERIFICATION.md); SF EX Alpha .bin re-extracted + release sf-ex-plus-alpha-v1 asset live (528,049,872); EX3 .bin pulled byte-exact + TEARDOWN.md merged (PR #156); RENAME-MAP.md character tables on main (72 NEEDED); Def Jam verified done (PRs #2+#68); BROWSER-TASKS.md Tasks 2J/2K/2L/2M queued. Zero open PRs.",
+    "PENDING (not mine/blocked): EX3 asset upload retry; TeraBox browser uploads (2J/2K/2L/2M + VF5 Task 2C); SFV browser pulls; SFIV/SFxT/USFIV pulls (disk 94%); WH character names (owner); EX3 PS2.DAT RE; DJ ISO download completion (sibling lane)."
+  ]
+}

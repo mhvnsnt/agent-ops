@@ -1,0 +1,10 @@
+{
+ "task": "Wave 50 Lane C: wire 1-2 permissive tools with real proofs (caption burn-in via ffmpeg ASS pipeline + PD music-score downloader via archive.org API); wire script + PROOFS.md + SHA256SUMS; rebase cleanly, no force-push",
+ "repo": "/home/hatch/workspace/agent-ops/wave50-lanes/lane-c",
+ "status": "done",
+ "attempts": 0,
+ "notes": "DONE 2026-10-08: wired 2 MIT tools in tools/wave50_lane_c/. (1) wire_caption_burnin.py: 10s synthetic testsrc clip + 3-event ASS -> burned.mp4 via libass; ffprobe OK; pixel GT caption-ON 7.03/255 vs OFF 0.51/255; frames eyeballed (captions + red override visible). (2) wire_pd_score.py: archive.org item carner_44_2181 (Joplin Gladiolus Rag, 1907, Jos. W. Stern & Co.); PDF 2391653 bytes byte-exact vs metadata, 6 pages, SHA-256 1138be2a...0ddfc. PROOFS.md + SHA256SUMS (16 files). Commits 59305a7 (scripts) + ae618b8 (proofs) pushed to origin/wave50-lane-c; no force-push; largest binary 2.3 MB.",
+ "resume_brief": "Resume Wave 50 Lane C in /home/hatch/workspace/agent-ops/wave50-lanes/lane-c (branch wave50-lane-c, base a2321c5; verify branch with git rev-parse --abbrev-ref HEAD before every git command). Work complete: 2 MIT tools wired with real proofs in tools/wave50_lane_c/ (wire_caption_burnin.py PASS, wire_pd_score.py PASS), PROOFS.md, SHA256SUMS; commits 59305a7 + ae618b8 pushed to origin/wave50-lane-c. If resuming, only remaining work is responding to coordinator/owner review.",
+ "watchdog": true,
+ "updated_at": "2026-10-08T11:57:37.065716+00:00"
+}

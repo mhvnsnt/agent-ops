@@ -1,0 +1,10 @@
+{
+ "task": "Build the unified God Molecule bible draft: A (immutable) + B KEEP items + C comedy/style + all 18 wave-2 additions (owner-approved)",
+ "repo": "/home/hatch/workspace/god-molecule-studio",
+ "resume_brief": "God Molecule unified bible (owner 2026-10-09): ALL verdicts are in \u2014 Bible B review all 7 KEEP (PR #84), wave-2 18 bible additions ALL APPROVED. Build the merge-into-one DRAFT at docs/GOD-MOLECULE-UNIFIED-BIBLE.md in mhvnsnt/God-Molecule-Show-Studio. Sources, in authority order: (1) Bible A = God-molecule-production-stage/src/components/ShowBible.tsx \u2014 IMMUTABLE, #1 canon, never contradicted or softened; (2) Bible B KEEP items per trippedd-studio docs/god_molecule/BIBLE-B-REVIEW-AGAINST-A.md verdict log (14-reality schema, central questions, 9 traits, observer/audience, 15 laws, scale stack, splat pipeline); (3) Bible C = trippedd-studio docs/god_molecule/GOD_MOLECULE_CANON.md comedy/style guidance; (4) wave-2 BIBLE-ADDITIONS.md \u2014 all 18 APPROVED 2026-10-09. Every section gets a provenance tag [A]/[B-KEEP]/[C]/[W2]. Constraints: 15 laws KEEP-in-principle \u2014 include with a note that per-law alignment vs his other show laws is still pending; observer/audience roles \u2014 include with note to verify vs production conversation; scale stack \u2014 include expanded per wave-2; NO invented canon \u2014 flag gaps, don't fill; mark the whole doc DRAFT \u2014 Bible A remains #1 authority until owner blesses the unified bible. Also mark all 18 items APPROVED (2026-10-09) in wave2/BIBLE-ADDITIONS.md checklist. Deliver via branch->PR->merge (merge commits only, 0 open PRs). Heartbeat checkpoint, mark done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T01:29:47.504430+00:00",
+ "notes": " | Subagent 7016095d started: heartbeat active, reading sources. | Sources read: A (163 lines), B-review (121), C (138), W2 additions (201). Worktree gm-unified-bible created on origin/main. Writing draft. | DONE: unified bible draft merged as 596be6c (PR #7). 0 open PRs."
+}

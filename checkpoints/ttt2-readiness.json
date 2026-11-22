@@ -1,0 +1,11 @@
+{
+ "task": "TTT2 resume-readiness verification: chunks, tools, branch state (NO downloads until disk <80%)",
+ "repo": "western-heart",
+ "resume_brief": "TTT2 readiness verifier. CONTEXT: checkpoints ttt2-full-teardown.json + wh-100percent.json ttt2 section (25%, 1/26 chunks, surgical extraction tools built, branch pushed, paused on disk). Scripts: ~/workspace/agent-ops/ttt2_*.sh. DO: locate+verify downloaded chunk(s) integrity, verify surgical extraction tools + branch state, prep STFS extraction readiness + RENAME-MAP entries, report exact disk threshold + resume steps. HARD: NO downloads until df shows <80% (currently 92%, ceiling 88%). Read-only except this checkpoint heartbeat. Report resume-readiness to coordinator.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "notes": "readiness pass done 2026-10-14 ~21:55 EDT: 1/26 chunks verified (chunk1=524288000B assembled), part_02 partial 99MB remnant (not deleted), tools+deps verified, branch feat/ttt2-teardown-100 exists remote+local (9dc4a67b, no open PR), release 26/26 intact 13,363,624,393B, disk 93% (7.6G avail) -> resume blocked until <80% || 2026-10-15 ~02:15 EDT watchdog readiness re-verify: chunk1 (Tekken Tag Tournament 2.7z, 524288000B) present; part_02 partial 99342464B present; reassemble_ttt2.sh+download_ttt2.sh+logs present; surgical tools (god_surgical.py, stfs_blobs.py, xdvdfs_reader.py) parse OK; branch feat/ttt2-teardown-100 @9dc4a67b local+remote match; release 26/26 assets, 13363624393B total; RENAME-MAP has 3 TTT2 entries. DISK 75% (25G avail) = BELOW the 80% gate: resume now UNBLOCKED on disk. Ready for coordinator (ttt2-resume-100 still status=blocked-disk); resume steps: pull chunks 2-26 via reassemble_ttt2.sh/parallel-download, verify vs release, STFS extract, teardown, PR.",
+ "updated_at": "2026-10-15T10:32:52.441200+00:00",
+ "note": "2026-10-15 pulse: superseded \u2014 disk now 69% (<80% gate), ttt2-resume-100 lane already resumed the download. Readiness gate satisfied."
+}

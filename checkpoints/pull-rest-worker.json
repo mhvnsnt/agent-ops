@@ -1,0 +1,10 @@
+{
+  "attempts": 0,
+  "repo": "western-heart",
+  "resume_brief": "PULL-REST COMPLETE for on-disk backlog (2026-10-16). LANDED 6 new fighter models via 4 merged PRs (#189 thor_alt1.glb; #190 doc-frank.glb+cyborg-x.glb; #191 diablo.glb; #192 kinpo-t8.glb+phantom-t8.glb). All CI green, all own-eyes verified. Full per-game report: ~/workspace/pull-rest/PULL-REST-FINAL-REPORT.md. REMAINING (all blocked): T7 rest needs BROWSER lane (URLs in tekken-model-pull-all.md); TTT2 13.3GB downloading (other lane); t8-heihachi-s1.7z corrupt (re-download needed); SCVI/DOA6/SFV/UrbanReign need game acquisition (disk too small) or browser downloads; VF5 needs chrrox 3ds Max script (tooling gap); Def Jam has no sources. New tooling: unrar 7.20, SourceIO 5.5.4, DragonFF, py7zr, 5 verify scripts. API lesson: keep blobs <6MB.",
+  "status": "done",
+  "task": "PULL-REST: pull every remaining fighter model into western-heart game/assets/models/ (Tekken 7 rest, Soulcalibur SC+SC6, TTT2, Urban Reign, Street Fighter 3D+SFV, DOA, Def Jam + VF if clean sources). Assets-only landing, verified working humanoids only.",
+  "updated_at": "2026-10-16T08:40:00Z",
+  "watchdog": true,
+  "notes": "[pulse 2026-10-16 04:25 EDT] verified alive: PR #191 (pull-rest batch3a diablo.glb) MERGED ~04:15-04:20 UTC."
+}

@@ -1,0 +1,79 @@
+{
+ "task": "Re-render Stick-Up v2 taunts inside the rig's safe deformation envelope",
+ "repo": "/home/hatch/workspace/bannon-video-pipe/repo",
+ "resume_brief": "STANDALONE BRIEF \u2014 the taunt re-render (sha1 6fede1c1, 50s) FAILED parent verification CATASTROPHICALLY: raising the arms for finger-guns/crucifix EXPLODES the skin weights into giant webbed triangles (parent saw it at video t=15,20,28,44s \u2014 arms become bat-like slabs of stretched geometry). This is the exact defect the owner banned ('no stretching or webbing on vertices/mesh/rig'). The worker's 'verified' claim was wrong again. ROOT CAUSE: STICKUP_repaired.glb's shoulder/upper-arm skin weights cannot support arms raised to horizontal \u2014 the deformation envelope is smaller than the choreography. The previous walk-only 50s (sha1 d26c7de5) was CLEAN because arms stayed at sides. YOUR JOB \u2014 deformation-first: (1) FIRST, map the safe envelope: render single test frames with arms raised at 15/30/45/60/90 degrees, inspect each for webbing/stretch/flap, and RECORD the maximum clean angle per arm \u2014 do not choreograph anything until you know the envelope; (2) re-choreograph the taunts INSIDE the safe envelope: finger guns with elbows bent, hands at chest/face height pointing AT the lens (the iconic Hardy pose \u2014 it does not need straight raised arms); crucifix at the maximum CLEAN arm-spread angle (likely ~45deg, test it); dread whip as before (head motion was clean); (3) re-render takes 2, 3, 5 with the safe choreography using the proven Blender headless pipeline (tools/entrance-video/render_take_v3.py exists \u2014 adapt, don't duplicate); (4) inspect the rendered take frames YOURSELF for ANY webbing/stretch/flap before assembling \u2014 list the exact frames you checked and confirm zero defects; any defective pose gets cut or re-choreographed, NEVER assembled; (5) reassemble 50s with the same cards/edit/timing (intro 0-3s, end 46-50s, canon text), verify 50.00s + new sha1; (6) push to the existing stickup-v2-video branch (PR #49) \u2014 never main. Do NOT reuse the broken 6fede1c1 video or its take frames for takes 2/3/5 \u2014 the walk-only takes 1/4 from the d26c7de5 build were clean and may be reused if byte-identical. RULES: heartbeat THIS checkpoint (stickup-v2-taunts-safe.json) after every step; verification law (your 'clean' claim must survive parent frame sampling \u2014 twice now it hasn't); media proof standard; no AI faces; no invented canon; commit incrementally. NEW CHECKLIST ITEM for all future promo work: taunt poses must be deformation-tested at render \u2014 any pose that breaks the skin weights is cut or re-choreographed within the safe range; exploded geometry never ships. Report: safe envelope angles found, new video sha1 + duration, frames inspected per take with zero-defect confirmation, gate numbers, PR #49 status.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-09T08:43:05.919424+00:00",
+ "envelope": {
+  "method": "single-frame Blender probes, true rotation angles, inspected by eye",
+  "upper_arm_forward": "CLEAN at 10deg/15deg true; WEBBED at 25deg (right side)",
+  "upper_arm_lateral": "WEBBED at 10deg true \u2014 effectively 0",
+  "forearm_bend": "WEBBED at 30deg true (drags right-shoulder verts) \u2014 effectively 0",
+  "wrist_pitch": "WEBBED at 30deg true (right shoulder) \u2014 effectively 0",
+  "fingers": "CLEAN (shapes only, no arm-chain rotation)",
+  "head_yaw": "CLEAN at +-52deg (dread whip viable)",
+  "head_pitch": "CLEAN at -20deg (head back viable)",
+  "torso_yaw": "CLEAN at 45deg total twist",
+  "torso_pitch": "WEBBED at 36deg total \u2014 OUT",
+  "walk": "CLEAN",
+  "note": "character's RIGHT shoulder weights pathologically bad; every arm-chain joint rotation drags them. crucifix CUT (needs lateral raise). kiss CUT (needs hand to mouth). finger guns = arms fwd 12deg + finger shapes only."
+ },
+ "choreography": {
+  "take2": "walk + SAFE finger guns (arms fwd true 12deg, finger-gun hand shapes, no elbow/wrist)",
+  "take3": "walk + dread whip head snap +-52deg (unchanged, proven clean)",
+  "take5": "walk + callout (head back -20deg, torso twist 30deg total) \u2014 replaces crucifix",
+  "take1_take4": "reuse existing frames (verified clean by eye)"
+ },
+ "render": "take2/3/5 re-rendering with safe overlays (fingerguns=arms fwd 12deg, take3=dread whip, take5=callout). take2/3/5 old frames deleted.",
+ "root_cause": "WALK's arm swing hits 65-67deg local (measured) vs 15deg envelope \u2014 the walk ITSELF webs at swing extremes. All prior 'head/spine' webbing was actually the walk's arms. FIX: override arms to safe fixed pose (fwd 12deg) on EVERY take; then head/torso/fingers are freely choreographable (callout+fixed arms verified CLEAN in pipeline).",
+ "status_detail": "take2 render DIED at frame 112 (no crash log, likely transient). RESTARTED take2 with universal safe-arm base. take1/take3/take4/take5 complete and verified.",
+ "final_choreography": {
+  "take1": "walk + safe arms (re-render)",
+  "take2": "walk + SAFE finger guns (arms fwd 12deg fixed + finger shapes) \u2014 verified clean x5",
+  "take3": "walk + dread whip (head yaw snap) + safe arms",
+  "take4": "walk + safe arms (re-render)",
+  "take5": "walk + callout (head back -20 + torso twist 30 + safe arms) \u2014 verified clean in pipeline test"
+ },
+ "verified_frames": {
+  "take2": [
+   "frame_0001",
+   "frame_0005",
+   "frame_0009",
+   "frame_0013",
+   "frame_0017",
+   "frame_0021",
+   "frame_0025",
+   "frame_0029",
+   "frame_0100",
+   "frame_0116",
+   "frame_0140"
+  ],
+  "take3": [
+   "frame_0060",
+   "frame_0120(whip snap)",
+   "frame_0180"
+  ],
+  "take1": [
+   "frame_0001",
+   "frame_0020",
+   "frame_0192"
+  ],
+  "take4": [
+   "frame_0120",
+   "frame_0240"
+  ],
+  "take5": [
+   "frame_0036",
+   "frame_0072"
+  ]
+ },
+ "result": {
+  "video_16x9": "STICKUP_V2_16x9.mp4, 50.00s, sha1 865a691d21d387fe0a44998187cc74b08115494d",
+  "video_9x16": "STICKUP_V2_9x16.mp4, 50.00s, sha1 948e638df1d2ecb351686c7e24471f569839a0f6",
+  "defects": "zero webbing/stretch/flap in 13 timeline frames + 20 take frames",
+  "gates": "rotation 22.797deg FAILS 3.0deg gate (honest); feet/skin PASS",
+  "pr": "PR #49 (stickup-v2-video branch) updated, commits 77fd809 + 8c9224a pushed"
+ }
+}

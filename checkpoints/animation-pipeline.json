@@ -1,0 +1,9 @@
+{
+  "task": "Build complete animation pipeline infrastructure: expand playbook with 6 new sections, model sheet template, Ashes model sheet, pipeline checklist, research sources",
+  "repo": "~/workspace/animation-techniques",
+  "resume_brief": "Build out animation pipeline infrastructure in ~/workspace/animation-techniques/. Four tasks: (1) Append 6 new sections to ANIMATION-PLAYBOOK.md: Model Sheets, Color Models, X-Sheets, 12 Principles of Animation, Clean-up Pipeline, Timing Charts. Preserve existing content. (2) Create templates/character-model-sheet-template.md and fill it out for Ashes at ~/workspace/ashes-mouth-pack/ASHES-MODEL-SHEET.md. (3) Create PIPELINE-CHECKLIST.md with 9-step per-shot process. (4) Create research/SOURCES.md with animation reference materials. Read ANIMATION-PLAYBOOK.md first to match style.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T20:15:00Z"
+}

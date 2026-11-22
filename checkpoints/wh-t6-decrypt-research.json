@@ -1,0 +1,9 @@
+{
+ "task": "Research T6 DATA401 decrypt solution: PPSSPP memdump, GPU cracking, community tools, alt extraction paths. Research only, no file mods.",
+ "repo": "game-reverse-engineering",
+ "resume_brief": "T6 DECRYPT RESEARCH: Tekken 6 PSP DATA401 files use custom deflate (btype=2 dynamic blocks) with unknown distance formula. 20/76 decrypted, 56 stuck after 11 failed hypotheses. Research: (1) PPSSPP memory dump feasibility, (2) GPU/cloud cracking, (3) community PSP decryption tools, (4) alternative extraction paths. Deliver concrete recommendation. Heartbeat this checkpoint.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-16T05:30:00+00:00"
+}

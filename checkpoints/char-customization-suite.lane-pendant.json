@@ -1,0 +1,10 @@
+{
+ "task": "Lane: chain pendant orientation fix (4 rigged chain GLBs)",
+ "repo": "/home/hatch/workspace/game-sweep/AshLanev2",
+ "resume_brief": "DONE. Branch feature/chain-pendant-fix, commit a6162b58 pushed, PR #25 open+mergeable.",
+ "notes": "Heartbeat: all lane work committed (a6162b58, 5 files) and pushed; PR #25 open+mergeable. Scope guard confirmed: did NOT make and did NOT commit the uncommitted .gitignore/AGENTS.md/package.json/package-lock.json changes (genex block + cli-demo dep) - they remain uncommitted in working tree, untouched. Lane files only: public/models/accessories/** + docs/CHAIN_PENDANT_FIX.md. Nothing pending. | Watchdog 2026-10-09 14:35 CDT: verified PR #25 merged to main (684b01a9) - lane closed.",
+ "watchdog": false,
+ "status": "done",
+ "attempts": 0,
+ "updated_at": "2026-10-09T03:22:14.354568+00:00"
+}

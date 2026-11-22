@@ -1,0 +1,71 @@
+{
+ "findings_so_far": [],
+ "id": "gap-closure-w5e-defjam-microcode",
+ "parent_checkpoint": "gap-closure-w5d-defjam-vu",
+ "repo": "mhvnsnt/western-heart (converter+catalog+spec PR #452), mhvnsnt/wrestling-game (.o data)",
+ "resume_brief": "W5e IN PROGRESS: census held Def Jam data for DEFINED (value!=0) LitGouraud0__EAGLMicroCode / IrradTexture_Skin0__EAGLMicroCode using in-repo J4 EAGL parser: (a) all 2624 extracted .o in wrestling-game, (b) other held Def Jam objects (VIV/BIG extractions, MAIN_ALL.DAT+siblings, motion), (c) prior lanes ~/workspace/_w5c-work + ~/workspace/defjam-work. If found: Ghidra emotionengine-reloaded VPU disassembly, read vertex loop, implement behind flag, validate W5c gates (cross-letter A/B/F, BBOX 17.44/19.33/9.0, Blender renders V2CP_110_0001_A+111/112/113 own-eyes). If not held: spec 7.9.4 on PR #452 branch w5c-defjam-vertex-addendum with census coverage + exact uncensused disc-archive list cross-ref W5b 912 IA-gated entries. POINTS stands until proven.",
+ "status": "done",
+ "step": "DONE: spec 7.9.4 pushed to PR #452 branch as 2616bc2 (+164/-0, 2 files, no deletions) + instruction-gate comment 6329918393; PR OPEN/MERGEABLE +581/-0 total. Microcode defining object = named IA-pickup target (W5b 912-entry manifest first). POINTS stands. Scratch wg clone deleted (repo checkout, retrievable from GitHub main).",
+ "task": "W5e Def Jam microcode census: census all held data for DEFINED LitGouraud0/IrradTexture_Skin0 __EAGLMicroCode, disassemble if found, else spec 7.9.4 addendum on PR #452",
+ "updated": "2026-10-22T00:48:38.733898+00:00",
+ "watchdog": true,
+ "census": {
+  "class_c_ondisk": {
+   "roots": [
+    "_w5c-work (168 .o, 325 other files scanned, 9 ghidra proj files skipped)",
+    "defjam-work (156 .o, 121 other)"
+   ],
+   "o_parsed_total": 324,
+   "microcode_symbol_refs": 590,
+   "defined_hits": 0,
+   "note": "all refs value=0 size=0 (undefined externs); sym families: LitGouraud0, IrradTexture_Skin0, DJIrradTextureEnvmap_Skin10, DJFXSparkle_Skin0, IrradTexture0 x1; SLUS_210.04 raw scan: __EAGLMicroCode marker only (Particle0/HeatParticle0 per W5d), target names absent; _w5c-work/wh surgical copy duplicates defjam-work surgical V2IP set",
+   "parse_errors": "3 RefPackError total"
+  },
+  "class_a_wrestling_game_caw_parts": {
+   "o_files": 2624,
+   "other_files_raw_scanned": 5324,
+   "elf_parsed_ok": 1857,
+   "refpack_error": 767,
+   "microcode_refs": 1331,
+   "by_sym": {
+    "LitGouraud0": 654,
+    "IrradTexture_Skin0": 654,
+    "DJFXSparkle_Skin0": 22,
+    "DJIrradTextureEnvmap_Skin10": 1
+   },
+   "defined_hits": 0,
+   "raw_name_hits_in_other": 0,
+   "note": "767 RefPackError = corrupt-extraction population (converter docstring: 311/312 families); supplementary classification pass pending",
+   "status": "DONE 0 defined"
+  },
+  "class_b_wrestling_game_other": {
+   "fighters_o": 156,
+   "fighters_refs": 292,
+   "fighters_defined": 0,
+   "fighters_refpack_err": 1,
+   "venues_o": 499,
+   "venues_refs": 385,
+   "venues_defined": 0,
+   "venues_err": 0,
+   "venues_note": "LitGouraud0 absent in venues; IrradTexture_Skin0 x25 undefined; 14 other MicroCode families all undefined",
+   "motion_files_raw_scanned": 759,
+   "motion_hits": 0,
+   "data_files": 9,
+   "tools_files": 2,
+   "ssh_and_other_raw_scanned_in_models": "5324 caw + 78 fighters + 359 venues, 0 raw name hits"
+  },
+  "class_b_supplementary": {
+   "unparseable_o_total": 768,
+   "elf_magic": 0,
+   "raw_target_or_marker_hits": 0,
+   "note": "all fail RefPack decompression; corrupt-extraction population; disc originals in already-extracted V2CP/V2IP archives",
+   "base00_ord": "ELF magic, section table beyond EOF for J4 parser, raw scan negative"
+  },
+  "verdict": "NOT HELD - 0 defined LitGouraud0/IrradTexture_Skin0 (or any __EAGLMicroCode family) in all held data: 3279 repo .o (2008 refs) + 324 on-disk .o (590 refs, duplicate copies) + 6527 other held files byte-scanned"
+ },
+ "pr": "mhvnsnt/western-heart#452 commit 2616bc2",
+ "updated_at": "2026-10-22T05:23:46.925709+00:00",
+ "notes": [
+  "[watchdog 2026-10-22 00:19 CDT] Verified complete: western-heart PR #452 OPEN with commit 2616bc2 (spec 7.9.4 addendum, +164/-0 2 files per gh pr view). Census verdict 'NOT HELD' stands; scratch clone deleted. Marking done."
+ ]
+}

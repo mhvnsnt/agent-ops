@@ -1,0 +1,26 @@
+{
+  "task": "Resume loti-final lane: delete partial p2.part_aa, re-run dl-remaining.sh, sha256 verify, publish release, cleanup",
+  "repo": "none",
+  "resume_brief": "LOTI-FINAL RESUME 2026-10-15 10:12 EDT. Checkpoint chain: disk-store-ep01loti.json (stale 1h45m) + disk-store-loti-final.json (worker killed by cron timeout at 10:08 EDT). State: ~/workspace/.verify-loti/parts/ holds v2.part_aa..ae (5/5 cached, aa-ab-ac 524288000 ea, ad 524288000, ae 344107465), p2.part_aa PARTIAL 318427904 (delete it). Release ep01-loti-swap-2026-10-14 on mhvnsnt/drive-storage still DRAFT. ~/workspace/ep01-loti-swap/ (5.4G) intact, NOT deleted. Steps: 1) rm partial p2.part_aa; 2) re-run dl-remaining.sh (skips present parts) in bg with retries to fetch p2.part_aa..ae; 3) sha256sum -c parts.sha256 + combined-set check vs originals.sha256; 4) publish the draft release; 5) ONLY after verified+published: delete ~/workspace/ep01-loti-swap/ and staging; 6) log deletions to ~/workspace/agent-ops/disk-cleanup-log.md; 7) heartbeat disk-store-loti-final.json after every step; mark done at end. NEVER delete before verification. LAWS: SAVE-BEFORE-DELETE, DISK-STORING-MOVING, branch/PR not needed (release workflow).",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-16T09:56:35.731952+00:00",
+  "note": "dl in progress: p2.part_aa=524288000 bytes (1/5); est 1-1.7h total",
+  "notes": "[watchdog 2026-10-15 12:25 EDT] lane alive: dl-remaining.sh (PID 83414, since 10:14 EDT) downloading p2 parts; v2.part_aa..ae + p2.part_aa cached, p2.part_ac in flight (~55% at 12:25). dl-remaining GAVE UP on p2.part_ab after 5 transient proxy EOFs \u2014 watchdog started parallel retry-ab.sh (release asset verified 524288000B on GitHub, transient errors). No kill; next run: after script loop completes, re-run sha256sum -c ../parts.sha256, publish release ep01-loti-swap-2026-10-14, delete ~/workspace/ep01-loti-swap/ + staging.\n[2026-10-15 13:25 EDT resume] verify-first pass: 7/10 parts sha256 OK (v2.part_aa..ae + p2.part_aa + p2.part_ac). p2.part_aa is COMPLETE (524288000B, 14:57) and hash-verified -> the brief's 'delete partial p2.part_aa' step is SUPERSEDED, nothing deleted. Missing: p2.part_ab, p2.part_ad, p2.part_ae. dl-remaining.sh re-run in bg (PID 10429, log dl-run2.log), skipped 7 cached, downloading ab now. No active retry-ab needed yet; dl-remaining does 5 tries/part. Release ep01-loti-swap-2026-10-14 confirmed DRAFT with all 10 part assets present remotely.\n[2026-10-15 ~13:57 EDT replacement-worker] heartbeat: took over from daemon-restart-killed 13:25 resume worker. Verifying state before acting.\n[2026-10-15 ~14:05 EDT replacement-worker] ALERT: dl-remaining.sh (PID 10429, run2) DIED after 5x 'unexpected EOF' proxy fails on p2.part_ab \u2014 log ends at 'FAIL p2.part_ab try 5' with NO 'GAVE UP' line and no sha256/completion marker (cause: unknown, likely daemon instability; my own watcher session also vanished). p2.part_ab/ad/ae still missing; 7/7 cached parts untouched. AUTO-RECOVERY: re-launched dl-remaining.sh (PID 4447, log dl-run3.log) + monitor-run3.sh (PID 4481) which beats all 3 checkpoints every 10min and watches for the FAILED_DL: marker (3h cap). If run3 gives up on p2.part_ab again, next step is retry-ab.sh (8 tries, 30s backoff).\n[watchdog 2026-10-16 05:56 EDT] CLOSED: work superseded by sibling lane disk-store-loti-final (status done 2026-10-16 05:29Z). Verified via gh: release ep01-loti-swap-2026-10-14 on mhvnsnt/drive-storage is PUBLISHED (2026-10-16T05:32:01Z, not draft) with all 10 parts (v2.part_aa..ae, p2.part_aa..ae) + digests. Local dirs already deleted by disk-guardian (ep01-loti-swap/, .verify-loti/parts/) per cleanup log. Nothing to resume.",
+  "pulse_notes": [
+    "2026-10-15 13:25 EDT keep-working pulse: stale heartbeat (>20m), resumed per watchdog protocol. New worker spawned with verify-first brief.",
+    "2026-10-15 ~13:55 EDT pulse: daemon restart killed the 13:25 resume worker; replacement worker re-spawned per auto-recovery standing approval."
+  ],
+  "blockers": [
+    {
+      "at": "2026-10-15T21:53:53Z",
+      "blocker": "disk 85% \u2014 keep-working pulse 2026-10-15 17:50 EDT: worker died with downloads pending; parked until disk <75% to avoid 88% ceiling. Unblock + resume per watchdog protocol once disk-space-guardian/disk-store lanes free space."
+    },
+    {
+      "at": "2026-10-15T21:54:10Z",
+      "blocker": "2026-10-15 17:50 EDT keep-working pulse: worker dead/stale; disk at 85% \u2014 downloads PARKED until disk <75% (disk-space-guardian + disk-store lanes freeing space). Unblock + resume per watchdog protocol once disk <75%."
+    }
+  ],
+  "last_heartbeat": "2026-10-15T21:53:53Z"
+}

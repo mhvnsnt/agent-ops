@@ -1,0 +1,55 @@
+{
+  "attempts": 2,
+  "repo": "western-heart",
+  "resume_brief": "You are resuming the Tekken 7 / Tekken 8 PUBLIC HUNT for the Western Heart all-night push. Owner directive (verbatim): find modding communities / public spaces / fan art / fan-made stuff / arenas / any Tekken 7 or Tekken 8 files floating around publicly and download/pull them in. This is the ONLY game where public hunting is authorized. RULES: PUBLIC SOURCES ONLY. No paywalled content, no account creation. Respect robots/rate limits \u2014 on 429 or block, STOP that source and move on. Never use the user's personal accounts. Hunt: DeviantArt Tekken modding community, SFMLab, Nexus Mods Tekken 7 section, Tekken modding Discords/forums (public download links), public model repositories, fan art, arena mods, costume mods. Download: character models, arenas/stages, costumes, fan art, animations. Avoid duplicates of ~/workspace/game-reverse-engineering/tekken7/ (has 20+ rigmodels chars) and tekken8/ (empty). Disk is at 88% \u2014 download in small batches; GAME FILES ARE NEVER DELETED (NEVER-DELETE-GAME-FILES LAW 2026-10-14) \u2014 do NOT delete anything in game-reverse-engineering/. Upload everything to TeraBox AND western-heart GitHub repo via gh CLI (authenticated as mhvnsnt) using blob->tree->commit->ref PATCH method; all repo work goes branch -> PR -> merge (never push main directly). Rename everything to WH proprietary universe names as you go; track old->new in RENAME-MAP.md at repo root (create if missing; DELETE it when all renames done per owner). Heartbeat this checkpoint file after each major step. Then report: what found, from where, what downloaded, TeraBox vs GitHub status, blocked sources.",
+  "status": "done",
+  "task": "Tekken 7 / Tekken 8 public hunt: modding communities, public repos, fan art, arena/costume mods \u2014 download, save to TeraBox + western-heart GitHub (branch/PR/merge), rename to WH proprietary names with RENAME-MAP.md",
+  "updated_at": "2026-10-15T01:31:02Z",
+  "watchdog": true,
+  "pipeline": "Download -> TeraBox -> Teardown/Decode -> Wire into WH -> Rename -> Log (RENAME-MAP.md)",
+  "progress": {
+    "dojo_map_rar": "downloaded+md5-verified (38.9MB)",
+    "dojo_textures_rar": "downloading (background proc_16f423875249)",
+    "sfmlab_t8_asuka": "downloaded+md5-verified (28.6MB)",
+    "gdrive_t8_yoshimitsu": "virus-scan gate, confirm token extracted",
+    "gdrive_t8_xiaoyu": "virus-scan gate pending",
+    "terabox": "BLOCKED: no .creds.json on VM, needs parent browser cookie refresh"
+  },
+  "result": {
+    "github_pr": 152,
+    "github_pr_state": "MERGED",
+    "github_commit": "59d2e35",
+    "files_on_main": [
+      "teardown/tekken8/models/PHANTOM-t8-yoshimitsu-s1.7z (83MB)",
+      "teardown/tekken8/models/asuka-kazama-t8_SFM.rar (28.6MB)",
+      "teardown/tekken7/arenas/mishima-dojo_2024-map.rar (38.9MB)",
+      "RENAME-MAP.md (iron-apex/iron-prime hunt entries)",
+      "teardown/TEARDOWN-SOURCES.md (257MB dojo bundle logged TeraBox-only)"
+    ],
+    "local_verified": [
+      "tekken8/models/t8-yoshimitsu-s1-blender.7z 83MB 7z-ok",
+      "tekken8/models/sfmlab-tekken8-asuka_SFM.rar 28.6MB md5-ok",
+      "tekken8/models/t8-heihachi-s1.7z 122MB PARTIAL (resumable)",
+      "tekken7/arenas/mishima-dojo-map-2_17_24.rar 38.9MB md5-ok",
+      "tekken7/arenas/mishima-dojo-full-8_10_21.rar 257MB md5-ok (TeraBox-only)"
+    ],
+    "terabox": "BLOCKED: no .creds.json on VM. Parent must run browser cookie grab (see ~/workspace/tools/terabox-uploader/README.md step 1), then: cd ~/workspace/tools/terabox-uploader && python3 tbupload.py upload <file> /western-heart/tekken8|tekken7",
+    "pending_downloads_paused_disk": [
+      "Heihachi T8 S1 (resume: ./gdrive-dl.sh 1uvG4vwT8NMjAXmlxwtteoLcils5XGMVG t8-heihachi-s1.7z)",
+      "Xiaoyu T8 (Sticklove): gdrive id 1E5e5B9YVnGJall1UyP3rOHQ4DzdXl4hf",
+      "Kuma T8 S1: gdrive id 13S0XhOjgIfhFoZgsM9V_w-hqBOjpscOC",
+      "Alisa T8 Legacy I: gdrive id 1Z7N72AfNdWdHv7uaByE4iXFXzbksPPW9",
+      "Clive Rosfield T8: gdrive id 1btGMHu5ZKk_gn09mxNEtrL6IqmYAIuV3",
+      "Feng Wei T7 rig: open3dlab project 9b2f05e3-c798-4671-a06a-97d342f38eb7 (274MB blend)",
+      "T8 Arena Stage: open3dlab project 61a7dc85-e59e-4f4f-ba61-9b38c17444ca"
+    ],
+    "blocked_sources": [
+      "Nexus Mods Tekken 7: account required for downloads \u2014 skipped (no account creation)",
+      "TekkenMods.com: account-gated downloads \u2014 skipped",
+      "SFMLab/patreon-gated models (Lidia T8 etc.): paywall/account \u2014 skipped",
+      "SFMLab NSFW-flagged models (Lili T8 by SourceGuruSFM): skipped as not build-appropriate",
+      "DeviantArt Patreon-only blend upgrades (IK versions): paywall \u2014 skipped, free raw/Drive files used"
+    ],
+    "disk_note": "Disk hit 95% mid-hunt; stopped downloads per disk law. EEN lane freed space to 84%. All game files kept local per NEVER-DELETE-GAME-FILES law."
+  }
+}

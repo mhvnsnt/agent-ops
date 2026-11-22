@@ -1,0 +1,9 @@
+{
+ "task": "Character art in real fighting poses and action moves for Concrete Dragon \u2014 RETRY after failed attempt",
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "CHARACTER POSE ART RETRY for ConcreteDragon. The first attempt FAILED: worker captured neutral standing frames and saved byte-identical copies under different move names (kiblast/spin md5-identical for all 8 fighters), and the wavecharge captures had a broken camera (back of head, green screen). The garbage was deleted. RETRY RULES: (1) VERIFY-FIRST: capture ONE frame of Kid Blue mid-ki-blast with the blast VFX actually visible, and show it, before touching anything else. (2) Stances = the IN-MATCH combat idle during real gameplay, not the select-screen neutral pose. (3) Every move capture must SHOW the move: ki blast projectile visible, spin attack with motion blur/rotation, energy wave with charge VFX. (4) After capturing, run md5sum \u2014 every file must be unique, no duplicates. (5) Transparent cutouts via rembg from the ACTION frames only. (6) Themed pieces (cartoony/painterly/native) from action frames. The game's test hooks (window.__cdtest) can trigger attacks \u2014 the presentation-verify lane used them successfully. Output to ~/workspace/concrete-dragon-launch/concept-art-real/action-poses/. Use a dedicated worktree. Branch character-poses -> PR -> merge for code. Heartbeat ~/workspace/agent-ops/checkpoints/cd-character-poses.json. Present each piece next to its source capture.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-09T23:00:00Z"
+}

@@ -1,0 +1,9 @@
+{
+  "task": "Verify Real's WHYFYRE track contributions \u2014 M. Heaven$ent song-by-song verification",
+  "status": "done",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/atlas-build",
+  "resume_brief": "Verify M. Heaven$ent (Marquis Deshaun Whitacre) contributions to WHYFYRE tracks. Owner claims: at least 10 songs with group; tracks \"Balloons\"/\"Balloon Exercise\" and \"Don't Do Drugs\" (bathroom mention); he appears on some cover art. Prior work: ~/workspace/atlas-build/research/MUSIC-CAREER.md has catalog + WHYFYRE section with verified anchor \"Been On (feat. Desent & Jrobthelaw)\" Sept 2022. Method: public web search + page text fetch only, no browser actions, no contact. Tag claims [VERIFIED]/[HIS ACCOUNT]/[LIKELY]. Append findings to MUSIC-CAREER.md under \"## WHYFYRE Track Contributions\".",
+  "updated_at": "2026-10-08T19:01:16.705139+00:00",
+  "attempts": 0
+}

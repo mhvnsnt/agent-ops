@@ -1,0 +1,9 @@
+{
+ "task": "Fix Amos torso_mirrored_punch squared edge + build armless torso variant for punch poses",
+ "repo": "~/workspace/trippedd-studio",
+ "resume_brief": "In ~/workspace/trippedd-studio, Amos Jr.'s kit (production/TRIPPEDD_EP01/goodville/kits/amos-jr/): (1) FIX torso_mirrored_punch.png \u2014 owner 2026-10-11: the edge under the arm side is squared off; it must curve and round off like the other side of his torso under his arm. Reshape that edge with a smooth curve matching the opposite side's contour. (2) BUILD a new piece: torso WITHOUT the side arm \u2014 for punch poses where the separate punch arm extends, the torso's arm-side edge must be a rounded shoulder contour (like the intact side), NOT a square cut. Use the one-turn toolkit (tools/image-edit/edit.py \u2014 select/trace/magic ops) and the smart-extract pipeline to segment and shape it cleanly; verify the edge is a smooth curve with your own eyes (zoomed). (3) Update the kit manifest + drill-log. This is the general principle going forward (owner): every kit piece edge that meets another piece must be shaped to fit \u2014 no square cuts anywhere. Work on branch feat/amos-torso-pieces off origin/main, commit, open a PR (do NOT merge). Heartbeat ~/workspace/agent-ops/checkpoints/amos-torso-pieces.json every 10 min. Report: pieces built/fixed, zoomed verification, PR URL. Mark done at the end.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T16:24:28.729095+00:00"
+}

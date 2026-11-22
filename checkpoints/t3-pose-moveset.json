@@ -1,0 +1,15 @@
+{
+ "attempts": 0,
+ "log": [
+  "2026-10-13 15:10: checkpoint written, starting survey of existing tools/docs",
+  "2026-10-13 15:2x: USA EXE tables VERIFIED by content: SKELETON_OFFSETS@0x80096ECC, LIMB_OFFSETS@0x80096EFC, LIMB_BASIS@0x80096EAC (all match documented JP values exactly); SIN_TABLE@0x8001E8C4 (all 4096 entries = round(sin*4096), unshifted); SQRT_TABLE@0x80098D08 (192-entry PsyQ table, dup @0x8004AF40); EULER_SLOTS pattern [0,1,11,2,3,7,6,10,14,17] found @0x8001A330 (unshifted); CHANNEL_SHIFT@0x80096C24 verified [1]*15+[5]*34. Task Japan addrs were already USA-shifted (mislabeled). Code-region tables unshifted, data-region -0x424.",
+  "2026-10-13: POSE SOLVING COMPLETE. Full pipeline verified: USA tables -> bit-exact motion sampling -> PoseBuildMatrices -> part assembly. King stance renders as coherent fighting stance (skeleton + 601-vert point cloud verified by eye). Key finding: +Y is DOWN in pose space; frame 0->45 is crouch-into-stance. Tools: tools/local/usa_tables.py, usa_motion.py, pose_assemble.py. Renders: renders/pose-check/.",
+  "2026-10-13 DONE: pose solving complete (USA tables verified, King stance assembled+rendered, verified by eye); movesets extracted (7 fighters, 3247 moves, 1602 attacks, divmot99 resolved). Committed to game-reverse-engineering/tekken3; synced to western-heart/teardown/tekken3/ via PR #53 (merged acfa1213). Zero open PRs."
+ ],
+ "repo": "western-heart",
+ "resume_brief": "Continue Tekken 3 pose solving + moveset extraction. State: check ~/workspace/game-reverse-engineering/tekken3/ for tools/docs and this checkpoint's log field for completed steps. Remaining: (1) locate USA EXE animation table addresses (Japan addrs minus 0x424: EULER_SLOTS 0x80096A88, SKELETON_OFFSETS 0x80096AA8, LIMB_OFFSETS 0x80096AD8, SPLINE_TABLE_BASE 0x800962F8 \u2014 verify by pattern match in USA EXE), (2) parse motion banks divmot03/04/07/09/12/13/16 for animation frames, (3) extract move lists, input mappings, frame data, (4) commit all to western-heart/teardown/tekken3/ via branch\u2192PR\u2192merge. Work dir: ~/workspace/game-reverse-engineering/tekken3/. Checkpoint: ~/workspace/agent-ops/checkpoints/t3-pose-moveset.json.",
+ "status": "done",
+ "task": "Tekken 3 pose solving + moveset data \u2014 push T3 from 70% to 100%: find USA EXE equivalents of Japan animation tables (EULER_SLOTS 0x80096EAC, SKELETON_OFFSETS 0x80096ECC, LIMB_OFFSETS 0x80096EFC, SPLINE_TABLE_BASE 0x8009671C; USA shifted -0x424 from Japan), solve poses, parse motion banks (divmot03, 04, 07, 09, 12, 13, 16) for animation data, extract move lists/input mappings/frame data from game binary. Output to western-heart/teardown/tekken3/ via branch\u2192PR\u2192merge.",
+ "updated_at": "2026-10-13T16:30:00-04:00",
+ "watchdog": true
+}

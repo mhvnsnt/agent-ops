@@ -1,0 +1,33 @@
+{
+  "task": "Coordinate full Graffiti Hunter sweep: 4 lanes scanning all shows/episodes/repos for graffiti, archiving finds with full metadata.",
+  "repo": "~/workspace/graffiti-hunter",
+  "resume_brief": "Resume coordinating the Graffiti Hunter full sweep. Four lanes were spawned: (1) Wizard Gang episodes, (2) AshLane art, (3) Bannon/Brutal Fist/other games, (4) everything else. Check subagent results, synthesize totals (images scanned, pieces found, breakdown by source, archive paths), heartbeat ~/workspace/agent-ops/checkpoints/graffiti-hunter-full-sweep.json, ensure all finds are committed to the graffiti-hunter repo, and mark the checkpoint done with a full report to the parent.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-08T19:02:00Z",
+  "lanes": {
+    "lane1": "done",
+    "lane2": "done",
+    "lane3": "done",
+    "lane4": "done"
+  },
+  "lane2_result": "18 fiction pieces archived (ashlane), branch sweep/lane2-ashlane commit 61e98bb, 1156 images triaged / ~35 inspected. NOTE: duplicate commit 81094b3 sits on sweep/lane3-games - resolve at merge time, do NOT reset while lane 3 runs.",
+  "lane4_result": "9 fiction pieces archived (swmg-faction-cards), branch sweep/lane4-rest commit 021cc31, ~294 images scanned, 0 real-world. IT SEES owner captures confirmed byte-identical to lane2 archives, not duplicated.",
+  "merge_notes": "Base branch is master. Branch state needs care at merge: sweep/lane3-games may still carry duplicate commit 81094b3 (lane2 work) alongside lane3 real commits 99e381f/de72f24/1cb3ed9. Inspect with git log before merging; cherry-pick only lane3 real commits if needed. lane2 verified at 61e98bb, lane4 at 021cc31.",
+  "lane3_result": "9 archived (8 ashlanev2 + 1 streetbrawl), branches sweep/lane3-games commits 99e381f/de72f24/1cb3ed9, ~1900 enumerated / ~120 inspected. Bannon 0, Brutal Fist 0. Deduped 5 byte-identical vs lane2.",
+  "totals": {
+    "images_scanned": "~3600+ enumerated, ~500+ visually inspected",
+    "pieces_archived": 50,
+    "real_world": 0,
+    "fiction": 50
+  },
+  "breakdown": {
+    "wizard-gang": 14,
+    "ashlane": 18,
+    "ashlanev2": 8,
+    "streetbrawl": 1,
+    "swmg-faction-cards": 9
+  },
+  "merge_branch": "sweep/full-merge (from master). All lane branches merged/cherry-picked; duplicate commits excluded; md5-verified zero dupes; all ENTRY.md complete."
+}

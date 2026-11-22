@@ -1,0 +1,64 @@
+{
+  "task_id": "scene-walkthrough-video",
+  "agent_id": null,
+  "repo": "mhvnsnt/cape-jones",
+  "branch": "main",
+  "goal": "Render 96-frame living-room walkthrough video (owner directive 2026-10-17 ~20:51 CDT)",
+  "status": "cancelled",
+  "spawned_at": "2026-10-18T09:32:31Z",
+  "last_heartbeat": "2026-10-18T14:13:13.561419+00:00",
+  "steps_completed": [
+    {
+      "at": "2026-10-18T09:32:46Z",
+      "step": "walkthrough_render.py written (resume-safe, 96f/12spp/OIDN), render launched detached pid 16777"
+    },
+    {
+      "at": "2026-10-18T10:03:17Z",
+      "step": "2026-10-18 05:05 CDT pulse: Blender render PID 16777 alive (12.7m CPU, 40%), frames rendering in ~/workspace/scene-walkthrough \u2014 heartbeat refreshed, no duplicate lane started"
+    },
+    {
+      "at": "2026-10-18T10:05:19.107316+00:00",
+      "step": "render alive (pid present=True), frames 8/96, render.log shows active sampling. sacred \u2014 untouched."
+    },
+    {
+      "at": "2026-10-18T10:32:31Z",
+      "step": "2026-10-18 05:31 CDT pulse: render was dead (no process, hb 25min stale, likely daemon restart) \u2014 relaunched resume-safe via xvfb-run (blender pid 9498, 9/96 frames done, script skips existing), heartbeat refreshed"
+    },
+    {
+      "at": "2026-10-18T11:10:38Z",
+      "step": "2026-10-18 06:10 CDT pulse: render alive (pid 9498), 56/96 frames, actively sampling \u2014 heartbeat refreshed"
+    },
+    {
+      "at": "2026-10-18T11:46:24.769456+00:00",
+      "step": "2026-10-18 06:46 CDT pulse: render was DEAD (no blender process, 84/96 frames, log stalled 06:33) \u2014 relaunched resume-safe via xvfb-run (skips 84 existing, 12 remain), heartbeat refreshed"
+    },
+    {
+      "at": "2026-10-18T12:17:03.929871+00:00",
+      "step": "2026-10-18 07:15 CDT run: render DONE 96/96, assembled walkthrough.mp4 (ffprobe 96f/4.0s), own-eyes verified frames 0/47/95 (camera path + character + TV + violet grade all good). FOUND DEFECT: frames rendered 480x270, not 960x540 (blend defaults resolution_percentage=50, script never set it). Fixed script (resolution_percentage=100), launched HD re-render detached into frames_hd/ (resume-safe, skips nothing, log render_hd.log). 480p preview copied to ~/workspace/your_files/cape-jones-living-room-walkthrough-preview-480p.mp4. NEXT: when frames_hd/ = 96, assemble walkthrough_hd.mp4, own-eyes verify, replace preview with HD in your_files/, PR script+HD mp4 to cape-jones, mark complete."
+    },
+    {
+      "at": "2026-10-18T12:47:25.974292+00:00",
+      "step": "2026-10-18 07:44 CDT pulse: HD re-render alive (blender pid 14114, 31m elapsed, 85% CPU), 12/96 frames_hd done, log actively sampling \u2014 sacred, untouched. 480p preview delivered. NEXT: assemble at 96/96."
+    },
+    {
+      "at": "2026-10-18T13:00:35.383513+00:00",
+      "step": "2026-10-18 08:00 CDT pulse: HD re-render alive (blender pid 14114, 44m elapsed), 17/96 frames_hd done, sampling healthy \u2014 sacred, untouched. NEXT: assemble at 96/96 (~several hours at current rate)."
+    },
+    {
+      "at": "2026-10-18T14:13:13.561419+00:00",
+      "step": "2026-10-18 08:55 CDT keep-working pulse: HD render found DEAD (no blender proc; newest HD frame walk_018.png 08:04; render_hd.log mid-frame). Relaunched resume-safe into frames_hd/ (pid 20543, verified alive 25.6% CPU). 480p frames/ 96/96 + walkthrough.mp4 remain intact."
+    },
+    {
+      "at": "2026-10-18T15:15:00+00:00",
+      "step": "2026-10-18 10:15 CDT owner: HD re-render CANCELLED per explicit order (nothing to look at). 18 partial frames_hd/ left on disk. 480p preview delivered."
+    }
+  ],
+  "next_steps": [],
+  "key_paths": [
+    "~/workspace/scene-walkthrough/"
+  ],
+  "decisions": [],
+  "blockers": [],
+  "resume_prompt": "Resume-safe Blender walkthrough render in ~/workspace/scene-walkthrough/. Check frames/ count; if <96, relaunch: cd ~/workspace/scene-walkthrough && setsid nohup xvfb-run -a env -u PYTHONPATH ~/workspace/tools/blender/blender-4.0.2-linux-x64/blender -b 3d-assets/living_room.blend --python walkthrough_render.py -- frames > render.log 2>&1 < /dev/null & When 96 frames exist, assemble: ffmpeg -framerate 24 -i frames/walk_%03d.png -c:v libx264 -pix_fmt yuv420p walkthrough.mp4, verify with own eyes, copy to ~/workspace/your_files/, report to owner.",
+  "progress_note": "480p video done+verified (preview delivered); HD 960x540 re-render in flight (frames_hd/ 17/96)"
+}

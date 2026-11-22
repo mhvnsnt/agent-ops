@@ -1,0 +1,448 @@
+{
+ "at_relaunch6": {
+  "at": "2026-10-21T23:16Z",
+  "free_gb": 2.1,
+  "source": "own df read",
+  "used_pct": 98
+ },
+ "at_relaunch7": {
+  "at": "2026-10-22T00:18Z",
+  "free_bytes": 4023697408,
+  "free_gb": 4.02,
+  "note": "relaunch #7 resumes from this checkpoint; lane2/lane3/docfrank/tripo-recovery/ur-p2 already closed by relaunch #6 (verified in checkpoint cleared[] + log) - NOT redone. Remaining: tpose-staging (was in_progress), non-git scratch verify queue, held re-checks wh-pose-survey + scarlett-star-pr.",
+  "source": "own df read (/dev/mapper/rv 100G on /home/hatch)",
+  "used_pct": 97
+ },
+ "at_relaunch8": {
+  "at": "2026-10-22T00:52Z",
+  "free_gb": 5.8,
+  "note": "relaunch #8 resumes; relaunch #6/#7 closures NOT redone (lane2, lane3, docfrank, tripo-recovery, ur-p2, Forge3D). Remaining: tpose-staging archive completion, non-git scratch verify queue, held re-checks wh-pose-survey + scarlett-star-pr.",
+  "source": "own df read (/dev/mapper/rv 100G, 93G used)",
+  "used_pct": 95
+ },
+ "baseline": {
+  "disk": "/home/hatch 100G",
+  "free_gb": 6.1,
+  "source": "df at pass-2 start (predecessor)",
+  "used_pct": 94
+ },
+ "checkpoint": "disk-cleanup-sweep-pass2-20261021",
+ "cleared": [
+  {
+   "by": "predecessor",
+   "item": "Forge3D (387M)",
+   "store": "mhvnsnt/Forge3D: HEAD 23eff54d already on GitHub; uncommitted AGENTS.md edit preserved on branch archive/forge3d-local-20261021 (c96a9f66, ls-remote verified); pull-back sha256 match 036180a4"
+  },
+  {
+   "by": "relaunch6",
+   "item": "wh-lane2-fighters (994M)",
+   "store": "branch archive/wh-lane2-fighters-local-20261021 @ 0f358568 (parent e8c9c032); 4 non-zero files, blob hashes == local; pull-back byte-identical (roster-full.js sha256 f86871a0); 3 zeroed files excluded as damage - real bytes in e8c9c032 tree on remote"
+  },
+  {
+   "by": "predecessor (re-verified relaunch6)",
+   "item": "wh-lane3-movesets (410M)",
+   "store": "branch archive/lane3-movesets-local-20261021 @ 3535ed1f ls-remote confirmed; local dir already absent"
+  },
+  {
+   "by": "relaunch6",
+   "item": "sweep-staging/pass2/dfparts (540M)",
+   "store": "redundant copies of release docfrank-facing-archive-20261021 assets (mhvnsnt/western-heart), re-verified complete: 19 parts totaling 1743554560B + FILELIST"
+  },
+  {
+   "by": "relaunch8",
+   "item": "tpose-staging (482M / 501,920,590B)",
+   "store": "release tpose-staging-20261020 (mhvnsnt/clouddog-storage) COMPLETED: fresh tar parts 00/01 == existing aa/ab digests (dir unchanged since pass1); ac/ad/ae uploaded; all 5 GitHub digests == local sha256; full-tar sha256 2a3ff564; pull-back part-ae byte-identical (54655de5) after one proxy truncation + retry"
+  },
+  {
+   "by": "relaunch8",
+   "item": "reskin-fix-work (547M / 572,595,127B)",
+   "store": "release reskin-fix-work-20261022 (clouddog-storage): 6 parts, all GitHub digests == local sha256; full-tar f70857d1; pull-back part-05 byte-identical 5c05056f"
+  },
+  {
+   "by": "relaunch8",
+   "item": "tripo-sitting-pull (575M / 601,905,329B)",
+   "store": "release tripo-sitting-pull-20261022 (clouddog-storage): 6 parts, all GitHub digests == local sha256; full-tar 3321de6c; pull-back part-05 byte-identical 7793ea1d"
+  },
+  {
+   "by": "relaunch8",
+   "item": "reskin-fix-work (547M / 572,595,127B) - logged earlier this relaunch",
+   "store": "release reskin-fix-work-20261022 (clouddog-storage): 6 parts verified; pull-back part-05 byte-identical 5c05056f"
+  },
+  {
+   "by": "relaunch8",
+   "item": "ratedm (512M / 536,185,643B)",
+   "store": "release ratedm-20261022 (clouddog-storage): 6 parts, all GitHub digests == local sha256; full-tar da70b15f; pull-back part-05 byte-identical d2e6de95"
+  },
+  {
+   "by": "relaunch8",
+   "item": "trippedd-copylane (518M / 542,770,896B)",
+   "store": "release trippedd-copylane-20261022 (clouddog-storage): 6 parts, all GitHub digests == local sha256; full-tar ee94b859; pull-back part-05 byte-identical 0066bdf2"
+  },
+  {
+   "by": "relaunch8",
+   "item": "render-work (479M / 501,391,562B)",
+   "store": "release render-work-20261022 (clouddog-storage): 5 parts, all GitHub digests == local sha256; full-tar 64146ffc; pull-back part-04 byte-identical ef54a07e"
+  },
+  {
+   "by": "relaunch8",
+   "item": "lane2-work (503M / 523,877,487B)",
+   "store": "release lane2-work-20261022 (clouddog-storage): 6 parts, all GitHub digests == local sha256; full-tar 48985ed8; pull-back part-05 byte-identical 3553fb9d"
+  },
+  {
+   "by": "relaunch8",
+   "item": "reskin-wave (453M / 473,580,542B)",
+   "store": "release reskin-wave-20261022 (clouddog-storage): 5 parts, all GitHub digests == local sha256; full-tar 895bbb25; pull-back part-04 byte-identical 27939af4"
+  },
+  {
+   "by": "relaunch8",
+   "item": "services (437M / 455,051,535B)",
+   "store": "release services-20261022 (clouddog-storage): 5 parts, all GitHub digests == local sha256; full-tar 844e8d3c; pull-back part-04 byte-identical b875676a; part-02 re-uploaded solo after batch FAIL"
+  },
+  {
+   "by": "relaunch8",
+   "item": "tripo-decoded (389M / 407,586,300B)",
+   "store": "release tripo-decoded-20261022 (clouddog-storage): 4 parts, all GitHub digests == local sha256; full-tar 169771d0; pull-back part-03 byte-identical 39a8862d; parts 01/03 reconciled after batch loss"
+  },
+  {
+   "by": "relaunch8",
+   "item": "fingertip-fix (389M / 407,683,958B)",
+   "store": "release fingertip-fix-20261022 (clouddog-storage): 4 parts, all GitHub digests == local sha256; full-tar 66a44755; pull-back part-03 byte-identical d94837f6"
+  },
+  {
+   "by": "relaunch8-fullsweep",
+   "item": "_cornerstone-work (5.65G / 5,650,731,644B)",
+   "store": "git: branch feat/cornerstone-moves-20261021 @de2a77ae (western-heart), clean tree, ls-remote==HEAD, CANON.md API pull-back byte-identical 4dd5f42a; non-git remainder: release cornerstone-work-extra-20261022 (clouddog-storage), digest 7e892001, pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep",
+   "item": "_zen-spirit-work (802M / 801,617,964B)",
+   "store": "git: branch feat/zen-spirit-body-20261021 @f42e2d4 (western-heart), clean, ls-remote==HEAD, MODEL-INVENTORY.md API pull-back b352adb3; remainder: release zen-spirit-work-extra-20261022, digests verified, pull-back part-01 ea558785"
+  },
+  {
+   "by": "relaunch8-fullsweep",
+   "item": "_docfrank-fix (1.78G / 1,776,248,043B)",
+   "store": "git: branch feat/docfrank-bind-fix-20261021 @4525e7c (western-heart), clean, ls-remote==HEAD, AGENTS.md API pull-back 0fc8d86a; remainder: release docfrank-fix-extra-20261022, digest b1de1961, pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep",
+   "item": "_doa4p7-clone (552M / 551,954,589B)",
+   "store": "pure clone of western-heart branch feat/doa4-phase7-keystream-anim-wiring-20261021 @c0f5269, clean, ls-remote==HEAD, AGENTS.md API pull-back 0fc8d86a; doa4-teardown checkpoint done"
+  },
+  {
+   "by": "relaunch8-fullsweep",
+   "item": "agent-ops/sweep-staging/pass2/tpose/vx/tpose-staging (501,920,590B)",
+   "store": "PROVEN DUPLICATE of release tpose-staging-20261020: fresh tar of the staged copy produced part hashes identical to the release digests + full-tar 2a3ff564 match"
+  },
+  {
+   "by": "relaunch8-fullsweep",
+   "item": "_t3fix-work (396M / 395,703,180B)",
+   "store": "worktree of western-heart branch fix/t3-retarget-nan-20261021 @a370e59, clean, ls-remote==HEAD, AGENTS.md API pull-back 0fc8d86a"
+  },
+  {
+   "by": "relaunch8-fullsweep",
+   "item": "brutalfist-fix (373M / 373,080,106B)",
+   "store": "release brutalfist-fix-20261022 (clouddog-storage): full-checkout tar, 4 parts digests verified, full-tar 44656b07, pull-back part-03 fab18b86"
+  },
+  {
+   "by": "relaunch8-fullsweep",
+   "item": "BioMechania (372M / 371,732,447B)",
+   "store": "release biomechania-20261022 (clouddog-storage): full-checkout tar, 4 parts digests verified, full-tar c6241fef, pull-back part-03 28051137"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchB",
+   "item": "_w7c-scratch (391013181B)",
+   "store": "release _w7c-scratch-20261022 (clouddog-storage): all part digests == local sha256; tail pull-back byte-identical vs recorded SHA256SUMS-batch hash; 9 sources cleared by guardian lane (one-store), w7c+dxmmii cleared by relaunch8"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchB",
+   "item": "sitredo-render (388269839B)",
+   "store": "release sitredo-render-20261022 (clouddog-storage): all part digests == local sha256; tail pull-back byte-identical vs recorded SHA256SUMS-batch hash; 9 sources cleared by guardian lane (one-store), w7c+dxmmii cleared by relaunch8"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchB",
+   "item": "render-lane (343324756B)",
+   "store": "release render-lane-20261022 (clouddog-storage): all part digests == local sha256; tail pull-back byte-identical vs recorded SHA256SUMS-batch hash; 9 sources cleared by guardian lane (one-store), w7c+dxmmii cleared by relaunch8"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchB",
+   "item": "browser_downloads (321222077B)",
+   "store": "release browser_downloads-20261022 (clouddog-storage): all part digests == local sha256; tail pull-back byte-identical vs recorded SHA256SUMS-batch hash; 9 sources cleared by guardian lane (one-store), w7c+dxmmii cleared by relaunch8"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchB",
+   "item": "voice-clone-work (316400138B)",
+   "store": "release voice-clone-work-20261022 (clouddog-storage): all part digests == local sha256; tail pull-back byte-identical vs recorded SHA256SUMS-batch hash; 9 sources cleared by guardian lane (one-store), w7c+dxmmii cleared by relaunch8"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchB",
+   "item": "ratedm-work (313938282B)",
+   "store": "release ratedm-work-20261022 (clouddog-storage): all part digests == local sha256; tail pull-back byte-identical vs recorded SHA256SUMS-batch hash; 9 sources cleared by guardian lane (one-store), w7c+dxmmii cleared by relaunch8"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchB",
+   "item": "lane5-render (298545097B)",
+   "store": "release lane5-render-20261022 (clouddog-storage): all part digests == local sha256; tail pull-back byte-identical vs recorded SHA256SUMS-batch hash; 9 sources cleared by guardian lane (one-store), w7c+dxmmii cleared by relaunch8"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchB",
+   "item": "cape-jones-build (289148616B)",
+   "store": "release cape-jones-build-20261022 (clouddog-storage): all part digests == local sha256; tail pull-back byte-identical vs recorded SHA256SUMS-batch hash; 9 sources cleared by guardian lane (one-store), w7c+dxmmii cleared by relaunch8"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchB",
+   "item": "jiggle-work (282108022B)",
+   "store": "release jiggle-work-20261022 (clouddog-storage): all part digests == local sha256; tail pull-back byte-identical vs recorded SHA256SUMS-batch hash; 9 sources cleared by guardian lane (one-store), w7c+dxmmii cleared by relaunch8"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchB",
+   "item": "_zen-combined-work (271559319B)",
+   "store": "release _zen-combined-work-20261022 (clouddog-storage): all part digests == local sha256; tail pull-back byte-identical vs recorded SHA256SUMS-batch hash; 9 sources cleared by guardian lane (one-store), w7c+dxmmii cleared by relaunch8"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchB",
+   "item": "dxmmii-land (268776570B)",
+   "store": "release dxmmii-land-20261022 (clouddog-storage): all part digests == local sha256; tail pull-back byte-identical vs recorded SHA256SUMS-batch hash; 9 sources cleared by guardian lane (one-store), w7c+dxmmii cleared by relaunch8"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "home-hatch-staging",
+   "store": "release home-hatch-staging-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "kaggle-walkthrough",
+   "store": "release kaggle-walkthrough-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "weight-bakeoff-scratch",
+   "store": "release weight-bakeoff-scratch-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "auto-rig-work",
+   "store": "release auto-rig-work-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "anim-fix-work",
+   "store": "release anim-fix-work-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "sunra-rig",
+   "store": "release sunra-rig-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "forge3d-scratch",
+   "store": "release forge3d-scratch-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "tmp-transient",
+   "store": "release tmp-transient-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "kronos-a3-variant-work",
+   "store": "release kronos-a3-variant-work-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "lanes",
+   "store": "release lanes-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "whbuild",
+   "store": "release whbuild-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "ur-texcrack",
+   "store": "release ur-texcrack-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "bannon-teardown",
+   "store": "release bannon-teardown-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "mariposa-colorways",
+   "store": "release mariposa-colorways-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "modelopt",
+   "store": "release modelopt-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "lane6-scratch",
+   "store": "release lane6-scratch-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "scene-walkthrough",
+   "store": "release scene-walkthrough-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "tripo-pose",
+   "store": "release tripo-pose-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "lili-zafina",
+   "store": "release lili-zafina-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "reskin-jin-docfrank",
+   "store": "release reskin-jin-docfrank-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchC",
+   "item": "_wt-tooling-proof",
+   "store": "release _wt-tooling-proof-20261022 (clouddog-storage): all part digests == local sha256 (verified twice), tail pull-back byte-identical"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchD",
+   "item": "game-leaks-working",
+   "store": "release game-leaks-working-20261022 (clouddog-storage): digests verified via API, tail pull-back byte-identical vs recorded hash"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchD",
+   "item": "cn-gigaleak-pull",
+   "store": "release cn-gigaleak-pull-20261022 (clouddog-storage): digests verified via API, tail pull-back byte-identical vs recorded hash"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchD",
+   "item": "cn-gigaleak-raw",
+   "store": "release cn-gigaleak-raw-20261022 (clouddog-storage): digests verified via API, tail pull-back byte-identical vs recorded hash"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchD",
+   "item": "cn-leak-pull-100",
+   "store": "release cn-leak-pull-100-20261022 (clouddog-storage): digests verified via API, tail pull-back byte-identical vs recorded hash"
+  },
+  {
+   "by": "relaunch8-fullsweep-batchD",
+   "item": "gumball-pull",
+   "store": "release gumball-pull-20261022 (clouddog-storage): digests verified via API, tail pull-back byte-identical vs recorded hash"
+  }
+ ],
+ "df_after_pass2_relaunch8": "2026-10-22T05:4xZ: 98% used / 2.7G free (other lanes writing heavily during pass 2; relaunch #8 cleared ~5.7GB across 11 items)",
+ "df_at_close_relaunch8": "2026-10-22T14:1xZ: 85% used / 16G free (start of relaunch8: 95% / 5.8G; worst mid-pass: 98% / 2.7G)",
+ "flags_for_parent": [
+  "ORPHANED WORKTREES: clearing _cornerstone-work and _docfrank-fix broke the git linkage of their linked worktrees _w3-work/wh, _w3b-work/wh (cornerstone gitdir) and _docfrank-ladder/wh (docfrank-fix gitdir). NO commits lost: w3c branch feat/aki-trueclips-w3c-20261021 remote == dfe3a003d7d3 (full match to local HEAD); docfrank ladder branch feat/docfrank-ladder-reorder-20261021 on remote @56982fb1; all working files intact on disk. NOT cleared. Fix for lane owners: fresh clone + git worktree add, or copy files into a clean clone.",
+  "HELD: _w3b-work is the live W3c lane's worktree (PR #499 + FK->IK follow-on) \u2014 left fully intact.",
+  "rigwork-tmp (12.1G) still streaming to release rigwork-tmp-20261022 by the storeoff sibling lane at close; personality-pass completed+cleared by that lane.",
+  "TeraBox: no item this pass required it; all stores went to GitHub (clouddog-storage releases / western-heart branches). TeraBox copies of these archives are OWED if the owner wants the second store.",
+  "Guardian lane (disk-space-guardian) actively nurses this sweep's staging: it reaps verified parts + cleared 9 batch-B sources under one-store with its own log entries \u2014 coordination is working, no action needed."
+ ],
+ "inherited_from_pass1": {
+  "held_recheck": [
+   "wh-pose-survey",
+   "tripo-recovery",
+   "_docfrank-facing",
+   "_wh-work/scarlett-star-pr",
+   "tpose-staging",
+   "ur-p2"
+  ],
+  "verify_queue": [
+   "reskin-fix-work",
+   "tripo-sitting-pull",
+   "ratedm",
+   "trippedd-copylane",
+   "render-work",
+   "lane2-work",
+   "reskin-wave",
+   "services",
+   "wh-lane2-fighters",
+   "wh-lane3-movesets",
+   "tripo-decoded",
+   "fingertip-fix",
+   "Forge3D(done)"
+  ]
+ },
+ "lane": "disk-cleanup-sweep-pass2",
+ "owner_order": "pass 2 follow-up to sweep pass 1 (2026-10-21); store -> verify byte-identical -> prove pull-back -> then clear; anti-clobber absolute; never race another lane",
+ "relaunch": "2026-10-22T00:52Z recovery relaunch #8",
+ "relaunch8_interim": "Batch B COMPLETE (11/11 proven; logged). Batch C: daemon restart killed chains at 21 OKs (sunra-rig sums FAIL on kill); relaunched up-batchc + finish-batchc + up-batchd. Batch D tarred + releases created + chain armed behind C. Sibling lanes: rigwork/personality still streaming at last check; guardian nursing staging (cleared batch-B parts + 9 sources, logged).",
+ "relaunch8_steps": [
+  {
+   "status": "done",
+   "step": "read pass1+pass2 checkpoints + log tail; fresh df 95% / 5.8G free"
+  },
+  {
+   "status": "in_progress",
+   "step": "recon: candidate dirs existence/sizes/mtimes + active processes"
+  },
+  {
+   "status": "done",
+   "step": "tpose-staging: complete archive -> verify -> pull-back -> clear"
+  },
+  {
+   "status": "done",
+   "step": "scratch verify queue COMPLETE: tpose-staging, reskin-fix-work, tripo-sitting-pull, ratedm, trippedd-copylane, render-work, lane2-work, reskin-wave, services, tripo-decoded, fingertip-fix all cleared with pull-back proof"
+  },
+  {
+   "status": "done",
+   "step": "held re-checks: wh-pose-survey ACTIVE (rig-seq2 run13) - HOLD; scarlett-star-pr HOLD (PR #440/Rig Studio)"
+  },
+  {
+   "status": "done",
+   "step": "FULL-WORKSPACE SWEEP COMPLETE for all dormant >=100MB dirs meeting the bar: batches B(11)+C(21)+D(5) + 8 singles; 56 items total this relaunch incl. pass-2 queue"
+  }
+ ],
+ "steps": [
+  {
+   "status": "done",
+   "step": "read pass1 + pass2 checkpoints + log tail"
+  },
+  {
+   "status": "done",
+   "step": "relaunch #6 recon (df, processes, sizes, ls-remote lane2/lane3)"
+  },
+  {
+   "status": "done",
+   "step": "lane2: archive-commit preserve 7 files, push, ls-remote verify, pull-back proof, clear"
+  },
+  {
+   "status": "done",
+   "step": "docfrank: re-verify release complete, clear sweep-staging dfparts (541M)"
+  },
+  {
+   "status": "in_progress",
+   "step": "tpose-staging fresh archive + verify + pull-back + clear"
+  },
+  {
+   "status": "pending",
+   "step": "non-git scratch dirs: stream tar -> release -> verify -> pull-back -> clear, one at a time"
+  },
+  {
+   "status": "pending",
+   "step": "held re-checks final (wh-pose-survey, scarlett-star-pr)"
+  },
+  {
+   "status": "pending",
+   "step": "final report"
+  }
+ ],
+ "stored_by_this_lane": [
+  "Forge3D AGENTS.md edit -> branch archive/forge3d-local-20261021 (predecessor)",
+  "wh-lane2-fighters 4 files -> branch archive/wh-lane2-fighters-local-20261021 @ 0f358568"
+ ],
+ "verified_relaunch6": {
+  "_docfrank-facing": "ABSENT locally at 23:16Z (store-off lane completed its verify+clear). sweep-staging/pass2/dfparts (541M, this lane's partial pull-back) still on disk - clear once release re-verified complete.",
+  "scarlett-star-pr": "HOLD - now 5.0G, PR #440 + Rig Studio owns",
+  "tripo-recovery": "CLOSED - absent locally; storeoff lane stored+verified+pull-backed (release tripo-recovery-originals-20261021)",
+  "ur-p2": "CLOSED - absent locally; UR lane cleared after push-verify (PR #442)",
+  "wh-lane2-fighters": "994M present, mtime 2026-10-18; NO archive branch on remote (ls-remote 23:16Z returned only lane3) - preserve 7 files NOW",
+  "wh-lane3-movesets": "ABSENT locally at 23:16Z (a predecessor cleared it); archive branch archive/lane3-movesets-local-20261021 @ 3535ed1f re-confirmed via ls-remote by this lane. DONE.",
+  "wh-pose-survey": "HOLD - rig-seq2.sh pid 2230 running AND live blender heat job writing wh-pose-survey/rigged/demonio-winged.glb observed 23:15Z"
+ }
+}

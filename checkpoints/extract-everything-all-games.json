@@ -1,0 +1,9 @@
+{
+  "task": "Extract everything from all games — comprehensive asset pull",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/game-reverse-engineering",
+  "resume_brief": "Owner directive: extract EVERYTHING from all chimera games. All 6 per-game workers completed. Tekken 3: 6 fighters + 7 motion banks + 8,556 TIMs (PRs #33, #35). No Mercy: 5,787 animations + 3,570 OBJs + 5,029 PNGs (PR #39). WMXIX: 126 wrestler OBJs + 170 YANM + 2,690 CAW cataloged + 1,167 textures (PRs #36, #37). Urban Reign: 7 stage PPKs + 72 fighter PPKs + motion pools (PR #34). TTT2: 80-entry inventory + 59 roster + 29 stages (PR #38). All merged, zero open PRs.",
+  "updated_at": "2026-10-13T13:26:00Z",
+  "attempts": 1
+}

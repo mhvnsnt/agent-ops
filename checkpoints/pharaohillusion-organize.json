@@ -1,0 +1,10 @@
+{
+ "task": "ORGANIZE 4 PHARAOHILLUSION MODELS",
+ "repo": "~/workspace/western-heart",
+ "resume_brief": "Extract 4 pharaohillusion XPS model archives to ~/workspace/game-reverse-engineering/models/pharaohillusion/<character>/, write README.md, commit to western-heart via branch->PR->merge under teardown/models/pharaohillusion/.",
+ "status": "done",
+ "notes": "DONE. All 4 archives verified (py7zr extract), extracted (~506MB). README.md written. Archives (175MB) on Release pharaohillusion-2026-10-13, 4/4 assets verified. README+SHA256SUMS via PR #64 merged to main@fdcabd8b. Zero open PRs. Staging cleaned. Branch collision in shared repo displaced original commit (recovered via cherry-pick).",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-13T23:13:46.038704+00:00"
+}

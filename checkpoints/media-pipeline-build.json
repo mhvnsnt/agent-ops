@@ -1,0 +1,9 @@
+{
+ "task": "Build the open-source + Canva media production pipeline: background removal, Photoshop-style edits, resizing/layouts, video cutting, captions, generative mix-ins. Intake contract: user sends media + instruction -> draft -> approval -> publish.",
+ "repo": "~/workspace",
+ "resume_brief": "Build Real's media production pipeline in ~/workspace/media-pipeline/: (1) audit live Canva connection capabilities; (2) install/verify open-source stack under ~/workspace/tools (ffmpeg, rembg or equivalent background removal, ImageMagick/Pillow, faster-whisper for transcription); (3) write PIPELINE.md documenting each stage with the exact command or flow, plus the intake contract (user sends raw asset + instruction like 'edit this'/'CapCut-style cut'/'Canva layout'/'Photoshop-style manual edit'/'add generative parts' -> draft -> user approves -> publish); (4) PROVE each stage with a real test run on sample media (background removal, resize set, captioned clip) and keep the outputs as proof; (5) first use case is promo-post media for the money offers in ~/workspace/money/OFFER-DRAFTS.md. Heartbeat the checkpoint after each step, commit incrementally to git, mark done at the end. [progress 16:20Z: venv ready, rembg u2net proven with visual check, ImageMagick+ffmpeg+faster-whisper verified]",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-08T16:32:43.471632+00:00"
+}

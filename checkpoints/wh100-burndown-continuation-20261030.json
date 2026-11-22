@@ -1,0 +1,109 @@
+{
+ "conflict_check": "No live lane on these items. Running checkpoints found: ttt2-resume-100 (extraction remainder, different scope), forge3d-trellis2, sheet-keyart-kids (both unrelated).",
+ "coordinator_analysis": {
+  "F10_buffalo_bill": "All 796 BB entries already carry anim_ref (t3 331/t7 303/t8 162); zero donor markers. Application = additive ttt2_ref cross-references for the 76 unique join matches + file-level ttt2_integration section (megami/menajerii precedent forbids displacing existing mappings).",
+  "F1_t7_pool": "Clip-maps recount on main: 514 mapped / 267 unmapped. 'Other' pool = 89 entries with reason 'motbin graph candidate exists but no MVL corroboration and/or non-unique'. Ambiguous pool = 90 (fingerprint-scored, do not touch). Requirement-held = 10.",
+  "F5_concentration": "baek-master-white 153 no-anim re-verified (of 291); TTT2 codes: bae.json=Baek, rav.json=Raven exist, but both fighters are provenance class 1-S -> triage/analysis only, no wiring.",
+  "F6_census": "Reproduced audit exactly on main 3f7f1d14: 175 + 9 = 184. Settlement: 78 repicks (deterministic: same bank, same attack-class[/button], hit_frames throw=1, in rows.pack, closest stream_frames unique-min, group-twin rule) + 6 class fixes (kingtyrant x3 also repick eddy 26->148; scimitar x3 class-only) = 84 entry-edits, 36 files, specs in ~/workspace/_burndown2/f6_edits/. Settled-no-change 46 (A 8 + name-bank hf-confirmed 5 + taxonomy-only NO_ROW 33). Held 37 (repick-ambiguous 11: demonio-bloodline-ember the-unbowed x10 tied jin 370/385, docfrank crayon P+K x1 tied 9; banks-not-held 26: baek 9/dxmmii 9/demonio 8). Gated untouched 17 (star 3, cainelias 4, demonio-winged 10). Surgical editor ~/workspace/_burndown2/f6_edit.py tested on awapop (exact 4-line diff)."
+ },
+ "lane": "wh100-burndown-continuation-20261030",
+ "main_head_verified": "3f7f1d1430fbd4b59865470857810ed17fc7aca8",
+ "owner_order": "get it working 100% (2026-10-30 18:44 CDT); sources: Tekken teardowns -> other Steam games -> modding community -> internet",
+ "prs": [
+  {
+   "pr": 1316,
+   "sha": "83101e915e212e273c943991999c4e3fe6deda8a",
+   "what": "F5 no-anim triage doc"
+  },
+  {
+   "pr": 1317,
+   "sha": "a6ec4aeb407b64f4eed794572402a059d3070348",
+   "what": "Buffalo Bill TTT2 join application (76 unique -> 206 entries)"
+  },
+  {
+   "pr": 1318,
+   "sha": "018edf48",
+   "what": "T7 v2 burger"
+  },
+  {
+   "pr": 1320,
+   "sha": "d900a667",
+   "what": "T7 v2 demonio"
+  },
+  {
+   "pr": 1321,
+   "sha": "96a7c412",
+   "what": "T7 v2 diablo"
+  },
+  {
+   "pr": 1322,
+   "sha": "1051321c",
+   "what": "T7 v2 kinpo"
+  },
+  {
+   "pr": 1323,
+   "sha": "4a092c42",
+   "what": "T7 v2 phantom"
+  },
+  {
+   "pr": 1324,
+   "sha": "9177bb05",
+   "what": "T7 v2 pantera"
+  },
+  {
+   "pr": 1325,
+   "sha": "f78a53d8",
+   "what": "T7 v2 skull"
+  },
+  {
+   "pr": 1326,
+   "sha": "8f8716c5",
+   "what": "T7 v2 scimitar"
+  },
+  {
+   "pr": 1329,
+   "sha": "886e238f",
+   "what": "T7 v2 INDEX+docs"
+  },
+  {
+   "pr": 1363,
+   "sha": "b15042a0",
+   "what": "F6 settlement doc"
+  },
+  {
+   "pr": 1364,
+   "sha": "df91c42e",
+   "what": "F6 scimitar (moves-scoped)"
+  },
+  {
+   "pr": 1365,
+   "sha": "ccdb0b9e",
+   "what": "F6 settlement addendum"
+  },
+  {
+   "pr": 1366,
+   "sha": "f2137c06",
+   "what": "Inventory continuation update"
+  },
+  {
+   "note": "F6 per-file PRs #1315,#1319,#1327,#1328,#1330-#1337,#1339-#1362 (35 files) \u2014 SHAs in docs/movesets/F6-THROW-SETTLEMENT-2026-10-30.md and worker B report"
+  }
+ ],
+ "repo": "mhvnsnt/western-heart",
+ "status": "complete",
+ "work_items": {
+  "F10_buffalo_bill_law_application_76": "COMPLETE (worker A): PR #1317 MERGED a6ec4aeb (main HEAD). 206 distinct entries cross-referenced with ttt2_ref covering all 76 unique matches (208 listings); ttt2_integration section added; 29 ambiguous untouched, 22 unmatched UNMAPPED by name; +1196/-1, 0 deletions, CI 14/14. Disclosed overlap: TTT2 rows 82/83 share the same 2 entry keys; entries carry row 82, both rows recorded in ttt2_integration.applied.",
+  "F1_t7_v2_rerun_other_pool_85": "COMPLETE (worker C): 9 PRs merged (#1318 burger, #1320 demonio, #1321 diablo, #1322 kinpo, #1323 phantom, #1324 pantera, #1325 skull, #1326 scimitar, #1329 INDEX+docs), main HEAD 886e238f. Other pool 89 -> 11 PROMOTED, 78 held with v2 findings recorded. Graph sanity: sample re-derivation 48/48, all-mapped membership 511/514. NEW NET: 525 mapped / 256 unmapped of 781. Ambiguous/requirement/T8 pools + Pantera Lay Off flag untouched.",
+  "F5_no_anim_453_triage": "COMPLETE (worker D): recount 453 confirmed (442 strict + 11 bare-t3_row); megami/menajerii zero fills on strict second pass, 37 dispositions documented; baek-master-white TTT2 candidates 35U/1A/117N and pond 50U/13A/88N analyzed NOT applied (1-S); thor corrected = Tekken Ganryu 1-S, blocker = no decoded Ganryu motion bank in-repo; docs PR #1316 MERGED 83101e91",
+  "F6_throw_mismatches_184": "COMPLETE: 35 per-file PRs (worker B) + scimitar moves-scoped PR #1364 (coordinator) + settlement doc #1363 + addendum #1365. Final: 84 corrected / 46 settled-consistent / 37 held / 17 owner-gated. Post-state verified by coordinator re-parse: 175-pool hf throw=1:88 / throw=0:23 (all gated or held-ambiguous) / no-row-or-bank:64; 9-pool remainder 3 (star, gated).",
+  "inventory_doc_update": "COMPLETE: PR #1366 MERGED f2137c06 (F1/F5/F6/F10 rows + summary + continuation Progress section)."
+ },
+ "workdir": "~/workspace/_burndown2/wh (sparse checkout: movesets, anim, ttt2, docs, tools, game/js)",
+ "notes": [
+  "Worker D process findings relayed to A/B/C: NO-SPARSE-COMMIT law (use Git Data API from main tree, per PR #1316) + gate resolves every backticked Proof token (paths only).",
+  "Republish: BB/F6/C data changes are game content; prior lane deployed B1 data merges. Coordinator to run ONE republish via PR #1282 path after B and C land, covering all merged data changes.",
+  "REPUBLISH NOT EXECUTED by this lane: the in-repo republish path document (tools/deploy/REPUBLISH.md) failed the runtime safety check on read, so its commands were not run; flagged for parent/deploy lane. All lane data merges are on main f2137c06; next republish carries them. Itch upload remains owner-deferred (2026-10-30).",
+  "NO-SPARSE-COMMIT disclosure: worker B (36 commits) and coordinator scimitar commit (#1364) were made from blobless sparse checkouts whose index is the full tree; every resulting PR diffed at exactly its intended files with deletion-guard + clobber-guard green and zero deletions across all 50 lane PRs. Workers A/C/D and coordinator PRs #1365/#1366 used the Git Data API path from verified main trees."
+ ],
+ "final_main_head": "f2137c0681e579906a50462f3f9804b338a2b69b"
+}

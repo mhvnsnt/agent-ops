@@ -1,0 +1,10 @@
+{
+ "task": "Lane: propagation target survey + universe classification",
+ "repo": "/home/hatch/workspace/agent-ops",
+ "resume_brief": "LANE-SURVEY: if incomplete, re-run ckpt first, then finish surveying remaining propagation targets (ConcreteDragon, StreetBrawl, urban-mayhem-port, game-sweep/Combat-RPG-prototype-, M-Hero-Simulator-, Wrestli6game-3, theyard; Bannon clone at ~/workspace/bannon-repair) read-only: engine/stack, menu structure, model formats/roster locations, universe classification Track 1/Track 2/UNKNOWN with evidence. Write ~/workspace/agent-ops/char-customization-porting-survey.md with per-repo table + Concrete Dragon world brief + Bannon clone status.",
+ "watchdog": true,
+ "status": "done",
+ "note": "Deliverable written: ~/workspace/agent-ops/char-customization-porting-survey.md",
+ "attempts": 0,
+ "updated_at": "2026-10-09T02:25:37.024355+00:00"
+}

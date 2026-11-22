@@ -1,0 +1,30 @@
+{
+ "id": "gap-closure-w5c-defjam-vertex",
+ "repo": "mhvnsnt/western-heart (converter+catalog), mhvnsnt/wrestling-game (.o data)",
+ "resume_brief": "W5c COMPLETE (blocker stands, evidence hardened). PR mhvnsnt/western-heart#452 OPEN + MERGEABLE: spec 7.9.1 + 7.9.2 addenda + teardown/def-jam-fight-for-ny/tools/w5c_vertex_analysis.py. To resume the crack: SLUS_210.04 is at ~/workspace/_w5c-work/data/SLUS_210.04 (sha256 4e65bf29...) with a ready Ghidra project at ~/workspace/_w5c-work/ghidra/DefJam; decompile packet-build 0x229008/0x228A08/0x229EE8 next; if packets pass through, extract EAGL VU1 microcode (LitGouraud0/IrradTexture_Skin0 __EAGLMicroCode) and read the VU vertex loop. Validation gates when a candidate emerges: cross-letter topology identity (A/B/F identical maps), _C BBOX spans (17.44/19.33/9.0), Blender render of V2CP_110_0001_A + 111/112/113 samples, own-eyes. Converter/catalog unchanged (POINTS, topology_status=unproven_vertex_order).",
+ "status": "done",
+ "step": "DONE: PR #452 open/mergeable (+337/-0, 2 files, commits 510385e + 82938dd): spec 7.9.1 (dataset evidence) + 7.9.2 (Ghidra evidence) + w5c_vertex_analysis.py. Vertex order NOT cracked; POINTS discipline stands.",
+ "task": "W5c Def Jam vertex-order attack: crack the .o vertex draw order via Ghidra+MCP on SLUS_210.04 and the complete dataset; convert POINTS pools to real mesh GLBs if cracked, else spec 7.9 addendum PR",
+ "updated": "2026-10-21T18:45:00-05:00",
+ "watchdog": true,
+ "notes": "worker-watchdog 2026-10-21 18:25 CDT: VERIFIED parked-blocker state, NOT resumed. PR #452 still OPEN (gh pr view 2026-10-21: state=OPEN, not merged) - parked open per lane design (stale 'exe unreachable' text awaits w5e amendment). Crack continuation is owned by LIVE successor lane gap-closure-w5e-defjam-microcode (status in_progress, heartbeat 23:27 UTC = fresh) AND a live Def Jam worker process (PID 44939 running ~/workspace/defjam-work/w5b/tools/seize_window.py, started 18:41 CDT). Stand-down per NO-DUPLICATE-WORK / CHECK-BEFORE-START: no new Ghidra crack started by watchdog. attempts NOT incremented (no retry performed). Merging PR #452 deliberately left to owner/w5e (addendum text needs amendment after w5e Ghidra results).\n[worker-watchdog 2026-10-21 19:12 CDT] Marked done: crack leg complete via else-branch \u2014 spec 7.9 addendum PR #452 filed (verified OPEN with full addendum body, gh pr view 2026-10-21); POINTS discipline + hardened evidence stand per earlier watchdog verification (18:25 CDT). PR #452 merge and 7.9.4 amendment remain owned by successor lane gap-closure-w5e-defjam-microcode.",
+ "findings_so_far": [
+  "trailers decoded: block trailer = byte-size of NEXT block's record data (Normals = 2x Coords) - framing detail, not order data",
+  "BBOX in _C twin (assembled space): x[-8.72,8.72] y[0,19.33] z[-4,5]; pool spans (2312,969,4069) have NO uniform scale to BBOX spans under any axis permutation -> per-vertex/per-block transforms implicated, pool is not one rigid frame",
+  "pool is mirror-symmetric in x (1143/1160 records have -x partner) -> point SET is a real symmetric part",
+  "all flat permutations/deinterleaves of Coordinates score worse than identity (meanD1 696 baseline) -> draw order is not a flat permutation of the pool",
+  "_C geometry = packetized units (i16,i16,i16,counter) with counter +7/unit and occasional -1 flag; no A/B i16 sequences appear inside _C (different encoding, as spec said)",
+  "bone records (112B) decoded partially: scale(3f)+u32+quat(4f xyzw)+matrix data with +/-10.56 inverse pair -> bind+inverse-bind pairs for skinning",
+  "no public EAGL mesh decoder exists (web research); FFNY recomp project is Xbox (NV2A), not PS2 EAGL"
+ ],
+ "pr_452": "https://github.com/mhvnsnt/western-heart/pull/452 (addendum, +273/-0, MERGEABLE) - NOTE its 'exe unreachable' text is now stale; amend after Ghidra results",
+ "verdict": "Not cracked. Proven: trailers decoded; pool is a clean x-symmetric surface sample but NOT one rigid frame (BBOX span proof); letters A/B/F are topology-identical morph variants sharing one order; _C stream is VU packet units (w=7*index, -1 substitutions), not positions; Ghidra decompilation of the full CMorph/_BuildMorph/CVertexInformation chain (two levels) proves it is name-lookup/object-load/symbol-resolution/allocation plumbing - no CPU code reads vertex records; consumption is VU1-side. Next targets named in 7.9.2: packet-build trio 0x229008/0x228A08/0x229EE8, then EAGL VU1 microcode blobs in the exe.",
+ "assets": {
+  "pr": "https://github.com/mhvnsnt/western-heart/pull/452",
+  "slus_210_04": "~/workspace/_w5c-work/data/SLUS_210.04 sha256 4e65bf2947b3838ce372967cac448bfc8034709a6d70a87fd11d13c5f09b23b2 (game file, lane scratch only, not committed)",
+  "ghidra_project": "~/workspace/_w5c-work/ghidra/DefJam (r5900, -noanalysis targeted runs; outputs ghidra_out.txt + ghidra_out2.txt in ~/workspace/_w5c-work/)",
+  "samples": "~/workspace/_w5c-work/data/*.o (from mhvnsnt/wrestling-game via gh api)"
+ },
+ "updated_at": "2026-10-22T00:18:47.449080+00:00",
+ "attempts": 0
+}

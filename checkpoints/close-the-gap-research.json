@@ -1,0 +1,10 @@
+{
+ "task": "Research free tools to close the AI production gap vs Gemini (owner 2026-10-10)",
+ "repo": "~/workspace",
+ "resume_brief": "Owner 2026-10-10: 'Why was this so easy with Gemini but ur doing such a bad job and what can close the gap that's free to pull in to get u better than anything else at anything like this or relative in video, photo, or 3d, cgi, or any type of production, show, photo, video, or movie work? And scoring and music too and film scoring.' RESEARCH task: for each category, find the best FREE/open-source tools that close the gap between script-based AI work and native multimodal AI (Gemini etc). Categories: (1) photo/image editing + cutouts + background removal + upscaling, (2) video editing + generation + animation, (3) 3D/CGI/modeling/rigging/rendering, (4) show/film production pipeline tools, (5) music generation + film scoring (AI composition + DAWs). For each tool: what it does, why it's the best free option, how it plugs into an agent-driven workflow (CLI/API/automation \u2014 not just GUI), install difficulty, and what gap it closes vs Gemini. Prioritize tools with CLIs/APIs/Python bindings that an agent can actually drive. Deliverable: ~/workspace/agent-ops/CLOSE-THE-GAP.md \u2014 ranked recommendations per category with wire-up priority.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T02:00:53.322901+00:00",
+ "notes": "Research complete. Deliverable: ~/workspace/agent-ops/CLOSE-THE-GAP.md"
+}

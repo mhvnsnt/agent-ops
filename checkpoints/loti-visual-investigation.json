@@ -1,0 +1,9 @@
+{
+ "task": "Luck of the Irish visual investigation: inspect actual video/image contents (not filenames), build evidence-based asset map",
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "LUCK OF THE IRISH VISUAL INVESTIGATION (owner 2026-10-09): the LOTI commercial is partially built inside existing pictures/videos with generic/undescriptive filenames \u2014 filename search is NOT the source of truth, media contents are. Investigate: (1) inventory all accessible media \u2014 the 4 ingested Drive folders (~/workspace/drive-ingest/), TRIPPEDD-Production-studios- main + feat/episode01-prompt-first branch, God-Molecule-Show-Studio, any media manifests; (2) extract frames/contact sheets THROUGHOUT each video (not just opening frames), inspect for green Irish effects, Irish-themed visuals, props, costumes, graphics, overlays; (3) match against the canon's Shot A (far, slow zoom), Shot B (closer angle), Shot C (wide, fourth-wall break 'LUCK OF THE IRISH!!!') from docs/creative/EP01-THE-WALK-CANON.md; (4) produce production/TRIPPEDD_EP01/LOTI-ASSET-MAP.md: per candidate \u2014 actual path, type/duration, exact timestamps, contact-sheet refs, which shot it satisfies, confidence level; keep confirmed vs probable vs uninspectable vs genuinely-missing separate; (5) feed confirmed assets to the base-cut lane (checkpoint trippedd-ep01-basecut.json) so real footage replaces slate gaps. Do not rename/move/overwrite originals. Branch->PR->merge (merge commits only, 0 open PRs). Heartbeat checkpoint, mark done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-10T04:55:04.166554+00:00"
+}

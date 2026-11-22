@@ -1,0 +1,9 @@
+{
+ "task": "Soulcalibur model hunt: catalog 3D models for all Soulcalibur fighters from Open3DLab, SFMLab, DeviantArt, rigmodels",
+ "repo": "~/workspace/game-reverse-engineering/models/soulcalibur-hunt",
+ "resume_brief": "Search Open3DLab, SFMLab, DeviantArt, and rigmodels for downloadable 3D models of Soulcalibur fighters (Siegfried, Nightmare, Sophitia, Cassandra, Hilde, Raphael, Taki, Natsu, Zasalamel, Ivy, Voldo, Cervantes, Astaroth, Tira, Talim, Lizardman, Dampierre, Mitsurugi, Seong Mi-na, Xianghua, Kilik, Maxi, Yun-seong, Hwang, Rock, Geralt, 2B, Ezio, etc.). Record source URL, format, file size, attire/variant info. Do NOT download directly; build catalog with exact URLs for browser-task delegation. Write results to ~/workspace/game-reverse-engineering/models/soulcalibur-hunt/HUNT-RESULTS.md. Update checkpoint attempts and mark done when complete.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-13T14:38:54.545227+00:00"
+}

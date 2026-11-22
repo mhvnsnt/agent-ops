@@ -1,0 +1,10 @@
+{
+  "task": "Wire shared animation pipeline infrastructure into every animation/video repo",
+  "repo": "~/workspace",
+  "resume_brief": "Continue wiring ~/workspace/animation-techniques/ shared hub into repos. Targets: trippedd-studio (AGENTS.md), god-molecule-studio (docs/ANIMATION-PIPELINE.md), God-molecule-production-stage (docs/ANIMATION-PIPELINE.md), font-wizard (README.md), SMOKE-MIRROR-S- (README.md), ConcreteDragon (README.md, 3D), brutal-fist-v10 (AGENTS.md, 3D), anim-fix AshLane (docs/ANIMATION_PIPELINE.md pointer), StreetBrawl (README.md, 3D), BioMechania (AGENTS.md, 3D). bannon-video skipped (scratch dir, no docs). Rule: reference the hub, never duplicate content. Additive only. After all edits, update checkpoint to done.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T20:17:30.577759+00:00",
+  "notes": "Wired 10 repos. Skipped bannon-video (scratch dir, no docs). Bannon main game repo not cloned locally \u2014 noted in report."
+}

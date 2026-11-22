@@ -1,0 +1,11 @@
+{
+ "attempts": 0,
+ "repo": "western-heart",
+ "resume_brief": "Resume Tekken 6 PSP DATA401 bulk decrypt ROUND 2. Read round-1 report ~/workspace/game-reverse-engineering/tekken6/work/decrypt/DECRYPT-REPORT-2026-10-15.md first. Work dir ~/workspace/game-reverse-engineering/tekken6/work/decrypt2/ (round-1 files stay in work/decrypt/). Attack priority: (1) emulate key-schedule fn 0x8AA2BC0 in unicorn to compute real C1/C2 at 0x08C2B9F8 via hooked 0x8B89208; (2) emulate 0x8AA17D0 with hooked sceIoIoctl 0x10206 to learn what that custom ioctl returns; (3) extract ISO's PSP_GAME/USRDIR/modules/ 2 kernel PRXs, disassemble, hunt crypto/ioctl 0x10206 dispatch; (4) trace bulk decrypt caller: vtable ReadFile 0x08a9cdd0 -> thunks -> where returned buffer is transformed; (5) web recon on Namco PSP PAC tools only (no game downloads). ISO ~/workspace/game-reverse-engineering/tekken6/tekken6-psp.iso is IRREPLACEABLE read-only. Out of scope: PPSSPP live-dump (needs_owner). Deliverable: (A) reproducible decrypt script with verified plaintext, or (B) honest stuck report with evidence paths. Heartbeat updated_at every 15 min.",
+ "status": "done",
+ "task": "Tekken 6 DATA401 bulk decrypt \u2014 round 2 (key schedule + ioctl + PRX driver leads)",
+ "updated_at": "2026-10-16T10:26:48.499254+00:00",
+ "watchdog": true,
+ "result": "BULK DECRYPT CRACKED: cipher 0x8AA2CA8, K1=0x24cfa8a4/K2=0x564928df (keysector ext0/ext1), t0=bulk-relative byte offset per 2048B sector. Verified: MOTA/NTPP magics, ASCII filenames, offset tables. GOOD regions decrypt; BAD regions (alternating) use unknown keys. IDX decrypts with fixed keys (0xE11CF772/0xA0DC9EB4), t0=IDX-relative offset. Scripts: decrypt_bulk.py, decrypt_idx.py.",
+ "verify_20261016_0625": "watchdog verified complete: re-ran decrypt_bulk.py on ISO sectors 230256-230259 -> /tmp/dec2-verify.bin (8192 bytes); MOTA magic present in decrypted plaintext; IDX decrypts with fixed keys 0xE11CF772/0xA0DC9EB4. Deliverable (A) met: reproducible decrypt script with verified plaintext. Scripts live on disk at tekken6/work/decrypt2/ (decrypt_bulk.py, decrypt_idx.py) alongside round-1 report DECRYPT-REPORT-2026-10-15.md; result fed downstream decrypt6 lane (commits 60e0653, b7dd1aa in game-reverse-engineering)."
+}

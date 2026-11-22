@@ -1,0 +1,14 @@
+{
+ "blockers": [],
+ "heartbeat": "2026-10-21T21:37:33-05:00",
+ "instance": 4,
+ "lane": "W7e TEKKEN 5 COSTUME-PACK NUDP->GLB CONVERSION",
+ "progress": "DONE. PR #485 (mhvnsnt/western-heart) MERGED 2026-10-22T02:29Z merge 95547ef0; post-merge main verified: catalog.test.mjs 3/3 PASS, CATALOG.json 80 parts. 80/80 packs checksum-verified (reproduced twice, sub02 sha identical 80/80); 79 textured GLBs + pack1109 geometry-only partial (placeholder TIM2); 40/31501 VIF blobs skipped across 11 packs (itemized in conversion doc). GLBs: release tekken5-costume-glbs-v1, 81 assets (80 GLB + manifest.json), 55.4MB, pull-back sha-verified (0240/0515/0614/1109 + manifest byte-identical to repo GLB-MANIFEST.json). Attributions proven 0 / null 80 (no data-proven pack->character table). Proof renders viewed by lane: pack0240 (gi+topknot), pack0515 (angel wings/halo), pack0735 (tin robot) \u2014 in repo proof/. Remaining gaps unchanged: ctype-5 VIF 0x82, DATA0 cipher, skull mask not found, pack->character attribution table. Staging cleared per disk log (366MB).",
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "W7e: reproduce T5 DATA1 costume-pack subset (80 packs), convert all 80 sub02 whole-costume NUDPs to textured GLBs via proven W7b NUDP pipeline, attribute pack to character only where data proves it (else null), add FULL_BODY entries additively to customization/parts/tekken5/CATALOG.json keeping catalog.test.mjs 3/3, render 3+ costumes own-eyes, PR instruction-gate format.",
+ "status": "done",
+ "step": "complete",
+ "task": "W7e Tekken 5 costume-pack NUDP to GLB conversion into catalog",
+ "updated_at": "2026-10-21T21:37:33-05:00",
+ "watchdog": true
+}

@@ -1,0 +1,10 @@
+{
+ "task": "Deep episode-level research wave on Off the Air, Xavier Renegade Angel, Eastern Mind Tong-Nou for God Molecule bible/narrative/episode craft",
+ "repo": "/home/hatch/workspace/god-molecule-studio",
+ "resume_brief": "God Molecule deep research wave (owner 2026-10-09, standing directive): ongoing deep study of the three inspirations \u2014 Off the Air, Xavier: Renegade Angel, Eastern Mind: The Lost Souls of Tong-Nou. Go episode-level: dialogue patterns, joke/setup structures, comedy style, environment design, animation techniques, production methods. Write structured research docs into the God Molecule show repo (mhvnsnt/God-Molecule-Show-Studio, local ~/workspace/god-molecule-studio, docs/research/) via branch->PR->merge (merge commits only, 0 open PRs). Map every finding to bible integration points (which bible section it informs for the merge-into-one: Bible A = production-stage ShowBible.tsx is #1 canon). This is wave 1 of a standing directive \u2014 cover all three shows substantially. Heartbeat checkpoint, mark done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T00:36:37.893991+00:00",
+ "notes": "Wave 1 deep research started: reading INSPIRATION-RESEARCH.md (PR #85) first, then episode-level study of Off the Air, Xavier: Renegade Angel, Eastern Mind: Tong-Nou. Output -> god-molecule-studio docs/research/."
+}

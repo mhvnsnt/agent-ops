@@ -1,0 +1,10 @@
+{
+  "task": "Def Jam: Fight for NY teardown \u2014 download PS2 ISO, extract, full teardown; models to wrestling-game repo, grappling/animation findings to western-heart",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/wrestling-game",
+  "resume_brief": "Def Jam: Fight for NY teardown (owner directive 2026-10-13). PS2 USA ISO (4.47GB) at Archive.org ID slus-210.04.-def-jam-fight-for-ny, file SLUS_210.04.Def Jam - Fight for NY.iso. DISK IS AT 95% (5.1GB free) \u2014 download the ISO, extract immediately, verify extraction, then DELETE the ISO before disk fills. Extract: fighter models, stages, audio, moveset/animation data (focus: how wrestling/grappling animations work in a 3D fighter engine \u2014 this informs Western Heart grappling). Document formats in TEARDOWN.md. Commit: models/assets to mhvnsnt/wrestling-game repo (branch->PR->merge); animation/grappling findings doc to western-heart/teardown/def-jam-fight-for-ny/. Stage originals for TeraBox in ~/workspace/terabox-staging/def-jam/. Heartbeat the checkpoint ~/workspace/agent-ops/checkpoints/defjam-teardown.json after every step. If disk blocks the download, note it in checkpoint notes and wait \u2014 do not fill disk past 97%.",
+  "updated_at": "2026-10-14T03:00:00Z",
+  "attempts": 1,
+  "notes": "DONE. wrestling-game PR #2 merged (9,463 files: 78 fighters, 7,948 CAW parts, 858 venues, 423 motion triplets, XMLs, tools, TEARDOWN.md). western-heart PR #68 merged (ANIMATION-FINDINGS.md). Zero open PRs both repos. Full ISO not pulled (surgical extraction superseded); TeraBox ISO staging noted as pending. Disk 88%."
+}

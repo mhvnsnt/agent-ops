@@ -1,0 +1,9 @@
+{
+ "task": "Player blocking + enemy block/dodge AI for Concrete Dragon",
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "Build DEFENSE for Concrete Dragon (~/workspace/ConcreteDragon). (1) PLAYER BLOCKING: hold to block (reduces/negates damage, chip damage on heavies, blockstun, can't block mid-attack, visual block pose + spark). Refs: Streets of Rage 4, Yakuza, Def Jam. (2) ENEMY BLOCK/DODGE AI: thugs sometimes block player attacks (visible block pose + spark), sidestep/dodge out of range; bosses do it smarter (read patterns, punish). Must feel alive, not punching bags. Pull free/open-source where useful (Kenney SFX already in repo). Branch defense -> PR -> merge (never direct to main). Heartbeat ~/workspace/agent-ops/checkpoints/cd-combat-defense.json after every step; incremental commits. Verify with playtests + captures, your own eyes: blocking works, enemies visibly defend, no regressions to combat. Obvious-defect checklist every playtest: no interpenetration, feet on ground, facing matches movement, hits connect with impact, no frozen characters, HUD correct.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 2,
+ "updated_at": "2026-10-09T17:18:41.367317+00:00"
+}

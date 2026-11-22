@@ -1,0 +1,9 @@
+{
+ "task": "Research high-level merch/POD marketing playbooks and write them into money-machine-hq",
+ "repo": "/home/hatch/workspace/money-machine-hq",
+ "resume_brief": "Research task: pull together the best real-world marketing/promotion playbooks for a solo creator selling print-on-demand merch (Redbubble) and physical products. Sources: indie creator merch launch teardowns, POD marketing tactics, social commerce (TikTok/Reels-to-product), audience/network building for artists, pricing and promo psychology, email/SMS list building for creators, and corporate brand-marketing frameworks adapted for one person (funnels, content pillars, launch sequences). Write original summaries in plain direct language -- do NOT paste copyrighted text; keep any quote under 50 words total. Write the playbook as markdown files under ~/workspace/money-machine-hq/merch-marketing-playbook/: 01-launch-playbook.md, 02-content-engine.md, 03-pricing-promo.md, 04-audience-network.md, 05-corporate-frameworks-solo.md. Commit on a NEW branch (never straight to main), push the branch. Then report what was written and the branch name.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-13T23:47:32.128311+00:00"
+}

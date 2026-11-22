@@ -1,0 +1,9 @@
+{
+  "task": "DSW full show-production package: director/producer/full cast/end credits + reusable template for all shows",
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "FULL SHOW-PRODUCTION PACKAGE (owner 2026-10-10): build DSW like a real TV show \u2014 director, producer, full cast, end credits \u2014 as the template for ALL shows/segments going forward ('full crew style creation of shows but just with our team'). Context: production/DAMN_SHITS_WILD/SHOW-BIBLE.md, EP01 script, EP01 production (turnaround, boards, animatic \u2014 STILLS APPROVED 2026-10-10), pre-production package building (supporting cast, color script, title sequence). Build: (1) SHOW-PACKAGE.md for DSW \u2014 created by, executive producer, director, writers, full cast list with character/voice-actor slots (William's voice = TBD pending his decision; mark it), crew roles mapped to our actual team (owner = showrunner; agents = departments: art, boards, voice, edit, sound), production pipeline stages with gates (script\u2192voice\u2192boards\u2192stills gate\u2192animation\u2192mix\u2192master); (2) END-CREDITS sequence design + template (wavy trippy card style, credit order: cast, crew, created by, network); (3) TEMPLATE version at docs/production/SHOW-PACKAGE-TEMPLATE.md reusable for Wizard Gang, In the Bushes, God Molecule, Smoke & Mirrors, TRIPPEDD \u2014 with per-show slots. No invented people \u2014 real roles only, voice actors marked TBD where undecided. Branch->PR->merge (merge commits only, 0 open PRs). Heartbeat checkpoint, mark done.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 1,
+  "updated_at": "2026-10-10T05:52:15.770377+00:00"
+}

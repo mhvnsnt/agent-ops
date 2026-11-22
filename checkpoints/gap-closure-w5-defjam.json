@@ -1,0 +1,255 @@
+{
+ "watchdog": true,
+ "task": "W5a Def Jam count reconciliation + full-extraction pipeline + first chunks - extract ALL remaining Def Jam parts",
+ "repo": "mhvnsnt/wrestling-game and mhvnsnt/western-heart",
+ "resume_brief": "DONE: reconciliation proven - 22360 index = 344 unique parts x65 duplicates in western-heart customization/parts/defjam/PARTS-INDEX.json; 7948 = all caw-parts files (5319 ssh+2624 o+5 xml); 2624 = CAW .o subset = J4 catalog scope, sets identical. Disc census (surgical Range, BIGF tables): V2CP_0..3=7960 entries vs 7948 files, delta=11 duplicate entries + entry0 accounting, 0 missing names; V2IP 234/234, V2BG 858/858. Pipeline PROVEN byte-identical (V2CP_532_0001_C_F.o sha256 82af98b2...). PRs: wrestling-game#14 (reconciliation doc + REMAINDER.json + census tool), western-heart#441 (index rebuilt to 2624). BLOCKED: chunk-1 extraction of never-touched archives (912 entries: SHOPS/V2TA/V2WP/V2CM/PROPS/TROPHIES/FEPOSES/V2GA/BLINGFX/DECALFX/V2IP_CIN/V2BG_CIN) + 5 entry0 header reads + motion-table census (WRES_ALL LBA1968777, BASE00 LBA2001515, BLAZIN LBA2000109) - archive.org item node failing (CDN HTTP500, download rc52) since ~14:10 CDT 2026-10-21. PICKUP: retry ranges at V2CP_1 LBA1721502/V2CP_2 1771006/V2CP_3 1810795/V2IP 2002698/V2BG 1943736 first-160-bytes for entry0 names, then motion tables via ~/workspace/defjam-work/w5a/iso_range_census.py (fixed parser), then chunk-1 extraction with defjam-work/tools/bigf_extract.py + J4 converter from western-heart customization/tools/.",
+ "status": "done",
+ "step": "On IA recovery: (1) entry0 first-160B reads at V2CP_1 LBA1721502, V2CP_2 1771006, V2CP_3 1810795, V2IP 2002698, V2BG 1943736; (2) BIGF header+table census WRES_ALL LBA1968777, BASE00 2001515, BLAZIN 2000109; (3) ISO walk for chunk-1 LBAs then extraction per manifest; use w5b/tools/ia_fetch.py (endpoint A download redirector worked once; B is 500).",
+ "prs": {
+  "wrestling-game": 14,
+  "western-heart": 441
+ },
+ "updated": "2026-10-25T00:41:36.885875+00:00",
+ "updated_at": "2026-10-25T00:41:36.885875+00:00",
+ "notes": [
+  "\n[watchdog 2026-10-21 09:56-10:01 CDT] Heartbeat: clone/fetch processes still active. Standing down.",
+  "[watchdog 2026-10-21 ~23:10 CDT] W5b owned by gap-closure finisher coordinator (dcbd5375, dispatched 22:30 CDT, running live) - standing down per CHECK-BEFORE-START, no duplicate lane. Heartbeat only.",
+  "[watchdog 2026-10-22 ~09:28 CDT] Heartbeat: wrestling-game PRs #15/#16/#17/#18 all verified OPEN via gh \u2014 W5b work delivered (912/912 census+stored, microcode negative valid, disc clean), awaiting central/owner review. Standing down.",
+  "[watchdog 2026-10-24 19:40 CDT] Verified COMPLETE via gh API: wrestling-game PRs #15/#16/#17/#18 all MERGED 2026-10-23 (G1/G2/G3 untouched-archive extractions + microcode exhaustive negative). Status set done. Repair follow-up remains with the gap-closure coordinator per prior status text."
+ ],
+ "W5b": {
+  "lane": "gap-closure W5b - untouched archives + motion census completion",
+  "started": "2026-10-21T15:30:00Z",
+  "ia_probe_log": [
+   {
+    "t": "2026-10-21T15:30:20Z",
+    "endpoint": "archive.org/metadata",
+    "result": "HTTP 000 (timeout 12.6s), no body"
+   },
+   {
+    "t": "2026-10-21T15:30:20Z",
+    "endpoint": "dn721808.ca.archive.org range 32768-32927",
+    "result": "HTTP 500, 170B HTML error page"
+   },
+   {
+    "t": "~2026-10-21T15:32Z",
+    "endpoint": "archive.org/download range 32768-32927",
+    "result": "SUCCESS once: 160B, CD001 PVD magic at correct offset (byte-exact)"
+   },
+   {
+    "t": "2026-10-21T15:34-15:38Z",
+    "endpoint": "alternating A/B retry loop (probe2.log)",
+    "result": "ep A rc52 empty replies; ep B HTTP 500 consistently; 0/9 OK in window"
+   },
+   {
+    "t": "~2026-10-21T15:40Z",
+    "endpoint": "archive.org/metadata (90s timeout)",
+    "result": "HTTP 000"
+   }
+  ],
+  "ia_status": "STILL DOWN / intermittent at best - one byte-exact success via download redirector proves item exists and range method valid; node failing ~all requests this run so far",
+  "prep_done": [
+   "~/workspace/defjam-work/w5b/out/EXTRACTION-MANIFEST.json (912 chunk-1 entries, entry0 LBAs, motion LBAs)",
+   "~/workspace/defjam-work/w5b/out/CONVERTER-BATCH-PLAN.md (G1/G2/G3 PR groups, converter applicability rule)",
+   "~/workspace/defjam-work/w5b/tools/ia_fetch.py (status-checked rotating fetcher)"
+  ],
+  "pickup_exact": "On IA recovery: (1) entry0 first-160B reads at V2CP_1 LBA1721502, V2CP_2 1771006, V2CP_3 1810795, V2IP 2002698, V2BG 1943736; (2) BIGF header+table census WRES_ALL LBA1968777, BASE00 2001515, BLAZIN 2000109; (3) ISO walk for chunk-1 LBAs then extraction per manifest; use w5b/tools/ia_fetch.py (endpoint A download redirector worked once; B is 500).",
+  "motion_repo_baselines_verified": "2026-10-21 via gh contents API: wrestling-game main motion/wres=423 files, motion/base00=3, motion/blazin=329 - census completion = BIGF table vs these dirs diff",
+  "converter_confirmed_on_wh_main": [
+   "customization/tools/convert_defjam_o.py",
+   "eagl_shps.py",
+   "eagl_refpack.py",
+   "test_convert_defjam_o.py"
+  ],
+  "pr14_branch": "gap-closure-w5-defjam-reconciliation",
+  "pr441_branch": "gap-closure-w5-defjam-index-fix",
+  "seize_loop": "w5b/tools/seize_window.py running: 36 probes @~70s, on live window seizes iso_walk + entry0 bins + motion tables into w5b/out/",
+  "wg_layout": "teardown/def-jam-fight-for-ny/{models/{caw-parts,fighters,venues},motion/{wres,base00,blazin},data,tools}",
+  "status": "W5b COMPLETE: motion census exact-match; 912/912 extracted+stored PRs #15/#16/#17; microcode hunt EXHAUSTED - valid negative (3065 .o, 2486 refs, 0 defined) PR #18; corrupt-population re-extract proved disc clean (2624/2624 parse) - repair follow-up for coordinator",
+  "closed_at": "2026-10-21T16:26Z",
+  "final_probes": "2026-10-21T16:26Z download HTTP 000, dn721808 HTTP 500 (170B HTML), metadata HTTP 000",
+  "probe_totals": "successes: 1 byte-exact (15:32Z, download redirector, 160B PVD CD001). failures: probe2 16/16, seize loop 36/36 (15:41-16:25Z), all spot probes",
+  "stored": {
+   "commit": "095033a7861b275ed9516f52f6bf4da17d8057af on branch gap-closure-w5-defjam-reconciliation (PR wrestling-game#14)",
+   "files": [
+    "teardown/def-jam-fight-for-ny/W5B-CONTINUATION-2026-10-21.md",
+    "W5B-EXTRACTION-MANIFEST.json",
+    "W5B-CONVERTER-BATCH-PLAN.md",
+    "tools/ia_fetch.py",
+    "tools/seize_window.py",
+    "tools/extract_chunk.py"
+   ],
+   "pr_comment": "https://github.com/mhvnsnt/wrestling-game/pull/14#issuecomment-6321226003"
+  },
+  "counts": {
+   "entry0_read": 5,
+   "extracted_new": 912,
+   "converted_new": 0,
+   "cataloged_new": 0,
+   "motion_census": "COMPLETE - exact match all 3 archives"
+  },
+  "disk_clears": "none (nothing extracted; nothing staged)",
+  "finisher_lane": "W5b finisher (session 2bff2dc0) adopted pickup 2026-10-22T03:37Z dispatch",
+  "heartbeat": "2026-10-22T06:08:48.085236+00:00",
+  "step0_adopt": {
+   "found_in_w5b_out": [
+    "entry0_V2BG.VIV.bin (2048B)",
+    "entry0_V2CP_1.VIV.bin (2048B)",
+    "entry0_V2CP_2.VIV.bin (2048B)",
+    "entry0_V2CP_3.VIV.bin (2048B)",
+    "entry0_V2IP.VIV.bin (2048B)",
+    "iso_walk.json (127 files)",
+    "seized.json (72K: iso_files+entry0 hex160+full motion tables)",
+    "probe_w5c.bin (160B CD001 byte-exact 23:40Z)",
+    "seize_w5c_stdout.log (all HTTP206 OK)"
+   ],
+   "adopted_verified": "entry0 bins + seized.json + iso_walk.json all present on disk, sizes/timestamps 23:45-23:46Z; NOT re-fetched",
+   "missing": "no extraction output yet (no chunk-1 .VIV slices or extracted dirs) - extraction starts fresh in this lane",
+   "logs_dir": "none (logs live in out/)"
+  },
+  "entry0_parsed": {
+   "V2CP_1.VIV": {
+    "total": 101383672,
+    "count": 2201,
+    "entry0_name": "",
+    "entry0_off": 68744,
+    "entry0_size": 68752,
+    "bin_bytes": 2048
+   },
+   "V2CP_2.VIV": {
+    "total": 81486122,
+    "count": 2426,
+    "entry0_name": "",
+    "entry0_off": 76421,
+    "entry0_size": 76432,
+    "bin_bytes": 2048
+   },
+   "V2CP_3.VIV": {
+    "total": 26554644,
+    "count": 2842,
+    "entry0_name": "",
+    "entry0_off": 85434,
+    "entry0_size": 85440,
+    "bin_bytes": 2048
+   },
+   "V2IP.VIV": {
+    "total": 28342285,
+    "count": 234,
+    "entry0_name": "",
+    "entry0_off": 5016,
+    "entry0_size": 5024,
+    "bin_bytes": 2048
+   },
+   "V2BG.VIV": {
+    "total": 50614733,
+    "count": 858,
+    "entry0_name": "",
+    "entry0_off": 18647,
+    "entry0_size": 18656,
+    "bin_bytes": 2048
+   }
+  },
+  "motion_census_diff": {
+   "WRES_ALL.VIV": {
+    "disc_entries": 423,
+    "repo_files": 423,
+    "name_diff": "IDENTICAL (0 disc-only, 0 repo-only)",
+    "breakdown": "141 mnl + 141 ord + 141 orl"
+   },
+   "BASE00.VIV": {
+    "disc_entries": 3,
+    "repo_files": 3,
+    "name_diff": "IDENTICAL"
+   },
+   "BLAZIN.VIV": {
+    "disc_entries": 329,
+    "repo_files": 329,
+    "name_diff": "IDENTICAL",
+    "breakdown": "164 ord + 164 orl + 1 mnl"
+   },
+   "method": "seized.json BIGF tables (W5c seize 23:42-23:46Z) vs gh git-trees API main recursive listing, name-level set diff",
+   "verdict": "MOTION CENSUS COMPLETE - no missing motion files; repo motion set == disc set"
+  },
+  "g1_extraction": {
+   "archives": [
+    "BLINGFX 2",
+    "DECALFX 1",
+    "FEPOSES 18",
+    "V2GA 21"
+   ],
+   "total": 42,
+   "method": "extract_chunk.py range fetch, all HTTP206 first-attempt",
+   "microcode_census": {
+    "o_scanned": 36,
+    "elf_parsed": 17,
+    "refpack_err": 19,
+    "microcode_refs": 0,
+    "defined_hits": 0
+   }
+  },
+  "prs_new": {
+   "G1": "wrestling-game#15 (42)",
+   "G2": "wrestling-game#16 (217)",
+   "G3": "wrestling-game#17 (653)",
+   "HUNT": "wrestling-game#18 (report + census tool)"
+  },
+  "microcode_hunt": {
+   "new_archives_G1_G2_G3": {
+    "o": 285,
+    "parsed": 283,
+    "refpack_err": 2,
+    "refs": 201,
+    "defined": 0
+   },
+   "reextract_V2IP": {
+    "o": 156,
+    "parsed": 155,
+    "refpack_err": 1,
+    "refs": 292,
+    "defined": 0
+   },
+   "reextract_V2CP_3": {
+    "o": 1196,
+    "parsed": 1196,
+    "refpack_err": 0,
+    "refs": 1018,
+    "defined": 0
+   },
+   "reextract_V2CP_0": {
+    "o": 346,
+    "parsed": 346,
+    "refpack_err": 0,
+    "refs": 611,
+    "defined": 0
+   },
+   "reextract_V2CP_2": {
+    "o": 523,
+    "parsed": 523,
+    "refpack_err": 0,
+    "refs": 176,
+    "defined": 0
+   },
+   "reextract_V2CP_1": {
+    "o": 559,
+    "parsed": 559,
+    "refpack_err": 0,
+    "refs": 188,
+    "defined": 0
+   },
+   "key_finding": "Disc originals are CLEAN: 2065/2065 V2CP .o from _0/_2/_3 parse with 0 RefPack errors vs 767 corrupt in held repo copies - corruption was an old extraction artifact, repair = replace repo copies from disc re-extract (follow-up PR for coordinator)",
+   "final": {
+    "total_o": 3065,
+    "parsed": 3062,
+    "refpack_err": 3,
+    "refs": 2486,
+    "defined_hits": 0,
+    "verdict": "NOT FOUND in any target set - valid negative, exhaustive"
+   }
+  }
+ },
+ "W5c": {
+  "started": "2026-10-21T23:38:05.810488+00:00",
+  "lane": "gap-closure W5c pickup W5b - untouched archives chunk1 + entry0 + motion census",
+  "ia_probe": "OK 2026-10-21T23:40Z epA HTTP206 160B CD001 byte-exact"
+ }
+}

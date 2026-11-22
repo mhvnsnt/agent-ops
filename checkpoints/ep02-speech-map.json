@@ -1,0 +1,10 @@
+{
+ "task": "Build EP02 speech map: watch video, identify who's talking when, cross-reference with dialogue cue sheet",
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "DONE. SPEECH_MAP.md written to ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/. Analyzed 44 VAD speech segments across 345s, visually inspected 43+ frames. Found 8 mismatches: (1) L8/L9/L10 each ~9s late in montage (182-210s); (2) H3 Sombra not on screen + overlaps L7 at 166s; (3) L22 clipped to 2s at 328s, should be at 331s over group photo; (4) N2 at 340s over title card, should be 335s over freeze; (5) C2 Cipher voice over Static-only podcast at 261s; (6) L2/L3 Static voice over Cipher close-up at 116-132s (owner decision: voiceover or reshoot). Full details and recommended corrections in SPEECH_MAP.md.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-10T18:27:40.071580+00:00",
+ "notes": "Watchdog resume 2026-10-10 13:25 CDT: brief already marked DONE; verified SPEECH_MAP.md on disk (7947B), committed 3fad49b2, pushed branch docs/ad-research, opened PR #114 and merged to main (17540876). Nothing else was pending."
+}

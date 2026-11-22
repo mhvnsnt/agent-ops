@@ -1,0 +1,9 @@
+{
+  "task": "Generate Cipher C4 money line and place in EP02",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/trippedd-studio",
+  "resume_brief": "Cipher C4 line generated via GitHub Actions voice-render workflow (run 38105353352), placed at 121s in v6c. If resume needed: voice file at ~/workspace/voice-delivery/voice-cipher-c4-money.mp3, episode at wizard-gang-ep02-final-v6c.mp4",
+  "updated_at": "2026-10-11T02:38:00Z",
+  "attempts": 1
+}

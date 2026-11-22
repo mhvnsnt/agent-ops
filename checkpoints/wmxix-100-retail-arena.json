@@ -1,0 +1,12 @@
+{
+ "task": "WMXIX 100% Retail ARENA FACE DECODE \u2014 reconstruct renderable meshes (faces) from 40 arena point-cloud OBJs via Poisson/open-source reconstruction (ring.obj + 02.obj mandatory meshes), outputs to teardown/wmxix/arenas/faces/, own-eyes verified renders of ring",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/wmxix-mod-testbed",
+ "resume_brief": "Continue WMXIX arena face decode: point clouds at ~/workspace/wmxix-mod-testbed/teardown/wmxix/arenas/*.obj need faces via Poisson reconstruction (open3d) or documented points fallback. Outputs go to teardown/wmxix/arenas/faces/. Ring.obj and 02.obj MUST become real meshes. Verify with own-eyes renders. Branch + PR to mhvnsnt/wrestlemania-xix-mod, never push main.",
+ "updated_at": "2026-10-16T00:45:00-04:00",
+ "attempts": 0,
+ "notes": "DONE. PR #8 merged to main (74ea8d5). 37/40 arenas -> faces OBJs in teardown/wmxix/arenas/faces/; 3 documented points fallbacks. ring.obj: 4 parts, 1092 faces, own-eyes Blender-verified. 00/01/02.obj: meshes. Tool: teardown/wmxix/tools/reconstruct_arena_faces.py (grid/loopstack/gap-split/hull/alpha cascade, scipy/Qhull, no hand-tooling). Honest limits in FACES.md: arena points too sparse for true retail; YMG index records needed for ground truth. Worktree removed; shared clone untouched (on another lane's branch).",
+ "branch": "lane/arena-faces-100-retail",
+ "worktree": "~/workspace/wmxix-arena-lane"
+}

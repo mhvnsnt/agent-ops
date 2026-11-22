@@ -1,0 +1,114 @@
+{
+  "already_done_do_not_redo": [
+    "AT chunk 1/7: 17/17 parts verified on GitHub release at-cnzip-20261015, local cleared",
+    "CN draft publish lane: 24/25 drafts, 91.8GB live",
+    "CN remaining-pull coordinator: finished (vault NOT complete \u2014 see Lane F)",
+    "Disk cleanup round: 82% -> 78.1%"
+  ],
+  "disk_after": null,
+  "disk_before": {
+    "free_gb": 30,
+    "pct": 81,
+    "total_gb": 150,
+    "used_gb": 120
+  },
+  "in_flight": [],
+  "job": "get-it-all-into-repos-20261121",
+  "lanes": {
+    "A-dream-girl": {
+      "dir": "dream-girl/",
+      "note": "DG render chain ACTIVE (Run 50 live) \u2014 in-flight work must NOT be touched; only push what's finished + verified",
+      "size_gb": 18,
+      "status": "spawned"
+    },
+    "B-western-heart-workdirs": {
+      "dirs": [
+        "_ceiling-completion-20261117/ 5.3G",
+        "_god-within-wireup-20261120/ 3.2G",
+        "_afro-refit-20261110/ 3.0G",
+        "_honeybebou-newmodel-20261117/ 1.5G",
+        "_adri-organ-id-20261117/ 1.2G",
+        "_owner-fixes-20261117/ 0.9G"
+      ],
+      "status": "spawned"
+    },
+    "C-downloads-agentops": {
+      "dirs": [
+        "browser_downloads/ 4.3G",
+        "agent-ops/ 3.9G"
+      ],
+      "status": "spawned"
+    },
+    "D-pokemon-arena": {
+      "dirs": [
+        "p39-wes-reretarget/ 3.5G",
+        "p41-floating-names/ 2.2G",
+        "p33-flat-unblock/ 1.8G",
+        "p34-orre-environments/ 1.4G",
+        "_pantera-100-20261118/ 1.8G",
+        "_g1-residuals-20261121/ 2.3G",
+        "_c7-reconcile/ 2.2G",
+        "pokemon-arena-3d/ 1.7G"
+      ],
+      "note": "Pokemon Arena coordinator ACTIVE \u2014 do not touch its in-flight dirs; check repo first",
+      "status": "done-hold",
+      "result": {
+        "moved_gb": 0,
+        "freed_gb": 0,
+        "note": "Inventory + read-only verification only; security notice blocked git/gh commands mid-lane. All 5 P-lane branch tips are ancestors of origin/main ceea086f \u2014 committed content already in mhvnsnt/pokemon-arena-3d.",
+        "in_flight_left_alone": [
+          "pokemon-arena-3d/ (coordinator active, dirty, blob POST in flight)"
+        ],
+        "unplaced": [
+          "p33/scratch (XD tar DO NOT delete per checkpoint)",
+          "p34/scratch (800MB Colo tar partial)",
+          "p41/scratch",
+          "_c7-reconcile CHECKPOINT.md + combined-SOURCES.md (local-only merge record \u2014 preserve)",
+          "_pantera-100-20261118/ (1.8G, WESTERN-HEART not Pokemon \u2014 needs WH lane)"
+        ],
+        "delete_ready_pending_goahead": [
+          "p41 wt 2.2G (0 hardlinks)",
+          "p39 disc 1.2G (parts 00-09 truncated/corrupt, re-downloadable) + tools 1.5G Blender",
+          "p33/p34 wt (mostly hardlinks)",
+          "_g1 wt (all hardlinked, ~0 unique)"
+        ],
+        "needs": "Follow-up lane with git access to re-confirm each wt/ clean at branch tip, then execute deletions.",
+        "checkpoint": "get-it-all-laneD-pokemon.json"
+      }
+    },
+    "E-dg-production": {
+      "dirs": [
+        "_dg-production-line-v4-20261114/ 3.0G",
+        "_panels-fill-20261114/ 2.4G"
+      ],
+      "note": "_dg-production-line-v4 is the ACTIVE Run 50 workdir \u2014 DO NOT TOUCH. _panels-fill only.",
+      "status": "spawned"
+    },
+    "F-pyrite-cn": {
+      "items": [
+        "Pyrite proof shots ~/workspace/_pyrite-followup-20261121/proof/ (8 shots)",
+        "CN vault completeness check"
+      ],
+      "status": "spawned"
+    }
+  },
+  "laws": [
+    "NO-TEMP-STORAGE",
+    "DIRECT-TO-REPO",
+    "ONE-STORE RULE",
+    "CHECKPOINT-AND-SAVE",
+    "NEVER-KILL-IN-PROGRESS",
+    "NEVER-DELETE-GAME-FILES (refined)",
+    "NO-HAND-TOOLING",
+    "MERGE-IT-YOURSELF",
+    "CHECK-BEFORE-START"
+  ],
+  "owner_order": "2026-11-21 ~19:29 EST: \"Get it all into the repos\"",
+  "started_at": "2026-11-22T00:30:00Z",
+  "status": "running",
+  "total_freed_gb": 0,
+  "total_moved_gb": 0,
+  "unplaced": [
+    "_pantera-100-20261118/ (1.8G) \u2014 western-heart, needs WH lane"
+  ]
+}

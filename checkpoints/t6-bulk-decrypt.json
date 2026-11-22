@@ -1,0 +1,27 @@
+{
+ "task": "T6 bulk DATA401 decrypt: settle cipher dispute empirically, bulk-decrypt sectors, extract all models/stages/audio/movesets to western-heart",
+ "repo": "western-heart",
+ "resume_brief": "Tekken 6 PSP bulk decrypt worker. ISO on disk: ~/workspace/game-reverse-engineering/tekken6/tekken6-psp.iso (855638016 bytes, verify). CONTEXT: checkpoints tekken6-data401-decrypt.json (full RE notes) + wh-100percent.json tekken6 section; dir game-reverse-engineering/tekken6/ (PPSSPP-LIVE-RUN-GUIDE.md, DATA401-RE-NOTES.md, tools/sector_cipher.py + SECTOR-CIPHER-REVERSED.md, unicorn emulator). DISPUTE TO SETTLE FIRST: data401 checkpoint says sector cipher fully reversed/bit-exact; overnight worker says bulk DATA401 does NOT use per-sector CRC-key scheme. Test sector_cipher.py against REAL DATA401 sector bytes empirically before anything else. If it decrypts -> bulk decrypt sectors 230253-417792 streaming, magic-scan GMO/TIM2, extract everything to western-heart/teardown/tekken6/ via branch->PR->merge. If not -> continue RE (openPac/IDX/ktRead tracing per RE notes), document, report. DISK 92% (ceiling 88%): df before writes; decrypted staging blob deletable AFTER extraction+commit (reproducible); ISO NEVER deletable; stop+report at 94%. Heartbeat this checkpoint; incremental commits; WH PIPELINE rename + RENAME-MAP.md.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-14T22:25:00-04:00",
+ "notes": "\n2026-10-14 21:55 EDT: BREAKTHROUGH on dispute \u2014 emulated EBOOT 0x8AA2E88 on REAL sector 230256 returns v0=1, K1=0x24cfa8a4 K2=0x564928df (Python model agrees). So per-sector CRC-key scheme IS real for at least some units; overnight 'does not use' finding was over-broad. Now scanning all 187,525 data sectors for CRC-passing 0x800-units.\n2026-10-14 22:15 EDT: MAJOR RE PROGRESS (static):\n- DINF_400.BIN DECRYPTED (verified): fixed keyset B (K1=0xebcf9603,K2=0xb3bef6a4) via 0x8AA2E58<-0x88985BC. Plaintext = pack manifest: magic DINF, 2169 entries, 384051200 bytes, names DATA401.BIN/DATA401.IDX, build path hdd65/psp/DATA401/20091109_092921/.\n- Found TWO fixed-key 0x8AA3298 sites: keyset A (K1=0xe11cf772,K2=0xa0dc9eb4 @0x8898404) and keyset B (above). Keyset A target unknown (IDX decrypt attempt: no structure).\n- Bulk architecture mapped: 0x8AA305C decrypts 2 buffers (CRC-unit w/ extracted keys + bulk unit w/ persistent key) and VERIFIES plaintexts equal (returns 1/0). Bulk key = per-file PRNG master (0x8AA3298 @0x8A9DB98) + per-chunk (t0=s6,t1=s1) tweak via cipher call @0x8A9DCB0.\n- BLOCKER: PRNG (0x8B7B600 MWC) seeded from kernel thread state (+0xA8/+0xAC via $k0) \u2014 NOT statically recoverable. (0,0) init gives degenerate 0 keys (game would hang), so real state is nonzero runtime data.\n- PPSSPP live path: blocked (static-pie binary defeats LD_PRELOAD shim; no PulseAudio daemon; SDL_AUDIODRIVER=dummy ignored; X11 flaky in background exec).\n- Full-region CRC scan: 1/187525 units pass (unit 0 only). Bulk does NOT use per-sector CRC-key scheme (overnight finding CONFIRMED for bulk).\n- Disk at 94%: NOT staging 384MB blob. Writing only small RE artifacts to repo branch t6-bulk-decrypt.\nNEXT: PPSSPP live RAM dump (needs working display/audio env) OR IDX decrypt (openPac/keyset A) to get file map + per-file keys.",
+ "result": {
+  "pr": "https://github.com/mhvnsnt/western-heart/pull/162",
+  "branch": "t6-bulk-decrypt",
+  "dinf_decrypted": true,
+  "dinf_manifest": {
+   "entries": 2169,
+   "data_bytes": 384051200,
+   "build": "20091109_092921"
+  },
+  "bulk_decrypted": false,
+  "bulk_blocker": "per-file PRNG master key from kernel thread state (0x8B7B600 MWC) \u2014 not statically recoverable; PPSSPP live RAM dump recommended",
+  "crc_scan": "1/187525 units pass (unit 0 only); bulk does NOT use per-sector CRC-key scheme",
+  "bytes_decrypted": 120,
+  "models_extracted": 0,
+  "iso_untouched": true,
+  "disk_final": "91%"
+ }
+}

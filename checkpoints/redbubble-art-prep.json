@@ -1,0 +1,10 @@
+{
+ "task": "Prep 5 print-ready Redbubble upload files from Real's existing art",
+ "repo": "/home/hatch/workspace/money-machine-hq",
+ "resume_brief": "Art prep task: create 5 print-ready PNG files for Redbubble upload from Real's existing art (see full brief in the worker's first message). Sources: Goodville key art, Irish leprechaun still, Bush + Trippy Drippy font specimens, Concrete Dragon graffiti logo. Rules: USE THE IMAGE LAW (cut/transform actual pixels, never regenerate approximations), NO-DESTRUCTIVE-EDITS (work on copies, originals untouched), my-eyes verification on every output (open and read each PNG before calling it done). Output to ~/workspace/money-machine-hq/merch/redbubble-uploads/ with README.md mapping each file to its product. Commit on a NEW branch, push, report branch name and per-file dimensions.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-14T02:30:00+00:00",
+ "notes": "Corrections applied: 04 regenerated from Bush V2 TTF; 05 now approved black graffiti logo (white version had transparent knockout letters, not white pixels - recolor impossible, used approved black colorway). Committed + pushed."
+}

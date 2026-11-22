@@ -1,0 +1,9 @@
+{
+  "task": "WRESTLER/GRAPPLER + FULL DOA ROSTER MODEL HUNT",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/game-reverse-engineering/models/wrestler-hunt",
+  "resume_brief": "Task complete. Full results in ~/workspace/game-reverse-engineering/models/wrestler-hunt/HUNT-RESULTS.md. Confirmed: Zangief x5 variants (SFMLab), R.Mika (SFMLab), Tina Armstrong x2 attires (SFMLab), Mila (SFMLab), Bass Armstrong x4 variants (rigmodels), DOA Ayane/Ayane2U/Nyotengu/Marie Rose/Naotora (rigmodels). Missing: Hugo, El Fuerte, Tizoc, Raiden, all VF characters (covered by VF5FS game pull worker), Craig Marduk. All downloads require auth (Open3DLab account, rigmodels login, or DeviantArt login) — parent must delegate via browser tasks. See HUNT-RESULTS.md for exact URLs and action plan.",
+  "updated_at": "2026-10-13T14:40:00Z",
+  "attempts": 1
+}

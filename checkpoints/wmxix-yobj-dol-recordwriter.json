@@ -1,0 +1,9 @@
+{
+ "task": "Static DOL RE: find the 16-byte runtime draw-record writer (0x80072000-0x80074000 parser region) to locate the 12-byte source verts in the YOBJ file",
+ "repo": "/home/hatch/workspace/agent-ops/worktrees/wrestling-teardown",
+ "resume_brief": "YOBJ DOL experiment A (2026-10-15). Context: docs/YOBJ-DOL-DECODER-REPORT.md proved the vertex builder @0x80078C6C copies 12-byte source verts (6x s16 = position+normal) verbatim into 28-byte runtime verts; the 12-byte source verts have NOT been located in the YOBJ file. Task: in the DOL parser region 0x80072000-0x80074000, find the function that writes the 16-byte runtime draw records the builder consumes ([0,1,2]=bone bytes, [3]=type, [4]=u32 count, [8]=u32 aux, [12]=u8 count, [13]=u8 flag). Search for the 256-byte bonemap table construction and the record writer that packs b8->[0], variant->[3], count->[4], u0->[8]. Its input pointers reveal which file bytes become the 12-byte source verts. Tools: tools/dol/dolmap.py, effscan.py, funcmap.py; work/main.dol + work/dis_*.txt disassemblies. Read docs/YOBJ-DOL-DECODER-REPORT.md FIRST. Deliverables: new findings in docs (extend DOL report or new report), tools in tools/, commit incrementally to branch feat/ymg-skinning-decoder. FIRST action: heartbeat this checkpoint, then update updated_at at least every 10 min. Standing laws: NEVER delete game files (ISOs/ROMs/teardown sources); never kill in-progress work; commit incrementally (git is the backup); mark status done at end.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-15T20:35:00Z"
+}

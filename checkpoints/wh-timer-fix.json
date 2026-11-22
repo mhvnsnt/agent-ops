@@ -1,0 +1,9 @@
+{
+ "task": "Fix select-screen 99s timer: don't tick during asset load, don't auto-start a fight at 0 without user consent \u2014 auto-pick random fighter but require CONFIRM. Branch->PR->merge, redeploy gh-pages.",
+ "repo": "/home/hatch/workspace/western-heart",
+ "resume_brief": "Fix the 99s select timer in western-heart/game/js/main.js: (1) timer must not tick during the ~30MB asset load \u2014 start countdown only when select screen is interactive; (2) at 0, auto-highlight a random fighter (Tekken timeout behavior) but do NOT auto-start the match \u2014 require CONFIRM tap. Branch from main, PR->merge, redeploy gh-pages, verify live. Heartbeat this checkpoint.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-14T07:41:58+00:00"
+}

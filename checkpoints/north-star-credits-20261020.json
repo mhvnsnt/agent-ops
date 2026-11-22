@@ -1,0 +1,9 @@
+{
+ "task": "north-star-credits-save",
+ "repo": "mhvnsnt/western-heart",
+ "status": "done",
+ "watchdog": false,
+ "updated_at": "2026-10-21T03:55:00Z",
+ "resume_brief": "Save owner North Star text into CANON.md top + docs/NORTH-STAR.md; save credits dedications (Serena, Rosetta, Emory, Mars, Ken, Marquisha, Bink) + Serena Mortal Kombat quote into docs/CREDITS.md + game/data/credits.json + Nightwolf canon cross-ref. Additions-only PR, gate body. Recon done: no existing north-star/credits files.",
+ "notes": "PR #408 merged; CANON.md north-star frontispiece + nightwolf tribute, docs/NORTH-STAR.md, docs/CREDITS.md, game/data/credits.json. Stale-base KEVIN revert caught in compare patch and fixed pre-PR; final diff 0 deletions."
+}

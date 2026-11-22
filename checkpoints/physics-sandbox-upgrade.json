@@ -1,0 +1,9 @@
+{
+ "task": "Upgrade Physics-sandbox-playground-: wire 4 features (GLB drop-in, test fixes, jiggle presets, code-split), research+integrate OSS physics/animation systems, write dev-conversation log + work queue, land via branch PR",
+ "repo": "mhvnsnt/Physics-sandbox-playground-",
+ "resume_brief": "Continue the physics-sandbox upgrade in ~/workspace/physics-sandbox-audit (clone of mhvnsnt/Physics-sandbox-playground- at origin/main a82ea6f, node_modules installed). Work: (1) drag-drop GLB import spawning ragdoll test dummy, (2) fix root test-jolt-init.js + test-gltf.js and add npm test, (3) jiggle presets save/load (idb-keyval), (4) vite manualChunks code-split. Research+integrate verified OSS: three-bvh-csg (CSG fracture), threejs-particle-fluids (WebGPU fluids, evaluate), yuka (AI steering). Write docs/DEV-CONVERSATION-2026-10-15.md (full side-chat transcript in brief) and ROADMAP.md queue. Verify lint+build+runGate pass. Branch feat/dev-sandbox-upgrade-20261015, incremental commits, open PR, DO NOT merge. Follow docs/NO-DATA-LOSS-RULES.md and AGENTS.md.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-15T16:40:45.688995+00:00"
+}

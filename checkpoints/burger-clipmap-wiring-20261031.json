@@ -1,0 +1,12 @@
+{
+ "task": "Burger clip-map wiring: wire 86 clip-resolved T7 fills from burger-clip-map.json into burger.json under owner ruling 2026-10-31",
+ "status": "done",
+ "repo": "mhvnsnt/western-heart",
+ "workdir": "/home/hatch/workspace/_burger-wiring-20261031",
+ "attempts": 1,
+ "progress_seq": 3,
+ "resume_brief": "COMPLETE: PR #1378 merged 2026-10-31T14:07:51Z, merge commit 5205c3a326587040fe88602ee073884ec2db3d04. burger.json wired from burger-clip-map.json: 86 clip-resolved entries carry anim_t7 records and wired anim_refs; UNMAPPED 111 -> 25 (3 bank-0x0000 + 22 unmapped, by name in docs/movesets/BURGER-CLIPMAP-WIRING-2026-10-31.md). Variant files untouched. Nothing remains for this lane.",
+ "notes": "Supersedes burger-moves-20261031.json (needs_owner stop) per owner ruling 'Wire the 89 clip-map fills now.' Representation note: no anim_t7 field existed anywhere in the repo (code search total_count=0); wired entries follow burger.json's own landed convention (anim_ref t7:bob:<t7_id> + t7_move_id for the 49 with frame-data ids) plus a uniform anim_t7 record carrying the full clip-map resolution; the 37 motbin-walk entries without a frame-data id use anim_ref t7:bob:anim:<anim_id> (real MOTA id, no fabricated bob_N). All 14 CI checks green at merge; on-main file byte-identical to the locally verified wired file.",
+ "watchdog": true,
+ "updated_at": "2026-10-31T14:09:01.414880+00:00"
+}

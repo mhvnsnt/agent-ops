@@ -1,0 +1,10 @@
+{
+ "notes": "ROOT CAUSE PROVEN by live clip-track diff: fighter.js createT3Actions applies retargetClipToRig bind-premultiply (out = targetBindLocal x clipQuat) on top of retargetT3Clips' solved pose. For identity-bind spine/head (Pantera, Steve Fox, 50+ models) it is a no-op: Pantera live stance tracks == stage-1 sim (0.0-0.7 deg). Doc Frank's auto-rig GLB has non-standard bind locals: Spine1 90deg X, Head ~21.5deg X, Hips 180deg Z. Live gunjack stance tracks == stage-2 sim (Spine1 0.6, Spine2 0.8, Head 0.0 deg off): his Spine1 local becomes ~177deg = torso folded at the waist, head counter-posed at the fold top -> owner's 'head right, body wrong'. Uniqueness scan of 57 game/assets/models GLBs: Spine1 90deg exists ONLY on doc-frank (both copies); standard = 0deg. Bank-independent (bind is model-side): bosco bank same fold predicted (sim stage-2 bosco medium 176.6deg). SAM-UR-A1 swap test impossible as specified: his wired GLB is UNRIGGED (0 skins); substituted pantera/stevefox x gunjack (clean). FIX NOT APPLIED per brief step 5: cause is his bind x SHARED conversion code. Options: (A) normalize bind pose in HIS GLB only (recommended), (B) re-rig his GLB via standard pipeline, (C) shared-code change (needs owner word). Bosco visual run in flight for a current-main frame.",
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "Diagnose + fix Doc Frank body-facing defect in western-heart: reproduce Pantera vs Doc Frank harness fight on main merged movesets (clips were t3_gunjack_medium@doc-frank-machine-shop), capture round-start + mid-fight frames; run swap tests to attribute defect to model vs bank vs shared code; fix ONLY in Doc Frank's model/bank/wiring artifacts if model/bank-local (never shared code without owner word \u2014 report instead); proof + regression frames; instruction-gate PR. Workdir: ~/workspace/_docfrank-facing/ (sim.py + probe.py + refs/ + glb/ live there). Diagnosis state is in this checkpoint's notes.",
+ "status": "blocked_needs_owner_decision",
+ "step": "diagnosed-attribution-proven-fix-decision-pending",
+ "task": "docfrank-facing-defect",
+ "watchdog": false,
+ "updated_at": "2026-10-21T10:40:00+00:00"
+}

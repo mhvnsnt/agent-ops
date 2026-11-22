@@ -1,0 +1,9 @@
+{
+  "attempts": 0,
+  "repo": "western-heart",
+  "resume_brief": "COM cross-reference lane for Tekken 6 PS3 teardown. CONTEXT: 18 COM files (IDX entries 709-735, idx 419-453) in PSP DATA401 bulk are best character-model candidates; 11 RE rounds failed to fully decompress them (~3KB clean prefixes decode, Huffman tables Kraft-valid but distances impossible). WORK: 1) Build ~/workspace/game-reverse-engineering/tekken6-ps3/docs/COM-FINGERPRINT.md \u2014 per-file IDX entry, compressed/uncompressed sizes, first 64 header bytes hex, clean-prefix structure, Huffman params, what 11 rounds proved/ruled out; 2) extract format fingerprints (magic, header layout, code-length orders, ASCII markers) for PS3 comparison; 3) survey decrypted PSP bulk (manifest.json, NTPP names, MOTA names) to build character-asset map of which file belongs to which of the 40 fighters. DO NOT start a 12th RE round on the COM variant. Laws: analysis only (no invented decoders), read-only, minimal writes, never touch other lanes. Source dirs: ~/workspace/game-reverse-engineering/tekken6/work/decrypt*/ and docs/DECRYPT-CALLGRAPH-2026-10-15.md, docs/DECRYPT-CORRECTIONS-2026-10-15.md in tekken6-ps3 or tekken6 tree. DELIVERABLE: COM-FINGERPRINT.md + character-asset map.",
+  "status": "done",
+  "task": "COM cross-reference prep lane: build COM-FINGERPRINT.md and character-asset map for Tekken 6 PS3 teardown (PSP 18 COM files analysis only, no new RE round)",
+  "updated_at": "2026-10-16T05:05:00Z",
+  "watchdog": true
+}

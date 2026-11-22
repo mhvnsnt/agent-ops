@@ -1,0 +1,15 @@
+{
+  "attempts": 0,
+  "repo": "/home/hatch/workspace/agent-ops/worktrees/anim-w2-b",
+  "resume_brief": "Lane B Wave 2: build WhisperX phoneme-alignment lip-sync upgrade in isolated worktree anim-w2-b (branch anim-wave2-lane-b, base a773b05). Extend tools/lipsync/ from Wave 1's Rhubarb pipeline. Test on ~/workspace/voice-clone-work/static_voice_test.m4a (check for newer renders). Real proof artifacts, commit + push branch (no force-push, no >100MB binaries).",
+  "status": "done",
+  "task": "Anim pull W2 Lane B: WhisperX lip-sync upgrade",
+  "updated_at": "2026-10-08T04:16:34Z",
+  "watchdog": true,
+  "milestone": "complete: 3 commits pushed (2a2c76e, e2c0018, fb99d35); all targets delivered",
+  "commits": [
+    "2a2c76e",
+    "e2c0018",
+    "fb99d35"
+  ]
+}

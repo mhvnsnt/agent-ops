@@ -1,0 +1,10 @@
+{
+ "task": "Disk cleanup with safe storage \u2014 move everything to TeraBox/GitHub before cleaning",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace",
+ "resume_brief": "Watchdog-verified 2026-10-14: all 27 CHD chunks verified on GitHub branch chd-chunks (c2afeba, 57 chunk blobs + nomercy.z64 = 58 files, 2.7GB, via gh api). Original 2.4G chd-work CHD/chunk content removed from disk by concurrent offload-roms lane (log 01:30 UTC). Current chd-work/restore/ (781M) is a DIFFERENT active lane re-downloading tekken6-psp chunks from GitHub \u2014 do not touch. Disk still 90%: other offload lanes (offload-roms, offload-gamerev, offload-cnraw) own remaining cleanup.",
+ "attempts": 1,
+ "notes": "Watchdog 2026-10-14 01:25 UTC: verified 57 chunk blobs + nomercy.z64 on mhvnsnt/chimera-roms chd-chunks (commit c2afeba matches log). chd-work old content gone from disk; restore/ is active other-lane work (PID 18807 downloading). Marked done; disk at 90% remains owned by other offload lanes.",
+ "updated_at": "2026-10-14T01:29:52.171831+00:00"
+}

@@ -1,0 +1,10 @@
+{
+ "task": "Merge Grok's real T3 King animations (PR #134) into western-heart/game/ playable build. Wire decoded T3 clips as Pantera's animations. Start proprietary rename of teardown files (slowly, as touched). Branch->PR->merge, redeploy, verify.",
+ "repo": "western-heart",
+ "resume_brief": "MERGE GROK'S WORK into western-heart/game/: (1) PR #134 added REAL decoded Tekken 3 King animation clips at assets/anim/t3/king_on_pantera_leoman/*.json + lab/tools/t3_motion_bake.py. Examine the JSON format and the bake tool. (2) Wire these REAL T3 animations into game/ as Pantera's fight animations \u2014 replace/augment the current Mixamo/procedural anims with the real decoded King clips. (3) Merge WITHOUT LOSING: keep the real T3 frame data (PR #103), on-demand loading, underground fix, all working systems. (4) PROPRIETARY RENAME (slow, as we go): when touching teardown files, rename them to Western Heart universe names (e.g. teardown/tekken3 -> teardown/iron-legacy, king_moves.json -> pantera_legacy_moves.json). Don't mass-rename; only files we touch. Keep a rename map. OWNER LAWS: nothing unasked, proven/teardown sources only, branch->PR->merge, verify live. Heartbeat this checkpoint.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-15T01:15:00+00:00",
+ "notes": "2026-10-15T01:15Z watchdog: verified COMPLETE on origin/main \u2014 PR #144 'feat(anim): REAL T3 King clips wired into game + RENAME-MAP.md' merged 2026-10-15T00:17:23Z (1a8fea6f). Changes on main: game/js/t3anims.js (loads Grok's decoded T3 King clips assets/anim/t3/king_on_pantera_leoman/*.json -> THREE.AnimationClip, mapped stance/light/medium/heavy/grab/block/hit/launch/ko/win), game/js/fighter.js + game/js/main.js (import getT3Clips/createT3Actions, real T3 movesets), RENAME-MAP.md created. No worker action needed; nothing left to resume."
+}

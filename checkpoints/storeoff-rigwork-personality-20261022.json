@@ -1,0 +1,78 @@
+{
+ "disk_at_start_pct": 91,
+ "free_gb_start": 9.2,
+ "job": "storeoff-rigwork-personality-smallq-zenextra-dfextra-20261022",
+ "lanes": {
+  "dfextra": {
+   "contents": "orig-backup/ (5 Doc Frank GLBs) + harness/ (incl. node_modules) from _docfrank-fix/ (source still fully on disk, lanes active there)",
+   "release": "docfrank-fix-extra-20261022 on mhvnsnt/clouddog-storage (created 2026-10-22T07:00:08Z / 02:00:08 CDT)",
+   "script": ".r8-stage/up-dfextra.sh",
+   "status": "RESOLVED 02:15 CDT \u2014 release docfrank-fix-extra-20261022 holds part-00 (52,264,960B, server sha256:b1de1961 == local) + SHA256SUMS.txt (bc2a64d8); actor self-cleaned scripts + staging from .r8-stage/; source _docfrank-fix/ stays (active lanes); lane retired",
+   "upload_log": ".r8-stage/upload-dfextra.log (EMPTY as of 02:0x CDT \u2014 upload not yet started)"
+  },
+  "personality-pass": {
+   "log": ".r8-stage/pp-storeoff/storeoff.log",
+   "manifest": ".r8-stage/pp-storeoff/parts.manifest",
+   "method": "deterministic tar --sort=name --mtime 2026-10-21 09:47:00 | split -b 100M --filter (upload+digest-verify+retry, skip verified), zero staging",
+   "pid": 15002,
+   "script": ".r8-stage/pp-storeoff/storeoff-pp-stream.sh",
+   "status": "RESTARTED 03:44 CDT by guardian (wrapper dead, staged part-18 unverified ~26min; FIRST restart attempt failed instantly: stream script lost +x bit (was -rw-rw----); chmod +x restored, relaunched. Sources re-verified idle since 2026-10-21 13:27, no .DO_NOT_DELETE). New wrapper streaming: manifest OK parts 00-17, release personality-pass-20261022. Self-clears on ALL-CHUNKS-OK + pull-back proof."
+  },
+  "rigwork-tmp": {
+   "log": ".r8-stage/rigwork-storeoff/storeoff.log",
+   "manifest": ".r8-stage/rigwork-storeoff/parts.manifest",
+   "method": "deterministic tar --sort=name --mtime fixed | split -b 100M --filter (upload+digest-verify+retry, skip verified), zero staging",
+   "pid": 12571,
+   "script": ".r8-stage/rigwork-storeoff/storeoff-rigwork-stream.sh",
+   "status": "RESTARTED 03:42 CDT by guardian (wrapper dead, staged part-20 unverified ~22min; sources re-verified idle since 2026-10-21 13:21, deterministic tar, no .DO_NOT_DELETE). New wrapper streaming: manifest OK parts 00-20 by 03:49, release rigwork-tmp-20261022. Self-clears on ALL-CHUNKS-OK + pull-back proof."
+  },
+  "smallq": {
+   "log": ".r8-stage/smallq-storeoff/storeoff.log",
+   "manifest": ".r8-stage/smallq-storeoff/parts.manifest",
+   "method": "deterministic tar --sort=name --mtime 2026-10-22T00:00:00Z | split -b 100M --filter (upload+digest-verify+retry, skip verified), zero staging",
+   "pid": 20906,
+   "safety": "idle 9h-39h, lsof empty, no .DO_NOT_DELETE markers, not git repos; held: pp-repo (DIRTY git), deathfang-stance-fix (recent writes)",
+   "scope": "_wh-work/{scarlett-star-src 275M, pp-scratch 208M, wiggle-scratch 146M, kevin-tools 123M, t3-crash-fix 53M} -> release smallq-20261022, clear after all-OK + pull-back proof",
+   "script": ".r8-stage/smallq-storeoff/storeoff-smallq-stream.sh",
+   "status": "COMPLETE 02:07:52 CDT \u2014 stream exit 0, 8/8 chunks verified, PULLBACK-OK part-07 c0a722bb, manifest uploaded, CLEARED small queue (5 dirs, ~805M); release smallq-20261022 holds 9 assets; source dirs confirmed gone from _wh-work/; wrapper pid exited cleanly; lane retired"
+  },
+  "tripo-decoded-guardian": {
+   "log": "agent-ops/checkpoints/storeoff-tripo-decoded.log",
+   "pid": 51529,
+   "scope": "upload 4 parts+sums w/ digest verify, pull-back part-03, clear parts+source(389M)",
+   "script": "agent-ops/checkpoints/storeoff-tripo-decoded.sh",
+   "status": "done \u2014 tripo-decoded CLEARED 00:1x CDT (release tripo-decoded-20261022, pull-back proven); lane retired"
+  },
+  "tripo-decoded-sweep": {
+   "log": ".r8-stage/upload-tripodec.log",
+   "scope": "sweep pass2's own loop (wrapper pid 49820 @00:31): upload 4 parts + SHA256SUMS.txt",
+   "script": ".r8-stage/up-tripodec.sh",
+   "status": "part-00 OK, part-01 OK, part-02 uploaded digest-verified 2be177cf, part-03+SHA256SUMS.txt pending"
+  },
+  "zen-extra": {
+   "guardian_verification_020x": "(1) gh API digests == local SHA256SUMS for ALL 3 assets (00 28163e5b, 01 ea558785, sums 4477715f); (2) PULL-BACK PROVEN: pb download of part-01 (78,682,221B) sha256 ea558785 == local == release asset. OWN-EYES.",
+   "re_pull": "gh release download zen-spirit-work-extra-20261022 --repo mhvnsnt/clouddog-storage && cat zen-extra-20261022.tar.part-* | tar -xf -  # yields decompressed/ main-files/ pull/ ; wh worktree: git clone -b feat/zen-spirit-body-20261021 https://github.com/mhvnsnt/western-heart.git (branch @f42e2d4 verified == origin 01:55 CDT)",
+   "release": "zen-spirit-work-extra-20261022 on mhvnsnt/clouddog-storage",
+   "self_cleared": "actor removed _zen-spirit-work/ entirely (~765M: decompressed/ main-files/ pull/ + wh/ worktree), staged part-00/part-01, pb/, and its own scripts/logs between 01:59-02:00 CDT",
+   "source": "/home/hatch/workspace/_zen-spirit-work (765M; tar covers decompressed/pull/main-files non-git remainder)",
+   "status": "COMPLETE 02:0x CDT \u2014 upload digest-verified on release, pull-back proven by guardian, actor self-cleared source+staging; lane retired"
+  },
+  "scii-movie0": {
+   "status": "COMPLETE ~03:40 CDT \u2014 movie0.mpg (402,294,784B) on western-heart release scii-phase14-av with server-side sha256 digest; local source self-cleared by lane. Verified by guardian 03:4x via gh API.",
+   "release": "scii-phase14-av on mhvnsnt/western-heart"
+  }
+ },
+ "last_update": "2026-10-22T03:50:00-05:00",
+ "next": [
+  "nurse rigwork-tmp / personality-pass streaming lanes to completion (~16G pending)",
+  "_w3b-work/ 1.7G idle-today HELD candidate: verify ROM one-store + confirm no lane needs scratch before any clear",
+  "fingertip-fix (389M) in sweep verify_queue, no release yet",
+  "_doa4p2-scratch/afsdl/*.tar 788M still unverified game-teardown extracts \u2014 held",
+  "yuyu-hakusho-w2c ISO part-000 96M game file \u2014 store status not re-verified"
+ ],
+ "note": "Disk 87% (14G free) at 03:34 CDT start; 86% at end. Guardian: restarted 2 stalled storeoff wrappers (rigwork + pp \u2014 pp needed +x restore), both healthy/streaming again (~16G pending self-clear). Delete-as-you-go: cleared batch staging browser_downloads (4 parts, ~312M) + voice-clone-work (4 parts, ~317M) after three-way verification (local sha256 == gh API server digest == sums-file -c OK == lane OK lines). finish-batch.sh + finish-batchc.sh running, armed on ALL-DONE. CloudDog body steps skipped per owner order 2026-10-21 (code/runtime absent; daemon NOT resurrected \u2014 forbidden). Silent: remediation functioning, no owner action needed.",
+ "release": "rigwork-tmp-20261022",
+ "repo": "mhvnsnt/clouddog-storage",
+ "source_dir": "/home/hatch/workspace/rigwork-tmp",
+ "status": "rigwork-tmp + personality-pass streaming; smallq COMPLETE (retired); dfextra RESOLVED (retired)"
+}

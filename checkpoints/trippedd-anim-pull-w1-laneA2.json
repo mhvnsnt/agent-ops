@@ -1,0 +1,9 @@
+{
+ "attempts": 0,
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "LANE A2 for TRIPPEDD Animation Tool Pull Wave 1. Target: ~50 #### entries in docs/ANIMATION_TOOL_CATALOG.md in ~/workspace/trippedd-studio, branch wave1-anim-lane-a2 (based on origin/main). ONLY sections: (1) 2D animation / tweening / rigging ~25 tools, (2) Frame interpolation / inbetweening ~12 tools, (3) Transitions ~12 tools. Rules: verify each license upstream, badges \u2705/\u26a0\ufe0f/\u2753/\ud83d\udeab, GPL/AGPL/MPL entries get numbered quarantine rows (check max row # first), pre-append dedup greps against this file + RESOURCE_CATALOG.md, no force-push, no >100MB binaries, commit every ~15 entries, push branch at end. Resume: check branch state, find last committed entry, continue tool list, finish entries, commit, push, report entry count/quarantine rows/negatives/commit hash.",
+ "status": "done",
+ "task": "Anim pull W1 Lane A2: ~50 2D/interp/transition entries",
+ "updated_at": "2026-10-07T23:25:00-04:00",
+ "watchdog": true
+}

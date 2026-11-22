@@ -1,0 +1,9 @@
+{
+ "task": "Merge all weight-paint/pipeline PRs across game repos",
+ "repo": "/home/hatch/workspace/bannon-video-pipe/repo",
+ "resume_brief": "STANDALONE BRIEF \u2014 owner-directed 2026-10-09: 'don't just leave it on pr, put it in.' Merge every open weight-paint PWA + pipeline PR \u2014 he is tired of PRs sitting unmerged. TARGET PRs: Bannon #50 (rig-repair scripts+report), #52 (statue-to-game pipeline), #53 (guided mode); AshLanev2 #30; ConcreteDragon #14; Brutal-Fist #24; AshLane-prototype #1; URBAN-MAYHEM #4. (Bannon #51 already merged.) YOUR JOB: for each repo, fetch, check the PR is mergeable vs main, merge it (merge commit, never squash \u2014 preserve history; never force-push), push. If a PR conflicts: resolve carefully with boundary-aware keep-both (lesson from ConcreteDragon: naive concatenation nests functions and breaks games \u2014 after resolving, verify syntax/structure: for JS run node --check AND a brace-depth check; for HTML verify it parses; for Python compile it). If a PR cannot be merged cleanly, DO NOT force it \u2014 report exactly which and why. RULES: heartbeat THIS checkpoint every 15 min; verify each merge landed (ls-remote the main branch, confirm the files exist on main); report the merged commit SHAs per repo + any PRs that could not merge and why.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-09T16:24:53.493664+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "attempts": 0,
+  "notes": [
+    "PR #5 merged to main 2026-10-16T03:26:10Z. BRANCH COLLISION INCIDENT: mid-task, branch 'lane-texture-decode' was overwritten on origin (now 6373b0c) and local HEAD moved to 'lane/skinning-decode-100-retail' by another worker in the shared clone. Recovered by pushing commit c51d293 as lane/texture-decode-100-retail, PR #5, merged. Do NOT touch origin/lane-texture-decode (belongs to another lane). | [watchdog 2026-10-16 00:04 EDT] SCHEMA NOTE: managed checkpoint missing/short resume_brief(24); status kept 'done' (task complete, no resume needed). Pre-schema-law legacy entry.\n[watchdog 2026-10-17T21:17:46.   000000+00:00] Schema invalid: missing resume_brief(>=50chars). Parked needs_owner per watchdog schema rule.\n[watchdog 2026-10-17 18:10 CDT] MALFORMED checkpoint (schema violation): resume_brief only 24 chars (<50). Not resumable; status already needs_owner. Owner: fix fields or delete this checkpoint.",
+    "[2026-10-17] Schema repaired: added repo + resume_brief (>=50 chars). Work was already complete per prior notes. Status set to done."
+  ],
+  "repo": "~/workspace/wmxix-mod-testbed",
+  "resume_brief": "Done \u2014 no resume needed. WMXIX 100% retail texture decode: all textures inventoried, texture manifest built, pushed to mod repo.",
+  "status": "done",
+  "task": "WMXIX 100% Retail lane (c) TEXTURE DECODE: inventory all decoded textures, build texture manifest, populate testbed/textures/",
+  "updated_at": "2026-10-18T01:58:27.054570+00:00",
+  "watchdog": true
+}

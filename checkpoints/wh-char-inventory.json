@@ -1,0 +1,9 @@
+{
+  "attempts": 1,
+  "repo": "western-heart",
+  "resume_brief": "CHARACTER MODEL INVENTORY FOR WESTERN HEART. Goal: list every character model downloaded for Western Heart that is from another game and does NOT have a WH proprietary name yet. Work done so far: checkpoint written, repo cloning and model search begun. Remaining: (1) clone the western-heart repo fresh (old ~/workspace/western-heart is gone) via gh repo clone mhvnsnt/western-heart (verify owner/name with gh first if unsure); (2) search repo for character models in game/assets/models/, roster/, lab/, assets/, and any other model dirs \u2014 file extensions .glb .gltf .fbx .obj .blend etc.; (3) search ~/workspace/game-reverse-engineering/ and ~/workspace/ for any other WH-related model directories; (4) for EACH model record: filename, location, source game, original character name, current WH name if any, whether it has a WH proprietary name (YES/NO), file size; (5) write inventory to ~/workspace/agent-ops/wh-character-inventory.md as a clean table; (6) mark this checkpoint done. RULES: inventory only \u2014 do not modify, move, or rename anything. Report: complete inventory table, total count, how many lack WH names.",
+  "status": "done",
+  "task": "Character model inventory for Western Heart \u2014 list every non-WH-named character model from other games",
+  "updated_at": "2026-10-14T20:42:02.713184-04:00",
+  "watchdog": true
+}

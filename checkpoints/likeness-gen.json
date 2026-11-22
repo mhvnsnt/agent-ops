@@ -1,0 +1,9 @@
+{
+  "task": "Wire up FREE likeness-holding image generation (Kontext pipeline)",
+  "repo": "~/workspace/trippedd-studio",
+  "resume_brief": "In ~/workspace/trippedd-studio, on branch feat/likeness-gen off origin/main: wire up FREE likeness-holding image generation. Built so far: tools/image-gen/likeness_backends.py (Kontext/Qwen-verbatim/Horde-light backends, image-conditioned, verbatim prompts) and tools/image-gen/likeness_gen.py (CLI). Proof test running: Dickie head -> 3/4 via Kontext Space. Remaining: verify proof with eyes + face_drift, document in tools/image-gen/, update ~/workspace/skills/free-image-gen/SKILL.md, commit + push, open PR (do NOT merge). Laws: IMAGE-CONDITIONED only (never text-mediated), VERBATIM PROMPT LAW (--instruction passed byte-for-byte, --craft flag for agent-crafted provenance). Heartbeat ~/workspace/agent-ops/checkpoints/likeness-gen.json every 10 min. Report + mark done.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-11T22:44:24.651654+00:00"
+}

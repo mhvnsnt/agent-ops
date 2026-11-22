@@ -1,0 +1,15 @@
+{
+ "task": "T6 full decrypt + TTT2 full extraction, teardown 100%, integrate into western-heart (owner order 2026-10-14)",
+ "repo": "western-heart",
+ "resume_brief": "Owner ordered: decrypt+extract Tekken 6 and TTT2 FULLY, full teardown, 100% integrated into western-heart. T6: ISO at GitHub release tekken6-psp-v1 (816MB); sector cipher FULLY REVERSED (game-reverse-engineering tekken6/tools/sector_cipher.py, bit-exact); decrypt sectors 230253-417792, magic-scan GMO/TIM2, extract models/stages/audio/movesets. TTT2: 26/26 chunks at release ttt2-7z-v1 (13.3GB); reassemble, extract Xbox360 STFS, teardown into teardown/tekken-tag-tournament-2/. Full RE notes in checkpoints tekken6-data401-decrypt.json + ttt2-full-teardown.json. LAWS: NEVER-DELETE-GAME-FILES, NO-DEFERRAL, resume-only downloads, SAFE-STORAGE-FIRST, disk hard ceiling 88% (currently ~95% emergency: check disk before every download, stage verified work to TeraBox/GitHub first), branch->PR->merge, TEARDOWN-TO-REPO, WH PIPELINE proprietary rename + RENAME-MAP.md. Coordinate with overnight push (wh-100percent.json) to avoid duplicate lanes. Heartbeat checkpoint, incremental git commits.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-15T02:40:00+00:00",
+ "notes": [
+  "Coordinator heartbeat 21:52 EDT: read wh-100percent.json. Overnight lanes exist: tekken6 COMPLETED-blocked (45%, bulk DATA401 decrypt scheme disputed vs sector_cipher.py), ttt2 COMPLETED-paused (25%, 1/26 chunks, disk-gated). Disk at 92% (OVER 88% ceiling). Verifying on-disk game bytes before fanning out.",
+  "21:58 EDT: fanned out. T6 bulk-decrypt worker (ckpt t6-bulk-decrypt.json): ISO verified on disk (816MB), briefed to settle cipher dispute empirically first, then bulk-decrypt+extract or continue RE. TTT2 readiness verifier (ckpt ttt2-readiness.json): verify chunks/tools/branch, NO downloads until disk <80%. Disk 92% (over 88% ceiling) recorded.",
+  "21:57 EDT: TTT2 readiness verifier DONE. Findings: chunk01 verified byte-exact (500MB); chunk02 partial 99MB (19%, failed, NOT deleted); release ttt2-7z-v1 26/26 intact; surgical tools (god_surgical.py, xdvdfs_reader.py, stfs_blobs.py) intact w/ deps OK; branch feat/ttt2-teardown-100 @9dc4a67b unmerged, no open PR; local clone wh-repo ready. BLOCKED: disk 93% (needs <80%, ~20GB free). Resume steps + RENAME-MAP draft (iron-tag) documented. T6 bulk-decrypt worker still running.",
+  "22:35 EDT: T6 bulk-decrypt worker DONE. Dispute settled: sector cipher real (unicorn-verified on ISO sector 230256) BUT bulk DATA401 does NOT use per-sector scheme (1/187525 CRC windows pass) - overnight finding CONFIRMED. WIN: DINF_400.BIN fully decrypted (fixed keyset EBOOT 0x88985BC) -> DINF magic, 2169-entry manifest, 384051200 bytes. BLOCKER: bulk master key PRNG-seeded from kernel thread state - statically unknowable; PPSSPP live dump environmentally blocked on VM. PR #162 OPEN (branch t6-bulk-decrypt): DINF-400-DECRYPTED.md, tools/dinf_decrypt.py, RE-notes 17-22. 0 assets extracted. TTT2 verifier DONE (see prior note). FINAL: T6 blocked on live-RAM-dump path (needs display session); TTT2 blocked on disk <80%."
+ ]
+}

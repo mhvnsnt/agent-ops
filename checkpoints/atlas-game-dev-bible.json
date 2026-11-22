@@ -1,0 +1,9 @@
+{
+ "task": "Collect origin-story fragments across repos into the atlas game-dev bible + developer bio",
+ "repo": "/home/hatch/workspace/atlas",
+ "resume_brief": "Atlas (private repo mhvnsnt/atlas, local ~/workspace/atlas): collect the owner's game-dev origin story fragments scattered across repos and write the GAME DEV BIBLE. Sweep: ~/workspace/northstar-research, ~/workspace/.wt-bannon-soul2/docs/NORTH_STARS.md + northstars/, ~/workspace/bannon-repair/docs/NORTH_STARS.md + northstars/, Bannon/ConcreteDragon/AshLane/BioMechania/Brutal-Fist repo docs (READMEs, bibles, design docs, soul files) for biographical/origin-story fragments about Real's journey into creating games. CORE NEW MATERIAL (from the owner 2026-10-10, treat as primary source): his first real Xbox experience was at a church that had a room with an Xbox \u2014 played MechAssault (2002) and Halo there; coming from PlayStation it blew his mind ('Xbox is different') and made him an Xbox fan; he still plays Xbox because of those two games. Also fold in: World of Tanks fandom, MechAssault love, WWE Crush Hour/Twisted Metal/NFS/FlatOut racing-derby roots, the Off The Top Rope book series as Bannon's origin, the MDickie-style design philosophy, free-first/no-app-store stance. Deliverable: atlas/about/GAME-DEV-BIBLE.md \u2014 origin story, journey into game dev, design philosophy + north stars, and BIO OF THE DEVELOPER (game dev soul). Follow the atlas README rules strictly: private repo, real person only (no fictional characters), three tiers labeled (verified fact vs symbolic vs interpretation), no sycophancy/mythologizing, every fact traceable to a source, MEMORY.md wins conflicts (flag in CONSISTENCY.md). Branch -> PR -> merge on the atlas repo, incremental commits. FIRST action: heartbeat this checkpoint.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T14:00:00+00:00"
+}

@@ -1,0 +1,11 @@
+{
+ "task": "Build Trippy Drippy Wizard font pack (TTF + PNG pack + specimen card + pipeline doc)",
+ "repo": "mhvnsnt/font-wizard",
+ "resume_brief": "Build TRIPPY DRIPPY WIZARD font pack in mhvnsnt/font-wizard (canonical home), fonts/trippy-drippy-wizard/: (1) TTF typing font A-Z 0-9 punct via pipeline/build_ttf.py (adapted), (2) transparent PNG glyph pack 2000px in png/, (3) SPECIMEN.png card, (4) README. Sources: WG card + TN render (13 glyphs extracted+verified); missing glyphs generated in-style (batches 1-3 done: B,C,F,H,J,L,M,Q,S,U,V,X,Y,0,1; remaining: 2-9, ! ? . , apostrophe - &). Then vectorize (vtracer), build, test-render, branch/PR/merge on font-wizard.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-09T21:35:00-05:00",
+ "progress": "TTF built+verified, 43 PNGs, SPECIMEN.png, README done. Committing now.",
+ "result": "Trippy Drippy Wizard v1.0 shipped in mhvnsnt/font-wizard: TTF (43 glyphs, verified render), 43 transparent PNGs, SPECIMEN.png, README. PR #1 merged to main, 0 open PRs. Builder: pipeline/build_tdw.py (OpenCV contours)."
+}

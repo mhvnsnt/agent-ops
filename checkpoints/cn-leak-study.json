@@ -1,0 +1,9 @@
+{
+  "task": "CN gigaleak: deep audit + agent training docs + repo/Pocket Studio wiring",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/animation-techniques",
+  "resume_brief": "COMPLETE. Playbook built at ~/workspace/animation-techniques/steal-like-artist/. Deliverables: CN-GIGALEAK-CATALOG.md, CN-GIGALEAK-AUDIT.md, AGENT-ANIMATION-GUIDE.md, README.md, bible-structure-analysis.md (from Johnny Bravo S2 bible), fla-rig-conventions.md, show-bible-template.md, rig-spec-template.md, other-packs/README.md, B2 folder READMEs, download scripts (pull-cn-gigaleak.sh). Wired into trippedd-studio and bannon-video-pipe docs. Study section added to Pocket Studio Tools tab. REMAINING FOR PARENT: B2 upload (no credentials in subagent context), full 200GB pull (links being struck, use download scripts), Disney TVA pack pull, artifact rebuild for Pocket Studio.",
+  "updated_at": "2026-10-12T14:05:00Z",
+  "attempts": 0
+}

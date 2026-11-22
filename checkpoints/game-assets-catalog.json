@@ -1,0 +1,9 @@
+{
+  "task": "Build per-game 3D asset catalog for Pocket Studio game dev workstation",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace",
+  "resume_brief": "Scan game repos in ~/workspace (bannon-video-pipe, bannon-v10-models, ConcreteDragon, StreetBrawl, brutal-fist-v10, ashlane-anim-pipe, ashlane-art, SMOKE-MIRROR-S-) for GLB/FBX assets; parse GLB JSON chunks for mesh/bone/animation counts; write ~/workspace/pocket-studio-v2/tools-data/game-assets.json; copy 3-5 hero GLBs to ~/workspace/pocket-studio-v2/assets/models/; write ~/workspace/pocket-studio-v2/game-dev/GAME-REPOS.md. Checkpoint file: ~/workspace/agent-ops/checkpoints/game-assets-catalog.json.",
+  "updated_at": "2026-10-11T16:10:00-05:00",
+  "attempts": 0
+}

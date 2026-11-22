@@ -1,0 +1,18 @@
+{
+ "task": "leoman-restore-20261020",
+ "repo": "mhvnsnt/western-heart",
+ "status": "done",
+ "attempts": 1,
+ "updated": "2026-10-21T03:48:09.417037+00:00",
+ "notes": [
+  "STEP 1 DONE \u2014 canonical file determined: pantera_leoman_t3real.glb (4,414,284 B). Evidence: identical mesh (34,211 verts, material owner_original, 3x1024 textures) + WH-Canonical-22 armature as pantera_leoman.glb, but t3real carries 52 actions = the 11 authored lab clips PLUS 41 real decoded T3 King clips (t3_*); handoff doc CLAUDE_TO_MUSE_FIXES_2026-10-20 names t3real as the bake source for the king_on_pantera_leoman bank (channels match 1e-6); WORKLOG names it the identity-rest source rig for the T3 banks. pantera_leoman.glb (3,834,936 B) = earlier autorig step, authored clips only. Owner original (Drive): lab/source_assets/original/pantera_leoman_original.glb 23,645,536 B. NEXT: release backup leoman-restore-20261020, sparse clone, wire A2, render proof, PR.",
+  "BACKUP DONE: release leoman-restore-20261020 (mhvnsnt/western-heart) \u2014 pantera_leoman_t3real.glb 4,414,284 B (sha256 cd1989165650a802e9151eba7a187d7c897d18cef6d15ec0173c06fe59ae9ecb) + pantera_leoman_original.glb 23,645,536 B (sha256 ad672d5ad65b9ac0d7cab8af54a582b9157f53b832a546022e55a330f3577700), sizes API-verified.",
+  "RENDER PROOF: fresh front T-pose of the restored canonical model via repo tpose_render.py (Blender 4.0.2 + egl-stack), viewed own-eyes \u2014 full mane, textured PANTERA belt/pants art, tail in frame; spec margins 109/109/136/136, corners pure white. Committed as docs/tpose-refs/pantera/leoman_front.png (replaces the earlier-autorig ref render; SHA256SUMS updated).",
+  "PR #409 MERGED 2026-10-21T03:46:45Z, merge commit 69903f7cd7. 8 files, 0 files deleted (3 in-place line corrections). Checks: deletion-guard/guard/instruction-gate all success (latest runs). gitleaks clean. node --check OK on both JS files.",
+  "RESOLUTION CHECK (executed, node + branch tree): attiresFor(pantera) = [ATTIRE 1, ATTIRE 2 \u00b7 LEO MAN]; selectedAttireModel -> pantera-leoman; MODEL_URLS -> ../roster/pantera/attires/leomon/model.glb; file present on branch+main at exactly 4,414,284 B. NO 404.",
+  "PR #391: correction comment posted (issuecomment-6307507823); sheet itself untouched. (One stray 'placeholder' comment from a malformed call was posted and immediately deleted.)",
+  "Wiring scope held: Pantera ATTIRE_VARIANTS lists A1+A2 only \u2014 slots 3-6 + the reorder stay with the dedicated Pantera lane's carve-out. Nothing committed inside the personality-pass worktree (copied out only).",
+  "ENV NOTE: /tmp (512M tmpfs) hit 100% mid-run \u2014 the PR was briefly created with an empty body; body re-staged from workspace and PATCHed in full (4,778 chars) before checks flipped green. Local git checkout also unusable tonight (blob fetch stalls) \u2014 PR built entirely via GitHub git API.",
+  "SCRATCH CLEARED: broken partial clone ~/workspace/_wh-work/leoman-restore/wt (~326M) + /tmp/leoman removed after merge; lane record kept at ~/workspace/_wh-work/leoman-restore/ (pr_body.md, comment391.md, resolution_check.mjs, proof render)."
+ ]
+}

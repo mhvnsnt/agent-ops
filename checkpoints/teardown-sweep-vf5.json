@@ -1,0 +1,53 @@
+{
+ "task": "VF5: document conversion status + exact 3ds Max requirement (extraction is 100%; WH conversion blocked on Windows 3ds Max per owner \"Get the software\")",
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "VF5 status documented in PR #749 (teardown/virtua-fighter-5/VF5-STATUS.md, OPEN, additions-only). Extraction 100% API-verified. WH model conversion BLOCKED on Windows + Autodesk 3ds Max (chrrox script) per owner 'Get the software'. Future lane: Windows seat + 3ds Max, then follow VF5-STATUS.md section 4 integration plan. Releases stay public until integration+rename done, then private (owner instruction).",
+ "status": "documented_blocked_windows_3dsmax",
+ "watchdog": false,
+ "updated_at": "2026-10-23T05:27:12.436581+00:00",
+ "sweep": "teardown-completion-20261020",
+ "notes": [
+  "2026-10-20 07:53 CDT: queued for a short documentation pass at sweep tail.",
+  "2026-10-20 ~08:00 CDT OWNER UPDATE: (1) Program is now 8 games \u2014 Tekken 5 is #8 under its own parallel coordinator; this sweep's 1-7 unchanged, DO NOT touch tekken5. (2) RESEARCH + PULL-IN MANDATE (owner verbatim core): 'do heavy research and pull in and wire up everything into the repo that we need... efficiently optimized and the highest quality possible.' Per game: research industry-standard RE tooling for the platform/format (open-source RE projects, format docs, community decoders, Ghidra extensions/loaders, MCP servers) before/during the crack; pull in the best; wire into repo tools/ + docs with license status honest; USE it (no hand-rolled guesswork where a proven tool exists); LOG every pull-in (what, source, license, where landed, what it unlocked) in the lane report + repo docs (RESEARCH-TO-REPO LAW). (3) Wired means PROVEN: a tool counts as wired only when a production pipeline runs real work through it with a proof artifact (per owner 07:56-07:58 CDT corrections). Mandate relayed to all 4 running lanes 08:00 CDT; queued lanes inherit it from this note.",
+  "2026-10-20 ~08:13 CDT STANDING LAW \u2014 PER-CHARACTER ISOLATION (owner 08:10 CDT): every character's skeleton, animations, and add-ons are separate and stay separate; per-character features live only on their own character's skeleton/animation set, never in shared state that can alter other characters' stances or animations (owner caught cross-contamination in the live build: characters bent/wrong from shared-state edits). Deliverables from this sweep must be per-character self-contained artifacts (own skeleton/clips/add-ons per file), pipelines must process characters independently with no shared mutable rig state, repo layouts namespaced per character, and WH wiring treats character data as immutable per-character input. Relayed to all 4 running lanes 08:13 CDT; queued/future lanes inherit from this note.",
+  "2026-10-20 ~08:14 CDT refinement (owner 08:10-08:13, from MEMORY.md): isolation is GATING \u2014 edits to one character can never bleed into another; per-character features (extra arms, jiggle, wings, extra hands/wrists) live only on that character, added onto its own working Tekken skeleton. EXCEPTION: genuine parallels \u2014 characters sharing a Tekken source share what actually parallels, deliberately through the shared source, never as an edit side effect. Golden reference: Oct 14-15 Pantera setup (King's exact movements/attacks/stance working). Sweep deliverables stay per-character artifacts; deliberate shared-source parallels at the WH wiring layer remain allowed.",
+  "OWNER ACCEPTANCE TARGET (2026-10-20 ~20:57 CDT) - DONE redefined for this game: content LIVE in the western-heart playable build (fighters/moves/animations/stages usable in a real fight or the customization suite, verified in game/), following the PR #397 wiring standard + precedents PR #379/#382/#385. Teardown-side decode/assembly PRs are intermediate landings, NOT the finish. 'No public spec' is not a stop sign - RE comes from our own files (emulator ground truth + Ghidra). No hand-tooling.",
+  "2026-10-23 ~00:19 CDT DOCUMENTATION PASS DONE (depth-2 sweep tail lane): PR #749 OPEN (branch teardown/vf5-status-doc, base main, 1 file +342/-0, additions only, LEFT OPEN) adds teardown/virtua-fighter-5/VF5-STATUS.md \u2014 definitive status: (1) extraction 100% API-verified (vf5-ps3-v1 89 assets/4,987,414,284 B; vf5-model-library-v1 3 tars/1,301,084,160 B with full sha256 in doc; corrected vf5-models-a.tar size to 412,958,720 B \u2014 brief's 394,460,160 was MiB-as-bytes); roster reconciled 18 fighters + akixx alt = 19 dirs, 38 stages; most model binaries live ONLY in releases (in-git models/ holds only aki/akixx/dur). (2) Conversion route documented: farc -> *_obj.bin -> chrrox 3ds Max script (skeleton+facial) -> FBX -> Blender -> GLB; alternatives labelled (MikuMikuModel community-proven but Windows/Wine, Noesis community-claim, in-house Linux parser proven for static geometry only, QuickBMS/TXP unverified); motion data is a SEPARATE gap (not in vf5-ps3-v1; see docs/research/VF5-MOTION-GAP-2026-10-22.md; PR #713 in flight). (3) Integration plan documented not executed (Windows seat -> per-character isolated conversion -> own-eyes proof -> WH wiring per PR #397 standard -> owner rename (all virtual-soul names NEEDED) -> ONLY THEN release goes private per owner instruction; visibility NOT changed by this lane). Gates: G1 PASS, G2 PASS, G3 PARTIAL, G4 BLOCKED (3ds Max), G5 PARTIAL (moveset JSONs only), G6 NOT DONE (sequenced last)."
+ ],
+ "verified_facts_2026_10_23": {
+  "repo": "mhvnsnt/western-heart",
+  "repo_visibility": "public (API-verified 2026-10-23; private=false)",
+  "release_vf5_model_library_v1": {
+   "published": "2026-10-15T01:30:57Z",
+   "assets": 3,
+   "total_bytes": 1301084160,
+   "vf5-models-a.tar": {
+    "size": 412958720,
+    "sha256": "243fcdbe05aec6f1e0dfd09523b6b666946319ff61e7d97f5ffe82ef9ac50ddb"
+   },
+   "vf5-models-b.tar": {
+    "size": 404111360,
+    "sha256": "a5e9f0992619d46b922f0c0301d725cefd10bbb03df1c29383339e7ed89dd379"
+   },
+   "vf5-stages.tar": {
+    "size": 484014080,
+    "sha256": "58edef73f35f382de7d7dbc8555fef37dac95499a921f99d3ea807d5b90c3fc9"
+   }
+  },
+  "release_vf5_ps3_v1": {
+   "published": "2026-10-13T15:56:20Z",
+   "assets": 89,
+   "total_bytes": 4987414284
+  },
+  "release_vf5_local_models_v1": {
+   "published": "2026-10-16T22:52:08Z",
+   "assets": 1,
+   "asset_bytes": 141977600,
+   "sha256": "21f5295fdba53029dd2dcd223d14d9b597b443512df4cf8a662b98e84ace87cb"
+  },
+  "roster_reconciled": "18 distinct fighters (incl. Dural) + akixx alt body = 19 fighter dirs; 38 stages (18 arenas + 20 training/test/special); Jean Kujo + Taka-Arashi are Final Showdown-only, not in this dump",
+  "correction": "Pre-sweep brief size for vf5-models-a.tar (394,460,160-ish B) was WRONG as bytes; API size is 412,958,720 B (394 figure is MiB, matching in-repo manifest '394MB'). All three brief sha256 prefixes confirmed correct.",
+  "blocker": "WH conversion blocked on Windows + Autodesk 3ds Max (chrrox import script) \u2014 3ds Max is Windows-only, this VM is Linux. Owner standing decision: 'Get the software'.",
+  "doc_pr": 749
+ }
+}

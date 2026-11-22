@@ -1,0 +1,10 @@
+{
+  "task": "WMXIX arena mesh decode + Western Heart integration",
+  "repo": "~/workspace/game-reverse-engineering/wwe-wrestlemania-xix",
+  "resume_brief": "DONE. PR #20 merged. 43 arena OBJs (324K verts) in western-heart/teardown/wmxix/arenas/. ARENA-FORMAT.md documents the f32 vertex crack. Face indices still open (documented as next step).",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-13T06:32:59.763907+00:00",
+  "notes": "PR #20 merged to western-heart main. 43 arena OBJ point clouds (324,425 verts) in teardown/wmxix/arenas/. ARENA-FORMAT.md + extraction tools included. Vertex format CRACKED (f32 triplets). Face/index mapping OPEN (documented)."
+}

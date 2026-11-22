@@ -1,0 +1,9 @@
+{
+ "task": "concrete-wave16-dailyrun: Y8 daily seeded run (WIRING_QUEUE TIER 5 item 21)",
+ "repo": "~/workspace/ConcreteDragon",
+ "resume_brief": "CONCRETE DRAGON Wave 16: build the Y8 DAILY SEEDED RUN (WIRING_QUEUE.md TIER 5 item 21). Full brief: wire game/assets/staging/systems/seedrandom.js (MIT) into game-3d, add DAILY RUN menu button, date-derived seed wired through existing seedFn/R_safe() plumbing for deterministic street layout + enemy wave composition, per-date best record in localStorage save wired into the Y9 Records screen, playtest-verify determinism (two runs same seed identical spawns), screenshots eyes-on, docs/TRANCHE_WAVE16_DAILYR.md, mark item 21 WIRED, branch wave16-dailyrun -> PR #6 open unmerged (do NOT merge). Work in ~/workspace/ConcreteDragon (mhvnsnt/ConcreteDragon).",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-09T05:47:16.096995+00:00"
+}

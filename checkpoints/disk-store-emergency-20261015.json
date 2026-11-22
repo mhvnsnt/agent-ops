@@ -1,0 +1,10 @@
+{
+ "task": "DISK STORING/MOVING EMERGENCY: move files to TeraBox/GitHub then delete only verified-unused content. Target <75%",
+ "repo": "~/workspace/agent-ops",
+ "resume_brief": "Continue disk storing/moving: /home/hatch now 76% (was 96%). DONE: trippedd-studio clone (19G) deleted after pushing all local branches (incl. 3 stash->store/stash-* branches) + 2 local tags to origin; verified 0 local-only commits. NEXT: eastern-mind (verify wh_eastern_mind on western-heart main, delete local teardown+wavs ~600M); audio-fix-work (upload part-aa/ab to drive-storage release ep01-fixed-2026-10-14, verify, delete ~4.5G); terabox-staging leftovers (assess home-hatch-backup 363M, gamerev-western-heart-assets 72M, game-binaries 62M). NEVER auto-delete game files. Avoid active lanes (video-fix-tools, font-wizard, cn-leak-pull-100, ep01-loti-swap have running processes).",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-15T06:20:00+00:00",
+ "notes": "DONE 2026-10-15 ~02:20 EDT: disk 96% -> 73.2% (freed ~21GB). Deleted: trippedd-studio clone (19G, all branches/stashes/tags pushed to origin, 0 local-only commits); eastern-mind derived content (1G: wh_eastern_mind + terabox zips + cda wavs, all on western-heart main); terabox-staging/home-hatch-backup (363M, byte-verified on release); gamerev staging tar (75M, source intact); tools/chibirigkit (391M, clean public clone). Verified: audio-fix EP01 FIXED master safe on drive-storage release ep01-fixed-master-2026-10-14 (3 parts, ftyp confirmed); disk-store-audiofix checkpoint marked done. Left alone: active-process dirs (video-fix-tools, font-wizard, cn-leak-pull-100, ep01-loti-swap), game files (T6 ISO, Def Jam partial, SF EX, VF5 1.3G, eastern-mind cdimg/zip, mdickie) per NEVER-DELETE-GAME-FILES law."
+}

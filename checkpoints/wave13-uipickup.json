@@ -1,0 +1,10 @@
+{
+  "task": "Wave 13 tranche: S6/S7 UI + pickup (TIER 3 item 13)",
+  "repo": "/home/hatch/workspace/ConcreteDragon",
+  "resume_brief": "CONCRETE DRAGON pipeline tranche worker (SECOND attempt \u2014 first worker lost to a daemon restart; do not retry anything already landed). Wave 13: S6/S7 UI + pickup (TIER 3 item 13). Local branch wave13-uipickup ALREADY EXISTS with commit 1: 0b9d5a0 'wave13: add pickup.mp3 (Kenney UI Audio mouseclick1, OGG->MP3 96k) + manifest/credits' (NOT yet pushed). Checkout the existing branch; verify commit 1's state; DO NOT recreate it. Remaining work: (a) add the UI click SFX asset (second OGG from game/assets/staging/audio/kenney_ui-audio.zip, OGG->MP3 96k -> game-3d/build/assets/, manifest + credits), (b) wire sfxUiClick()/sfxPickupChime() in game-3d/src/main.js following the sfxCounter() pattern (line ~1002, T.* hooks, preload in unlockAudio(), __cdtest hooks like uiClickDbg/pickupChimeDbg), wire click SFX on UI button activations and chime on cash pickup collection, (c) headless playtest (clone qa/playtest-countersfx.mjs, CHROME_PATH env): boot, UI click fires click SFX, cash pickup fires chime, zero console/page errors; screenshots in game-3d/shots-uipickup/, eyes-on verify each one. (d) decision doc docs/TRANCHE_WAVE13_UIPICKUP.md; mark WIRING_QUEUE item 13 WIRED 2026-10-08. (e) commit incrementally, push branch to origin, open PR 'Wave 13: S6/S7 UI + pickup SFX (TIER 3 item 13)' against main \u2014 DO NOT merge (PRs #1/#2 still await OWNER merge). Heartbeat this checkpoint after each commit; mark done at end. Laws: game must actually work, CC0/manifest clean, no secrets.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 1,
+  "updated_at": "2026-10-08T17:25:02.513919+00:00",
+  "notes": "attempt 2 COMPLETE: 4 commits (0b9d5a0 assets, 9d9ee5b wiring+hooks, ad9729b playtest+docs, 15a3f59 PR#3 refs); branch pushed; PR #3 https://github.com/mhvnsnt/ConcreteDragon/pull/3 opened against main, NOT merged (awaiting owner, with PRs #1/#2). Playtest 12/12 PASS, 5 shots eyes-on verified, zero errors."
+}

@@ -1,0 +1,10 @@
+{
+ "task": "Research and pull in 20-50 open-source 3D tools (rigging, animation, skinning, mesh repair, validation) to perfect the character pipeline permanently.",
+ "repo": "~/workspace",
+ "resume_brief": "Research and pull open-source 3D tooling: (1) survey GitHub/open-source for rigging, animation retargeting, skinning weights, mesh repair/cleanup, model validation, glTF tools; (2) evaluate each for license (permissive only: MIT/Apache/BSD/ISC), maturity, and relevance to the MDickie-style shared-model pipeline; (3) clone/pull the best 20-50 into ~/workspace/3d-toolkit/ organized by category; (4) write a TOOLKIT.md index with what each does, its license, and how it plugs into the character pipeline. Heartbeat checkpoint, mark done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-09T02:48:27.956405+00:00",
+ "notes": "23 tools (13 cloned into 3d-toolkit/, 10 documented); 4 wrappers + MANUAL_TOUCHUP.md; TOOLKIT.md with Tier1/Tier2 classification and pipeline sketch; git repo init + committed (60b97d5)"
+}

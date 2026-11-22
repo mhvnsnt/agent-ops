@@ -1,0 +1,14 @@
+{
+ "notes": "[watchdog 2026-10-21 06:55 CDT] VERIFIED ALIVE - NOT dropped. run_render4.sh pid 27255 alive (started 06:44 CDT), resource-gated: 13 blender procs for other lanes, ~3070MB avail vs 2800MB gate (ONE-Blender-at-a-time + NEVER-KILL-IN-PROGRESS = waiting correct). Gate cycle timeout+respawn pattern expected. Next: gate fires render -> own-eyes PNG -> blob -> tree/commit/PR. Heartbeat only; attempts stay 1.\n[watchdog 2026-10-21 07:55 CDT] VERIFIED ALIVE - NOT dropped. run_render4.sh pid 1722 alive (elapsed 40m, gate logs writing: render_gate_v4h.log 07:54 CDT \u2014 gate cycle active). Resource-gated on Blender RAM vs other lanes; per NEVER-KILL-IN-PROGRESS + ONE-Blender-at-a-time, waiting is correct. Next: gate fires render -> own-eyes PNG -> blob -> tree/commit/PR. Heartbeat only; attempts stay 1. | DONE: PR #436 merged to main; model.glb verified live on main at 20,304,060 B. Render landed after ~7h RAM-gating behind parallel rig lanes; root causes found+fixed en route: World-object KeyError under --factory-startup, Wayland crash fixed with XDG_RUNTIME_DIR=/tmp, libEGL abort fixed with LD_LIBRARY_PATH=~/workspace/tools/egl-stack (documented in TOOLS.md + confirmed by Vain Abel lane), OOM at 2.0GB gate floor -> 2,400MB floor + 768px. Jiggle spec (butt+thighs+hips) stands in roster/kinpo/RIG-NOTES.md via PR #422. ATTIRE-SLOTS.md was amended, not replaced (A2 lane file). Local scratch + sparse clone removed after merge; cleanup logged.",
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "Pull Tripo 2cb681d2 via ~/workspace/tools/tripo-pull/tripo-pull.py into ~/workspace/_kinpo-a1-work/pull; upload original GLB to GitHub release kinpo-tripo-pulls-20261020 on mhvnsnt/western-heart; validate GLB + render front in Blender (xvfb-run, ONE Blender at a time \u2014 check ps first, other lanes run Blender jobs); wire roster/kinpo/attires/attire1/model.glb + MODEL_URLS kinpo-attire1 in game/js/assets.js + ATTIRE-SLOTS.md Kinpo slot 1 row (note old A1 laddered back, not deleted) + TRIPO-REGISTRY.md row (Tripo 2cb681d2) + MODEL-INVENTORY.md + rig/attire notes recording mini skirt + jiggle butt/thighs/hips rig-stage requirement; PR with instruction-gate body quoting owner instruction verbatim incl. both follow-ups; render lands in docs/tpose-refs/kinpo/; update render-seen-list.md.",
+ "status": "done",
+ "step": "merged",
+ "task": "kinpo-attire1-tripo-pull-wire",
+ "watchdog": true,
+ "updated_at": "2026-10-21T12:55:00+00:00",
+ "attempts": 1,
+ "pr": "https://github.com/mhvnsnt/western-heart/pull/436 (MERGED 2026-10-21T14:02:08Z, merge commit bc37997f; instruction-gate + deletion-guard + guard all pass)",
+ "render": "docs/tpose-refs/kinpo/a1_front.png (768px Workbench, front=+X, own-eyes verified: mini skirt clear, textures clean; owner copy at ~/workspace/your_files/kinpo-attire1-front-20261020.png)",
+ "updated": "2026-10-21T14:04:00Z"
+}

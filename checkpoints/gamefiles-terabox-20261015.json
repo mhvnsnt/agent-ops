@@ -1,0 +1,17 @@
+{
+ "task": "Get game files + EP01 v2 into permanent storage (TeraBox + GitHub), then delete local copies per owner directives 2026-10-15",
+ "repo": "~/workspace",
+ "resume_brief": "Three tasks: (1) VF5 1.3GB from GitHub Release vf5-model-library-v1 to TeraBox via browser lane (50MB pieces), verify, then delete local ~/workspace/western-heart-vf5/teardown/virtua-fighter-5/. (2) Game files to TeraBox: T6 PSP ISO 816MB, Def Jam partial ISO, Eastern Mind ~1.2GB, SF EX bins \u2014 store+verify, NO disk deletion (game-files law). (3) ~/workspace/ep01-loti-swap/ 9.2GB to TRIPPEDD-Production-studios- GitHub release + TeraBox, verify both, then delete from disk. Check active lanes before touching ep01-loti-swap. TeraBox uploads need browser lane delegation to parent. Update SHARED-DISK-INVENTORY.md and disk-cleanup-log.md. Rules: upload->verify->delete, byte-verify.",
+ "status": "needs_owner",
+ "watchdog": true,
+ "attempts": 3,
+ "updated_at": "2026-10-15T21:59:48.600295+00:00",
+ "last_parent_action": {
+  "at": "2026-10-15T11:35:22.398173+00:00",
+  "by": "keep-working-pulse 2026-10-15 07:30 EDT",
+  "action": "resume-spawned"
+ },
+ "last_block_probe": "2026-10-15T21:58:43+00:00",
+ "blocker": "TeraBox browser lane unusable: live browser has NO TeraBox session (probe 2026-10-15 07:39 EDT found sign-in missing on terabox.com; Google login fmmg.mars@gmail.com + phone 2FA not signed in). Needs owner sign-in in the live browser; then re-probe with a small upload, then resume.",
+ "notes": "[watchdog 2026-10-15 15:12 EDT] Re-probed blocker: live browser on terabox.com shows marketing landing page, no signed-in account (probe completed 19:11 UTC, sign-in NOT attempted). TeraBox upload lane still blocked \u2014 owner sign-in in the live browser + phone 2FA required. Non-TeraBox work available next run: EP01 LOTI swap GitHub release staging (local 5.4G at ~/workspace/ep01-loti-swap/), VF5 teardown dir already absent from disk (nothing to delete for task 1).\n\n[watchdog 2026-10-15 17:59 EDT] Re-probed blocker: live browser on terabox.com STILL logged out (marketing homepage, Login button present; no session \u2014 read-only check, no sign-in attempted). State re-verified: VF5 teardown dir absent from disk (task 1 local work done); game files all present (tekken6-psp.iso 816M, Def Jam ISO staged 1.4G, Eastern Mind 1.2G); ep01-loti-swap/ 5.4G left alone \u2014 sibling lanes disk-store-ep01loti/disk-store-loti-final heartbeating fresh and actively downloading parts. Attempts now 3 (>=3 per body rule) \u2014 task cannot progress without OWNER signing into TeraBox in the live browser (Google fmmg.mars@gmail.com + phone 2FA). Escalating needs_owner."
+}

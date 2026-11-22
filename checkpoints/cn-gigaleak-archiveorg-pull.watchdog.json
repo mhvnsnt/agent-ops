@@ -1,0 +1,10 @@
+{
+ "task": "cn-gigaleak-archiveorg-pull: PPG Original.zip resume loop",
+ "repo": "/home/hatch/workspace/cn-gigaleak-pull",
+ "resume_brief": "Resume the PPG Original.zip download: run ~/workspace/cn-gigaleak-pull/pull-ppg-original.sh (25-try resume loop to 1139224028 bytes). On completion: md5 verify (3697da8a59a16e7699bffc4733353a2c), testzip, write catalogs/cowchicken-ppg-original.md, upload whole-file asset to mhvnsnt/cn-gigaleak-powerpuff-girls draft release 'ppg-original-cowchicken-v1', API-verify state+size+sha256, delete staging per save-before-delete, queue TeraBox backfill, then start next in queue: FOSTERS-001 1.17G.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 76,
+ "notes": "\"[Watchdog 2026-10-16 12:10 EDT] ALIVE \\u2014 not dropped: curl -C - downloading FOSTERS-20261011T213542Z-1-001.zip from archive.org (live, resumable flags), gh release upload of cnppgorig-part-01 to ppg-original-cowchicken-v1 started 12:08 EDT, pull-fosters001.sh running; staging dir mtimes 11:46-11:58. Attempts kept at 76 (watchdog passes, not failures).\\n[watchdog 2026-10-16 16:08 EDT] ALIVE - curl -C - TEEN TITANS.zip from archive.org live (started 16:07 EDT) + pull-teentitans.sh wrapper active; not dropped. Attempts unchanged (watchdog pass, not failure). [watchdog 2026-10-16 17:35 EDT] DUPLICATE RETIRED: same task/workdir as cn-gigaleak-archiveorg-pull.json (RUN #82, live, attempts 83). This .watchdog copy went 72min without heartbeat while the live lane progressed (Teen Titans complete 17:15 EDT). Retired to stop duplicate-lane confusion; no work lost.\\n2026-10-16 23:13 CDT watchdog: VERIFIED COMPLETE. Powerpuff Girls Original.zip (1,139,224,028 bytes, md5 3697da8a59a16e7699bffc4733353a2c) finished per catalog cowchicken-ppg-original.md; release mhvnsnt/cn-gigaleak-powerpuff-girls tag ppg-original-cowchicken-v1 live with 3 split parts (cnppgorig-part-00..02), concat md5 == whole-zip. Superseded lane absorbed by main cn-gigaleak-archiveorg-pull lane. Marking done; no resume needed.\"",
+ "updated_at": "2026-10-17T04:15:38.195080+00:00"
+}

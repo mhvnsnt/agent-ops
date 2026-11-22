@@ -1,0 +1,10 @@
+{
+ "task": "Complete Magnolia Rune character set: a-z, 0-9, punctuation (owner 2026-10-10)",
+ "repo": "~/workspace/font-wizard",
+ "resume_brief": "Owner 2026-10-10: Magnolia Rune (the rough v1 font from the Magnolia Square sign) needs a full character set \u2014 lowercase a-z, digits 0-9, punctuation. Current TTF at ~/workspace/font-wizard/fonts/magnolia-square/MagnoliaRune-Regular.ttf has only 11 uppercase glyphs (A,G,I,L,M,N,O,Q,R,S,U) traced from the sign. Design the missing glyphs IN THE SAME ROUGH/RUNIC STYLE as the existing tracings \u2014 jagged blackletter, matching weight and character. Missing: B,C,D,E,F,H,J,K,P,T,V,W,X,Y,Z uppercase; full lowercase a-z; 0-9; punctuation (. , ! ? ' - : ;). Match the style, don't clean it up \u2014 the roughness IS the style. Update the TTF, re-render specimen. Branch \u2192 PR \u2192 merge on font-wizard.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-11T01:05:00Z",
+ "notes": "Complete: 90-glyph Magnolia Rune TTF merged to main via PR #8. Specimen rendered."
+}

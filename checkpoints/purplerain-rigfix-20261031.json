@@ -1,0 +1,12 @@
+{
+ "task": "Purple Rain rig/weight repair: torso/chest crush toward spine + neck/face reach + right-arm weight damage \u2014 audit, per-joint diagnosis, weights-only fix, instruction-gate PR",
+ "repo": "mhvnsnt/western-heart",
+ "workdir": "/home/hatch/workspace/_purplerain-rigfix-20261031",
+ "status": "complete",
+ "watchdog": true,
+ "attempts": 1,
+ "resume_brief": "DONE: PR #1413 merged b6c72b89461057dc0ea9c339051db229a29c35ca; model-rerig.glb on main = blob dfd96b55 (fixed). Cause: chest/head skin-weight chain-spread across spine joints; weights-only consolidation to Breast/Head. Follow-up only: clean FK-bend close-up re-render of fixed file when VM is quiet (was OOM-killed 3x by concurrent lanes).",
+ "notes": "DIAGNOSIS DONE: standard contamination ~0 (not far-segment, not L/R mirror). Cause = chain-spread: front chest 22% weight across Spine/Spine1/Spine2/Neck (healthy same-template rig ~0, old 49j rig concentrated 92% on Spine1); head splits HeadTop .60/Head .17/Neck .11. Under articulation LBS chord-averaging caves the chest toward the spine and drags the neck/face. FIX DONE (purplerain-fixed2.glb): repair_consolidate.py - chest-band spine-chain weight consolidated to same-side Breast (fallback Spine2), head-region Neck/Spine weight to Head. 192,434 chest verts + 122,281 head verts touched. VERIFIED: front-chest Breast .40->.575, spine-chain .216->.038; edge-compression under std bend: mean ratio .986->1.004, p10 .861->.970, edges shrunk>15%: 9.2%->3.7%. Weight sums clean (0 bad/1.34M). ARM: no independent right-arm defect (L/R symmetric, tighter than baseline) - owner arm observation attributed to shoulder/chest collapse. REMAINING: after-renders (Blender OOM contention with CJ v4 renders; proof_pose attempt running), skin_audit stock gate (OOMs at 1.34M verts under contention; chunked identical-rule audit used), gltfpack -c re-encode + verify, instruction-gate PR + handoff doc.",
+ "updated_at": "2026-10-31T15:00:18.198144+00:00",
+ "progress_seq": 3
+}

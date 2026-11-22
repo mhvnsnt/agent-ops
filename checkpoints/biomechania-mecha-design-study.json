@@ -1,0 +1,10 @@
+{
+ "task": "Mecha design study for BioMechania: Zoids, Transformers, Evangelion, Gundam, Bionicle, Kamen Rider, Power Rangers \u2014 transformation sequences, vehicle/mech/hybrid modes, transition blending, weapons/characteristics \u2014 as a design doc + render production spec in BioMechania docs",
+ "repo": "/home/hatch/workspace/BioMechania",
+ "resume_brief": "Research subagent: study mecha design across Zoids, Transformers (shows/films), Neon Genesis Evangelion, Gundam, Bionicle, Kamen Rider, Power Rangers \u2014 focus on TRANSFORMATION: vehicle modes, full mech modes, mid-transformation hybrid states, how transitions are staged/blended, weapon systems and signature characteristics. Deliverable: docs/MECHA_DESIGN_STUDY.md in ~/workspace/BioMechania on a research/mecha-design-study branch (pushed, not merged), containing: per-source design language breakdown (transformation staging, mode silhouettes, weapon integration, biomech characteristics), a synthesis of stealable devices for ORIGINAL BioMechania biomech designs (inspired-by, never copies \u2014 no EVA/Zoid/Transformer likenesses, names, or symbols), and a concrete RENDER PRODUCTION SPEC: the exact shot list per mech (vehicle mode, mid-transition hybrid states with blending notes, full mech mode, weapon/characteristic callouts) so render production can start immediately after. Cite sources. Standing rules: branch->PR (no direct main), heartbeat this checkpoint, disk <=75% save-before-delete.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T02:09:24.110123+00:00",
+ "notes": "DONE: docs/MECHA_DESIGN_STUDY.md (797 lines) committed as fcc404d on research/mecha-design-study, pushed to origin (verified via ls-remote), NOT merged \u2014 build coordinator merges."
+}

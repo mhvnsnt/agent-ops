@@ -1,0 +1,170 @@
+{
+ "decisions": {
+  "madelyn": "FIXED + LANDED 2026-11-03 (PR #40). The lost original was recovered: Madelyn1.6.blend re-downloaded from her SmutBase project at exactly the recorded 832,503,638 bytes (sha256 d9357785b1285065b80c4495e5cfbc77...). GATE PASSED in Blender: shipped body mesh ReVAmped_body_base_regular.006 carries exactly 92 shape keys; face mesh 62 more. Fix = Scarlett core from the appended source objects: deform-only skin 522 -> 170 joints, morphs on, textures embedded, gltfpack -cc meshopt. Shipped: 153 morphs (92 body name-verified against the source census; 61 face — Fcl_MTH_U is muted in the source file, author-disabled, so it exports nothing), 16 unique textures (old file's 17th entry was a duplicate 'glosswet'), morph default weights zeroed to match the shipped proportions, Control RigAction dropped with the control rig per the recipe.",
+  "pwa_loader_gap": "The PWA vendors three r147 GLTFLoader with NO KTX2/Meshopt/Draco decoder wiring (2 loader sites: lab/lab.js:271, model-viewer.js:221). Any KTX2/compressed GLB shipped MUST land together with decoder wiring + vendored transcoder assets, or the models break in the Lab.",
+  "scarlett": "FIXED from scarlett_base.blend (verified complete by this lane's own Blender audit 2026-11-03: 8 parts, per-part vert/tris identical to shipped GLB + Icosphere 80 tris, 19 images, 17 morphs). Deform-only re-export: 251 joints (DEF + weight-bearing). Measured: ORG/MCH/Link bones carry ZERO skin weight (Link assumption in earlier notes was wrong for the blend — they only rode along in the all-bones shipped export); 50 c_* bones carry real weight (face deformers, c_eye.r = 1.0) and are KEPT."
+ },
+ "lane": "scarlett-madelyn-fix",
+ "main_state": "physics-playground-pwa main HEAD 02097aeb (PR #37 merged); sw cache physics-playground-v24.",
+ "next_actions": [
+  "Optional: TeraBox pull of Scarlett_tqZQxXx.blend DAZ master to check for extra scene parts (clothing/accessories) absent from all stored conversions",
+  "Follow-up: headless Lab screenshot of fixed Scarlett (headless Chromium broken box-wide during this run; Blender reimport + validator + RigCore used as gates instead)"
+ ],
+ "shipped_glb_audit": {
+  "madelyn": {
+   "animations": "1 baked 'Control RigAction' (1566 channels)",
+   "file": "examples/madelyn/Madelyn.glb (6,826,020 B)",
+   "humanoid_roles_rigcore": "20/21",
+   "images": 17,
+   "jiggle_chains_detected": "37 (breast 2 clean 3-bone L/R, butt 4, thigh 18 mostly control helpers, hair 12 clean J_Sec_Hair chains, tail 1); 20 multi-bone",
+   "materials": 14,
+   "meshes": 5,
+   "morphs": 0,
+   "nodes": 528,
+   "skin_joints": 522,
+   "skin_note": "the full 522-bone control rig shipped as-is (189 c_* control bones, 42 J_* secondary bones)",
+   "tris": 88578,
+   "validator": "0 errors, 6 warnings, 5 infos"
+  },
+  "method": "pygltflib audit + Khronos glTF Validator 2.0.0-dev.3.10 + repo's own RigCore.analyze (node) + a Python replica of lab-jiggle.js detectChains()",
+  "scarlett": {
+   "animations": 0,
+   "file": "examples/scarlett/Scarlett.glb (20,732,212 B)",
+   "humanoid_roles_rigcore": "21/21",
+   "images": 16,
+   "jiggle_chains_detected": "119 (46 breast / 14 butt / 20 thigh / 14 hair / 25 tail) — control-rig noise; only 28 multi-bone, only 6 rooted at DEF- (breast x2 (4), thigh x2 (2), tail (7)+(2))",
+   "materials": 14,
+   "meshes": 8,
+   "morphs": "17 total (body Genesis8Female 14: NipplesHide, squish/clothing fixes, anatomical opens; Tiny Eye 2: Eye Heart/Eye Size; Tongue 1: junk 'Armature')",
+   "nodes": 1121,
+   "skin_breakdown": "DEF 104, ORG 98, MCH 185, c_* 98, ~288 hair Link bones, coat F/B bones — the FULL Rigify control rig shipped",
+   "skin_joints": 1111,
+   "tris": 145438,
+   "validator": "0 errors, 22 warnings, 52 infos"
+  }
+ },
+ "source_audit": {
+  "madelyn_original_blend": {
+   "evidence": [
+    "~/workspace/madelyn-work/ does not exist on this VM; no file >400MB exists anywhere on the VM (find ~ -size +400M = empty)",
+    "No western-heart GitHub release contains it (300 releases listed, grep madelyn = none)",
+    "mhvnsnt/madelyn-work-archive repo is an empty placeholder (1 KB: AGENTS.md + WORKING-METHOD.md only, no releases)",
+    "Per 2026-10-14 memory: full Madelyn1.6.blend (832,503,638 B) was local-only, never backed up to TeraBox (owner has the original on his phone) or GitHub"
+   ],
+   "recovery_route": "Owner uploads Madelyn1.6.blend from his phone (or a browser-lane pull from the original SmutBase project page, mirror id c25e009e-60e8-414f-a8fe-0880bd26bddc). The 92 shape keys exist ONLY in this file; the shipped GLB carries 0 morphs and morphs cannot be reconstructed from it.",
+   "status": "ABSENT EVERYWHERE REACHABLE"
+  },
+  "scarlett_original_blend": {
+   "evidence": [
+    "~/workspace/scarlett-work/ does not exist on this VM; no file >400MB on the VM",
+    "Repo's own index.html documents it: 'Scarlett_tqZQxXx.blend — 514 MB practice model — All Files root on TeraBox'; blend-physics-playground/terabox/Scarlett.md (checked 2026-10-14): exactly 1 .blend on the drive, Scarlett_tqZQxXx.blend, All Files root, 514.5 MB",
+    "mhvnsnt/scarlett-work-archive repo is an empty placeholder (1 KB, docs only)"
+   ],
+   "recovery_route": "Browser-lane TeraBox pull (parent agent must delegate; this subagent cannot run browser tasks). NOTE 2026-10-14: TeraBox web blocks browser downloads of files this size (large-file modal) — use the TeraBox client/share-link route that worked for the Oct-14 Scarlett pull.",
+   "status": "ABSENT LOCALLY — survives on TeraBox"
+  },
+  "scarlett_working_blends": {
+   "files": {
+    "scarlett_autofix.blend": "DOWNLOADED + size-verified 54,736,739 B (release scarlett-star-control-20261021) at ~/workspace/_sm-fix/src-blends/",
+    "scarlett_base.blend": "53,536,136 B (release scarlett-source-blends-v1) — download retry loop running, blocked by write EPERM windows",
+    "scarlett_wiggle2.blend": "47,061,063 B (same release) — retry loop running"
+   },
+   "parts_verdict_from_prior_forensics": "parts-inventory.json (2026-10-21 autofix lane, retrieved + read this lane): scarlett_base.blend and scarlett_mocap.blend contain ALL 8 canonical parts with per-part vert/tri counts IDENTICAL to the shipped GLB; base/mocap carry 19 images vs the GLB's 16. The owner's 'missing parts' observation resolved to: all meshes hide_render/hide_viewport=True in the blends (pipelines that don't unhide render empty scenes) + a junk 'Icosphere' object + the REJECTED jp_render blend having lost the Tripo PBR image set (16 vs 19 images). Caveat: the TeraBox DAZ master may contain extra scene parts (clothing/accessories) present in NO stored conversion — unverifiable until the TeraBox pull.",
+   "status": "ALL THREE DOWNLOADED + size-verified (base 53,536,136 B landed 2026-11-03); base audited + used for the fix"
+  }
+ },
+ "stack_status": {
+  "blender_5_2_3": "Binary restored from tools-archive chunk-005 (sha256-verified 510f8a36...) and INTACT (174,261,472 B) at ~/workspace/_sm-fix/tools/blender-5/blender-5.2.3-linux-x64/blender — will not start: libtbb.so.12 missing (it lives in chunk-006, whose final segment is stuck in the write-block retry loop; standalone tar.xz on disk extracts libtbb as 0-byte files under the same block). Video-study lane had NOT staged a Blender (its checkpoint does not exist).",
+  "environment_blocker": "From ~11:14Z the VM intermittently refuses file writes from exec processes with EPERM ('Operation not permitted' / curl rc=23), including gh, curl, tar, python, node; shell builtins and the muse.write tool still work. /tmp (512MB tmpfs) also filled twice (freed both times). Downloads land only inside open windows; persistent retry loops are running for chunk-006 seg3, scarlett_base.blend, scarlett_wiggle2.blend.",
+  "ready_to_use": [
+   "Khronos glTF Validator 2.0.0-dev.3.10 (ran on both shipped GLBs)",
+   "KTX-Software 4.4.2 toktx (downloaded)",
+   "CATS teamneoneko unofficial 5.0.2.3 zip (downloaded)",
+   "Wiggle Bones 2 v2.2.3 wiggle_2.py (downloaded)",
+   "@gltf-transform/cli 4.5.1 + gltfpack + assimpjs (npm-installed)",
+   "OpenCV + numpy + pygltflib (system python)",
+   "RigCore/HumanoidCore (repo)"
+  ]
+ },
+ "status": "SCARLETT FIXED + LANDED 2026-11-03 (PR #37, merge 02097aeb). MADELYN FIXED + LANDED 2026-11-03 (PR #40, merge 0031ab14) — original blend recovered, 153 morphs restored, deform-only 170-joint rig.",
+ "updated": "2026-11-03",
+ "workdir": "~/workspace/_sm-fix/ (audits, scripts, tools, downloads)",
+ "scarlett_fix_landed": {
+  "date": "2026-11-03",
+  "pr": 37,
+  "merge_commit": "02097aeb47c5a1030cc4a209f5a482351a3210d6",
+  "glb": {
+   "path": "examples/scarlett/Scarlett.glb",
+   "bytes": 19910992,
+   "sha256": "8b678c2c468bde6e58e98cdf72dcf5791f1464f5842b0e4cde922acdc908a129",
+   "git_blob": "33fbfbbccf94"
+  },
+  "measured": {
+   "joints": "1111 -> 251",
+   "morphs": 17,
+   "tris": 145371,
+   "images": 16,
+   "materials": 14,
+   "validator": "0 errors, 22 warnings, 51 infos",
+   "lab_chains": "119 -> 34 detections (real DEF breast/thigh/tail + Hair1/Hair2 chains)",
+   "rigcore_roles": "19/21 name-matched (hips/neck in shipped file were zero-weight control bones)",
+   "proportions": "front aspect 1.90 shipped vs 1.92 fixed (pixel-measured); blend truth 1.9 units tall vs shipped GLB ~3.35 (overscaled export)"
+  },
+  "profile": "content/profiles/scarlett.json (jiggle anchored to mocap spring-fit)",
+  "proofs": "~/workspace/agent-ops/proofs/scarlett-madelyn-fix/ (side-by-side front/side/back/face + fix report + audits + validator report)",
+  "script_fixes": [
+   "fix_scarlett.py: Blender 5.2 deform prop is export_def_bones (script checked a nonexistent name — would have exported all 1111 bones)",
+   "fix_scarlett.py: junk-name capture before object removal (ReferenceError crash)",
+   "fix_scarlett.py: merge-by-distance skipped on shape-key meshes (bmesh merge corrupts non-basis keys)"
+  ]
+ },
+ "madelyn_fix_landed": {
+  "date": "2026-11-03",
+  "pr": 40,
+  "merge_commit": "0031ab1444c9a67fcb822ed3476a22ba2f72cbda",
+  "glb": {
+   "path": "examples/madelyn/Madelyn.glb",
+   "bytes": 3827096,
+   "sha256": "b80095f83d72d1f71e1ea7bb1949e35c150d1614b37a97ef61b299b9be8a49b8",
+   "git_blob": "9c1d1f4081c995628947654de48c107dbfcd4c78"
+  },
+  "source_blend": {
+   "path": "~/workspace/madelyn-work/Madelyn1.6.blend",
+   "bytes": 832503638,
+   "sha256_prefix": "d9357785b1285065b80c4495e5cfbc77"
+  },
+  "measured": {
+   "joints_before": 522,
+   "joints_after": 170,
+   "morphs_body": 92,
+   "morphs_face": 61,
+   "morphs_missing": "Fcl_MTH_U (muted in source)",
+   "images": 16,
+   "tris": 88277,
+   "validator_errors": 0,
+   "validator_warnings": 11,
+   "chains_detected_after": 20
+  },
+  "profile": "content/profiles/madelyn.json (153 morph names; jiggle anchored to spring-fit v1)",
+  "sw_cache": "physics-playground-v26",
+  "proofs": [
+   "madelyn-sidebyside-front-20261103.png",
+   "madelyn-sidebyside-side-20261103.png",
+   "madelyn-sidebyside-back-20261103.png",
+   "madelyn-sidebyside-face-20261103.png",
+   "madelyn-fixed-front-20261103.png",
+   "madelyn-fixed-side-20261103.png",
+   "madelyn-fixed-back-20261103.png",
+   "madelyn-fixed-face-20261103.png",
+   "madelyn-validator-fixed-20261103.json",
+   "madelyn-fix-report-20261103.json",
+   "madelyn-chains-fixed-20261103.txt"
+  ],
+  "script": "~/workspace/_sm-fix/fix_madelyn.py",
+  "gaps": [
+   "Fcl_MTH_U not shipped (muted in the author's source file; unmuting would change her configuration)",
+   "Control RigAction driver animation dropped with the control rig (recipe call)",
+   "Author's dialed-in body-shape morph values (10 keys, e.g. HipsThicc 0.588) zeroed as GLB defaults to match the shipped silhouette; all remain available as morph targets"
+  ]
+ }
+}

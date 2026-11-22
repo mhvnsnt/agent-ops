@@ -1,0 +1,10 @@
+{
+ "task": "Crack Tekken 6 PSP DATA401 bulk decrypt",
+ "status": "needs_owner",
+ "watchdog": true,
+ "repo": "western-heart",
+ "resume_brief": "DECRYPT RE AGENT, Tekken 6 PSP DATA401 bulk decrypt. STATUS: STUCK after exhausting 5 attack vectors, but with 4 NEW discoveries. READ: ~/workspace/game-reverse-engineering/tekken6/work/decrypt/DECRYPT-REPORT-2026-10-15.md (full technical report). NEW: (1) Permute-xor-rotate key schedule at 0x8AA2BC0 computes C1/C2 at 0x08C2B9F8 dynamically (PERM table at 0x8BCE790 = permutation of 0..19); (2) IDX reader (0x8AA17D0) uses sceIoIoctl cmd 0x10206 (not a normal read); (3) openPac opens RAW LBN region (disc0:/sce_lbn...), not IDX file \u2014 sector 230256 is the key sector; (4) IDX = 12 + 813*32 bytes exactly. RULED OUT: bulk NOT stream-cipher with (ext0,ext1); IDX NOT stream-encrypted; NOT ECB; NOT simple XOR; NOT standard compression; ktRead is plain. NEXT: emulate key schedule for real C1/C2; investigate ioctl 0x10206; find bulk decrypt caller after ktRead; check for driver-level decryption.",
+ "updated_at": "2026-10-23T21:37:16.226674+00:00",
+ "attempts": 0,
+ "notes": "[watchdog 2026-10-23 16:25 CDT] status normalized from the long 'needs_owner - ...' string to exactly 'needs_owner'. Round-1 vectors remain stuck/superseded by decrypt6 lane (wh-tekken6-decrypt6.json, needs_owner since 2026-10-16 08:05Z); active successor wh-tekken6-100.json stays stalled awaiting owner decision. Left as historical record."
+}

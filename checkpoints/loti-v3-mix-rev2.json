@@ -1,0 +1,9 @@
+{
+ "task": "LOTI v3 mix revision 2: dialogue edit + rebalance + v1 voice back",
+ "repo": "~/workspace/trippedd-studio-loti-v2",
+ "resume_brief": "LOTI v3 mix revision 2 (owner direction 2026-10-10 ~22:07 CDT, branch feat/loti-commercial-v3 in ~/workspace/trippedd-studio-loti-v2). FIVE mix changes on the scored cut (build script v3/build_v3_score.py exists \u2014 re-run with adjusted params): (1) MUTE the base production audio from 17s to 20s (camera person says 'alright' \u2014 remove it; suspense bed continues underneath). (2) BOOST the base production audio 2-3x from 32s to 34s (his 'luck of the Irish!' line) \u2014 watch true peak, limit don't clip. (3) DOUBLE the suspense bed volume (0\u219234.5s). (4) Upbeat bed UNCHANGED. (5) Put the V1 sign-off voice back in the cut at 53s (owner: v1 better than v2 '1000 percent'). Save v2 as v3/audio/robot-porky-voice.wav (copy from leprechaun-line-v2.wav; keep both, document the alias in METHODS.md). Verify: true peak (no clipping), sample 17-20s (silent base), 32-34s (boosted line), 53s (v1 voice). Upload via remote-storage, commit, report new link. Do NOT merge PR #117.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-11T04:05:22.168677+00:00"
+}

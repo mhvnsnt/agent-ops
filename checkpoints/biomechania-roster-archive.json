@@ -1,0 +1,16 @@
+{
+ "task": "Archive all Tripo-input roster renders into the BioMechania repo as character files (branch-PR-merge)",
+ "repo": "/home/hatch/workspace/BioMechania",
+ "resume_brief": "Archive the BioMechania roster renders into the BioMechania repo (local /home/hatch/workspace/BioMechania, remote https://github.com/mhvnsnt/BioMechania). Source: /home/hatch/workspace/your_files/tripo-inputs/ (~184 .webp renders + .json sidecars + /home/hatch/workspace/agent-ops/roster-tpose-manifest.json). Create branch roster-archive-1 from main. Under roster/characters/<character-name>/ put each character's webp(s) and json sidecar(s) (character name = lowercase name from filename, e.g. cranejack; keep variant files like the two cranejacks and the -1- repair regens in the same dir). Write roster/ROSTER.md index (character, brand, file list) and roster/manifest.json (copy of the agent-ops manifest, updated with any new files). Commit, push, open PR, merge to main, delete branch \u2014 leave ZERO open PRs. Verify the files are live on main afterward (git ls-remote / ls-tree). Heartbeat the checkpoint every 10 min and mark done at the end. Report: branch, PR number, merge commit, file count on main.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T16:30:08.554690+00:00",
+ "result": {
+  "branch": "roster-archive-1",
+  "pr": 16,
+  "merge_commit": "f26e7a67ee9ab6df4f10558e6842c5930e9e92db",
+  "files_on_main": 379,
+  "characters": 176
+ }
+}

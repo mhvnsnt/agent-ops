@@ -1,0 +1,9 @@
+{
+ "task": "Build working Create Fighter / Create Moveset web UI prototype in western-heart/customization/create-fighter/ per UNIFIED-UI-SPEC.md",
+ "repo": "/home/hatch/workspace/western-heart",
+ "resume_brief": "Continue building the working Create Fighter / Create Moveset web UI prototype. Workdir /home/hatch/workspace/western-heart, branch feat/create-fighter-ui-20261013. Read customization/UNIFIED-UI-SPEC.md, CHARACTER-CREATION.md, moveset-library/UI-DESIGN-SPEC.md, customization/parts/PARTS-INDEX.json, customization/wwe2k-caw/CAW-SUITE-BREAKDOWN.md, moveset-library/movesets/MOVE-DATABASE.json. Build customization/create-fighter/ as self-contained web UI: full-screen 3D fighter preview (three.js), floating edge panels, category rails, item equip from parts index, moveset per-input assignment, save/export fighter JSON. Verify with playwright screenshots. Branch->PR->merge, zero open PRs. Heartbeat this checkpoint after every step.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-14T03:58:59.542017+00:00"
+}

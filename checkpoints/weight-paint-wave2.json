@@ -1,0 +1,10 @@
+{
+ "task": "Deploy weight-paint PWA wave 2: Brutal-Fist, AshLane, URBAN-MAYHEM",
+ "repo": "/home/hatch/workspace/bannon-video-pipe/repo",
+ "resume_brief": "STANDALONE BRIEF \u2014 owner-directed 2026-10-09, wave 2 of the weight-paint PWA deploy. Wave 1 (Bannon PR #53 guided mode, AshLanev2 PR #30, ConcreteDragon PR #14) is DONE and verified. YOUR JOB: deploy the finished PWA (WITH guided fix mode \u2014 copy from Bannon's tools/weight-paint-pwa/ on branch weight-paint-guided, PR #53) to three more game repos: (1) Brutal-Fist \u2014 local clone ~/workspace/brutalist-fix (origin https://github.com/mhvnsnt/Brutal-Fist); (2) AshLane \u2014 local clone ~/workspace/anim-fix (origin https://github.com/mhvnsnt/AshLane.git); (3) URBAN-MAYHEM \u2014 local clone ~/workspace/urban-mayhem-port (origin https://github.com/mhvnsnt/URBAN-MAYHEM-.git). Each: tools/weight-paint-pwa/, default model URL pointed at that repo's main character/model directory (pick a sensible hero GLB in each repo \u2014 check what exists), repo-appropriate title. Each repo: feature branch -> commit -> push -> open PR, NEVER direct to main. Verify each clone's remote before pushing (these working dirs may be stale \u2014 fetch first). RULES: heartbeat THIS checkpoint every 15 min; do not copy the old pre-guided-mode version \u2014 it must include the guided fix mode; report the three PR links when done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-09T16:21:40.529989+00:00",
+ "result": "Wave 2 complete: 3 PRs opened (Brutal-Fist #24, AshLane #1, URBAN-MAYHEM #4). All include guided fix mode (verified 9 guided refs each), per-repo hero defaults. Note: AshLane is the retired prototype (additive tool only); URBAN-MAYHEM has no GLBs in-repo so it ships with Bannon STICKUP demo model; brutalfist-fix was the correct clone (brutalist-fix does not exist). One hiccup: urban-mayhem-port needed git user.email set before commit (Muse <muse@local> used for other repos)."
+}

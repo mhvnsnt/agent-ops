@@ -1,0 +1,10 @@
+{
+  "task": "Final green iris render on arranged LOTI footage (A/B/C + transform + title + disclaimers)",
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "LOTI FINAL RENDER (owner 2026-10-10): base cut landed (PR #107) with Luck of the Irish shots FOUND \u2014 VID_20260906_160938849: Shot A [0:00-0:12] far/slow-zoom chilling, Shot B [0:12-0:30] closer ('Look at the Irish.' ~0:18), Shot C [0:30-0:37] fourth-wall break direct to camera. Parent verified Shot A (t=100) and Shot C (t=128) frames from the review cut. Prepped components in production/TRIPPEDD_EP01/segments/luck-of-the-irish/ (PR #102): hood-leprechaun-transform-test.webp, green-iris-transition-demo.mp4, mask.mp4, title-card.mp4, disclaimers-card.mp4, BUILD-NOTES.md. FINAL RENDER: assemble the commercial \u2014 Shot A \u2192 Shot B \u2192 Shot C \u2192 'LUCK OF THE IRISH!!!' beat \u2192 green iris transform ON SHOT C'S FREEZE FRAME (hood leprechaun edit with the exact spec prompt, likeness preserved) \u2192 title card \u2192 disclaimers. Audio: keep the real 'Look at the Irish.' audio; add the iris whoosh/transition sound. Verify every piece visually (open frames), confirm AV sync, confirm the effect lands at the right beat in the right scene. Output: production/TRIPPEDD_EP01/segments/luck-of-the-irish/luck-of-the-irish-commercial-final.mp4 + update BUILD-NOTES.md. Branch->PR->merge (merge commits only, 0 open PRs). Don't touch feature/ep02-visual-rebuild. Heartbeat checkpoint, mark done.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 2,
+  "notes": "transform edit verified (likeness kept, green glow eyes, green hoodie+shamrock); iris close/open verified vs demo; transition+whoosh built; encoding 34.5s body now; then final concat + BUILD-NOTES + PR",
+  "updated_at": "2026-10-10T08:54:49.568074+00:00"
+}

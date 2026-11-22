@@ -1,0 +1,78 @@
+{
+  "lane": "t3-condition-decode",
+  "date": "2026-10-31",
+  "status": "complete_merged",
+  "repo": "mhvnsnt/western-heart",
+  "pr": 1370,
+  "pr_url": "https://github.com/mhvnsnt/western-heart/pull/1370",
+  "branch": "t3-condition-decode-20261031",
+  "head_commit": "0b0ad12227ae1a33116064528a865982195d1171",
+  "base_main_at_landing": "19f5ac0c4753635e8ea70a8aa10e01a3952f5db9",
+  "data_source_main": "24058f8a2273cdfe553c3598856ab2eaadb941be",
+  "deliverables": [
+    "tools/anim/t3_condition_codes.json",
+    "tools/anim/t3_condition_walk.py",
+    "docs/movesets/T3-CONDITION-CODE-DECODE-2026-10-31.md"
+  ],
+  "diff": "3 files added, +1932/-0, zero deletions",
+  "checks_passed": [
+    "instruction-gate",
+    "pr-safety-guard",
+    "clobber-guard",
+    "deletion-guard",
+    "canon-names",
+    "coverage-guard",
+    "rig-guard",
+    "ui-sources",
+    "guard",
+    "game-unit-tests",
+    "menu-touch-e2e",
+    "speed-quality",
+    "material-gate"
+  ],
+  "checks_pending": [],
+  "census": {
+    "banks": 20,
+    "rows": 8910,
+    "branches": 27480,
+    "distinct_conditions": 60,
+    "hub_splits": 4160
+  },
+  "confidence": {
+    "proven": 1,
+    "strongly_supported_codes": 30,
+    "unknown_codes": 29
+  },
+  "validation": {
+    "records": 2097,
+    "model3_full_walk": {
+      "decoded": 973,
+      "all_blocked": 920,
+      "all_pass": 975
+    },
+    "transition_support": {
+      "decoded": 1335,
+      "all_blocked": 1327,
+      "all_pass": 1335
+    },
+    "model1_hubs_only": {
+      "decoded": 192,
+      "all_blocked": 188,
+      "all_pass": 192
+    },
+    "model2_free_closure": {
+      "decoded": 317,
+      "all_blocked": 313,
+      "all_pass": 317
+    }
+  },
+  "moveset_json_changes": 0,
+  "review_promotions": 0,
+  "remaining": "Lane complete. Unknowns U1-U7 documented in the research doc for the next lane (common-bank extraction is the biggest walk-model gap). Provenance promotions remain a separate lane; play-verify FK gate unchanged.",
+  "merge_commit": "9083207d2ce56dba4538459646b8bcd0d8ecc21c",
+  "verified_on_main": {
+    "tools/anim/t3_condition_codes.json": "34241 bytes, blob e30d122ccf38",
+    "tools/anim/t3_condition_walk.py": "18875 bytes, blob b570a211e227",
+    "docs/movesets/T3-CONDITION-CODE-DECODE-2026-10-31.md": "14954 bytes, blob 042b25bf73b5"
+  }
+}

@@ -1,0 +1,9 @@
+{
+ "task": "Wizard Gang EP02 style correction: fix AI-slop drift back to locked WG look on feature/ep02-visual-rebuild",
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "WIZARD GANG EP02 STYLE CORRECTION (owner 2026-10-09): EP02 drifted into AI slop style \u2014 correct back to the LOCKED look: cartoony Shadow Wizard Money Gang base, painterly at dramatic beats, likenesses held against card art AND GLBs AND attires. Branch: feature/ep02-visual-rebuild (29/29 shots done per log; has dirty files \u2014 preserve them; note: production/WIZARD_GANG_EP01/ep02-stills/ep02-shot-27-1.png shows DELETED in status, recover or regenerate it). Assess every shot against the style lock, fix deviations (regenerate offending shots in the locked style), keep what matches. No animation-style changes beyond the correction. Work on the existing branch, commit incrementally, open PR when done (merge commits only, 0 open PRs). Do NOT touch the dirty DIALOGUE.md/VOICE_STATUS.md content \u2014 preserve. Heartbeat checkpoint, mark done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T05:30:03.076925+00:00"
+}

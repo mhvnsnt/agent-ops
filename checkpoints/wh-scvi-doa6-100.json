@@ -1,0 +1,9 @@
+{
+  "attempts": 1,
+  "repo": "western-heart",
+  "resume_brief": "Standalone brief: You are assessing Soulcalibur VI (~10%, mechanics doc only, PR #44) and Dead or Alive 6 (~10%, mechanics doc only, PR #45) for the Western Heart chimera build. DO NOT download 32GB (SCVI) or 50GB+ (DOA6) to the VM. Research acquisition paths via browser_search: check Archive.org metadata search (archive.org/advancedsearch.php) for soulcalibur VI / dead or alive 6 dumps, search for well-seeded torrent indexes (research only), search for stepdown options (Soulcalibur IV/V, DOA5) which may be on Archive.org. If no viable path, write BLOCKED doc with specific reasons. Check ~/workspace/game-reverse-engineering/soulcalibur-6/ and dead-or-alive/ for mechanics docs; verify they are committed to western-heart repo (branch->PR->merge, never push straight to main) and backed up to TeraBox. Rename anything handled to WH proprietary universe names and track in RENAME-MAP.md. Update ~/workspace/game-reverse-engineering/TEARDOWN-STATUS.md. Report back: acquisition paths found (or blocked), stepdown options, what's secured, blockers.",
+  "status": "done",
+  "task": "SCVI + DOA6 teardown assessment: hunt acquisition paths (Archive.org, public archives, torrent research), try stepdown strategy (SCIV/V, DOA5), document BLOCKED with reasons if no path, ensure mechanics docs saved to GitHub/TeraBox, rename handled items to WH proprietary names, report acquisition/stepdown/secured/blockers",
+  "updated_at": "2026-10-15T00:06:51Z",
+  "watchdog": true
+}

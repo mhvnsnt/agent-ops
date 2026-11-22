@@ -1,0 +1,20 @@
+{
+  "task": "Build Luck of the Irish commercial v2 \u2014 full commercial package with progressive leprechaun transformation",
+  "repo": "/home/hatch/workspace/trippedd-studio-loti-v2",
+  "resume_brief": "Resume the LOTI commercial v2 build in ~/workspace/trippedd-studio on branch feat/loti-commercial-v2. Read production/TRIPPEDD_EP01/segments/luck-of-the-irish/BUILD-NOTES.md for the v1 spec and component inventory. Owner verdict on v1 (2026-10-10): the edit/cut is good, but it needs MORE \u2014 good start, not the vision. The transformation must be PROGRESSIVE (watch him turn into the leprechaun: eyes ignite first, green energy ripple spreads, staged morph frames, full reveal) not a before/after swap. Build the full commercial package: (1) keep A-B-C edit + production audio, (2) progressive transformation beat ~6-8s with heavier effects, (3) 2D swap-out card from the trippy-cards pipeline, (4) explicit that's-all-folks end button in TRIPPEDD voice, (5) rotating slogan card with documented interchange rotation, (6) 2D drawn-up hood leprechaun character (TRIPPEDD tripped style lock per ~/AGENTS.md). QC every beat frame-by-frame, verify audio levels and clean decode. Output 1920x1080 h264+aac faststart MP4, upload via remote-storage, commit incrementally, push branch, open PR. Heartbeat the checkpoint every 10 min; mark done at end. NOTE 2026-10-10: shared tree ~/workspace/trippedd-studio was switched to feature/ep02-visual-rebuild by another lane mid-build; work continues in git worktree ~/workspace/trippedd-studio-loti-v2 on branch feat/loti-commercial-v2. Do NOT run git checkout in the shared tree.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T17:11:01+0000",
+  "redirects_received": [
+    "movement-onset (pose-tracked build)",
+    "campy-cartoon style lock"
+  ],
+  "movement_onset": {
+    "t": 22.9,
+    "event": "head snap up from phone, eyes find camera \u2014 start of performative direct-address escalation",
+    "method": "dense sampling (1fps sweep 12-30s, 5fps zoom 18-22s, clean 10fps series 20-24s, ~78 frames viewed) + numpy frame-diff motion energy (350 frames); MediaPipe 1.1.0 installed but native lib needs libEGL.so.1 (not installable here) \u2014 fell back to dense-sampling + own-eyes per owner note",
+    "caveat": "analyzed v1 0-35s A-B-C edit (owner-approved arrangement); source clip VID_20260906_160938849 not on local disk (drive-ingest cleaned, B2 backup exists)"
+  },
+  "mascot_design": "LOCKED: v2/hood-leprechaun 2D character sheet (bold outlines, full-body confident stance, neon-green eyes, shamrock hoodie emblem, color palette) \u2014 evaluated merch-ready, not a portrait"
+}

@@ -1,0 +1,10 @@
+{
+ "task": "Hunt non-archive.org HTTP mirrors for missing CN gigaleak sections",
+ "repo": "/home/hatch/workspace",
+ "resume_brief": "Web recon ONLY (no downloads \u2014 disk 89%). Hunt HTTP-accessible mirrors for missing CN gigaleak sections (infohash 856d01039553693d51c2a98523ca2c9829e8bb63, uploaders shagen665@gmail.com / jaden.barnes555@protonmail.com, Oct 2026 Skydance leak). Priority shows: Adventure Time 95.6GB, Gumball 65.9GB, BAKUGAN 32.8GB, Regular Show 29.8GB, BONUS 21.9GB, OK KO 12GB, HB Classics Boomerang 10.9GB, MGM Shorts 7.65GB, Fosters 7GB, Camp Lazlo 6.7GB, Looney Tunes Show 3.7GB, PPG, Wabbit, Garfield, Johnny Test. Search: Mega/MediaFire/Drive/Dropbox shares, Discord CDN, Reddit r/DataHoarder, 4chan /co/ archives, X/Twitter reposts, Telegram, archive.org advancedsearch for more items. Deliverable: ranked lead list in ~/workspace/agent-ops/mirror-hunt/LEADS.md (direct download > needs account > unverified/discussion-only).",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-14T14:10:00+00:00",
+ "notes": "DONE. LEADS.md written. Major finds: gumball-cn-leak 43.52GB, regular-show_202610 18.89GB (today), ok-ko 7.91GB, ed-edd-n-eddy 3.74GB, fosters 3.4GB, KND 2.48GB, AT assets 3.93GB \u2014 all on archive.org. MEGA reupload confirmed via @tigervol14games (no direct URL). Still swarm-only: AT bulk, BAKUGAN, BONUS, Boomerang, MGM Shorts, Looney Tunes Show, PPG, Wabbit, Garfield, Johnny Test."
+}

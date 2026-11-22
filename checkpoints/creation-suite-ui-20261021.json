@@ -1,0 +1,48 @@
+{
+ "task": "Creation Suite UI coordinator: Tekken-based mixed creation suite, mobile-first, deeper than Tekken and WWE \u2014 schema doc, real-catalog-wired UI build, phone-viewport proof",
+ "status": "done",
+ "watchdog": true,
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "Build the mobile-first Creation Suite front end on the Tekken base in mhvnsnt/western-heart packages/creation-suite: (1) in-repo UI schema doc mapping Tekken menus/submenus/tools from teardown sources + mobile adaptation (tap-scroll-tap-assign, options-stacking) + mixed-source section map (Tekken/WWE/Def Jam/other) + deeper-than-both extensions; (2) UI wired to REAL catalogs via catalogs.js (extend, never rewrite): body/face morphing, skin color, hair, 16-slot parts, tattoos, decals; profile format extends the fighter-completeness lane's format additively \u2014 read its checkpoint, never fork; (3) phone-viewport screenshots viewed with own eyes + a UI-built profile handed to the fighter-completeness lane; runtime-visible parts count before/after reported. PRs in the exact instruction-gate format.",
+ "notes": "Sibling coordination stands: completeness lane owns custom-fighter.js + profile format (extends additively); my profile.js writes customization.json v1 fields as the bake truth + wh_creation_suite_v1 mirror for the current game consumer + additive keys (item_colors, finishes, mirrored, wardrobe) the bake can adopt later. T7 catalog from PR #437 loads with parts: [] + named_gaps - UI enumerates honestly, zero fake items.\n[watchdog 2026-10-21 09:56-10:01 CDT] Heartbeat: coordinator lane alive in ~/workspace/_csui-work (shoot.py edited 10:07 local, build/ + site/ active 09:29-10:07). Standing down, no duplication per CHECK-BEFORE-START.\n[watchdog 2026-10-21 10:13 CDT] supervisor.sh STUCK bucket flagged this lane, but own-eyes check shows real progress: UI suite.js/css written 10:11-10:12, 4 proof screenshots rendered 10:09-10:13 CDT. STUCK flag is a tracking artifact (progress_seq never initialized/bumped by the coordinator). NOT stuck \u2014 do not re-spawn. Left live.\n[watchdog 2026-10-21 10:30 CDT] supervisor STUCK flag re-verified: ship.py edited 10:28 CDT (2 min ago), shoot.py 10:20 CDT \u2014 lane actively shipping. progress_seq still unbumped (tracking artifact). NOT stuck; do not re-spawn; left live.",
+ "attempts": 0,
+ "updated_at": "2026-10-21T15:35:55Z",
+ "steps": {
+  "recon": {
+   "status": "done",
+   "detail": "ALL sources read first-hand: T7 REPORT.md (16 slots, 21-field spec, slot-group UI order -236..-254, 0-5 color slots, socket placement, FULL_HEAD/FULL_BODY conflicts), tekken7-slot-catalog.json, CUSTOMIZATION-JSON-SCHEMA.md (v1 = profile contract), CREATION-SUITE-WIRING-AUDIT (25,784 indexed vs 1,148 runtime-visible; two existing UI apps; audit gap #6 Tekken slot catalogs have no runtime consumer), UNIFIED-UI-SPEC.md (existing synthesized target, desktop wireframes), packages src (catalogs/parts/morphs/attire/menu/layering/dna/body/index), game/js/custom-fighter.js (wh_creation_suite_v1 consumer shape: profile/body.body_type+skin_tone/parameters/fighting_style), flagship menu-data.js. PartPoser NOT in this repo by name (paradigm = REPORT sec.6 + v1 placement schema {px,py,pz,rx,ry,rz,s}); game/poselab.html is the retarget checker, not PartPoser."
+  },
+  "counts-baseline": {
+   "status": "done",
+   "detail": "Real merge via catalogs.js mergeCatalogs over PARTS-REGISTRY(1148) + no-mercy CATALOG(682) + parts-converted CATALOG(3372) + parts-converted/defjam CATALOG(2624) + tekken7 CATALOG(0, PR #437) = 7,791 merged (35 deduped by file). BUT suite_slot null on 6,229 (80%) - WMXIX/DefJam catalogs carry source slot only. conversionSummary: converted 268 / not_required 6,004 / none 1,519 (catalogs.js semantics). Readiness from entry data: glb present 1,782 (incl. Def Jam POINTS pools = preview-only, topology unproven), texture/image 2,633, WMXIX ymg blocked 1,200. tekken6-item-catalog.json is NOT parts[]-shaped (9,440 T6 names stay record-only until a catalog-shape pass)."
+  },
+  "build": {
+   "status": "done",
+   "detail": "Schema doc docs/CREATION-SUITE-UI-SCHEMA-2026-10-21.md (Tekken menus/tools from teardown sources only, mobile adaptation, mixed-source section map, 10 deeper-than-both extensions D1-D10, named gaps). NEW additive src/slotmap.js (catalogs.js untouched): Tekken spine map + readiness tiers over the real merge = 7,791 total / 5,574 mapped / 2,217 unmapped (2,209 Def Jam unknown + 8 WMXIX palettes) / 2,869 ready / 1,201 preview-only (POINTS) / 3,721 blocked / 0 record. Mobile app packages/creation-suite/ui/ (index.html, suite.css, suite.js, profile.js): 6 tabs BODY/FACE/ATTIRE/INK/WARDROBE/PROFILE, 16-slot Tekken spine + T6 sub-slots, 25 morph sliders, skin tones, placement editor (7 sliders + mirror), 5 color channels, finish editor, decal layers with rect placement, 4 attires x 10 wardrobe snapshots, save to wh_creation_suite_v1 + customization.json export."
+  },
+  "proof": {
+   "status": "done",
+   "detail": "node --test test/slotmap.test.js = 4/4 PASS against the real repo files (counts pinned; blocked/POINTS never equippable asserted over all 7,791; UI-built profile resolves via resolveProfileParts + round-trips both save shapes). Playwright at 390x844 against the real catalogs over local HTTP: 11 screenshots in packages/creation-suite/ui/proof/, ALL viewed by this lane (body hub, spine, part list, detail, equipped stage, placement+colors, morphs+skin, face+eyes, ink placement, wardrobe, saved profile), zero console errors. The UI-saved record was dumped from the browser localStorage as proof/ui-built-profile.json (PANTERA / RAGING BEAST; No Mercy chest-back mesh at placement ry=45; item color channel 1 #c0241c; morphs muscle .6/shoulders .3/eye_size .25; 1 ink layer; wardrobe look 1)."
+  },
+  "ship": {
+   "status": "done",
+   "detail": "PR #445 MERGED 2026-10-21T15:34:52Z (merge commit 97b08564a3c664171685152b5f4894c2eb269654): +1,763/-0, 19 files, additions only; instruction-gate + deletion-guard + guard all PASS (instruction-gate needed one body fix: a bare backticked filename in Proof prose -> full repo path). Files verified on main via API (slotmap.js 9,023 B; suite.js 27,994 B; schema doc 25,695 B; ui-built-profile.json 2,342 B). Handoff note appended to fighter-completeness-20261021.json with the UI-built profile path + contents for its in-fight proof."
+  }
+ },
+ "epoch": 2,
+ "claimed_by": "csui-resume-20261021-0926",
+ "claimed_at": "2026-10-21T14:35:32Z",
+ "lease_expires_at": "2026-10-21T15:05:32Z",
+ "agent_id": "csui-resume-20261021-0926",
+ "last_heartbeat": "2026-10-21T15:07:19Z",
+ "task_id": "creation-suite-ui-20261021",
+ "goal": "Creation Suite UI coordinator: Tekken-based mixed creation suite, mobile-first, deeper than Tekken and WWE \u2014 schema doc, real-catalog-wired UI build, phone-viewport proof",
+ "progress_seq": 0,
+ "last_progress_at": null,
+ "step_keys": [],
+ "steps_completed": [],
+ "next_steps": [],
+ "key_paths": [],
+ "decisions": [],
+ "blockers": []
+}

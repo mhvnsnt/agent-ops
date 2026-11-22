@@ -1,0 +1,10 @@
+{
+ "task": "Build the runnable two-tier character pipeline orchestrator in ~/workspace/3d-toolkit/: ingest, auto-rig, auto-fix, auto-verify, finalize.",
+ "repo": "~/workspace/3d-toolkit",
+ "resume_brief": "Build pipeline.py orchestrator in ~/workspace/3d-toolkit/ that chains: ingest (assimp/trimesh normalize) \u2192 auto-rig (Rigify via Blender headless) \u2192 auto-fix (repair_mesh.py, ground_clamp.py) \u2192 auto-verify (validate_glb.py defect gates; FAIL loops back to auto-fix, never to human) \u2192 finalize (optimize_glb.sh). Single command: pipeline.py <input> --out <final.glb>. Test it on a real model, verify the defect gates catch known issues. Commit. Heartbeat checkpoint, mark done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 2,
+ "updated_at": "2026-10-09T03:37:15.882845+00:00",
+ "notes": "pipeline.py built and tested by parent: STICKUP_repaired.glb feet y=-0.92 auto-fixed to y=0.0000, all gates PASS. Committed cf12c03. Known issue: gltfpack optimizer breaks skinning (documented, fallback in place)."
+}

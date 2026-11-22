@@ -1,0 +1,9 @@
+{
+  "attempts": 0,
+  "repo": "/home/hatch/workspace/money-machine-hq",
+  "resume_brief": "Resume the Proving Ground gauntlet run on money-machine-hq: 1) checkpoint already exists at ~/workspace/agent-ops/checkpoints/gauntlet-money-machine-hq.json \u2014 heartbeat it, 2) branch proving-ground/money-machine-hq (created from main) holds all work, 3) follow PROVING-GROUND.md gates G1-G7 and RUN-ORDER.md, 4) audit (build, tests, secret scan, docs), fix, verify with proof, write proving-ground/results/money-machine-hq.md, 5) commit + push branch, 6) mark checkpoint done. Never merge to main. Report gate verdicts to parent.",
+  "status": "done",
+  "task": "Proving Ground gauntlet #2: money-machine-hq",
+  "updated_at": "2026-10-08T00:45:00-04:00",
+  "watchdog": true
+}

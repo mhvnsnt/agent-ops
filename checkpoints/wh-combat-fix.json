@@ -1,0 +1,10 @@
+{
+  "task": "Fix western-heart combat: invisible fighters (regressed after PR #88-91), canvas black-outs, teleport movement, no round flow, stuck HITS counter, K key audit, Nine Souls tier desktop rendering, control hints, Pantera head detach. Branch->PR->merge, redeploy gh-pages.",
+  "repo": "/home/hatch/workspace/western-heart",
+  "resume_brief": "WESTERN HEART critical combat fixes: (1) fighters invisible \u2014 skinned meshes don't render, only shadows; worked 2026-10-14 ~01:00, regressed in PRs #88/#89/#90/#91 \u2014 bisect fighter loading/render path; (2) canvas black-outs mid-fight; (3) teleport movement \u2014 fix to Tekken walk speed + character collision + auto-facing; (4) no round flow \u2014 build ROUND 1/FIGHT!/K.O./ROUND 2/match result; (5) HITS counter stuck at 0; (6) audit key mappings, damage tuning; (7) Nine Souls tier broken on desktop; (8) control hints on fight screen, verify BLOCK; (9) PANTERA head detaches on hitstun. Own-eyes verification. Branch from main, PR->merge, redeploy gh-pages, verify live. Heartbeat this checkpoint.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-14T09:07:38",
+  "progress": "complete: PR #92 merged, gh-pages deployed a9bd1e91, all fixes verified live"
+}

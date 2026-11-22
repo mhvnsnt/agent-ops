@@ -1,0 +1,10 @@
+{
+ "task": "Make the rig pipeline + rules universal across all game repos; research teardown/OSS for the deepest automatic fixes",
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "Owner directive 2026-10-15: the rig pipeline, its gates, and all rig rules become the UNIVERSAL standard across every game/production repo with 3D models (western-heart, Bannon, AshLane, Brutal-Fist, ConcreteDragon, money-machine-hq). Two tracks: (1) RESEARCH - mine the teardown data (Tekken, WMXIX, No Mercy, Urban Reign teardowns in western-heart/teardown/) for how shipped fighting games author skin weights and validate rigs; survey free/open-source auto-fix tooling for the deepest, most automatic, production-grade fixes and feed them into the pipeline as new stages. (2) PROPAGATE - once western-heart's rig PRs (#164-166, #168 + transfer_weights + bug fixes) merge, package the pipeline as a reusable kit and open a PR in EACH game repo adding UNIVERSAL-RIG-STANDARD.md (same gates: 2.5 stretch, extreme-pose battery, no hand-tooling, proof pictures) + wiring to run every model through it. No model ships to video/production without passing.",
+ "attempts": 1,
+ "updated_at": "2026-10-15T18:43:39.076200+00:00",
+ "status": "done",
+ "watchdog": true,
+ "note": "COMPLETE. Track 1: RESEARCH.md on WH branch research/rig-autofix-survey (draft PR #182). Track 2: 5/5 PRs open \u2014 ConcreteDragon #56 MERGED; Bannon #84, AshLanev2 #47, money-machine-hq #30, Brutal-Fist #34 OPEN (all blocked on repo CI infra, not content). Brutal-Fist has a sibling-collision PR #33 to reconcile."
+}

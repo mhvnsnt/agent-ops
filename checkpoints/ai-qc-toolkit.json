@@ -1,0 +1,10 @@
+{
+  "task": "Research and wire up free/open-source AI-QC tools for video/audio analysis",
+  "repo": "~/workspace/tools/ai-qc",
+  "resume_brief": "AI-QC toolkit at ~/workspace/tools/ai-qc/ is complete and tested: audio_qc.py (VoiceModel speaker classifier, 15/16 validated, silence gaps, speaker clustering), video_qc.py (MediaPipe FaceLandmarker mouth-openness, talking regions, scene changes, face counting), qc.py unified CLI (who/voice/audit commands), README.md, self-contained venv, 3.7MB model. Validated on EP02 v6e: Cipher C1 voice ID correct, L7 Static-voice-on-Ashes correctly flagged, Cipher money scene mouth movement confirmed. Remaining: wire into Pocket Studio artifact as QC tab, add more character voice references as they exist, consider cloud GPU for Wav2Lip/pyannote/RIFE later.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-11T03:58:23.867875+00:00",
+  "notes": "\nWatchdog 2026-10-10 22:55 CDT: verified complete via own-eyes inspection \u2014 all 12 modules compile, qc.py --help lists all commands incl. Phase-1 deep commands, README documents who/voice/audit/deep/mesh/motion/music/ocr/subs/anomaly/direct, venv + 2 MediaPipe model files present. No git repo at repo path (tools dir, not tracked). Marked done."
+}

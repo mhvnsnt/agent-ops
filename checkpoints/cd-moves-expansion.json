@@ -1,0 +1,9 @@
+{
+ "task": "Combat expansion: ki blasts, energy waves, spin attacks, new specials + animation fill for Concrete Dragon",
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "COMBAT EXPANSION for Concrete Dragon (~/workspace/ConcreteDragon). Owner wants more attacks/animations like the genre's best. (1) PROJECTILES: ki blasts (fast straight shots), energy waves (slower traveling waves, hadouken-style) \u2014 with charge-up, travel, impact. (2) SPIN ATTACKS: 360 spinning strikes hitting all around. (3) NEW SPECIALS: more special attacks per character with distinct animations + VFX. (4) ANIMATION FILL: audit current animation coverage and fill gaps \u2014 idle variants, hit reactions, KO animations, walk cycles. NOTE: taunts are owned by the throws-air lane (cd-throws-air.json) \u2014 do NOT duplicate; coordinate via the backlog. Pull free/open-source: Mixamo free animations where the rig is compatible (retarget to game rigs), Kenney VFX for blasts/waves. Refs: Yakuza heat moves, SoR4 specials, Final Fight specials. Branch moves-expansion -> PR -> merge (never direct to main). Heartbeat ~/workspace/agent-ops/checkpoints/cd-moves-expansion.json after every step; incremental commits. Verify with playtests + captures, your own eyes. Obvious-defect checklist every playtest.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-09T18:05:00.000000+00:00"
+}

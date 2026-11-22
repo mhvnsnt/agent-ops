@@ -1,0 +1,13 @@
+{
+  "attempts": 9,
+  "repo": "/home/hatch/workspace/ConcreteDragon-cdci4",
+  "resume_brief": "RESUME: Concrete Dragon continuous improvement cycle 4 (resumed 2026-10-16 after owner pause). Worktree at ~/workspace/ConcreteDragon-cdci4, branch cycle-4-improvements, based at 49c7825. Commit f18b350 (landHit double-pop fix) is IN. Uncommitted QA scripts: game-3d/qa/cdci4-diag.mjs, cdci4-flow.mjs. NEW LAWS TO FOLLOW (~/AGENTS.md): CONTINUOUS RESEARCH + PULL-IN LAW (2026-10-16) \u2014 research first from real sources, pull in open source, wire up, branch->PR->merge only when green + non-destructive, conflicts keep both sides, log everything; NO-DISK-STAGING LAW \u2014 clone straight into repos, push, no local hoarding; MERGE-IT-YOURSELF \u2014 merge clean green PRs, never leave open; NO-HAND-TOOLING \u2014 proven tools over hacks; TRY-BEFORE-YOU-FLAG \u2014 attempt the real action before claiming anything is down; NEVER-KILL-IN-PROGRESS; NO-SWEEP-INFLIGHT. AGENT HANDOFF DOCS to read first: ~/workspace/agent-ops/CHECKPOINT_PROTOCOL.md, RESUME_BRIEF_TEMPLATE.md, CONTINUOUS-RESEARCH-PULLIN-WORKFLOW.md, RESEARCH-PULLIN-INDEX.md. RESEARCH STORAGE: all research must land in the appropriate document repos \u2014 ConcreteDragon docs/ (already has RESEARCH_*.md, UX-AUDIT.md, TEARDOWN docs; add the menu/UX/narrative study report.md from ~/workspace/research_notes/menu-ux-narrative-study-20261010-0345/ and the inspiration field guide content as proper docs/). WIRE-UP: research findings must be implemented in the game, not just documented \u2014 work the UX-AUDIT.md P0s first (tutorial text over touch buttons, tutorial persisting into boss fight, ZONE 1 card clipped at 390px), then the ranked P1-P3 list, then inspiration transfers (Mega Crash panic button, momentum dash, threat bubbles, Vs-screen boss ritual). Do NOT commit package-lock.json/node_modules churn. Branch -> PR -> merge, zero open PRs, never push straight to main. Heartbeat after every commit/step. Mark done + remove worktree at end.",
+  "resumed_at": "2026-10-16T16:44:00+00:00",
+  "resumed_by": "owner directive 2026-10-16: resume Concrete Dragon work + promotion under the new laws; research stored to document repos; everything wired up and pulled in",
+  "status": "paused",
+  "task": "Concrete Dragon continuous improvement cycle 4 \u2014 play, find, fix, expand (resumed 2026-10-16 under new laws)",
+  "updated_at": "2026-10-16T19:00:00+00:00",
+  "watchdog": false,
+  "paused_at": "2026-10-16T19:00:00+00:00",
+  "paused_by": "owner 2026-10-16 ~15:00 EDT: focus on disk cleanup, pause everything else"
+}

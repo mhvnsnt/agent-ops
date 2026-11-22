@@ -1,0 +1,10 @@
+{
+ "task": "Deep-research South Park and write SOUTH-PARK-STUDY.md for the Goodville Cartoon replication in trippedd-studio",
+ "repo": "~/workspace/trippedd-studio",
+ "resume_brief": "Deep-research South Park (visual style, character construction formula, animation grammar/timing, background language, writing/comedy engine, production pipeline from construction-paper to Maya 6-day turnaround) and write docs/research/SOUTH-PARK-STUDY.md in ~/workspace/trippedd-studio, mapped onto replicating the Goodville Cartoon (the South Park-parody animated cutaway gag in TRIPPEDD EP01, billed 'NOT SOUTH PARK. JUST AS STUPID.') using ONLY free/open-source tools (Blender, etc.). Work on a new branch off main (docs/south-park-study), commit incrementally, heartbeat the checkpoint ~/workspace/agent-ops/checkpoints/south-park-study.json after every commit/step (at least every 10 min), open a PR when done. Do NOT invent Goodville canon (names, characters, episodes) \u2014 study South Park only, with a final section mapping findings onto the Goodville Cartoon's known facts: South Park-parody cutaway, Goodville TN setting, tagline 'SAME PEOPLE. DIFFERENT BULLSHIT.', existing key art at assets/references/ep01/source/Goodville - Not South Park.png. Existing mentions only: docs/creative/EPISODE-IDEA-BANK.md, docs/creative/EP01-THE-WALK-CANON.md (canon rule C07: Goodville is a gag family, not one insert), src/core/pipeline/episodes.ts SEG05 (Goodville Cartoon, NOT_STARTED, AI-generated 2D animation). Verify sources; cite them. Mark checkpoint status done at the end.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-11T04:00:36.529427+00:00",
+ "notes": "DONE: 3rd Goodville gag added; committed + pushed to docs/south-park-study (PR #134 updated)"
+}

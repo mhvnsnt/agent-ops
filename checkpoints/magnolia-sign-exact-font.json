@@ -1,0 +1,10 @@
+{
+ "task": "Build exact font from Magnolia Square sign lettering (owner 2026-10-10)",
+ "repo": "~/workspace/font-wizard",
+ "resume_brief": "Owner 2026-10-10: UnifrakturCook Bold was NOT close enough to the Magnolia Square sign \u2014 he wants the EXACT font built from the sign itself. Source photos: ~/workspace/media-pipeline/brand-refs/magnolia_square_sign.jpg (full) and magnolia_sign_crop.jpg (clean text crop). The sign is all-caps Old English/blackletter style. Trace the actual letterforms from the sign photo, vectorize each glyph, build a real installable TTF with fontTools covering A-Z, 0-9, and basic punctuation in the sign's exact style. Name it per the font naming workflow (worker proposes a name, owner keeps or renames). This becomes a Font Wizard product like the other packs ( listing pattern). Deliver the TTF + specimen render for owner approval.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T01:02:37.331885+00:00",
+ "notes": "v2 COMPLETE and pushed (e37df4d on feature/magnolia-square-font). 11 glyphs re-traced with clean segmentation. E confirmed missing from physical sign. Note: art-stack/ was empty (not actually ready) - used hand-rolled OpenCV approach which worked."
+}

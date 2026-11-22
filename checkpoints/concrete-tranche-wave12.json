@@ -1,0 +1,10 @@
+{
+ "task": "Wave 12: S5 COUNTER SFX (TIER 3 item 12) \u2014 Concrete Dragon",
+ "status": "done",
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "Resume Concrete Dragon Wave 12 tranche. Task: wire distinct counter SFX (S5) to the counter mechanic \u2014 counters are currently silent. Find counter trigger code in game-3d/src/main.js (grep nearMiss/BURST/DESPERATION; wave-9 waves used sfx files from staged kenney rpg-audio). Pick CC0 crack/chime from staged kenney_rpg-audio.zip or kenney_ui-audio.zip, OGG-to-MP3 into game-3d/build/assets/, register in build/asset-manifest.json, credit in ASSETS_CREDITS.md. Play a distinct SFX only when the counter resolution fires (not on normal hits). Add test hook + __cdtest hook like waves 8-11 did. Headless playtest-verify: boot, trigger counter, zero console errors, screenshots to game-3d/shots-countersfx/ (eyes-on). Write docs/TRANCHE_WAVE12_COUNTERSFX.md decision doc + mark WIRING_QUEUE.md item 12 WIRED with date. Work on branch wave12-countersfx from main (checkout origin/main first \u2014 wave11-footsteps PR #1 is open, do NOT merge it). Commit incrementally, push branch, open PR via gh pr create. Heartbeat the checkpoint after each commit. Follow AGENTS.md laws: game must actually work, no fake gameplay, CC0/manifest clean, localStorage save persists, branch+PR (never push straight to main).",
+ "notes": "DONE: PR #2 opened (wave12-countersfx -> main). Commits 507603e (asset+wiring), 1254f91 (playtest+docs). Playtest 16/16 PASS, 5 shots eyes-on verified.",
+ "watchdog": true,
+ "attempts": 3,
+ "updated_at": "2026-10-08T13:12:44.482695+00:00"
+}

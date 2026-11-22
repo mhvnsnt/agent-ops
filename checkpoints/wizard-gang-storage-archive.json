@@ -1,0 +1,10 @@
+{
+ "task": "Finish the wizard-gang-storage archive: push Wizard Gang small production assets (voice, masters manifests, docs) to the empty private repo",
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "wizard-gang-storage (mhvnsnt/wizard-gang-storage) is an EMPTY private repo created 2026-10-09 as the small-files archive of Wizard Gang production assets. Job: audit ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01 (1.5GB) plus any Wizard Gang assets in ~/workspace/god-molecule-studio and ~/workspace/God-molecule-production-stage; select voice files, masters manifests, docs (screenplay, storyboard, dialogue, provenance, VOICE_STATUS, character refs, stills) \u2014 everything under 90MB per file; EXCLUDE all video (lives in B2), exclude voice-model weight files (already in B2 wizard-gang-voice bucket), exclude anything >90MB. Create initial branch main in local clone ~/workspace/wizard-gang-storage, write a README.md describing the archive layout and noting large video lives in B2 buckets wizard-gang-masters/wizard-gang-voice, commit, push to origin main. Do NOT delete originals \u2014 this is a second copy, not a move. Verify: fresh clone shows the files. Heartbeat the checkpoint after each commit. Mark status done at end.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-09T20:49:45.872570+00:00",
+ "notes": "COMPLETE: 182 files (~178MB) pushed to mhvnsnt/wizard-gang-storage main in 4 commits (f70aed9, 197fbe4, ec11b75, 76a27f9). Fresh clone verified: all files present, 0 video files, 0 files >90MB. Excluded: all .mp4 video (B2 wizard-gang-masters), voice-model weights (B2 wizard-gang-voice), 212MB rig-proof PNGs (QA screenshots, over budget). Originals untouched in trippedd-studio and god-molecule-studio."
+}

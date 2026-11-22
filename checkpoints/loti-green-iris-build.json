@@ -1,0 +1,12 @@
+{
+ "task": "Build the green iris effect: hood leprechaun transform + That's-all-folks green iris transition for the Luck of the Irish commercial",
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "GREEN IRIS EFFECT BUILD (owner 2026-10-09): the rendered effect was never found anywhere reachable (full ledger in production/TRIPPEDD_EP01/LOTI-ASSET-MAP.md, PR #99) \u2014 BUILD IT from the pipeline spec in src/core/pipeline/effects.ts. Spec: take a frame from the EP01 footage (use a LOTI-candidate frame if the investigator confirmed one, else a representative chilling frame from the 17 clips) \u2192 transform the person into 'Hood Leprechaun, 8k, photorealistic, glowing green iris, wearing green track suit' (use media.generate_image with image-edit on the source frame to preserve the person's likeness) \u2192 ffmpeg green iris transition (That's-all-folks style iris in/out, green) + freeze frame + optional sparkle glow \u2192 LUCK OF THE IRISH title card (bold emerald green typography, transparent bg per JobsPipeline.tsx titlePrompt) \u2192 the 13 disclaimers as end fine-print (white on black, from src/core/pipeline/gags.ts LUCK_OF_THE_IRISH_DISCLAIMERS). Assemble the full commercial: Shot A (far, slow zoom) \u2192 Shot B (closer angle) \u2192 Shot C (wide, 'LUCK OF THE IRISH!!!' fourth-wall break) \u2192 green iris effect \u2192 title card \u2192 disclaimers. Verify every piece visually (open and read frames). Output: production/TRIPPEDD_EP01/segments/luck-of-the-irish/ \u2014 commercial MP4 + build notes. Branch->PR->merge (merge commits only, 0 open PRs). Sparse-checkout ok, never /tmp worktrees, don't touch feature/ep02-visual-rebuild. Heartbeat checkpoint, mark done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T05:43:50.344939+00:00",
+ "redirect": "owner 2026-10-10: PREP components only, HOLD final render until base cut lands",
+ "progress": "transform test verified; title card verified; disclaimers verified; iris transition compositing",
+ "result": "PR #102 merged 2026-10-10T05:43:00Z: 5 prepped components + BUILD-NOTES.md; final render HELD for base cut"
+}

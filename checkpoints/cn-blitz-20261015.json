@@ -1,0 +1,10 @@
+{
+ "task": "CN GIGALEAK BLITZ \u2014 Gumball-first, continuous check-and-pull loop",
+ "repo": "~/workspace/cn-leak-pull-100",
+ "resume_brief": "Gumball-first blitz 2026-10-15. 4 parallel workers downloading 43.52GB rar in 41x1GB chunks \u2192 GH release gumball-leak-v1 on cn-gigaleak-gumball. Serial was 17MB/min (~41h); parallel 4x targeting ~10h. GitHub holdings verified: bibles 170MB + S2 rigs 2.4GB = 2.57GB held; gap ~41GB. S2 rigs mirror is byte-identical duplicate \u2014 skipped. TeraBox /CN-Gigaleak/gumball/ check needs browser lane (parent). OK KO 6G/7.9G still downloading. Disk 78%. Workers: ~/workspace/cn-leak-pull-100/dl/gumball-worker.sh. Checkpoint: cn-blitz-20261015.json.",
+ "status": "complete",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-15T21:30:55.596994+00:00",
+ "notes": "\nPULSE 2026-10-15 10:12 EDT: work verified HEALTHY in-process (TTT2 part_12 downloading @10:12, state 11/26, flock held; CN blitz OK KO.zip 6.9G growing @10:12, 4 gumball workers alive). Heartbeat refreshed only; no resume needed. | 2026-10-15 11:58 EDT (pulse): superseded by gumball-pull-20261015.json (concrete segment pull, partial segment ab on disk). Do not spawn a second Gumball worker.\nWatchdog 2026-10-15 17:28 EDT: marked complete as SUPERSEDED \u2014 work continues under gumball-pull-20261015.json (running, verified healthy: gumball-part-ae + parallel pulls in flight). Do not spawn a second Gumball worker."
+}

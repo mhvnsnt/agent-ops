@@ -1,0 +1,12 @@
+{
+ "task": "Soulcalibur VI game pull + teardown: download PC version, extract models/textures/stages/weapons/UI, document combat mechanics (8-way run, guard impact, reversal edge, soul charge), push everything to western-heart/teardown/soulcalibur-6/",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/game-reverse-engineering/soulcalibur-6",
+ "resume_brief": "Pull Soulcalibur VI (2018) PC/Steam version. Check Archive.org for the game first (archive.org item search). If found, download and verify. Map file structure: characters, stages, animations, UI, weapons. Extract character models, textures, stages, weapons, animations, UI/menus. PRIORITY: document combat mechanics \u2014 8-way run movement, guard impact, reversal edge, soul charge system, weapon-based combat ranges, lethal hits, ring-out mechanics. Write TEARDOWN.md covering everything. Push all to western-heart/teardown/soulcalibur-6/ via branch\u2192PR\u2192merge. Disk is tight (~90%) \u2014 download to ~/workspace/game-reverse-engineering/soulcalibur-6/ and be careful. If download fails or disk blocks, document and report.",
+ "updated_at": "2026-10-13T14:55:00Z",
+ "attempts": 0,
+ "notes": [
+  "PR #45 merged. TEARDOWN.md + SCVI-MECHANICS.md on main. Game binary NOT acquired (not on IA, 32GB, disk 93%). Pull strategy documented."
+ ]
+}

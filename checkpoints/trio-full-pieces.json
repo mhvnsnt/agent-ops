@@ -1,0 +1,9 @@
+{
+  "task": "Full upper-body cuts + separated pieces for the trio outfit variants",
+  "repo": "~/workspace/trippedd-studio",
+  "resume_brief": "In ~/workspace/trippedd-studio, on branch feat/trio-full-pieces off origin/main: owner 2026-10-11 flagged that the outfit torso pieces have 'arms cut off and cropped off at the sides for no reason' and wants 'ones with faces and ones with faces separate too, and all individual card and sheet pieces.' Source: /home/hatch/workspace/user/files/1000173536_14_nhu1.png (ChatGPT car trio). USE THE IMAGE LAW \u2014 cut from the owner's pixels, never hand-build. FOR EACH of the three (Dickie palm-tree shirt, Bubba blue work shirt, Julio hatless): (1) UPPER BODY WITH FACE: full upper-body cut \u2014 head + torso + COMPLETE arms (widen the extraction crop so arms are NOT clipped at the edges; include the full arms down to the hands). (2) SEPARATED PIECES: head alone, torso alone (neck-down, shaped hems, no square cuts), left arm alone, right arm alone. So per character: 1 combined + 4 separated = 5 pieces. Name them clearly (e.g. upper_with_face.png, head_sep.png, torso_sep.png, arm_L_sep.png, arm_R_sep.png). All into kits/dickie/, bubba/, julio/. Verify every piece zoomed against the source \u2014 no clipped arms, no face parts in torso pieces, no background remnants. Update manifests + drill logs. Commit, open a PR (do NOT merge). Heartbeat ~/workspace/agent-ops/checkpoints/trio-full-pieces.json every 10 min. Report: pieces per character, verification. Mark done at the end.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-11T19:11:19.041705+00:00"
+}

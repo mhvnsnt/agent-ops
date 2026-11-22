@@ -1,0 +1,9 @@
+{
+ "task": "Fix 5 defects in the 15s Goodville promo (black bar, head scale, beer can, blue rectangle, missing cigarette)",
+ "repo": "~/workspace/trippedd-studio",
+ "resume_brief": "FIX PASS on the 15-second Goodville promo in ~/workspace/trippedd-studio, branch feat/goodville-promo-15s (PR #149 open \u2014 update it, do NOT open a new PR). The parent caught 5 defects the first worker missed \u2014 fix all of them: (1) Shots 1-2 (old head close-up): a solid BLACK BAR artifact spans the bottom ~15% of frame \u2014 remove it. The old head is oversized vs the key-art framing and covers the GOODVILLE sign text \u2014 scale/reposition so the sign stays readable (owner: 'as close to the image we started with as possible'). The cigarette is missing from his mouth \u2014 add it (documented likeness item). (2) Shot 3 (Broadway): the BEER can renders BLUE like a Pepsi can \u2014 fix to the key-art beer can (documented prop). There is an unexplained BLUE RECTANGLE on Amos Jr.'s torso \u2014 remove it or explain it. His head-to-body proportion reads bobblehead vs the key art \u2014 tighten to key-art proportions. The 'TAC' sign text is cut off mid-word \u2014 complete it or reframe. The punch pose reads stiff (arm stuck out horizontally) \u2014 get the punching arm into the punch. Re-render, re-run the frame-check with these 5 defects ADDED to the checklist, verify the fixed frames with your own eyes (read the PNGs), commit incrementally, heartbeat ~/workspace/agent-ops/checkpoints/goodville-promo-fix.json every 10 min, push to the same branch (update PR #149). Do NOT merge the PR yourself. Report: which defects fixed + frame evidence, anything still off. Mark checkpoint done at the end.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T08:12:56.650380+00:00"
+}

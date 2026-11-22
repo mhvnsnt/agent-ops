@@ -1,0 +1,4 @@
+{"task": "Pull in Genex (MIT AI game-dev harness) and wire into ALL game repos. SCOPE EXPANDED: all repos, not just AshLanev2/ConcreteDragon.",
+ "status": "done", "watchdog": true, "repo": "~/workspace/genex",
+ "resume_brief": "Genex integration complete. Skill installed in 8 repos (6 Three.js + 2 Godot). Desktop app v0.1.4 downloaded and launch-tested. INTEGRATION.md documents everything. Remaining user step: browser sign-in via `npx @genex-ai/cli-demo@latest tools` in each repo.",
+ "updated_at": "2026-10-08T21:15:00-05:00", "attempts": 0}

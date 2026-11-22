@@ -1,0 +1,9 @@
+{
+ "task": "Research open-source beat-em-up enemy AI to fix Concrete Dragon CPU behavior",
+ "repo": "~/workspace/ConcreteDragon",
+ "resume_brief": "The Concrete Dragon CPU enemies currently just walk into the player without attacking. Research open-source beat-em-up/brawler enemy AI: state machines, behavior trees, attack decision logic, spacing/positioning, difficulty scaling, group coordination. Find concrete open-source codebases/libraries to pull in. Produce a fix plan mapped to the actual Concrete Dragon codebase (read the repo first). Write findings to ~/workspace/concrete-dragon-launch/research/enemy-ai-fix-plan.md. Verify against real sources. No invented facts.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-09T23:58:00+00:00"
+}

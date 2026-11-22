@@ -1,0 +1,10 @@
+{
+  "task": "Hunt for Heihachi, Yoshimitsu, Bryan Fury, Jack-7 Tekken 7 models",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/game-reverse-engineering",
+  "resume_brief": "Searching Sketchfab, Models-Resource, VG-Resource, DeviantArt, BowlRoll, Chinese sites, GitHub, Archive.org, Reddit, and XNALara communities for free downloadable Tekken 7 3D models of Heihachi Mishima, Yoshimitsu, Bryan Fury, and Jack-7. Acceptable formats: FBX, OBJ, DAE, PMX, XPS, BLEND, glTF. Recording working URLs, formats, sizes, and signup requirements for each find.",
+  "updated_at": "2026-10-13T02:55:00Z",
+  "attempts": 0,
+  "notes": "Hunt complete. Heihachi: FOUND via GTA SA T7 conversion (GTAinside, 9.7MB, live). Yoshimitsu: FOUND x2 on DeviantArt (Bost0n-KR33m w/ archive.org files, LorisC93 w/ swords+variants). Bryan Fury: NOT FOUND as free T7 (closest = T8 XPS by Burning-Jay). Jack-7: NOT FOUND (only Tag-era Gun Jack). Catalog at ~/workspace/game-reverse-engineering/tekken-missing4-catalog.md."
+}

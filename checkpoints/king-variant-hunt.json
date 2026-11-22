@@ -1,0 +1,10 @@
+{
+  "attempts": 1,
+  "repo": "~/workspace/western-heart",
+  "resume_brief": "King variant hunt subagent (session 9c32ff75): download every King model variant from rigmodels.com (King T7 54,612 poly static + King animated 16k, check quota), DeviantArt (logged in fmmgmars \u2014 subagent has no live browser; attempt public fetches/curl, report gated items), SFMLab, Open3DLab, and Tekken 6 PSP game-data outfits (P1/P2/P3/Suit/Beast from T6 lane files at ~/workspace/game-reverse-engineering/). For each find: download to ~/workspace/game-reverse-engineering/tekken7/models/king-variants/<source>/ with a README.md (source URL, poly count, format). Then copy all models to western-heart/teardown/tekken7/models/king-variants/ and land via branch -> PR -> merge into mhvnsnt/western-heart. Report every variant found with source and status.",
+  "status": "done",
+  "task": "King variant hunt: all King model variants from rigmodels.com, DeviantArt, SFMLab, Open3DLab, Tekken 6 PSP; organize into king-variants dirs; push to western-heart via branch/PR/merge",
+  "updated_at": "2026-10-13T15:35:00-04:00",
+  "watchdog": true,
+  "notes": "DONE. Secured: T8 King Base + T8 King S2 (WhiteMageSunny/DA, 106MB 7z + 114MB rar), Beast King Tekken Revolution (archive.org). Release: mhvnsnt/western-heart king-variants-2026-10-13 (byte-verified). PR #54 merged, zero open PRs. Local: game-reverse-engineering/tekken7/models/king-variants/<source>/. Browser-task queue for parent: rigmodels T7 animated 16,683 (quota/login), Open3DLab T8 Armor King 638MB, 9 DA login-gated variants \u2014 exact URLs in western-heart teardown/tekken7/models/king-variants/KING-VARIANTS-INDEX.md. Disk at 90% noted (was 88% at task start; /tmp scratch cleaned)."
+}

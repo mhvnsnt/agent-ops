@@ -1,0 +1,10 @@
+{
+ "task": "Offload trippedd-studio 18G: audit untracked production files, push safe ones to repo, route bulk to releases",
+ "repo": "~/workspace/trippedd-studio",
+ "resume_brief": "Audit ~/workspace/trippedd-studio (18G). git status shows untracked files under production/ (mp4s, kits, voices, tools). Determine which are already backed up vs new. Push new ones via branch->PR->merge (merge the PR). Large binaries go as release assets, not git. VERIFY every upload via GitHub API before deleting local. Never touch .DO_NOT_DELETE dirs. Log to ~/workspace/agent-ops/disk-cleanup-log.md. Heartbeat checkpoint every 15 min.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 3,
+ "updated_at": "2026-10-14T00:50:00+00:00",
+ "note": "DONE: 19 untracked files committed via PR #247 (merged 9868db10), verified 19/19 byte-exact on origin/main via gh api. video/ (1.3G) protected by .DO_NOT_DELETE \u2014 not touched. GB freed: 0."
+}

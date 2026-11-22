@@ -1,0 +1,10 @@
+{
+  "task": "Organize 3 Rashid (SFV) 3D models into street-fighter-5/models/rashid/ and commit to western-heart",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/western-heart",
+  "resume_brief": "Organize 3 Rashid model archives (sfv_rashid_default_xnalara_xps_by_pharaohillusion_dcp5pdj.7z, sfv_rashid_air_man_xnalara_xps_by_pharaohillusion_ddo9k24.7z, rashid.rar) downloaded via browser. Find them in the browser download dir (likely ~/workspace/browser_downloads/), verify each archive, extract to ~/workspace/game-reverse-engineering/street-fighter-5/models/rashid/<variant>/, write README.md with artist/source/format/variant/license, then commit to western-heart via branch->PR->merge under teardown/street-fighter-5/models/rashid/. Models too large for git go to a GitHub Release with manifest in repo.",
+  "updated_at": "2026-10-13T23:00:00Z",
+  "attempts": 1,
+  "notes": "PR #62 merged. 3 Rashid variants organized, archives on Release rashid-models-20261013."
+}

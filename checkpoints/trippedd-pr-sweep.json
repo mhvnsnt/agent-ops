@@ -1,0 +1,19 @@
+{
+ "task": "Sweep and merge the 24 stale open PRs in TRIPPEDD-Production-studios- \u2014 clean merges, nothing destroyed",
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "PR sweep (owner 2026-10-09, no-open-PRs law): 24 stale open PRs in mhvnsnt/TRIPPEDD-Production-studios-, all Sept 8-14 2026, tooling/production wave era. PR numbers: 3, 15, 18, 27, 31, 32, 33, 34, 37, 40, 41, 42, 49, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65. Process oldest-first, one at a time. For each: inspect (gh pr view), check mergeable, merge with --merge (merge commits only). On conflict: boundary-aware keep-both resolution, then syntax/structure-verify the touched files before committing the resolution. NEVER force-push, never close a PR with unmerged work, never delete an unmerged branch. After a clean merge, delete the merged branch (work preserved in main). If a PR cannot be merged cleanly (superseded, dead code), do NOT force it \u2014 record it for owner decision with the reason. Verify main stays healthy after each merge. 0 open PRs is the target. Heartbeat checkpoint after each PR, mark done at end.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 3,
+ "updated_at": "2026-10-10T01:56:58.992835+00:00",
+ "notes": "SWEEP COMPLETE 2026-10-10: all 17 remaining PRs merged (34, 37, 40, 41, 42, 49, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 \u2014 24 total incl. prior worker). 0 open PRs. All branches deleted. Conflicts resolved keep-both: PR34 (kept main adapter doc, preserved PR34 test script), PR42 (kept PR MVMP approach + main eye_frame/lid fns; renamed MVMP validator; workflow ref fixed), PR60 (AGENTS.md kept main expanded; bulletin merged), PR63 (CSS concatenated, page split to / + /rocket, layout.tsx pre-existing markers FIXED).",
+ "prs_merged": [
+  87,
+  18,
+  27,
+  89,
+  31,
+  32,
+  33
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "branch": "feat/wmxix-ymg-geometry-20261020",
+ "j3_done": true,
+ "notes": [
+  "2026-10-20 22:2x CDT: clone in ~/workspace/_j3-work/wh at main 8ac300d (PR #403 head); branch feat/wmxix-ymg-geometry-20261020 created after transient git-lock EPERM retries.",
+  "Format research (teardown docs v2/v3, DOL decoder report, batch semantics, skinning/assembly solutions + Lane-A disproof; mod-repo tools): positions are a strip-ordered s16x3 BE pool /64 starting right after the skin-batch descriptor table, ending at GCTC [0x38]; strip split max(400, 4x median step); elbow ground truth 145 position verts/14 strips/113 tris reproduced exactly.",
+  "Sample phase FAILED own-eyes validation: 10 samples across versions/categories rendered in Blender Workbench as disconnected fragments, not parts. Strips are internally coherent ribbons (measured) but are NOT in one shared frame - welded meshes split into 7-44 components (largest 14-68%). The per-strip-group placement transform is the same unsolved piece as wrestler assembly.",
+  "Batch ran over all 1,200 .ymg (4 chunks): 998 blocked_ymg_decode (445+119 fragmented_assembly, 349 pool_steps_incoherent, 7 long_edge_tris, 1 tiny) + 202 DUMY left as-is. 77 files (all v0x30001) passed every numeric gate, were converted, then REVOKED after Blender renders of 6 class samples failed eye validation (crossing-fan fragments); GLBs deleted, revocations in the conversion log.",
+  "ZERO GLBs shipped; CATALOG.json unchanged (0 stamped, verified). Runtime: build_suite_catalog.py regenerates parts-catalog.json IDENTICAL (total 4,523; geometry GLBs 303). Tests by filename: catalogs.test.js 6/6 (incl. new honesty test), dna.test.js 4/4.",
+  "Deliverables on branch: customization/tools/convert_wmxix_ymg.py, customization/parts-converted/wmxix-conversion-log.jsonl (1,200 records), wmxix-conversion-report.json, customization/WORKLOG-WMXIX-YMG.md (blocker + next-step path: DOL ring-buffer file->record transform via Ghidra), test addition. Blender slot RELEASED (j3_done=true: batch fully run; the Def Jam lane may proceed - but note ZERO wmxix geometry converted, blocker documented, do not treat gap #2 as closed).",
+  "Worktree hazard found+fixed: sparse blobless clone index carried 59,168 staged phantom deletions; cleared with git reset (index only) and staged explicit paths only. Worktree teardown/ files are empty blob placeholders - irrelevant to this lane's committed paths.",
+  "2026-10-21 follow-up (coordinator relay): PR #420 body rewritten to the instruction-gate-proven structure (mirror of PR #415) and verified LOCALLY with the repo gate script (.github/scripts/instruction_gate.py) - GATE ERRORS: NONE. Deviations kept honest (non-none) with an approval ref on every line. WORKLOG addendum committed: census of the 3 .ymm YOBJ full-model containers (not_converted, other-endian variant, decoder no_pool_bounds) - part of the 1,213 geometry_pending remaining after J2 (998 + 202 DUMY + 13 non-texture). Test made merge-order safe vs PR #415 (texture count floor 1044). Verified-writes pattern (write + read-back size check + retry) was already in the tool for GLB/catalog/report/log writes."
+ ],
+ "outputs": [
+  "customization/tools/convert_wmxix_ymg.py",
+  "customization/parts-converted/wmxix-conversion-log.jsonl",
+  "customization/parts-converted/wmxix-conversion-report.json",
+  "customization/WORKLOG-WMXIX-YMG.md",
+  "packages/creation-suite/test/catalogs.test.js (1 test added)"
+ ],
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "JOB 3 batch is COMPLETE with an honest blocker outcome: the WMXIX YOBJ strip-pool decode was built into customization/tools/convert_wmxix_ymg.py and run over all 998 blocked_ymg_decode parts; ZERO converted - sample renders and a 77-file gate-passing set both failed own-eyes Blender validation (strips are coherent fragments, not assembled parts; per-strip-group placement transform unsolved, same wall as wrestler assembly; all evidence + next-step DOL/Ghidra path in customization/WORKLOG-WMXIX-YMG.md). CATALOG.json and runtime totals unchanged (4,523 entries / 303 geometry GLBs). j3_done=true releases the Blender slot for the Def Jam lane. To resume the conversion itself: crack the file->runtime ring-record transform from main.dol (see YOBJ-DOL-DECODER-REPORT.md), then rerun the tool (gate -> eye-validate per class -> catalog stamp).",
+ "started": "2026-10-20T22:24:00-05:00",
+ "status": "batch_complete_zero_converted_blocker_documented",
+ "task": "JOB 3 - WMXIX YOBJ->GLB geometry conversion (creation-suite gap-fill gap #2)",
+ "watchdog": false,
+ "pr": "https://github.com/mhvnsnt/western-heart/pull/420"
+}

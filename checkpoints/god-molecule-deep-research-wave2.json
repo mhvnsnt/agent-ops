@@ -1,0 +1,10 @@
+{
+ "task": "God Molecule deep research WAVE 2: landmark episode dissections, joke-level analysis, production pipeline specifics, applied episode treatments",
+ "repo": "/home/hatch/workspace/god-molecule-studio",
+ "resume_brief": "God Molecule research wave 2 (owner 2026-10-09, 'do wave 2'). Wave 1 (docs/research/ in God-Molecule-Show-Studio: OFF-THE-AIR-DEEP, XAVIER-DEEP, TONG-NOU-DEEP, CRAFT-SYNTHESIS, PR #5 merged) covered episode-level craft. Wave 2 goes deeper AND applied: (1) landmark episode dissections \u2014 2-3 key episodes per show (Off the Air, Xavier: Renegade Angel, Eastern Mind: Tong-Nou), beat-by-beat breakdowns: structure, transitions, joke placement, timing; (2) joke-level analysis \u2014 transcribe signature bits, dissect mechanics (setup length, pauses, callbacks); (3) production pipeline specifics \u2014 tools, software, crew, budgets, schedules, how each show is actually made (informs OUR pipeline); (4) APPLIED: draft God Molecule episode treatments/storylines using the devices + concrete bible additions for the merge-into-one (Bible A = production-stage ShowBible.tsx is #1 canon; Mars = floating cobalt head, forehead portal, Kevin, EP1 Void/Door blocking). Output: docs/research/wave2/ in mhvnsnt/God-Molecule-Show-Studio via branch->PR->merge (merge commits only, 0 open PRs). Read wave-1 docs first; go deeper, don't repeat. Heartbeat checkpoint, mark done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-10T01:17:00.489763+00:00",
+ "notes": "treatments + bible-additions drafted; awaiting 3 researcher reports for dissections/jokes/pipelines docs"
+}

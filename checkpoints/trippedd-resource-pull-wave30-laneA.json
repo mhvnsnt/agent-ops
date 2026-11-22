@@ -1,0 +1,9 @@
+{
+  "attempts": 2,
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "Lane A Wave 30: branch wave30-lane-a (based on main cf1ff89, catalog at 2802). Add ~60-98 honest #### entries to docs/RESOURCE_CATALOG.md across: (1) PD score-archive tail beyond Wave 29 (read docs/wave29/lane-a.md first), (2) chiptune label/operator deep-dives with license verification, (3) caption burn-in SaaS long tail, (4) retro-tracker format docs. Pre-append dedup greps mandatory. Licenses verified upstream, never assumed. GPL/AGPL -> docs/LICENSE_QUARANTINE.md continuing max row numbering. Honest negatives in docs/wave30/lane-a.md. COMMIT AND PUSH EVERY ~15 ENTRIES. Do not touch production/WIZARD_GANG_EP01/. Do not merge. INCIDENT 2026-10-07: another worker on this shared VM reset local+origin wave30-lane-a to cf1ff89 mid-task; recovered by re-pointing branch to 1ebb860 (batch-1 commit) and re-pushing (origin now 1ebb860). Before every push, verify with git ls-remote origin refs/heads/wave30-lane-a. WORKTREE 2026-10-07: shared working tree is being branch-switched by concurrent wave1-anim workers mid-task (batch-2 commit landed on wave1-anim-lane-a1 as be9c052; wave30-lane-a got a benign merge of ANIMATION_TOOL_CATALOG.md only). Moved Lane A work to isolated git worktree ~/workspace/trippedd-studio-wave30 pinned to wave30-lane-a. Batch-2 content verified intact in be9c052 (2834 entries, diff vs 1ebb860 is purely the 15 additive entries) - apply via git diff 1ebb860 be9c052 -- docs/RESOURCE_CATALOG.md | git apply inside the worktree. Batches 3 (caption SaaS) and 4 (tracker docs) still to do. Commit+push every ~15 entries; verify branch before each push.",
+  "status": "done",
+  "task": "Wave 30 Lane A: catalog deepening",
+  "updated_at": "2026-10-08T00:05:00-04:00",
+  "watchdog": true
+}

@@ -1,0 +1,10 @@
+{
+ "task": "Monitor the fixed-rig proof video render to completion, verify animation honestly, deliver to owner.",
+ "repo": "~/workspace/bannon-video-pipe",
+ "resume_brief": "Monitor ~/workspace/proof_render_run16.log until PIPELINE DONE. Then verify the ACTUAL ANIMATION (not stills): extract frames across full movement cycles, check each limb moves only its own region. Verify: (1) no weight bleed, (2) feet on ground, (3) end card is 3-5s max with no Bannon text, (4) ~50s duration, audio present. Copy to ~/workspace/your_files/STICKUP_v2_FIXED_RIG.mp4 if all pass. Heartbeat checkpoint, mark done.",
+ "status": "needs_owner",
+ "watchdog": true,
+ "attempts": 1,
+ "notes": "WATCHDOG VERDICT 2026-10-10 ~01:00 UTC: run19 pipeline was killed by daemon restart (no blender process alive, /tmp/entrance_work_v2 frame cache wiped by restart \u2014 render NOT resumable). Earlier completed render exists: out/STICKUP_PIPELINE_TEST/STICKUP_v2_proof_50s_16x9.mp4 (run15, PIPELINE DONE, 50.1s, 480x270, aac audio present). HONEST FRAME-BY-FRAME QC on 16 sampled frames (t=2..50): PASS duration ~50s; PASS audio; PASS feet-on-ground in all motion frames; no gross weight bleed visible at 480x270 (resolution too low for a definitive bleed verdict). FAIL endcard: shows STICK UP over BANNON text (gate requires no Bannon text) AND endcard holds from ~t=38s to ~t=49s (~11-12s, gate requires 3-5s max). Source of defect: pipeline config default cards endcard sub=BANNON. VERDICT: render fails its own gates \u2014 NOT delivered to your_files, no owner notification of success. Deeper problem: this render proves the pre-retraction rig (the fixed claim was retracted tonight; real fix is in active lanes repose-reskin + stickup-rebuild). Correct action: re-run the proof render against the NEW rig once stickup-rebuild lands, with endcard config fixed (sub removed, hold 3-5s). Watcher note preserved: original watcher closed (was deleting system files); parent monitoring directly.",
+ "updated_at": "2026-10-10T01:58:45.725501+00:00"
+}

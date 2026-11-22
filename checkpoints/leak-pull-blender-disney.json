@@ -1,0 +1,10 @@
+{
+ "task": "Pull Blender Open Movies (legal CC-BY) + remaining Disney TVA pack for steal-like-artist playbook; stream bulk to cloud, keep local light",
+ "repo": "~/workspace/animation-techniques/steal-like-artist",
+ "resume_brief": "Continue the steal-like-artist leak-pull lane: (1) Blender Open Movies \u2014 download production files for Big Buck Bunny, Sintel, Tears of Steel, Elephants Dream from https://studio.blender.org/films/ (all CC-BY, legal). Prioritize .blend character rigs, then full scenes. (2) Disney TVA \u2014 pull the remaining files from the two IA items (disney-tva-pitch-bibles 610 files/2.07GB, pilots-bibles-animation-and-others-by-dtva 1058 files/23.7GB) that the earlier lane did not grab; full list in ~/workspace/animation-techniques/steal-like-artist/other-packs/LANE-B-CATALOG.md. DISK DISCIPLINE: local disk is at 88% \u2014 NEVER accumulate bulk locally. Stream large files straight to B2 (b2://trippedd-show-footage/blender-open-movies/ and b2://trippedd-show-footage/disney-tva/) or Google Drive, verify the upload, then delete local. Keep local only small study files, READMEs, and catalogs under ~/workspace/animation-techniques/steal-like-artist/. Do NOT touch the CN gigaleak lane (a separate worker is actively pulling/pushing it). Update LEAK-INDEX.md pull statuses when done. Heartbeat this checkpoint after every major step; mark status done at the end.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-12T18:53:05.889674+00:00",
+ "notes": "DONE 2026-10-12. Disney: 44 new PDFs (398MB) verified+ zipped; full 184-line per-file catalog written; 36 pilot MP4s catalogued not pulled. Blender: BBB full production tree (422 files) MD5-verified 100%, zipped (1.08GB). LEAK-INDEX entries 3+9 updated. Cloud upload BLOCKED: B2 key bucket-restricted to wizard-gang-voice; Drive quota full (16.10/16.11GB). Zips staged at ~/workspace/agent-ops/staging-leak-pull/ awaiting parent decision on cloud target."
+}

@@ -1,0 +1,38 @@
+{
+  "blocked_on_owner": [
+    "GO-LIVE DECISION: approve Telnyx Route A (~$23.80/mo + $19.50 one-time, account + funding are his signup) or toll-free-first bridge (~$18/mo, 1 contact) or hold.",
+    "EIN in hand (Orion Enterprises LLC) \u2014 required for the 10DLC brand filing.",
+    "Area code pick for the 8 numbers."
+  ],
+  "id": "lindy-phone-20261104",
+  "next_steps": [
+    "Owner go-live decision (above)",
+    "Privacy-policy page up on his web infra (free, agent side)",
+    "Brand + campaign filing; buy numbers; host gateway; set env from secrets",
+    "Wire per-agent chat bridges (Ashes first) via backend.type=http"
+  ],
+  "owner_number": "PRIVATE \u2014 env/secrets only (OWNER_NUMBER), never committed",
+  "phase1_research": {
+    "a2p_verdict": "Route A: Low-Volume Standard 10DLC brand (EIN required) + 1 Low-Volume Mixed campaign ($1.50/mo) + 8 local numbers in one sender pool. One-time $19.50. ~$23.80/mo at 2,000 segments. Sole Proprietor = 1 number max (cannot do roster). 8 toll-free = snowshoeing risk, not recommended. Single toll-free = fastest bridge (TFV $0, 3-5 business days). Unregistered local traffic hard-blocked since Feb 2025.",
+    "existing_stack": "No SMS code in agent-ops/western-heart/cape-jones (code search). Composio current catalog has Twilio+Telnyx toolkits (local install stale, venv missing). Paired Android streams his SMS to Muse and supports contacts.create.",
+    "lindy": "Current Lindy = one personal assistant; texting via iMessage/SMS after owner verifies his number; one buyable voice number; $29.99-$199.99/mo credit plans. No per-agent numbers in current product.",
+    "oss": "Transport wired from @opencoredev/sms-sdk v0.1.1 (MIT) \u2014 documented memory() mock + verified Twilio/Telnyx webhooks. Runner-up AgentLine (MIT, outbound SMS undocumented). No candidate ships a sender allowlist \u2014 implemented in gateway router.",
+    "providers": "Telnyx cheapest (local $1/mo, SMS $0.004/segment); Twilio local $1.15/mo, SMS $0.0083; Plivo numbers $0.50/mo but reported enterprise-gate risk; Vonage least transparent."
+  },
+  "phase2_scaffold": {
+    "live_webhook_proof": "Twilio signed webhook parsed via sms-sdk; forged signature rejected (WebhookSignatureError -> 403)",
+    "path": "tools/lindy-phone",
+    "repo": "mhvnsnt/agent-ops",
+    "tests": "7/7 node:test pass + smoke PASS (mock provider, no network)"
+  },
+  "status": "landed-verified",
+  "task": "Lindy-style phone texting layer: one number per agent, owner-allowlisted SMS gateway (agent-ops tools/lindy-phone)",
+  "updated_at": "2026-11-04T18:35:00-06:00",
+  "watchdog": false,
+  "landing": {
+    "pr": "mhvnsnt/agent-ops#495",
+    "merge_commit": "b964daa66f6a57cd4dfeff24da0b68f88b3da1fc",
+    "ci": "instruction-gate PASS, no-deletion-guard PASS",
+    "verified": "contents API on main: tools/lindy-phone tree present, src/router.mjs 2998 B"
+  }
+}

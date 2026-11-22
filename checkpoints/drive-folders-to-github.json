@@ -1,0 +1,10 @@
+{
+  "task": "Move 7 Drive folders to GitHub repos, verify, then delete from Drive",
+  "repo": "mhvnsnt/drive-storage",
+  "resume_brief": "Move 7 Google Drive folders to GitHub per owner directive, then delete from Drive ONLY after verified secure in GitHub. Folders (IDs): bannon-video-pipe-backup-2026-10-10=1q8C-h7CQFw-1mwe_vWzYXubrfNJG1Gc3 (~50 files, 90MB: playtest webms/pngs/jsons/logs); Google AI Studio=1fQxoswTC6O7RzFlP7xX_Z8WATyVRZOwM (~33 files, 60MB: BANNON html builds, wrestling mp4s, prompts); Grok files=1Y6NppaQwnM2zutvF_hsIQZCq02BQrNb8 (~9 files, 40MB: TRIPPEDD oral-fix scripts, el toro mp4); Models tripo3d=19k_jmuiUYsAubZyx_bUL0m8svyYmevM5 (~6 files, 30MB: fbx, modly zip, pngs); Music=1aiPNX-MGDMtmXblB2UTMx3iKDXAt2vrD (~5 wavs, 160MB: his tracks); Shadow wizard gang Cartoonier shots=1axL3XqJpI7ztdVrQb0H-uvTyZNzdLB6T (~16 webp, 10MB); Shadow Wizard Gang Detailed shots=1YnWdPZp1XdSofIi8OmBjt1Otu5OqZWSN (~10 webp, 10MB). REPO MAP: bannon-video-pipe-backup + Google AI Studio -> the Bannon game repo (resolve exact mhvnsnt repo name via gh); Grok files -> trippedd-studio; Models tripo3d + Music -> mhvnsnt/drive-storage (owner: drive-storage is the place for stuff that came from Drive; use a clearly-named music repo only if one obviously exists); both Shadow Wizard Gang folders -> mhvnsnt/wizard-gang-storage. METHOD: recursively list each folder via Drive API (hatch_gws_cli drive), download to staging, push via branch -> PR -> merge (never direct to main, merge every PR, zero open at end), VERIFY via GitHub API that file counts and byte totals match the Drive listing, and ONLY then trash the Drive folders. Heartbeat this checkpoint; mark done at end.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-12T21:43:33.744609+00:00",
+  "notes": "ALL 7 FOLDERS COMPLETE. 129 files moved to GitHub, verified, Drive folders trashed. Details in final report."
+}

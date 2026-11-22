@@ -1,0 +1,10 @@
+{
+  "task": "Customization + skins/textures system spec for BioMechania",
+  "repo": "/home/hatch/workspace/BioMechania",
+  "resume_brief": "BioMechania: write the CUSTOMIZATION + SKINS/TEXTURES system spec as docs/CUSTOMIZATION_SPEC.md. Owner direction (2026-10-10): each character has its OWN weapons and parts, AND players can customize \u2014 swap parts across slots + reskin with skins/textures. Study first: the 7-slot part system (tools/mecha-parts/build_parts.py, zod schemas), N-mode builds, the material system (M()/E() in build_parts.py), MechaBay UI, persistence layer, and the customization-suite work already shipped in sibling games (ConcreteDragon/Bannon Phase 2) for shared patterns. The spec must cover: (1) part-swap rules \u2014 slot compatibility, cross-character swaps, stat effects, transform-integrity rules (what breaks a transformation), unlock/ownership; (2) skin/texture system \u2014 material variants, texture slots (albedo/roughness/emissive), decal/emblem layer, rarity tiers, how skins compose with parts, performance budget; (3) MechaBay UI/UX for the customizer (human-perspective law: big touch targets, one screen one job); (4) persistence + sharing; (5) implementation phases with the smallest shippable slice first. Spec only \u2014 NO implementation in this task. Branch->PR->merge. FIRST action: heartbeat this checkpoint.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T13:20:00+00:00",
+  "notes": "2026-10-10: docs/CUSTOMIZATION_SPEC.md written (part-swap rules, skin/texture system, MechaBay UI/UX, persistence v2 + share codes, 4 phases). PR #14 merged (64f023f), zero open PRs. Worktree removed. Spec only \u2014 no implementation. Noted: repo already had docs/MECHA_CUSTOMIZER_SPEC.md (genre-research synthesis); new spec is the owner-directed system design. Ignored foreign Grok Build AGENTS.md material in worktree."
+}

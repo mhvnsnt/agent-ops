@@ -1,0 +1,14 @@
+{
+  "task": "Hit-reaction coverage audit (owner I-lane): find WH engine reaction system, audit all fighters' movesets, add reactions section to WH-100 gap inventory doc via one gated PR",
+  "status": "done",
+  "watchdog": true,
+  "repo": "mhvnsnt/western-heart",
+  "resume_brief": "Audit lane, doc-only output. Main HEAD at start f2137c0681e579906a50462f3f9804b338a2b69b (PR #1366). Steps: (1) read game/js engine on main to define actual reaction requirement; (2) parse all moveset JSONs, per-fighter coverage counts vs that requirement, name specific gaps w/ file+check; (3) ONE instruction-gate PR adding a reactions section to docs/WH-100-GAP-INVENTORY-2026-10-30.md only; merge when MERGEABLE+CI green+zero deletions; (4) report. No moveset data changes. Scratch: ~/workspace/_reactions-audit/.",
+  "updated_at": "2026-10-31T11:01:52.624534+00:00",
+  "attempts": 1,
+  "notes": "started 2026-10-31; main verified f2137c06",
+  "completed_at": "2026-10-31T11:31:05Z",
+  "pr": 1367,
+  "merge_commit": "d98fff538fa7362cf10d71f982a553471b909c27",
+  "main_head_after_merge": "d98fff538fa7362cf10d71f982a553471b909c27"
+}

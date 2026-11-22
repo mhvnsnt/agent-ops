@@ -1,0 +1,9 @@
+{
+  "task": "Design WESTERN HEART fighting game (Tekken 3 engine + Eastern Mind universe) - COMPLETE. 6 docs, ~6700 words, in ~/workspace/game-reverse-engineering/western-heart/",
+  "repo": "~/workspace/game-reverse-engineering/western-heart",
+  "resume_brief": "Design WESTERN HEART \u2014 fighting game fusing Tekken 3's engine with Eastern Mind: The Lost Souls of Tong-Nou's universe. CONSTRAINTS: (1) Name is WESTERN HEART, location ~/workspace/game-reverse-engineering/western-heart/. (2) NO HAND-TOOLED ASSETS \u2014 every texture/model/animation/sound must come from Tekken 3 teardown or Eastern Mind extraction, recombined only; only glue code + design doc may be hand-made. Read Eastern Mind analysis at ~/workspace/animation-techniques/steal-like-artist/osamu-sato/analysis/. Write: design doc, roster, stages, systems, asset-manifest (every asset traced to source file), technical plan. Owner vision: 'a fighting game inside the Tong-Nou Eastern Mind game and narrative and universe.'",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-12T14:28:39.328454+00:00"
+}

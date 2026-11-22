@@ -1,0 +1,19 @@
+{
+ "watchdog": true,
+ "task": "W7d Tekken 5 decode 16 ctype-5 VIF-0x82 models, convert to GLB if decoded, catalog PR or harden gap with evidence",
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "W7d: reproduce 16 ctype-5 models from T5 DATA1 per W7b survey, decode VIF 0x82 form with PS2 RE tooling/Ghidra, prove structure, GLB+catalog PR if decoded else evidence addendum; DATA0/TTT2 out of scope.",
+ "status": "done",
+ "heartbeat": "2026-10-22T06:32:18.369311+00:00",
+ "updated_at": "2026-10-23T19:55:43.453817+00:00",
+ "progress": "DONE (PR open, not merged per instruction): PR #521 mhvnsnt/western-heart. VIF 0x82 DECODED + PROVEN (238/238 blobs strict, 5124 verts, 2468 tris; 9/9 containers E5 DECRYPT-MATCH). 8 unique GLBs in release tekken5-ctype5-glbs-v1 (sha256 pull-back verified). Characterization from decoded data + own-eyes Blender renders: triangular-prism beam units, concentric-ring effect discs, open cylindrical tube - environment/effect class, NOT items, no skull/mask. CATALOG: decoded_ctype5_models[8], ctype-5 gap flipped to decoded_not_customization_items, test 3/3. Scratch cleared + logged.",
+ "blockers": [],
+ "notes": [
+  "[worker-watchdog 2026-10-21 19:36 CDT] INVESTIGATED per reality check (audit flagged stale, 75min, no heartbeat). No live W7d worker process; no W7d PR; no repo commits. Gap-closure coordinator notes (23:37Z) record W7d#4 killed by daemon restart wave ~23:10Z and re-dispatched, but no W7d#5 process exists now. Sibling gap-closure family IS alive (W7e run_all.sh producing costume GLBs at 19:33-19:34 CDT). W7d lifecycle is coordinator-owned -> watchdog STANDS DOWN per NO-DUPLICATE-WORK (no second worker started). updated_at left untouched so the stale signal stays visible to the coordinator.",
+  "[watchdog 2026-10-22 ~09:28 CDT] Heartbeat: PR #521 on mhvnsnt/western-heart verified OPEN via gh (mergedAt null) \u2014 lane work delivered, merge gated on central/owner review. Standing down; not resuming delivered work.",
+  "[worker-watchdog 2026-10-22 13:13 CDT] PR #521 still OPEN (verified via gh): instruction-gate FAILURE, deletion-guard + no-deletion-guard SUCCESS, mergeable UNKNOWN. Lane work delivered; merge gated on central/owner review \u2014 standing down, not resuming delivered work.",
+  "[watchdog 2026-10-22 18:55 CDT] PR #521 still OPEN (verified via gh: state=OPEN, mergedAt=null, mergeable=MERGEABLE, title 'W7d: Tekken 5 ctype-5 VIF 0x82 decode - 16 models proven + GLBs + catalog'). Lane work delivered; merge gated on central/owner review. Standing down; heartbeat only.",
+  "[worker-watchdog 2026-10-23 12:42 CDT] PR #521 still OPEN (gh: state=OPEN, mergedAt=null, mergeable=UNKNOWN, updatedAt 2026-10-22T06:31Z). Lane work delivered; merge gated on central/owner review. Standing down; heartbeat only.",
+  "[watchdog 2026-10-23 14:40 CDT] PR #521 on mhvnsnt/western-heart verified MERGED via gh (state=MERGED, title 'W7d: Tekken 5 ctype-5 VIF 0x82 decode - 16 models proven + GLBs + catalog'). VIF 0x82 decoded+proven, 8 unique GLBs in release tekken5-ctype5-glbs-v1, catalog landed. Lane work delivered and merged - checkpoint closed."
+ ]
+}

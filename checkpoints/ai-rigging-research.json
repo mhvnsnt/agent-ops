@@ -1,0 +1,13 @@
+{
+ "task": "Research: open-source rigging/animation/mocap tooling + AI failure modes + Prisma 3D co-authoring",
+ "repo": "/home/hatch/workspace/bannon-video-pipe/repo",
+ "resume_brief": "STANDALONE BRIEF \u2014 two-track research, owner-directed 2026-10-09. CONTEXT: We're building promo/entrance videos for game characters (Bannon repo). Our pipeline hit hard limits: auto-weighted GLB shoulders web/tear past 15deg arm raise (measured), hand-keyed taunts instead of mocap, no corrective shapes, no twist bones. The owner (an experienced builder) called out that real studios hand-paint weights, use twist joints, corrective blendshapes, dual-quaternion skinning \u2014 and that I keep hand-rolling scripts instead of bringing in open-source tools. TRACK 1 \u2014 OPEN-SOURCE TOOLING LANDSCAPE: survey everything open-source we should wire into our character pipeline: auto-rigging (Rigify, Auto-Rig Pro alternatives, Mixamo rigging API), weight-painting aids, corrective-shape/deformation tools (Blender Corrective Smooth and beyond), mocap sources (CMU database, Mixamo free animations, DeepMotion/Rokoko free tiers, phone-based mocap), retargeting tools (Blender retargeting addons, Rokoko Studio free), muscle/deformation systems. For each: what it does, license, how it fits OUR pipeline (Blender 4.0.2 headless + GLB + game harness), and a concrete wire-up recommendation. Prioritize tools that fix OUR measured problems: shoulder deformation, taunt-quality motion, mocap retargeting. TRACK 2 \u2014 AI FAILURE MODES: research why AI agents fail at 3D production work like this \u2014 the known failure patterns (accepting own subagent claims without verification, procedural fakery vs real data, reinventing tools, confident misreporting), and what guardrails actually work (verification laws, evidence requirements, tool-first policies). Be concrete and practical, not philosophical \u2014 the output should make our pipeline harder to fool. OUTPUT: a research report at ~/workspace/bannon-video-pipe/docs/AI_RIGGING_RESEARCH.md covering both tracks with specific wire-up recommendations ranked by impact. RULES: heartbeat THIS checkpoint every 15 min; real sources only (link everything); no invented tools \u2014 verify each one exists. When done mark checkpoint done and report the top 5 wire-up recommendations.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-09T11:56:16.247472+00:00",
+ "track2_done": true,
+ "track3_done": true,
+ "track1_done": true,
+ "report": "/home/hatch/workspace/bannon-video-pipe/docs/AI_RIGGING_RESEARCH.md"
+}

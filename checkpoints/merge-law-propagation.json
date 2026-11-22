@@ -1,0 +1,9 @@
+{
+ "task": "Propagate MERGE-IT-YOURSELF LAW into canonical agent-ops docs and key repos' AGENTS.md (branch PR merge, docs-only)",
+ "repo": "mhvnsnt/agent-ops",
+ "resume_brief": "Propagate the MERGE-IT-YOURSELF LAW (owner 2026-10-15, in ~/AGENTS.md) into: (1) canonical docs in mhvnsnt/agent-ops (where the merge rule lives), (2) AGENTS.md copies in key active repos (western-heart, Bannon, Physics-sandbox-playground-, ragdoll-wrestler, game-reverse-engineering, etc. \u2014 prioritize repos with recent agent activity, don't clone all 111). Each change: new law section, additive docs-only, branch -> PR -> merge per the law itself (only when mergeable+green). Never touch other agents' running work/branches. Heartbeat this checkpoint. Write a propagation report of updated vs queued repos.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-15T18:00:23.181709+00:00"
+}

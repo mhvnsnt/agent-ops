@@ -1,0 +1,25 @@
+{
+ "disk_free_start": "7.5G",
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "W4b gap-closure follow-up to W4 PR #439: decode how WMXIX maps a wrestler's named special (menu.mpq) to a clip in motion/*.mpc; work candidates motion/sheet/91xx.yad and motion/win/91xx_00A.tmp, then .mpc/YANM package structure and DOL references; if decoded, extract+decode the three Rock specials via YANM/YAG pipeline, verify by content, extend moveset-library/movesets/rock-moves-wmxix.json via PR (mk:MK-1240/2843/1885); secondary: correct WMXIX-MOVES.json 169 grapple placeholders framing; if mapping resists, deliver evidence report doc PR, no guessed clips.",
+ "status": "done",
+ "steps": {
+  "assignment_decode": "CONTAINER DECODED (POF tree: 870 motion IDs -> 1,905 YANM clips, exact); wrestler->motion-ID assignment table NOT found in any data file searched - honest stall, no clips claimed",
+  "checkpoint_created": true,
+  "clip_extract_verify": "extraction proven end-to-end for the ID->clip half (0101/00A YANM header parse; method validated on a002 = 33.856s exact); no specials clips identified, none claimed",
+  "fragment_pr": "PR #451 OPEN, all gates PASS (instruction-gate, deletion-guard, guard): evidence doc + WMXIX-MPC-INDEX.json; rock-moves-wmxix.json UNCHANGED per fallback rule",
+  "moves_json_correction": "DONE in PR #451: WMXIX-MOVES.json annotated (additions only): _meta provenance correction + per-move notes + emotname_label on 111 entries",
+  "survey_read": "done",
+  "tools_recon": "done: reused _w4-work fetch.py/iso.py range reader (part_00+aa+ab layout); repo YANM decoder extract_yanm.py"
+ },
+ "task": "W4b WMXIX .mpc move-assignment decode: map The Rock's three named specials (Rock Bottom, People's Elbow, People's Spine Buster) from menu.mpq slots to gameplay animation clips inside motion/*.mpc YANM packages",
+ "updated_at": "2026-10-21T12:00:00-05:00",
+ "watchdog": true,
+ "findings": [
+  "MPC CONTAINER DECODED: header 0x20B [idxEnd][dataSize][0x20][dataStart]; 12B records: root(dir, childCount=870, name root/froot), dir nodes [childCount][4-char motion ID][firstLeafRecordIdx], leaves [u16 marker 0xff00|0x0100][u16 size in 32B units][4-char subname 00A/00B/01A/01B/02A/02B/00C/03A/03B][u32 data offset]. move.mpc: 870 motion IDs (0101..9008), 1905 leaves; seq-chain zero breaks; last leaf ends exactly at header dataSize 0x7C5BC0.",
+  "win/91xx_00A.tmp = standalone YANM clips (same format as .yag); sheet/91xx.yad = camera keyframe sheet referencing its win tmp by name - win system only, NOT specials assignment.",
+  "com_dt.mpc tree decoded: root/com/{cmn(cmn0,cmn1,comb,cnt0-3,rule,char,cmot), tbl(61: pl/sl/al/mb), bg(41: r/cs/fa/ha/pa/sm)}; cmot = 24B records with letter-codes (A100,G701,M810,U101...) = motion category table, not per-wrestler assignment.",
+  "DOL u16 scans: no moveset table found (hits were trig table + sequential index). Assignment may be in menu.mpq internals, menupause (also MPQ), or DOL in another encoding - Ghidra is next if needed."
+ ],
+ "result": "PR #451 (branch gap-closure-w4b-wmxix-mpc, commit 563e0eac): teardown/wmxix/WMXIX-MPC-ASSIGNMENT-DECODE-2026-10-21.md + teardown/wmxix/WMXIX-MPC-INDEX.json + WMXIX-MOVES.json annotation. Remaining unknown: wrestler moveset table - crack routes ranked in doc (1: Ghidra XREF of move.mpc string at DOL 0x2D92A0 / POF loader 0x8007A71C; 2: menu.mpq + menupause MPQ internals; 3: Dolphin runtime observation)."
+}

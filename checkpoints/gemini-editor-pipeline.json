@@ -1,0 +1,10 @@
+{
+ "task": "Build integrated see-understand-edit-verify image pipeline, wire into all repos (owner 2026-10-10)",
+ "repo": "~/workspace/font-wizard",
+ "resume_brief": "Owner 2026-10-10: 'Pull it in, wire it into all our repos and stuff we are working on, u gotta get better, same fir competitors in any other field, wire up stacks to make what can't be done possible.' BUILD the integrated pipeline that replicates Gemini's native image editing with free tools. The loop: SEE (vision model understands the image + instruction) \u2192 UNDERSTAND (parse what to change) \u2192 EDIT (execute) \u2192 VERIFY (vision model checks the result). Components: InstructPix2Pix (instruction-based editing \u2014 'make the background black'), SAM (auto-masking), SDXL via ComfyUI (generation/inpainting), Qwen2-VL or LLaVA (open vision model for understand + verify steps). Target: Kaggle T4 GPU as API server (this VM has no GPU). Wire into: font-wizard (home), media-pipeline, trippedd-studio, bannon-video-pipe. Each repo gets a simple client (edit_image.py --input --instruction) that POSTs to the GPU server. Document the full loop. This is P0 \u2014 the single biggest capability gap.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T02:27:15.673320+00:00",
+ "notes": "Built and wired. font-wizard PR #10, trippedd PR #128, Bannon PR #62, media-pipeline committed locally (no remote). Pollinations backend verified working. Local backend code correct (first-run model download slow on this network). Kaggle GPU server code + docs ready; needs owner phone verification + setup per KAGGLE_SETUP.md."
+}

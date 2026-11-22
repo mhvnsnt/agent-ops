@@ -1,0 +1,9 @@
+{
+ "attempts": 0,
+ "repo": "western-heart",
+ "resume_brief": "You are the model extraction agent for the Tekken 6 PSP 100% teardown. Work dir: ~/workspace/game-reverse-engineering/tekken6/work/extract/. The 81.6MB plaintext archive is inside bulk_decrypted.bin at offset 38592*2048 (81,591,641 bytes) containing 357 NDPP sections. Parse NDPP (magic 4e445050 'NDPP', 20-byte section header: magic, u32 size, flags 0x10001, 0, float f5). CLEAN reference: work/decrypt8/file0_decoded.bin has unit normals at offsets 500/1000, NDPP at offset 112. Build NDPP->GLB via Python + headless Blender 4.0.2 (xvfb-run -a env -u PYTHONPATH ~/workspace/tools/blender/blender-4.0.2-linux-x64/blender -b ...). Batch convert 357 sections to character_XX/part_YY.glb, render preview PNGs, push to western-heart branch feature/tekken6-100-teardown (PR #187, already open, do NOT merge). Read-only: bulk_decrypted.bin; slice via offsets, no full copies. DISK 70%/88% ceiling: check df -h each step, no new big copies.",
+ "status": "done",
+ "task": "Tekken 6: parse NDPP models, convert to GLB, land in western-heart",
+ "watchdog": true,
+ "updated_at": "2026-10-16T12:11:40.856686+00:00"
+}

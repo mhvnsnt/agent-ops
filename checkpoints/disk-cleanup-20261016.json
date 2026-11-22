@@ -1,0 +1,26 @@
+{
+  "task_id": "disk-cleanup-20261016",
+  "agent_id": null,
+  "repo": null,
+  "branch": "main",
+  "goal": "URGENT: save /home/hatch contents to GitHub+TeraBox, clean disk to <=75%",
+  "status": "superseded",
+  "spawned_at": "2026-10-16T17:08:43Z",
+  "last_heartbeat": "2026-10-16T17:31:37Z",
+  "steps_completed": [
+    {
+      "at": "2026-10-16T17:31:19Z",
+      "step": "freed 4G (100%->97%), deleted .blend1 + pip caches, logged; game-re lane blocked on TeraBox creds"
+    }
+  ],
+  "next_steps": [],
+  "key_paths": [],
+  "decisions": [
+    {
+      "at": "2026-10-17T04:00Z",
+      "step": "Marked superseded by disk-evacuation-20261016 (spawned 2026-10-16T18:41Z). Disk fell 100%->78% under the evacuation lane; 7 child lanes heartbeating fresh at 2026-10-17T08:42Z. No duplicate cleanup spawned."
+    }
+  ],
+  "blockers": [],
+  "resume_prompt": "Resume URGENT disk cleanup: /home/hatch was at 100%. Checkpoint holds steps_completed (dirs already verified+uploaded+deleted) and next_steps. Read SHARED-DISK-INVENTORY.md, STORAGE-MANIFEST.json, BACKUP-MAP.md, disk-cleanup-log.md. LAWS: SAFE-STORAGE-FIRST (upload->verify->THEN delete), NEVER-DELETE-GAME-FILES (game files only if FULL folder byte-identical on BOTH GitHub and TeraBox; log teardown-incomplete on TEARDOWN-IDLE-QUEUE.md first), NO-SWEEP-INFLIGHT (never touch .part/staging/in-flight dirs), NEVER-KILL-IN-PROGRESS, NO-DISK-STAGING. Heartbeat every 10 min."
+}

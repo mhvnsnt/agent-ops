@@ -1,0 +1,10 @@
+{
+ "task": "Create B2 trippedd-show-footage bucket and upload the 17 TRIPPEDD show base-timeline MP4s (~3.3GB)",
+ "repo": "/home/hatch/workspace/drive-ingest",
+ "resume_brief": "B2 upload (owner 2026-10-09): create private Backblaze B2 bucket trippedd-show-footage; upload the 17 mp4s in ~/workspace/drive-ingest/1e55zooUU98r9MXyRzcR0qgNq1EqGiqVI/ (TRIPPEDD show base-timeline phone footage, ~3.3GB total) plus eltorodeoroentrance_video.mp4 (38.7MB, from link4 dir) under misc/. B2 CLI not installed \u2014 pip install b2; ~/.config/b2/account_info exists from a prior auth, try it first (b2 list-buckets). If the stored key cannot create buckets, upload into the permitted bucket instead and report exactly which key/permission is missing. Verify every upload (b2 ls + file sizes vs local). Heartbeat checkpoint, mark done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-10T00:44:45.207015+00:00",
+ "notes": "COMPLETE 2026-10-10. All 18 files uploaded to B2 bucket wizard-gang-voice under trippedd-show-footage/ prefix (17 show MP4s + misc/eltorodeoroentrance_video.mp4). Size-verified 18/18 against local. Total 3,214,072,819 bytes. NOTE: dedicated trippedd-show-footage bucket could NOT be created \u2014 stored key voice-weights-upload is restricted to wizard-gang-voice (bucket creation denied by API). Owner action if a dedicated bucket is wanted. Local copies NOT deleted (working set)."
+}

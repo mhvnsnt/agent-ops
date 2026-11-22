@@ -1,0 +1,135 @@
+{
+  "completed": [
+    "ppsspp",
+    "natron",
+    "inkscape",
+    "storyboarder",
+    "krita",
+    "tahoma2d",
+    "cascadeur"
+  ],
+  "created": "2026-10-16T20:50:00Z",
+  "current": null,
+  "note": "Binaries go as GitHub release assets (2GB limit OK); repo holds folder structure + READMEs. /tmp is 512M tmpfs so files >500M stage in ~/workspace/vendor-dl/ and are deleted immediately after upload.",
+  "repo": "mhvnsnt/vendor-tools",
+  "status": "done",
+  "tools": [
+    {
+      "folder": "tahoma2d",
+      "name": "Tahoma2D",
+      "size_est": "1.5G",
+      "source": "https://github.com/tahoma2d/tahoma2d/releases",
+      "status": "complete"
+    },
+    {
+      "folder": "cascadeur",
+      "name": "Cascadeur",
+      "size_est": "555M download / 1.2G extracted",
+      "source": "https://cascadeur.com/download",
+      "status": "complete"
+    },
+    {
+      "folder": "krita",
+      "name": "Krita 6.0.4",
+      "size_est": "386M download",
+      "source": "https://krita.org/en/download/",
+      "status": "complete"
+    },
+    {
+      "folder": "natron",
+      "name": "Natron 2.5.0",
+      "size_est": "141M download / 578M extracted",
+      "source": "https://natrongithub.github.io/",
+      "status": "complete"
+    },
+    {
+      "folder": "ppsspp",
+      "name": "PPSSPP",
+      "size_est": "469M",
+      "source": "https://www.ppsspp.org/downloads.html",
+      "status": "complete"
+    },
+    {
+      "folder": "storyboarder",
+      "name": "Storyboarder",
+      "size_est": "130M",
+      "source": "https://github.com/wonderunit/storyboarder/releases",
+      "status": "complete"
+    },
+    {
+      "folder": "inkscape",
+      "name": "Inkscape 1.4.4",
+      "size_est": "27M",
+      "source": "https://inkscape.org/release/",
+      "status": "complete"
+    }
+  ],
+  "last_beat": "2026-10-18T12:30:48Z",
+  "steps_completed": [
+    "PPSSPP uploaded (ppsspp.AppImage, 50689748 bytes, verified on release); staged copy deleted",
+    {
+      "at": "2026-10-18T06:39:14Z",
+      "step": "Natron 2.5.0 uploaded (Natron-2.5.0-Linux-x86_64-no-installer.tar.xz, 147079928 bytes, verified on release); staged copy deleted"
+    },
+    {
+      "at": "2026-10-18T06:42:10Z",
+      "step": "Inkscape 1.4.4 uploaded (inkscape_1.4.4-ubuntu22.04_amd64.deb, 26529444 bytes, verified on release); staged copy deleted"
+    },
+    {
+      "at": "2026-10-18T06:45:03Z",
+      "step": "Storyboarder 2.1.0 uploaded (Storyboarder-2.1.0-linux-x86_64.AppImage, 130041205 bytes, verified ELF AppImage on release); staged copy deleted"
+    },
+    {
+      "at": "2026-10-18T06:50:04Z",
+      "step": "Krita 6.0.4 uploaded (krita-6.0.4-x86_64.AppImage, 385731064 bytes, verified on release); staged copy deleted"
+    },
+    {
+      "at": "2026-10-18T06:56:18Z",
+      "step": "Tahoma2D 1.6.3 uploaded (Tahoma2D-1.6.3-linux-clang.tar.gz, 328382822 bytes, verified on release); staged copy deleted"
+    },
+    {
+      "at": "2026-10-18T12:22:20Z",
+      "step": "Cascadeur 2026.2.3 downloaded from cdn.cascadeur.com (cascadeur-linux.tgz, 581257231 bytes, sha256 c3409b99...; valid gzip, extracts to cascadeur-linux/ ~1.3G, launcher cascadeur-linux/cascadeur). Direct URL resolved via /rest/download/build?platform=linux&buildId=112 (free/basic, no account needed) \u2014 prior account-gated blocker was WRONG; only the older-version buttons redirect to /sign-in."
+    },
+    {
+      "at": "2026-10-18T12:30:48Z",
+      "step": "Cascadeur 2026.2.3 uploaded (cascadeur-linux.tgz, 581257231 bytes, verified on release vendor-tools-v1 by name+size match); staged copy deleted"
+    },
+    {
+      "at": "2026-10-18T12:30:48Z",
+      "step": "cascadeur/README.md created on mhvnsnt/vendor-tools (PR #2 merged): documents version 2026.2.3, direct free download URL via /rest/download/build endpoint, Cascadeur Basic (free) license, SHA256, install notes"
+    }
+  ],
+  "next_steps": [
+    "all vendor tools stored on mhvnsnt/vendor-tools release vendor-tools-v1"
+  ],
+  "blockers": [],
+  "last_heartbeat": "2026-10-18T12:30:48Z",
+  "task_id": "vendor-tools-store",
+  "decisions": [
+    {
+      "at": "2026-10-18T06:41:59Z",
+      "decision": "Inkscape: inkscape.org + media.inkscape.org 403-block this VM's egress, so pulled Inkscape 1.4.4 from the official Inkscape team's Launchpad PPA (inkscape.dev/stable, version 1:1.4.4+202605061432+dcaf3e7d9e~ubuntu22.04.1 amd64 .deb). Verified via Launchpad API getPublishedBinaries + exact size match on launchpadlibrarian."
+    },
+    {
+      "at": "2026-10-18T06:42:00Z",
+      "decision": "Cascadeur: download is account-gated per official help center (signup required); no direct official URL found. Continuing with other tools first; will revisit or escalate."
+    },
+    {
+      "at": "2026-10-18T08:02:32Z",
+      "decision": "Resume 2026-10-18T08:02Z: verified all 6 claimed uploads on mhvnsnt/vendor-tools release vendor-tools-v1 via gh release view --json assets \u2014 names AND byte sizes all match the checkpoint's steps_completed exactly (ppsspp 50689748, Natron 147079928, Inkscape 26529444, Storyboarder 130041205, Krita 385731064, Tahoma2D 328382822). No re-uploads per idempotency law. Cascadeur NOT attempted: account-gated, no sign-in per constraints; lane stalls here pending owner decision."
+    },
+    {
+      "at": "2026-10-18T12:02:08Z",
+      "decision": "Resume 2026-10-18T12:0xZ: re-checking cascadeur.com/download for a DIRECT download href (task asks to verify rather than assume account-gated). Will scrape page HTML via curl; if no direct link exists, mark blocked: email-gated download, needs owner."
+    },
+    {
+      "at": "2026-10-18T12:03:17Z",
+      "decision": "CONFIRMED: direct download exists, NOT account-gated. Page /download has no direct href, but the JS REST endpoint GET /rest/download/build?platform=linux&buildId=112 returns {\"status\":\"OK\",\"data\":{\"url\":\"https://cascadeur.com/storage/builds/2026.2.3/linux\",\"type\":\"free\",\"planType\":\"basic\"}} -> 302 to https://cdn.cascadeur.com/storage/builds/2026.2.3/linux/cascadeur-linux.tgz. Free Basic tier, no auth/email required. Downloading to ~/workspace/vendor-dl/cascadeur-linux.tgz, then uploading as release asset to vendor-tools-v1."
+    },
+    {
+      "at": "2026-10-18T12:30:48Z",
+      "decision": "Lane COMPLETE: all 7 tools (ppsspp, natron, inkscape, storyboarder, krita, tahoma2d, cascadeur) verified as release assets on mhvnsnt/vendor-tools vendor-tools-v1. Checkpoint status -> done."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+ "task": "Pull binding/rigging/jiggle/softbody wave into blend-physics-playground",
+ "repo": "~/workspace/blend-physics-playground",
+ "resume_brief": "Continue wave 3: vendor BlenRig + VRM addon + MB-Lab, write binding/rigging/softbody drill docs; push via branch feat/binding-rigging-wave -> PR -> squash-merge; zero open PRs.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-14T08:48:37.827958+00:00"
+}

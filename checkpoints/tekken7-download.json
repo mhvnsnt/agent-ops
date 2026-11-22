@@ -1,0 +1,10 @@
+{
+ "task": "Download Tekken 7 PC (~47GB) without using local disk as primary storage; extract King first",
+ "repo": "~/workspace/game-reverse-engineering/tekken7",
+ "resume_brief": "Tekken 7 download worker. STRATEGY PIVOT: Full 47GB game download is blocked (no 47GB source verified, no cloud storage with API + 47GB free, disk at 79%). NEW PLAN: Get King model directly from rigmodels.com (Tekken 7 King, T-pose, 16,683 polys, 54 textures, ~100-300MB) \u2014 requires parent browser download from https://www.rigmodels.com/model.php?view=Tekken_7_King-3d-model__5PMH7G85GYN7P71W3BD1V0249&manualsearch=1 (may need login). Disk prepared: deleted dangly-venv (6.2GB, pip freeze saved at ~/workspace/agent-ops/venv-manifests/dangly-venv.txt), now 21GB free. Target dir: ~/workspace/game-reverse-engineering/tekken7/king/. Once King FBX/OBJ lands, inspect in Blender, verify textures, prepare for Pantera reskin. Full 47GB game remains a future goal when storage allows. UModel at tekken7/tools/umodel_linux ready for PAK extraction if full game ever lands. Roster mapping + tekkenmods docs already done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 2,
+ "notes": "Watchdog 2026-10-12 ~11:30 CDT: resumed. King model was already on disk (parent browser download landed 10:54). Blender-verified: FBX imports clean, 19 meshes / 11370 verts, 58 texture images; preview jpg confirms King (jaguar mask, KING belt, T-pose). No armature in FBX \u2014 static T-pose only. Committed king/ to game-reverse-engineering repo as 5e5d613 (views/ renders already present from 11:15). Pivot goal complete; full 47GB game still future work. Pantera reskin can begin from this asset.",
+ "updated_at": "2026-10-12T16:31:59.732865+00:00"
+}

@@ -1,0 +1,315 @@
+{
+ "blockers": [
+  "PARKED by owner 2026-10-21 ~09:39 CDT \u2014 T7 acquisition is lowest priority / later on his word; legacy Tekken parts (W7: T6 PSP / T5 / TTT2) take priority. Do not resume W6 without a new owner/coordinator order.",
+  "Phase 1 source recon INCOMPLETE at park time: archive.org was unreachable from this box for its API/host paths (see source_recon_findings) \u2014 absence of a free IA source was NOT proven, and the paid stop-gate was NOT reached/declared."
+ ],
+ "catalog_entries_added": 1,
+ "chunks_stored": [
+  {
+   "what": "cmn_hef_skull 48 uassets (8.0MB)",
+   "where": "local _w6-work/skull_out pending repo PR",
+   "source": "IA T7VHDsExtracted / TR205 Extracted.7z folder 0"
+  }
+ ],
+ "continuation": "RESUME COLD FROM HERE: (1) Retry archive.org metadata API (advancedsearch.php / metadata / services/search/v1/scrape) \u2014 egress to archive.org returned curl rc52 empty-reply / http 000 after ~12-15s on every attempt 2026-10-21 14:18-14:40 UTC while google.com and web.archive.org returned 200 through the same proxy; if IA responds in a later run, search Tekken 7 PC items and VERIFY BY CONTENT (item must contain TekkenGame/Content/Paks or an install tree with .pak files; stream a listing/sample chunk and confirm pak filenames) before any bulk work. (2) Web-search evidence gathered so far found NO archive.org Tekken 7 game item \u2014 only videos/magazines/arcade lists (see source_recon_findings). (3) If no free viable source: paid stop-gate \u2014 report exact source+price, set status needs_owner, buy nothing. Reference prices seen in (stale, 136-day-crawl) search results only, NOT live-verified: Steam TEKKEN 7 app 389730 $39.99 standard; Instant Gaming Steam key ~$5.69 (-86%). Live price must be re-verified at resume. (4) Phase 2 umodel: official binary already downloaded+hashed in /tmp (ephemeral, will likely be gone \u2014 re-download from gildor2/UEViewer repo file 'umodel', git blob 0ad263e0fd156885df488fac2e8d6870f52f809f) BUT it is 32-bit and does not run on this box (no /lib/ld-linux.so.2); resume must solve 32-bit loader/libc or pull the held tekken7/tools/umodel_linux from the tekken7-full-v1 release (7 assets: tekken7-500m.part_aa..af 524288000 bytes each + part_ag 145674240 + tekken7.sha256 875) and test that binary instead. (5) Then survey section 3 extraction, cmn generic first, skull mask priority #1.",
+ "created": "2026-10-21T14:13Z",
+ "extraction": {
+  "items_by_slot_class": {},
+  "paks_done": [],
+  "paks_remaining": "all \u2014 extraction never started (Phase 1 stop-gate never cleared)",
+  "parts_converted": 1
+ },
+ "in_flight_at_park": "None. No download was mid-flight: every archive.org request had already failed/timed out, and the only completed download (umodel binary, 1.2MB) was finished and hashed before the park order arrived. Nothing was left half-downloaded; nothing needed store+verify finishing.",
+ "parked_at": "2026-10-21T14:43Z",
+ "parked_reason": "Owner priority change 2026-10-21 ~09:39 CDT: Tekken-legacy customization parts (T5/T6/TTT2, already held) are the active program (W7); W6 Tekken 7 acquisition parked / lowest priority, resumes only on his word.",
+ "phase": "parked_mid_phase1_source_recon",
+ "phase1_source_status": "INCOMPLETE \u2014 stopped mid-recon by park order; no source found, no source ruled out, paid stop-gate not reached",
+ "proof_frame": "customization/parts/tekken7/full_head/skull-mask/proof-on-slice.png (in PR #467) \u2014 VIEWED by the lane: skull mask seated on Slice's Dragunov Attire 1, beret hidden, natural head position; solo render skull-mask-solo.png also viewed (hooded skull, textures bound)",
+ "prs": [
+  {
+   "number": 467,
+   "url": "https://github.com/mhvnsnt/western-heart/pull/467",
+   "branch": "w6-t7-skull-mask-20261021",
+   "commit": "79d67ac3bd72d0cc4056f18758dc8977e7385b70",
+   "state": "OPEN \u2014 additions + 2 intended edits, 0 deletions (API-verified file list)"
+  }
+ ],
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "PARKED 2026-10-21 ~09:39 CDT by owner: W6 Tekken 7 customization parts acquisition is lowest priority, resumes only on his word (legacy T5/T6/TTT2 parts = W7 are active). State at park: checkpoint + survey read (PR #437 doc, CATALOG.json parts:[], catalog.test.mjs, tekken7-slot-catalog.json all read from main into /tmp/w6/); Phase 1 archive.org recon incomplete \u2014 IA API unreachable from this box (curl rc52/000, see blockers/continuation), web search found no IA Tekken 7 game item; Phase 2 partial \u2014 official umodel Linux binary downloaded to /tmp/w6/umodel (sha256 471b943b22c92c305b24bfd3ed349cc3ecb1195abb761ebfda0dd6881a6e894a) but is 32-bit and cannot execute here (missing /lib/ld-linux.so.2). Zero extractions, zero catalog entries, skull mask still unresolved, no PRs, nothing stored, nothing deleted.",
+ "skull_mask": "EXTRACTED 2026-10-21 ~21:4xZ \u2014 all 48 .uasset files of cmn/Full_Head/cmn_hef_skull from IA T7VHDsExtracted TR205 (folder 0, packed 2,121,187,063B; targets at solid idx 58,107-58,154, 4,039,443,413 unpacked bytes before first target). UE package magic C1 83 2A 9E verified by content on the files. Total 8.0MB on disk at ~/workspace/_w6-work/skull_out/ (+ skull_sha256.txt). Key hashes: SK_CH_dra_hef_skull.uasset sha256 66d5db655871335d233b54e6fb340493aefdae6d5bc35232a42a3c31efd64412; textures T_CH_cmn_hef_skull_d_{D,M,N,R} hashed in skull_sha256.txt. Winning method after 5 failed/stalled network-stream runs: disk block-cache (2,080 blocks) -> assembled local sparse tr205_local.7z (blocks 0..2022 = 100% of folder 0) -> py7zr local extract, zero network in the loop, ~7 min decode.",
+ "source": null,
+ "source_recon_findings": {
+  "archive_org_api": {
+   "attempts": [
+    "python urllib advancedsearch.php queries (title:(tekken 7) AND mediatype:software / tekken 7 pc / identifier:tekken*7* / title:(TEKKEN 7)) \u2014 hung >46s, backgrounded, timed out",
+    "curl advancedsearch.php?q=title:(tekken 7) rows=20 \u2014 empty reply",
+    "curl -I https://archive.org/ \u2014 hung, backgrounded",
+    "curl advancedsearch.php?q=tekken rows=3 (x3, incl. --http1.1 + browser UA) \u2014 curl rc52 empty reply, http 000, ~11.6-15.6s each",
+    "curl https://archive.org/metadata/archive.org and /metadata/tekken7 and services/search/v1/scrape?q=tekken+7 \u2014 rc52 / 000",
+    "curl --noproxy '*' https://archive.org/ \u2014 rc35 SSL connect error in 0.5s (no direct egress; proxy is the only path)"
+   ],
+   "control_checks": "Same proxy, same window: https://www.google.com 200 in 2.8s; https://web.archive.org/ 200 in 2.3s; api.github.com / gh CLI worked throughout. Failure is specific to archive.org host paths from this egress, not general network loss.",
+   "verdict": "INCONCLUSIVE \u2014 no IA item was listed, verified, or ruled out. Do NOT report 'no free source exists' from this run."
+  },
+  "holdings_check": "Skipped re-proving per task order (survey PR #437 already proved zero T7 paks/parts in holdings).",
+  "web_search": {
+   "archive_org_tekken7_pc_game": "No game item in results \u2014 hits were unrelated articles/Wikipedia/news only.",
+   "steam_price_reference_NOT_live_verified": "Search-result snippet (store.steampowered.com app 389730, crawl 136 days old at search time): TEKKEN 7 $39.99. Instant Gaming snippet: $5.69 (-86% from $40). Stale snippets only \u2014 not a live price check, not a stop-gate report.",
+   "tekken7_site_archive_org": "Results were video/magazine/arcade items only: sok-sons-of-kojima-dsp-yt-complete-youtube (YouTube channel archive incl. Tekken 7 videos), chromaLTG (LTG videos), arcade-bootups-startups_202103 (arcade boot videos, incl. 'TEKKEN 7 - Machine Booting.mp4'), a Full Circle magazine text item, artax-4.1-ttx-3-multi-game-list (arcade multi-game list mentioning Tekken 7 Fated Retribution). None contains PC game paks."
+  }
+ },
+ "status": "done",
+ "task": "gap-closure-w6-t7parts",
+ "umodel": {
+  "binary_on_disk": "/tmp/w6/umodel/umodel (EPHEMERAL /tmp \u2014 not stored anywhere permanent; re-download at resume; nothing deleted per park order, but /tmp may not survive)",
+  "executes_on_this_box": false,
+  "executes_reason": "ELF 32-bit LSB pie executable, Intel 80386, interpreter /lib/ld-linux.so.2 \u2014 loader absent on this box: './umodel: cannot execute: required file not found'. Version/list proof run was NOT achieved.",
+  "held_alternative_not_pulled": "tekken7/tools/umodel_linux inside mhvnsnt/western-heart release tekken7-full-v1 (assets tekken7-500m.part_aa..ag + tekken7.sha256, verified via gh api listing 2026-10-21); pulling it needs a 500MB tar part \u2014 not attempted before park.",
+  "sha256": "471b943b22c92c305b24bfd3ed349cc3ecb1195abb761ebfda0dd6881a6e894a",
+  "size_bytes": 1190988,
+  "source": "Official author's distribution: gildor2/UEViewer GitHub repo, root file 'umodel' (git blob sha 0ad263e0fd156885df488fac2e8d6870f52f809f), fetched via raw.githubusercontent.com \u2014 chosen over the 500MB release tar part as the lighter path permitted by the task",
+  "status": "downloaded_and_hashed_not_runnable_here"
+ },
+ "updated_at": "2026-10-25T00:41:36.885875+00:00",
+ "watchdog": true,
+ "scope_rewrite_20261021": "OWNER ORDER 2026-10-21 ~10:57 CDT: W6 UN-PARKED, PIECEWISE SCOPE. Pull only target file sets piecewise (surgical range extraction / per-piece selective download) straight into repo/release storage, verify per piece, discard source chunks as you go. NEVER stage the whole game (~47-70GB) on local disk. Targets in order: (1) customization items Game/Character/Items/** (Mesh/cmn/ first, skull mask tekken7:cmn:full_head:skull-mask = proof piece #1; then Mesh/<CHAR>/, CCI/CI/CS, ACI/ECI) -> PSK->GLB, classify vs tekken7-slot-catalog.json, append to customization/parts/tekken7/CATALOG.json per survey S3 (PR #437); (2) front-end/UI files (suite Tekken-side skin) -> repo storage + notify creation-suite-ui-v2 lane via checkpoint creation-suite-ui-v2-20261021.json with paths as they land; (3) everything else T7 = later, do not pull. Paid boundary unchanged: paid-only source = STOP + report exact cost/source.",
+ "step0_verification_20261021_continuation": {
+  "verified_at": "2026-10-21T16:39Z",
+  "catalog_parts_len": 0,
+  "named_gaps_present": [
+   "tekken7:cmn:full_head:skull-mask",
+   "tekken7:all:all-slots:full-customization-set"
+  ],
+  "new_prs_from_dead_lane": "NONE \u2014 recent PRs 427-450 are other lanes (CornerStone, Pantera, DOA4, Urban Reign, etc.); no W6/T7-parts PR",
+  "new_release_from_dead_lane": "NONE \u2014 recent releases are other lanes; tekken7-full-v1 not in top-20 recent list (older, pre-existing)",
+  "tmp_w6": "GONE \u2014 /tmp/w6 does not exist (daemon restart cleared ephemeral umodel)",
+  "disk": "98% used, 2.8G free on /home/hatch (worse than task brief's 3.4G) \u2014 piecewise discipline critical",
+  "verdict": "CLEAN \u2014 dead lane stored nothing, extracted nothing. Assumption confirmed."
+ },
+ "step1_umodel_20261021_continuation": {
+  "method": "Range-read ONLY the tar slice containing tekken7/tools/umodel_linux from release tekken7-full-v1 asset tekken7-500m.part_aa (asset id 647829136) via gh api Range headers; sequential tar parse from offset 0 in 2MB chunks, consumed/discarded as parsed. Total range-read ~26MB, never staged the 500MB part.",
+  "tar_offset_header": 25363968,
+  "tar_offset_data": 25364480,
+  "size_bytes": 1246312,
+  "sha256": "ebeef041d36c8e498c599d397d0c57ec68aab3d6e86d8773cbf782ade34c8389",
+  "file_type": "ELF 64-bit LSB pie executable, x86-64, interpreter /lib64/ld-linux-x86-64.so.2 (PRESENT on this box)",
+  "runs": true,
+  "version_output": "UE Viewer (UModel) Compiled Nov 11 2021 (build 1578) \u2014 '-version' and bare usage both exit clean; all ldd libs resolve",
+  "verdict": "HELD BINARY WORKS \u2014 unlike the official gildor2 download (32-bit, /lib/ld-linux.so.2 absent). No loader fix needed. Local copy: /tmp/w6t/umodel_linux (ephemeral; re-pullable by the same range method in ~1 min, recorded here)",
+  "bytes_cleared": "test_range.bin 1MB discarded; parser buffer discarded per-entry (consume-as-you-go)"
+ },
+ "step2_ia_retry_20261021": {
+  "ia_now_up": "YES \u2014 2026-10-21 16:54 UTC probes: archive.org/ 200 in 1.7s, advancedsearch 200, metadata 200 (earlier outage was window-specific and has cleared)",
+  "search": "title:(tekken 7) AND mediatype:software -> 9 hits",
+  "candidates_checked_by_content": {
+   "takken-7": "TITLE: 'TEKKEN 7 PC Free Download (v5.10 Definitive Edition)' \u2014 EMPTY SHELL: metadata lists only 5 files (2 .torrent stubs + meta), ZERO game files. Not a source.",
+   "tekken-7_6Mod": "EMPTY SHELL: 4 files, metadata/torrent only, zero game files.",
+   "tekken7_es3_vhds": "Arcade Namco System ES3 VHDs, 79.75GB total \u2014 arcade build, not PC Steam install tree",
+   "T7VHDsExtracted": "Arcade VHDs extracted, 172.77GB in 11x 13-17GB .7z \u2014 arcade build"
+  }
+ },
+ "step2_source_found_20261021": {
+  "source": "archive.org item T7VHDsExtracted \u2014 'TR205 Extracted.7z' (13,786,304,828 bytes), the extracted Tekken 7 Fated Retribution (Namco System ES3 arcade) game tree",
+  "range_evidence": "IA serves Range (HTTP 206 verified). 7z signature header verified by content (37 7A BC AF 27 1C); full central listing parsed via py7zr over a range-backed file object: 112,435 entries listed with only 3,449,464 bytes fetched",
+  "content_verified": "Loose UE tree (NO paks): TekkenGame/Content/Character/Item/{Meshes 24,791 entries, CharacterItem 33,274, Customize 14,850, EffectItem, AuraItem, Sets}. Generic tree at Character/Item/Meshes/cmn/ (arcade layout: Item/Meshes vs PC Items/Mesh)",
+  "skull_mask_found": "TekkenGame/Content/Character/Item/Meshes/cmn/Full_Head/cmn_hef_skull/ \u2014 43 .uasset files: MI_CH_cmn_hef_skull (material), 38x SK_CH_<char>_hef_skull per-character fitted skeletal meshes (incl. SK_CH_dra_hef_skull = Dragunov, the \u00a73.6 proof target), 4 textures T_CH_cmn_hef_skull_d_{D,M,N,R}",
+  "provenance_note": "This is the arcade (Fated Retribution / ES3) build's own generic item tree, NOT the PC Steam pak layout the survey \u00a73 assumed. Same game item (cmn_hef_skull, FULL_HEAD, generic/cmn). Deviation to be declared in the PR gate.",
+  "extraction": "piecewise selective py7zr extract of the 43 skull .uassets over the range file \u2014 IN PROGRESS",
+  "steam_live_price_check": "Steam API appdetails 389730 verified live 2026-10-21: TEKKEN 7 $39.99 USD, 0% discount \u2014 paid route exists but NOT needed (free IA route worked); no purchase made"
+ },
+ "tmp_wipe_incident_20261021": "~17:35Z /tmp (tmpfs) wiped again mid-run \u2014 first skull extraction + /tmp umodel/listing lost. NOTHING was stored from them; all steps reproducible and recorded in this checkpoint. Lane moved to persistent ~/workspace/_w6-work/. umodel re-pulled (sha256 ebeef041... identical, runs, build 1578). TR205 listing re-saved at _w6-work/tr205_list.txt (112,434 entries). Skull extraction RESTARTED from _w6-work (pid 10093, nohup ia_extract.py, log ia_extract.log) \u2014 in progress, ~260MB range-fetched at 18:0xZ, IA rate ~200KB/s, py7zr writes at folder-decompression end.",
+ "step2_ci_cci_located": "CI_dra_hef_skull.uasset at CharacterItem/DRA/FULL_HEAD/ + CCI_dra_hef_skull.uasset at Customize/DRA/FULL_HEAD/ located in listing (per-char CI/CCI for all chars). UI tree located: TekkenGame/Content/UI/Texture2D (5,830 entries) + UI/flash (2,183) \u2014 step (c) targets, same TR205 archive.",
+ "extraction_failure_1": "ia_extract run #1 (in-memory cache RangeFile) DIED after ~500MB range-fetched: IA HTTP 500 on a range request, no retry logic, in-memory cache lost. Fixed: RangeFile v2 = disk-backed 1MB block cache (_w6-work/blockcache_tr205/) + 10x retry/backoff + short-read check; fetched blocks now persist across runs (resumable). Extraction restarted as run #2.",
+ "extraction_run2_status": "IN PROGRESS ~18:5xZ: disk-cached blocks 1,038MB and climbing (prefetch x4 parallel + extractor, ~600KB/s combined). 0 files written yet \u2014 targets sit at listing lines 3177+ (early) but inside a large solid 7z folder; py7zr writes as the decompression stream reaches them. Previous run died at ~500MB unpack-stream with 0 files, consistent. No kill; letting it finish.",
+ "extraction_failure_2": "Run #2 died silently ~19:5xZ after caching 1,378 blocks (1.38GB) \u2014 ia_extract2.log empty, no traceback = SIGKILL/OOM signature on the saturated box. 0 files written. Block cache PERSISTS (durable). Restarted as run #3 (setsid detached); decompression restarts from folder start but reads cached blocks at disk speed until the frontier.",
+ "extraction_run4_stall": "Run #4 extractor found STALLED on a hung IA socket (0% CPU, 27s CPU total, open socket, no decompression) at ~1,688 blocks cached. Killed by own lane (recovery, not a cross-lane kill): all fetched bytes durable in block cache, zero loss. RangeFile hardened: 30s timeout, Connection: close, per-block fetch progress log. Restarted as run #5.",
+ "archive_structure_measured": "TR205 Extracted.7z: 6 folders; folders 0-3 ~8.5-8.6GB unpacked each, folder 4 1.35GB, folder 5 0.22GB (total ~35.9GB unpacked / 13.79GB packed). 102,541 solid files. Skull targets = solid idx 58,107-58,154, with 4,039,443,413 uncompressed bytes before the first target (inside folder 0). Packed offset of targets ~1.55GB at the archive-wide ratio \u2014 the cache frontier when run #5 starts.",
+ "release": {
+  "tag": "w6-tekken7-parts-20261021",
+  "assets": {
+   "skull-mask-uassets.zip": "3.1MB sha256 78c128f14d92104c98a86065dec3afdbf6c77bac92766e5524a5890e676818d1",
+   "tr205_list.txt": "112,434 entries sha256 d9dabfdcc200445831ab88de3106da8685dff8204f4b45908bd150e33008727d"
+  }
+ },
+ "cleanup_20261021": "Cleared blockcache_tr205 (~2.1GB) + tr205_local.7z (~2.1GB real) after products verified on stores (release + PR #467); logged in disk-cleanup-log.md. Both are re-fetchable IA caches; re-pull commands = rangefile.py against the IA download URL.",
+ "remaining_work": "Chunk-wise follow-ups from the SAME proven pipeline (not done this run): (1) rest of cmn categories + per-char Mesh trees -> convert + catalog in batches; (2) CCI/CI records (CCI_dra_hef_skull located at Customize/DRA/FULL_HEAD/ in TR205 \u2014 extraction needs its folder's packed range cached; sets color_slots for the skull entry); (3) CS/ACI/ECI sets; (4) UI file extraction subsets on the creation-suite-ui-v2 lane's request (inventory already fed to its checkpoint). Folders: 0 packed 2,121,187,063 (fully cached once, cleared \u2014 re-fetch ~35-60 min), 1: 2,765,407,407, 2: 2,875,168,050, 3: 4,986,291,061, 4: 1,015,430,396, 5: 21,659,687.",
+ "w6b": {
+  "started_at": "2026-10-21T23:45:56Z",
+  "heartbeat": "2026-10-22T05:39:38.895267Z",
+  "lane": "W6b continuation of W6 / PR #467 (still OPEN, head w6-t7-skull-mask-20261021)",
+  "disk_at_start": "93% used, 7.5G free on /home/hatch",
+  "plan_order": [
+   "1 records: skull CCI/CI first, then generic (all-char skull) records set, classify vs tekken7-slot-catalog.json, complete CATALOG entry",
+   "2 rest of items chunk-wise: cmn/ generic breadth first, then per-char Meshes/<CHAR>/ in folder order",
+   "3 UI files chunk-wise to release + append notes to creation-suite-ui-v2 checkpoint"
+  ],
+  "key_finding_at_start": "tr205_list.txt order is ALPHABETICAL, not solid order (skull dir at line 3176 but skull files at lines ~68001+, solid idx 58107-58154). Folder placement of every target must come from the 7z header via RangeFile, not from listing line numbers.",
+  "chunks_done": [],
+  "continuation_map": "Chunk-wise follow-ups from the SAME proven pipeline (not done this run): (1) rest of cmn categories + per-char Mesh trees -> convert + catalog in batches; (2) CCI/CI records (CCI_dra_hef_skull located at Customize/DRA/FULL_HEAD/ in TR205 \u2014 extraction needs its folder's packed range cached; sets color_slots for the skull entry); (3) CS/ACI/ECI sets; (4) UI file extraction subsets on the creation-suite-ui-v2 lane's request (inventory already fed to its checkpoint). Folders: 0 packed 2,121,187,063 (fully cached once, cleared \u2014 re-fetch ~35-60 min), 1: 2,765,407,407, 2: 2,875,168,050, 3: 4,986,291,061, 4: 1,015,430,396, 5: 21,659,687.",
+  "status": "complete_pr_open",
+  "progress": "DONE: PR #513 OPEN (stacked on #467, not merged) \u2014 commit1 DRA records + CATALOG color_slots=4, commit2 all-char 80-record set; release assets verified; catalog test 3/3 PASS against branch-fetched CATALOG + real runtime; blockcache_w6b (457MB) cleared after store+verify, clear logged in disk-cleanup-log.md with re-pull command",
+  "disk_at_adopt": "92% used, 8.9G free on /home/hatch",
+  "disk_at_adopt_cont": "93% used, 7.8G free",
+  "header_map": {
+   "folders": [
+    {
+     "folder": 0,
+     "packed": 2121187063,
+     "unpacked": 8584951933
+    },
+    {
+     "folder": 1,
+     "packed": 2765407407,
+     "unpacked": 8589782534
+    },
+    {
+     "folder": 2,
+     "packed": 2875168050,
+     "unpacked": 8589134482
+    },
+    {
+     "folder": 3,
+     "packed": 4986291061,
+     "unpacked": 8565859975
+    },
+    {
+     "folder": 4,
+     "packed": 1015430396,
+     "unpacked": 1349484308
+    },
+    {
+     "folder": 5,
+     "packed": 21659687,
+     "unpacked": 221573216
+    }
+   ],
+   "packpos": 0,
+   "solid_files": 102541,
+   "CI_dra": {
+    "solid_idx": 12094,
+    "cum_before": 1602806178,
+    "size": 1451,
+    "folder": 0
+   },
+   "CCI_dra": {
+    "solid_idx": 40645,
+    "cum_before": 1643604002,
+    "size": 2180,
+    "folder": 0
+   },
+   "all_skull_CI_CCI": {
+    "n": 80,
+    "solid_range": [
+     5403,
+     51523
+    ],
+    "cum_range": [
+     1594129287,
+     1670727923
+    ],
+    "folder": 0
+   },
+   "solid_map": "~/workspace/_w6-work/w6b/solid_map.json (19MB)"
+  },
+  "records_extraction": {
+   "method": "SevenZipDecompressor stream over RangeFile disk block cache, folder 0 only, stopped at last target end cum 1670730103 (never staged archive)",
+   "elapsed_s": 1667,
+   "packed_consumed": 452984832,
+   "files": 80,
+   "total_bytes": 146697,
+   "out": "~/workspace/_w6-work/records_out2 + manifest.json",
+   "CI_dra_hef_skull": {
+    "size": 1451,
+    "sha256": "a4082b9d6c339ca31300615537eea3b21f4ecba879e3d3e75d767a54f449e0c7"
+   },
+   "CCI_dra_hef_skull": {
+    "size": 2180,
+    "sha256": "8cf8972b1ec9d3906603d6b17a6f92ca1379326c69f5903dd1f56f4436615b16"
+   }
+  },
+  "records_parse": {
+   "CI_dra": {
+    "InstanceName": "SK_CH_cmn_hef_skull",
+    "MeshType": "SkeletalMeshAnim",
+    "Character": "CharacterItemEditor::ID_DRA",
+    "ItemPosition": "FULL_HEAD",
+    "SourceSkeletalMesh": "SK_CH_dra_hef_skull (import 3)",
+    "SocketPosition": "UNSET_SOCKET",
+    "bAllowHairAcc": false,
+    "CommonGroup": "cmn_hef"
+   },
+   "CCI_dra": {
+    "ReleaseVer": "ItemUpdate1",
+    "CharacterItem": "CI_dra_hef_skull (import 0)",
+    "LocationName": "MI_CH_cmn_hef_skull",
+    "InstanceColors": [
+     [
+      0.782458,
+      0.8,
+      0.576,
+      1.0
+     ],
+     [
+      0.024,
+      0.051,
+      0.005,
+      1.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ]
+    ],
+    "ColorIndicies": [
+     [
+      "ColorIndex",
+      2
+     ],
+     [
+      "ColorIndex",
+      1
+     ],
+     [
+      "ColorIndex",
+      3
+     ],
+     [
+      "ColorIndex_Private",
+      0
+     ]
+    ],
+    "IndexColors_count": 5,
+    "Index0Colors_count": 4
+   },
+   "color_slots": 4,
+   "all_char_cci": "39/39 identical color records; suit pair separate item"
+  },
+  "release_assets_added": {
+   "skull-mask-records-dra.zip": "sha256 49214e48ba4876de9aa1c3e3020f29d2e2f22ee76b9ba8d473f654df44cfacac",
+   "skull-mask-records-all-chars.zip": "sha256 62cedc04a0650dbb73ec30028a79c09c1e0cbfbb4f58391d807b9583aa6a69d0"
+  },
+  "branch": "w6b-t7-skull-records-20261022",
+  "commit1": "50c5d29749524356052ea10056e5a43f043adc4a",
+  "commit2": "24512efe8d8cccfaff36d728d8e8aee68ecdfd09",
+  "pr": {
+   "number": 513,
+   "url": "https://github.com/mhvnsnt/western-heart/pull/513",
+   "base": "w6-t7-skull-mask-20261021",
+   "head": "w6b-t7-skull-records-20261022",
+   "state": "OPEN \u2014 not merged"
+  },
+  "cache_clear": "blockcache_w6b 457MB cleared 2026-10-22, logged in ~/workspace/agent-ops/disk-cleanup-log.md with re-pull command (extract_records_stream.py / rangefile.py vs IA download URL)"
+ },
+ "notes": [
+  "[watchdog 2026-10-22 ~09:28 CDT] Heartbeat: PR #513 on mhvnsnt/western-heart verified OPEN via gh (mergedAt null) \u2014 lane work delivered, merge gated on central/owner review. Standing down; not resuming delivered work.",
+  "[watchdog 2026-10-24 19:40 CDT] Verified COMPLETE via gh API: western-heart PR #513 MERGED 2026-10-23T19:45:36Z (W6b skull mask CCI/CI extracted + parsed). W6b scope done - status set done. Broader W6 (T7 acquisition) remains OWNER-PARKED per checkpoint blockers; do not resume without a new owner/coordinator order."
+ ]
+}

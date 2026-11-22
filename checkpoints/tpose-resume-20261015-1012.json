@@ -1,0 +1,10 @@
+{
+ "task": "Resume tpose-all-fighters lane: continue Cycles-CPU T-pose renders from pilot",
+ "repo": "western-heart",
+ "resume_brief": "TPOSE RESUME 2026-10-15 10:12 EDT. Checkpoint tpose-all-fighters.json stale 57min, no live blender process, no output since 09:39. Verified good state: ~/workspace/western-heart is fresh shallow clone, branch tpose-all-fighters created (no commits yet); pilot render ~/workspace/tpose-work/pilot/pilot_out/p1_front.png (1.2M) proves Cycles CPU path works via tpose_render_cycles.py (Blender Workbench/Eevee segfaults in this env - use Cycles CPU ONLY). T7 models on disk at ~/workspace/game-reverse-engineering/tekken7/models/ (asuka, baek, bryan, dr-bosconovitch, eddy...). Steps: 1) heartbeat tpose-all-fighters.json immediately; 2) own-eyes verify p1_front.png framing/spec (2048px, white 255,255,255, fingertips in frame, 109px margin); 3) adapt tpose_render.py to Cycles CPU if needed; 4) render fighters one by one, own-eyes verify each (limb-by-limb), save to docs/tpose-refs/<fighter>/p1_front.png + p1_side.png; 5) incremental commits to tpose-all-fighters, PR per owner order; 6) heartbeat after every fighter. Render to /tmp then move, clean up immediately (disk 81%). OWNER ORDER: 28 T7 fighters + 19 VF5 + 98 unnamed = ~145 fighters. NEVER-DELETE-GAME-FILES, SAVE-GENERATED-ASSETS-IMMEDIATELY (commit to repo the moment a render exists).",
+ "status": "complete",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-15T21:30:55.596994+00:00",
+ "notes": "Watchdog 2026-10-15 17:28 EDT: closing as DUPLICATE of tpose-all-fighters.json (same lane: 'Resume tpose-all-fighters lane'). Primary checkpoint carries the work (now needs_owner: Blender infra block, T7 pushed to origin). Closed to avoid double-processing."
+}

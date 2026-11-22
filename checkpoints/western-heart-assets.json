@@ -1,0 +1,12 @@
+{
+  "task": "Hunt free/open-source/leaked assets for Western Heart",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/western-heart",
+  "resume_brief": "Systematically finding free, open-source, and leaked content for Western Heart across 8 categories: character models, fighting animations, Eastern/Japanese environments, fighting game UI, audio, textures/materials, particle effects, and leaked gamedev content. Checking Quaternius, Mixamo, OpenGameArt, itch.io, Kenney.nl, Sketchfab, Poly Haven, ambientCG, Freesound, BBC Sound Effects, Sonniss, CMU/SFU mocap, GitHub open-source fighting games, and Archive.org. Recording name, URL, license, size, format, and Western Heart use case for each. Deliverable is western-heart-asset-catalog.md.",
+  "updated_at": "2026-10-13T03:15:00Z",
+  "attempts": 0,
+  "notes": [
+    "Catalog complete: ~/workspace/game-reverse-engineering/western-heart-asset-catalog.md (8 categories, ~40 entries, all URLs verified live). Priority pull list included. No files downloaded per task."
+  ]
+}

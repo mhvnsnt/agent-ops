@@ -1,0 +1,10 @@
+{
+  "task": "Tekken 6 PSP ISO re-download + TeraBox upload",
+  "status": "complete",
+  "watchdog": true,
+  "repo": "~/workspace/game-reverse-engineering/tekken6/",
+  "resume_brief": "Re-download Tekken 6 PSP ISO from Archive.org item tekken-6_202309 (file 'Tekken 6.iso', 816MB) to ~/workspace/game-reverse-engineering/tekken6/tekken6-psp.iso. Verify size/integrity. Then upload to TeraBox via browser task (account fmmg.mars@gmail.com) into /western-heart/tekken6/ folder. DO NOT delete the local copy - per NO-DELETE-BEFORE-SAFE-STORAGE LAW it stays until verified on TeraBox AND GitHub. Checkpoint file: ~/workspace/agent-ops/checkpoints/tekken6-psp-redownload.json",
+  "updated_at": "2026-10-13T03:03:00-04:00",
+  "attempts": 1,
+  "notes": "DOWNLOAD COMPLETE AND VERIFIED: tekken6-psp.iso = 855,638,016 bytes (exact match to archive.org metadata), at ~/workspace/game-reverse-engineering/tekken6/tekken6-psp.iso. TeraBox upload NOT done - subagent cannot launch browser tasks, needs parent delegation. Local copy retained per NO-DELETE-BEFORE-SAFE-STORAGE LAW."
+}

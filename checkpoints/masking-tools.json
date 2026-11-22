@@ -1,0 +1,10 @@
+{
+  "task": "Install intelligent masking tools and redo Ashes rig test with proper compositing",
+  "status": "done",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace",
+  "resume_brief": "Task complete. rembg installed via pip (system). Cartoon-specific segmentation tools built at ~/workspace/tools/masking/ (mouth_opening.py, cartoon_segment.py, README.md). Ashes rig test v2 built at ~/workspace/ashes-mouth-pack/ashes-rig-test-v2.mp4 (10.4s, 312 frames, full-card hard cuts — no compositing seams). masking-quickstart.md updated with cartoon section. PIPELINE-CHECKLIST.md Step 7 updated with masking rules. Key lesson: compositing mouth regions from unaligned cards fails; full-card cuts are honest and clean. For true lip-sync compositing, source cards must be pixel-aligned generations from a single base.",
+  "updated_at": "2026-10-10T21:00:00Z",
+  "attempts": 1,
+  "notes": "SAM not installed (needs torch ~2GB, skipped — cartoon color-based segmentation proved more precise for thick-outline art). rembg installed via system pip. v2 uses full-card hard cuts instead of mouth-region compositing because the 10 viseme cards are 3 different sizes and different generations — mouths don't align. This is documented as a pipeline rule."
+}

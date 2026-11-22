@@ -1,0 +1,9 @@
+{
+  "task": "Copy tools/model-3d-placement-tool/ into 7 game repos via branch-PR-merge each",
+  "repo": "mhvnsnt/western-heart",
+  "resume_brief": "Copy the directory ~/workspace/western-heart/tools/model-3d-placement-tool/ (3 files: model-3d-placement-tool.html, README.md, export_placer_glbs.py) into each of these 7 local repo checkouts at tools/model-3d-placement-tool/: ~/workspace/ConcreteDragon, ~/workspace/StreetBrawl, ~/workspace/M.-Engine-, ~/workspace/ashlane-malakor, ~/workspace/brutal-fist-v10, ~/workspace/god-molecule-studio, ~/workspace/trippedd-studio. For EACH repo: create branch feat/placement-tool, copy the 3 files, commit, push, open PR against main, merge the PR, verify zero open PRs left. Do NOT push straight to main. If a repo has uncommitted changes or a PR conflicts, resolve carefully without destroying work; if unresolvable, leave the PR open and report it. Heartbeat this checkpoint every 10 min; mark done when all 7 repos have the tool merged and zero open PRs remain.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-13T00:46:13.423898+00:00"
+}

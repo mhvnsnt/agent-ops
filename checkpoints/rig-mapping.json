@@ -1,0 +1,9 @@
+{
+  "task": "Pull the most helpful rigging materials from each key show, mapped to owner's specific characters and struggles. EXPANDED: build universal character pipeline.",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/animation-techniques/steal-like-artist/",
+  "resume_brief": "COMPLETE. Built rig-mapping/ (per-character guides: 7 show guides covering Dexter's Lab geometric construction, PPG minimalism, Johnny Bravo humanoid/silhouette, Teen Titans action rigging, Foster's Home Flash puppet pipeline, Gumball organization pointer, KND 8-sheet model pack from on-disk bible analysis; character guides for Ashes/Static/Cipher/Goodville trio/remaining WG; likeness-lock 3-layer guide) and character-pipeline/ (universal 6-stage: intake, model sheet, rig spec, viseme pack, likeness lock, animation ready — each with blank template + Ashes filled example + study pointers + checklist; 14 pre-filled character folders with 89 template files). Storage strategy applied: all lightweight markdown in repos, B2 only for .fla/large files. Key finding: KND production bible (on disk) is the most rigging-relevant document — 8-sheet model pack with per-character mouth charts, construction lines, walk/run cycles, and 'wrong mouth' QC examples.",
+  "updated_at": "2026-10-12T14:30:00Z",
+  "attempts": 0
+}

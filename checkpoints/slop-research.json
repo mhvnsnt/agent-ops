@@ -1,0 +1,9 @@
+{
+  "task": "Deep research: every technique and tool that kills AI slop and amateur mistakes in 2D animation production",
+  "status": "done",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/animation-techniques",
+  "resume_brief": "Task complete. Outputs delivered: KILLING-SLOP.md, QC-CHECKLIST.md, updated TOOLKIT.md, masking-quickstart.md, rembg installed in mask-venv and tested on Ashes viseme.",
+  "updated_at": "2026-10-10T21:00:00Z",
+  "attempts": 1
+}

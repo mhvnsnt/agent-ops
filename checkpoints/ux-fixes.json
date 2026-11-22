@@ -1,0 +1,10 @@
+{
+  "task": "Fix Pocket Studio UX blockers: menu traps (no dismiss), clip tap-vs-drag vs long-press on timeline, back-button support, tap-outside dismiss",
+  "repo": "pocket-studio-v2",
+  "resume_brief": "Continue UX fixes in ~/workspace/pocket-studio-v2/app.html: 1) All menus/modals need X button, tap-outside-to-dismiss, Android back-button handling. 2) Timeline clips: tap=select, drag=move (8px threshold), long-press 500ms=context menu. 3) Audit for other UX traps. Then trigger artifact rebuild via parent.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-12T05:10:21.262152+00:00",
+  "notes": "Modal system centralized: X button, tap-outside dismiss, Android back-button via history pushState/popstate (try/caught for sandbox). Clip long-press menu gets explicit Close button. Timeline gestures already had tap=select/drag=move 8px/long-press 500ms=menu. PWA modal also back-button aware. JS syntax verified. app.html ready for artifact rebuild."
+}

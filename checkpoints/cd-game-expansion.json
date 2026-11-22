@@ -1,0 +1,10 @@
+{
+  "task": "Concrete Dragon: real playtesting, bug fixes, menu digestibility pass, expansion toward north stars",
+  "repo": "/home/hatch/workspace/ConcreteDragon",
+  "resume_brief": "GAME EXPANSION LANE COMPLETE. PR #35 merged to main. Work done: (1) Playtested real build \u2014 found title logo clipped, patch notes overlapping meta, tutorial colliding with mission card. (2) Menu digestibility per HUMAN-PERSPECTIVE UX LAW: title flex-start layout, collapsible patch notes, titleMeta in flow, fighter cards 112px->150px, hint repositioned, clearer dodge indicator. (3) Merged main (40 commits) with keep-both conflict resolution. All verified: build passes, title screen captured and inspected. Branch feature/cd-menu-combat-overhaul merged via PR #35, no open PRs.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T02:11:23.106215+00:00",
+  "notes": "Watchdog 2026-10-09 21:10 CDT: worker died with stale heartbeat (updated_at 2026-10-10T00:42Z). Verified via git: PR #35 merge commit 6802ad7 present and ancestor of origin/main (aec600d); title/menu/fighter-card fixes from the lane are on origin. No open PRs from this lane. Marked done."
+}

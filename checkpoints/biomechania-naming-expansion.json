@@ -1,0 +1,10 @@
+{
+ "task": "Expand BioMechania mech roster names to 150-200 total: MDickie-style proprietary-twist names across all inspiration lines, IP-collision checked, owner picks canon",
+ "repo": "/home/hatch/workspace/BioMechania",
+ "resume_brief": "Expand the mech naming slate to 150-200 total names. Base: docs/MECH_NAMING_SLATE.md on branch research/mech-naming-slate (35 candidates, 9 top picks already owner-approved in principle: SKITTER, POUNDCAKE, VANGEL, VERNIER, ZOYD, FORMCHAIN, MASKJACK, HENSHIN, RANGERDANGER \u2014 keep these as line anchors). Owner's law: MDickie-style \u2014 based on the inspiration with a slight proprietary change, BioMechania universe. Generate the full 150-200 across the lines (light recon, heavy combat, Evangelion, Gundam, Zoids, Transformers, Bionicle, Kamen Rider, Power Rangers, plus new lines as needed: e.g. derby brawlers, aerial types, beast-form Zoid-likes). Every name: evokes its line, clearly original, web-check the risky ones for trademark/franchise collision (drop or rework collisions like the first round did with MODELOCK etc.), fits the biomech-derby tone. Deliverable: expanded docs/MECH_NAMING_SLATE.md on the same branch (pushed, not merged \u2014 owner still picks/approves; present grouped by line with top picks marked). Report back counts per line. Standing rules: heartbeat this checkpoint, branch->PR only, disk <=75%.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T02:41:14.353990+00:00",
+ "notes": "DONE: docs/MECH_NAMING_SLATE.md expanded to 13 brands + 184 character names (197 total), committed 391783e, pushed to origin on research/mech-naming-slate (NOT merged \u2014 owner approves). 60+ dropped on collision. CLUTCHPOP + JACKKNIFE flagged for second-pass web verification (search transport failed at assembly)."
+}

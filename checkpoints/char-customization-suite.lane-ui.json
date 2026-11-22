@@ -1,0 +1,9 @@
+{
+ "task": "Lane: eye-color + customizer UI integration",
+ "repo": "/home/hatch/workspace/game-sweep/cc-ui",
+ "resume_brief": "LANE-UI done for this session. Branch feature/customizer-ui-eyes pushed (10 commits, PR #29 open). Face-paint 3 proof shots in ~/workspace/agent-ops/customizer-qc/. Pending: glove attach triage, mask likeness (mask lane), vite build passes. See final report.",
+ "watchdog": true,
+ "status": "done",
+ "attempts": 0,
+ "updated_at": "2026-10-09T07:20:19.400635+00:00"
+}

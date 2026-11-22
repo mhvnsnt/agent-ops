@@ -1,0 +1,10 @@
+{
+ "task": "Wire up free open-source art/editing stack into repos (owner 2026-10-10)",
+ "repo": "~/workspace/font-wizard",
+ "resume_brief": "Owner 2026-10-10: 'Wire up all that's free and to my repos too for art and editing.' Build a free/open-source art+editing toolkit and wire it into his repos. Stack: rembg (background removal), BiRefNet/RMBG-2.0 (SOTA matting), LaMa (inpainting/object removal), Pillow + ImageMagick (compositing, text, color), ffmpeg (video cutting/captions), potrace (raster-to-vector for font work). Set it up as reusable tools: a shared tools/art-stack/ directory (pick the best home repo \u2014 font-wizard or a new spot) with install script, then wire entry points into font-wizard, media-pipeline, trippedd-studio so workers can call them. Document each tool: what it does, how to call it, example. No paid APIs, no subscriptions \u2014 free only. Branch \u2192 PR \u2192 merge.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T01:01:30.230429+00:00",
+ "notes": "Complete 2026-10-11: art stack built+tested in font-wizard (PR #7 merged), media-pipeline bg_remove upgraded (local commit, no remote), trippedd-studio shim+docs (PR #123 merged), Pocket Studio server.py+Colab wired (local commit, no remote). venv manifest saved."
+}

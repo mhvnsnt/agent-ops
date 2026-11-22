@@ -1,0 +1,10 @@
+{
+  "task": "Lane: masks + hoods + hairstyles",
+  "repo": "/home/hatch/workspace/game-sweep/cc-3dhead",
+  "resume_brief": "LANE-3DHEAD complete. Branch feature/masks-hoods-hair pushed, PR https://github.com/mhvnsnt/AshLanev2/pull/27 open. 14 assets in public/models/{masks,hoods,hair}/ with manifests, QC contact sheets, FIT_NOTES.md. Scripts in scripts/cc-lane/.",
+  "notes": "DONE: 14 assets, 4 commits (9c8a6012 masks, d7a07083 hoods, 41f1db43 hair, 8ee226df QC), PR #27 open. Hollow mask follows owner 2026-10-06 Super Dragon canon (NOT horned demon). Integration notes in FIT_NOTES.md.",
+  "watchdog": true,
+  "status": "done",
+  "attempts": 0,
+  "updated_at": "2026-10-09T05:06:18.137920+00:00"
+}

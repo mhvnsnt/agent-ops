@@ -1,0 +1,43 @@
+{
+  "task": "CREATION-SUITE GAP-FILL COORDINATOR (owner order 2026-10-20 ~22:14 CDT): Def Jam converter (22,360 parts), WMXIX texture batch remainder, Tekken 6 item-table search, WMXIX missing-catalog/geometry completion",
+  "repo": "mhvnsnt/western-heart",
+  "status": "done",
+  "watchdog": false,
+  "started": "2026-10-20T22:20:00-05:00",
+  "updated_at": "2026-10-21T11:48:21.158084+00:00",
+  "resume_brief": "Coordinate 4 gap-fill jobs from the creation-suite wiring audit (gap map #2/#3/#4/#5). VERIFIED BASELINE on main 2026-10-20 (first-hand): customization/parts-converted/CATALOG.json EXISTS (3,372 parts: no-mercy 682 with 303 GLBs converted; wmxix 2,690 cataloged). WMXIX statuses: converted-texture 1,044 / blocked_ymg_decode 998 / blocked_no_tpl 426 / blocked_dumy_placeholder 202 / not_converted 12 / palette_only 8. Unified parts-catalog total after PR #404 = 4,523 (registry 1,148 + converted 3,372 + scans). Jobs: J1 T6 item-table search (unowned), J2 WMXIX 426 blocked_no_tpl texture remainder, J3 WMXIX 998 blocked_ymg_decode YOBJ->GLB geometry conversion + catalog update + runtime merge + tests, J4 Def Jam EAGL .o converter + 22,360-part batch (files in mhvnsnt/wrestling-game). SEQUENCING LAW: only ONE Blender-heavy conversion at a time (VM RAM 8GB, OOM kills lanes). J3 owns the conversion slot first; J4 research phase may run parallel but its batch phase waits for J3 done flag here. All PRs additions-only, instruction-gate format, verbatim owner instruction: 'get the Def Jam converter done all the 22k parts the WM 19 texture batch decode the Tekken 6 item table search and the assigned catalog that's missing on main get all of that handled'.",
+  "blender_slot": {
+    "owner": "none \u2014 released by J3",
+    "j4_batch_released": true
+  },
+  "jobs": {
+    "J1-tekken6-item-tables": {
+      "status": "DONE \u2014 PR #416 open",
+      "result": "PR https://github.com/mhvnsnt/western-heart/pull/416 (open, additions-only 3 files +47,768/-0): TEKKEN6-ITEM-TABLE-SEARCH-2026-10-20.md + tekken6-item-catalog.json + tekken6-item-names.json. Title finding: name tables validated + 9,440 records extracted; the item DEFINITION array remains a named gap. Extraction solely from a SHA-256-verified recon tar. Self-correction (commit 82503fc): report sec.1.4 fixed \u2014 a transient bulk_decrypted.bin existed in another lane's scratch (_t6r3-scratch, since cleared) and was NOT used; item_tables.json found nowhere. Lane footprint zero."
+    },
+    "J2-wmxix-texture-remainder": {
+      "status": "DONE \u2014 PR #415 open, MERGEABLE, all checks green (merge-ready for parent)",
+      "result": "Decoded 433/446 remainder entries; 13 still blocked with proven reasons; 0 failed. Root cause: 426 blocked_no_tpl files are LE .tex containers whose TPL payloads use VARIANT magic 0x0120AF30 (standard is 0x0020AF30, which PR #398's byte-scan required); all entries format 9 (C8). New tool customization/tools/decode_wmxix_tex_remainder.py. WMXIX converted textures 1,044 -> 1,477 (all re-verified on disk); unified catalog total unchanged 4,523; geometry_pending 1,646 -> 1,213 (J3's remaining scope). Tests: catalogs 5/5, dna 4/4. Blocked 13: 8 .ycg palette_only (color data, no image), 3 .ymm (YOBJ mesh \u2014 J3 family), 1 script.txt, 1 .tpg index. Footprint cleared + logged.",
+      "flags": "Gate quirk: instruction-gate wants 'Method specified' == 'Method actually used' text + bare 'none' deviations when none. VM write-flush flakiness (Errno 1, silent 0-byte truncation) \u2014 verify-and-retry writes work around it. Known limitation: convert_caw_parts.py build_catalog() hardcodes not_converted for leftover types; a rebuild would revert 7 tq0_417 entries' catalog status (documented in PR #415 report)."
+    },
+    "J3-wmxix-ymg-geometry": {
+      "status": "DONE (lane) \u2014 PR #420 open/mergeable; ZERO GLBs shipped: sample eye-validation FAILED, blocker documented (by design \u2014 sample-first discipline stopped a bad batch)",
+      "result": "PR https://github.com/mhvnsnt/western-heart/pull/420 (5 files, +17,394/-0): customization/tools/convert_wmxix_ymg.py converter + WORKLOG-WMXIX-YMG.md + wmxix-conversion-log.jsonl + wmxix-conversion-report.json (full census) + catalogs.test.js extension (6/6 pass). Instruction gate: passes (body rewritten to gate form; verified by running the repo gate script locally against the live body + real file list). Deviations section is honestly non-'none' (3 deviations, each with PR refs). The 998 blocked_ymg_decode parts remain unconverted \u2014 geometry_pending total 1,213 (= 998 .ymg + 202 DUMY + 13 non-texture incl. 3 .ymm censused as ~145KB full-model other-endian YOBJ variant, decoder no_pool_bounds, outside proven scope). Runtime totals unchanged: 4,523 catalog entries, 303 geometry GLBs, WMXIX textures 1,477 (via J2).",
+      "gate_effect": "j3_done = true; Blender slot RELEASED."
+    },
+    "J4-defjam-converter": {
+      "status": "DONE (phases R + V + B) \u2014 PR #411 updated, gate passed locally (zero violations); ONE documented blocker: vertex draw order unproven, so no mesh GLBs ship (POINTS pools instead)",
+      "result": "Layout closed with Ghidra evidence (SLUS_210.04 EAGL runtime: _BuildMorph -> 0x19F970 -> 0x19FBD8; CMorph load 0x1149B4; CVertexInformation::Init 0x11EB88; consumption is VU1-side so data + _C twin are the authority; block framing byte-exact on every sample block; counts match _C strip table 27/27). Textures FULLY closed + own-eyes PASS x3 (SHPS: 8bpp unswizzle, linear palettes, u24 palette sizes, partial-page rule proven on 64x62 texture). BLOCKER (spec 7.9): vertex draw order/position semantics unproven \u2014 strip build renders scrambled spikes, raw pool renders scatter; 9 order hypotheses falsified with data; converter emits proven Coordinates pool as glTF POINTS, cataloged topology_status=unproven_vertex_order; UVs proven absent from A/B .o (textures decoded + cataloged, deliberately unbound). Tools: convert_defjam_o.py + eagl_shps.py + eagl_refpack.py; tests 18/18 PASS (direct execution). SCOPE GAP (parent decision): only 2,624 .o were ever extracted in wrestling-game; 19,736 of the 22,360 indexed parts were never extracted from the disc (index covers codes 110-113, extracted set spans 110-532) \u2014 ISO-scale teardown job. Batch over extracted set: 1,201 converted (777 with textures, 2,178 PNGs), 654 compiled_variant, 767 no_valid_refpack_record (311/312 family, teardown QA flag), 2 pose_palette_only, 0 errors; catalog-disk verified 1:1. Follow-up leads documented: bone-local assembly (94-bone float palette .data 0x5F0+), VU-packed companion stream (6xi16, entropy 7.29), _C packed vertex form. Scratch 1.2GB cleared + logged."
+    }
+  },
+  "notes": [
+    "2026-10-20 22:2x CDT: coordinator start. Audit's 'catalog absent' was true at audit time; Worker A PR #398 merged 01:51Z landing CATALOG.json + 303 NM GLBs + 1,044 WMXIX texture PNGs. Job 3 rescoped to the genuinely-missing piece (998 blocked_ymg_decode geometry conversions) after first-hand verification \u2014 no duplicate of A's landed work. Disk 81% (20G free), RAM tight: sequential Blender law in force.",
+    "2026-10-20 ~23:1x CDT: J4 Phase R complete (PR #411). Phase V lane dispatched for Ghidra closure. J1/J2/J3 still running.",
+    "2026-10-21 ~00:45 CDT: J1 DONE (PR #416). J2/J3/J4-V still running.",
+    "2026-10-21 ~00:46 CDT: J2 DONE (PR #415, merge-ready, left open for parent merge call). Gate-format + write-flush lessons relayed to J3 and J4-V lanes.",
+    "2026-10-21 ~01:50 CDT: J3 DONE (PR #420) \u2014 converter shipped, GLB batch NOT run (sample eye-validation failed, blocker documented in the PR's conversion report). Blender slot released; J4 batch gate now depends only on J4 Phase V (converter + validated samples).",
+    "2026-10-21 ~06:47 CDT: J4 V+B DONE (PR #411 updated). PROGRAM COMPLETE: J1 #416, J2 #415, J3 #420, J4 #411 all open. Open items for parent: merge calls; Def Jam disc extraction (19,736 parts, ISO-scale); follow-up format work: WMXIX YOBJ eye-validation blocker (#420 report), Def Jam vertex-order leads (spec 7.9), T6 item definition array (#416 gap)."
+  ],
+  "done_note": "All 4 PRs merged by 2026-10-21 11:57Z (#398, #404, #415, #416 on mhvnsnt/western-heart); marked done by keep-working pulse 2026-10-23 01:30 CDT after live gh verify.",
+  "last_heartbeat": "2026-10-23T06:30:00Z"
+}

@@ -1,0 +1,9 @@
+{
+ "task": "Audit holdings vs manifest for the 33 remaining torrent dirs (everything not in pull queue #1-9)",
+ "repo": "/home/hatch/workspace",
+ "resume_brief": "Read-only audit: for each of the 33 remaining CNleaks.torrent top-level dirs (Adventure Time, BAKUGAN, BONUS, OK KO, Camp Lazlo, Ed Edd N Eddy, Gym Partner, Kids Next Door, Powerpuff Girls Special, Powerpuff Girls Original, Garfield, Johnny Test, Wabbit, TEEN TITANS, LOONEY TUNES (Classic), Looney Tunes Classic, DUCK DODGERS, Johnny Bravo, Dexter's Lab, Robot Chicken, PDFs, j2s-20261010T163554Z-1-001, Cow & Chicken, PPGZ, Juniper Lee, Powerpuff Girls 10th Anniversary, I Am Weasel, Transfer, Transfer(1), New Looney Tunes, Looney Tunes Cartoons, The Pink Panther, Foster's Home), diff the manifest (~/workspace/cn-gigaleak-raw/torrents/CNleaks-manifest.csv) against what exists on the corresponding mhvnsnt GitHub repos (19 per-show cn-gigaleak-* repos exist) plus google-drive-repo/drive-storage, via gh api (git ls-tree on branches + release assets). Report per dir: expected files/bytes, held files/bytes, missing files/bytes, % complete. No downloads, no pushes, no writes except the checkpoint heartbeat.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-14T07:37:53.302028+00:00"
+}

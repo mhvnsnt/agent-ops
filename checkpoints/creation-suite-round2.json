@@ -1,0 +1,78 @@
+{
+ "branch": "feat/creation-suite-round2-20261021",
+ "branch_tip": "f69a523 + stage-select spec commit (see git log) on feat/creation-suite-round2-20261021",
+ "coordination_2026-10-21": {
+  "rig_studio": "PR #462 (Rig & Pose Studio) OPEN \u2014 rig section in customization schema + rigpose_bake.py; the model for how owner controls land. Do not fork its control surface.",
+  "sibling_phone_fix_check": "Checked 2026-10-21 ~19:35 CDT: gh PR list (all states, created > 2026-10-22T00:00Z) shows NO creation-suite phone-fix PR (#470 DOA4, #471 playability, #472 Diablo, #473 moveset gaps). Remote branches matching csui|creation|phone|suite: creation-suite-ui-rebuild is the 2026-10-19 CSUI build (already the ancestor of the on-main suite), feat/creation-suite-ui-v2-20261021 = PR #468 (MERGED, packages/creation-suite/ui2). Local dirs _csui-work/_csui-v2-work are no longer git worktrees. CONCLUSION: no sibling phone-fix branch/PR exists on the remote to build on; this lane proceeds in the ONE player-facing suite (customization/creation-suite-ui/, the path game/js/main.js launches) + packages/creation-suite/src engine, and keeps changes modular so a later sibling landing can rebase onto it. If a sibling branch appears, STOP and build on it instead (owner order).",
+  "stash_note": "stash@{0} 'mw-record-wip-pre-mainmerge' preserves the pre-merge WIP versions of roster/baek/attires/master-white/customization.json + model-kevin-diff.glb (parallel lane's placement/tint record draft, unverified). The swap redo regenerates the MW record; stash kept as reference."
+ },
+ "governing_spec": "docs/TEKKEN8-SHELL-WH-CORE-SPEC-2026-10-21.md (LOCKED, owner directive 2026-10-21 ~19:24 CDT)",
+ "infra_lessons": "Bake with TMPDIR=<workspace dir> (/tmp is 512MB tmpfs and fills; caused xvfb exit 120). EEVEE 64-sample renders of 1M-vert GLBs take 15min+ under multi-lane contention; 8-sample head renders suffice for verdicts. One Blender at a time, never kill. Restarts kill lanes every ~20 min: checkpoint + commit + push after every piece.",
+ "lane": "creation-suite-rebuild (round2 base + T8 shell spec)",
+ "numbers_rule_2026-10-21_1939": {
+  "audits": {
+   "attire_provenance_sheet": "101 attire rows: 53 Tripo-original, 4 Tripo reskin-of-source, 13 source-game models, 12 retextures, 10 community rips, 9 unclassified; 79 wired / 19 not / 3 broken",
+   "movesets": "57 fighters",
+   "parts_registry_in_tree": 1150,
+   "roster_model_key_audit": "58 roster entries: 33 own-model, 10 base-by-design, 13 wrong->fixed, 2 no-model"
+  },
+  "roster_scale": "Owner 19:37 CDT: 'the Western Heart creation suite is more than 36 fighters \u2014 don't let any of those incorrect Gemini hallucinations drift you in the wrong direction.' Select grid + suite cover the FULL roster and scale as it grows (T8 DLC-style grid adjustment, never hard-coded count). '36-fighter canon' STRUCK from spec + checkpoint.",
+  "rule": "Only citable counts are the repo-verified audits. NEVER cite the Gemini '36' or any session's unverified recount (e.g. '59/50', '4,523 parts'). A dedicated lane is producing a consolidated census doc (docs/ROSTER-COUNT...); when it lands, cite it. Until then the audits govern."
+ },
+ "open_items_mine": [
+  "SWAP-YAW CALIBRATION: yaw 0 = Kevin head faces +X (profile); -90 over-rotates to diagonal; START AT -45 (the -45 bake died mid-export under RAM contention, never retried). This is the owner's 'turned sideways' fix. Also yaw-2 bake once wrote a 499KB GLB with NO graft (silent per-item failure) \u2014 the bake must fail LOUD on empty grafts.",
+  "CHIN CUT: cut LOWER so the full chin/jaw grafts (current neck-pinch cut clipped it) + pale band at jaw/neck junction = owner's skin-tone item; finish via M4 registry + ac0891d texture-multiply tint in the corrected proof.",
+  "DEATHFANG-TORSO SECOND SWAP: config ready in customization/tools/proof/cs-round2-swap/, never baked.",
+  "RT-C3 RE-PROOF: check result before claiming placement visuals pass. RT-C ITSELF WAS AN OWN-EYES FAIL (CC0 hair/beard as white shells floating at the left side of the head) \u2014 never cite rt-c as a pass. Night finding: side render cracked it (hair cap pitched back, base head semi-transparent in EEVEE, flat weighting shear); fixes landed in 3d0b13e (base skin-field weights) + scratch C values (hair rx -22 pitch-forward, beard raised/tucked); rt-c4 render was pending.",
+  "REBUILD MILESTONES (T8 spec phasing): 1) preview obeys taps on authored bases (no Soldier default); 2) editor spatial law 25/75 + footer legend + portrait tap-open sheets; 3) slot bridge + base-template picker (Def Jam CAW / Tekken creation / WWE CAW families + roster characters); 4) head-swap corrections + in-game CUT control with bake support; 5) select screen (spec A) + photo booth (spec B exit); 6) deep stack (spec D).",
+  "STAGE SELECT (spec SS F, owner 19:47 CDT): Tekken-pattern stage select joins the post-verdict shell build (PHASING item 5) \u2014 scrollable grid, tracking preview, in-layout description, unique per-stage thumbnails, random option, always-visible confirm; ALL-MENUS RULE bans hand-tooled layouts in every menu."
+ ],
+ "owner_directives_2026-10-21_1855": {
+  "A_head_swap": "Proof graded CLOSE. Fixes: (1) CUT LOWER \u2014 cut clipped the chin, FULL chin/jaw comes with the head. (2) Match the BODY's skin tone (big skin tone, neck/chest) to KEVIN's head skin tone. (3) Seat head facing forward. PLUS the capability: OWNER does cuts + placements himself in character creation \u2014 a CUT control (cut height/plane on a part) + placement, on ANY part of ANY model, saved per-attire.",
+  "B_suite_ui": "Layout, percentages, authored menus, setup, preview window STRAIGHT FROM THE MOST RECENT TEKKEN GAME'S teardown files \u2014 percentage-wise like the teardown games' creation suites; NOT hand-tooled generic UI. All menus/sub-options in TABS that open only when tapped. PORTRAIT-FIRST (owner plays vertical); horizontal optional, never required (currently horizontal taps don't register). Preview NEVER blocked by menus.",
+  "C_preview_obeys": "Body type / hair / clothes / accessories currently change NOTHING visibly. Default MIXAMO SOLDIER is BANNED as creation base. Parts from ALL teardown libraries wired in AND usable: No Mercy, WrestleMania XIX, WWE 2K, Tekken, DOA, Def Jam. Part records carry TRUE provenance (owner approved 'red chest plate' naming where No Mercy origin is real).",
+  "D_parity_law": "OWNER-CONTROL PARITY LAW: every edit capability used from our end (cuts, placements, tone matching, rig edits) must exist as HIS in-game control, wired for real \u2014 if it isn't in the game, it isn't done. TEST WHILE BUILDING. PR #462's rig section + rigpose_bake.py is the model for how controls land.",
+  "fight_symptoms_routed_elsewhere": "Match freeze (timer runs, all frozen) + characters falling halfway through the ground \u2014 routed to triage lane; noted here only because the owner pairs them with 'use the teardown files' world-orientation law."
+ },
+ "owner_directives_2026-10-21_1909": {
+  "base_templates": "Creation base templates = VARIATIONS OF THE GAMES' OWN CREATION TEMPLATES: Def Jam creation (CAW) templates, Tekken customization/creation templates, WWE game character-creation templates (their default/template models) \u2014 PLUS (a) build from pieces/parts of in-game characters, (b) edit the in-game characters themselves directly. Base-template picker = those authored template families; parts editing covers template builds AND existing roster characters."
+ },
+ "owner_directives_2026-10-21_1924_T8_SHELL": "Full text landed in docs/TEKKEN8-SHELL-WH-CORE-SPEC-2026-10-21.md. Tekken 8 = presentation shell ONLY; WH canon + teardown files (No Mercy, WMXIX, Def Jam, T5, T6, TTT2, some WWE 2K) = content/logic. Select = T8 grid + walk-in 3D models + WH canon stat fields (True Name, Home Turf, Weight Class, Archetype, Active Move Archetype) + slot pop-up (01 canon 1P, 02 canon 2P, 03-10 custom). Flow = Main Menu > Customization tab > Chooser (same grid, studio bg) > SLOT BRIDGE (defaults uneditable, Use as Base) > EDITOR (25% drawer / 75% viewport, footer legend ~10%, floating color palette, shoes own slot, street baseline) > PHOTO BOOTH exit (WH combat keyframe poses, capture = slot thumbnail). Deep stack: No Mercy bone-scale morphs + chimeras + touch face sculpt + injury layers; T6 4-tier layering + modular hair (base/bangs/sides/ponytail, dual-tone) + z-order auto-cull + 1P/2P/3P states; Def Jam physics-socket bling + weapons flag (Cosmetic vs Usable Command Move); TTT2 decal projector + WH decal library (turf logos/tags/gang signs/tribals/Ed Hardy-style, never generic); MDickie < Name > tap-cycling + tap-expand grids, no modal takeovers, bottom dock Undo/Redo/Pose-Taunt/Action Preview/Save/Exit; Action Preview pose scrubber + Move Tester on dummy; touch camera matrix (orbit/pinch/pan/double-tap region focus). Serialization: JSON per fighter per slot at roster/<id>/slots/slot_<n>.*. Godot 4 in the pasted text = aspirational; live game is the WEB build \u2014 NO re-platforming. Standing laws win conflicts (tap-to-assign, never drag-and-drop).",
+ "platform_correction_2026-10-21_1932": {
+  "blueprint_caveat": "The pasted Godot blueprint the owner forwarded is GEMINI-GENERATED reference with known oversells (e.g. BoneAttachment3D is rigid attachment, not skinned deformation). Treat ALL its feature claims as UNVERIFIED until the research run + our own tests confirm them.",
+  "directive": "Three.js/WebGL PERMANENTLY OUT (owner: 'we're not going to use 3js... we're going higher and better than 3js... using all of these teardown files and whatever engine we can use for mobile games'). Western Heart -> NATIVE mobile engine, standalone executable. Godot 4 = owner's named frontrunner; final pick by owner's deep-research directive (Godot 4 vs Unreal vs Unity vs Flax on WH criteria: skinned GLB pipeline, retargeting, bone morphs, decals, physics accessories, touch UI, direct-APK distribution, licensing) \u2014 research run is ANOTHER lane's, in flight.",
+  "spec_doc_platform_section": "docs/TEKKEN8-SHELL-WH-CORE-SPEC-2026-10-21.md platform section rewritten accordingly; committed f69a523.",
+  "until_verdict": "(1) build ENGINE-AGNOSTIC layers only: parts registry + provenance, slot/JSON serialization schema, bake/swap engine, template normalization, head-swap corrections as bake-side work; (2) do NOT build new UI in the web stack; (3) T8 shell spec still governs WHAT gets built \u2014 only the implementation target changes."
+ },
+ "proof_files_round2": [
+  "~/workspace/your_files/cs-round2-kevin-head-on-masterwhite-front-20261021.png",
+  "~/workspace/your_files/cs-round2-kevin-head-swap-yawfix-face-20261021.png",
+  "~/workspace/your_files/cs-round2-kevin-head-swap-yawfix-side-20261021.png"
+ ],
+ "repo": "mhvnsnt/western-heart",
+ "round2_final_state_inherited": {
+  "bake_findings": "apply_customization.py placement fixed to exact bone-local (evaluated world geometry re-expressed in the part's socket-bone frame). Kevin attire1 model.glb = UNSKINNED Tripo static (meshopt+quantized; decode via gltf-transform). Head pinch at y=0.34-0.38 GLB space. MW rig = canonical Tekken bone names. MW skin mats by texture mean color: pek1u_12 (head); hair mats pek1u_14/15/13. character_mappings.baek added (was null -> skin tone never applied in round 1).",
+  "chain": "a0a18ca engine -> a6c3cc1 UI+eyes+region sources+tests -> 765f145 UI piece swaps + placement nudges, schema, Baek mapping, eye parts -> b871e97 swap-bake BMDeformVert crash fix -> ac0891d socket-skin placement + texture-multiply tint -> 7c2e8be region-sources index (104 roster GLBs) -> 3d0b13e parts take base skin field (nearest-vert weights)",
+  "proven": "M1 placement round-trips EXACTLY (saved deltas == baked bone-local placement, joints byte-identical). M2 swap bake works end-to-end (Kevin head -> Master White: 135,284 head-dominant verts grafted). M3 wiring documented in customization/CREATION-SUITE-UI-WIRING.md; round2.test.js 3/3. M4: hair hide toggle, bake tinting (+texture-multiply), Baek skin-tone registry (texture mean-color), eyeball/eyelash parts registered (DEATHFANG test case)."
+ },
+ "status": "COMPLETE \u2014 PR #496 MERGED 2026-10-22T05:16Z (all gates pass, CLEAN at merge)",
+ "verified_counts": {
+  "parts_4523_claim": "UNVERIFIED \u2014 do not cite. catalog.json absent from sparse tree; suite runtime count comes from customization/creation-suite-ui/data/parts-catalog.json (recount from file when cited).",
+  "parts_registry_in_tree": 1150,
+  "roster_glbs_region_sources": 104
+ },
+ "worktree": "~/workspace/_cs-round2-work",
+ "owner_directives_2026-10-21_1947_stage_select": {
+  "directive": "STAGE/ARENA SELECT is under the same law as character select + the suite: layout from the TEKKEN games' teardown files, NOT hand-tooled. Tekken pattern: scrollable thumbnail grid, large live preview tracking the highlight, name/description INSIDE the layout (never an overlay covering the preview), a random option, an always-visible confirm path into the fight. GENERALIZED RULE: EVERY menu (main menu, character select, stage select, customization, pause) takes its layout from the Tekken teardown files; hand-tooled menu inventions banned across the board.",
+  "evidence": "Owner live playtest 2026-10-21 ~19:46 CDT, screenshots ~/workspace/user/files/1000176061_0_8bqs.png, 1000176060_1_waxj.png, 1000176059_2_fghu.png \u2014 verified with my own eyes 2026-10-21 ~19:50 CDT: (1) cannot scroll the stage list / cannot see all stages; in portrait (1000176059) the grid is not visible at all, only preview + truncated description strip; (2) cannot continue to the fight \u2014 no visible confirm path; (3) description banner overlays mid-screen, text runs off the right edge; (4) ALL stage cards (SmackDown/Royal Rumble/King of the Ring/SummerSlam/Backlash/Armageddon \u2014 WWF No Mercy) show the SAME thumbnail; (5) banner/preview disagree with highlight: banner says SHRINE OF THE BLADE while ARMAGEDDON is highlighted (1000176060); preview = near-empty dark space with floating quads.",
+  "landed": "docs/TEKKEN8-SHELL-WH-CORE-SPEC-2026-10-21.md: ALL-MENUS RULE in PRINCIPLE + new section (F) STAGE/ARENA SELECT + PHASING item 5 extended. Spec-only change; implementation is post-engine-verdict (native engine), same as the rest of the shell. The CURRENT web build's stage-select dead-end is the triage lane's gate, not this lane's build."
+ },
+ "steps": {
+  "pr": "done \u2014 PR #496 merged (merge commit)",
+  "swap_proof_kevin_head": "done \u2014 Kevin head onto Master White, textured, facing forward (kevin-head-swap2_face.png)",
+  "swap_proof_torso": "partial \u2014 DEATHFANG torso runs end-to-end post base_bones fix but renders shredded (hunched bind); documented in REPORT.md",
+  "ui_wiring_doc": "done \u2014 customization/CREATION-SUITE-UI-WIRING.md",
+  "roundtrip_proof_masterwhite_hair_beard": "done \u2014 mechanism exact (axis probes); MW record ships measured placements + tints + hide base hair; mw-final6 own-eyes verified"
+ },
+ "final_note": "Tests post-merge: catalogs 6/6, slotmap 4/4, round2 3/3, dna 4/4. DEATHFANG mesh eyes seated (df-eyes5_side.png). Detail: customization/tools/proof/cs-round2/REPORT.md on main."
+}

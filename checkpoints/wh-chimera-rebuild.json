@@ -1,0 +1,9 @@
+{
+ "task": "CHIMERA REBUILD: audit done, real T3 movesets extracted for King/Jin. Wiring remaining fighters to available T3 movesets, documenting provenance, then PR->merge->redeploy->verify.",
+ "repo": "/home/hatch/workspace/western-heart",
+ "resume_brief": "Continue CHIMERA REBUILD: real T3 movesets for King/Jin are in game/assets/. Wire remaining 34 fighters to available T3 movesets (check teardown/tekken3/movesets/ for Bryan, Heihachi, etc.), update game/README.md provenance table, commit, PR->merge, redeploy gh-pages. Laws: nothing unasked, teardowns only.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-14T15:01:35.845283+00:00"
+}

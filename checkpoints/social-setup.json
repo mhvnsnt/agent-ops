@@ -1,0 +1,9 @@
+{
+  "task": "M. Heaven$ent social setup \u2014 FB Page + Instagram",
+  "status": "done",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/money-machine-hq",
+  "resume_brief": "Set up M. Heaven$ent social operation: (1) Instagram audit (profile, 10 posts, insights) \u2192 social/instagram-audit.md; (2) first-week content (7 IG posts + 5 FB drafts) \u2192 social/content/week1/; (3) Instagram DM inbox triage \u2192 social/instagram-inbox.md (categorize only, draft replies, don't send); (4) create 3 FB Page drafts via facebook-cli pages drafts create. Voice from social/VOICE-GUIDE.md and social/pages/m-heavensent.md on branch social/playbook-v1. No publishing, no DMs sent, no invented claims.",
+  "updated_at": "2026-10-08T06:20:00-04:00",
+  "attempts": 0
+}

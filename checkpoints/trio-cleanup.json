@@ -1,0 +1,11 @@
+{
+  "task": "Cleaner v2 cuts of the trio outfit pieces (owner's messiness notes)",
+  "repo": "~/workspace/trippedd-studio",
+  "resume_brief": "In ~/workspace/trippedd-studio, on branch fix/trio-outfit-cleanup off origin/main: owner 2026-10-11 reviewed the four outfit-variant pieces (PR #182, now on main at production/TRIPPEDD_EP01/goodville/kits/julio/head_no_beanie.png, julio/pose_lean_over.png, dickie/outfit_palm_shirt_torso.png, bubba/outfit_blue_work_shirt_torso.png) \u2014 'it's a lil messy if you look at em, keep em but make better ones.' KEEP the v1 files untouched. Produce v2 cleaner versions alongside them (suffix _v2): (1) pose_lean_over: the big black car mass at the bottom is rough \u2014 clean up the edges where arms meet the black, tighten the whole cut; consider separating the lean-surface from the body so it can be recolored cleanly. (2) outfit torsos (Dickie palm, Bubba blue work): the bottoms are hard straight cuts \u2014 shape them properly (rounded/shaped hems per NO SQUARE CUTS law 8), clean all edges. (3) head_no_beanie: refine hair edges, any roughness. METHODS: USE THE IMAGE LAW \u2014 work from the owner's pixels (/home/hatch/workspace/user/files/1000173536_14_nhu1.png); try alternate rembg models per-piece (u2net vs isnet-general-use vs u2net_human_seg \u2014 model choice matters per-piece, per the drill log); edge refinement (alpha feathering, decontamination); surgical generative touch-up via tools/image-edit/ai_edit.py where hand-cleaning is too hard (owner-authorized). Evaluate each v1's messiness FIRST (write the specific flaws in the drill log), then cut v2 to fix them. Verify v2 zoomed against the source AND against v1 (must be strictly cleaner). Update manifests + drill logs. Commit, open a PR (do NOT merge). Heartbeat ~/workspace/agent-ops/checkpoints/trio-cleanup.json every 10 min. Report: flaws found per piece, what v2 fixed, verification. Mark done at the end.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-11T18:51:23.240934",
+  "notes": "all 4 v2 pieces built; final verification in progress",
+  "result": "PR #185 opened (not merged): 4 v2 pieces alongside v1s"
+}

@@ -1,0 +1,10 @@
+{
+ "task": "Research and evaluate every viable free cloud storage option, update FREE-STORAGE-PLAN.md",
+ "repo": "~/workspace/storage",
+ "resume_brief": "The free storage expansion research is COMPLETE. All findings are in ~/workspace/storage/FREE-STORAGE-PLAN.md (updated with primary/secondary/tertiary tiers) and ~/workspace/storage/FREE-STORAGE-EXPANSION.md (full research notes). 12 API-accessible services identified totaling ~137-177GB free. Owner action needed: sign up for Mega (20GB), Cloudflare R2 (10GB), TeraBox (1TB) as priority 1. When owner confirms any signup, wire it up for programmatic uploads: Mega via megatools/megacmd CLI, R2 via S3-compatible API (token via Secure Vault), others via their respective APIs documented in the expansion file. Do NOT set up all 12 at once \u2014 start with Mega+R2+TeraBox, expand when primary fills.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "notes": "Research COMPLETE and verified 2026-10-12: FREE-STORAGE-PLAN.md (tiers: primary 57GB+unlimited, secondary 80-120GB, tertiary) + FREE-STORAGE-EXPANSION.md both on disk; owner-action checklist present (Mega/R2/TeraBox priority 1). No further watchdog work \u2014 wiring awaits owner signups.",
+ "updated_at": "2026-10-12T14:41:51.437791+00:00"
+}

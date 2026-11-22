@@ -1,0 +1,10 @@
+{
+ "task": "Work the 17-item Western Heart pickup list (~/workspace/agent-ops/wh-convo-pickup-list.md PENDING section) top to bottom: Create Fighter/Moveset UI, TeraBox manifest, SFV characters, Bass Armstrong, arena inventory, etc. Branch->PR->merge per repo, heartbeat checkpoint.",
+ "repo": "/home/hatch/workspace/western-heart",
+ "resume_brief": "Continue working the 17-item Western Heart pickup list at /home/hatch/workspace/agent-ops/wh-convo-pickup-list.md (PENDING section). Priority order: (1) Create Fighter/Create Moveset working UI per customization/UNIFIED-UI-SPEC.md \u2014 spec then build web UI prototype aimed at game/ integration; (2) TeraBox manifest western-heart/TERABOX-MANIFEST.md mapping repo paths to TeraBox folders; (3) finish SFV screenshot characters in teardown/street-fighter-5/models/; (4) confirm Bass Armstrong extracted from VF5 teardown else pull; (5) cross-game arena inventory index in teardown/. SKIP items needing the owner: Leomon mane layering (he fixes himself \u2014 verify only), Tekken 7/8 acquisition (needs his account/0 step \u2014 prepare only, no purchases). Emulator items (instant-load, YouTube link, live decrypt) belong to mhvnsnt/chimera-emulator-hub repo \u2014 check local clone at ~/workspace/chimera-emulator-hub. Every repo change: branch -> PR -> merge, never push straight to main, zero open PRs at end. Heartbeat /home/hatch/workspace/agent-ops/checkpoints/wh-pickup-worker.json after every step. Commit incrementally. Report: items completed with evidence, items blocked with reason.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-14T04:05:00.000000+00:00",
+ "notes": "ALL LANES COMPLETE. My batch: PR #72 merged. Children: create-fighter PR #80+#82 merged; SFV CAST-STATUS.md PR #74 merged (downloads need parent browser task); emulator hub PR #2 merged; GNM+DOA tools PR #73 merged. Open: PR #81 (another lane, visual rebuild) - not mine. Flag: unresolved merge conflict in game/js/fighter.js in shared worktree (playable lane)."
+}

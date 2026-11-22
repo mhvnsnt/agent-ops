@@ -1,0 +1,9 @@
+{
+  "task": "Surgical gap fixes on the trio kits (owner's exact defect notes)",
+  "repo": "~/workspace/trippedd-studio",
+  "resume_brief": "In ~/workspace/trippedd-studio, on branch fix/trio-extraction-gaps off origin/main: owner 2026-10-11 gave EXACT defect notes on the rebuilt trio kits (production/TRIPPEDD_EP01/goodville/kits/dickie/, bubba/, julio/ \u2014 merged via PR #178). Parent confirmed all three with own eyes on zoom crops. FIX SURGICALLY, one defect at a time, without touching anything else: (1) DICKIE: background remnant trapped along the OUTER edge of his viewer-right arm, under the sleeve near the flame/wolf design \u2014 remove it cleanly. (2) BUBBA: black box-crop edges around his arms where the extraction cut \u2014 remove the black, fill in his hand/wrist and the plaid shirt pattern where the box covered them. (3) JULIO: background showing through on his cup-holding arm below the elbow, between the arm and his shirt/jeans pocket \u2014 remove it, fill the gap. OWNER-AUTHORIZED METHOD (2026-10-11): 'it's okay to use generative co-authored little corrections and fixes if hand tooling it is too hard' \u2014 use tools/image-edit/ai_edit.py (free one-turn edit) or tools/image-gen/gen.py for the gap fills; operate ON the pixels, change ONLY the defect area, everything else pixel-unchanged (USE THE IMAGE LAW). SAVE THE METHOD: document exactly how each fix was done (tool, prompt, params) in each kit's drill-log.md, and note any tooling pulled in or built for this. Rebuild the three preview.png and verify ZOOMED against the source /home/hatch/workspace/user/files/1000173537_10_cm4h.png. Commit, open a PR (do NOT merge). Heartbeat ~/workspace/agent-ops/checkpoints/trio-gap-fix.json every 10 min. Report: each fix + method + verification. Mark done at the end.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-11T18:50:00Z"
+}

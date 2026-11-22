@@ -1,0 +1,24 @@
+{
+ "base_stack": "PR #447 OPEN head feat/aki-bake-rock-20261021 (d07b36b), PR #458 stacked on it head feat/aki-fk-ik-rock-20261021",
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "Continuation #5 adopted 2026-10-21 ~23:04Z. RAM avail ~1.98G, disk 99% (1.1G free) - serialize, no big clones. Worktree ~/workspace/_w3b-work/wh on feat/aki-fk-ik-rock-20261021 @ ad8faa56 clean. Next: inspect PR458 doc + extractors in-repo, fix to game-exact, re-extract 11, gate, corrective PR.",
+ "status": "done",
+ "step": "corrective_pr_open",
+ "task": "W3c AKI CORRECTIVE BAKE: fix extractor to game-exact window (FT 0x16C31D8, FirstFile 0x1BD150, 1-based) + 12/10/10 record split, re-extract 11 Rock clips, re-run v3 converter + W3 bake gate (same calibration), corrective PR superseding #447 artifacts, harness proof or PENDING, FK track if IK-only failure",
+ "updated_at": "2026-10-24T00:18:00+00:00",
+ "watchdog": true,
+ "worktree": "~/workspace/_w3b-work/wh (feat/aki-fk-ik-rock-20261021 @ ad8faa56) + ~/workspace/_w3b-work/scratch (ROM + ghidra)",
+ "heartbeat": "Corrective PR #499 OPEN 2026-10-21 ~23:32 CDT: https://github.com/mhvnsnt/western-heart/pull/499 (base feat/aki-fk-ik-rock-20261021, head feat/aki-trueclips-w3c-20261021 @ dfe3a003). Body states #447/#458 must NEVER be merged, superseded wrong-window (0x16C3238/0x1BD1B0 0-based) + wrong split 12/8/12 artifacts, gate verdicts invalid. Gate on TRUE data as committed: ALL 11 FAIL, 0 rows, pack byte-identical, no t3_row, harness PENDING. NOT merged \u2014 central review is the coordinator's. Nothing undone in this lane.",
+ "pr": {
+  "number": 499,
+  "url": "https://github.com/mhvnsnt/western-heart/pull/499",
+  "head": "dfe3a003d7d3ea5b34163ee3c8665cc3ee4f7dd2",
+  "branch": "feat/aki-trueclips-w3c-20261021",
+  "base": "feat/aki-fk-ik-rock-20261021"
+ },
+ "notes": [
+  "2026-10-22 03:47 CDT (main-chat note): ~/workspace/_cornerstone-work/wh was legitimately cleared (main repo clean @de2a77ae==origin; non-git tar on release cornerstone-work-extra-20261022). Your worktree ~/workspace/_w3b-work/wh lost its git metadata (.git points at deleted path) but ALL working files are intact on disk (1.6G verified) and your branch feat/aki-fk-ik-rock-20261021 is fully pushed @ad8faa56==origin. To resume git work: fresh clone -b feat/aki-fk-ik-rock-20261021, or diff/reapply any uncommitted worktree state from the intact files.",
+  "[watchdog 2026-10-22 ~09:28 CDT] Heartbeat: PR #499 on mhvnsnt/western-heart verified OPEN via gh (mergedAt null) \u2014 lane work delivered, merge gated on central/owner review. Standing down; not resuming delivered work.",
+  "[watchdog 2026-10-23 19:18 CDT] VERIFIED via gh: PR #499 on mhvnsnt/western-heart is MERGED (2026-10-23T22:28:47Z). All 11 Rock clips on game-exact FT window, supersedes #447/#458. Lane delivered and merged \u2014 marking done. No further work."
+ ]
+}

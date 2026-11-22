@@ -1,0 +1,10 @@
+{
+  "task": "Repair bruiser detail-bar defects caught in parent inspection + re-render 6 shots",
+  "repo": "/home/hatch/workspace/BioMechania",
+  "resume_brief": "BioMechania: REPAIR PASS on the bruiser detail-bar parts (PR #15, cf4dc05). Parent inspected all 6 renders and REJECTED them \u2014 do not present as done. Defects to fix in tools/mecha-parts/build_parts.py: (1) FLOATING FEET \u2014 M-1-breach both feet hover visibly above ground, M-3-breach left foot hovers; feet must contact the ground plane with zero air gap. Add a PROGRAMMATIC grounding gate: lowest mesh vertex must be within 0.01 of ground plane, fail the build otherwise. (2) SPINDLY DISCONNECTED LIMBS \u2014 shins are thin columns with visible gaps to the feet, arms end ambiguously; pistons currently ARE the limb instead of sitting inside armor. Thicken shin/forearm columns and wrap pistons in greave/vambrace armor so limbs read as solid mechanical segments. (3) BOXY CORES \u2014 detail is applique on naked boxes for the limbs; apply bevels wider and add layered plating to limb segments, not just torso/backpack. (4) Add the new defects to the QC checklist so they never pass again. Then rebuild the 14 bruiser parts, re-render all 6 hero shots (M-1/M-2/M-3 x combat/breach for bruiser) via tools/render, own-eyes QC every frame, branch->PR->merge, incremental commits. Naming law: invent NO names. FIRST action: heartbeat this checkpoint.",
+  "status": "cancelled",
+  "watchdog": true,
+  "attempts": 1,
+  "updated_at": "2026-10-10T15:18:16.544639+00:00",
+  "note": "Cancelled 2026-10-10: owner redirected \u2014 Tripo image-to-3D pipeline replaces procedural Blender modeling for mech visuals."
+}

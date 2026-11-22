@@ -1,0 +1,10 @@
+{
+  "task": "TeraBox staging prep \u2014 prepare all upload batches and write browser task specs for parent to delegate TeraBox uploads",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/western-heart",
+  "resume_brief": "TeraBox staging prep (owner directive 2026-10-13). Subagents CANNOT spawn browser tasks, so prepare everything for parent-delegated browser uploads. TeraBox Premium: 5TB (trial expires 2026-10-20), 128GB single-file upload limit, NO URL/magnet download, NO API. Work in ~/workspace/terabox-staging/. (1) Verify existing staging tarballs (teardown-batch-b.tar.gz 231MB, western-heart-docs.tar.gz 54MB). (2) Create additional batches: model libs (king-variants, rashid, pharaohillusion), new teardown outputs, docs. Keep each tarball under 4GB. (3) Write ~/workspace/terabox-staging/BROWSER-TASKS.md with exact browser task specs: for each batch, the local path, TeraBox destination folder (/western-heart/teardown/, /western-heart/models/, /western-heart/docs/, /western-heart/games/), and verification steps. Also include GitHub Release URLs for games already on releases (TTT2, Tekken 6, VF5, etc.) so browser can download-from-GitHub then upload-to-TeraBox. (4) Write ~/workspace/agent-ops/terabox-inventory.md listing everything staged and its destination. Heartbeat ~/workspace/agent-ops/checkpoints/terabox-staging-prep.json after every step. Do NOT attempt uploads yourself.",
+  "updated_at": "2026-10-14T00:30:00Z",
+  "attempts": 0,
+  "notes": "COMPLETE. 5 tarballs staged+verified (~3.1GB). BROWSER-TASKS.md + terabox-inventory.md written. Defect found+fixed: teardown-batch-b was corrupt, rebuilt. Flags: Def Jam ISO partial (109MB), WMXIX ISO symlink broken (GitHub only), wwe2k14.rar in-flight (excluded, stage as batch-c2 later)."
+}
