@@ -1,3 +1,15 @@
+## Overnight pipeline 2026-11-22T08:44Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 1 verified landed by lane: PA3D Gateon Port merge b270d506 (41/41 blobs on main). 5 Bannon PRs merged into muse/web-upgrade by the fold lane, verified on that branch: #312, #315, #293, #295, #310 (tip bb330b59); fold to main still owed. 0 false claims reopened (verify-done 5/5 HOLD/LANDED). 0 stale checkpoints resumed; canon-sync nothing new; queue sync PR pending this run; queue: 110 open (was 115; -5 Bannon), blocked 16+.
+- IDLE: last user msg 2026-11-22T01:53:35Z (~6h51m idle at run start); no lock file; lock created, deleted at run end.
+- STEP 1: tips moved vs 08:14Z baseline: PA3D f6cb7498 -> b270d506 (Gateon); Bannon web-upgrade 2231d8d4 -> bb330b59. All other main tips unchanged. WH CLEAN non-drafts only #1792 + #1820 (both owner-held). Bannon #311 DIRTY vs web-upgrade; #313/#314 UNKNOWN. AO open = #952 only. Excluded/owner-held untouched.
+- STEP 2 verify-done 5/5 HOLD/LANDED, 0 false claims: PA3D Gateon 41/41; Bannon #310 tip, #312/#315 ancestors of web-upgrade tip; WH #1829 ancestor of main tip.
+- STEP 3 checkpoints: 1245 scanned, 0 running, 0 stale, 0 unparseable; done 1038; needs_owner 65 untouched. Nothing to resume.
+- STEP 4 canon-sync: nothing new (MEMORY.md md5 unchanged ca9881f8).
+- STEP 5: failure-alerts.log nothing new. Disk 76%. CJ parking-lot Blender render in-flight (lane-owned, untouched).
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work. Stand down.
+- BLOCKED >72h (carried, unchanged): Bannon #78; AO #952; WH #1792; TorBox key; zrok token. NEW: Bannon #311 conflict; #313/#314 unknown.
+- Queue sync: AO PR pending this run.
+
 ## Overnight pipeline 2026-11-22T08:14Z (30-min run)
 - QUEUE DELTA: 0 merged BY this run (no main-branch merges). 16 Bannon PRs merged into muse/web-upgrade by the fold lane, verified on web-upgrade BY THIS RUN (payloads on web-upgrade, NOT main — the web-upgrade→main fold is still owed): #274, #316, #262, #251, #273, #276, #306, #298, #301, #299, #300, #307, #304, #308, #309, #289 (web-upgrade tip 2231d8d4 == #289 merge; #309 merge 9eaca42f + #316 merge d4e67a2b ancestors of tip, behind_by 0). #309 (08:15:44Z) and #289 (08:17:12Z) merged DURING this run. WH #1820 instruction-gate FIXED by this run (body patched with the 6 gate sections, gate success 08:18:35Z; all other checks green, mergeable=true) — NOT merged: body holds "DO NOT MERGE without the owner's call" (owner-held). 0 false claims reopened (verify-done 5/5 HOLD/LANDED). 0 stale checkpoints resumed; canon-sync nothing new; queue sync PR pending this run; queue: 115 open (was 131; -16 = Bannon web-upgrade merges), blocked 16+.
 - IDLE: last user msg 2026-11-22T01:53:35Z (~6h20m idle at run start); no lock file; lock created, deleted at run end.
