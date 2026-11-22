@@ -1,3 +1,16 @@
+## Overnight pipeline 2026-11-22T09:14Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 1 verified landed by lane: CJ #421 memory-backup sync (31bfff84 == tip, 3 files memory-backup/ only). 4 Bannon PRs merged into muse/web-upgrade by the fold lane, verified on that branch: #311, #313, #314, #305 (tip d618345b); fold to main still owed. 0 false claims reopened (verify-done 5/5 HOLD/LANDED). 0 stale checkpoints resumed; canon-sync nothing new; queue sync PR pending this run; queue: 106 open (was 110; -4 Bannon), blocked 16+.
+- IDLE: last user msg 2026-11-22T01:53:35Z (~7h21m idle at run start); no lock file; lock created, deleted at run end.
+- STEP 1: tips moved vs 08:44Z baseline: CJ 311cc10c -> 31bfff84 (#421); AO 0d68c87e -> cb96796d (#999, 08:44Z sync); Bannon web-upgrade bb330b59 -> d618345b. All other main tips unchanged. WH CLEAN non-drafts only #1792 + #1820 (both owner-held). Bannon #198/#286 mergeable unknown. PPWA #294 held (checks 403, diverged). PA2D/GRE/DG docs PRs held (0 checks). AO open = #952 only. Excluded/owner-held untouched.
+- STEP 2 verify-done 5/5 HOLD/LANDED, 0 false claims: PA3D Gateon 3/3 spot blobs; AO #999 tip; Bannon web-upgrade tip == #305 merge; WH #1831 INDEX.json; CJ #420 canon doc.
+- STEP 3 checkpoints: 1245 scanned, 0 running, 0 stale, 0 unparseable; done 1038; needs_owner 65 untouched. Nothing to resume.
+- STEP 4 canon-sync: nothing new (MEMORY.md md5 unchanged ca9881f8).
+- STEP 5: failure-alerts.log nothing new. Disk 76%. DG 6B waiter alive (pid 2073); Orre-remainder Blender pids gone since 09:14Z (lane-owned); CJ parking-lot render no longer running.
+- STEP 6/7/8: no new thread, no new pulls — live lanes own the work. Stand down.
+- BLOCKED >72h (carried, unchanged): Bannon #78; AO #952; WH #1792; TorBox key; zrok token. NEW: PPWA #294 held; Bannon #198/#286 unknown.
+- RECONCILIATION: local queue/handoff were behind main (08:44Z #999 entry missing locally); adopted main's files, re-inserted the local-only 08:14Z addendum (#998), then wrote this entry. No run record lost.
+- Queue sync: AO PR pending this run.
+
 ## Overnight pipeline 2026-11-22T08:44Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 1 verified landed by lane: PA3D Gateon Port merge b270d506 (41/41 blobs on main). 5 Bannon PRs merged into muse/web-upgrade by the fold lane, verified on that branch: #312, #315, #293, #295, #310 (tip bb330b59); fold to main still owed. 0 false claims reopened (verify-done 5/5 HOLD/LANDED). 0 stale checkpoints resumed; canon-sync nothing new; queue sync PR pending this run; queue: 110 open (was 115; -5 Bannon), blocked 16+.
 - IDLE: last user msg 2026-11-22T01:53:35Z (~6h51m idle at run start); no lock file; lock created, deleted at run end.
@@ -9,6 +22,9 @@
 - STEP 6/7/8: no new thread, no new pulls — live lanes own the work. Stand down.
 - BLOCKED >72h (carried, unchanged): Bannon #78; AO #952; WH #1792; TorBox key; zrok token. NEW: Bannon #311 conflict; #313/#314 unknown.
 - Queue sync: AO PR pending this run.
+
+## Overnight pipeline — 2026-11-22T08:14Z (addendum, same run)
+- QUEUE SYNC PR #998 LANDED-VERIFIED: merged 0d68c87e == main tip; tree blobs byte-identical to local git hashes (MERGE-QUEUE.md f009c901, overnight-handoff.md eb8ebbf2). Instruction-gate + guard green first try. Run tally: 0 game items merged, 1 sync landed-verified this run.
 
 ## Overnight pipeline 2026-11-22T08:14Z (30-min run)
 - QUEUE DELTA: 0 merged BY this run (no main-branch merges). 16 Bannon PRs merged into muse/web-upgrade by the fold lane, verified on web-upgrade BY THIS RUN (payloads on web-upgrade, NOT main — the web-upgrade→main fold is still owed): #274, #316, #262, #251, #273, #276, #306, #298, #301, #299, #300, #307, #304, #308, #309, #289 (web-upgrade tip 2231d8d4 == #289 merge; #309 merge 9eaca42f + #316 merge d4e67a2b ancestors of tip, behind_by 0). #309 (08:15:44Z) and #289 (08:17:12Z) merged DURING this run. WH #1820 instruction-gate FIXED by this run (body patched with the 6 gate sections, gate success 08:18:35Z; all other checks green, mergeable=true) — NOT merged: body holds "DO NOT MERGE without the owner's call" (owner-held). 0 false claims reopened (verify-done 5/5 HOLD/LANDED). 0 stale checkpoints resumed; canon-sync nothing new; queue sync PR pending this run; queue: 115 open (was 131; -16 = Bannon web-upgrade merges), blocked 16+.
