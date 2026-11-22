@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-22t1744z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-22t1819z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,28 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-22t1819z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-22T18:19Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-22t1744z-addendum-same-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-22T17:44Z (addendum, same run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-22t1744z-30-min-run" class="md-nav__link">
@@ -13181,6 +13203,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-22t1819z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-22T18:19Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-22t1744z-addendum-same-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-22T17:44Z (addendum, same run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-22t1744z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -17108,6 +17152,23 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-22t1819z-30-min-run">Overnight pipeline — 2026-11-22T18:19Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-22t1819z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE DELTA: 0 merged BY this run. 1 main landing + 5 web-upgrade merges verified on their branches BY THIS RUN (6 total). WH main: #911 select-card-defaults fix (6f1726a3 == tip, merged 17:56:06Z; old Oct-23 PR, landed by a lane). Bannon web-upgrade (fold lane, payloads on web-upgrade NOT main; fold to main still owed): #342 era-attires-nakamura, #365 2K26 extraction tooling, #366 2K26 textured models (80 stock GLBs), #368, #370 v3 tron camera fix (merged 18:04:23Z) — web-upgrade tip 09f1ebbd -&gt; 1f569c53 (compare range holds all 5 merges). 0 false claims reopened (verify-done 5/5 HOLD/LANDED). NEW OPEN-PR queue items: WH #1839 finger-rig C3 hand-pose driver (mergeable=true, combined pending 0 statuses — held per CLEAN-but-no-checks precedent), WH #1840 Ren portrait -&gt; real Rin bitmap D_SUMIE b036 (mergeable=true, 0 statuses — held; touches Ren while #1834 Ren-mouth lane is actively reworking it), Bannon #371 commentary desk (mergeable=null), Bannon #372 Lane B disk-cleanup-round2 records (mergeable=true, base web-upgrade — fold lane owns). WH open 42 -&gt; 45 (created since 17:44Z: #1837/#1838/#1839/#1840; #911 merged off). Bannon open 27 unchanged (5 merged off, 5 created on: #368/#369/#370/#371/#372). Queue: WH 45 + Bannon 27 + PPWA 29 + CJ 1 + PA3D 3 + GRE 3 + DG 3 + PA2D 4 + WG 2 + CD 2 + AO 1 + wrestling 2 = 122 open (was 119; +3 net), blocked 16+ carried. Queue sync PR to follow this run.</li>
+<li>STEP 1: 0 merges by this run — nothing met mergeable+checks-green+verified by me. WH #1820/#1834/#1835 OWNER-HELD (carried; #1834 Ren mouth being reworked by active lane — ren_v33.glb proof render running this run, lane-owned). WH #1836/#1837/#1838 open, unchecked this run beyond #1837/#1838 creation (both in the 17:44Z window list). Bannon #198/#345 mergeable=null (fold lane owns). PPWA #294 held (Scarlett viseme systemic failure, check-runs 403, branch diverged — do not re-run e2e); #295 DIRTY (carried); #299/#300 mergeable=true but checks unverifiable — held per precedent; #246/#290/#293 merge calls stay owner's. PA2D #1/#2/#4 + GRE #84/#96/#97 + DG #91 mergeable true/null, 0 checks — held per precedent; PA2D #1 body holds "DO NOT MERGE — coordinator/owner decides". DG #9 DIRTY. DG #89 draft + DO NOT MERGE — excluded. PA3D #7 mergeable=true, 0 checks — held; #8 SAFETY STOP (0 GLBs), not merge material. CJ #429 re-checked this run: still open, mergeable=true, not merged — held per precedent (owner's call; docs-only AnimLab placement+export verdict, now 5 files). AO #952 mergeable=null, force-push reset decision still owed. Excluded/owner-held untouched: WH #377, DG #89, Bannon #78 stay-vs-revert still owner's call.</li>
+<li>STEP 2 verify-done (5/5 HOLD/LANDED, 0 false claims): WH #911 merge 6f1726a3 == tip; WH #1833 merge 2df3867d ancestor of tip 6f1726a3 (compare ahead 47, behind 0); Bannon #357 eb352e4b == tip (unchanged); PPWA #302 352dd79b == tip (unchanged); GRE #98 0d1aa592 == tip (unchanged). All other main tips unchanged vs 17:44Z (CJ 438bb593, CD 3b317854, wrestling 9dd4c61e, GRE 0d1aa592, AO e96fd489).</li>
+<li>STEP 3 checkpoints: 1245 scanned, 0 unparseable, 0 running, 0 stale-watchdog; done 997, complete 41, needs_owner 65 untouched. checkpoint_audit.py still missing (tools/ archived). Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 UNCHANGED d0a51e2f — nothing new. Last-sync md5 stays d0a51e2f.</li>
+<li>STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 83% (123G/150G, 27G free) — up from 82%, under 85% but rising; watch. In-flight sacred work untouched: Blender renders pantera rest_l + cainelias finger-rig (pids 106355/106665, started 18:16-18:17Z), cn-gigaleak release uploads (127MB PSD + Gym Partner PSD, curl pids 107042/107493), ren-mouth v33 proof render (curl+Blender, 18:20Z), disk-guardian du scan. Egress degraded: gh api ~5-40s/call, one git fetch GnuTLS -110 (retry path used: git blobs API worked for &gt;1MB files where contents API returned empty).</li>
+<li>STEP 6/7/8: no new thread, no new pulls — live lanes own the work (Bannon web-upgrade fold lane actively merging; DG CUT 001R Run 50+ via successors; PA3D Orre-remainder + Switch hunt; Sato lanes; repo-handoff program done). Stand down. Daily note: PA2D Cloudflare deploy STILL ALIVE at 65 min (13:16 EST re-check, pids 2915+2917 — do NOT kill, do NOT duplicate); merge-law-ci-watch 13:12 EST: 0 CLEAN of 58 watch PRs, money-machine-hq #31 merged off list (57 open); dreamgirl-live-view-watchdog 13:17 EST: VNC/ttyd healthy, zrok stable share DOWN 404 (36 failures since 2026-11-15, needs zrok2 enable token — owner step); M. Engine supervisor healthy 13:18 EST.</li>
+<li>BLOCKED &gt;72h (carried): Bannon #78 stay-vs-revert decision owed; untracked siblings TRIPPEDD-Animation-Studio + Wrestli6game-3 decision owed; AO #952 force-push reset decision owed; TorBox re-sign-in (Turnstile — user's own click; key dead per run 76, 77 Gym Partner files unpulled); zrok/live-view (fresh token owed, stable share DOWN 401/404; PA2D share down too, same dead token). NEW BLOCKED: none this run.</li>
+<li>RECONCILIATION: local queue/handoff were main + the 17:44Z addendum only (961 bytes each, first 3 lines, verified by strip-and-hash vs main blobs 7040ba53/45419728 — contents API returns empty &gt;1MB, git blobs API used instead); this sync lands the addendum plus this run entry, so no run record stays local-only.</li>
+<li>IDLE: last user msg 2026-11-22T17:07:56Z (~71 min idle at run start); no lock file; lock created, deleted at run end.</li>
+</ul>
+<h2 id="overnight-pipeline-2026-11-22t1744z-addendum-same-run">Overnight pipeline — 2026-11-22T17:44Z (addendum, same run)<a class="headerlink" href="#overnight-pipeline-2026-11-22t1744z-addendum-same-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC PR #1007 LANDED-VERIFIED: merged e96fd489 == main tip; tree blobs byte-identical to local git hashes (MERGE-QUEUE.md 7040ba53, overnight-handoff.md 45419728). Instruction-gate failed first try (deviation bullet without #ref — body fixed, gate re-ran green) + guard green. Run tally: 0 game items merged, 1 sync landed-verified this run. CORRECTION to this run's STEP 4: MEMORY.md changed mid-run (md5 9cb5fa3e -&gt; d0a51e2f) with a new parent-verified entry — ANIMLAB SMOKE PLACEMENT + EXPORT PROVEN ~13:09 EST (board cj-pl-05 placed on canvas+timeline, export frame 1 IS the board, byte-identical kernels v14/v15; mechanism Batch Import → "Import sequence"; peg still PARTIAL; Grease Pencil stays core). The canon is already in flight on CJ #429 (now 5 files; merge is the owner's call) — no duplicate commit by this run; next run re-checks #429. Last-sync md5 now d0a51e2f.</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-22t1744z-30-min-run">Overnight pipeline — 2026-11-22T17:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-22t1744z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE DELTA: 0 merged BY this run. 24 main landings + 16 web-upgrade merges verified on their branches BY THIS RUN (40 total). WH main (8): #1769 VPW2 teardown (9b58da0b), #1774 W6 WMXIX clips (23fdfdaf), #1783 Toukon Retsuden English (2f7b06be == tip), #1784 VPW2 English completion (792b199c), #1785 VPW2 English-complete receipts (b0f91ceb), #1795 LSD dream system Phase 2 (5ea6600d), #1803 King .tkmvst extract (47fd4262), #1833 HANDOFF.md (2df3867d). Bannon main (7): #347 2K26 Toxin rig (74aee38b), #349 HANDOFF.md (ebbe1b07), #351 2K26 ring kit (ab76f836), #353 BANNON_K26 native anim (78cb33a5), #354 source-model-is-shape (08327fcf), #355 2K assets to phone (2f650f0d), #357 handoff live re-check (eb352e4b == tip). Handoff merges (9, each merge == its repo tip): PPWA #302 (352dd79b), GRE #98 (0d1aa592), DG #93 (369123b8), PA3D #9 (6da86f1f), PA2D #6 (78144db4), wrestling #24 (9dd4c61e), CD #75 (3b317854), CJ #428 (438bb593), WG #7 (2881630a). Bannon web-upgrade (16, fold lane): #321, #323, #324, #328, #331, #332, #339, #341, #344, #346, #350, #360, #361, #362, #363, #367 — payloads on web-upgrade, NOT main; web-upgrade tip b91f33bf -&gt; 09f1ebbd; the web-upgrade→main fold is still owed. Bannon #309 (9eaca42f, merged 08:15:44Z) + #310 (bb330b59) + #311 (2c88154d) now verified on web-upgrade — the #309/#310/#311 conflict blocker is GONE (compare API 422 on #309, verified instead by membership in last-100 web-upgrade history). CJ #167 MERGED (3c9acc8a, behind=0 on main) — owner-held exclusion resolved by the merge; CJ #156/#157 closed UNMERGED. 0 false claims reopened (verify-done 5/5 HOLD/LANDED). 16 new open PRs this window: WH #1834–#1838, Bannon #345/#352/#356/#358/#359/#364/#369/#370, PPWA #301, PA3D #10, CJ #429. Queue: WH 42 + Bannon 27 + PPWA 29 + CJ 1 + PA3D 3 + GRE 3 + DG 3 + PA2D 4 + WG 2 + CD 2 + AO 1 + wrestling 2 = 119 open (was 123; -4 net), blocked 16+ carried. Queue sync PR to follow this run.</li>
