@@ -1,0 +1,10 @@
+{
+  "task": "Tekken decryption tool hunt: pull in every tool that helps decrypt Tekken arena/stage files (T6 PSP ~PSP encryption, T3 BNS stage geometry, T7 stage extraction/modding)",
+  "repo": "~/workspace/tools/tekken-decrypt",
+  "resume_brief": "Complete the Tekken decryption tool hunt. Three lanes were parallelized via subagents: (1) Tekken 6 PSP decrypt tools (PPSSPP decrypt, Namco PSP archive extractors, GMO model tools), (2) Tekken 3 BNS/stage extraction tools, (3) Tekken 7 stage extraction/modding tools (tekkenmods docs, UModel, UE4 pak extractors). All pulled tools go into ~/workspace/tools/tekken-decrypt/ organized by subdirectories psp/, t3/, t7/. Each subagent was told to write its findings into ~/workspace/tools/tekken-decrypt/<lane>-README.md. If any lane did not finish: search GitHub for the remaining keywords (tekken 6 psp decrypt, tekken 3 bns extract, tekken 7 stage extract, namco gmo extract, ppsspp decrypt), clone/download anything useful into the matching subdir, verify each clone has real files (not just a README stub), then write the final README.md index at ~/workspace/tools/tekken-decrypt/README.md documenting every tool, what it targets, and which look most promising for the chimera build stage pipeline. Commit nothing to git; this is a local tools directory.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-13T06:27:08.882928+00:00",
+  "notes": "All 3 lanes complete. Master index at ~/workspace/tools/tekken-decrypt/README.md. Most promising: PSP=PPSSPP decrypted-EBOOT dump; T3=tekken3remake stage.py; T7=FModel+repak. Blocked items (live browser needed): DecEboot, tekkenmods login-walled downloads, PPSSPP live run."
+}

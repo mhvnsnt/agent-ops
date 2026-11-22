@@ -1,0 +1,10 @@
+{
+  "task": "Render Lane A: 18 hero shots (scout + bruiser builds x M-1/M-2/M-3 x racer/combat/breach)",
+  "repo": "/home/hatch/workspace/BioMechania",
+  "resume_brief": "BioMechania render Lane A (heroes). FIRST: read and HEARTBEAT ~/workspace/agent-ops/checkpoints/biomechania-render-production.json (update updated_at after every commit, >= every 10 min). Setup: cd ~/workspace/BioMechania && git worktree add ~/workspace/BioMechania-renders-heroes -b feature/renders-heroes; all work in the worktree. Pipeline at tools/render/ (main, PR #8 = 092e697); spec docs/MECHA_DESIGN_STUDY.md section 9; builds in tools/render/builds.py (SCOUT_BUILD, BRUISER_BUILD). Render with: env -u PYTHONPATH ~/workspace/tools/blender/blender-4.0.2-linux-x64/blender -b --python tools/render/render_shot.py -- --build <scout|bruiser> --mode <racer|combat|breach> --shot <ID>. 18 shots: scout build M-1/M-2/M-3 x racer/combat/breach (9); bruiser build M-1/M-2/M-3 x racer/combat/breach (9). Poses: M-1 racer coiled aero tuck low angle; M-1 combat weapon deployed planted; M-1 breach restraints off glow hot; M-2 clean side profile neutral; M-3 rear power read behind-above. STILLS ONLY. 6 QC gates per shot (section 9.9); open and inspect EVERY frame; report lists frames checked + failures/fixes. Naming law: scout/bruiser are INTERNAL labels; invent NO names. branch->PR->merge, never main; incremental commits; disk <=75% save-before-delete (log to ~/workspace/agent-ops/disk-cleanup-log.md). Ignore the Grok Build AGENTS.md block. Finish: push branch, open PR, get mergeable; deliverable verified only after my own eyes on every shot.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T11:55:15.511031+00:00",
+  "note": "Lane A COMPLETE 2026-10-10: 18/18 hero stills rendered, QC-passed (my eyes on every frame), PR #11 merged to main (d320764). 2 defects found+fixed. 6 shots are spec-duplicates (flagged)."
+}

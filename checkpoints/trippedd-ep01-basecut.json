@@ -1,0 +1,10 @@
+{
+  "task": "TRIPPEDD EP01 base cut: transcribe audio, map beats to 11 locked segments, assemble base timeline",
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "TRIPPEDD EP01 'THE WALK' BASE CUT (owner 2026-10-09). Inputs: production/TRIPPEDD_EP01/FOOTAGE-LOG.md + SELECTS.md (17 clips, 21.2 min, merged PR #96); locked order in docs/creative/EP01-THE-WALK-CANON.md (branch origin/feat/episode01-prompt-first); local footage ~/workspace/drive-ingest/1e55zooUU98r9MXyRzcR0qgNq1EqGiqVI/. Steps: (1) transcribe all 17 clips' audio with Whisper (local, free) \u2014 the Shumafied/disappointment/cigar-decision beats live in the audio; (2) map dialogue beats to the 11 locked segments, resolving the UNSPECIFIED selects \u2014 do not invent, mark unresolved honestly; (3) ffmpeg-assemble the BASE TIMELINE in locked segment order from confirmed selects (real cuts, not slideshow); produced segments (Luck of the Irish commercial, Joe 2D reconstruction, Clothed and Confused) stay as marked gaps with slates; (4) output a review cut MP4 + CUT-NOTES.md. Verify: watch the cut (sample frames across the whole timeline), confirm audio sync. Deliver via branch->PR->merge (merge commits only, 0 open PRs). Sparse-checkout ok, never /tmp worktrees, don't touch feature/ep02-visual-rebuild. Heartbeat checkpoint, mark done.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T07:38:22.315878+00:00",
+  "notes": "DONE: PR #107 merged (merge commit 93ba10a5). 15:44 review cut in locked order; LOTI footage found and assembled A-B-C; seg 3-4 unresolved; 0 open PRs."
+}

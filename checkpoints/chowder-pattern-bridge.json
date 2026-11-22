@@ -1,0 +1,10 @@
+{
+  "task": "Chowder-Goodville pattern pipeline bridge: research Chowder's pattern system, audit pattern_fill.py, build improved version, document method",
+  "repo": "~/workspace/trippedd-studio",
+  "resume_brief": "Build the Chowder-Goodville pattern pipeline bridge. Research DONE: Chowder's method = full-screen FIXED pattern, character has HOLES cut in it, character moves OVER static pattern (Greenblatt interview). Audit DONE: pattern_fill.py issues = extract_tile crops arbitrary bbox (seam mismatch alters pattern), fill_shape tiles from (0,0) of shape bbox (pattern phase shifts per angle), no seamless handling, no edge feathering. Now: write pattern_fill_v2.py with anchor-based tiling, seamless tile verification, native-res extraction, edge feathering. Test on Goodville characters. Document in playbook show-starter-kits/chowder-style/. Checkpoint at ~/workspace/agent-ops/checkpoints/chowder-pattern-bridge.json",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-12T14:20:38.578732+00:00",
+  "notes": "Complete. PR #237 merged. pattern_fill_v2.py in trippedd-studio/tools/image-gen/. Study doc at animation-techniques/steal-like-artist/show-starter-kits/chowder-style/pattern-method.md. Tested on Julio mask + Dickie palm pattern. Key findings: Chowder method = fixed full-screen pattern + character holes (Greenblatt interview). v2 implements anchor-based tiling, seamless verification, RGB mask support, edge feathering."
+}

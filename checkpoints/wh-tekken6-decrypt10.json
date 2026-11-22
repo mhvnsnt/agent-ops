@@ -1,0 +1,9 @@
+{
+ "attempts": 0,
+ "repo": "western-heart",
+ "resume_brief": "Tekken 6 PSP teardown, decrypt round 10. Work dir: ~/workspace/game-reverse-engineering/tekken6/work/decrypt10/. READ FIRST: ~/workspace/game-reverse-engineering/tekken6/work/decrypt9/ROUND9-FINDINGS.md, ~/workspace/game-reverse-engineering/tekken6/work/decrypt8/DECRYPT-STATUS.md, ~/workspace/game-reverse-engineering/tekken6/work/decrypt3/manifest.json. Tasks: (1) Validate whether the 98.7% GZIP decode (104,054/105,472 bytes, file 0, custom order [16,19,27] + standard tables + zero-dictionary) is structurally complete by parsing ALL NDPP sections in it \u2014 if sections are complete and the last ends cleanly, 104,054 is the true size. (2) If incomplete, search the EBOOT for OTHER decompress functions besides 0x8b55bf0 (GZIP magic checks, Huffman builders, LZ-likes). (3) Identify WHAT the 56 GZIP files are: skinned vs static geometry; cross-ref their bboxes with the 81MB bin_e6.2 bounding-volume archive. (4) Locate the 40+ character models: check (a) 0-66MB pre-NDPP high-entropy region of bin_e6.2, (b) 441 tail NDPPs, (c) 172 plaintext files for unrecognized mesh data. (5) Extract usable character mesh data (vertices/normals/indices) in parseable form for the extraction lane, or a clear parser; document the 117 distance-violation regions if the 98.7% decode is usable. Do NOT formula-tweak the 1,418-byte gap. Do NOT assume GZIP files are the characters. Disk: report df -h every heartbeat, keep /home/hatch <=88%; bulk_decrypted.bin read-only. NO-HAND-TOOLING: conclusions from data + EBOOT evidence only.",
+ "status": "done",
+ "task": "Tekken 6: true nature of GZIP files; usable model extraction",
+ "updated_at": "2026-10-16T03:50:00Z",
+ "watchdog": true
+}

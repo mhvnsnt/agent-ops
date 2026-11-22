@@ -1,0 +1,9 @@
+{
+ "status": "done",
+ "task": "Fill TRIPPEDD creative toolkit gaps: color, mocap, photogrammetry, 3D extras",
+ "repo": "~/workspace",
+ "resume_brief": "DONE. All deliverables: tools/color/presets.sh + README + proof contact sheet; tools/mocap/mediapipe_pose.py + README; tools/photogrammetry/README.md; tools/3d-extras/README.md; creative-toolkit/index.html 4 new sections; TEST-RESULTS.md appended. No git repo at ~/workspace root so nothing to commit. Disk 91% \u2014 no downloads made.",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T18:01:03.545216+00:00"
+}

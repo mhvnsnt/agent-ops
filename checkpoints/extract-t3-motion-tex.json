@@ -1,0 +1,11 @@
+{
+  "task": "TEKKEN 3 motion banks + TIM texture inventory completion for western-heart teardown/tekken3/",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/western-heart",
+  "resume_brief": "Resume: Tekken 3 motion bank + TIM inventory completion. Workspace: ~/workspace/game-reverse-engineering/tekken3/. 1) Write this checkpoint. 2) Explore tekken3/docs for motion bank ID mapping (King was divmot03, bank 3, BNS 283); find IDs for Jin, Yoshimitsu, Heihachi, Bryan, Gun Jack, Xiaoyu. 3) Extract motion banks using tekken3/tools/local/pose_sample_analytic.py if present. 4) Verify 8556 TIM textures in tekken3/tim-output/ vs tim-inventory.json; extract missing. 5) Copy motion banks to ~/workspace/western-heart/teardown/tekken3/animations/ and TIMs to ~/workspace/western-heart/teardown/tekken3/tim-output/. 6) Branch->PR->merge in western-heart. Report: banks extracted, TIM completion %, PR URL, blockers. STOP if disk hits 94%.",
+  "updated_at": "2026-10-13T09:06:00-04:00",
+  "attempts": 1,
+  "progress": "7/7 motion banks extracted (King + Jin/Bryan/Xiaoyu/Yoshi/Heihachi/GunJack), hash-verified vs n0madic index. TIM extraction of 8556 running in background. Branch feat/tekken3-motion-tim-completion created from main.",
+  "result": "7/7 motion banks in western-heart teardown/tekken3/animations/; 8556/8556 TIMs + 8559 PNG previews in tim-output/; PR #33 merged to main; 0 open PRs. FLAG: concurrent lane reset my branch mid-task; used new branch name."
+}

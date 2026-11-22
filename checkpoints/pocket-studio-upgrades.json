@@ -1,0 +1,9 @@
+{
+ "task": "Pocket Studio upgrade round 1: AI image gen + album cover maker",
+ "repo": "~/workspace/video-fix-tools",
+ "resume_brief": "Upgrade round for Pocket Studio (owner 2026-10-10: keep upgrading it, wire everything in). Add TWO tools: (1) AI IMAGE GENERATION via Pollinations.ai (https://image.pollinations.ai \u2014 free, zero-signup, already tested working per memory; simple GET https://image.pollinations.ai/prompt/{prompt}?width=1024&height=1024&nologo=true etc., download result) as a 'Generate image' tab with prompt + size presets (square for covers, 16:9, 9:16). (2) ALBUM COVER MAKER: take an image (upload or from the generator) \u2192 square 3000x3000 format \u2192 title + artist text overlay (PIL, big readable type, a few placement/style presets) \u2192 download. Update BOTH ~/workspace/video-fix-tools/pocket-studio/server.py AND regenerate Pocket_Studio_Colab.ipynb with the new tools, then push the updated notebook to the animation-kit in all 3 production repos (TRIPPEDD-Production-studios-, God-Molecule-Show-Studio, God-molecule-production-stage) via branch->PR->merge, zero open PRs. Verify each new tool end-to-end before pushing. Never touch ~/workspace/trippedd-studio checkout or the v3 worktree \u2014 use worktrees.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T01:02:32.117508+00:00"
+}

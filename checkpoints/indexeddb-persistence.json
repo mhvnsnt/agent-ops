@@ -1,0 +1,10 @@
+{
+  "task": "Fix Pocket Studio video loading via IndexedDB file persistence",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/pocket-studio-v2",
+  "resume_brief": "Fix Pocket Studio v2 video loading permanently using IndexedDB file persistence. The bundled-video approach failed 8+ times because the artifact platform does not serve binary files. Plan: (1) Remove broken default video URL (assets/videos/ep02-main.mp4) and its failing retry loop in ~/workspace/pocket-studio-v2/app.html. (2) Build IndexedDB persistence: store imported File/Blob in IndexedDB on Import, auto-load via blob URL on app start. (3) Clean UI: big 'Import EP02 Video' button when no video; auto-play from IndexedDB when present; 'Clear saved video' in settings. (4) For 44 audio stems (19MB): try bundle load first, fall back to IndexedDB cache. Update app.html then trigger artifact rebuild via artifact.edit on slug pocket-studio-v2.",
+  "updated_at": "2026-10-11T22:45:00-05:00",
+  "attempts": 1,
+  "notes": "Implemented IndexedDB persistence in app.html: IDB media store (pocket-studio-v2 db), importVideoFile saves to IDB (per-leaf + main keys), restoreSavedVideo on startup/project-switch, empty-state import prompt replaces broken error UI, clear-saved-video button, aeLoadClip caches stems in IDB. Removed DEFAULT_VIDEO_URL, nulled EP02_PREVIEW_URL, openLeaf no longer loads bundle URLs. node --check passed on inline scripts."
+}

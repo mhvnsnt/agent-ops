@@ -1,0 +1,9 @@
+{
+ "task": "Audit all TRIPPEDD network repos for existing show bibles, scripts, layouts, format docs \u2014 no duplicates, additive only",
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "TRIPPEDD network show-bible audit (owner 2026-10-09: do NOT create duplicate bibles \u2014 audit first, add to what exists). Sweep these repos (clone any missing to ~/workspace): mhvnsnt/TRIPPEDD-Production-studios- (have), mhvnsnt/God-Molecule-Show-Studio (have), mhvnsnt/God-molecule-production-stage (have), mhvnsnt/wizard-gang-storage (have), mhvnsnt/SMOKE-MIRROR-S- (need clone), mhvnsnt/M.-Engine- (need clone), mhvnsnt/M_Unity_FreeflowCombat (need clone). For EACH show/property found, inventory: show bible / series bible / format doc, scripts, layouts, episode structure docs, segment/interstitial docs. Check main branches AND other branches. Known existing: trippedd-studio/docs/PROGRAMMING-AND-INTERSTITIAL-GRAMMAR.md (Adult Swim-style programming/interstitial grammar), production/WIZARD_GANG_EP01/ (EP01_SCREENPLAY, STORYBOARD, DIALOGUE, EP02 specs). Report: per-show map of what exists, file paths, staleness, and exactly what is MISSING (esp. a TRIPPEDD-the-show bible). Do NOT write new bibles yet \u2014 audit only. Heartbeat checkpoint, mark done at end.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-09T21:40:04.019702+00:00"
+}

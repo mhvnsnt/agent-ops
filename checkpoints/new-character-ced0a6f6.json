@@ -1,0 +1,143 @@
+{
+ "audit": {
+  "actions": [
+   "Beg (1f pose)",
+   "Closed Mouth (1f pose)",
+   "Kiss (1f pose)",
+   "Sad (1f pose)",
+   "Smile (1f pose)",
+   "Example (1f pose)"
+  ],
+  "actions_note": "6 single-frame FACE POSE actions only \u2014 no locomotion/body animation in the source file. Clips must come from retargeting (flip BVH + Quaternius UAL).",
+  "armatures": {
+   "Control Switch": "12 bones: Leggings Enable, Sleeves Enable, Heels Enable, Plant Switch, Penis Switch, Male Switch, Bunny Switch, Wetness, Sporty, Piercings, Dick Shine, Slingkini",
+   "rig": "~470 bones (Auto-Rig Pro): c_* control layer + deform bones (thigh/leg/foot, arm/forearm/hand, spine_01/02, neck, head, jawbone, tong_01-03, Boob/butt/Belly, Petal01-05 pairs + Base/Base01-05 petal roots, genital deform bones) + full *_ref reference set. Fingers: thumb + middle ONLY (2-finger cartoon hands)."
+  },
+  "collections": {
+   "Body Mesh": [
+    "Body",
+    "Head",
+    "Teeth New Version",
+    "Tongue",
+    "Petals",
+    "Teeth Original Version"
+   ],
+   "outfits": [
+    "Bunny Suit (ears/top/panties/pasties)",
+    "Latex (sleeves/leggings)",
+    "Slingkini",
+    "Sporty (top/skirt/tape)",
+    "Crown set",
+    "Spiked Collars set",
+    "High Heels",
+    "Piercings set",
+    "Cock Ring set",
+    "Penis set"
+   ],
+   "props": [
+    "Warp Pipe (in its own 'Piranha Plant' collection)"
+   ]
+  },
+  "images": "22 images, ALL packed=true (Body.png 4096, Normal Map 3.0 4096, Piranha Plant Head 4096, Petey Piranha Head 4096, Penis 4096 + Penis Normal 4096, Petals 2048, fabric/gold/condensation/scratched 2K sets, cloudy-sky EXR world) \u2014 textures embed cleanly into GLB.",
+  "key_meshes": {
+   "Body": "20,681 verts / 20,748 polys, material 'Body', armature->rig, 70 vertex groups, SUBSURF + 2x corrective SMOOTH + MASK modifiers",
+   "Bunny Suit Top": "6,662v / 6,534p (not shipped; source-only outfit)",
+   "Head": "material 'Head' (Piranha Plant Head.png + Petey Piranha Head.png + lips maps)",
+   "Petals": "head petal mesh, material 'Petals' (2048 texture)"
+  },
+  "materials": 14,
+  "meshes_total_note": "101 objects total: ~34 character/outfit meshes, ~45 cs_* rig widget shapes, Control Panel + Border + Text labels, 2 cameras, 3 lights, 1 curve, 2 empties. Non-character objects are Blender-scene furniture, excluded from the GLB by design (logged in treat.py phase A).",
+  "readme_in_file": "READ ME!.txt confirms: 'Thank you for downloading my model of Piranha Plant! ... She was made using ARP (Auto Rig Pro)' + FAQ (IK/FK switch, outfit Control Menu, Male slider, commissions/ports allowed). Credit: @dododragon56 (Twitter/FA/Bluesky).",
+  "shape_keys": {
+   "Body": 17,
+   "Clit Piercing": 2,
+   "Head": 2,
+   "Leash": 2,
+   "Nipple Piercings L/R": 2,
+   "Panties Female": 3,
+   "Penis": 10,
+   "Pussy Tape": 4,
+   "Sling": 4,
+   "Star Pasties": 2,
+   "Top": 2
+  },
+  "shape_keys_note": "Body keys are the Lab-relevant set (Nipple/Areola sizes, Puffy Pussy, Thick/Longer Pussy Lips, Clit, Anus Donut, Bigger Donut, Leggings/Sleeves Squish, Male, Slingkini). Head has only 'Bigger Lips' \u2014 face expression in this model is BONE-driven (full ARP face rig), which is why the face-pose actions exist."
+ },
+ "completeness": {
+  "animations": "PENDING executor \u2014 source has none; treat.py bakes FlipMocap (flip.bvh retarget) + UAL_Idle + UAL_Walk (CC0 Quaternius retarget). Gap if retarget mapping fails: executor must report mapped-bone counts from REPORT_JSON.",
+  "landing": "PENDING executor (branch/PR/merge on physics-playground-pwa main + Lab headless verify).",
+  "morphs": "READY in treat.py \u2014 export_morph=True, no stripping; expected max_morph_targets ~15 on Body (17 keys minus Basis/separators).",
+  "physics_profile": "DONE (authored): ~/workspace/_newchar-work/piranha-plant-profile.json \u2014 breast/butt/petal(hair-chain) jiggle, softbody, ragdoll, in characters-lane format.",
+  "proof_media": "PENDING executor \u2014 treat.py renders raw_* and treated_* PNG sets (front/side/back + clip frames); MP4 turntable NOT in script (contact sheet fallback in brief).",
+  "rig": "READY in treat.py \u2014 prune to deform set + rename to humanoid canonical (22 core canonical bones targeted: hips/spine/chest/neck/head/jaw/shoulders/arms/hands/legs/feet/toes; fingers thumb+middle mapped, index/ring/little ABSENT in source \u2014 honest gap, cartoon hands). Expected canonical match 22/22 of the core set humanoid.js checks (its extended finger set will show 12/30 finger bones).",
+  "textures": "READY in treat.py \u2014 all 22 images packed in source; GLB export embeds; executor verifies images>=20 in the GLB JSON."
+ },
+ "environment_blocker": {
+  "detail": "This analysis session's exec sandbox silently drops or EPERMs file writes whose content derives from files created outside the session (proven by controlled tests: same-process copies of foreign files land 0-byte; self-generated content writes fine; long-running/backgrounded writers also lose writes). Blender therefore cannot save GLBs/renders from THIS session. muse.write/muse.edit (tool path) work \u2014 all text deliverables were produced through them. Production was therefore packaged as a self-contained run-book (treat.py + EXECUTOR-BRIEF.md) and delegated to an executor subagent session; if that session hits the same wall it must report it, and the parent (whose session demonstrably writes foreign content fine \u2014 it copied the 4 intake blends + hashed them) can run treat.py directly.",
+  "status": "production delegated to executor subagent"
+ },
+ "lane": "new-character-ced0a6f6",
+ "project": {
+  "author": "dododragon56",
+  "identity_finding": "NOT a literal plant model: the file is a humanoid Piranha Plant GIRL (Mario fan character) \u2014 proven from the model's own data (in-file README: 'my model of Piranha Plant... She was made using ARP'; head textures 'Piranha Plant Head.png'; petal deform bones + Petals mesh; Warp Pipe prop). Adult female character with switchable outfits/features. Owner personally selected and ordered this project, so the owner-pick rule applies (parent ruling).",
+  "identity_gate": "CLEARED by owner-pick rule + in-file data audit",
+  "license": "CC BY-SA 4.0",
+  "name": "Piranha Plant (dododragon56)",
+  "owner_pick": 11,
+  "url": "https://smutba.se/project/ced0a6f6-033c-4783-8dcb-565cd74c2fcd/"
+ },
+ "status": "SHIPPED on physics-playground-pwa main",
+ "step0_file": {
+  "blend": "~/workspace/model-intake/models/PiranhaPlant_v1.0.2.blend",
+  "blend_bytes": 76203089,
+  "blend_header": "BLENDER-v404 (saved in Blender 4.4)",
+  "blend_sha256": "e230ac7700e9189d953725e60f2dc8685addc35f969f7a7754fb34cde418e59f",
+  "manifest": "owner-pick #11 entry added to ~/workspace/model-intake/batch2-manifest.json (items array) with files/sha/verify note",
+  "zip": "~/workspace/browser_downloads/sess-4002905517/browser-download-20261102T113149.391580009Z-9-Piranha_Plant_V1.0.2.zip",
+  "zip_bytes": 47249854,
+  "zip_sha256": "a7b54dfaec0917cf199f7d8de5201aed5cc1fd6b4bf9b88c85fb2bc164e64917",
+  "zip_sha256_match": "EXACT MATCH with publisher (SmutBase mirror page) hash"
+ },
+ "treatment_package": {
+  "executor_brief": "~/workspace/_newchar-work/EXECUTOR-BRIEF.md",
+  "model_entry": "~/workspace/_newchar-work/piranha-plant-model-entry.json",
+  "physics_profile": "~/workspace/_newchar-work/piranha-plant-profile.json",
+  "script": "~/workspace/_newchar-work/treat.py (phases 0/A/A2/B/B2/C/D/E, prints REPORT_JSON)"
+ },
+ "updated": "2026-11-03",
+ "shipped": {
+  "pr": 39,
+  "merge_commit": "75f303eee4926292e5c8609d0b0c5e4ca3ddfb2c",
+  "glb": {
+   "path": "examples/piranha-plant/PiranhaPlant.glb",
+   "bytes": 20382992,
+   "sha256": "051b92f1da860f10865f67c6d12dc91cb80686879a5c66f95af4df1baaa6949d",
+   "git_blob": "2480915b0d3c31657b71878b116c45a7e3d5471e"
+  },
+  "validator": "Khronos glTF Validator: 0 errors, 19 warnings, 16 infos (after stripping 6 spurious weights channels targeting morph-less meshes)",
+  "contents": "117-bone deform skeleton (semantic hierarchy rebuilt), 10 character meshes, 11 embedded textures (other 11 source textures belong to unshipped outfits), 20 morphs (Body 16 + Head/Panties/Top), animations FlipMocap + UAL_Idle + UAL_Walk",
+  "retarget_verification": "world-delta iterative-solve retarget; per-bone world-rotation delta vs source <= 0.1 deg at probed frames 129/250/251/270/308/400; proof renders show clean deformation",
+  "sw": "v25",
+  "models_json_entries": 32,
+  "proofs": "~/workspace/agent-ops/proofs/new-character-ced0a6f6/ (raw/treated orbits, FlipMocap f129/f308, UAL_Idle f30, contact sheet, treat report, validator report)",
+  "executor_fixes": [
+   "treat.py syntax (bare comprehensions in set literal)",
+   "render engine: EEVEE_NEXT absent in Blender 5.2.3 build + EEVEE OOM on 7GB VM -> WORKBENCH + TEXTURE shading",
+   "BVH BlazePose bone aliases (first run mapped only 5 torso bones)",
+   "UAL clip choice: Idle_Loop/Walk_Loop preferred over Crouch_Idle_Loop",
+   "export view-layer relink (Crown selection crash)",
+   "nla.bake produced constant rest keys under 5.2.3 -> replaced with world-delta iterative visual solve",
+   "quaternion hemisphere continuity across keys + FlipMocap step 1 (interpolation whip error)",
+   "hierarchy repair: ARP deform bones hang off c_* mechanism bones; canonical chain parented semantically, helpers by nearest-head (twist/stretch/crown bases explicit)",
+   "weight consolidation: pruned-bone weights moved to nearest kept ancestors (c_arm_twist_offset ~580/side, face c_* ~380), Heels weights toes->feet",
+   "stripped dangling ARP mechanism constraints (depsgraph error flood)",
+   "GLB weights-channel cleanup for validator 0 errors"
+  ],
+  "known_gaps": [
+   "no finger animation (source BVH/UAL have no finger channels; fingers follow hands rigidly)",
+   "hips root travel from the BVH object-level motion not transferred (rotation + armature-space translation transferred)",
+   "6 source face-pose actions dropped with the control rig (documented in audit)",
+   "adult accessory micro-chains (Anus/Pussy/ball) parented to local roots, not full chains"
+  ]
+ }
+}

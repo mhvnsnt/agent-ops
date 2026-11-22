@@ -1,0 +1,10 @@
+{
+  "task": "Resume IA pull: Billy & Mandy + remaining shows to 100%",
+  "repo": "/home/hatch/workspace",
+  "resume_brief": "Resume the archive.org pull of the CN gigaleak (swarm unreachable from VM \u2014 IA sources ONLY). State: Teen Titans DONE (970/970, GitHub+TeraBox). Billy & Mandy PAUSED: partial 2.1GB/3.66GB at ~/workspace/cn-leak-pull-100/work/grim-resume.zip \u2014 resume with curl -C - from https://archive.org/download/fosters_20261011/Grim%20Adventures%20of%20Billy%20%26%20Mandy.zip then extract, diff vs manifest (1,620f/5.73GB), push missing to mhvnsnt/cn-gigaleak-grim-adventures. Then: Ed Edd N Eddy gap-fill \u2192 Gym Partner gap-fill \u2192 verify-only the 8 ~100% shows (Duck Dodgers, Dexter's Lab, Robot Chicken, Cow & Chicken, PPGZ, New Looney Tunes, Looney Tunes Cartoons, Pink Panther). Manifest: ~/workspace/cn-gigaleak-raw/torrents/CNleaks-manifest.csv. Rules: diff-then-pull, manifest-verify 100% (path+bytes), branch\u2192PR\u2192merge (never main, zero open PRs), gh api git-database for binaries (VM git push hangs), stage at ~/workspace/cn-leak-pull-100/verified/<show>/, heartbeat checkpoint, one show at a time, do NOT delete local until TeraBox upload confirmed, clean zips after extract. Disk is 86% \u2014 keep usage under 88%, clean aggressively.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-14T21:09:56.807289+00:00",
+  "notes": "BILLY & MANDY COMPLETE (2026-10-14 ~21:00 EDT):\n- Archive verified: MD5 d848ebdc7ce4baf27e78904dfc246af0, 3,660,969,279 bytes\n- Manifest: 1,612 files verified (path+bytes), 0 mismatches; 8 .BridgeSort/metadata not in zip, 5 encoding variants\n- GitHub: 1,486 files pushed via git-database API, branch feat/grim-full-1617 -> PR #1 -> MERGED, zero open PRs\n- Release grim-complete-v1: 8 chunks (full 3.66GB archive) + ready for TeraBox\n- 121 files (66 >20MB + 55 edge-case 401s) are in the 8 chunks; parent can extract for TeraBox\n- Local zips deleted (freed 6.76GB). Disk at 90% (other lanes active).\n- TeraBox: parent should pull 8 chunks from release, reassemble, extract all 1,617 files."
+}

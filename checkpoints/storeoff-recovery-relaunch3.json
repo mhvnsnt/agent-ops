@@ -1,0 +1,44 @@
+{
+  "disk_at_launch_avail": "5.6G",
+  "disk_at_launch_pct": 95,
+  "disk_at_launch_used": "93G",
+  "git": "git -c core.fsync=false under disk pressure",
+  "lane": "storeoff-recovery-relaunch3",
+  "last_update_utc": "2026-10-21T20:06:38Z",
+  "owner_order": "Get everything you can stored on GitHub, push merge, clean without destroying or clobbering anything on either side and get working on disk cleanup too. (2026-10-21 ~12:26 CDT)",
+  "predecessors": [
+    "1695d1f2(died~14:05CDT restart)",
+    "ebb9720c(died~14:27 restart)",
+    "b9d62756(died at bootstrap, DB fault)"
+  ],
+  "rules": "ONE-STORE RULE (100% byte-identical hash/size on GitHub + pull-back proof before clear); log every deletion to disk-cleanup-log.md; NEVER kill/sweep in-flight; hands off: tools/, rigwork-tmp/, _cornerstone-work/, wh-pose-survey/, _docfrank-fix/, _t6r4-work/, rest of _wh-work/, fresh mtimes, .DO_NOT_DELETE; census sweep 8b25141e running - do not touch its targets",
+  "spawned_utc": "2026-10-21T20:06:38Z",
+  "status": "completed",
+  "targets": {
+    "t1_tripo_recovery": {
+      "dir": "~/workspace/tripo-recovery",
+      "expected_size": "~599M",
+      "next": "verify release complete via remnants/manifest/log; report exact state; do NOT re-upload unless release incomplete",
+      "release": "mhvnsnt/western-heart tripo-recovery-originals-20261021",
+      "state_at_launch": "DIR GONE LOCALLY (predecessor deleted ~13:18 CDT?)"
+    },
+    "t2_docfrank_facing": {
+      "dir": "~/workspace/_docfrank-facing",
+      "next": "verify parts reassemble hash-identical to local per FILELIST + pull-back proof, THEN clear local dir + staging per ONE-STORE RULE, log to disk-cleanup-log.md",
+      "release": "mhvnsnt/western-heart docfrank-facing-archive-20261021",
+      "size_at_launch": "1.7G",
+      "state_at_launch": "local dir EXISTS; predecessor claims upload ALL_FINISHED 19:15:24Z, 19 parts (part-aa..part-as)+FILELIST on release",
+      "upload_log": "~/workspace/agent-ops/storeoff-staging/t2/upload.log"
+    },
+    "t3_scarlett_star_pr": {
+      "dir": "~/workspace/_wh-work/scarlett-star-pr",
+      "next": "clear ONLY if branch on origin AND worktree git-clean; else report exactly what is unprotected",
+      "pr": "#440 OPEN/UNSTABLE",
+      "release_baseline": "scarlett-star-control-20261021",
+      "size_at_launch": "4.2G (note: was 2.9G earlier)"
+    }
+  },
+  "notes": [
+    "2026-10-22 23:30 CDT keep-working-pulse: disk now at 2% \u2014 no disk pressure, lane mission (store-off under 95% disk pressure) superseded by resolution. Ongoing store-off owned by disk-space-guardian cron + store-and-work-off-disk law. Marked complete; do not relaunch."
+  ]
+}

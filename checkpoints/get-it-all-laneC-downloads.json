@@ -1,0 +1,63 @@
+{
+ "coordinator": "get-it-all-into-repos-20261121",
+ "deletions_log": [],
+ "dirs": {
+  "agent-ops": {
+   "files": 15770,
+   "size": "3.9G"
+  },
+  "browser_downloads": {
+   "files": 16,
+   "size": "4.3G"
+  }
+ },
+ "freed_gb": 1.26,
+ "inventory": {
+  "agent-ops": {
+   "largest_subdirs": {
+    "checkpoints": "26M",
+    "disk-sweep-20261019": "19M",
+    "fla-puppets-program-2026-10-30": "92M",
+    "lane-paint-qc": "19M",
+    "proofs": "63M",
+    "research-friction-20261109": "49M",
+    "scooby-staging": "32M",
+    "self-improve": "147M",
+    "staging": "46M (stepwave-work-20261120.tar.gz 45.1M)",
+    "t7-clip-lane": "218M",
+    "t7-v2-other": "242M (contains nested wh/.git)",
+    "torbox-cd-work": "73M",
+    "ur-extract": "19M",
+    "wh-resolve": "33M",
+    "wizard-gang-industry-2026-10-29": "235M"
+   },
+   "note": "agent-ops itself has a .git dir - check if it is a clone of mhvnsnt/agent-ops and what is tracked vs untracked",
+   "protected_never_delete": [
+    "disk-cleanup-log.md (12.5M)",
+    "TEARDOWN-IDLE-QUEUE.md",
+    "all checkpoint files other lanes read"
+   ]
+  },
+  "browser_downloads": {
+   "node-session-007ed254": "douga-windows.zip 3.6MB",
+   "sess-3802796762": "SLPS02182 (Planetokio PS1) discs 1-3 BIN+CUE, DUPLICATED: disc1 BIN x3 (604.1MB each), disc2 BIN x2 (630.2MB each), disc3 BIN x2 (663.2MB each). CUE files tiny x7.",
+   "sess-889847362": "sample-zip-file.zip tiny (likely test/empty)"
+  }
+ },
+ "lane": "C",
+ "moved_gb": 0,
+ "next_step": "Create clean worktree from origin/main, copy 958 checkpoints, verify tree, commit, push branch laneC-agent-ops-sync-20261121, open PR (additions only, zero deletions). Then monitor Planetokio upload, pull-back verify, delete local BINs.",
+ "repos_used": [
+  "mhvnsnt/game-reverse-engineering (release sato-planetokio-rhythm-20261120, in-flight)"
+ ],
+ "started": "2026-11-21T19:31:59-05:00",
+ "steps_done": [
+  "inventory both dirs",
+  "agent-ops .git gc: 1.3G -> 41M (freed ~1.26G; 3 unreachable Oct-16 blobs 352/158/104MB + 4331 loose objects packed to 34.9MB pack; verified not in index/reflog/reachable before gc)",
+  "Planetokio: release sato-planetokio-rhythm-20261120 on mhvnsnt/game-reverse-engineering confirmed as planned destination (Sato lane checkpoint line 57); upload script running (pid 26961), 24MiB parts, ~55s/part, 81 parts + 3 CUEs",
+  "agent-ops triage: local tree is stale branch lindy-privacy-policy-20261107, 846 commits behind origin/main; 301 modified tracked files, 37 D-vs-main (18 exist on disk untracked-but-identical to main, 19 truly absent = main-newer files, NOT deletions to propagate); 0 safe modified-file syncs (only MERGE-QUEUE.md was pure-addition and it is overnight-pipeline-owned); 260 mode-only files; 7006+ untracked files; sync payload = 958 new parseable checkpoints/ JSONs (12.1MB)",
+  "douga-windows.zip (3.6MB Douga animation software) has no named repo home - logged unplaced, NOT deleted",
+  "sample-zip-file.zip (380B test file) logged for deletion as junk"
+ ],
+ "unplaced": []
+}

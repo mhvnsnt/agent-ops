@@ -1,0 +1,10 @@
+{
+ "task": "Wave 11: S8 footsteps (TIER 3 item 11)",
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "CONCRETE DRAGON Wave 11 worker. Tranche: wire Kenney RPG Audio footstep00-07 OGGs (CC0, staged in game/assets/staging/audio/kenney_rpg-audio.zip) into the game-3d build. Conventions from wave 10 (docs/TRANCHE_WAVE10_SWINGWHOOSH.md): extract OGG->MP3 (ffmpeg mono 44.1kHz 96k) into game-3d/build/assets/, register every new asset in build/asset-manifest.json (build ONLY embeds manifest-listed files), credit in ASSETS_CREDITS.md, decode in unlockAudio(), add sfxFootstep()/step helper with pitch jitter, wire to player locomotion step events + enemy approach steps (volume/distancing sensible, don't play footsteps for every enemy every frame), surface-appropriate per district/mission if cheap (otherwise one bank), add T.* test counters + __cdtest hooks, write qa/playtest-footsteps.mjs (playtest convention: poll playerDbg().busy instead of fixed sleeps under swiftshader; save proof shots to game-3d/shots-footsteps/; ZERO console/page errors), eyes-on verify each shot before calling it done, decision doc docs/TRANCHE_WAVE11_FOOTSTEPS.md, update docs/WIRING_QUEUE.md item 11 (date+commit). Laws: no fake gameplay (sounds must actually fire from real movement), CC0/manifest stays clean, style-not-power, slow-mo for big moments only, localStorage save persists, 3D-demo naming. Do NOT touch S5/S6/S7/S1/S15 (separate tranches). Commit incrementally on branch wave11-footsteps in ~/workspace/ConcreteDragon, PUSH branch, open PR to main per branch+PR rule (never push straight to main). Mark this checkpoint done when PR is open.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-08T10:00:00+00:00",
+ "notes": "DONE. PR #1 open: https://github.com/mhvnsnt/ConcreteDragon/pull/1 (wave11-footsteps -> main). Commits: 29b7442 (assets+wiring), 269c5a9 (stepDbg rate), 19e189f (displacement strides + playtest 11/11 PASS), 8920bd6 (decision doc + queue). Playtest 11/11 PASS, zero errors, 6 shots eyes-on verified in game-3d/shots-footsteps/."
+}

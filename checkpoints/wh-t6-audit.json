@@ -1,0 +1,23 @@
+{
+  "task": "Audit the 20 decoded Tekken 6 DATA401 files. Determine roster coverage and whether PPSSPP work is worth it.",
+  "status": "done",
+  "watchdog": true,
+  "repo": "western-heart",
+  "resume_brief": "T6 audit complete. Audited all 20 decoded Tekken 6 DATA401 files for roster coverage and PPSSPP viability. Findings recorded in checkpoint notes.",
+  "updated_at": "2026-10-18T01:58:27.054570+00:00",
+  "attempts": 0,
+  "findings": {
+    "decoded_count": 20,
+    "decoded_bytes_compressed": 2768,
+    "decoded_pct": 0.1,
+    "stuck_count": 56,
+    "stuck_bytes_compressed": 2652784,
+    "stuck_pct": 99.9,
+    "roster_coverage": "ZERO - no character models, no stages, no usable assets",
+    "recommendation": "PPSSPP debugger work is ESSENTIAL. Without it, Tekken 6 contributes nothing."
+  },
+  "notes": [
+    "[watchdog 2026-10-16 05:28 EDT] Schema note: resume_brief 38 chars (<50); status kept 'done' (work complete, never needs resume).\n[watchdog 2026-10-17T21:17:46.   000000+00:00] Schema invalid: missing resume_brief(>=50chars). Parked needs_owner per watchdog schema rule.\n[watchdog 2026-10-17 18:10 CDT] MALFORMED checkpoint (schema violation): resume_brief only 38 chars (<50). Not resumable; status already needs_owner. Owner: fix fields or delete this checkpoint.",
+    "[2026-10-17] Schema repaired: added repo + resume_brief (>=50 chars). Work was already complete per prior notes. Status set to done."
+  ]
+}

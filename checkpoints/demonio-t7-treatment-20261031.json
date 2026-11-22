@@ -1,0 +1,13 @@
+{
+ "task": "Demonio full T7 treatment: rig/weights audit+fix on Attire 1, bake Jin real T7 stance (0xC8) onto Attire 1 rig with control test, wire via T7_STANCES, verify unwinged->winged transformation wiring (read-only on moveset data), land instruction-gate PRs, final textured proof render in baked stance.",
+ "repo": "mhvnsnt/western-heart",
+ "workdir": "/home/hatch/workspace/_demonio-t7-20261031",
+ "resume_brief": "Demonio T7 treatment lane. Step 1: decode working copy of roster/demonio/attires/attire1/model.glb with ~/workspace/tools/gltfpack/gltfpack, audit with tools/auto_rig skin_audit, weights-only rigfix if FAIL, re-audit PASS. Step 2: bake Jin T7 stance clip (0xC8, jin bank, GRE release t7-rotsm-clips-v1) onto Attire 1 rig using tools/anim/t7_c8_control_test.py + t7_c8_pantera_stance_bake.py as template; wire via game/js T7_STANCES like Pantera/King. Step 3: verify transformation wiring read-only (winged-devil model + game wiring); fix wiring only if broken; NEVER edit demonio-winged moveset data (Decision item 4). Step 4: instruction-gate PRs, zero deletions, self-merge green; final front render textured in baked stance (EGL-stack Blender env). Do NOT touch Burger/Negativo. ONLY Blender-heavy lane.",
+ "status": "complete",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-31T14:48:17.392562+00:00",
+ "progress_seq": 5,
+ "notes": "COMPLETE. PR #1426 MERGED (merge commit a18e0f117e9af1b6dd1f20d3243ca7f4ba994c00, all 14 checks green incl instruction-gate; main model.glb blob now 3bd1e9c9 28,793,068 B, gh-verified). STEP1: audit FAIL -> weight_cleanup (10,842 pruned / 34,081 revived) -> contamination 0.0, RightFoot revived, validate PASS; 8/10 checks, 2 skeleton-domain blockers documented (dead ForeArm.001 leaf pair; arm joints outside mesh 0.185/0.257m). STEP2: Jin stance = format-100 s0 entry 127 (kmjz_kamae) - 0x64-blocked; 86/88 jin f200 clips byte-identical shared set; control tests entries 92/468/36/79/37 documented in docs/anim/T7-JIN-STANCE-FINDING-2026-10-31.md (in PR). Demonio keeps T3 stance. Claude T7 loader still unmerged - Demonio clip-map (50 clips) ready on main for it. STEP3: transformation wiring verified intact read-only; bodyScale 1.22 does NOT fully compensate winged extent (2.52 vs 2.80) - ~+10% growth, reported in PR for a ruling, NOT edited. Proof renders in PR docs/handoffs/proof-demonio-a1-{before,after}-{front,side}.png.",
+ "heartbeat": "2026-10-31T16:03:00Z"
+}

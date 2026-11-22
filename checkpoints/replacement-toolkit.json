@@ -1,0 +1,16 @@
+{
+  "task": "HEAVY RESEARCH + PULL-IN + WIRE-UP: ultimate free face/body replacement toolkit",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/video-fix-tools/character-replace/",
+  "resume_brief": "DONE. See TOOLKIT.md. All deliverables complete: 10 repos pulled, Viggle comparison measured, RetinaFace+inswapper tested, browser stealth researched, everything committed.",
+  "updated_at": "2026-10-12T12:55:00-05:00",
+  "attempts": 0,
+  "results": {
+    "repos_pulled": ["LivePortrait", "Wan2.2-Animate", "SimSwap", "Real-ESRGAN", "RIFE", "BiRefNet", "motion-mirror", "MimicMotion", "SCAIL-2", "AnimateDiff"],
+    "cpu_tested": ["DWPose (100% detection)", "FaceFusion (12/12)", "RetinaFace+inswapper (5/8 vs 0/8 on hard cases)"],
+    "viggle_comparison": "motion fidelity 0.333, watermark confirmed, sharpness 289 vs 204, composition changed by Viggle",
+    "docs": ["TOOLKIT.md", "BROWSER-STEALTH.md", "tools/README.md", "comparison/ (frames+metrics)"],
+    "committed": true
+  }
+}

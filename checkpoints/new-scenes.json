@@ -1,0 +1,10 @@
+{
+  "task": "Generate 5-6 new Muta video scenes for Kiko Encore Anyway gap fill (99s-142s)",
+  "repo": "~/workspace/trippedd-studio",
+  "resume_brief": "Generate 5-6 NEW 8s video scenes using Viggle frames in /tmp/viggle-stills/ as reference. Use free_image_gen skill for reference-driven stills, then animate each to 8s video. Output to ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/video/new-scenes/. Verify frames. See parent brief for full details.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-12T21:49:29.729905",
+  "progress": "ALL 6/6 DONE. 6 new 8s scenes in .../video/new-scenes/. Scenes 5+6 have Muta neural face swaps. All verified by viewing frames."
+}

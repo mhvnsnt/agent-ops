@@ -1,0 +1,10 @@
+# Keep-working pulse — 2026-11-16 12:20 EST
+
+- Subagents: 16 active. Fresh activity: 6B 37th successor (31fcee5d, spawned ~12:15 EST by the watchdog) idle 60s; CEILING W5/W7 + coordinator idle <4 min; CJ VACE round-4 lane (b225e5ab) idle 2s; disk-stage round-5 coordinator idle 32s; SquishyFX B1/B2 lanes active (idle 30s / ~9 min). V71 deploy (36d4126e) idle ~15 min — under the 20-min stale threshold, running.
+- Failed agent a0d25f90 (restart-drain error) already has a running resume successor (e6f4358e, idle 101s). No new failures since the 12:10 pulse.
+- Watch items (other chats' agents, not mine to steer/close, per NEVER-KILL law — noted only, carried from 12:10 pulse): CJ VACE round-4 coordinator (3d8d6dc6) still pending_init, idle ~62 min (was ~52 min at 12:10); SquishyFX coordinator (c1e2aadb) idle ~92 min after its wake-up resume — but its B1/B2 child lanes are actively working, so work moves. Older stored lanes idle for days (bun ~38h, Wizard Gang ~67h, tint ~26d, ToonCrafter ~30d) — long-lived, not failed. None block active work.
+- Managed checkpoints: CEILING checkpoint fresh (12:16:59 EST). 6B watchdog chain ticking on its own cadence (37th successor live). No stale-checkpoint resume owed by this pulse.
+- Disk: 77% (115G/150G on /home/hatch, 35G free) — below 85% threshold, steady vs 12:10 pulse (78%).
+- Grokbot: no new owner proof file. grokbot-handoffs/incoming empty, proofs/ last touched Nov 3, HOW-GROKBOT-WORKS.md (Nov 6) and GROK_CAPABILITY_STUDY.md (Oct 8) unchanged. No new patterns.
+- PRs: CEILING W19 PR #202 merged (rooms + props, per lane report). Open PRs are the known standing backlog (PPWA #161/#150/#50/#49/#48/#45, dream-girl #89 DO NOT MERGE reference + #9 review-only, western-heart #1714/#1702/#1701/#1696/#1678/#1600, Bannon drafts). Nothing newly stuck; merging is the coordinator's call, not a pulse action.
+- Verdict: work is moving — V71 deploy, CEILING wiring, SquishyFX lanes, disk staging, CJ VACE round 4 all live. Two coordinator watch items only (same as 12:10 pulse) — no new alert, no pulse resume owed.

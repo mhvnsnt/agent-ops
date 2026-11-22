@@ -1,0 +1,9 @@
+{
+ "task": "Pull the full free creative toolkit: audio/video/design/animation/AI",
+ "repo": "~/workspace/video-fix-tools",
+ "resume_brief": "MEGA-TOOLKIT PULL (owner 2026-10-10 ~22:22 CDT): pull in everything free that helps make episodes \u2014 FL Studio/BandLab-like audio, CapCut/Premiere-like video, Photoshop/Canva-like design, FlipaClip-like animation, brushes, AI creative tools \u2014 for BOTH his hands (phone/desktop apps he installs) and my pipeline (scriptable tools on this box). TIER A pull+wire now (small, CPU-friendly): demucs or spleeter (vocal/source separation), FluidSynth (MIDI rendering), paulstretch, aubio (onset/beat). TIER B document-only (desktop/mobile apps for him): LMMS, Ardour, Cakewalk by BandLab, BandLab web, Natron (compositing), DaVinci Resolve free, Krita, MyPaint, Tahoma2D, Photopea, Vital/Surge XT/Valhalla Supermassive (free plugins). TIER C heavy/GPU -> Colab/Kaggle notebook pattern (like Pocket Studio): ComfyUI notebook, RVC voice-conversion notebook. Wire Tier A into the animation-kit + Pocket Studio (new tabs, e.g. 'Separate vocals', 'MIDI render'); update the kit's APPS.md with the full Tier B/C catalog (what it replaces, where to get it, which episode work it serves). Push kit updates to all 3 production repos via branch->PR->merge, zero open PRs. CRITICAL: disk was 87% \u2014 check df FIRST, stay lean (no giant downloads; document-but-don't-download big desktop apps), coordinate with disk-guardian. Never touch ~/workspace/trippedd-studio checkout or the v3 worktree. The LOTI mix worker (3f2eec49) is running separately \u2014 do not interfere.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T04:04:09.224683+00:00"
+}

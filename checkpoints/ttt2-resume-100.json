@@ -1,0 +1,10 @@
+{
+ "task": "TTT2 teardown completion: re-download 13.3GB 7z from release chunks, reassemble, STFS extract, pull 59 fighter models+movesets, save to TeraBox+GitHub western-heart, WH rename map",
+ "repo": "western-heart",
+ "status": "superseded-by-fill3-ttt2-20261106",
+ "watchdog": true,
+ "attempts": 0,
+ "resume_brief": "TTT2 streaming-extraction lane (canonical resume lane per wh-ttt2-100, superseded 2026-10-22). Reassembly of ttt2.7z verified Oct 25 (7-Zip test passed, 72 files, 13452865536 bytes); Data-file pulls (data037/data038/data041) were live Oct 28. The bank/moveset half of this task was completed by the FILL 3 lane Nov 6-7 (PRs 1621, 1625, 1627-1636, all 63 producible banks on western-heart main).",
+ "notes": "[worker-watchdog 2026-11-12 06:25 CST] RECONSTRUCTED: file was 0 bytes since Nov 2 (unparseable; audit listed it UNPARSEABLE every run). Journal ttt2-resume-100.journal.jsonl preserved untouched: last entry 2026-10-28 09:10 CDT (data041 pull live, disk 55 pct, 67G free); no TTT2 processes running now, workdir ~/workspace/_ttt2-work gone, no pulls/*.bin on disk. Lane died silently after Oct 28 with no successor checkpoint for the Data-pull half. Substance check: FILL 3 lane completed the bank/moveset half Nov 7 (all 63 banks on main, PRs 1621/1625/1627-1636, S6 read-back clean). Remaining open items per fill3 PROGRESS.md: 7 stray bake-report.json files need owner approved-deletion label; ANNA bank-1 table + 11 partial joins await queued archive.org PS3 copy; Jun t3_crouch + row-48 stamp await owner rulings; banks landed INERT (unbound). Attempts unknown (journal shows epochs 1-15); set 0, do not trust as a count. Status superseded-by-fill3; do not re-spawn this lane. If the 59-fighter MODEL pull half is still owed, that needs a fresh parent decision, not a resume of this file.",
+ "updated_at": "2026-11-12T12:27:38.896004+00:00"
+}

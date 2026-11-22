@@ -1,0 +1,46 @@
+{
+ "task": "Additive moveset merge (resume): union of all 548 historical versions of game/assets/movesets/*.json into current main, notation normalizer + per-fighter base tables + hard no-loss guard, wired via existing moveset format. Owner order 2026-10-20 ~20:38 CDT (resume from this chat; do not wait for session-limited agent).",
+ "repo": "mhvnsnt/western-heart",
+ "status": "COMPLETE \u2014 merged to main",
+ "attempts": 1,
+ "watchdog": false,
+ "updated_at": "2026-10-21T02:11:50.425191+00:00",
+ "resume_brief": "Workdir ~/workspace/_moveset-merge/ (hist/ = blob-less clone, versions_index.json = 548 unique (path,blob) versions across 98 files ever present, 96 on main HEAD, 60 commits all-refs). Prior agent scratch NOT found; its 548 count reproduced exactly. Next: fetch all blobs, parse versions, survey odd notations, build normalizer+merge tool, guard=union superset proof vs current main, land additions-first PR. Full notes in moveset-merge-resume-20261020.md beside this file.",
+ "notes": "Step 1 done: state hunt + version enumeration reproduced (548). Pantera forward_merge (PR #357) is the merge precedent: main keeps contested keys, branch entries rekeyed.\nStep 2 (acceptance + format grounding): Owner acceptance target added 20:57 CDT: merged movesets must LOAD AND PLAY \u2014 final proof = tools/proof-harness/fight.mjs harness fight on merged data (real moves firing) + per-fighter guard output.\nFORMAT FACTS (verified on origin/main): current files use SCHEMA v2 \u2014 moves = OBJECT notation->move entry (rich: name/input/startup/damage/anim_ref/input_slots/move_class/provenance; pantera main = 370 moves, 36 strings, 104 specials). Early history versions use moves = list of bare input strings (older snapshot). Merge target = schema v2 dict. Game loader: game/js/movesets.js fetch assets/movesets/{id}.json for MOVESET_IDS, getMove does ms.moves[notation]; parseSpecialInput defines notation semantics (f,F = double-tap; case carries meaning \u2014 normalizer must be evidence-based, whitespace-only by default).\nSchema contract: docs/movesets/MOVESET-SCHEMA.md on main. fight.mjs: serve repo root :8765, Playwright chromium at /opt/pw-browsers, starts arcade via window.__modes.startFight(p1,p2), logs state/attackName/t3 clips.\n/tmp is 100% full from other lanes (t6r3 309M) \u2014 all my work under ~/workspace/_moveset-merge. Disk /home/hatch 88%, 13G free.\nBlob extraction in progress: measuring coverage of the 548 blobs in local full clones (western-heart-main + lane worktrees) to extract locally instead of slow lazy-fetch.\nANIM-BANK LANE NOTE (2026-10-20, for the moveset-merge lane): banks + FULL rows.pack.json (complete move-index bakes via tools/anim/t3_row_bake.py) now exist for paul, lei, nina, hwoarang, eddy, julia, anna, bosconovitch, armorking (anim-bank wiring PR; banks' action clips landed in PR #405). fighter.js FIGHTER_BANK binds the proxy-table fighters to their canon bases' banks for ACTION clips (awapop>nina, torch>anna, kingtyrant>eddy, kai>eddy, tou>paul, byou>lei, gyou>hwoarang, zen>julia, rave>lei). Per-move row clips activate automatically when you rebuild those movesets on the TRUE base tables \u2014 every row is already baked, no bank work needed from you. Doc Frank's base file (t3_source bosconovitch) now plays real Bosco per-move clips; his FORM files (hood/machine-shop/wowomomo) still carry t3_source gunjack \u2014 data decision is yours, flagged in docs/anim/BANK-TABLE-2026-10-20.md. Do not edit t3_source to change animation binding \u2014 bankIdFor/FIGHTER_BANK owns binding; t3_source stays the data-provenance label, as agreed.",
+ "guard": "96/96 fighters PASS (guard.py re-run after storage-key fix + era-first rebuild, 2026-10-20 ~22:1x CDT). Output: ~/workspace/_moveset-merge/guard_output.txt",
+ "merge_totals": {
+  "files_changed": 9,
+  "moves_added": 33,
+  "strings_added": 2,
+  "specials_added": 5,
+  "specials_alt": 0
+ },
+ "era_standard_applied": {
+  "rule": "owner 2026-10-20 ~21:59: prefer richest/newest-era expression (T6/T7/T8 + other teardowns); T3 fallback only; union-first no-loss absolute; era choices noted per fighter",
+  "implementation": "build_merge.py era_rank() from each entry provenance fields; addition payload selection = (era, has_name, field_count, last_seen); era census recorded per fighter in merge_report.json + union_merge.era_note in each changed file",
+  "t3_only_fighters_gap": [
+   "demonio-human (102 T3)",
+   "doc-frank-hood (101 T3)",
+   "doc-frank-wowomomo (101 T3)"
+  ],
+  "unprovenanced_small": [
+   "burger-speed-demon (12)",
+   "burger-the-mouth (12)"
+  ],
+  "changed_fighters_dominant_era": "doa-bass/doa-hayabusa/doa-kasumi/vainabel/vf-akira/vf-kage/vf-sarah = T6/other-teardown + T8/WH signature entries; docfrank/ryuji-rock = T3-dominant base with T8/WH additions (no newer full set exists in any version)"
+ },
+ "off_main_files_decision": {
+  "deathfang-werewolf.json": "FLAG, do not add: loader MOVESET_IDS has deathfang only; werewolf set is owned by the Deathfang lane (122-move set on branch feat/deathfang-real-models-20261020); historical 127-move file would collide. Transformation key deathfang-werewolf is reserved in canon.",
+  "sam-ur-a1.json": "FLAG, do not add: 8-move early stub under an id the loader never fetches; wired canonical id is samura1 (in the 96, union-complete). Dead duplicate if added."
+ },
+ "next": "harness fight on merged data: sparse checkout of PR branch in progress (background, ~/workspace/_moveset-merge/wt, game/ ~1.1GB via proxy); then serve :8765 + tools/proof-harness/fight.mjs vainabel vs pantera + docfrank vs pantera; post results as PR comment.",
+ "pr": "https://github.com/mhvnsnt/western-heart/pull/407 (branch feat/moveset-union-merge-20261020, commit 245d9ce3, created via Git Data API; base-drift check: all 9 changed files MATCH current main blobs \u2014 zero drift)",
+ "outcome": {
+  "pr407": "MERGED (merge commit 2c14ac537e6d3471d5eb425ee9960e014e6cce5a). 9 files: +33 moves, +2 strings, +5 specials; tools/moveset-merge/{build_merge.py,guard.py} + docs/movesets/UNION-MERGE-2026-10-20.md in repo. Verified on main: docfrank.json = 114 moves, union_merge present, blob be0bd8bbac = the merged file.",
+  "guard": "96/96 fighters PASS (independent guard.py: base preservation deep-equal, union coverage, no fabrication).",
+  "harness_proof": "PR #417 MERGED (proof artifacts): docs/movesets/harness-proof-2026-10-20/{console-docfrank.log, fight-pantera-vs-docfrank-f01.png}. Fight ran on the merged files: boot line \"Per-fighter movesets wired: 79 fighters\"; pantera vs docfrank, round=fight, both attacking (atk 2 / atk 3) with decoded clips (t3_king_row203@pantera, t3_gunjack_medium@doc-frank-machine-shop); frames viewed own-eyes (real models/stances, hit sparks). Note: fight.mjs hardcoded /opt/node22 playwright path does not exist on this VM; identical probe driven via system Python Playwright + cached Chromium (same __modes calls, same __game state fields, CDP screenshots). Loader code served was byte-identical to main (movesets.js blob d631b258).",
+  "era_standard": "Applied (owner 2026-10-20 ~21:59): addition payloads selected newest-era first via per-entry provenance rank (T8/WH > T7 > TTT2 > T6/DOA/VF > T5 > T3), union-first no-loss absolute; per-fighter era census in merge report + union_merge.era_note. T3-only gaps flagged: demonio-human, doc-frank-hood, doc-frank-wowomomo.",
+  "off_main_flags": "deathfang-werewolf.json (127 moves) + sam-ur-a1.json (8-move stub) NOT merged \u2014 evidence + routing in docs/movesets/UNION-MERGE-2026-10-20.md and PR #407 deviations (Deathfang lane owns the werewolf set; samura1 is the wired SAM-UR-A1 file).",
+  "reproduce": "Tools live in the repo: tools/moveset-merge/build_merge.py + guard.py; inputs = git history of game/assets/movesets/*.json across all refs (548 unique versions). Local scratch deleted 2026-10-20 after merge (see disk-cleanup-log.md)."
+ }
+}

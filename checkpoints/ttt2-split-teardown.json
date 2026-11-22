@@ -1,0 +1,29 @@
+{
+ "task": "TTT2: split 13.3GB 7z into chunks, upload to GitHub Release ttt2-7z-v1 in mhvnsnt/western-heart, verify, delete local, re-download, extract, full teardown, push everything to western-heart/teardown/tekken-tag-tournament-2/",
+ "repo": "~/workspace/game-reverse-engineering/tekken-tag-tournament-2",
+ "resume_brief": "The TTT2 7z (13,363,624,393 bytes) was at ~/workspace/game-reverse-engineering/tekken-tag-tournament-2/Tekken Tag Tournament 2.7z. PROGRESS 2026-10-13 12:34 UTC: Release ttt2-7z-v1 at https://github.com/mhvnsnt/western-heart/releases/tag/ttt2-7z-v1. Chunked upload v4 RUNNING (/tmp/ttt2_chunk_upload4.sh, session proc_cc112a9ebc1f) \u2014 26x500MB chunks (ttt2-500m.part_01..26), dd bs=1M, gh release upload with 5 retries, verify size, delete local. Chunk 1/26 VERIFIED (524288000 bytes). ~5min/chunk, ~2hr total. 2GB chunks failed (network stream errors); 500MB works (proven by Urban Reign). If interrupted: check gh release view ttt2-7z-v1 --repo mhvnsnt/western-heart --json assets -q '.assets[].name' for completed chunks, script resumes automatically skipping uploaded ones. After all 26 verified: delete local 7z (13.3GB), re-download parts from GitHub via gh release download, cat reassemble, verify 13363624393 bytes, extract (need 7z binary \u2014 apt or p7zip), map file structure, write TEARDOWN.md, push to western-heart/teardown/tekken-tag-tournament-2/ via branch\u2192PR\u2192merge.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 3,
+ "updated_at": "2026-10-13T17:32:05.998080+00:00",
+ "notes": [
+  "2026-10-13 13:27 UTC watchdog: upload v4 healthy and running (pid tree from 08:29 EDT, gh upload of part_12 in flight). 11/26 chunks verified on release ttt2-7z-v1, ~5 min/chunk, ~60-75 min remain. Did not interfere. Disk at 90% \u2014 chunks free space as verified; guardian cron handles.",
+  "Watchdog 2026-10-13 09:55 EDT (state check only, NOT resumed this run \u2014 wrestling checkpoint was older): chunk-upload script DEAD (no process; log last touched 13:38:44Z mid-upload of part_15 attempt 1/5; died ~21min before check, likely daemon restart). Release ttt2-7z-v1 has parts 1-14 VERIFIED (14/26). ttt2-500m.part_15 (524288000 bytes) sits local in tekken-tag-tournament-2/, upload interrupted \u2014 next run resumes by re-uploading part_15 then continuing 16-26. Source 7z intact (13363624393 bytes). Disk at 91% (9.6G free) \u2014 OK for sequential 500MB chunks. updated_at deliberately NOT heartbeated so next run picks this up.",
+  "2026-10-13 10:27 EDT resume: script v5 written (/tmp/ttt2_chunk_upload5.sh), parts 1-14 verified on release, part_15 local ready to upload, resuming 15-26.",
+  "2026-10-13 10:55 EDT resume: part_15 VERIFIED (15/26), chunk 16 uploading. ~5min/chunk, ~55min remain.",
+  "2026-10-13 11:05 EDT resume: script died mid-part-16 (daemon restart). 15/26 verified. part_16 local (500M) ready. Script v5 restarted, resuming 16-26.",
+  "2026-10-13 11:16 EDT: part_16 VERIFIED (16/26), chunk 17 in progress. Steady ~13min/chunk pace.",
+  "2026-10-13 11:22 EDT: part_17 VERIFIED (17/26), chunk 18 in progress. ~6-13min/chunk.",
+  "2026-10-13 11:54 EDT: part_18 VERIFIED (18/26), chunk 19 in progress. One stuck upload killed+retried OK.",
+  "2026-10-13 12:08 EDT: part_19 VERIFIED (19/26), chunk 20 in progress. 7 chunks left.",
+  "2026-10-13 12:19 EDT: part_20 VERIFIED (20/26), chunk 21 in progress. 6 chunks left.",
+  "2026-10-13 12:25 EDT: part_21 VERIFIED (21/26), chunk 22 in progress. 5 chunks left.",
+  "2026-10-13 12:38 EDT: part_22 VERIFIED (22/26), chunk 23 in progress. 4 chunks left.",
+  "2026-10-13 12:47 EDT resume: another daemon restart killed script mid-part-23-attempt-2. 22/26 verified. part_23 local (500M) ready. Script v6 restarted, resuming 23-26. 4 chunks left.",
+  "2026-10-13 12:51 EDT: part_23 VERIFIED (23/26), chunk 24 in progress. 3 chunks left.",
+  "2026-10-13 13:00 EDT: part_24 VERIFIED (24/26), chunk 25 in progress. 2 chunks left.",
+  "2026-10-13 13:05 EDT: part_25 VERIFIED (25/26), final chunk 26 (256MB) in progress.",
+  "2026-10-13 13:10 EDT: ALL 26 chunks verified, release total = 13363624393 bytes (exact match). Deleting local 7z, re-downloading parts.",
+  "2026-10-13 13:20 EDT FINAL: All 26 chunks verified on Release ttt2-7z-v1 (total 13363624393 bytes, exact match). Local 7z deleted per NO-DELETE-BEFORE-SAFE-STORAGE (verified safe). Re-download for full extraction ABANDONED: GitHub release downloads too slow (~40MB/min, would take 5+ hours), disk cannot hold 7z+extracted simultaneously (needs ~27GB, have 19GB). Basic TTT2 teardown (INVENTORY.md, ROSTER.md, STAGES.md, TEARDOWN.md) already in western-heart/teardown/tekken-tag-tournament-2/ from PR #38. Full 13.45GB extraction deferred until network/disk allow."
+ ]
+}

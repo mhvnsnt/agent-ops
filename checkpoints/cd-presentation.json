@@ -1,0 +1,10 @@
+{
+  "task": "Combo counter + score + slow-mo KO + boss intros for Concrete Dragon",
+  "repo": "/home/hatch/workspace/ConcreteDragon-presentation",
+  "resume_brief": "Build PRESENTATION for Concrete Dragon (~/workspace/ConcreteDragon). (1) COMBO COUNTER UI: hits counter with timer, styled to match game. (2) SCORE: arcade scoring (per-hit, KO bonuses, style bonuses). (3) SLOW-MO KO: dramatic slow-motion on final blow of a fight/boss. (4) BOSS INTROS: dramatic entrance \u2014 camera move, music sting (boss tracks exist), name card splash. Refs: Yakuza heat moments, SoR4 boss intros. Branch presentation -> PR -> merge (never direct to main). Heartbeat ~/workspace/agent-ops/checkpoints/cd-presentation.json after every step; incremental commits. Verify with playtests + captures, your own eyes. Obvious-defect checklist every playtest. NOTE: moved to dedicated worktree ~/workspace/ConcreteDragon-presentation (branch presentation-wt) \u2014 the shared ~/workspace/ConcreteDragon tree is used by 6 other lanes switching branches; never work there. Commit 3c65bb3 on presentation-wt.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 1,
+  "updated_at": "2026-10-09T17:55:00Z",
+  "result": "PR #20 merged to main (220d10d). Branch presentation-wt. Worktree at ~/workspace/ConcreteDragon-presentation."
+}

@@ -1,0 +1,10 @@
+{
+ "task": "Build MODEL_DEFECT_TAXONOMY.md defect catalog on western-heart, open PR",
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "Write tools/rig_repair/MODEL_DEFECT_TAXONOMY.md on western-heart (branch docs/rig-defect-taxonomy): catalog every model defect class from the Pantera saga + pipeline history \u2014 exact name, aliases, appearance, root cause, automatic fix (pipeline tool/stage), verification gate. Sources: ~/workspace/rig-a-20261015-150616/out/REPAIR-NOTES.md, ~/workspace/defect-shots/, western-heart main tools/rig_repair/PR*_NOTES.md + README.md + RIG_REPAIR_PIPELINE.md, draft PR #182 RESEARCH.md (branch research/rig-autofix-survey). Plus GATE STANDARD section. Open PR, do NOT merge. Claim already in agent-ops CLAIMS.md.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-15T19:32:34.739752+00:00",
+ "notes": "MODEL_DEFECT_TAXONOMY.md written; western-heart PR #185 opened (not merged per task)"
+}

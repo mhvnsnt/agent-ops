@@ -1,0 +1,10 @@
+{
+  "task": "Build Ashes mouth viseme pack from his actual character design",
+  "status": "done",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/ashes-mouth-pack",
+  "resume_brief": "Build ~/workspace/ashes-mouth-pack/ containing: (1) reference-crops/ \u2014 tight mouth/teeth crops from 10 different Ashes shots; (2) visemes/ \u2014 generated talking shapes (closed, ah, oh, ee, oo) that preserve Ashes' likeness (diamond-grill teeth through shroud, NOT monster teeth); (3) ASHES-MOUTH-GUIDE.md \u2014 design specs. Sources: ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/ep02-stills/, character-refs/, and episode frames. Use the image generation tools available. Keep working until all 10 crops + 5 visemes + guide are done.",
+  "updated_at": "2026-10-10T19:14:35.972802+00:00",
+  "attempts": 0,
+  "notes": "Complete. 10 reference crops in reference-crops/, 5 visemes in visemes/ (closed, ah, oh, ee, oo), ASHES-MOUTH-GUIDE.md written. Owner correction applied: sharp teeth preserved (not redesigned to blocky), grill variations documented (full/partial/none/one-tooth)."
+}

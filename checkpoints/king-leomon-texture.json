@@ -1,0 +1,10 @@
+{
+ "attempts": 0,
+ "repo": "~/workspace/game-reverse-engineering/tekken7/king",
+ "resume_brief": "Paint Leomon attire design onto King's 3D model textures. Base textures in ~/workspace/game-reverse-engineering/tekken7/king/ (King_*_D.png) and p2/. Leomon refs in ~/workspace/user/files/ (1000173813_3_2ym9.png etc). Colors: yellow highlights -> bright neon purple, small detail lines -> darker purple, boots/tights stay black, gloves/armbands -> black studded leather. Paint: torso golden-tan fur + beaded necklace with fang at neckline; arms fur + purple accents; pants black + purple tribal; head lion golden-tan (no jaguar spots); boots black as-is. Output new set to ~/workspace/game-reverse-engineering/tekken7/king/leomon-attire/, render front 1:1 to ~/workspace/king-leomon-textured-front.png. Blender at ~/workspace/tools/blender/blender-4.0.2-linux-x64/blender, env -u PYTHONPATH, LD_LIBRARY_PATH=~/workspace/tools/egl-stack/usr/lib/x86_64-linux-gnu, CYCLES. Do NOT overwrite existing files.",
+ "status": "done",
+ "task": "King Leomon texture reskin \u2014 paint Leomon design onto King UVs",
+ "updated_at": "2026-10-13T16:00:00Z",
+ "watchdog": true,
+ "notes": "Complete. 17-texture set in game-reverse-engineering/tekken7/king/leomon-attire/. Front render at ~/workspace/king-leomon-textured-front.png. Flag: PantsLogo trunks logo still bronze (copied from P2 as-is per brief) \u2014 owner may want it purple."
+}

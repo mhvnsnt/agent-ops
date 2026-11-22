@@ -1,0 +1,10 @@
+{
+ "task": "Redo Ashes rig test v3 with real lip-sync timing",
+ "repo": "/home/hatch/workspace/ashes-mouth-pack",
+ "resume_brief": "DONE. v3 built with real phoneme timing to N1 audio ('They got the call, all nine'). Output: ~/workspace/ashes-mouth-pack/ashes-rig-test-v3.mp4, uploaded: https://muse.ai/files/1299464149925011/1845688136622869/cfm1yyrd3a1q94y29rh7uleu/ashes-rig-test-v3.mp4 (expires 2026-10-12). Watched before delivery: mouth positions read as talking, timing matches audio.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-10T21:58:34.236863+00:00",
+ "notes": "2026-10-10 watchdog: output verified - ~/workspace/ashes-mouth-pack/ashes-rig-test-v3.mp4 exists (13.1s); frames visually confirmed (Ashes talking mouth w/ sharp teeth + gold grill, hooded shrouded form w/ glowing eyes, hand assets). Worker brief already recorded DONE + upload. Task complete."
+}

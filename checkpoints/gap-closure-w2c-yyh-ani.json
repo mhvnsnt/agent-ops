@@ -1,0 +1,25 @@
+{
+ "heartbeat": "2026-10-22T05:18:03.438480+00:00",
+ "id": "gap-closure-w2c-yyh-ani",
+ "repo": "mhvnsnt/game-reverse-engineering (tools/data) + mhvnsnt/western-heart (fragment)",
+ "resume_brief": "W2c IN PROGRESS: crack YTOGURO.ANI int16-quantized track payload via (a) Ghidra sampler XREFs from W2b archive/animation functions and (b) cross-PAK differential; prove decode by continuous sampled poses matching ytoguro-clips.json XML boundaries on 47-bone skeleton; convert priority clips A475/A472/A476 then A473/A3804/A470 then batch 264 to clip-JSON; extend western-heart CornerStone fragment toguro-moves-yyh.json (PR #463) additively, never edit ryuji-rock.json; if resisted, ship evidence doc, no fabricated clips.",
+ "status": "done",
+ "steps": {
+  "ani_decode": "done - CRACKED+PROVEN (see GRE PR #39 ANI-KEYFRAME-DECODE.md): TRS bones 20B/key f32 vec3+i16 quat/32767; quat bones const vec3 + 8B i16 quat/key; 273,729 unit quats cross-PAK 0 bad; boundary chaining <=0.41deg on bullet chain",
+  "checkpoint": "done - created first",
+  "clips_convert": "done - priority 6 + full 195-clip census (3,039 keys) on GRE PR #39 branch commit befb6f1e",
+  "fragment_pr": "done - western-heart PR #510 (stacked on #463 branch, additive decoded_animation section, ryuji-rock untouched)",
+  "prs": "done - GRE PR #39 updated (commit befb6f1e + gate-format comment); WH PR #510 created. Neither merged (central review).",
+  "read_w2b": "done - PR#39 TEARDOWN-W2B S7, skeleton, clips, unpacker read",
+  "pullback": "done - range-fetch slices only (PAK 65490944+2835136, SLUS 1740800+2680624) from release asset 662982530, chunk000 sha is census 4c839170 per release digest; PAK magic/index_len/count match W2b",
+  "continuation3_adopt": "done - heartbeat first 18:15 CDT",
+  "pak_unpack": "done - 32/32 entries size-verified, ANI 1457228 B",
+  "ani_structure_map": "done 2026-10-21 ~22:15 CDT - full ANI structure mapped (ani_parse.py), pushed to GRE branch feat/yyh-toguro-teardown-20261021",
+  "continuation_finisher_heartbeat": "done - heartbeat finisher wave 2026-10-22T04:32:41.834943+00:00"
+ },
+ "task": "W2c YYH: decode YTOGURO.ANI keyframe payload to playable clips (gap-closure, continuation of W2b)",
+ "updated_at": "2026-10-22T05:18:03.438480+00:00",
+ "watchdog": true,
+ "attempts": 1,
+ "notes": "[2026-10-21 ~22:15 CDT watchdog run] Resumed stale 'running' checkpoint (heartbeat was 18:26 CDT, ~3.6h). Mapped YTOGURO.ANI structure end-to-end with own-eyes byte evidence: file header (magic 0xA2100200, u32@4=1888, 47 bones), 45-entry parent table @24, 47x32B bone records @204 (name[16]+data[16]), bind-pose section @1896 (0xA2100202, '__defaultBones', 47x20B @1944), 195 chained 0xA2100103 clip records from 2900 (size-chained, verified), each with ASCII clip id matching XML (A210/A213/...), dt=1/30, hdr[3]=42 animated bones, bone-index table @hdr[4] (42 u32s, skips bones 0,1,2,7,20), keyframe data @hdr[6]. Pushed ani_parse.py + ANI-STRUCTURE.md + w2c-ani-structure.json to mhvnsnt/game-reverse-engineering branch feat/yyh-toguro-teardown-20261021 (PR #39, open). Ghidra path blocked (no java on VM). STOPPED AT: keyframe value-encoding @ hdr[6] (f32/i16 views show structure, no clean key layout yet). NEXT: differential decode of keyframe payload (same clip id across PAKs) or sampler XREFs with java+Ghidra; then pose-index mapping to XML pbegin/pend. [finisher continuation heartbeat 2026-10-22T04:32:41.834943+00:00: Route A differential decode starting.] [finisher: encoding cracked via layout arithmetic + quat-norm proof; cross-PAK ELDERTOG validated. Next: decoder+FK proof+exports+PRs.] [finisher COMPLETE: encoding cracked Route A only (Ghidra not needed); scratch was /tmp only, removed; no game files deleted.]"
+}

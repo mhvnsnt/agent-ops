@@ -1,0 +1,9 @@
+# Keep-working pulse — 2026-11-16 19:10 EST
+
+- Subagents: BOTH 19:00 watch items RESOLVED. (1) 46th successor (395c05c3) now visible and running, last activity ~5 min ago — the respawn-ledger race cleared, no duplicate spawned. (2) CEILING coordinator (6a87b5c3, chat-owned) active again — last activity ~7 min ago, _ceiling-100-20261116/CHECKPOINT.md touched 19:03 EST. 44th successor completed its hour cleanly; 45th cancelled per normal rotation. No failed/interrupted agents in the active list.
+- Managed checkpoints: _dg-production-line-v4-20261114/CHECKPOINT.md 19:04 EST — fresh (~8 min). _dreamgirl-altroute-20261110/CHECKPOINT.md 18:36 EST — 36 min old, now a WATCH item (not part of the watchdog-managed 6B chain; prior pulse treated ~26 min as fresh; NO resume from this pulse — duplicate spawn is banned and altroute is not watchdog-owned). Escalate if still quiet past ~60 min.
+- Long-idle stored-status entries (bun lane ~45h, Wizard Gang coordinator ~3d, tint ~26d, ToonCrafter ~31d) — chat-owned, not steerable from this pulse; overnight audit previously found 79 healthy / 0 stale. No action.
+- Disk: 80% (118G/150G on /home/hatch, 31G free) — below 85% threshold. No action.
+- Grokbot: no new owner proof file. GROK_CAPABILITY_STUDY.md Oct 8, HOW-GROKBOT-WORKS.md Nov 6, grokbot-handoffs/incoming empty since Oct 14. No new patterns.
+- PRs: DG #91 canon sync still open (blocked on pre-existing DG CI validate red on main, per 19:00 pulse). WH open PRs are older proof/docs/draft items (e.g. #1714, #1702, #1701, #1696, #1678, #1600, #1596, #1569, #1566, #1547) — nothing green+mergeable identified; merging is the coordinator's call, not a pulse action. Cape-jones: no open PRs.
+- Verdict: work is moving overall — watchdog chain rotating normally, both 19:00 watch items cleared, CEILING coordinator back active. One new minor watch item (altroute checkpoint 36 min). Nothing genuinely stuck. Silent per the pulse rule.

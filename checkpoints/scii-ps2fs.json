@@ -1,0 +1,10 @@
+{
+ "task": "Crack Soul Calibur II (SCII) PS2 Namco proprietary filesystem: ISO is 1.38GB on GitHub Release soulcalibur2-ps2-v1. Research and implement Namco PS2 FS parsing, extract all character models, stages, textures to western-heart/teardown/soulcalibur-2/ via branch->PR->merge.",
+ "repo": "western-heart",
+ "resume_brief": "Continue SCII filesystem work. CRITICAL FINDING 2026-10-13: the ISO on release soulcalibur2-ps2-v1 is XBOX not PS2 (Archive.org item soulcalibur-ii has subject:xbox; ISO sector 32 has MICROSOFT*XBOX*MEDIA magic). The PS2 version (with Heihachi) was NOT found on Archive.org (soulcalibur-ii-usa item has only cover art, no ISO). XISO container parsed: files are Default.xbe (3.6MB), bgm.afs (239MB, 76 files, AFS format), movie.afs (439MB), root.olk (693MB, Namco OLK archive with olnk magic). Tools: ~/workspace/agent-ops/scii-extract/scii_fetch.py (range-fetch). AFS parsing works (standard CRIWARE). OLK format partially documented (header: u32 version=5, magic olnk, entry quads with timestamps ~June 2003) but full index not yet reverse-engineered. NEXT: (1) Owner decision needed: proceed with Xbox SC2 or source PS2 ISO from elsewhere. (2) If Xbox OK: reverse OLK index, range-fetch extract AFS contents + OLK files. (3) If PS2 required: find PS2 ISO source. See ~/workspace/agent-ops/checkpoints/scii-ps2fs.json notes.",
+ "notes": "2026-10-13: BREAKTHROUGH - ISO is Xbox XISO not PS2/Namco-proprietary. XISO parsed, file listing obtained (4 files). AFS archives parseable. OLK header documented. PLATFORM MISMATCH: task requires PS2/Heihachi; available ISO is Xbox/Spawn. Awaiting owner decision. Disk at 90% blocked full extraction. | 2026-10-13 EOD: XISO crack complete, PR #52 merged. BLOCKED on owner: Xbox ISO vs source PS2 ISO.",
+ "status": "needs_owner",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-13T19:29:12.944502+00:00"
+}

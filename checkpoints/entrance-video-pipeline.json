@@ -1,0 +1,4 @@
+{"task": "Build entrance-video pipeline matching/exceeding Grok producer bot (owner directive 2026-10-08)",
+ "status": "done", "watchdog": false, "repo": "~/workspace/bannon-video-pipe",
+ "result": "PROVEN END-TO-END. Pipeline at tools/entrance-video/ (also committed to repo/tools/entrance-video/). Test video: out/STICKUP_PIPELINE_TEST/STICKUP_short_16x9.mp4 (51.7s, 960x540) + _9x16.mp4. Verified: titantron card, 3D Stick-Up with retargeted Taunt/Idle mocap (52/58 bones), tagline card, beat-synced cuts, Out My Body music muxed. Known polish items: character facing (profile vs camera), drawtext quote escaping fixed, full 4-scene 50s render pending.",
+ "updated_at": "2026-10-08T10:10:00-04:00", "attempts": 0}

@@ -1,0 +1,9 @@
+{
+  "task": "Regenerate podcast scene (261-270s) as proper 2D - no photorealistic input, no trigger words",
+  "status": "done",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "Podcast scene regeneration is COMPLETE. Output at ~/workspace/ep02-repair-work/regenerated/podcast-2d.mp4 (9s, 1280x720, 30fps). Generated 2D cartoon keyframe from text-only prompt (no photorealistic input, no trigger words), animated with slow push-in per Animation Playbook limited animation. Static likeness verified: bleached-blond hair, dark beard, tattoos, dragon chest piece, ON AIR sign. LESSON SAVED: When a scene has both 2D and photorealistic parts, ALWAYS use the 2D frames as source. Never use policy-trigger words (photorealistic, high quality, realistic, detailed render) in image gen prompts.",
+  "updated_at": "2026-10-10T21:40:00Z",
+  "attempts": 1
+}

@@ -1,0 +1,10 @@
+{
+  "task": "Deep audit: identify every show in CN gigaleak + asset types per show, update catalog",
+  "repo": "~/workspace/animation-techniques/steal-like-artist",
+  "resume_brief": "Research the Cartoon Network gigaleak (Oct 2026, 200GB+, 30+ shows) to identify EVERY show and what asset types exist per show. Sources: news coverage (Gizmodo/io9, Dexerto, Mashable, IndiaTimes, ToonHive, Cartoon Brew), X/Twitter posts from 'totallynotaburner' and others, TikTok/YouTube creators (@karamelo6163, joeybar, roundtablevids), Internet Archive collections, file-sharing mirrors. Update ~/workspace/animation-techniques/steal-like-artist/cn-gigaleak/CN-GIGALEAK-CATALOG.md: replace all TBD entries in SHOW INDEX table with confirmed asset types per show, add all 30+ show names, add 'AGENT LOOKUP - What to Study for What Task' reverse-index section. Checkpoint at ~/workspace/agent-ops/checkpoints/cn-leak-deep-audit.json.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-12T13:47:10.602926+00:00",
+  "notes": "Deep audit complete 2026-10-12. 16 shows confirmed across 4 confidence tiers (6 Drive-confirmed, 4 doc-listed, 5 reported, 1 separate). ~14+ additional shows claimed but not yet publicly named. Catalog updated with full SHOW INDEX, AGENT LOOKUP reverse-index (task->materials), and per-project guidance (Wizard Gang/Goodville/TRIPPEDD/God Molecule)."
+}

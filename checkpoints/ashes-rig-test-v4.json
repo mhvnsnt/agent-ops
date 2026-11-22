@@ -1,0 +1,10 @@
+{
+  "task": "Build Ashes rig test v4 \u2014 real character animation test, not a catalog",
+  "status": "done",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/ashes-mouth-pack",
+  "resume_brief": "Build ~/workspace/ashes-mouth-pack/ashes-rig-test-v4.mp4: one continuous scene. (1) Reuse v3's approved talking frames (extract 0-3.3s from ashes-rig-test-v3.mp4) with N1 audio. (2) Motivated cross-dissolve transition to shrouded form (eyes-neutral.png). (3) Eye darts: mask glowing glints, translate left/right with holds, blink via eyes-blink.png, whoosh SFX. (4) Hand: rembg hand-pointing.png + hand-thumbs-up.png, draw red robe sleeve matching hood, animate arm rising with easing, point hold with bob, swap to thumbs-up with anticipation+pop, lower out, cloth rustle SFX. (5) Dark void background with subtle particles, breathing on holds, ambient drone bed. Build script: /tmp/rigtest-v4/build_v4.py (copy to workspace/tools/masking/ when done). Encode 1280x720 30fps H.264 + AAC. Upload via /opt/hatch/bin/remote-storage. Watch the output before delivering \u2014 no slideshows, no visible seams.",
+  "updated_at": "2026-10-10T16:55:00-05:00",
+  "attempts": 0,
+  "notes": "Complete. v4 delivered: 10.0s, 301 frames. Talking (v3 reuse, N1 synced), pull-back dissolve to shroud, procedural eye darts (no ghosting), squash blink (no bar artifact), hand raise/point with drawn robe sleeve, thumbs-up swap with pop, full sound design (drone, whooshes, click, rustle, pop). Build script at ~/workspace/tools/masking/build_rigtest_v4.py. All phases visually verified frame-by-frame before delivery."
+}

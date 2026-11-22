@@ -1,0 +1,10 @@
+{
+  "task": "Deep hunt for Tekken 7/8 character models across all free sources",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/game-reverse-engineering",
+  "resume_brief": "Systematically searching GitHub, Archive.org, Sketchfab, DeviantArt, SFMLab, XNALara communities, Reddit, Discord, VG-Resource, Models-Resource, Telegram, torrents, and file-sharing links for free downloadable Tekken 7 and Tekken 8 character 3D models. Organizing findings by character with source URLs, formats, sizes, and signup requirements. Target characters: Jin, Yoshimitsu, Heihachi, Bryan, Jack-7, Xiaoyu, King (T7) and full T8 roster.",
+  "updated_at": "2026-10-12T22:10:00-05:00",
+  "attempts": 0,
+  "notes": "DONE. Catalog at ~/workspace/game-reverse-engineering/tekken-model-catalog.md. Key finds: SFMLab has real T7 Jin + Xiaoyu + 5 more (SFM .mdl, free, verified live). Open3DLab has T7 (Hwoarang, Feng, Raven, Zafina, Kunimitsu, Dragunov, Eliza, Julia, Xiaoyu CC-BY) + T8 (Armor King, Azazel, Raven, Victor, Zafina, Miary Zo, Lili). rigmodels T7: King(have), Xiaoyu, Steve, Josie, Asuka, Eddy. NOT FOUND as T7: Heihachi, Bryan, Yoshimitsu, Jack-7. Roster coverage: 3/7 (Pantera, Demonio, Saku Ra)."
+}

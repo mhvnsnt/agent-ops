@@ -1,0 +1,9 @@
+{
+  "task": "Find King's textures in the Tekken 3 BNS archive",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/game-reverse-engineering/tekken3",
+  "resume_brief": "Complete. Found King's real textures at BNS 95 (not 87 as previously thought). 59 TIMs (IDs 6213-6271) with jaguar spots, blue pants, jaguar mask face. Documented full BNS organization pattern in docs/BNS-ORGANIZATION-PATTERN.md. Textures at renders/king/textures/real_king/. Key correction: BNS 87 is LEI, BNS 95 is KING. The earlier king_full_front.png render is actually Lei, not King.",
+  "updated_at": "2026-10-12T15:45:00Z",
+  "attempts": 1
+}

@@ -1,0 +1,10 @@
+{
+ "task": "Capture 3 real-gameplay promo clips (9:16 vertical) from the fresh Concrete Dragon web build + draft launch posts for TikTok/IG/FB",
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "Continue the Concrete Dragon launch-distribution lane: (1) In ~/workspace/ConcreteDragon, use the gameplay capture tooling (tools/ads-capture/capture8.mjs and the capture pipeline noted in docs) to record 3 short REAL-gameplay promo clips from game-3d/dist/concrete-dragon.html (the fresh 2026-10-09 build, verified working): one combat highlight, one boss fight, one fighter-select/unlock moment. Vertical 9:16, 15-30s each, no HUD cheats, no fake footage, no slideshow. (2) Save final clips to ~/workspace/concrete-dragon-launch/clips/. (3) Draft launch post copy for TikTok, IG Reel, and Facebook in the owner's voice (mad scientist shaman / M. Heaven brand, direct, profanity-tolerant): game name Concrete Dragon, $4.99 on itch.io (page going live imminently - use LINK placeholder), plus DM/PayPal.Me (paypal.me/MarquisWhitacre) angle for direct sales. Save drafts to ~/workspace/concrete-dragon-launch/posts/. (4) Heartbeat the checkpoint ~/workspace/agent-ops/checkpoints/concrete-dragon-launch.json after each step. (5) Verify every clip yourself by watching sampled frames before reporting done - report file paths + what you verified. Do NOT commit to any repo main branch; clips and copy live in the workspace launch dir only.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-09T12:54:18.208151+00:00",
+ "summary": "3 real-gameplay 9:16 clips + 3 launch posts delivered to ~/workspace/concrete-dragon-launch/. Clips: combat (20.2s), boss v2 (20.1s, FOREMAN tracked), select v2 (15.2s, full UI). All frame-verified by worker eyes. Zero repo changes; temp capture scripts removed."
+}

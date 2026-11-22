@@ -1,0 +1,10 @@
+{
+ "task": "Fix Pocket Studio v2 timeline scrolling like CapCut/FlipaClip using real libraries, not hand-tooled code",
+ "repo": "~/workspace/pocket-studio-v2",
+ "resume_brief": "The owner reports Pocket Studio v2 timeline does not scroll through the full 5+ minute video like CapCut/FlipaClip. Task: (1) Read ~/workspace/pocket-studio-v2/app.html timeline code (search for tlScroll, timeline), (2) Research mobile web timeline libraries (wavesurfer.js for waveforms, virtual scrolling, pinch-zoom patterns), (3) Implement proper horizontal timeline scrolling: scroll entire duration, pinch/button zoom, playhead follows playback, smooth 60fps, (4) Check bundled video loading (25MB EP02 + 33MB base cut may be too heavy; consider lazy-load), (5) Update app.html, verify JS syntax with node --check, (6) Mark checkpoint done. Do NOT spawn children; do the work directly. Never edit the artifact directly \u2014 only the source file.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T19:56:40.932563+00:00",
+ "notes": "Timeline scroll fully rebuilt: virtualized sticky canvas (only visible window rendered, fixed ~1.1M px backing regardless of zoom \u2014 old code made 165k-px-wide canvas, 348M px at DPR3, 20x over iOS limit = blank canvas), full gesture disambiguation (1-finger clip drag/tap-select, 1-finger pan with momentum on empty track, 2-finger anchored pinch zoom), follow-playhead toggle, wheel-horizontal scroll, rAF-throttled draws, 3 stale drag-var crashes fixed, project switch resets scroll. JS syntax verified clean, zoom anchoring math tested. Research: no drop-in CapCut-timeline library exists (wavesurfer.js is audio-only); virtualized canvas + pointer gestures is the standard architecture used by Clypra/OpenReel."
+}

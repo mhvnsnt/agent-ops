@@ -1,0 +1,9 @@
+{
+  "task": "DXMMII rig-fix: fix extra arm (DX_xarm_*) ~127mm offset rendering defect via bone roll/Pinv math fix, re-render QC stills eyes-checked, re-run measurements (<1mm deltas)",
+  "status": "done",
+  "watchdog": true,
+  "repo": "western-heart",
+  "resume_brief": "DONE. Root cause was NOT bone roll — it was a Blender 4.0.2 quirk: RNA parent_type='BONE' parenting goes to the bone TAIL, not head. Fixed by recomputing Pinv as (R @ T(tail) @ Rot(M_rest))^-1 in 03/04 scripts, re-ran pipeline, measurements PASS (<0.001mm), 9 QC stills re-rendered and eyes-checked. Committed as 05e08ee. Two separate pre-existing defects reported (not fixed): leg DEF 5-segment gaps; detach structural reparent doesn't play back (parts don't follow gyro f168-240).",
+  "updated_at": "2026-10-16T06:05:00-04:00",
+  "attempts": 0
+}

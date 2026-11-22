@@ -1,0 +1,10 @@
+{
+ "task": "Generate N1 and L7 in Bill $aber voice via cloud GPU, place in EP02 v6e, output v7",
+ "repo": "~/workspace/trippedd-studio/production/WIZARD_GANG_EP01",
+ "resume_brief": "EP02 v7 complete: wizard-gang-ep02-final-v7.mp4 (344.8s, 158MB, h264+aac) with N1/L7 in Bill $aber voice and ritual whisper at ~75s. Review copy ep02-v7-small.mp4 uploaded to Muse storage 2026-10-11, expires 2026-10-13T06:12:17Z.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "notes": "Watchdog 2026-10-11 01:11 CDT: verified v7 decodes end-to-end (frame contact sheet clean, audio RMS -23.8dB peak -1.4dB, content audible at 75s whisper mark). Review copy uploaded: https://muse.ai/files/1299464149925011/1418818446354502/7d7gx3bxgjsa0ei1cldlfzyc/ep02-v7-small.mp4 (expires 2026-10-13 01:12 CDT). Owner-report handoff to main agent.",
+ "updated_at": "2026-10-11T06:12:23.761431+00:00"
+}

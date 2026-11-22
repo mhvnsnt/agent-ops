@@ -1,0 +1,10 @@
+{
+  "attempts": 0,
+  "repo": "~/workspace/western-heart",
+  "resume_brief": "Extracting Tekken 6 PSP ISO (816MB) at ~/workspace/game-reverse-engineering/tekken6/tekken6-psp.iso. Steps: extract ISO (no 7z installed, trying pycdlib in python3), map PSP_GAME/USRDIR file structure, extract all 40 character models + customization system + stages + audio + UI. Catalog at TEARDOWN.md. Push to western-heart repo via branch teardown/tekken6 -> PR -> merge. Rules: branch->PR->merge only, don't delete ISO until verified, document unextractable formats and move on. 7z NOT available on this VM; python3 with pycdlib is the extraction path.",
+  "status": "done",
+  "task": "Tekken 6 PSP full teardown for Western Heart",
+  "updated_at": "2026-10-13T03:35:00Z",
+  "watchdog": true,
+  "notes": "TEARDOWN.md + 42 ref frames merged to western-heart main via PR #14. 46 PMF videos extracted locally (337MB). Character models encrypted in EBOOT, documented with future RE path."
+}

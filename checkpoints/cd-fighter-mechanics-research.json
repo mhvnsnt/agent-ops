@@ -1,0 +1,9 @@
+{
+ "task": "Research brawler/fighter mechanics for Concrete Dragon",
+ "repo": "~/workspace/ConcreteDragon",
+ "resume_brief": "Research gameplay mechanics from Final Fight, Streets of Rage, Street Fighter, Tekken: move systems, combo structures, animations, hit reactions, blocking/parry, throws, special meters. Produce a concrete incorporation plan for Concrete Dragon: which mechanics to adopt, how they map to the existing combat system, animation requirements. Write findings to ~/workspace/concrete-dragon-launch/research/fighter-mechanics.md. Verify against real sources. No invented facts.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 2,
+ "updated_at": "2026-10-09T23:55:00+00:00"
+}

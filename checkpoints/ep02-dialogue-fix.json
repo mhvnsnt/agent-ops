@@ -1,0 +1,10 @@
+{
+  "task": "Apply 8 speech map dialogue corrections to EP02 and rebuild audio",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/trippedd-studio",
+  "resume_brief": "COMPLETE. Applied 8 speech-map corrections to EP02 dialogue. Output: ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/wizard-gang-ep02-dialoguefixed-v1.mp4 (344.9s, 137MB). All 30 lines placed via Python numpy (not ffmpeg itsoffset). Pilot (0-50s) bit-exact from final-v1. No clipping (normalized to 0.95 peak). No BGM added per owner direction.",
+  "updated_at": "2026-10-10T18:05:00Z",
+  "attempts": 0,
+  "notes": "Corrections applied: L8 182→173s, L9 192→183s, L10 201→193s, H3 166→312s (Sombra w/ bear visual, no L7 overlap), L22 328→330s (full 9.36s over photo freeze), N2 kept at 340s (335s would overlap L22; documented deviation). C2 FLAGGED at 261s: skate park has no clean slot (L16+C1 fill 254-267s); real fix needs visual edit (podcast cuts 2s too early). L2/L3 unchanged per owner decision. Pre-existing overlaps preserved: C1/C2 (6.5s), C2/L17 (2.7s), C3/L20 (1.7s), L16/C1 (1.3s) - not in correction scope. Verified: all 6 moved lines audible at new positions, old positions clear (no duplicates), pilot audio intact (-19dB). Build script: /tmp/ep02-dialogue-fix/build_dialogue.py"
+}

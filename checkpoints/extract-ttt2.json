@@ -1,0 +1,11 @@
+{
+  "attempts": 0,
+  "repo": "~/workspace/western-heart",
+  "resume_brief": "TTT2 (Xbox 360) teardown inventory: 13.3GB 7z at ~/workspace/game-reverse-engineering/tekken-tag-tournament-2/Tekken Tag Tournament 2.7z is byte-verified. Full extraction BLOCKED on disk (/home/hatch at 90%, 11GB free). Tasks: (1) complete file inventory via `7z l` of the archive, (2) extract small config/manifest files selectively with `7z e` (files <10MB each, stop if disk hits 94%), (3) identify character data/stage data/movesets/audio/textures from inventory, (4) push inventory + manifests + selectively extracted files to ~/workspace/western-heart/teardown/tekken-tag-tournament-2/ via branch -> PR -> merge, (5) update TEARDOWN.md with inventory, fighter list (59 fighters if names revealed), stage list, extraction-blocked status. HEADER-LISTING.txt exists at the game-reverse-engineering dir (80 entries, 13.45GB uncompressed). Checkpoint heartbeat after inventory complete.",
+  "status": "done",
+  "task": "TTT2 file inventory + selective extraction for Western Heart teardown",
+  "updated_at": "2026-10-13T09:25:00-04:00",
+  "watchdog": true,
+  "progress": "inventory complete: 80 entries/72 files via py7zr header read; INVENTORY.md written with full table + CRC32 + mtimes; selective extraction of 13 small files (<10MB) running",
+  "result": "PR #38 merged: INVENTORY.md (72 files/CRC32), ROSTER.md (59 fighters), STAGES.md (29 stages), extracted-small/ (13 files identified as avatar-item LIVE packages + STFS descriptor), TEARDOWN.md updated. Full extraction blocked by disk; STFS decryption is next blocker."
+}

@@ -1,0 +1,10 @@
+{
+ "task": "Complete Ashes' full animation rig set + research animation techniques",
+ "repo": "~/workspace/ashes-mouth-pack",
+ "resume_brief": "Build Ashes' complete animation rig: 5 new mouth visemes (M/B/P, F/V, L, snarl, rest/neutral), 6 eye expressions (neutral, blink, happy, angry, sad, surprised), 10 hand poses (open palm, fist, pointing, gripping, thumbs up, relaxed, counting, beckoning, holding, shaka) in ~/workspace/ashes-mouth-pack/{visemes,eyes,hands}/. Update guide to ASHES-ANIMATION-GUIDE.md. Also research and write ~/workspace/animation-techniques/ANIMATION-PLAYBOOK.md covering Preston Blair, smear frames, lip-sync timing, blink patterns, hand simplification, walk cycles, holds, limited animation tricks, and AI-slop avoidance. Likeness rules: sharp teeth (his design, NOT a defect), grill varies (one tooth/full/none), dark skin (NEVER whitewash), natural dark lips (NOT gold), animate what's in the frame not overlays.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-10T20:26:20.069920+00:00",
+ "notes": "Watchdog 2026-10-10 15:25: verified complete \u2014 5 visemes, 6 eyes, 10 hands; guide Parts A/B/C; playbook 598 lines."
+}

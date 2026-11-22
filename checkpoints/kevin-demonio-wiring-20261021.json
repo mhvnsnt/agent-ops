@@ -1,0 +1,11 @@
+{
+  "task": "kevin-demonio-wiring-20261021",
+  "status": "done",
+  "watchdog": false,
+  "repo": "mhvnsnt/western-heart",
+  "workdir": "~/workspace/_kevin-demonio-work",
+  "resume_brief": "Fix two own-entry wiring defects flagged by PR #418 model-key audit (docs/MODEL-KEY-AUDIT-2026-10-21.md): (1) Kevin enemy path resolves to PARKED Master White attire instead of A2 baek - check for in-flight Kevin A1 wiring first, stand down if colliding; (2) Demonio transform formKey dangles (forms keyed from demonio-a1 while player default resolves to demonio base). Prove with node execution of real game modules + model-key-guard test, then instruction-gate PR.",
+  "attempts": 0,
+  "updated_at": "2026-10-21T02:52:00-05:00",
+  "notes": "COMPLETE. PR #423 MERGED (merge commit 6017f27b); post-merge proof re-executed clean on origin/main. Kevin in-flight check: NO COLLISION (no open Kevin PR, no Kevin-wiring checkpoint, only stale 0-ahead cust/reskin-lili-baek) -> proceeded. Kevin: roster model 'baek-master-white'->'baek' (both paths now A2 baek; Master White key/GLB/ladder untouched, still parked). Demonio: forms gained 'demonio' entry mirroring 'demonio-a1' (identical targets/labels) - player formKey resolves, enemy unchanged. Guard: tests 1+2 PASS on fixed tree; test 3 property verified via git ls-tree sweep (46/47 resolved paths present; sole absentee = documented ryuji-rock pending the guard itself skips). PR gates: deletion-guard SUCCESS, guard SUCCESS, instruction-gate SUCCESS (after body conformed: identical specified/used text, full Deviations header, backticked proof paths, ticked self-check). gitleaks clean. Scratch clone (827MB) removed after merge verification + logged."
+}

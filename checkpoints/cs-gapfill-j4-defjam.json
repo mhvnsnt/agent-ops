@@ -1,0 +1,78 @@
+{
+ "task": "J4 Def Jam EAGL .o converter + 22,360-part batch (creation-suite gap-fill gap #4)",
+ "repo": "mhvnsnt/western-heart",
+ "status": "phase_V_and_B_complete_with_topology_blocker",
+ "started": "2026-10-20T22:24:00-05:00",
+ "updated_at": "2026-10-21T03:15:00-05:00",
+ "watchdog": false,
+ "phase_R": {
+  "done": true,
+  "pr": "https://github.com/mhvnsnt/western-heart/pull/411",
+  "branch": "j4-defjam-eagl-converter",
+  "commit": "d9ca272894534b0e1bedb63005beb6cc44be2aad",
+  "findings": "All Def Jam files are EA RefPack/QFS-wrapped (10 FB + 3-byte BE decompressed size; decoder per DBPFSharp spec). .o decompresses to standard MIPS ELF32 relocatable (readelf-clean): .data = bone palette records (16B, self-index) + bone transforms + Morph header (Coordinates/Normals streams, 5 R_MIPS_32 pointers) + 21,760B vertex stream at .data[0x2F70:]; symtab = ~95 shared CAW bones + __Skeleton:::root + __Morph:::morph.modelname. .ssh decompresses to standard SHPS texture (1 entry G359, EAGL240 string). _C .o files carry an 8-byte prefix before the record. Spec at teardown/def-jam-fight-for-ny/EAGL-FORMAT-SPEC.md in PR #411; decoder customization/tools/eagl_refpack.py + tests (4/4 pass by direct execution)."
+ },
+ "phase_V": {
+  "done": false,
+  "blocker": "Vertex-stream field layout in .data[0x2F70:] unproven: 12-byte periodicity, int16 quantized values (~+/-2200), recurring -8192 (0xE000) marker, header candidate counts 0x1B / 0x138=312 / 0x34=52 at .data 0x2F50-0x2F6F. Closure route (spec S6): Ghidra on SLUS_210.04 EAGL loader + cross-part differential confirmation. NO guessed parser.",
+  "progress": "Phase V substantively COMPLETE (layout closed with Ghidra + differential + _C ground truth; converter + SHPS decoder + tests + 17 sample GLBs + 2 unique decoded textures pushed to PR #411 in commit 578907be). Only the 4 clay sample renders + their own-eyes verdicts remain, blocked solely on Blender-slot contention; watcher armed.",
+  "layout_closed": true,
+  "evidence": "Ghidra on SLUS_210.04 (r5900:LE:32): EAGL runtime embedded; _BuildMorph/Cmorph chain at 0x19F970/0x19FBD8/0x1149B4; CVertexInformation::Init 0x11EB88 (streams passed through, consumption is VU1-side). Closure proof is differential + the compiled _C twin: stream object = 32B header (name ptr,1,0,stripCount,count,marker) at .data+0x2F48; strip blocks = 6xi16 header (count,0,0,0,idx,0) + records + (trailer,marker) on non-final blocks only; Coordinates record 3xi16, data padded +1 i16 when count odd; Normals record 6xi16 framed identically, marker -16384. _C descriptor table (0x10 stride @.data 0x17CA0) strip counts match A/B block headers exactly for all 27 strips of V2CP_110_0001; _C symbols prove PT_TRIANGLESTRIP. Coordinates ends exactly on Normals object in all samples.",
+  "normals_payload": "FRAMED but payload encoding OPEN: 6xi16/vertex, entropy 7.29 bits/byte, uncorrelated with positions; not plain i16/f32/nibble variants. Converter computes smooth normals from geometry; documented in spec, NOT guessed.",
+  "uv_status": "A/B .o files carry NO STQ/UV stream (Morph inventory = Coordinates+Normals only). Texture .ssh SHPS decode CLOSED (8bpp paletted, PS2 unswizzle, linear palette; proven by eyes on 111/113 textures - denim garment). GLB deliberately does NOT bind texture without UVs; PNG emitted alongside, catalog records uv_status=absent_in_o_file.",
+  "converter": "customization/tools/convert_defjam_o.py + eagl_shps.py + test_convert_defjam_o.py (17/17 synthetic checks pass by direct execution). Real-sample validation: 17/17 Morph parts converted (1160-1251 verts), _C correctly classified compiled_variant, 0 errors.",
+  "pushed_commit": "578907becdc1265595862df3af221b0cc38863cc on branch j4-defjam-eagl-converter (PR #411): amended EAGL-FORMAT-SPEC.md (new S7 closure), customization/tools/convert_defjam_o.py, customization/tools/eagl_shps.py, customization/tools/test_convert_defjam_o.py (17/17 pass by direct execution), 17 sample GLBs + 4 texture PNGs under customization/parts-converted/defjam/samples/. PR body update with instruction-gate headings is DRAFTED at ~/workspace/_j4v-scratch/pr_body.md but NOT yet applied (apply after renders land so Proof section render claims are true).",
+  "renders": "BLOCKED ON BLENDER SLOT, watcher armed. From 06:35 to 07:46 CDT the box ran 1-5 real Blender binaries continuously (Kinpo A1/A2, Vain Abel A3, Kevin/Master-White lanes; /proc exe-link counts, not wrapper shells). Per render discipline (pgrep check, strictly one at a time, slot owned by J3/coordinator) I did not start a concurrent Blender. One window did open ~07:26 and the watcher ran the renders, but render_sample.py used BLENDER_EEVEE_NEXT (invalid in Blender 4.0.2) and produced NO PNGs (logs in _j4v-scratch/renders/*.log show the TypeError + correct BBOX values, proving the GLBs import and bound correctly). Script fixed to BLENDER_EEVEE; watcher relaunched (render_when_clear.sh, session proc_6449d533492b at last check; if that session died with the subagent, relaunch: ~/workspace/_j4v-scratch/render_when_clear.sh).",
+  "resume_steps": "WHEN renders land in ~/workspace/_j4v-scratch/renders/*.png: (1) VIEW all 4 (V2CP_110_0001_A head, V2CP_111_0001_A upper_body, V2CP_112_0002_A lower_body, V2CP_113_0001_A accessories) with own eyes; per-slot verdict into _j4v-scratch/SAMPLES.md replacing RENDER_VERDICT_PLACEHOLDER; a bad sample stops the line. (2) Push renders to teardown/def-jam-fight-for-ny/sample-renders/ + SAMPLES.md to customization/parts-converted/defjam/samples/SAMPLES.md on branch j4-defjam-eagl-converter via ~/workspace/custom-connectors/custom.legacy-github-pat/bin/gitdata.py + _j4v-scratch/push_commit.py (parent = current branch head). (3) Apply PR body from _j4v-scratch/pr_body.md via update_pull_request (PR 411). (4) Mark phase_V.done=true here; clear _j4v-scratch (everything of value pushed) + log to agent-ops/disk-cleanup-log.md. BBoxes from the failed-engine run (GLB units): 110_A z-span fills frame (head part, elongated), 112_0002_A (-0.768,-0.473,-1.79)..(0.77,0.268,2.628), 113_0001_A (-0.794,-0.44,-2.172)..(0.794,0.25,2.795) - consistent with z as the long axis per spec S7.4."
+ },
+ "phase_B": {
+  "done": false,
+  "gate": "RELEASED (coordinator creation-suite-gapfill.json blender_slot.j4_batch_released=true, J3 j3_done=true; relayed 2026-10-21 02:48 CDT).",
+  "scope_reality": "PARTS-INDEX counts 22,360 .o, but only 2,624 .o (+5,319 .ssh) were ever extracted into mhvnsnt/wrestling-game (verified by sparse clone census). The other 19,736 parts exist only as index/catalog entries; their bytes remain inside the game disc image (extraction = teardown-scale job, needs the 4.47GB ISO; disk at ~98% makes that a parent/coordinator call). Batch converts the 2,624 extracted parts; the gap is documented in PR + reports, not hidden.",
+  "chunk1_diagnosis": "First 2,000: converted 984 / compiled_variant 639 / error 377. Root causes found + fixed: (1) stream block indices are SOURCE strip ids with possible gaps (V2CP_111_0015: 28 blocks, ids 0..26+28) \u2014 parser now requires strictly-increasing ids, not positional equality (111_0015 converts, 1206 verts incl. 4-vert cap strip); (2) SHPS palette size is header-declared (152-entry palettes exist, V2CP_142_0003 96x64 texture decodes, byte accounting closes); (3) a file family (much of 311/312) carries NO valid RefPack record (other container or corrupt extraction) \u2014 find_refpack_offset now accepts only fully-validating records, converter classifies no_valid_refpack_record instead of cascading errors; (4) parts can carry multiple .ssh texture variants \u2014 batch decodes all siblings. Tests still 17/17 (fixtures updated to real layouts: gap indices, u24 palette size).",
+  "batch_run": "Full 2,624-file run with fixed converter launched 2026-10-21 ~03:1x CDT (--force), output -> wh sparse clone customization/parts-converted/defjam + CATALOG.json; push per completion via local git (sparse clone of branch j4-defjam-eagl-converter at ~/workspace/_j4v-batch/wh)."
+ },
+ "blender_slot_released": false,
+ "counts": {
+  "indexed_parts": 22360,
+  "converted": 0,
+  "failed": 0,
+  "samples_decompressed_verified": 20,
+  "samples_converted": 17,
+  "batch_scope_extracted_o": 2624,
+  "index_gap_unextracted": 19736
+ },
+ "resume_brief": "Phase R DONE, PR #411 OPEN (297 additions, 0 deletions, 3 files). NEXT: (1) close vertex-stream layout via Ghidra on SLUS_210.04 (ISO provenance in teardown/def-jam-fight-for-ny/TEARDOWN.md; Ghidra 12.1.4 at ~/workspace/tools/ghidra) and/or differential analysis of decompressed .data across same-skeleton parts; (2) build customization/tools/convert_defjam_o.py (RefPack -> ELF .data -> GLB + SHPS texture bind), convert ~20 samples across slots 110 head / 111 upper_body / 112 lower_body / 113 accessories, Blender-render headless (xvfb-run -a env -u PYTHONPATH ~/workspace/tools/blender/blender-4.0.2-linux-x64/blender), own-eyes verdict; (3) Phase B ONLY after coordinator checkpoint creation-suite-gapfill.json blender_slot.j4_batch_released=true or cs-gapfill-j3-wmxix-geo.json j3_done=true; batch in ~2,000-part chunks, GLBs + registry-shape CATALOG.json under customization/parts-converted/defjam/ (catalogs.js merges {parts:[]} deduped by file), push per chunk, clear scratch, log clears to agent-ops/disk-cleanup-log.md. Baseline suite: 4,523 catalog entries, 303 geometry GLBs. NOTE: local git was unreliable this session (intermittent 'Operation not permitted' on lock/temp writes across /tmp and workspace); PR #411 was therefore created via the GitHub Git Data API. Sample evidence lived in /tmp/j4 (ephemeral).",
+ "updated": "2026-10-21T11:35:00-05:00",
+ "pr": "https://github.com/mhvnsnt/western-heart/pull/411",
+ "branch_head": "7faafa07f051c4402a0f60052aa58f56ad2efd31",
+ "format_closure": {
+  "framing": "CLOSED - Morph stream objects (32B headers), block framing, counts cross-checked vs _C descriptor table (27/27 on 110_0001); Ghidra SLUS_210.04: CMorph load 0x1149B4, helpers 0x114BC0/0x114C38, CVertexInformation::Init 0x11EB88",
+  "textures_shps": "CLOSED - SHPS layout, PS2 8bpp unswizzle, linear palettes, variable palette sizes (u24), partial-page rule (padded-page sequence minus padded rows); own-eyes PASS x3",
+  "normals_payload": "OPEN - VU1-packed, undecoded (spec 7.5), not guessed",
+  "uv": "ABSENT from A/B .o files (proven inventory, spec 7.7); textures decoded but unbound",
+  "topology_draw_order": "OPEN BLOCKER (spec 7.9) - strip build FAILED own-eyes render (scrambled spikes); pool renders as loose scatter; falsified: strips, tri-lists, planes, deinterleaves, rails, Morton, delta, grids, cross-letter permutation. Leads: bone-local assembly (94-bone palette at .data 0x5F0+, packing undecoded), VU-packed companion stream, _C packed form. Converter ships POINTS pools, topology_status=unproven_vertex_order."
+ },
+ "batch_final_counts": {
+  "total_extracted_o": 2624,
+  "converted_points_pools": 1201,
+  "compiled_variant": 654,
+  "no_valid_refpack_record": 767,
+  "pose_palette_only": 2,
+  "errors": 0,
+  "texture_pngs": 2178,
+  "parts_with_texture": 777,
+  "index_gap_unextracted": 19736
+ },
+ "samples": {
+  "converted": 17,
+  "compiled_variant": 1,
+  "errors": 0,
+  "texture_verdict": "PASS (own eyes, 3 textures)",
+  "framing_verdict": "PASS",
+  "geometry_verdict": "FAIL/BLOCKED - see spec 7.9; no mesh GLBs shipped"
+ },
+ "tests": "18/18 checks PASS by direct execution (pytest cannot start on this VM)",
+ "pr_body": "updated 2026-10-21; instruction gate check() run locally: no violations",
+ "footprint": "scratch + clones cleared after push (see disk-cleanup-log.md); all deliverables on PR branch"
+}

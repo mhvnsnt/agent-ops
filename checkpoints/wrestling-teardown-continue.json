@@ -1,0 +1,10 @@
+{
+  "task": "Wrestling teardown continuation: WMXIX + No Mercy into repos for Bannon/Western Heart/AshLane/Brutal Fist/UR-style game; animation pipeline doc; TeraBox verify via parent browser lane; CAW.gci analysis when it lands",
+  "repo": "/home/hatch/workspace/agent-ops/worktrees/wrestling-teardown",
+  "resume_brief": "WMXIX teardown continuation coordinator. State: worktree ~/workspace/agent-ops/worktrees/wrestling-teardown @1dd569b; checkpoints wh-wmxix-100.json and wrestling-game-teardown.json both needs_owner but owner gave full go-ahead 2026-10-15 ~12:00 EDT (Google sign-in fmmg.mars@gmail.com authorized; CAW.gci Dolphin browser task launched, do not duplicate; mat-legends rename = all 70 names, owner assigns via worksheet ~/workspace/agent-ops/MAT-LEGENDS-RENAME-WORKSHEET.md). DONE: docs/WRESTLING-ANIMATION-PIPELINE.md written and merged to mhvnsnt/wrestling-game (PR #5) \u2014 maps YANM letter groups (c=grapples HIGH, a=strikes+taunts MED, b/d hypotheses), atr 13-type vocabulary, retarget paths (YANM->T3 v2, AKI->T3 v2), target-game mapping for Bannon(primary)/WH/AshLane/Brutal Fist/UR-style. No Mercy lane: extract-nomercy.json DONE (PR #39 merged); open follow-ups: aki_to_tekken3 v2 bank-corrected regen (verify merge), CAW save-record (awaits emulator). REMAINING: TeraBox tasks 1A/1D/2D (needs parent browser lane \u2014 generic subagents cannot launch browser tasks), mat-legends physical rename (deferred, owner assigns 70 names), CAW.gci analysis when browser task lands. Repos: mhvnsnt/wrestling-game (primary), mhvnsnt/western-heart. Branch->PR->merge. Disk <85%.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-15T12:28:17.512656-04:00",
+  "notes": " | FINAL 2026-10-15 ~12:45 EDT: pipeline doc merged (PR #5), TeraBox spec ready for parent, scratch removed, disk 72%."
+}

@@ -1,0 +1,10 @@
+{
+ "task": "Audit old side chat aebe6ef7 'Combine TRIPPEDD and AshLane Wizard Gang' for unfinished work and push all work products to the correct GitHub repos via branch->PR->merge",
+ "repo": "~/workspace",
+ "resume_brief": "Resume: audit side chat aebe6ef7-372b-4268-8332-1748fa244c1e ('Combine TRIPPEDD and AshLane Wizard Gang') for any unfinished work, map each work product to its correct GitHub repo (e.g. Western Heart / Chimera Build, TRIPPEDD-Production-studios-, AshLane repos, wizard-gang work), commit and push via branch->PR->merge with no open PRs left, then report what was pushed and what could not be pushed and why.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-12T21:08:15.231128+00:00",
+ "notes": "2026-10-12 FULL SWEEP COMPLETE. western-heart: all thread products on origin/main (CHIMERA-BUILD.md, DESIGN.md, ROSTER.md, docs/production-study/ 8 files, roster/pantera/IDENTITY.md, tail-rig + extras PR#4 merge 2e24d52, arena showcase, decals/assets), verified via git ls-remote; zero open PRs. trippedd-studio: Wizard Gang package d30a780 verified ancestor of origin/main; uncommitted Goodville promo frames belong to another lane, untouched. game-reverse-engineering: local-only, no GitHub repo exists (mhvnsnt/game-reverse-engineering 404), contains reverse-engineered copyrighted game data \u2014 left local per steal-like-artist law; watchdog lanes continue it. Eastern Mind download: never confirmed in thread, nothing on disk. TRIPPEDD-Production-studios- open PRs (191/184/232/233/235) are other lanes' work, not touched."
+}

@@ -1,0 +1,9 @@
+{
+  "task": "Package Pocket Studio as a Colab notebook for phone use",
+  "repo": "~/workspace/video-fix-tools",
+  "resume_brief": "Pocket Studio (mobile web app wrapping the animation pipeline) is built at ~/workspace/video-fix-tools/pocket-studio/ but this sandbox's egress proxy blocks ALL tunnel paths (cloudflared, localtunnel, SSH, Tailscale) so it can't get a public phone URL from here. Build a Google Colab notebook that recreates it on the owner's own Google infra: single notebook that pip-installs what's needed, pulls the tool scripts (rembg, sticker-kit, tracing, upscale, loop-kit, cartoonize, autocut), and launches a Gradio mobile-friendly UI with the same 7 tools (bg removal, sticker maker, trace, upscale, loop, cartoonize, auto-cut-to-music). Gradio share=True for the public link. Keep it Colab-free-tier friendly (light model tiers, CPU). Save the notebook to ~/workspace/video-fix-tools/pocket-studio/Pocket_Studio_Colab.ipynb and ALSO push it into the animation-kit in the 3 production repos (TRIPPEDD-Production-studios-, God-Molecule-Show-Studio, God-molecule-production-stage) via branch->PR->merge. Verify the notebook JSON is valid and the pip list is sane. Report the notebook path.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-11T00:30:32.918013+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "task": "DISK AUDIT \u2014 catalog ~/workspace/ dirs over 500MB as ACTIVE/DONE/ORPHANED/PROTECTED with backup status. Audit only, no deletes/moves.",
+ "status": "done",
+ "watchdog": true,
+ "repo": "agent-ops",
+ "resume_brief": "DISK AUDIT (resume): list ~/workspace/ dirs >500MB, classify ACTIVE/DONE/ORPHANED/PROTECTED via checkpoints + subagent.list + GitHub releases + SHARED-DISK-INVENTORY.md, report categorized with backup status. No deletes/moves.",
+ "updated_at": "2026-10-15T11:05:00-04:00",
+ "attempts": 0
+}

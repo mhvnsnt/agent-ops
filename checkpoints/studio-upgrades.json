@@ -1,0 +1,10 @@
+{
+ "task": "Pull in and wire up major upgrades to Pocket Studio: timeline export/render, audio precision tools, tools-DB wiring, animation tab upgrades",
+ "repo": "~/workspace/pocket-studio-v2",
+ "resume_brief": "Continue studio-upgrades: update ~/workspace/pocket-studio-v2/app.html with (1) timeline export/render flow (ffmpeg.wasm and/or Send-to-Agent project JSON), (2) audio precision tools (waveform zoom, frame nudge, per-clip volume envelopes), (3) wire up useful tools from ~/workspace/pocket-studio-v2/tools-data/mega-tools.json as working features, (4) animation tab upgrades (Rhubarb lip-sync results display, Preston Blair viseme sheets with timeline). Then trigger artifact rebuild of pocket-studio-v2. Owner rule: real working tools only, no mockups.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-12T01:05:00-05:00",
+ "notes": "COMPLETE. All 4 upgrade modules integrated into app.html (4552->6055 lines), 2 integration defects fixed in source, artifact rebuilt and verified SUCCEEDED. Card: web-artifact-build-completed-9791cb0b-f50f-4d15-9e32-fc23315b41c4"
+}

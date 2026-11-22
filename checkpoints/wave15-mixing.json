@@ -1,0 +1,10 @@
+{
+ "task": "Wave 15 tranche: S15 mixing (TIER 3 item 15)",
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "CONCRETE DRAGON pipeline tranche worker. Wave 15: S15 mixing (TIER 3 item 15 of docs/WIRING_QUEUE.md). Parent checkpoint wave15-mixing.json ALREADY EXISTS - heartbeat it after each commit (update status/notes/updated_at), do NOT create a new one; mark done at end. Repo /home/hatch/workspace/ConcreteDragon; create branch wave15-mixing OFF origin/main (git fetch origin, git checkout -b wave15-mixing origin/main). Work: (a) Implement music/sfx buses in game-3d/src/main.js: route background music through a musicGain bus and all SFX through an sfxGain bus. Music must DUCK under big hits: when a heavy hit, KO, launcher, or finisher lands, duck the music bus (e.g. drop to ~40% and ramp back over ~0.6s). Keep subtle - never mute music, never touch the sfx bus. (b) Add __cdtest hooks for the test (e.g. musicBusLevel(), forceBigHit() or use existing dbg hooks). (c) Headless playtest: clone qa/playtest-hitlayering.mjs to qa/playtest-mixing.mjs (CHROME_PATH env), boot, deal punches/heavies/launcher to enemies, assert music bus level dips under big hits and recovers, assert SFX still fire, zero console/page errors; screenshots in game-3d/shots-mixing/, eyes-on verify each one. (d) Decision doc docs/TRANCHE_WAVE15_MIXING.md; mark WIRING_QUEUE item 15 WIRED 2026-10-08. (e) Commit incrementally, PUSH branch to origin, open PR Wave 15: S15 mixing (TIER 3 item 15) against main - DO NOT MERGE (PRs #1 wave11-footsteps, #2 wave12-countersfx, #3 wave13-uipickup, #4 wave14-hitlayering all await OWNER merge; leave them untouched). Laws: game must actually work, no fake gameplay, CC0/manifest clean, no secrets in repo, no force-push, localStorage saves persist, branch-to-PR-never-direct-to-main.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-09T01:48:00+00:00",
+ "notes": "DONE: PR #5 opened (Wave 15: S15 mixing), branch pushed, playtest 26/26 PASS. Awaiting owner merge alongside PRs #1-#4."
+}

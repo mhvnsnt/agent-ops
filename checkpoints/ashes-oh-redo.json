@@ -1,0 +1,10 @@
+{
+  "task": "Regenerate Ashes 'oh' viseme as full-face card matching his character style",
+  "repo": "~/workspace/ashes-mouth-pack",
+  "resume_brief": "Regenerate ~/workspace/ashes-mouth-pack/visemes/viseme-oh.png as a full-face viseme card (not floating mouth on black). Use viseme-ah.png in the same folder as style template: dark skin tone, black beard, red hood/shroud edge, gold chain, mouth in 'oh' rounded position with sharp gold teeth tips top and bottom, natural dark lips (not metallic gold). Save as viseme-oh.png, upload to remote storage, return URL. Verify visually before marking done.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T19:31:00Z",
+  "notes": "Regenerated viseme-oh.png as full-face card matching viseme-ah style. Old floating-mouth version backed up to /tmp/ashes-viseme-orig/viseme-oh-floating-mouth-bak.png. Verified visually: dark skin, black beard, red hood, gold chain, rounded oh mouth, sharp gold teeth, natural lips."
+}

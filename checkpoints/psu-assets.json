@@ -1,0 +1,9 @@
+{
+  "attempts": 0,
+  "repo": "~/workspace/pocket-studio-v2",
+  "resume_brief": "Build data layer for Pocket Studio universal expansion: scan ~/workspace for 3D models (*.glb), 2D character rigs (viseme sheets, model sheets), voice files (~/workspace/voice-delivery/*.mp3 + canon subdir), weight-paint-pwa locations, key videos; write ~/workspace/pocket-studio-v2/asset-index.json (schema {type,name,path,project,size_mb}); create ~/workspace/pocket-studio-v2/projects/*.json for 11 projects (wizard-gang-ep02, god-molecule, damn-shits-wild, in-the-bushes, trippedd-ep01, bannon, concrete-dragon, streetbrawl, brutal-fist, ashlane, smoke-mirror); check ~/workspace/character-rigs/*-visemes-sheet.jpg paths for Task 3; write ~/workspace/pocket-studio-v2/REPORT.md. Do not touch the Pocket Studio artifact.",
+  "status": "done",
+  "task": "Pocket Studio universal expansion data layer: asset index + project configs + viseme sheet URLs",
+  "updated_at": "2026-10-11T18:05:00Z",
+  "watchdog": true
+}

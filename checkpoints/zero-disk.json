@@ -1,0 +1,9 @@
+{
+ "task": "Zero-disk: move everything to permanent storage, keep disk clean, build retrieval layer (owner 2026-10-11)",
+ "repo": "~/workspace",
+ "resume_brief": "Owner 2026-10-11: 'Can you fix the storage issue autonomously like put it all somewhere in our databases or place we like clear out the storage completely by moving everything over somewhere safe where it can be saved and make the storage zero you know or leave only what we need on disk or make access where we can always get to the things that are off disk. Because every time that pop up comes up and it shows all the files you have on your computer and disk it's confusing for me. I don't never know what we need to keep or delete.' GOAL: disk stays near-empty permanently, he NEVER sees the popup again, NEVER has to decide keep/delete. ARCHITECTURE: (1) AUDIT every directory under ~/workspace \u2014 classify as: code\u2192GitHub, media/bulk\u2192Drive or B2, active work\u2192stays on disk, trash\u2192delete. (2) MIGRATE: push all repos (branch\u2192PR\u2192merge), upload all media/bulk to Drive (B2 blocked on key \u2014 note it), verify every byte. (3) BUILD RETRIEVAL LAYER: ~/workspace/tools/fetch/ \u2014 a simple CLI  that reads a manifest (~/workspace/agent-ops/STORAGE-MANIFEST.json) mapping every off-disk item to its location (GitHub repo+path, Drive file ID, B2 key) and pulls it back on demand. Also  to push something to cold storage. (4) CLEAN: delete everything safely backed up, keep only: active repo checkouts (git), tools/, agent-ops/, current work files. Target: disk under 50%. (5) GUARD: extend disk-space-guardian to auto-migrate (not just alert) \u2014 when disk crosses 70%, automatically move oldest untouched bulk to Drive. NEVER delete without verified backup. Log everything.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-11T18:48:00.390971+00:00"
+}

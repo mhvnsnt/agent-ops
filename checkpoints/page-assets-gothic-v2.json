@@ -1,0 +1,9 @@
+{
+  "task": "Rebuild M. Heaven$ent page assets v2: gothic font for yellow type, white subtext stays clean, match his existing repo logos.",
+  "repo": "~/workspace",
+  "resume_brief": "Rebuild the M. Heaven$ent Facebook page assets as v2 in ~/workspace/media-pipeline/page-assets/v2/: (1) profile_picture_1080.png, (2) cover_banner_1640x924.png. Changes from v1: YELLOW type (M$ monogram, M. HEAVEN$ENT) in a GOTHIC/blackletter font (source an open-licensed blackletter font, e.g. Cloister Black or equivalent); WHITE subtext (MUSIC. MOVIES. MONEY. / name under monogram) stays in the clean letterspaced font, white. Keep black background, gold/yellow + white palette. First check his repos/workspace for existing mHeavenSent Studios cards/logos and match their style. Verify pixel dimensions, heartbeat checkpoint, commit, mark done.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-08T17:37:25.236437+00:00"
+}

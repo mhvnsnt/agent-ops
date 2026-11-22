@@ -1,0 +1,12 @@
+{
+  "task": "Weapons + breakables + food pickups for Concrete Dragon",
+  "repo": "/home/hatch/workspace/ConcreteDragon",
+  "resume_brief": "Build the ITEM/WEAPON layer for Concrete Dragon (~/workspace/ConcreteDragon). (1) WEAPONS (Final Fight style): pipe, bat, knife pickups \u2014 spawn from breakables/dropped enemies; pickup, swing attacks with limited durability, throwable; distinct feel per weapon. (2) BREAKABLES: barrels, crates, phone booths placed in districts \u2014 smash to spill cash/weapons/food. (3) FOOD/HEALTH pickups: heal items (turkey homage to Final Fight). Pull free/open-source: Kenney.nl prop/model packs where the style fits, else model simply in the game's blocky aesthetic. Branch weapons-items -> PR -> merge (never direct to main). Heartbeat ~/workspace/agent-ops/checkpoints/cd-weapons-items.json after every step; incremental commits. Verify with playtests + captures, your own eyes. Obvious-defect checklist every playtest.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 1,
+  "updated_at": "2026-10-09T18:15:00+00:00",
+  "pr": "https://github.com/mhvnsnt/ConcreteDragon/pull/25",
+  "merged": true,
+  "summary": "Weapons/items lane complete: pipe/bat/knife with durability/throw, barrel/phonebooth breakables, turkey. PR #25 merged."
+}

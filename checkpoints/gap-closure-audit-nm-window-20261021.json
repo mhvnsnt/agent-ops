@@ -1,0 +1,53 @@
+{
+ "id": "gap-closure-audit-nm-window-20261021",
+ "watchdog": true,
+ "task": "NO MERCY WRONG-WINDOW AUDIT READ-ONLY: enumerate all No Mercy-derived animation assets in western-heart + wrestling-game, determine extractor FileTable window per bank/fighter, verdict WRONG-WINDOW/CORRECT-WINDOW/NOT-NM-DERIVED/INDETERMINATE with evidence",
+ "repo": "mhvnsnt/western-heart + mhvnsnt/wrestling-game",
+ "status": "done",
+ "created_at": "2026-10-21T22:41:00-05:00",
+ "updated_at": "2026-10-22T09:41:47.978250+00:00",
+ "resume_brief": "Read-only audit of No Mercy wrong FileTable window blast radius: enumerate NM-derived banks per fighter, trace extractor constants via git history, verdict each bank, produce docs-only PR with audit doc, flag wrong-window playable fighters, no data fixes.",
+ "verdicts": {
+  "anim_bank_5787": "WRONG-WINDOW",
+  "model_bank": "WRONG-WINDOW",
+  "texture_bank": "WRONG-WINDOW",
+  "arenas_17": "WRONG-WINDOW inherited",
+  "aki_v1": "WRONG-WINDOW",
+  "aki_v2": "WRONG-WINDOW falsely labelled corrected",
+  "aki_v3_w3c_PR499": "CORRECT-WINDOW branch-only not on main",
+  "mat_kings_db": "WRONG-WINDOW linkage",
+  "animation_index": "WRONG-WINDOW inherited",
+  "move_database": "WRONG-WINDOW NM entries only",
+  "caw_name_tables": "CORRECT-WINDOW window-independent",
+  "redocs_text": "NOT-WINDOW-DEPENDENT",
+  "glb_3": "INDETERMINATE no provenance manifest found",
+  "wrestling_game": "NOT-NM-DERIVED",
+  "playable_flag": "CORNERSTONE ryuji-rock.json on main (refs/frame data; pose rows gate-failed, not shipped); Pantera library-only; NM arenas in stages.js"
+ },
+ "steps": [
+  {
+   "step": "heartbeat_start_continuation",
+   "at": "2026-10-22T04:34:53.216553+00:00",
+   "note": "predecessor died in daemon restart; resuming read-only audit; WH clone=_w3b-work/wh (W3c branch), wrestling-game via gh API"
+  },
+  {
+   "step": "evidence_complete",
+   "at": "2026-10-22T04:49:32.933902+00:00",
+   "note": "bank/models/textures WRONG-WINDOW via shared FileTable + commit 772694 claim/code mismatch; v1/v2 inherit; mat-kings DB + ANIMATION-INDEX inherit manifest; arenas inherit models; ryuji-rock (CornerStone, on main) carries NM MK/anim refs; wrestling-game holds no NM assets"
+  },
+  {
+   "step": "delivered",
+   "at": "2026-10-22T05:00:40.976879+00:00",
+   "note": "PR #505 opened docs-only additions-only, NOT merged; verdict table recorded"
+  },
+  {
+   "step": "delivered",
+   "at": "2026-10-22T05:02:18.332837+00:00",
+   "note": "PR #505 open, not merged; full verdict table in doc + earlier evidence step"
+  }
+ ],
+ "pr": "mhvnsnt/western-heart#505 (docs-only +145/-0, 1 file, OPEN, NOT merged)",
+ "notes": [
+  "[watchdog 2026-10-22 04:45 CDT] Status normalized: 'done_audit_doc_pr_open_not_merged' -> 'done'. Audit deliverable pushed: WH PR #505 OPEN (docs: No Mercy wrong-window audit 2026-10-21, read-only blast radius). Merge review is a central-review/owner decision, not this checkpoint's task."
+ ]
+}

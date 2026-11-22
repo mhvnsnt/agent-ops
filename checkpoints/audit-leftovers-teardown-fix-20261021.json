@@ -1,0 +1,24 @@
+{
+  "task": "AUDIT LEFTOVERS \u2014 FIX WITH TEKKEN + TEARDOWN CODE (model-key audit PR #418 leftovers: SLICE model from Dragunov teardown assets; RYUJI ROCK pending drop-in file; any other unowned flagged items)",
+  "repo": "mhvnsnt/western-heart",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-21T11:45:46+00:00",
+  "owner_instruction_verbatim": "Fix any of this using the tekken and teardown code",
+  "method_constraint": "Tekken game files + teardown holdings + existing repo extraction/conversion/decoding tools ONLY. No AI stand-ins, no hand-built geometry, no substitutes. Missing source -> name it exactly and stop on that item.",
+  "items": {
+    "slice": "DONE \u2014 PR #433 MERGED (merge commit 1456f037). Slice wired on both paths to his own model: roster/slice/attires/attire1/model.glb (52,403,356 B, blob 3c6f5067, GLB sha256 af51f647...) = Tekken 7 Dragunov teardown conversion (dragunov-t7-rig.blend, release tekken-models-batch-2): 17 meshes, 1 skin, 198-joint T7 skeleton, costume diffuse = texel-exact evaluation of the source MustardUI node graphs (mask zones x tints x dodge over grayscale _D; Cycles bake was OOM-killed repeatedly on the shared box). Guard 3/3 PASS staged on current main. Front+back 2048px renders own-eyes verified (slate-blue greatcoat, gold eagles, textured, no clay) in docs/tpose-refs/slice/ + owner copy at ~/workspace/your_files/slice-20261021/slice-a1-front-20261021.png. SKULL MASK: not in holdings (T7 generic customization part) \u2014 named gap in ATTIRE-SLOTS.md + TRIPO-REGISTRY, not fabricated. Scale note: 2.02m bbox in rip units, kept as-is. Ryuji/CornerStone untouched per scope change (separate lane). Scratch cleared + logged; scripts archived at ~/workspace/agent-ops/slice-conversion-20261021/.",
+    "ryuji_rock": "REMOVED from this lane 2026-10-21 (owner scope change: Ryuji renamed CORNERSTONE, separate lane owns him; Tripo 20c1fd2e). Do not touch ryuji files.",
+    "other_flagged": "pending \u2014 read audit doc flagged list; fix or report"
+  },
+  "do_not_touch": [
+    "Zui Tripo wiring (own lane)",
+    "Zui moves/stances (own lane)",
+    "Kevin enemy-path + Demonio formKey (own lane)",
+    "Doc Frank variants reachability (showcase lane)",
+    "nine souls + Zui declared bases (canon by design)"
+  ],
+  "resume_brief": "Read docs/MODEL-KEY-AUDIT-2026-10-21.md on mhvnsnt/western-heart main. SLICE: search teardown holdings (tekken7-full library, render-lane parts, western-heart + game-reverse-engineering teardown dirs, GitHub releases) for Dragunov model assets; convert with existing pipeline; wire on both resolution paths (assets.js MODEL_URLS + roster field + attires entry); inventory/registry/slot records; front textured render viewed. RYUJI ROCK: find the 'pending drop-in' documentation, then locate the file in releases/repos/stores; drop in + verify, or name the exact missing source. Proof: node --test game/tests/model-key-guard.test.mjs passes; executed node resolution both paths for Slice (+Ryuji). PRs in instruction-gate format with owner verbatim quote. Fresh blobless clone of western-heart; local checkouts are stale. Blender: xvfb-run -a env -u PYTHONPATH, one at a time.",
+  "notes": "Slice-only lane per scope change 2026-10-21 ~01:56 CDT. Clone at ~/workspace/_slice-work/wh is blobless+sparse (git ops slow, SIGTERM at 180s tool cap) \u2014 file reads done via gh contents API into ~/workspace/_slice-work/refs/. Wiring map: roster-full.js line 122 model 'steve-fox'->'slice'; assets.js MODEL_URLS add slice keys (diablo pattern '../roster/slice/attires/attire1/model.glb'); new roster/slice/ATTIRE-SLOTS.md; MODEL-INVENTORY row.\n[watchdog 2026-10-21 05:13 CDT] VERIFIED ALIVE \u2014 NOT dropped. ~/workspace/_slice-work/refs/ files written 02:07-04:21 CDT today (game_js_attire-customizations.js, attires.js @04:21). Lane working through model-key audit leftovers; heartbeat refreshed, no resume needed.\n[watchdog 2026-10-21 05:45 CDT] VERIFIED ALIVE - NOT dropped: ~/workspace/_slice-work/glb_blob.json written after 05:30 CDT today (fresh lane activity). Lane working through model-key audit leftovers. checkpoint_audit: 0 stale / 81 healthy. Heartbeat only; attempts stay 0."
+}

@@ -1,0 +1,10 @@
+{
+  "task": "Wire up motion-mirror stack on Kaggle to beat Viggle Pro",
+  "repo": "~/workspace/video-fix-tools/character-replace",
+  "resume_brief": "Build complete Kaggle notebook implementing motion-mirror pipeline (DWPose->motion-mirror->FaceFusion->RIFE/upscale), fill gaps (batch, unlimited length, connectors), test with real files, document in STACK.md. Research done at ~/workspace/video-fix-tools/character-replace/STACK.md. Repos at ~/workspace/video-fix-tools/character-replace/stack/. No GPU locally, no kaggle CLI. Browser needed to upload/run notebook on Kaggle.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-12T06:28:07.084322+00:00",
+  "progress": "Complete. Notebook built, validated, tested (chunk/stitch), FaceFusion CLI fixed, STACK.md updated, committed (7f9c507). Blocked: needs browser to upload notebook to Kaggle and run (no GPU locally, no kaggle CLI)."
+}

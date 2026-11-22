@@ -1,0 +1,10 @@
+{
+ "attempts": 2,
+ "task": "Open-source rigging tool pull-in + blocked-model repair \u2014 WAVE 2",
+ "repo": "/home/hatch/workspace/game-sweep/AshLanev2",
+ "resume_brief": "You are the OPEN-SOURCE RIGGING TOOL COORDINATOR \u2014 WAVE 2 for AshLanev2 charfix. 39/68 models fixed+merged; 29 blocked. Job: (1) integrate researched tools from ~/workspace/agent-ops/checkpoints/rig-tools.json (UniRig, SkinTokens, MKA, Anymate, Voxel Heat, BVH-Motion-Retargeter), testing each on ONE blocked model; (2) attack 29 blocked models \u2014 priority the 3 Blender auto-rig failures (EDWIN_KENNEDY_attire3, JAGER, PABLO_attire2) then 26 deeper defects; (3) keep researching MORE tools (owner wants hundreds evaluated). Branch charfix-wave4 from main, per-model commits, push branch, NEVER main. Licenses: MIT/Apache/CC0/CC-BY/BSD integrate; GPL quarantine; NC reject. Never invent canon; before/after visual verification every model; revert regressions. Free only. Check stop_requested in ashlane-charfix.json each loop. Deliverable: fixed models on charfix-wave4, expanded rig-tools.json, updated checkpoint.",
+ "status": "done",
+ "watchdog": true,
+ "updated_at": "2026-10-08T10:00:00+00:00",
+ "notes": "Wave2 complete: 54/68 fixed (15 more than start). 14 blocked remain (need manual work or new approaches). Branch charfix-wave4 pushed with 22 commits."
+}

@@ -1,0 +1,37 @@
+{
+ "disk_coordination_2026-10-21_1210CDT": {
+  "bytes_held_local": "4.2M only: census docs, scripts, logs, census-out/ (iso_listing, pak_manifests.json, sha256 sums). NO ISO, NO RAR, NO chunks, NO extracts held locally.",
+  "outputs": "Census PR: mhvnsnt/game-reverse-engineering PR #35 (OPEN). Release: https://github.com/mhvnsnt/western-heart/releases/tag/yyh-dark-tournament-ps2-v1",
+  "ping_received": "coordinator 11:37 CDT snapshot: box 97% / 3.4G free, yuyu-hakusho-w2 2.8G actively writing at 16:27Z, pause downloads below ~6G free threshold",
+  "relief_action_taken": "The fastest-relief path named in the ping (finish store+verify+clear) was already executed: locals (ISO 1.33G + RAR 1.05G + extracts + local chunk copies) cleared ONLY after full store verification + pull-back hash proof; clear logged in ~/workspace/agent-ops/disk-cleanup-log.md (2026-10-21 W2 entry). Nothing deleted before verification; nothing of any other lane touched.",
+  "resume_method_if_needed": "No resume needed for W2 (done). To work the ISO again: gh release download yyh-dark-tournament-ps2-v1 -R mhvnsnt/western-heart, then cat s100-yyh-dark-tournament-ps2.iso.part-* and verify whole-file sha256 above. Original source (for re-acquisition only): archive.org item yu-yu-hakusho-dark-tournament-holyfield-games, RAR md5 11585e321389b64ce39371d5a1df9382.",
+  "state_at_reply": "W2 already COMPLETE (finished before this follow-up arrived). No downloads running, none will start. Disk at reply: 94G used / 4.8G free / 96%. yuyu-hakusho-w2 dir is now 4.2M total (was 2.8G at ping snapshot).",
+  "store": "ISO (1327497216B, sha256 728caaa5b43921eaa1b02099946f7434788cd0353d29d2e3c1876e80a6510e9f) is on GitHub release yyh-dark-tournament-ps2-v1 (mhvnsnt/western-heart, PUBLISHED, draft=false): 14 canonical 100MB chunks s100-yyh-dark-tournament-ps2.iso.part-000..013 + MANIFEST.md; every chunk GitHub digest == local sha256."
+ },
+ "id": "gap-closure-w2-yyh",
+ "iso_sha256": "728caaa5b43921eaa1b02099946f7434788cd0353d29d2e3c1876e80a6510e9f",
+ "iso_size": 1327497216,
+ "notes": [
+  "[watchdog 2026-10-27 22:40 CDT] Schema gap noted: missing updated_at. Status stays done (work complete) \u2014 not flipped to needs_owner; no resume needed.",
+  "[watchdog 2026-11-10 17:01 CST] SCHEMA NOTE: updated_at missing (None) - malformed per watchdog schema, but status stays done: work verified complete (YYH Dark Tournament census, game-reverse-engineering PR #35 merged, pullback sha256 verified, local ISO cleared per disk-cleanup-log 2026-10-21). Not flipped to needs_owner; no resume needed. Schema-gap annotation only."
+ ],
+ "release_tag": "yyh-dark-tournament-ps2-v1",
+ "repo": "mhvnsnt/western-heart + mhvnsnt/game-reverse-engineering",
+ "resume_brief": "W2 COMPLETE. YYH Dark Tournament PS2 (SLUS-20805, Digital Fiction/Atari 2004) stored hash-verified on western-heart release yyh-dark-tournament-ps2-v1 (14x100MB s100 chunks + MANIFEST.md). Toguro census + fingernail blast (FINGER_FLIP_BULLETS in /CHAR/YTOGURO/RESOURCE.PAK) in game-reverse-engineering PR #35. Teardown follow-up (not this lane): RESOURCE.PAK unpacker -> YTOGURO.ANI/.MDL decode -> GLB clips for CornerStone.",
+ "serial": "SLUS-20805",
+ "status": "done",
+ "steps": {
+  "acquire": "done - archive.org item yu-yu-hakusho-dark-tournament-holyfield-games, RAR 1054050942B md5+sha1 matched IA values",
+  "census": "done - 401 entries/335 files, 26-fighter roster, FINGER_FLIP_BULLETS located in YTOGURO RESOURCE.PAK (move block ~1654949, sound index ~2072731, YT_FBULLET_ spawn ~2070810)",
+  "clear_local": "done - ISO+RAR+extracts deleted after verification, logged in disk-cleanup-log.md 2026-10-21",
+  "holdings_check": "done - no prior YYH holding",
+  "pr": "done - game-reverse-engineering PR #35, branch feat/yyh-dark-tournament-census-20261021, commit 0b5376f693d855d78b282e6c549c34dbf7da138c",
+  "pullback_proof": "done - s100 part-000 downloaded back, sha256 4c8391705d20bba7c797448170c0ee5e6c6aee310912ecb38e970adee1c21593 match",
+  "store_release": "done - yyh-dark-tournament-ps2-v1, 14x s100 100MB chunks + MANIFEST.md, all GitHub digests == local sha256; 950MB duplicate pair removed after s100 verified",
+  "toguro_evidence": "done - /CHAR/YTOGURO/ RESOURCE.PAK 2835136B + YTOGUALC/YTOGURAL/YTOGURLS MDLs (internal names YToguro_4Skin, YTogural1), RESFILE manifest lists YTOGURO.ANI + 8 MDL variants",
+  "verify_content": "done - ISO9660, SYSTEM.CNF serial SLUS-20805 (hypothesis 20833 WRONG), VER 1.00 NTSC"
+ },
+ "task": "W2 Yu Yu Hakusho Dark Tournament PS2 acquisition store census for Toguro fingernail blast moves animations",
+ "updated_utc": "2026-10-21T17:05:00Z",
+ "watchdog": true
+}

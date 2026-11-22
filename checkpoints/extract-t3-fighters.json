@@ -1,0 +1,11 @@
+{
+ "attempts": 0,
+ "repo": "~/workspace/game-reverse-engineering",
+ "resume_brief": "Continue Tekken 3 fighter extraction: verify BNS IDs in ~/workspace/game-reverse-engineering/tekken3/docs/3DMK-MODEL-MAPPING.md and model-inventory.json (candidate: Jin 143/147, Yoshimitsu 103/107, Heihachi 175/179, Bryan 167/171, Gun Jack 199/203, Xiaoyu 127/131 \u2014 may need correction). Extract each with ~/workspace/tools/tekken3remake/tools/research/kmd.py (see how king95 was extracted \u2014 git log in game-reverse-engineering or tekken3/tools/local/). Output per fighter to ~/workspace/game-reverse-engineering/tekken3/models/<name><bnsid>/: <name>.kmd, <name>_parts.obj, renderdata.pkl, part montage render. Then copy to ~/workspace/western-heart/teardown/tekken3/models/ (TEARDOWN-TO-REPO LAW), branch\u2192PR\u2192merge with incremental commits. Disk constraint: stop if /home/hatch hits 94%. Checkpoint: ~/workspace/agent-ops/checkpoints/extract-t3-fighters.json \u2014 heartbeat after each fighter, mark done at end.",
+ "status": "done",
+ "task": "Extract all 6 remaining Tekken 3 fighters' geometry (Jin, Yoshimitsu, Heihachi, Bryan, Gun Jack, Xiaoyu) using proven kmd.py parser, verify BNS IDs, output to models/<name><bnsid>/, copy to western-heart/teardown/tekken3/models/, branch\u2192PR\u2192merge",
+ "updated_at": "2026-10-13T09:45:00-04:00",
+ "watchdog": true,
+ "progress": "all 6 extracted: jin151(1109f) yoshimitsu103(984f) heihachi191(882f, quad-triangulated) bryan183(1004f) gunjack215(991f) xiaoyu127(988f); 0 unresolved seams",
+ "result": "All 6 fighters extracted, verified, committed, copied to western-heart, PR #35 merged to main. Zero open PRs."
+}

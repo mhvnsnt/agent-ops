@@ -1,0 +1,10 @@
+{
+  "task": "Self-host Penpot + wire app-layer creative tools into repos",
+  "repo": "~/workspace/video-fix-tools",
+  "resume_brief": "Two jobs. (1) SELF-HOST PENPOT: deploy Penpot (open-source Canva alternative) via Docker compose on this VM. First check docker availability and disk (df -h; currently ~83% \u2014 if needed, evict the documented re-pullable birefnet 973MB model in ~/.rembg/models/ BEFORE pulling Penpot images; never delete unbacked work). Verify Penpot serves (curl the frontend), report the URL + initial admin setup. If Docker is truly unavailable, document exactly what's missing and fall back honestly. (2) WIRE APP-LAYER TOOLS INTO REPOS: update the animation-kit (now in TRIPPEDD-Production-studios-, God-Molecule-Show-Studio, God-molecule-production-stage) with an APPS.md covering: OpenCut (already cloned at ~/workspace/video-fix-tools/opencut \u2014 the open CapCut; note classic vs rewrite status), Penpot (self-hosted URL from job 1), Tahoma2D/OpenToonz (FlipaClip equivalents, desktop), Inkscape/GIMP/Krita trio \u2014 what each tool is, what it replaces, which repo work it relates to (commercials/cards/thumbnails/animation). Push the APPS.md update to all 3 repos via branch->PR->merge (zero open PRs). Never touch ~/workspace/trippedd-studio (other lane) or the v3 worktree branch.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 1,
+  "updated_at": "2026-10-11T02:42:10.338527+00:00",
+  "notes": "DONE. Job1: Penpot frontend serves :9001 (200). Backend blocked by pgjdbc env issue (no TCP conn, undetermined). README+setup.sh in ~/workspace/services/penpot/. Job1b (tunnel) blocked on backend. Job2: APPS.md in all 3 repos, all PRs merged (TRIPPEDD #129+#130, GM-Studio #16, GM-stage #7). Zero open PRs from this work."
+}

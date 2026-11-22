@@ -1,0 +1,9 @@
+{
+ "attempts": 0,
+ "repo": "~/workspace/game-reverse-engineering",
+ "resume_brief": "Compile a TRUE working-model inventory across all game teardowns (owner 2026-10-16). Scope: ~/workspace/game-reverse-engineering/ (tekken3, tekken6, tekken6-ps3, tekken7, tekken8, tekken-tag-tournament-2, urban-reign, wrestling-games, wwf-no-mercy, wwe-wrestlemania-xix, dead-or-alive, soulcalibur, soulcalibur-6, street-fighter-3d-games, street-fighter-5, vf5-revo, virtua-fighter-5, wwe2k, western-heart-assets, models/) and western-heart repo game/assets/models/. Per TEARDOWN-COMPLETION LAW: a character counts ONLY if it has a WORKING 3D model asset (GLB/FBX/OBJ/etc.) that actually LOADS and renders as a humanoid. Verify by loading files (pygltflib parse / Blender), never by trusting TEARDOWN-STATUS.md (2026-10-13, outdated). For each game: (1) verified working models with name/path/format/proof, (2) claimed-but-broken separately, (3) totals. Read-only on repos; write report to ~/workspace/teardown-model-inventory/INVENTORY.md.",
+ "status": "done",
+ "task": "teardown-model-inventory: compile true working-model inventory across all game teardowns",
+ "updated_at": "2026-10-16T03:05:00-04:00",
+ "watchdog": true
+}

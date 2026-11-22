@@ -1,0 +1,10 @@
+{
+  "task": "Set up maximum free cloud storage across all providers (R2, Mega, Dropbox, Drive, B2, IA). Target ~57GB free. Document strategy in FREE-STORAGE-PLAN.md. Prepare owner-action checklists for accounts needing his email.",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/storage",
+  "resume_brief": "Free storage plan complete. All work that can be done without the owner is done. Awaiting owner action on: Mega signup (20GB), Cloudflare R2 signup (10GB), Dropbox OAuth (2GB). When owner completes any of these, wire up the service for agent uploads. Plan doc at ~/workspace/storage/FREE-STORAGE-PLAN.md.",
+  "updated_at": "2026-10-12T14:05:00Z",
+  "attempts": 0,
+  "notes": "FREE-STORAGE-PLAN.md written (111 lines). Dropbox CLI at /opt/hatch/bin/dropbox available but not connected. No rclone. No existing Cloudflare/Mega accounts found. Owner checklists prepared."
+}

@@ -1,0 +1,9 @@
+{
+ "task": "Rebuild Amos Jr. from key-art extraction \u2014 restore his identity (shaggy hair, mustache+goatee, tattoo)",
+ "repo": "~/workspace/trippedd-studio",
+ "resume_brief": "In ~/workspace/trippedd-studio, fix Amos Jr.'s likeness in the 15s Goodville promo. Owner 2026-10-11: the Blender rebuild made him look like a generic Stan \u2014 he must look like his key-art character. His IDENTITY ANCHORS (from the cast list + key art assets/references/ep01/source/Goodville - Not South Park.png \u2014 OPEN AND READ IT): shaggy brown hair, mustache + chin goatee, arm tattoo, white tank top, BEER can in hand. The South Park study's rule is 'hat=identity' \u2014 his hair/facial hair/can ARE his identity; the current beige-circle-dot-eyes version drops all of it. METHOD: extract his parts FROM THE KEY ART (flood-fill masking like the first PIL draft did well) \u2014 head WITH shaggy hair, face with mustache+goatee, torso with tank + tattoo, arms, BEER can \u2014 and drive those extracted parts with the Blender cutout rig (separate rigged pieces, stepped CONSTANT animation). Re-render the Broadway shots (and any shot with Amos Jr.) with the corrected character, keep the 15.000s timeline, TEMP generic voices, end card unchanged. Run sensorium taste/smell on the re-render. Work on NEW branch feat/goodville-amos-likeness off origin/main (PR #149 already merged \u2014 do not touch it), commit incrementally, heartbeat ~/workspace/agent-ops/checkpoints/goodville-amos-likeness.json every 10 min, open a NEW PR when done (do not merge). Update FRAME-CHECK.md with the likeness fix + per-anchor checklist (hair/mustache+goatee/tattoo/tank/can vs key art) + frames verified with own eyes. Report: branch, PR URL, commits, frame evidence, anything still off. Mark checkpoint done at the end.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T13:43:16.237444+00:00"
+}

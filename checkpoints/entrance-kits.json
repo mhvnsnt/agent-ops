@@ -1,0 +1,17 @@
+{
+ "task": "ENTRANCE KIT FACTORY: entrance kits for every character across all games, per Stick-Up template",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/bannon-video-pipe/entrance-kits",
+ "workers": {
+  "bannon": "done (62/62 kits committed)",
+  "ashlane": "done (32/32 on branch ashlane-kits, awaiting PR/merge)",
+  "brutal-fist": "done (28/28 kits committed)",
+  "concrete-dragon": "done (8/8 kits committed)"
+ },
+ "template": "~/workspace/bannon-video-pipe/stickup/STICKUP_CHARACTER_CARD.md",
+ "updated_at": "2026-10-08T00:21:00-04:00",
+ "attempts": 0,
+ "resume_brief": "ENTRANCE KIT FACTORY coordinator (AshLane/Bannon/Brutal-Fist/Concrete-Dragon, per Stick-Up template). State at last update: concrete-dragon DONE (8/8 kits committed: Rook, Vex, Brick, Sable, Juno, Mack, Iris, Hollow Point); ashlane IN-PROGRESS (writing 32 kits to entrance-kits/ashlane/: roster 28 + Buffalo Bill, Theory, KG Mudo, Robed Council); bannon RUNNING (researching canon, template read, starting generation); brutal-fist RUNNING (0/28 kits). Template: ~/workspace/bannon-video-pipe/stickup/STICKUP_CHARACTER_CARD.md. Repo: ~/workspace/bannon-video-pipe/entrance-kits. Resume: check each worker's progress, verify kits landed on disk + committed, advance the lagging lanes, update checkpoint.",
+ "notes": "Watchdog 2026-10-08 00:10 EDT: SCHEMA REPAIR - checkpoint was missing resume_brief (schema requires >=50 chars for watchdog resumption). Reconstructed strictly from the checkpoint's own task/workers/template fields (no new directives). Status left 'running'; not flagged needs_owner because the task shows live worker activity."
+}

@@ -1,0 +1,10 @@
+{
+ "task": "Root-cause and fix: cipher-grin facepaint preset not applying in Brutal-Fist (onyx/echo presets work) \u2014 fix, verify with renders, PR to main",
+ "repo": "/home/hatch/workspace/game-sweep/Brutal-Fist",
+ "resume_brief": "Fix the cipher-grin facepaint preset in mhvnsnt/Brutal-Fist. Bug: cipher-grin preset doesn't apply; onyx/echo presets work. Local clone was removed for disk earlier \u2014 re-clone if needed (shallow is fine). Root-cause it (compare working preset wiring vs cipher-grin), fix, verify with in-game renders showing the grin paint applied, branch->PR->merge to main. Standing rules: heartbeat this checkpoint, incremental commits, disk <=75% save-before-delete, never push straight to main.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T03:25:32.065513+00:00",
+ "notes": "DONE. PR #26 merged to main (99c6d33). Root causes (3 stacked): (1) head-subset AABB inverted under restYaw -> throw; (2) fixed anatomical constants excluded cipher's oversized hunched skull -> rays missed; (3) SkinnedMesh double-transform from post-bind root scale/yaw -> decal invisible. Fix: adaptive head box + surface probe + bone-parented Mesh decal + larger grid + DoubleSide + echo faceDir corrected. Proof: headless Chromium renders (actual repo code) \u2014 cipher-grin white base + black sockets/nose/grin visible on Cipher's face, feet grounded (shot-fullbody.png); onyx/echo unchanged (baked texture paint). Branch deleted. Note: onyx/echo 'working' was baked-in GLB texture paint, not the decal."
+}

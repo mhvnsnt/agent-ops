@@ -1,0 +1,9 @@
+{
+  "task": "COMMUNITY TOOLS lane: pull every community extraction tool for Tekken 6 PS3 into ~/workspace/game-reverse-engineering/tekken6-ps3/tools/, test-run each, write docs/COMMUNITY-TOOLS.md",
+  "status": "done",
+  "watchdog": true,
+  "repo": "western-heart",
+  "resume_brief": "DONE 2026-10-16. Tools in ~/workspace/game-reverse-engineering/tekken6-ps3/tools/ (quickbms built+tested, tekken5-tools, t6framedatatool, arc). Catalog at ~/workspace/game-reverse-engineering/tekken6-ps3/docs/COMMUNITY-TOOLS.md. Known gaps: Linux NMD->mesh converter, Acewell ntx texture scripts (need live-browser zenhax fetch), animation exporter.",
+  "updated_at": "2026-10-16T02:30:00-04:00",
+  "attempts": 0
+}

@@ -1,0 +1,16 @@
+{
+  "attempts": 3,
+  "repo": "western-heart",
+  "resume_brief": "DONE. VF5 at 100% extraction. All remaining fighters and stages extracted from PS3 game data and uploaded. Nothing left to resume.",
+  "status": "done",
+  "task": "VF5 FULL ROSTER + STAGES: extract all remaining fighters and stages from the PS3 game data, upload to Release vf5-ps3-v1, push results to western-heart/teardown/virtua-fighter-5/ via branch->PR->merge",
+  "updated_at": "2026-10-18T01:58:27.054570+00:00",
+  "watchdog": true,
+  "notes": [
+    "[watchdog 2026-10-15T02:40-04:00 EDT] Schema note: resume_brief <50 chars; status kept 'done' (work complete, never needs resume) per 2026-10-13 convention.",
+    "[watchdog 2026-10-16 00:04 EDT] SCHEMA NOTE: managed checkpoint missing/short resume_brief(42); status kept 'done' (task complete, no resume needed). Pre-schema-law legacy entry.",
+    "[watchdog 2026-10-17T21:17:46.   000000+00:00] Schema invalid: missing resume_brief(>=50chars). Parked needs_owner per watchdog schema rule.",
+    "[watchdog 2026-10-17 18:10 CDT] MALFORMED checkpoint (schema violation): resume_brief only 42 chars (<50). Not resumable; status already needs_owner. Owner: fix fields or delete this checkpoint.",
+    "[2026-10-17] Schema repaired: added repo + resume_brief (>=50 chars). Work was already complete per prior notes. Status set to done."
+  ]
+}

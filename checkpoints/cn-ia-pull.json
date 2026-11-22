@@ -1,0 +1,15 @@
+{
+ "task": "Pull all ~39.4GB of verified IA HTTP mirrors for CN gigaleak, one show at a time, to GitHub + TeraBox staging",
+ "repo": "~/workspace/cn-gigaleak-raw",
+ "resume_brief": "Owner directive 2026-10-14: pull all reachable CN gigaleak content from Internet Archive HTTP mirrors (~39.4GB). IA identifier list in ~/workspace/cn-gigaleak-raw/work/source-hunt-2026-10-14.md. Method: curl -k -L --proxy with Range headers, parallel segmented download (24 streams), one show at a time. Per show: download -> GitHub (gh release upload for >200MB, git for small) -> stage TeraBox copy in ~/workspace/terabox-staging/cn-gigaleak/<show>/ with MANIFEST.md -> verify via GitHub API -> delete local -> next. Never above 85% disk. Split large uploads into ~485MB parts. NO-DELETE-BEFORE-SAFE-STORAGE.",
+ "status": "needs_owner",
+ "watchdog": true,
+ "attempts": 4,
+ "notes": "attempt-4 INTERRUPTED by parent cron execution timeout at 12:34Z (not a task failure). OK KO stream STILL RUNNING: python pid 62932 (launched 12:26Z), part-ac download attempt 2 in progress (bytes 1240838144-1525678079; part=223719424 bytes valid prefix, tmp=140865536 bytes and growing). aa+ab confirmed on GH release ok-ko-complete-v1 at full 508559360 bytes each. IMPORTANT: next resume must check for live okko_stream.py (pgrep) BEFORE launching, or kill 62932 first, to avoid the duplicate-writer .tmp corruption that killed attempt-3 legacy lane (59021/62522 killed 12:31Z). Disk 75%. TeraBox leg still blocked (runtime broker spool capacity). | 2026-10-15 13:30 EDT (worker-watchdog run): state probe \u2014 OK KO stream pid 62932 (okko_stream.py) DEAD, no live download process; ~/workspace/cn-gigaleak-raw untouched since 2026-10-14 04:37. attempts=4 (cap). Lane superseded by active lanes: owner-run Gumball parallel pull (gumball-pull-20261015.json \u2014 segments aa+ab landed on gh release, part-ac downloading live 13:33 EDT) and cn-leak-okko-pull.json (running). TeraBox staging leg still broker-spool blocked (runtime infra). Per watchdog rule 7: attempts>=3, task not done, no further retries \u2014 status needs_owner. Owner call: abandon this generic IA lane (fold into per-show lanes) or re-schedule.",
+ "updated_at": "2026-10-15T17:37:11.063702+00:00",
+ "last_parent_action": {
+  "at": "2026-10-15T12:25:50.654406+00:00",
+  "by": "keep-working-pulse 2026-10-15 08:28 EDT",
+  "action": "resume-spawned after worker killed by runtime exec loss (not task failure); OKKO aa+ab done on GitHub, ac mid-download"
+ }
+}

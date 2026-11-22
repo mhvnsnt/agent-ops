@@ -1,0 +1,155 @@
+{
+ "task": "Fix dino punch scene arm proportions (fix/dino-punch-arm)",
+ "repo": "~/workspace/trippedd-studio",
+ "resume_brief": "In ~/workspace/trippedd-studio, worktree ~/workspace/agent-ops/worktrees/sheet-keyart-adults, branch feat/sheet-keyart-adults (recovery commits pushed to origin: sten rename, chet rename glasses-bong-guy->chet). Continue building COMPLETE Preston Blair character sheets for the five key-art adults: STEN (bobble hat, ex kid/), headband-girl, crown-hoodie (owner's stand-in, extra care), red-cap-guy, CHET (basement nerd: games/D&D/trading cards/anime/WoW). Owner 2026-10-11: they are ADULTS not kids; Sten is the ONLY SP-based one; hold likenesses; full sheets (heads/angles, face furniture, bodies, hands, props, preview PNGs). Source: key art Goodville - Not South Park.png. USE THE IMAGE LAW. First: rebase onto origin/main (branch is behind), resolve carefully. Commit INCREMENTALLY and PUSH every 15 min (restarts keep killing this). Open a PR (do NOT merge). Heartbeat ~/workspace/agent-ops/checkpoints/sheet-keyart-kids.json every 10 min. Report + mark done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-12T06:58:29.876767+00:00",
+ "pr": "https://github.com/mhvnsnt/TRIPPEDD-Production-studios-/pull/201",
+ "notes": "[watchdog 2026-10-12 ~01:57 CDT] Resumed from stale checkpoint (updated_at 2026-10-12T06:30Z, ~27m old). VERIFIED COMPLETE: all 5 adult kits exist on origin/main under production/TRIPPEDD_EP01/goodville/kits/ (sten 63 files, headband-girl 58, crown-hoodie 59, red-cap-guy 66, chet 67), each with manifest.json, drill-log.md, preview_sheet.png (heads/angles, face furniture, bodies, hands, legs/feet, props). Tree clean, nothing uncommitted. PR #201 'feat: complete Preston Blair sheets for 5 key-art adults (attempt 3)' MERGED 2026-10-11T21:46Z. Note: brief asked for rebase + open-but-not-merge PR; rebase moot since branch commits were already merged into main via PR #201. No resume action needed; heartbeat + done.",
+ "headband_girl_v2": "complete 2026-10-11: v2 measured-anchor rebuild pushed as f77b7099 on feat/sheet-keyart-v2 (no merge). Other workers (chet, crown-hoodie) have separate in-flight work in the same worktree, untouched.",
+ "lanes": {
+  "chet_v2": {
+   "status": "done",
+   "branch": "feat/sheet-keyart-v2",
+   "commits": [
+    "4d714033",
+    "a09d682b"
+   ],
+   "finished_at": "2026-10-11T22:30:43.422500+00:00"
+  }
+ },
+ "workers_done": {
+  "crown-hoodie-v2": "done 2026-10-11T22:33Z \u2014 branch feat/sheet-keyart-v2 commit d89c9a8c pushed; v2 head_blank+tight furniture+clean angles+preview; manifest+drill log updated"
+ },
+ "eyes_v3": "done 2026-10-11 \u2014 PR #209 open (not merged), v3 eyes + _universal library pushed",
+ "gen_pieces": "DONE 2026-10-12: PR #211 open (not merged). 9 SP heads + bubba profile + julio fullbody in gen/. Sten blocked (damaged source).",
+ "pr_gen": "https://github.com/mhvnsnt/TRIPPEDD-Production-studios-/pull/211",
+ "pack_boost": {
+  "status": "done",
+  "branch": "feat/sheet-pack-boost",
+  "pr": "https://github.com/mhvnsnt/TRIPPEDD-Production-studios-/pull/216",
+  "completed_at": "2026-10-12T01:47:04.016213+00:00",
+  "pieces_added": 138,
+  "kits": {
+   "amos-jr": 13,
+   "old-head": 12,
+   "dickie": 12,
+   "bubba": 13,
+   "julio": 13,
+   "sten": 12,
+   "headband-girl": 15,
+   "crown-hoodie": 16,
+   "red-cap-guy": 16,
+   "chet": 16
+  }
+ },
+ "dickie_outfit_angles": {
+  "status": "done",
+  "branch": "feat/dickie-outfit-angles",
+  "pr": "https://github.com/mhvnsnt/TRIPPEDD-Production-studios-/pull/217",
+  "pieces": "80 (2 outfits x 8 angles x 5 pieces)",
+  "finished_at": "2026-10-12T01:53:31.461790+00:00"
+ },
+ "environments": {
+  "status": "done",
+  "branch": "feat/goodville-environments",
+  "task": "Goodville prop + background/environment library (owner 2026-10-11)",
+  "started_at": "2026-10-12T04:16:12.148786+00:00",
+  "delegated": {
+   "houses": "b0387d02 (env-houses.json)",
+   "interiors": "5ade7488 (env-interiors.json)",
+   "store_street": "9b6249ad (env-store-street.json)"
+  },
+  "houses": "DONE 2026-10-12: 16 pieces verified by parent eyes, composite clean",
+  "interiors": "DONE 2026-10-12: 18 pieces verified by parent eyes, living room composite clean",
+  "completed_at": "2026-10-12T04:20:52.845118+00:00",
+  "pr": "https://github.com/mhvnsnt/TRIPPEDD-Production-studios-/pull/226",
+  "pieces": {
+   "houses": 16,
+   "interiors": 18,
+   "store": 11,
+   "street": 10,
+   "total": 55,
+   "scenes": 4
+  }
+ },
+ "env_detail": {
+  "status": "done",
+  "branch": "feat/nashville-sp",
+  "pr": "https://github.com/mhvnsnt/TRIPPEDD-Production-studios-/pull/227",
+  "task": "Detail up environment library (owner 2026-10-11)",
+  "pieces_added": 78,
+  "breakdown": {
+   "ground": 12,
+   "sky": 15,
+   "houses_detail": 15,
+   "interiors_detail": 19,
+   "store_detail": 17
+  },
+  "scenes": 2,
+  "completed_at": "2026-10-12T05:09:32.050910+00:00",
+  "watchdog": true
+ },
+ "nashville_sp": {
+  "status": "done",
+  "branch": "feat/nashville-sp",
+  "started_at": "2026-10-12T05:05:00Z",
+  "task": "Build Nashville + surrounding areas in South Park style from real Nashville landmarks",
+  "river_done": "2026-10-12T05:09:29Z",
+  "suburbs_done": "2026-10-12T05:11:45Z",
+  "pr": "https://github.com/mhvnsnt/TRIPPEDD-Production-studios-/pull/228",
+  "finished_at": "2026-10-12T05:13:56.233161+00:00"
+ },
+ "env_layout": {
+  "status": "done",
+  "branch": "fix/env-layout",
+  "task": "Detail-pass correction: layer detail onto original composites without moving anything",
+  "correction": "Owner 2026-10-12: originals (PR #226) were perfect; detail pass broke layout. Do NOT rebuild; add detail layers only.",
+  "started_at": "2026-10-12T05:23:06.841605+00:00",
+  "pr": "https://github.com/mhvnsnt/TRIPPEDD-Production-studios-/pull/229",
+  "completed_at": "2026-10-12T05:29:53.755569+00:00"
+ },
+ "env_placement_v3": {
+  "status": "done",
+  "branch": "fix/env-placement-v3",
+  "task": "Fix specific placement errors in v2 scenes per owner 2026-10-12 exact words: door over shutters (swap to closed), lamp on table (move to floor near wall), clock over TV (move to wall), bookshelf too close to TV (push far right)",
+  "started_at": "2026-10-12T05:35:24.028918+00:00",
+  "pr": "https://github.com/mhvnsnt/TRIPPEDD-Production-studios-/pull/230",
+  "completed_at": "2026-10-12T05:58:41.514761+00:00",
+  "notes": "House: closed door swapped (was open over shutters). Living: rebuilt from pieces with clock on wall, lamp on floor, bookshelf far right. PR #230 open, NOT merged."
+ },
+ "dino_punch_v2": {
+  "status": "done",
+  "task": "Rebuild dinosaur punching scene with improved Amos punch torso + separated head + expression variants (owner 2026-10-12)",
+  "branch": "feat/dino-punch-v2",
+  "started_at": "2026-10-12T05:50:24.394372+00:00",
+  "pr": "https://github.com/mhvnsnt/TRIPPEDD-Production-studios-/pull/232",
+  "finished_at": "2026-10-12T06:04:10.788757+00:00"
+ },
+ "dangly_voice": {
+  "task": "Jim Lahey-style voice for Lt. James Dangly (style-alike parody, NEVER clone Dunsworth)",
+  "status": "done",
+  "branch": "feat/dangly-voice",
+  "pr": "https://github.com/mhvnsnt/TRIPPEDD-Production-studios-/pull/233",
+  "finished_at": "2026-10-12T06:06:43.517080+00:00",
+  "ranges": {
+   "A_drunk": "Callum (husky), stability 0.3/style 0.7, 16.0s test",
+   "B_sober": "Roger (resonant), stability 0.7/style 0.3, 11.0s test",
+   "C_calm": "George (warm storyteller), stability 0.8/style 0.2, 11.0s test"
+  },
+  "method": "ElevenLabs TTS stock voices only \u2014 no cloning, no real-voice reference",
+  "note": "Voice Design API blocked on free tier (403). Used stock library voices with character direction."
+ },
+ "living_v4_fix": {
+  "status": "running",
+  "task": "surgical placement fixes on scene_living_detailed_v2.png (clock off TV, lamp to floor, shelf right)",
+  "branch": "fix/living-v4"
+ },
+ "door_layer_fix": {
+  "status": "done",
+  "branch": "fix/door-layer",
+  "pr": "https://github.com/mhvnsnt/TRIPPEDD-Production-studios-/pull/234"
+ }
+}

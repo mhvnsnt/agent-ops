@@ -1,0 +1,10 @@
+{
+ "task": "Create private lawyer case repo + document Real's story in atlas",
+ "repo": "~/workspace/dispossessory-case",
+ "resume_brief": "Two deliverables: (1) Create new PRIVATE GitHub repo mhvnsnt/dispossessory-case (or similar name) holding everything a lawyer needs: case facts 26DV-0118, timeline, damages documentation from owner's own words (mother's death no will, family theft pre-probate, John's shady dealings, hit by car + false arrest, year homeless, job instability, 2 children lost to stillbirth/miscarriage in 3 years), filed documents inventory, GLSP call sheet, his statement. (2) Document his full story in the atlas repo (mhvnsnt/atlas) as personal history. Private repos. Branch->PR->merge. Mark done when both landed.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-14T14:39:43.395575+00:00",
+ "notes": "DONE. Private repo mhvnsnt/dispossessory-case created+pushed (README, CASE-FACTS, TIMELINE, DAMAGES, OWNERS-STATEMENT verbatim, GLSP-CALL-SHEET, DOCUMENTS/INVENTORY). Atlas about/FACTS.md updated via PR #10 merged."
+}

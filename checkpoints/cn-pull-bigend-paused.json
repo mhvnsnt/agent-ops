@@ -1,0 +1,16 @@
+{
+ "task": "CN Pull Bigend \u2014 Adventure Time chunks 2-7 PAUSED",
+ "status": "paused",
+ "paused_at": "2026-10-16T18:55:19.626048+00:00",
+ "paused_by": "owner directive 2026-10-16 ~13:58 EDT: push the 8GB chunk, stop the rest, resume after disk cleanup",
+ "detail": "Adventure Time.zip is 51.68GB total, 7 chunks x 8GB. Chunk 1/7 downloaded 100% and is being pushed to GitHub + TeraBox. Chunks 2-7 never started. Pull script already stopped (failed upload at 12:42, no active pull processes). Resume after disk cleanup is done.",
+ "resume_brief": "Resume Adventure Time.zip chunks 2-7 download from IA. Chunk 1/7 is on GitHub (mhvnsnt/cn-gigaleak-adventure-time release at-cnzip-20261015) + TeraBox (/CN-Gigaleak/Adventure-Time/). Continue chunked pull per PULL-PLAN.md, split parts UNDER 2GB (1900M) for GitHub releases.",
+ "updated_at": "2026-10-16T18:02:00-05:00",
+ "watchdog": false,
+ "guardian_push": {
+  "at": "2026-10-16T17:55:00-05:00",
+  "by": "disk-space-guardian cron run",
+  "action": "executing owner directive 'push the 8GB chunk' \u2014 parts re-split aa..aq (17 parts, 8GiB total); aa..ae already on release at-cnzip-20261015, pushing af..aq via ~/workspace/cn-pull-bigend/push-chunk1.py (upload + size-exact + 3x2MiB range-hash verify per part). On ALL VERIFIED: local work-at/ (16G) deleted, then this checkpoint updated. TeraBox side of chunk 1 NOT done here (needs browser lane) \u2014 lane resume still owes TeraBox /CN-Gigaleak/Adventure-Time/.",
+  "handoff": "2026-10-16 18:02 CDT: guardian run ending with push in flight (af..aq uploading). Next guardian run or push completion: when push-chunk1.log shows ALL VERIFIED, delete work-at/ (16G) and update this checkpoint."
+ }
+}

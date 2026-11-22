@@ -1,0 +1,10 @@
+{
+ "task": "EP02 v4 dialogue placement \u2014 apply owner's 2026-10-10 review corrections",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/trippedd-studio/production/WIZARD_GANG_EP01",
+ "resume_brief": "Apply owner dialogue corrections to EP02 v3, output v4. Source: wizard-gang-ep02-final-v3.mp4 (344.9s). Voice files in voice-delivery/ and ep02-audio/static/. Moves: L3 125->81 (spray paint), P2 91->90 (ghost 1:30), N1 102->113 (Ashes 1:53), L8 173.5->172, L9 181.5->180 (claw 3:00), L10 189.5->189.6 (travel 3:10), L12 220->211 (dumplings 3:31), L18 274->271.5 (carnival), H3 312->279 (Sombra bear), C3 282->281.5 (grill), L20 288.3->289.5 (clear C3). FLAG: Cipher 2:01-2:10 has no spare lines. Build: extract v3 audio, remove moved lines' old positions, mix new placements, mux with stream-copied video to wizard-gang-ep02-final-v4.mp4. Verify no overlaps/clipping. Do NOT add BGM/SFX. Pilot 0-50s untouched.",
+ "updated_at": "2026-10-10T21:35:00Z",
+ "attempts": 1,
+ "notes": "V4 built successfully. 10 lines moved: L3->81s, P2->90s, N1->113s, L9->181.2s, L10->189.6s, L12->211s, L18->273.7s, H3->281.2s, C3->283.7s, L20->291.6s. All verified audible at new positions, old positions muted. No new overlaps (only 3 pre-existing known-good). Duration 344.9s. Pilot untouched. FLAGGED: Cipher 2:01-2:10 (121-130s) has Cipher on screen talking but NO spare Cipher lines exist (C1/C2/C3 all correctly placed at 4:16/4:21/4:42). Needs new voice work or owner direction. COMPROMISE: H3 at 281.2s (not 277s) and C3 at 283.7s (not 280s) due to line durations vs scene lengths; L18/L17/C3/L20/H3 block is densely packed with no room for owner-exact timestamps without overlap."
+}

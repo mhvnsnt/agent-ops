@@ -1,0 +1,10 @@
+{
+ "task": "audio-fix-work store+free",
+ "repo": "none",
+ "resume_brief": "Audio-fix-work store+free worker. DIR: ~/workspace/audio-fix-work/ (2.3G, main file EP01-THE-WALK-finished-FIXED.mp4 exceeds GitHub 2GB/file limit). Plan: split into 1GB chunks with split -b 1G, create GitHub release ep01-fixed-2026-10-14 on mhvnsnt/drive-storage with title EP01 fixed 2026-10-14 and notes EP01-THE-WALK-finished-FIXED.mp4 split into 1GB parts, reassemble with cat part-* > file, upload all parts, verify each part size via gh release view, ONLY AFTER verification delete local original + split parts, log to ~/workspace/agent-ops/disk-cleanup-log.md, report df -h freed space. CONSTRAINTS: /tmp is 512M tmpfs - never use; if <3G free before split report back; NEVER delete before verification.",
+ "attempts": 1,
+ "notes": "watchdog 2026-10-14 23:55: found release ep01-fixed-2026-10-14 exists with only part-ac (271009821B) uploaded; parts aa/ab still local. Hashing local parts, then uploading aa/ab, byte-verifying all 3 via gh digest, then delete+log. | 2026-10-15 06:10 UTC disk-emergency-lane: verified release ep01-fixed-master-2026-10-14 (draft, id 413366836) has part_aa/ab/ac all state=uploaded, sizes 1G/1G/306M (total 2418493469B), part_aa starts with valid MP4 ftyp header (authed API download). Local audio-fix-work/ already removed by the lane. SAFE.",
+ "status": "done",
+ "watchdog": true,
+ "updated_at": "2026-10-15T06:10:00+00:00"
+}

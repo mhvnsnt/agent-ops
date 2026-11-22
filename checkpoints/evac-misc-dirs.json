@@ -1,0 +1,35 @@
+{
+ "attempts": 1,
+ "dirs": [
+  "~/workspace/cn-gigaleak-pull/ (3.9G)",
+  "~/workspace/torbox-pull/ (551M)",
+  "~/workspace/trippedd-copylane/ (820M)"
+ ],
+ "heartbeat_interval_min": 10,
+ "last_heartbeat": "2026-10-16T16:02:00-04:00",
+ "notes": "REVISED PLAN 2026-10-16 14:50 EDT: TeraBox API blocked. GitHub-first; no deletes until both stores verified. trippedd-copylane: LEAVE ALONE (live JB copy to TRIPPEDD-Production-studios- running, pid 37935). cn-gigaleak-pull: LEAVE ALONE (live gh release upload to cn-gigaleak-fosters-home, pid 37777). torbox-pull: eligible (no active process; extraction lane PARKED). | [watchdog 2026-10-16 16:00 EDT] SCHEMA NOTE: 'repo' intentionally unset \u2014 cross-workspace disk evacuation has no single git repo (schema gap, not breakage; task+resume_brief valid). Lane HEALTHY: heartbeat 15:52 EDT fresh. trippedd-copylane JB-copy PID 37935 + cn-gigaleak gh-upload PID 37777 died in daemon restart, but evacuation upload lanes respawned (new uploader PIDs 34863/36167/36177/36329 active 15:56-16:00 EDT, pushing to GitHub releases). Left running; NOT marking needs_owner.",
+ "resume_brief": "Investigate contents of each dir, identify data vs logs, find right destination (GitHub repo or TeraBox folder), verify backup byte-identical, upload what's missing via tbupload.py, verify, delete local, log to disk-cleanup-log.md. DO NOT TOUCH: active processes, terabox-staging/, game-reverse-engineering/, cn-pull-bigend/, tools/.",
+ "status": "completed",
+ "task": "DISK EVACUATION \u2014 investigate + evacuate three dirs",
+ "updated_at": "2026-10-16T20:01:43.286353+00:00",
+ "watchdog": false,
+ "terabox_blocker": "TeraBox API uploader (tbupload.py) has NO credentials (.creds.json missing). TeraBox uploads SKIPPED; parent handling creds separately. Per revised plan: GitHub upload + verify, then LEAVE local files (GitHub-done, TeraBox-pending). Nothing deleted until both stores verified.",
+ "torbox_pull_status": {
+  "dir": "~/workspace/torbox-pull/",
+  "contents": "gympartner-gaps/: 46 Gym Partner gap files (550MB, Backgrounds AI/EPS/JPG/PSD), pulled 2026-10-15 via TorBox cached torrent 119449922 (46/122 of 123-wanted gap list); manifests (gympartner-manifest.txt 123 files, rs-manifest.txt 2999 files); 2 failed-extract logs",
+  "github": "DONE + VERIFIED: release gym-partner-gaps-torbox-v1 on mhvnsnt/cn-gigaleak-my-gym-partner; tarball sha256 957ddb6ef25317d3728f8ed12973e8280ba7b9dbdd0e7996f59ca6727548f548 matched via full re-download; MANIFEST asset identical.",
+  "terabox": "PENDING (API blocked): upload tarball + manifest to /CN-Gigaleak/gym-partner/ once creds restored",
+  "deleted": "DELETED 2026-10-16 ~16:00 EDT: ~/workspace/torbox-pull/gympartner-gaps/ (46 files, 550MB) after byte-identical GitHub verify. Kept manifests/logs + gympartner-manifest-remaining.txt (77).",
+  "lane_state": "extraction lane PARKED (watchdog, TorBox CDN degraded + disk gate); 76 remaining gaps un-pulled; resume via checkpoint cn-pull-torbox-big-20261015.json"
+ },
+ "trippedd_copylane_status": {
+  "action": "LEFT ALONE",
+  "reason": "live JB copy lane running (pid 37935, gh tree-build to mhvnsnt/TRIPPEDD-Production-studios-); jb-progress.json mtime fresh. Also batch-008 tar running in ~/workspace/terabox-staging/game-re (pid 37914)."
+ },
+ "cn_gigaleak_pull_status": {
+  "action": "LEFT ALONE",
+  "reason": "live lane running gh release upload fosters-001-cowchicken-v1 (pid 37777) from staging/parts-fosters001 to mhvnsnt/cn-gigaleak-fosters-home. 2.4G staging + 1.6G terabox-staging + catalogs/logs are the lane working area."
+ },
+ "plan_note": "SHARPENED DIRECTIVE 2026-10-16 ~14:56 EDT: GitHub 100% + verified = sufficient for deletion (non-game files). TeraBox not required before delete. After byte-verify: delete ~/workspace/torbox-pull/gympartner-gaps/, keep manifests/logs + gympartner-manifest-remaining.txt (77) for TorBox lane resume, log deletion.",
+ "result_summary": "torbox-pull: EVACUATED (GitHub-verified, local deleted, logged). trippedd-copylane: LEFT ALONE (live lane). cn-gigaleak-pull: LEFT ALONE (live lane)."
+}

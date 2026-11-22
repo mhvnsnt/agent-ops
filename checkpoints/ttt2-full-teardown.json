@@ -1,0 +1,10 @@
+{
+ "task": "TTT2 FULL DOWNLOAD + TEARDOWN",
+ "repo": "western-heart",
+ "resume_brief": "TTT2: 26/26 chunks on GitHub Release ttt2-7z-v1 (13.3GB total). Need: download all chunks, extract (needs ~27GB disk - WAIT for disk <75%), full teardown (models, stages, audio, movesets, UI) into teardown/tekken-tag-2/. Then wire key assets into game/. Disk currently 89% - DO NOT START until disk-space-guardian gets below 75%. Commit via branch->PR->merge.",
+ "status": "needs_owner",
+ "watchdog": true,
+ "attempts": 3,
+ "updated_at": "2026-10-14T21:45:08.900007+00:00",
+ "notes": "watchdog 2026-10-14 11:18 EDT: resumed stale checkpoint (no heartbeat ~6h). Disk 79% (78G/100G) - still ABOVE the 75% gate, so 13.3GB chunk download + ~27GB extract cannot start. TTT2 chunks remain GitHub-Release-only (ttt2-7z-v1, 26/26). Docs present in teardown/tekken-tag-tournament-2/ (TEARDOWN.md, INVENTORY.md, ROSTER.md, STAGES.md, extracted-small/, written 11:04 today). Gate owned by disk-space-guardian; left gated, no download started (would breach 88% hard ceiling). | Watchdog 2026-10-14 17:41 EDT (run 3): still gated \u2014 disk 89% (87G/100G, above the 88% hard ceiling and the 75% start gate), so 13.3GB chunk download + ~27GB extract cannot start. Verified: no ttt2 procs, no chunk files on disk, local repo dir ~/workspace/western-heart gone (only western-heart-vf5 worktree remains), release ttt2-7z-v1 intact on mhvnsnt/western-heart (26/26 assets, 13.36GB). Attempts hit 3 -> needs_owner per watchdog rule 7. UNSTICK: when disk-space-guardian gets disk below 75% AND the repo is re-cloned locally, parent may re-arm (status=running) to resume the download+teardown."
+}

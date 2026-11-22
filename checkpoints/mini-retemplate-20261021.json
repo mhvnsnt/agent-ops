@@ -1,0 +1,60 @@
+{
+ "base_main": "7126debfd720ffbeb24273e389f726caf71f6c1a (origin/main at lane start, verified 2026-10-21)",
+ "branch": "feat/mini-retemplate-20261021",
+ "fighters": {
+  "diablo": {
+   "shipped": "game/assets/models (32j MINI)",
+   "status": "DONE: game/assets/models/diablo-house49.glb on main via PR #481 (merged 2026-10-22T01:33Z). Wiring swap (game loading -house49 files) is a follow-up step, not done here.",
+   "textures": "yes - textured front render proof"
+  },
+  "michiko": {
+   "shipped": "game/assets/models (33j MINI)",
+   "status": "DONE: game/assets/models/michiko-house49.glb on main via PR #481 (merged 2026-10-22T01:33Z). Wiring swap (game loading -house49 files) is a follow-up step, not done here.",
+   "textures": "NO - shipped GLB textureless (images=0); measurements-table proof; texture gap flagged, separate known route (SFMLab/rigmodels T7 packs)"
+  },
+  "star": {
+   "reference": "clean-rest Star in rated-M lineage rigs (0 rest flags measured by studio audit) - use as rest reference",
+   "shipped": "game/assets/models/star.glb (904,980 B, 33j, drifted rests: Root/Hips ~120deg, UpLegs ~177, Shoulders ~171; hip-origin frame, geometry min-y -1.0502)",
+   "status": "DONE: game/assets/models/star-house49.glb on main via PR #481 (merged 2026-10-22T01:33Z). Wiring swap (game loading -house49 files) is a follow-up step, not done here.",
+   "textures": "yes - textured front render proof"
+  },
+  "torch": {
+   "shipped": "game/assets/models (33j MINI)",
+   "status": "DONE: game/assets/models/torch-house49.glb on main via PR #481 (merged 2026-10-22T01:33Z). Wiring swap (game loading -house49 files) is a follow-up step, not done here.",
+   "textures": "NO - shipped GLB textureless (images=0); measurements-table proof; texture gap flagged, separate known route"
+  }
+ },
+ "hard_rules": [
+  "Originals preserved - new files beside originals, never overwrite the only copy.",
+  "One Blender at a time machine-wide - check ps first, wait, NEVER kill. (At lane start: Zen lane Cycles render in flight since 23:15.)",
+  "Models only - NO shared fighter code changes (retargeter = T3 lane).",
+  "If a model fights the template: stop on that fighter, document why, move to next.",
+  "Commit+push constantly - box restarts every ~20 min."
+ ],
+ "lane": "mini-retemplate",
+ "method_standard": "tools/rig-pose-studio/STACK-2026-10-21.md (branch feat/rig-pose-studio-20261021 / PR #462): inspect (glb_inspect.py) -> normalize to template (skeleton+rest+axis, conversion ONCE at root) -> re-skin (heat for fresh fits; knn/knn_smooth/diffuse + apply_skin.py --rest-ref for donor transfer) -> validate (auto_rig validate.py + pose_gate.py + rest-pose checks) -> proof (textured front render where textures exist: Star, Diablo; measurements table where not: Michiko, Torch textureless - flag gap, do NOT invent textures).",
+ "notes": [
+  "Disk critical: 98% / 2.1G free at lane start - work lean, sparse checkout, no full-repo clone.",
+  "PR #462 (rig-pose-studio) is OPEN/UNSTABLE (CI outage) - its tools live in ~/workspace/_rigstudio-work; glb_inspect.py usable from there.",
+  "Star frame defect was separately fixed in PR #462 via a saved rig.frame control (translate +1.05016) - that is a customization-layer fix on the DRIFTED skeleton; this lane's re-template supersedes it with a normalized skeleton+frame at the model level.",
+  "RELAUNCH #2 (2026-10-22 ~00:35 CDT): builder = scratch/tools/retemplate.py - pure-python GLB surgery, donor skeleton rotations verbatim from pantera.glb (game/assets, main), positions fitted from target own bind joints, frame RotY180+floor translate applied ONCE at root, weights remapped from model OWN weights (KNN k=1 finger-chain split). Donor finger asymmetry noted: no LeftHandThumb3/RightHandPinky3/LeftHandPinky3 in actual pantera HOUSE-49.",
+  "Star shipped GLB has images=0 and a single untextured material (no baseColor map/factor) - like Michiko/Torch it carries NO texture in the shipped file; proof render will be for lane QA; owner-facing proof = measurements (flag: Star texture lives outside shipped GLB - cf. ratedm-work basecolor PNGs for other attires).",
+  "2026-10-22 ~01:00 CDT: all 4 models committed+pushed (branch feat/mini-retemplate-20261021 created on remote). Measurements doc at docs/mini-retemplate-20261022/MEASUREMENTS.md. REMAINING: Diablo textured front render + Star QA render (Blender saturated by CS/DEATHFANG lanes - waiting for slot, do NOT start a competing Blender), commit render, open PR with gate-format body (draft in scratch PR-BODY.md), merge only when CLEAN. Builder+validator scripts live in ~/workspace/_mini-rt-scratch/tools/ (retemplate.py, validate_skin.py) - copy into PR proof or rerun from scratch.",
+  "COMPLETE 2026-10-22: PR #481 MERGED (merge commit 3173b0c1d9f78f404eca0e3a3c5d0a9875e62c38). Proof: docs/mini-retemplate-20261022/MEASUREMENTS.md + diablo-front.png (software-rasterizer render of the actual GLB, lane-viewed; Blender saturated machine-wide) + builder scripts in docs/mini-retemplate-20261022/tools/. Star QA clay render viewed by lane: upright/planted/facing front. FOLLOW-UPS: (1) wiring swap so the game loads the -house49 files; (2) textures for Star/Michiko/Torch via the SFMLab/rigmodels route; (3) in-game playtest of the four on the new skeleton.",
+  "RELAUNCH #3 (2026-10-22 ~01:45 CDT): coordinator-side verification done by the relaunch lane itself - PR #481 confirmed MERGED via gh (merge commit 3173b0c1d9f78f404eca0e3a3c5d0a9875e62c38, 2026-10-22T01:33:22Z) and all four -house49 GLBs confirmed present on main in game/assets/models. Main re-template job stands COMPLETE. Remaining add-on: Star A/B floor renders (kit at agent-ops/star-ab-owed/) - not yet produced; lane is waiting for a zero-Blender instant (box saturated: chrone render + CS round-2 chain), then renders, views both, appends A/B record to tools/rig-pose-studio/ACCEPTANCE-2026-10-21.md on feat/rig-pose-studio-20261021 (worktree ~/workspace/_star-ab-work @854a954), pushes.",
+  "STAND-DOWN ACKNOWLEDGED (relaunch #3, 2026-10-22 ~01:52 CDT): parent confirmed the re-template program is COMPLETE via predecessor relaunch #2 / PR #481 (merged, commit 3173b0c1) - this lane ran NO re-templating, rebuilt NO tool, touched NO -house49 file. Lane actions were read-only verification (gh pr view 481, contents API, checkpoint/kit reads) + one checkpoint note + one wait-for-Blender-gap loop for the Star A/B renders, which died by SIGTERM at the tool layer after ~6 min having produced NOTHING (no gap opened, no Blender launched, no render files exist). STAR A/B RENDERS REMAIN OWED - kit preserved at agent-ops/star-ab-owed/ (README has the exact run command; worktree ~/workspace/_star-ab-work @854a954). FOR THE FOLLOW-UP LANE (owner additions 2026-10-21 ~20:42-20:46 CDT, received by this lane just before stand-down): (a) STAR TEXTURES = HARD DELIVERABLE - bake/embed her textured lineage sources (Tripo attires / PR #291 set / rated-M clean-rest lineage) into the shipped GLB; proof = images count > 0 + textured render viewed; general rule: source textured => output ships textured, pipeline must never strip; Michiko/Torch sources genuinely textureless as pulled - state it + the SFMLab/rigmodels T7 route explicitly. (b) ORIGINAL-COMPARISON GATE as CLARIFIED: original model = reference for BODY INTEGRITY ONLY (proportions, bone placement, weight behavior, clean deformation under animation) - NOT pose; animations/poses move freely and pass; stretched/crumpled/twisted/torn anatomy under correct-looking animation FAILS. (c) Wiring swap (game loads -house49 files) + in-game playtest also belong to the follow-up lane. THIS LANE CLOSED."
+ ],
+ "owner_order": "TEMPLATE DIRECTIVE 2026-10-21: everybody onto the template skeleton from the most recent Tekken teardown. Dispatched from Rig & Pose Studio audit (PR #462).",
+ "predecessor_state": "Predecessor created worktree+branch (sparse checkout) at origin/main, committed NOTHING, left no checkpoint. This relaunch resumes from zero work product; branch is clean at current main.",
+ "repo": "mhvnsnt/western-heart",
+ "scope": "MINI-33/32 family full re-template onto HOUSE-49/50 T7 King-family template. Order: STAR, MICHIKO, TORCH, DIABLO.",
+ "steps": {
+  "diablo": "DONE - PR #481 MERGED 3173b0c1",
+  "final_report": "done - PR #481 merged CLEAN, all 3 checks SUCCESS",
+  "michiko": "DONE - PR #481 MERGED 3173b0c1",
+  "star": "DONE - PR #481 MERGED 3173b0c1",
+  "survey_and_checkpoint": "done",
+  "torch": "DONE - PR #481 MERGED 3173b0c1"
+ },
+ "worktree": "~/workspace/_mini-retemplate-work"
+}

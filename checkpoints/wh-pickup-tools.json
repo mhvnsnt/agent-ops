@@ -1,0 +1,9 @@
+{
+  "task": "Pull GNM face+body morphing tools into customization/tools/ and extract DOA customization parts into customization/parts/doa/",
+  "repo": "/home/hatch/workspace/western-heart",
+  "resume_brief": "Continue customization tooling pickups. Workdir /home/hatch/workspace/western-heart, branch feat/customization-tools-20261013. (1) GNM/GMN face+body morphing tools: find open-source morph tooling for the customization suite, pull into customization/tools/ with README (source, license, wiring). (2) DOA customization parts: extract available DOA parts/menus into customization/parts/doa/ with index update; if sources unavailable, document the precise gap and move on. Branch->PR->merge, zero open PRs. Heartbeat this checkpoint after every step.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-14T02:08:08.224551+00:00"
+}

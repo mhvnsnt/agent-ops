@@ -1,0 +1,9 @@
+{
+ "task": "Custom font + HUD art + menu art + hit FX art for Concrete Dragon",
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "ART/UI OVERHAUL for Concrete Dragon (~/workspace/ConcreteDragon). Owner wants: custom fonts, game art, HUD art, menu art. (1) CUSTOM FONT: pick a distinctive OFL display font (Google Fonts, self-hosted \u2014 game already uses Bungee/Anton/Bebas; find something with street character), style it (outline/gradient/texture) to feel custom. (2) HUD ART: health bars, energy meter, combo counter styling pass. (3) MENU ART: title screen, character select, pause menu backgrounds \u2014 must match the game's blocky-fighter aesthetic. (4) HIT FX ART: impact flashes, KO splash. Pull free/open-source first: Kenney UI/particle packs, game-icons.net (CC BY, already credited), Google Fonts. Generate only what can't be sourced, strictly in the game's existing visual style (no false-advertising law: promo uses real game; in-game art must match the game's look). Branch art-ui -> PR -> merge (never direct to main). Heartbeat ~/workspace/agent-ops/checkpoints/cd-art-ui.json after every step; incremental commits. Owner reviews all art with his own eyes \u2014 capture before/after shots of every screen.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-09T17:35:00+00:00"
+}

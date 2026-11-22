@@ -1,0 +1,16 @@
+{
+  "task": "DEEP RESEARCH: proven tooling + correct method to finish and wire every unfinished teardown (UR, T6 PSP, DOA4, Def Jam, SCII, SF EX, TTT2, T5) \u2014 research + pull-in only, docs to repos via additions-only PRs",
+  "repo": "mhvnsnt/game-reverse-engineering + mhvnsnt/western-heart",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 1,
+  "updated_at": "2026-10-21T01:37:16.537043+00:00",
+  "resume_brief": "Deep research lane (owner order 2026-10-20 ~19:20 CDT). Read the 4-game wiring standard first (western-heart PRs #382/#379/#374/#375/#385 inventory+verification docs), then per-game web research on proven open-source tools/format docs for each named GAP, closest-to-done first (Urban Reign bind matrices/bone assignment; T6 PSP decrypt6 distance formula + GMO; DOA4 keystream/chrthree/anm.afs). Deliver research docs via additions-only PRs (game-reverse-engineering for format/tool findings, western-heart docs/research/ for wiring standard) with per-game pull-in log + which sweep lane each finding serves. Spawned child researchers per game; synthesize their sourced findings, never fabricate.",
+  "notes": [
+    "2026-10-20 ~19:30 CDT: lane started. Disk 89%/12G free. gh auth OK as mhvnsnt.",
+    "2026-10-20 ~19:45 CDT: 8 child researchers spawned (UR, T6PSP, DOA4, DefJam, SCII, SFEX, TTT2, T5) after several sqlx spawn-failure retries. Wiring standard located: western-heart teardown/tekken3/{ASSET-MANIFEST,INDEX,RESEARCH,SPEC,WIRING-AUDIT,WIRING-INVENTORY}.md \u2014 fetching inventory+audit raw text in background. Next: synthesize findings into PR docs (GRE for format/tool, WH docs/research for wiring standard) once researchers return.",
+    "[watchdog 2026-10-20 20:31 CDT] verified ALIVE: findings actively being written to ~/workspace/deep-research-work/findings/ (doa4.md 20:30, def-jam.md 20:20, tekken6-psp.md 20:06, urban-reign.md 20:16, etc). Checkpoint heartbeat lags researcher activity \u2014 not dropped work. Next runs: do not resume while children are writing.",
+    "2026-10-20 ~20:35 CDT: all 8 researchers returned; findings saved in ~/workspace/deep-research-work/findings/. 10 docs assembled (gre-docs/ 9 files, wh-docs/ 1 file). push.py running detached (log: deep-research-work/push.log) \u2014 contents-API branch+PUTs+PR for both repos with retries. NEXT: verify both PR URLs from push.log, then clear deep-research-work + _research-wh skeleton and log the clear.",
+    "2026-10-20 ~20:42 CDT: DELIVERED. GRE PR #29 https://github.com/mhvnsnt/game-reverse-engineering/pull/29 (9 files: README + 8 game docs under docs/research/teardown-completion-2026-10-20/). WH PR #397 https://github.com/mhvnsnt/western-heart/pull/397 (docs/research/TEARDOWN-WIRING-STANDARD-2026-10-20.md). Local work dirs cleared + logged to disk-cleanup-log.md. PRs left open for the merge sweep (instruction-gate bodies, additions-only)."
+  ]
+}

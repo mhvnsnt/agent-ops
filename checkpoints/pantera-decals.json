@@ -1,0 +1,10 @@
+{
+  "task": "Apply panther decal to Pantera thigh textures",
+  "repo": "~/workspace/game-reverse-engineering",
+  "resume_brief": "Composite panther-decal.png onto King_PantsLower_D.png thigh UV region in ~/workspace/game-reverse-engineering/tekken7/king/pantera/, then re-render 4 views with /tmp/render_pantera.py (Blender headless, run from king/ dir, arg = front|back|left|right). Verify decals visible on both outer thighs.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-12T17:39:19.978420+00:00",
+  "notes": "Decal composited onto King_PantsLower_D.png at tribal design location (x=189,y=150, 163x260px). Texture-space preview verified at /tmp/thigh_decal_preview.png. Blender re-renders BLOCKED: Blender segfaults on startup (Wayland/XDG_RUNTIME_DIR environment issue, exit 134) since ~17:40 CDT. 4 verification renders could not be regenerated. The placement logic is sound: panther was pasted directly over the tribal design UV region that was visible on the thigh in the 17:14-17:18 renders, so it will appear on the outer thigh. Re-render when Blender environment recovers."
+}

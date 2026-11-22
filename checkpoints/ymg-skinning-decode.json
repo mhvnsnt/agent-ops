@@ -1,0 +1,17 @@
+{
+  "task": "YOBJ skinning decoder: crack how model/wrestler/NNN_0.ymg skin batches assemble into posed mesh (000_0.ymg sample); deliver working Python decoder -> OBJ/GLB, or precise blocker + next experiment. Branch->PR->merge. Keep disk <85%.",
+  "repo": "~/workspace/agent-ops/worktrees/wrestling-teardown/wwe-wrestlemania-xix",
+  "resume_brief": "Subagent is decoding WMXIX wrestler .ymg skinning assembly (worktree wwe-wrestlemania-xix). Background docs read; next: inspect tools/yobj_strips.py + yobj_batch_semantics.py, then experiment on 000_0.ymg (H3 12-bit fraction, per-vertex weight scan, delta-encoding, rigid-vs-skinned diff). Checkpoint at ~/workspace/agent-ops/checkpoints/ymg-skinning-decode.json; heartbeat every 15 min.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-15T17:22:10.869958+00:00",
+  "progress": "Decoded YOBJ container fully (header/skeleton/batches/table1/table2/materials). Found Table2 (52 recs). s16x3 batches do NOT assemble as positions under any tested transform. (u16,0) payloads rejected as indices/weights. Writing final report + decoder.",
+  "branch": "feat/ymg-skinning-decoder",
+  "commit": "6176b9a",
+  "push_status": "FAILED - network stalls on git push (large repo + proxy). Branch committed locally.",
+  "deliverables": [
+    "tools/yobj_decode.py (container parser + OBJ exporter)",
+    "docs/YOBJ-SKINNING-DECODER-REPORT.md (11 hypotheses rejected, precise blocker, next experiment)"
+  ]
+}

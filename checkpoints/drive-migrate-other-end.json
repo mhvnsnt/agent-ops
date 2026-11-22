@@ -1,0 +1,10 @@
+{
+ "task": "Migrate Drive automigrate parts from the END of the queue backwards to mhvnsnt/google-drive-repo (other end of the existing lane)",
+ "repo": "mhvnsnt/google-drive-repo",
+ "resume_brief": "Resume: the existing lane (checkpoint google-drive-repo-migrate.json) migrates Drive files named *automigrate-2026-10-12* to mhvnsnt/google-drive-repo release in /tmp/rem2.tsv order. You work the SAME queue from the OTHER END (reverse order). For each file: check gh release assets first and skip if present with matching byte size; download via hatch_gws_cli drive files get; verify local size; gh release upload --clobber; verify asset size via gh release view --json assets; ONLY then trash the Drive file and confirm gone; delete staging. Staging dir ~/workspace/agent-ops/staging-gdrive/parts-other (keep under 1.5GB). Never delete on any mismatch. Heartbeat this checkpoint; mark done when queue exhausted.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-12T22:29:49.418494+00:00",
+ "notes": "DONE 2026-10-12: queue exhausted. 9 files migrated (943,718,400 bytes), all verified on mhvnsnt/google-drive-repo release automigrate-2026-10-12 at exact byte size, all 9 trashed from Drive (confirmed). 20 skips: 8 gone-from-Drive (forward lane), 12 already-on-release at matching size. 0 failures. Staging parts-other/ empty."
+}

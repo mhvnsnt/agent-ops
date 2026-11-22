@@ -1,0 +1,13 @@
+{
+  "attempts": 0,
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "You are Lane B for TRIPPEDD Resource Pull WAVE 30 (re-verification cycle + identity-drift watch). Environment note: disk is 99% full, so DO NOT do a full git worktree. Use a sparse clone instead: git clone --filter=blob:none --no-checkout file:///home/hatch/workspace/trippedd-studio ~/workspace/trippedd-studio-wave30-laneb, then 'git checkout -b wave30-lane-b origin/main' and 'git sparse-checkout set docs/LICENSE_QUARANTINE.md docs/wave30'. Do ALL work in that clone. Push branch wave30-lane-b to origin when done. Do NOT merge. Do NOT touch production/WIZARD_GANG_EP01/. WORK: (1) Re-verify the 10 OLDEST-verified rows in docs/LICENSE_QUARANTINE.md (use verification-date annotations; never-audited pool is exhausted per Wave 29): confirm upstream repo still exists at recorded URL, license file still matches recorded SPDX, no relicense, no repo deletion/archival without note. Record re-verification dates. (2) Identity-drift watch: Helm (GPL, repo archived) \u2014 any forks/continuation or ownership change? telxcc (GPL, upstream deleted, surviving fork verified) \u2014 is the surviving fork still live? any new official successor? Also scan the 10 re-verified rows for drift signals (archived repos, deleted upstreams, renamed orgs). (3) Apply corrections as new dated annotations only \u2014 never rewrite history rows. Refresh manifest header counts if rows change status. COMMIT AND PUSH INCREMENTALLY (every ~5 rows verified). Honest failures go in docs/wave30/lane-b.md. Heartbeat this checkpoint file (updated_at) as you go. Mark status done at end. REPORT to parent: rows re-verified (list), drift findings (Helm/telxcc + any new), corrections applied, commit hash(es), branch name.",
+  "status": "done",
+  "task": "Wave 30 Lane B: re-verification + identity-drift watch",
+  "updated_at": "2026-10-08T04:45:00Z",
+  "watchdog": true,
+  "note": "10 rows re-verified (rows 2,7,9,13,14,17,20,24,27,85); drift watch on Helm(68)/telxcc(236) done; awaiting sparse-clone completion for edits",
+  "commit": "e2d32f77ea05d5ac5d469c409ed853ce0dc3965d",
+  "branch": "wave30-lane-b",
+  "result": "10/10 rows re-verified confirmed; 1 new archived note (row 24); drift re-checks Helm(68)/telxcc(236) unchanged; pushed wave30-lane-b"
+}

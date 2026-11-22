@@ -1,0 +1,7 @@
+# Keep-working pulse — 2026-11-19 17:00 EST
+
+- Subagents: active lanes running, none stuck. 6B follow-up lane (138th successor) running ~8 min, last activity ~7 min ago; DG checkpoint fresh — updated 16:52 EST (~8 min before this run). Pantera throw finish-up coordinator running ~28 min, last activity ~14 min ago, inside a normal long step. Two earlier 134th/135th successors failed on transport error (sqlx pool timeout) but successors 136th/137th completed after them — already recovered, no resume needed. Watchdog audit 16:25 EST: 0 watchdog-managed 'running', ZERO STUCK, 3 live items parked-by-design with heartbeats updated; quiet tick.
+- Disk: home 124G/150G (83%), below 85% threshold — note only. /tmp tmpfs now 5% used (22M/512M) — the 100%-full /tmp noted at the 12:00 pulse has cleared.
+- Grokbot: no new owner commit. docs/grokbot-activity-proof-2026-10-14.md unchanged (committed long ago, b46b0cb, PR #4); HOW-GROKBOT-WORKS.md and GROK_CAPABILITY_STUDY.md unchanged since Nov 7 / Oct 8. Nothing new to read.
+- PRs: cape-jones: none open. western-heart: 20 open listed; fresh ones (#1775 W4 YANM decode, #1774/#1773/#1772 W6 WMXIX, #1770 KoC2, #1769 VPW2, all created today) are active landing work, not stuck; older open PRs are held/proof-only/draft by design (e.g. #1701 CAVEATED do-not-merge, #1678 PROOF do-not-merge, #1090 HELD FOR APPROVAL). #1762 deletion PR still open from 14:28 EST — merge call is owner's/steward's, not a pulse action. No PR needs a pulse resume.
+- Verdict: work moving; nothing stuck, nothing to report.

@@ -1,0 +1,9 @@
+{
+ "task": "Concrete Dragon full menu/UX/narrative audit: play the current build, catalog every screen",
+ "repo": "~/workspace/ConcreteDragon",
+ "resume_brief": "Audit every menu/UX/narrative screen in the Concrete Dragon build at ~/workspace/ConcreteDragon (GitHub mhvnsnt/ConcreteDragon). Create worktree ~/workspace/ConcreteDragon-uxaudit from current main. Play the build in headless Chromium (mobile portrait 390x844 AND landscape 844x390 viewports). Catalog EVERY screen: title, tap-to-start, character select, mode select, mission/stage select, options/settings, pause, results, continue, game over, patch notes, tutorial hints, mission intro cards, boss intros, HUD. For each screen record: screenshot, word count, number of interactive elements, touch target sizes, whether scrolling is needed, text readability (font sizes), navigation flow (how you got there, how you leave). Identify: missing menus (what should exist but doesn't), text overload (too many words per screen), tiny touch targets, dead ends, confusing flows, narrative gaps (where story should be but isn't), cutscene/mission-scene opportunities. Write findings to docs/UX-AUDIT.md in the worktree (do NOT merge \u2014 this is an audit, not a fix; the fix cycles come after). Branch -> PR with the audit doc so it's reviewable, or just leave the doc in the worktree and report. Heartbeat the checkpoint ~/workspace/agent-ops/checkpoints/cd-menu-ux-audit.json after every step. Mark done at the end.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-10T05:17:21.391526+00:00"
+}

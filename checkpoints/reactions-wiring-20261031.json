@@ -1,0 +1,610 @@
+{
+  "task": "I follow-up: wire t3_row for the proven-grade G-R1 reaction fills (audit PR #1367) per-fighter via instruction-gate PRs; update F12 coverage numbers at the end",
+  "status": "complete",
+  "watchdog": true,
+  "repo": "mhvnsnt/western-heart",
+  "resume_brief": "Reactions wiring lane. Audit done (PR #1367, F12 in docs/WH-100-GAP-INVENTORY-2026-10-30.md; tool tools/audit_reactions.py; prior scratch ~/workspace/_reactions-audit/ with audit_reactions2.py + results2.json + verify_engine.mjs). Fill rule (from the audit): damaging strike (damage>0, not throw), t3_row null, anim_t3.row present, anim bank dir == fighter bank dir, bank row classifies pick/pick_grounded_only under selectReactionSlot order, anim_t3.match grade in PROVEN=('true-map branch-graph','true-map exact','class-verified remap') -> set t3_row = anim_t3.row. Prior count 2,098 across 63 files at main f2137c06; RE-MEASURE against current main and use the re-measured set. NEVER touch mid/guess grades, chatur (G-R3), zen (G-R2), 29 no-bank files (G-R4), proxy rebuilds (G-R5). Land per-file instruction-gate PRs via Git Data API (fetch file content fresh at current main HEAD per PR, validate targets against fresh content, byte-preserving text edits), self-merge when MERGEABLE + all checks green, zero deletions. Final PR: update F12 numbers in the inventory doc from a full audit re-run on final main. Scratch: ~/workspace/_reactions-wiring-20261031/.",
+  "updated_at": "2026-10-31T19:22:22.929763+00:00",
+  "attempts": 1,
+  "notes": "COMPLETE. 65 wiring PRs (#1380-#1456) + doc PR #1460, all gh-verified merged, zero deletions, additions==fills on every PR. Closing audit (shipped tools/audit_reactions.py on 104d9c9a): picks 17,500 (36.5%), no_t3_row 27,904, fillable_proven absent; build-plan re-run = 0 fills. Remaining: mid 4,500 / guess 8,412 (F3 pool), G-R2 row_miss 1,211 strikes (zen 644 unmapped), G-R3 chatur 21 list-valued, G-R4 29 no-bank files, G-R5 proxy 1,807 strikes.",
+  "completed_at": "2026-10-31T19:22:22.929763+00:00",
+  "result": {
+    "strikes_wired": 2120,
+    "prs_merged": 65,
+    "doc_pr": {
+      "pr": 1460,
+      "merge_commit": "8f24e9d5c1c338bbf3cf229d765511a6952488f2"
+    },
+    "coverage_before": "15,380/47,987 = 32.1%",
+    "coverage_after": "17,500/47,987 = 36.5%",
+    "audit_head": "104d9c9ad7a7933f6f6fd3170d5107004834cae0",
+    "proven_remainder": 0,
+    "per_file": [
+      {
+        "stem": "chordz",
+        "pr": 1380,
+        "merged": true,
+        "merge_commit": "1dfdb183b35096d262682acba597bc23a6c9337c",
+        "fills": 1,
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "stem": "t3-hwoarang",
+        "pr": 1381,
+        "merged": true,
+        "merge_commit": "070064217afbdf4c5099d49e070e56f6981866c5",
+        "fills": 88,
+        "additions": 88,
+        "deletions": 0
+      },
+      {
+        "stem": "t3-nina",
+        "pr": 1382,
+        "merged": true,
+        "merge_commit": "a083615f29cfef2c09ef76d168259a760a70cf18",
+        "fills": 107,
+        "additions": 107,
+        "deletions": 0
+      },
+      {
+        "stem": "tobi",
+        "pr": 1383,
+        "merged": true,
+        "merge_commit": "05ab95bf35bb15ae304471c659ab59328eefc55e",
+        "fills": 88,
+        "additions": 88,
+        "deletions": 0
+      },
+      {
+        "stem": "awapop",
+        "pr": 1386,
+        "merged": true,
+        "merge_commit": "347b878c16b7983ed6c06689d3acf497f3d43f1f",
+        "fills": 86,
+        "additions": 86,
+        "deletions": 0
+      },
+      {
+        "stem": "sha",
+        "pr": 1387,
+        "merged": true,
+        "merge_commit": "2c6213bf458f56b3907f7d848e84d80324b57fb8",
+        "fills": 22,
+        "additions": 22,
+        "deletions": 0
+      },
+      {
+        "stem": "samura1",
+        "pr": 1388,
+        "merged": true,
+        "merge_commit": "a391e2a3240ff943272ab69954944355fac7638e",
+        "fills": 27,
+        "additions": 27,
+        "deletions": 0
+      },
+      {
+        "stem": "demonio",
+        "pr": 1389,
+        "merged": true,
+        "merge_commit": "7eadf933f7a0d45bd423d526f70603d981036e5e",
+        "fills": 21,
+        "additions": 21,
+        "deletions": 0
+      },
+      {
+        "stem": "t3-anna",
+        "pr": 1390,
+        "merged": true,
+        "merge_commit": "3ada4436e81b08cc295a4365ec542902c3931449",
+        "fills": 82,
+        "additions": 82,
+        "deletions": 0
+      },
+      {
+        "stem": "sakura",
+        "pr": 1391,
+        "merged": true,
+        "merge_commit": "d3585ee5f5d1212cef7ae7eb7f81ec6b8c23ac20",
+        "fills": 21,
+        "additions": 21,
+        "deletions": 0
+      },
+      {
+        "stem": "gyou",
+        "pr": 1392,
+        "merged": true,
+        "merge_commit": "1b53c8e1ecfbcc913518efbe47910117417cfd88",
+        "fills": 81,
+        "additions": 81,
+        "deletions": 0
+      },
+      {
+        "stem": "yukihyo",
+        "pr": 1394,
+        "merged": true,
+        "merge_commit": "ce7dac06acbb79d76a2bd2ffc7bb2caa4c5af31d",
+        "fills": 20,
+        "additions": 20,
+        "deletions": 0
+      },
+      {
+        "stem": "demonio-human",
+        "pr": 1395,
+        "merged": true,
+        "merge_commit": "4d1541e08567736465a57740bd6a18b95f24c971",
+        "fills": 17,
+        "additions": 17,
+        "deletions": 0
+      },
+      {
+        "stem": "t3-eddy",
+        "pr": 1396,
+        "merged": true,
+        "merge_commit": "710f5ee533d532ddf2d5a967dc1453db057a4ccf",
+        "fills": 81,
+        "additions": 81,
+        "deletions": 0
+      },
+      {
+        "stem": "t3-law",
+        "pr": 1398,
+        "merged": true,
+        "merge_commit": "2d5f008f556ee07147eae6a470f9fecf131fa2c1",
+        "fills": 81,
+        "additions": 81,
+        "deletions": 0
+      },
+      {
+        "stem": "sf-blanka",
+        "pr": 1399,
+        "merged": true,
+        "merge_commit": "f2deb7f64c2d2d8de275f3f198d97742a3b56c54",
+        "fills": 11,
+        "additions": 11,
+        "deletions": 0
+      },
+      {
+        "stem": "buffalo-bill",
+        "pr": 1400,
+        "merged": true,
+        "merge_commit": "c1f89eb8df599003a5b32ab181dae85138ef770d",
+        "fills": 78,
+        "additions": 78,
+        "deletions": 0
+      },
+      {
+        "stem": "sf-ken",
+        "pr": 1401,
+        "merged": true,
+        "merge_commit": "2eb116a3546d3ae50dab5091dec152d6394c146f",
+        "fills": 9,
+        "additions": 9,
+        "deletions": 0
+      },
+      {
+        "stem": "sf-ryu",
+        "pr": 1402,
+        "merged": true,
+        "merge_commit": "0cb3fa435203bfabb67075712921836a1f4124a0",
+        "fills": 9,
+        "additions": 9,
+        "deletions": 0
+      },
+      {
+        "stem": "aotsuki",
+        "pr": 1404,
+        "merged": true,
+        "merge_commit": "0e11db6d931693d523d6ac0c8a45bf215e38d617",
+        "fills": 77,
+        "additions": 77,
+        "deletions": 0
+      },
+      {
+        "stem": "gashadokuro",
+        "pr": 1405,
+        "merged": true,
+        "merge_commit": "777cc2dd978f7277acee29dc472dba04e7b69e34",
+        "fills": 77,
+        "additions": 77,
+        "deletions": 0
+      },
+      {
+        "stem": "sf-vega",
+        "pr": 1406,
+        "merged": true,
+        "merge_commit": "ae9b00ed08ab07deb0ffbb076a1da1f6b864adaf",
+        "fills": 9,
+        "additions": 9,
+        "deletions": 0
+      },
+      {
+        "stem": "t3-kuma",
+        "pr": 1407,
+        "merged": true,
+        "merge_commit": "be176a96e64b4c5193841b03f6744c7f5b53c606",
+        "fills": 77,
+        "additions": 77,
+        "deletions": 0
+      },
+      {
+        "stem": "sf-zangief",
+        "pr": 1408,
+        "merged": true,
+        "merge_commit": "d763c2b330ff28b06d458a9130d77b68b9627bd7",
+        "fills": 9,
+        "additions": 9,
+        "deletions": 0
+      },
+      {
+        "stem": "demonio-winged",
+        "pr": 1409,
+        "merged": true,
+        "merge_commit": "14fd8497760c8e9ca7114cd873ad10fe8f0e64b1",
+        "fills": 8,
+        "additions": 8,
+        "deletions": 0
+      },
+      {
+        "stem": "kai",
+        "pr": 1410,
+        "merged": true,
+        "merge_commit": "d6ef99092432e2e8f0242cafeb067ed2a18610b3",
+        "fills": 76,
+        "additions": 76,
+        "deletions": 0
+      },
+      {
+        "stem": "pantera",
+        "pr": 1411,
+        "merged": true,
+        "merge_commit": "365655e5c9fa11fafc922cce09c54589ea5605af",
+        "fills": 28,
+        "additions": 28,
+        "deletions": 0
+      },
+      {
+        "stem": "doc-frank-hood",
+        "pr": 1414,
+        "merged": true,
+        "merge_commit": "e0886298ba2cd42734d92d1068361b27cfae48d8",
+        "fills": 65,
+        "additions": 65,
+        "deletions": 0
+      },
+      {
+        "stem": "doc-frank-machine-shop",
+        "pr": 1415,
+        "merged": true,
+        "merge_commit": "a12b06598529fbb96aee90f83d5b7d6fb0aafb9d",
+        "fills": 65,
+        "additions": 65,
+        "deletions": 0
+      },
+      {
+        "stem": "docfrank",
+        "pr": 1416,
+        "merged": true,
+        "merge_commit": "977f8c8e956c318acbf76c91caf6d9f48ede9bbb",
+        "fills": 8,
+        "additions": 8,
+        "deletions": 0
+      },
+      {
+        "stem": "sf-akuma",
+        "pr": 1417,
+        "merged": true,
+        "merge_commit": "9f625340616cdb3f622b032d2554da3b05391a47",
+        "fills": 8,
+        "additions": 8,
+        "deletions": 0
+      },
+      {
+        "stem": "doc-frank-wowomomo",
+        "pr": 1418,
+        "merged": true,
+        "merge_commit": "c5890796d6eb2a672c7dfd5be4aad7745295a53f",
+        "fills": 65,
+        "additions": 65,
+        "deletions": 0
+      },
+      {
+        "stem": "koreshi",
+        "pr": 1419,
+        "merged": true,
+        "merge_commit": "1283206b6f137183ee4c086eaa75ba7b221134a1",
+        "fills": 4,
+        "additions": 4,
+        "deletions": 0
+      },
+      {
+        "stem": "kronos-attire2",
+        "pr": 1420,
+        "merged": true,
+        "merge_commit": "cbf9387b6a6e02a5737e28a675ca2bf4f641f0d5",
+        "fills": 3,
+        "additions": 3,
+        "deletions": 0
+      },
+      {
+        "stem": "torch",
+        "pr": 1421,
+        "merged": true,
+        "merge_commit": "a6140a59d71b2d642dae7a768680706f133766aa",
+        "fills": 64,
+        "additions": 64,
+        "deletions": 0
+      },
+      {
+        "stem": "kingtyrant",
+        "pr": 1422,
+        "merged": true,
+        "merge_commit": "e8f83dba4609883b716a0ae371f672072c344370",
+        "fills": 55,
+        "additions": 55,
+        "deletions": 0
+      },
+      {
+        "stem": "kronos",
+        "pr": 1423,
+        "merged": true,
+        "merge_commit": "bba8167f6d9314dad119ed0c5a6456cfe5c6b9ac",
+        "fills": 3,
+        "additions": 3,
+        "deletions": 0
+      },
+      {
+        "stem": "vega",
+        "pr": 1424,
+        "merged": true,
+        "merge_commit": "a6e5c4fd36b48d918a784f76811b50f5dd0b727d",
+        "fills": 3,
+        "additions": 3,
+        "deletions": 0
+      },
+      {
+        "stem": "blanka",
+        "pr": 1425,
+        "merged": true,
+        "merge_commit": "14a94d3cb249230b2101b0b94a8a69a4160a9da7",
+        "fills": 2,
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "stem": "charger-attire2",
+        "pr": 1427,
+        "merged": true,
+        "merge_commit": "3d54f4476a277a33ad7ff0a18898e45b72ea62d5",
+        "fills": 2,
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "stem": "charger",
+        "pr": 1428,
+        "merged": true,
+        "merge_commit": "687185d50489153a9ab9bd6fba6887115618c396",
+        "fills": 2,
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "stem": "jin_soul",
+        "pr": 1429,
+        "merged": true,
+        "merge_commit": "f5ea5970057265bb991a69d65d7d08633a79f49e",
+        "fills": 2,
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "stem": "ryuji-rock",
+        "pr": 1430,
+        "merged": true,
+        "merge_commit": "d26e89931a87eaf3da643e50cd760be3f0d8b83e",
+        "fills": 2,
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "stem": "star",
+        "pr": 1431,
+        "merged": true,
+        "merge_commit": "ad9a150ca89dc2c1c54549e516a4c46c9bf0200b",
+        "fills": 2,
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "stem": "cyborgx",
+        "pr": 1433,
+        "merged": true,
+        "merge_commit": "7ea0be2a457cd1805ce8a5c36e4ef0a40b18e834",
+        "fills": 1,
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "stem": "deathfang-werewolf",
+        "pr": 1434,
+        "merged": true,
+        "merge_commit": "5a7920d2bfa99ed69e5dd5e73b5bb034f5c88160",
+        "fills": 1,
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "stem": "deathfang",
+        "pr": 1435,
+        "merged": true,
+        "merge_commit": "2177bb719bbff310b1384bbd50d4e08d96b72a99",
+        "fills": 1,
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "stem": "gyou-spirit-body",
+        "pr": 1436,
+        "merged": true,
+        "merge_commit": "127267ed5d483fcb4de1ac449c3bca518de22227",
+        "fills": 1,
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "stem": "kinpo",
+        "pr": 1437,
+        "merged": true,
+        "merge_commit": "df508391ec3a4cea9f72e6e0990e4478d12fbb1a",
+        "fills": 1,
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "stem": "mariposa-monarch",
+        "pr": 1438,
+        "merged": true,
+        "merge_commit": "0ef640ed7eb4400bd54ca6e4d92870a358c47f57",
+        "fills": 1,
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "stem": "t3-paul",
+        "pr": 1440,
+        "merged": true,
+        "merge_commit": "1850dbe3f58f196412075e45f98339fce187ac08",
+        "fills": 45,
+        "additions": 45,
+        "deletions": 0
+      },
+      {
+        "stem": "doc-frank-frankenstein",
+        "pr": 1441,
+        "merged": true,
+        "merge_commit": "3a1e13b73a35b06ad5c328032085420a5408f08b",
+        "fills": 52,
+        "additions": 52,
+        "deletions": 0
+      },
+      {
+        "stem": "tou",
+        "pr": 1442,
+        "merged": true,
+        "merge_commit": "bc07a9824ee36f51a8cfcd283190e0ccd804a9ac",
+        "fills": 45,
+        "additions": 45,
+        "deletions": 0
+      },
+      {
+        "stem": "retsu",
+        "pr": 1443,
+        "merged": true,
+        "merge_commit": "69d61828b264361260da30551343e5ebfca01434",
+        "fills": 39,
+        "additions": 39,
+        "deletions": 0
+      },
+      {
+        "stem": "rin",
+        "pr": 1444,
+        "merged": true,
+        "merge_commit": "82e6b090742faab3a49a74a4451d8ee234095700",
+        "fills": 33,
+        "additions": 33,
+        "deletions": 0
+      },
+      {
+        "stem": "phantom",
+        "pr": 1445,
+        "merged": true,
+        "merge_commit": "fd6bf50dc0f94879eed331b4aea8fd16ed5a96ac",
+        "fills": 38,
+        "additions": 38,
+        "deletions": 0
+      },
+      {
+        "stem": "demonio-bloodline-ember",
+        "pr": 1446,
+        "merged": true,
+        "merge_commit": "8f15315fe9225fab713f39b88a8b1f9e703d8441",
+        "fills": 32,
+        "additions": 32,
+        "deletions": 0
+      },
+      {
+        "stem": "t3-lei",
+        "pr": 1447,
+        "merged": true,
+        "merge_commit": "f03669f438bc8721a2d633f078091a40396448f5",
+        "fills": 32,
+        "additions": 32,
+        "deletions": 0
+      },
+      {
+        "stem": "t3-julia",
+        "pr": 1448,
+        "merged": true,
+        "merge_commit": "3793da272c43ae20fb6b1e5fd43721f65f90baa5",
+        "fills": 31,
+        "additions": 31,
+        "deletions": 0
+      },
+      {
+        "stem": "armor-king",
+        "pr": 1449,
+        "merged": true,
+        "merge_commit": "0c1c1ba42ef041bd2f14cf4c39af23271d218954",
+        "fills": 30,
+        "additions": 30,
+        "deletions": 0
+      },
+      {
+        "stem": "diablo",
+        "pr": 1450,
+        "merged": true,
+        "merge_commit": "0ae06d183d71254d5035a56881858a8279f9c17e",
+        "fills": 29,
+        "additions": 29,
+        "deletions": 0
+      },
+      {
+        "stem": "nightwolf",
+        "pr": 1452,
+        "merged": true,
+        "merge_commit": "1583495f6135591169d53923e4e67e11a85909c4",
+        "fills": 29,
+        "additions": 29,
+        "deletions": 0
+      },
+      {
+        "stem": "skull",
+        "pr": 1453,
+        "merged": true,
+        "merge_commit": "51e25a1af357d7b65916ccde9c4093d73f29be90",
+        "fills": 29,
+        "additions": 29,
+        "deletions": 0
+      },
+      {
+        "stem": "kai",
+        "pr": 1455,
+        "merged": true,
+        "merge_commit": "104d9c9ad7a7933f6f6fd3170d5107004834cae0",
+        "fills": 2,
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "stem": "kingtyrant",
+        "pr": 1456,
+        "merged": true,
+        "merge_commit": "26ad1eecf232ee0459066c1208090618c50d7291",
+        "fills": 2,
+        "additions": 2,
+        "deletions": 0
+      }
+    ]
+  }
+}

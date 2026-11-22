@@ -1,0 +1,21 @@
+{
+ "animations_done": 170,
+ "attempts": 0,
+ "branch": null,
+ "caw_done": true,
+ "repo": "~/workspace/western-heart",
+ "resume_brief": "WMXIX asset extraction worker. ISO at ~/workspace/game-reverse-engineering/wwe-wrestlemania-xix/. Tools in wwe-wrestlemania-xix/tools/ (yukes_fmt.py, yobj_arena_extract.py, extract_all_arenas.py, yobj_strips.py). Target: ~/workspace/western-heart/teardown/wmxix/{wrestlers/,animations/,caw-parts/,arenas/,textures/}. Branch->PR->merge western-heart, incremental commits per batch. Disk at 90% (11GB free): STOP at 94%. Prior progress recorded in checkpoint fields wrestlers_done, animations_done, caw_done, textures_done.",
+ "status": "done",
+ "task": "WMXIX full asset extraction: 111 wrestlers -> OBJ, YANM animations, CAW edit_data catalog, arena textures; push to western-heart/teardown/wmxix/ via branch->PR->merge",
+ "textures_done": 1167,
+ "updated_at": "2026-10-13T14:25:00-04:00",
+ "watchdog": true,
+ "wrestlers_done": [
+  "ALL SLOTS 000-110: 126 OBJs, 62034 verts, 44233 tris (78 batch-table + 6 pool-scan fallback; 9 DUMY placeholders; 34 slots no YMG)"
+ ],
+ "pr_urls": [
+  "https://github.com/mhvnsnt/western-heart/pull/36",
+  "https://github.com/mhvnsnt/western-heart/pull/37"
+ ],
+ "merge_commit": "7921d0d"
+}

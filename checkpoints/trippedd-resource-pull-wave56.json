@@ -1,0 +1,10 @@
+{
+ "task": "TRIPPEDD resource pull Wave 56 (target 4980 to 5080+ honest entries)",
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "Wave 56 coordinator DONE. Catalog 4980 to 5090 honest entries; quarantine 572 rows / 546 distinct; cycle 27 10/10 confirmed; DeepFilterNet + SpeechBrain ECAPA-TDNN wired with real proofs. Merged to main@31da3f5, pushed to GitHub. Wave 57 targets: 5090 to 5190+; pockets: retro homebrew SDK docs round 3 (Atari ST/Falcon, Amiga, X68000, FM Towns), landmark musicdisk deep dives (pouet/demozoo), PD radio-drama round 6; re-verification cycle 28 (rows 291+); wire SpectralCluster + pyannote-metrics to close the diarization loop.",
+ "status": "done",
+ "notes": "DONE: catalog 4980 -> 5090; quarantine 557 -> 572 rows (558-572), row 464 ArchiveBox DELISTED (upstream GPL-3.0-only -> MIT relicense verified live); cycle 27 rows 281-290 10/10 confirmed, drift watch 10/10 clean; DeepFilterNet + ECAPA-TDNN wired in tools/wave56_lane_c/. Merged to main@31da3f5, pushed. god-molecule-studio clean, no changes. god-molecule no-change.",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-08T15:28:38.579321+00:00"
+}

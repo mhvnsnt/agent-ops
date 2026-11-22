@@ -1,0 +1,9 @@
+{
+ "task": "Extract Julio hatless hair, lean-over pose, and outfit variants from the car trio image",
+ "repo": "~/workspace/trippedd-studio",
+ "resume_brief": "In ~/workspace/trippedd-studio: owner 2026-10-11 sent /home/hatch/workspace/user/files/1000173536_14_nhu1.png (ChatGPT car trio \u2014 Julio HATLESS with black hair, Dickie in palm-tree shirt, Bubba in blue work shirt, all leaning on a car). EXTRACTION-FIRST per USE THE IMAGE LAW \u2014 cut from THIS image, never hand-build approximations. On branch feat/trio-outfit-variants off origin/main: (1) JULIO: extract his hatless head/hair \u2192 add head_no_beanie.png + prop_hair.png to kits/julio/ (the beanie-off cut the outfit plan was waiting on). (2) JULIO LEAN-OVER POSE: extract his upper body leaning over the car \u2192 pose_lean_over.png in kits/julio/ \u2014 owner notes this pose pattern (leaning over a desk/car/counter) should become a reusable sheet pose for other characters too. (3) DICKIE outfit variant: extract his palm-tree shirt torso \u2192 outfit_palm_shirt_torso.png in kits/dickie/. (4) BUBBA outfit variant: extract his solid blue work shirt torso \u2192 outfit_blue_work_shirt_torso.png in kits/bubba/. These are waist-up in the image \u2014 extract what's visible, full quality. Update each kit's manifest.json + drill-log.md. Verify every extraction against the source with your OWN eyes, zoomed. Commit, open a PR (do NOT merge). Heartbeat ~/workspace/agent-ops/checkpoints/trio-outfits.json every 10 min. Report: pieces extracted, eye-verification, PR URL. Mark done at the end.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T18:20:00+00:00"
+}

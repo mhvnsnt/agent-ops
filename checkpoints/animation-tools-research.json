@@ -1,0 +1,10 @@
+{
+  "task": "Research/pull/wire open-source animation tools for the 2D+rotoscope pipeline",
+  "repo": "~/workspace/video-fix-tools",
+  "resume_brief": "Research open-source/FREE animation tools for the hand-drawn + rotoscope pipeline (LOTI v3 / TRIPPEDD EP01). Survey: rotoscoping beyond EbSynth, 2D animation (Blender Grease Pencil, OpenToonz, Krita, Synfig, Tahoma2D), cartoon stylization (white-box cartoonize, AnimeGAN, CartoonGAN), frame interpolation (RIFE), cleanup/compositing helpers. For each promising tool: pull into ~/workspace/video-fix-tools/ (or trippedd-studio production tooling \u2014 NOT the v3 branch worktree which has an active worker), build/install, verify it actually runs on a test input, document in a TOOLS-REGISTRY.md with what it does + how to invoke it. FREE ONLY \u2014 never any paid service or card. Report what's newly wired and what's queued for EP01.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T22:55:18.359478+00:00",
+  "scope_add": "2026-10-10 owner priority: background removal (rembg birefnet), tracing (vtracer/potrace), sticker/clean-cut tools, looping tools"
+}

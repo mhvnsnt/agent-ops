@@ -1,0 +1,10 @@
+{
+  "task": "Migrate ENTIRE Google Drive to mhvnsnt/google-drive-repo as release assets, verify, delete from Drive (except dont-move labeled)",
+  "repo": "mhvnsnt/google-drive-repo",
+  "resume_brief": "Per owner directive: the 49 automigrate backup files sitting loose in his Google Drive root (names like steal-like-artist-other-packs-automigrate-2026-10-12.part_000, 100MB each, 5.03GB total: other-packs 2.93GB, ep02-repair-work 1.89GB, osamu-sato 0.21GB) go to a new GitHub repo mhvnsnt/google-drive-repo, then get deleted from Drive. Steps: (1) Create repo mhvnsnt/google-drive-repo via gh (PUBLIC, matching his pattern; description: overflow/backup home for Google Drive contents). Add a README via branch->PR->merge explaining the repo holds Drive overflow as release assets. (2) Download the 49 parts from Drive (hatch_gws_cli drive; query: name contains 'automigrate-2026-10-12') IN BATCHES \u2014 local disk is tight, keep staging under 1.5GB at a time. (3) Create release automigrate-2026-10-12 and upload the parts as release assets (keep original filenames so they reassemble). (4) VERIFY via GitHub API: 49 assets, each byte size matches Drive's quotaBytesUsed. (5) ONLY then trash the 49 Drive files; confirm they're gone. (6) Delete local staging batches as you go. Never lose data: any mismatch stops the Drive deletion for that file. Heartbeat this checkpoint; mark done at end.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-13T03:02:59.105413+00:00",
+  "notes": "COMPLETE: 181 assets (~13.69GB) across 4 releases, all byte-verified. Drive cleared (71.8%, was 98.7%). README updated, 0 open PRs."
+}

@@ -1,0 +1,17 @@
+{
+  "task": "WESTERN HEART game/ Tekken-authentic select screen rebuild: bigger cards, 100% Tekken-sourced data, real 3D portraits",
+  "status": "done",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/western-heart",
+  "updated_at": "2026-10-18T01:58:27.054570+00:00",
+  "attempts": 0,
+  "result": "PR #88 merged. 36 real portraits rendered from GLBs. Deployed to gh-pages, verified 200. Live at https://mhvnsnt.github.io/western-heart/",
+  "notes": [
+    "[watchdog 2026-10-15T02:40-04:00 EDT] Schema note: resume_brief <50 chars; status kept 'done' (work complete, never needs resume) per 2026-10-13 convention.",
+    "[watchdog 2026-10-16 00:04 EDT] SCHEMA NOTE: managed checkpoint missing/short resume_brief(0); status kept 'done' (task complete, no resume needed). Pre-schema-law legacy entry.",
+    "[watchdog 2026-10-17T21:17:46.   000000+00:00] Schema invalid: missing resume_brief(>=50chars). Parked needs_owner per watchdog schema rule.",
+    "[watchdog 2026-10-17 18:10 CDT] MALFORMED checkpoint (schema violation): resume_brief only 0 chars (<50). Not resumable; status already needs_owner. Owner: fix fields or delete this checkpoint.",
+    "[2026-10-17] Schema repaired: added repo + resume_brief (>=50 chars). Work was already complete per prior notes. Status set to done."
+  ],
+  "resume_brief": "DONE: Tekken-authentic select screen rebuild complete. Bigger cards, 100% Tekken-sourced data, real 3D portraits. Shipped to playable build."
+}

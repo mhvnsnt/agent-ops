@@ -1,0 +1,10 @@
+{
+ "task": "Research free public-domain CN-gigaleak-level hero asset collections on the internet (RESUME)",
+ "repo": "~/workspace",
+ "resume_brief": "RESUME of interrupted research. Prior worker completed Batch 2 before a daemon restart killed it. CONFIRMED SO FAR: (1) Quaternius CC0 pack \u2014 includes Superhero_Male/Female base characters; (2) Blender open-movie CC-BY production files; (3) DCM/ComicBookPlus public-domain golden-age hero comics. REMAINING: verify direct download URLs + sizes for the confirmed finds, check Superman public-domain status (note: US copyright \u2014 Action Comics #1 1938, likely NOT PD until 2033; verify), and look for public-domain cartoon model sheets / gigaleak-style production archives for heroes. Catalog only \u2014 do NOT download multi-GB files. For each find: what it is, size, license, live direct URL, contents. Heartbeat ~/workspace/agent-ops/checkpoints/hero-files-research.json after each step; mark done when the catalog is complete and report it.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-15T03:54:23.175361+00:00",
+ "progress": "COMPLETE 2026-10-15: catalog delivered at cape-jones/docs/HERO-FILES-CATALOG.md and pushed. Key: Quaternius CC0 superhero base chars verified; Blender open-movie CC-BY (newer behind subscription); DCM/ComicBookPlus PD comics verified; Superman NOT PD until 2034-01-01; archive.org model sheets are free-download but characters not PD."
+}

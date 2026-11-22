@@ -1,0 +1,10 @@
+{
+  "task": "Reskin Tekken 7 King FBX to owner's Pantera design",
+  "repo": "~/workspace/game-reverse-engineering",
+  "resume_brief": "Reskin complete. All 18 diffuse textures recolored in ~/workspace/game-reverse-engineering/tekken7/king/pantera/. 4 verification renders at pantera/views/pantera_{front,back,left,right}.png. Tail added as tapered Blender curve geometry. Thigh panther decals skipped (extraction not clean enough, clean purple thighs instead). MEXICO boot text recolored red. Original King textures untouched.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-12T17:18:38.775901+00:00",
+  "notes": "Complete 2026-10-12. 18 diffuse textures recolored, 4 renders verified, tapered tail added, thigh decals skipped (not clean), MEXICO->red."
+}

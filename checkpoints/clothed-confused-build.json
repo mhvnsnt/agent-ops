@@ -1,0 +1,9 @@
+{
+ "task": "Build Clothed and Confused (EP01 seg 10): realistic Naked and Afraid parody, 60-90s, committed to trippedd-studio feature/ep01-finished-cut",
+ "repo": "~/workspace/trippedd-studio",
+ "resume_brief": "Build EP01 segment 10 'Clothed and Confused' per the brief: realistic Naked-and-Afraid parody (NOT 2D/cartoon), survivalist in 14 layers of clothing, deadpan British narrator VO, dramatic music, played straight. Deliver finished MP4 to production/TRIPPEDD_EP01/segments/clothed-and-confused/clothed-and-confused-final.mp4 on branch feature/ep01-finished-cut, commit it, heartbeat the checkpoint.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-14T05:53:40.279123+00:00"
+}

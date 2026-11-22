@@ -1,0 +1,11 @@
+{
+ "attempts": 0,
+ "repo": "~/workspace/game-leaks-working",
+ "resume_brief": "Pull Blender Open Movies (Sintel/BBB/ToS) CC-BY production .blends into ~/workspace/game-leaks-working/blender-open-movies/. Disk was 83% at start, so only character .blends (few hundred MB) can be pulled, not full 12GB sets. Write STUDY-NOTES.md describing directory structure, character pipeline organization, fighting-game mappings, and key .blend paths. Verify downloads. Skips: Cosmos Laundromat, Spring (subscription). BBB/ToS pulled only if disk allows after Sintel.",
+ "status": "done",
+ "task": "Pull Blender Open Movies production .blends (Sintel/BBB/ToS) for character pipeline study; disk at 83% so prioritize Sintel character .blends only",
+ "updated_at": "2026-10-12T15:19:18Z",
+ "watchdog": true,
+ "note": "2026-10-12T15:14Z: BBB downloads partial (squirrel/chinchilla OK, others rate-limited, retrying). Sintel Lite not obtainable without account login (blendswap/animium both login-gated) - will document as skipped. ToS .blends not on public mirrors - documented as skipped.",
+ "result": "Pulled 5 BBB char .blends + 14 textures + 5 constraint scripts (~147MB), all byte-verified and opened in Blender 4.0.2. Wrote STUDY-NOTES.md. Skipped: Sintel (login-gated/torrent-only), ToS (not on public mirrors), full BBB archive (disk budget). Disk stayed 83%."
+}

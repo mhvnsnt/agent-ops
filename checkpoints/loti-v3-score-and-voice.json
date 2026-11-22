@@ -1,0 +1,9 @@
+{
+ "task": "LOTI v3: suspense score + upbeat shift + new sign-off voice",
+ "repo": "~/workspace/trippedd-studio-loti-v2",
+ "resume_brief": "LOTI v3 commercial audio upgrade (owner direction 2026-10-10 ~20:37 CDT, branch feat/loti-commercial-v3 in ~/workspace/trippedd-studio-loti-v2). THREE changes to luck-of-the-irish-commercial-v3.mp4: (1) Add an ORIGINAL synthesized suspenseful horror-movie-style score bed behind his dialogue and the scene buildup (0 to freeze frame ~34s) \u2014 low drone, dissonant string-like swells, pulse, riser into the freeze; duck under dialogue so he stays intelligible. (2) After the freeze frame, crossfade to an ORIGINAL upbeat Looney-Tunes/commercial happy bed (bouncy major-key bass + plucks + bright melody) through the end. (3) Replace the temp sign-off voice at 53s with a new read: 'Th-th-that's the Irish, folks!' performed as a leprechaun-from-the-hood mixed with the Lucky Charms leprechaun and Porky Pig's stutter \u2014 playful Irish lilt + street swagger + stutter on 'Th-th-th-'. Use Chatterbox (see ~/workspace/voice-clone-work/ for setup) or best local TTS; author the stutter in the text. All music must be ORIGINAL synthesized (no library/stock music \u2014 this posts to YouTube). Re-render, verify: duration ~56.5s, levels (no clipping), sample frames/audio at the freeze transition and at 53s. Upload via remote-storage, update v3/METHODS.md with the new score + voice notes (voice still marked swappable). Report the new direct link. Do NOT merge PR #117 \u2014 stays open for his grade.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T01:57:57.703373+00:00"
+}

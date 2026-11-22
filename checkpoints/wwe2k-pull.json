@@ -1,0 +1,17 @@
+{
+  "attempts": 2,
+  "notes": [
+    "Moves pack: downloaded+verified (121368405B), extracted 66 files, 34 motion PACs",
+    "Entrance pack: downloaded+verified (567318331B), extracted 924 files, 445 entrance motions",
+    "Both packs pushed to wrestling-game repo via PR #1 (merged) + Release wwe2k19-animation-packs-v1",
+    "WWE 2K14: MISLABELED - archive contains WWE SmackDown vs RAW 2011 PSP (ULUS-10543), NOT 2K14",
+    "SvR2011 ISO extracted (1.6GB), valid PSP game - useful for wrestling game (Yukes PAC format)",
+    "True WWE 2K14 (PS3/Xbox360) still needed - search for correct Archive.org item"
+  ],
+  "repo": "~/workspace/game-reverse-engineering",
+  "resume_brief": "Download from Archive.org: (1) wwe-2k19-ported-moves-animations-pack (0.12GB), (2) wwe-2k19-ported-entrance-victory-motions-pack (0.57GB), (3) wwe-2-k-14 (1.26GB). Verify via Archive.org metadata API, download with aria2c or curl, extract and catalog animations, push to wrestling-game repo (NOT western-heart). Larger games (2K15/2K19 CSF) stage for TeraBox chunked pipeline. If anything is missing from disk, re-verify identifiers via https://archive.org/metadata/<id>.",
+  "status": "done",
+  "task": "Pull WWE 2K animation packs + 2K14 from Archive.org",
+  "updated_at": "2026-10-14T02:00:00Z",
+  "watchdog": true
+}

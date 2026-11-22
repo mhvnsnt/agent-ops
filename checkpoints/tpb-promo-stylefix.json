@@ -1,0 +1,9 @@
+{
+  "task": "Redo TPB trio promo image in the AI key-art rendering style",
+  "repo": "~/workspace/trippedd-studio",
+  "resume_brief": "In ~/workspace/trippedd-studio: REDO the TPB trio promotional image to match the AI key-art style. Owner 2026-10-11: 'Why is the art style deviating? You are supposed to make them in the AI art style first, close to our first original image.' The current production/TRIPPEDD_EP01/goodville/kits/tpb-trio-promo.png is flat vector \u2014 WRONG. The target is assets/references/ep01/source/Goodville - Not South Park.png (the AI-generated key art): soft airbrush shading, textured hair with strand detail, detailed faces (soft eye shading, subtle skin gradients), rich color palette, South Park proportions. OPEN THE KEY ART, study its rendering, and rebuild the trio promo (Bubbles-based: big glasses/toque/kitty; Ricky-based: greasy hair/striped shirt/goatee/cigarette; Julian-based: slicked hair/black tee/tumbler) in THAT rendering style \u2014 same three-characters-in-Goodville composition (town sign, General Store, road), but rendered like the AI key art, not flat vector. METHOD: hand-built digital painting per the standing no-AI-generation law \u2014 match the style by craft, not by generating. Verify with your OWN eyes: side-by-side against the key art, the rendering must read as the same style family. Work on branch feat/tpb-promo-stylefix off origin/main, commit, open a PR (do NOT merge). Report: what you changed in the rendering, side-by-side verification notes, PR URL. Mark ~/workspace/agent-ops/checkpoints/tpb-promo-stylefix.json done at the end. Heartbeat every 10 min.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-11T16:03:13.211759+00:00"
+}

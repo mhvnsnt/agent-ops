@@ -1,0 +1,10 @@
+{
+ "attempts": 2,
+ "repo": "~/workspace/western-heart",
+ "resume_brief": "WWF No Mercy full asset extraction: (1) export all ~1360 anim clips via tools/anim_extract.py in ~/workspace/game-reverse-engineering/wwf-no-mercy/, (2) extract wrestler models, (3) extract textures incl. faces, (4) arena/ring data, (5) CAW creation suite parts, (6) push everything to ~/workspace/western-heart/teardown/wwf-no-mercy/ (branch -> PR -> merge, incremental commits), (7) update TEARDOWN.md inventory. Disk: /home/hatch at 90% \u2014 stop if it hits 94%.",
+ "status": "done",
+ "task": "WWF No Mercy full asset extraction for Western Heart teardown",
+ "updated_at": "2026-10-13T10:45:00-04:00",
+ "watchdog": true,
+ "notes": "DONE. PR #39 merged to main (a24c91e7). 5,787 anims + 5,029 textures + 3,570 models in western-heart/teardown/wwf-no-mercy/. TEARDOWN.md updated. Scratch cleaned. Known follow-ups: regenerate aki_to_tekken3 from corrected bank; CAW save-record needs emulator save."
+}

@@ -1,0 +1,10 @@
+{
+ "task": "Pull Ed Edd N Eddy complete folder from IA and push gaps to GitHub+TeraBox",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/cn-leak-pull-100",
+ "resume_brief": "Ed Edd N Eddy pull: new IA item ed-edd-n-eddy_20261013 (3.74GB, described as complete folder) at https://archive.org/download/ed-edd-n-eddy_20261013/ supersedes the old gap analysis. Git repo mhvnsnt/cn-gigaleak-ed-edd-n-eddy has 915/1746 files. Steps: (1) Download the 3.74GB item (parallel/range downloads, verify total bytes). (2) Diff extracted files against the git repo to find true gaps. (3) Verify gaps path+bytes vs CNleaks-manifest.csv. (4) Push verified gap files to the repo via branch+PR (zero open PRs after). (5) Zip gap files, split 25MB, stage at ~/workspace/cn-leak-pull-100/een-terabox/ for parent TeraBox upload. Disk: check df before downloading (3.74GB archive + extraction needs ~8GB headroom), keep under 88%. If disk too tight, download first and extract selectively. Heartbeat checkpoint every 10 min.",
+ "attempts": 0,
+ "notes": "COMPLETE: 831/831 gaps closed. GitHub: PR#2 merged (100 files in tree) + release een-gap-fill-v1 (400 files, 12 parts) + release een-gap-fill-v2 (431 files, 24 parts). TeraBox: 140x25MB parts staged at een-terabox/tb25/. 0 open PRs.",
+ "updated_at": "2026-10-15T01:09:41.483208+00:00"
+}

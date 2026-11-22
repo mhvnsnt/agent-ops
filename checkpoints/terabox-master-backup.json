@@ -1,0 +1,10 @@
+{
+  "task": "TERABOX MASTER BACKUP — push all Western Heart materials to TeraBox (5TB Premium)",
+  "status": "needs_owner",
+  "watchdog": true,
+  "repo": "~/workspace/western-heart",
+  "resume_brief": "Owner directive 2026-10-13: back up EVERYTHING Western Heart to TeraBox (5TB Premium, trial expires 2026-10-20). SUBAGENT CANNOT SPAWN BROWSER TASKS — all prep complete, parent must delegate browser uploads. READY: (1) ~/workspace/terabox-staging/teardown-batch-b.tar.gz (231MB, all teardown dirs) → /western-heart/teardown/, (2) ~/workspace/terabox-staging/western-heart-docs.tar.gz (54MB, canon/roster/moveset/customization) → /western-heart/docs/. GitHub Release mirror list in ~/workspace/agent-ops/terabox-inventory.md (Batch A ~25GB, download from github.com/mhvnsnt/western-heart/releases → upload to /western-heart/games/ and /western-heart/models/). Model libs on disk: king-variants 2.1GB, rashid 247MB, pharaohillusion 506MB, 20+ char dirs ~1GB. Tekken 7 full game NOT acquired (SteamUnlocked blocked, needs Archive.org search). Disk 92% (8.5GB free) — browser must use download→upload→delete pipeline, max ~4GB local at once. Full browser task specs in subagent final report.",
+  "updated_at": "2026-10-13T23:10:00Z",
+  "attempts": 1,
+  "notes": "Prep complete 2026-10-13 23:10 UTC. Staging archives ready. Browser delegation required for all uploads (no TeraBox API). Set needs_owner because parent action (browser task spawn) is the only remaining step."
+}

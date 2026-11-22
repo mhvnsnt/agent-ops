@@ -1,0 +1,10 @@
+{
+ "task": "Generate temp soft-spoken Onyx voice (H1) via GH Actions voice-render, place in EP02 v8",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace",
+ "resume_brief": "Continue the Onyx temp-voice task: 1) Find/add a CC0 soft-spoken young Black woman reference clip (Mozilla Common Voice, validated.tsv filtered age=twenties gender=female) to mhvnsnt/wizard-gang-voice-pipe as refs/onyx-ref.mp3, update scripts/render_voice.py (CHARACTER_REFS + CHARACTER_DEFAULTS with exaggeration 0.35) and voice-render.yml workflow_dispatch options to include 'onyx', commit+push. 2) Write render-queue.json {character: onyx, text: 'We are adjourning nothing. We haven't started.', exaggeration: '0.35', cfg_weight: '0.5', label: 'h1-temp'} and push to trigger the render. 3) Wait for the workflow run, download the artifact WAV. 4) Convert to ~/workspace/voice-delivery/voice-onyx-h1.mp3 (mark TEMP). 5) Place at 84s in ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/wizard-gang-ep02-final-v7.mp4 -> wizard-gang-ep02-final-v8.mp4 (mute 84-90s first, keep video). 6) Make 854x480 review copy, upload via remote-storage, report link. Do NOT touch v7. H1 script position is 1:24 (84s).",
+ "updated_at": "2026-10-11T06:05:00+00:00",
+ "attempts": 0,
+ "notes": "Onyx H1 TEMP voice rendered (GH Actions run 38115843192), placed at 84s in v8. Review copy uploaded."
+}

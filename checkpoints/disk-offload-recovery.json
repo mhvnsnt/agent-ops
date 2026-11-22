@@ -1,0 +1,14 @@
+{
+ "task": "Recover stalled disk-offload lanes: video-fix-tools push to GitHub (repo empty, 9 failed pushes), ep01-loti-swap remaining ~5GB upload to draft release",
+ "repo": "multiple",
+ "resume_brief": "Disk-offload recovery worker: (1) ~/workspace/video-fix-tools: local commits exist (HEAD 78b7640) but mhvnsnt/video-fix-tools on GitHub is EMPTY; 9 push attempts failed with 'remote end hung up unexpectedly' (log: ~/workspace/video-fix-tools/push-and-pr.log). Diagnose: if git push still hangs, stage the 2.1G as split tar parts on a GitHub Release instead (branch->PR->merge for anything small). (2) ~/workspace/ep01-loti-swap: release ep01-loti-swap-2026-10-14 on mhvnsnt/drive-storage (DRAFT) has only v2.part_aa (500MB); ~5.4G workdir still local; continue uploading remaining parts to the draft release and byte-verify with parts.sha256. (3) Do NOT touch TeraBox lanes (broker-blocked; parent browser lane). (4) Do NOT delete any game files (NEVER-DELETE-GAME-FILES law). Checkpoint: heartbeat ~/workspace/agent-ops/checkpoints/disk-offload-recovery.json, commit incrementally, mark done when both lanes verified on GitHub.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-15T09:49:12.998321+00:00",
+ "notes": {
+  "lane1": "DONE via alternate path. Git push failed (proxy stall); no loop-retry. Draft release vft-archive-2026-10-15 on mhvnsnt/video-fix-tools now holds 5x 500M tar parts (524288000/524288000/524288000/524288000/63969280 bytes, all size-verified vs local) + SHA256SUMS (505B, size-verified). Full repo dir incl .git history archived. Repo remains empty of branches (push impossible through proxy); release is the canonical store. Release left DRAFT.",
+  "lane2": "DONE. Draft release ep01-loti-swap-2026-10-14 on mhvnsnt/drive-storage now holds all 13 assets: v2.part_aa..ae (524288000/524288000/524288000/524288000/344107465), p2.part_aa..ae (524288000/524288000/524288000/524288000/106854944), loti-qc-txts.tar (2160640), parts.sha256 (770), originals.sha256 (719) \u2014 all sizes verified vs local. Local verification: sha256sum -c on all 10 parts OK; parts concatenated reproduce the original MP4 hashes exactly (EP01-THE-WALK-v2.mp4 bd36d4d8..., p2.mp4 c5891313...). parts.sha256 re-downloaded from release and diffed = byte-identical to local SHA256SUMS. Release left DRAFT per brief.",
+  "completion": "Both lanes verified on GitHub 2026-10-15 ~05:45 EDT. Lane 1: draft release vft-archive-2026-10-15 on mhvnsnt/video-fix-tools (5 tar parts + SHA256SUMS, size-verified; full repo incl .git history). Lane 2: draft release ep01-loti-swap-2026-10-14 on mhvnsnt/drive-storage (13 assets, size-verified + hash-verified locally + manifest re-downloaded and matched). Neither release published. Local workdirs retained (no deletes performed; disk healthy at ~67%)."
+ }
+}

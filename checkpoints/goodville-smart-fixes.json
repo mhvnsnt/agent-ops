@@ -1,0 +1,9 @@
+{
+  "task": "Fix 3 defects in smart promo rebuild: 2 artifacts + old-head tagline coverage",
+  "repo": "~/workspace/trippedd-studio",
+  "resume_brief": "In ~/workspace/trippedd-studio, branch feat/goodville-promo-smart: fix 3 parent-verified defects in goodville-promo-15s_SMART.mp4 (production/TRIPPEDD_EP01/goodville/promo-15s/). (1) WHITE RECTANGLE ARTIFACT: below-left of Amos Jr.'s torso near the BEER can, visible at ~10.5s and ~11.7s \u2014 looks like a leftover background box from the can extraction; remove it. (2) GRAY RECTANGLE ARTIFACT: small gray box floating left of the old head's head at ~1s (approx x=770, y=550); remove it. (3) OLD HEAD COVERS TAGLINE: in shots 1-2 his head sits over the sign text 'SAME PEOPLE. DIFFERENT BULLSHIT.' partially obscuring it \u2014 shift him down/right (like the PR #149 Blender rebuild's framing) so the FULL tagline reads; keep him grounded (torso off bottom frame edge, no floating). Re-render affected shots, verify with your OWN eyes by reading the output PNGs (artifacts GONE, tagline FULLY readable at 1s and 5s), re-run tools/brain/sensorium/gate.py (must pass), commit, push to the same branch. Update FRAME-CHECK.md. Report: what each artifact was, frames verified, gate scores, commit SHA. Mark ~/workspace/agent-ops/checkpoints/goodville-smart-fixes.json done at the end. Heartbeat every 10 min.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-11T14:36:37.198052+00:00"
+}

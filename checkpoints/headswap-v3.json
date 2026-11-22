@@ -1,0 +1,11 @@
+{
+  "task": "Cont-3 HQ quality fix + Cont-1 mask neural swap",
+  "repo": "~/workspace/trippedd-studio",
+  "resume_brief": "JOB1: Fix cont-3-proper.mp4 pixelation (upscale face region or face restoration). JOB2: Neural swap for cont-1 using muta-3 mask with manual landmarks via inswapper (or SimSwap fallback). Tool: ~/workspace/video-fix-tools/character-replace/tools/proper_swap.py. Outputs to .../video/headswap-v2/cont-3-proper-hq.mp4 and cont-1-proper.mp4. H.264, verify frames. NO warp-and-paste.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-12T20:21:24.847531+00:00",
+  "notes": "Mask swap PROVES the mask IS a usable face source - manual landmarks + inswapper works. Gray hair: honest limitation, automated segmentation fails on dark cinematic frames. All outputs H.264.",
+  "progress": "COMPLETE. Job 1: cont-3-proper-hq.mp4 done (unsharp mask sharpening, less pixelated). Gray hair NOT done - tried 10 segmentation approaches, none reliable on dark image. Job 2: cont-1-proper.mp4 done (mask swap via manual landmarks + inswapper, 192/192 frames, verified)."
+}

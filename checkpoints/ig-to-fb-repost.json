@@ -1,0 +1,9 @@
+{
+  "task": "Curate Real's best Instagram posts and republish the top 5 to the M. Heaven$ent Facebook page.",
+  "repo": "~/workspace",
+  "resume_brief": "Curate and cross-post: (1) read /opt/hatch/skills/instagram/SKILL.md and /opt/hatch/skills/facebook-cli/SKILL.md; (2) pull @m2villainous posts (account 17841446253082141), download media, VIEW each candidate; (3) select the 5 best for the M. Heaven$ent Facebook page (page_id 1355928877604019) \u2014 favor music promos, photoshoots, strong artist shots; (4) write captions in his voice per ~/workspace/money-machine-hq/social/VOICE-GUIDE.md, NO em dashes, nothing AI-sounding; (5) publish each to the page via facebook-cli (approval cards will surface \u2014 that is expected). Heartbeat checkpoint, mark done.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-08T18:47:26.501978+00:00"
+}

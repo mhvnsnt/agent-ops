@@ -1,0 +1,9 @@
+{
+  "task": "Research and pull in free open-source Viggle alternatives (character replacement / motion transfer)",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/video-fix-tools/character-replace/",
+  "resume_brief": "Task complete. See ~/workspace/video-fix-tools/character-replace/STACK.md for full documentation.",
+  "updated_at": "2026-10-12T01:25:00-05:00",
+  "attempts": 0
+}

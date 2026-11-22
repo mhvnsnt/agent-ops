@@ -1,0 +1,9 @@
+{
+ "task": "Push best-of Chimera teardown files from game-reverse-engineering into western-heart repo via branch->PR->merge",
+ "repo": "~/workspace/western-heart",
+ "resume_brief": "Resume: copy the best-of teardown work product from ~/workspace/game-reverse-engineering (docs/, tools/, extracted data like JSON/BIN mappings, renders, CHIMERA-BUILD.md, per-game teardown dirs tekken7/tekken3/wwf-no-mercy/wwe-wrestlemania-xix/eastern-mind) into ~/workspace/western-heart under teardown/, EXCLUDING raw binaries over 100MB (ISOs, ROM zips, EXEs, XAS \u2014 list them with paths+hashes in teardown/TEARDOWN-SOURCES.md instead). Also fold in any uncommitted western-heart teardown-related work. Push via branch->PR->merge, verify commits on origin via git ls-remote, leave zero open PRs, then report what landed and what was excluded with reasons.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-12T21:32:06.959869+00:00"
+}

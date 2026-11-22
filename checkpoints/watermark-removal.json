@@ -1,0 +1,10 @@
+{
+  "task": "Remove Viggle.ai watermark from 3 chunks",
+  "repo": "~/workspace/trippedd-studio",
+  "resume_brief": "Remove viggle.ai watermark from viggle-chunk1/2/3.mp4 in ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/video/. Output clean versions to same dir. See parent task for approach order.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-12T17:45:00-05:00",
+  "progress": "All 3 chunks cleaned. 962/962 frames inpainted each. Verified 6 frames across all chunks - watermark gone, no artifacts."
+}

@@ -1,0 +1,44 @@
+{
+ "lane": "ashes-turnfix-v2",
+ "started": "2026-10-29T19:27CDT relaunch (previous lane died in daemon restart, no checkpoint)",
+ "repo": "mhvnsnt/God-Molecule-Show-Studio",
+ "checkout": "~/workspace/_ashes-turnfix/repo",
+ "branch": "feat/ashes-turnfix-20261029 @ 125a46c (PR #35, stacked on PR #34 braidfix 69df88b/8301ae2)",
+ "banked_by_v1": [
+  "root cause found: ParamAngleX/Y had NO deform bindings in PR #34 inp (transform only + preview cos-squash)",
+  "build_turnfix.py + turn_deform.py + render_turnfix.py + render_video.py in ashes/ and work/",
+  "Ashes_turnfix.inp in work/ + patched Ashes.inp committed on branch",
+  "face underplate part (uuid 90), shell mesh bridges, torso nod follow-through",
+  "proofs delivered to your_files as ashes-turnfix-*-20261029.*"
+ ],
+ "v1_zoom_failures_confirmed_by_coordinator": [
+  "braids shred into fragment islands + elongation at max AngleX",
+  "chain/D pendants ghost-double at chest",
+  "hard black rectangle beside face at max left + notch in face edge",
+  "hood rim thin black/red notches on turn side"
+ ],
+ "v2_plan": [
+  "braids: near-rigid coherent-unit field (dx/dy functions of y-row only, root-anchored swing, no x-dependent squeeze, no intra-mesh island split)",
+  "chain/accessory: single rigid translation per part (centroid D), no per-vertex internal distortion",
+  "underplate: enlarge + deform so its edge can never read; diagnose black block source from mesh data",
+  "hood rim: unify shell weights at rim boundary verts",
+  "acceptance: new proof set with v2 filenames, own-eyes zoom inspection, rest pose pixel-identical to PR #34 neutral"
+ ],
+ "status": "complete",
+ "result": {
+  "commit": "6d21c09 on feat/ashes-turnfix-20261029 (PR #35 updated, OPEN UNSTABLE, stacked on PR #34)",
+  "fix": "global position-based field (turn_deform v4) on all 19 parts; cosine dome; face-silhouette underplate (4 fans, eroded 2px, zsort -1.5); identical rim grid on both shell parts; rigid neck nod slide",
+  "audit": "flipped triangles 0/0/0 (left/right/nod) vs v1 87/79/434; validator VALID 34/34 params, 19 textures",
+  "rest_pose": "49/345600 px differ vs PR #34 neutral, all seam pinhole fills + 4 collar px \u2014 disclosed in PR body deviations",
+  "residual": "hairline navy dashes ~180px in rim flame band at 4x zoom (proven not holes via green-bg test); disclosed",
+  "deliverables_your_files": [
+   "ashes-turnfix2-sheet-20261029.png",
+   "ashes-turnfix2-head-zoom-20261029.png",
+   "ashes-turnfix2-neutral-20261029.png",
+   "ashes-turnfix2-left-20261029.png",
+   "ashes-turnfix2-right-20261029.png",
+   "ashes-turnfix2-nod-20261029.png",
+   "ashes-turnfix2-turn-nod-20261029.mp4"
+  ]
+ }
+}

@@ -1,0 +1,145 @@
+{
+  "lane": "pantera-leopard-king-kingskeleton",
+  "status": "done-merged",
+  "branch": "feat/pantera-leopardking-king-skeleton-20261021",
+  "scratch": "~/workspace/_wh-work/pantera-king-skel-scratch/",
+  "final_glb": "scratch/final.glb (81,618,172 B)",
+  "template": "canonical 49-bone Pantera/King template (A1/A3/A5/A6 lineage) + Tail1-4; T7 King holdings = mesh+textures only (FBX geometry-only, no skeleton/anims in tekken7-full-v1; no King at all in tekken8-full-v1) - stated explicitly in PR",
+  "weights": "KNN k=64 sigma=0.03 from pantera-base (King's own skinned model) + 20-pass diffusion; neighbour weight-L1 p99 0.136 / p999 0.313 (beats #448 field)",
+  "clips": "T3Stance/T3Grab via offset-corrected world-delta retarget (A*D*A^-1 * Wt, align=RotY180); per-joint world deltas <0.1 deg; hips translation included, scaled 1.0816",
+  "proof": {
+    "method": "game-semantics statics: LBS-posed exports via fk2 (three.js LINEAR/slerp evaluation) rendered as static meshes. Blender action playback is NOT a valid evaluator for hand-authored channels on this rig (arm-bone conversion inverts elbows; leoman root translation lives in a separate object action and never played). Self-bake control: leoman clip retargeted onto leoman through the same pipeline renders identical to native.",
+    "fk2_joint_err_vs_leoman_m": "mean 0.095-0.111 across t=0.3-0.9 (arms ~0.12, legs ~0.09-0.10), hips-relative, mirrored",
+    "skin_check": "T3Stance edge ratio p50 1.000, >2.5x 2.52% (#448 control same method 1.97%); T3Grab >2.5x 5.78%",
+    "three_way_gate": "original Tripo vs A4 vs A1 same frames: proportions/anatomy preserved, no fold-back legs, no bent-back feet, no torn mesh. Residual: head tips back at stance mid-phase (spine-chain pose residual, not deformation).",
+    "renders": [
+      "gate_original.png",
+      "gate_a4_bind.png",
+      "static_lk.png",
+      "static_a1.png",
+      "static_leo.png",
+      "static_lk_grab.png",
+      "static_a1_grab.png"
+    ]
+  },
+  "next": "ship via git-data API (blob/tree/commit/PR), merge when CLEAN, deliver renders to your_files, clear scratch, log deletion",
+  "pr": "https://github.com/mhvnsnt/western-heart/pull/493 (MERGED, merge commit 1c8ffd0677564feb6eeea0a4dcf1aca0037b3294; supersedes closed #491)",
+  "shipped_blob": "c114b974b9d8f08bbb06d50df1d5d97e05981e90 (81,618,172 B, verified on main)",
+  "delivered_renders": [
+    "~/workspace/your_files/pantera-leopard-king-ORIGINAL-tripo-20261021.png",
+    "~/workspace/your_files/pantera-leopard-king-kingskeleton-stance-20261021.png",
+    "~/workspace/your_files/pantera-leopard-king-kingskeleton-grab-20261021.png",
+    "~/workspace/your_files/pantera-leopard-king-kingskeleton-idleframe-20261021.png",
+    "~/workspace/your_files/pantera-a1-king-stance-sameframe-20261021.png",
+    "~/workspace/your_files/pantera-leoman-source-stance-20261021.png"
+  ],
+  "cleanup": "scratch (1.2G) + clone (434M) cleared post-merge-verify; logged in disk-cleanup-log.md with pull-back",
+  "correction_fix2": {
+    "date": "2026-10-22",
+    "trigger": "Owner REJECTED the merged #493 Leopard King build on sight (2026-10-21 ~22:41-23:14 CDT) with a precise defect map: forearm/hand + waist-down stretching and weight issues, legs crumpled with right leg opposite the left, hand seemingly weighted to the tail, same on A1, feet sticking out sideways; root-cause order: fix at the source files, not downstream hand-tweaks.",
+    "diagnosis": {
+      "decode_clean": "T3 King bank rotations == Leo man GLB native channels at 0.00 deg max on all 22 bones x 75 keys (pure-Python evaluator + faithful port of t3anims.js retargetT3Clips; control retarget onto Leo man = 0.0 deg / 0.000 m). The owner's 'decrypted backwards' is NOT in the King bank. Contrast: Bosconovitch bank foot direction WAS corrupt; fixed by the Doc Frank lane in #508.",
+      "shipped_bake_scrambled": "#493's baked T3Stance/T3Grab channels under standard glTF evaluation: limb segment errors mean 58-92 deg, max 172 deg; Spine1 rotation channel missing entirely. Their three-way gate was harness-internal, never independently evaluated.",
+      "shipped_weights": "Pose-mismatched raw-Euclidean KNN transfer (k=64) from a T-pose donor. Forearm regions: LeftForeArm 0.06 / RightForeArm 0.03 (Spine up to 0.61); hips ~half Spine; tail geometry bound to LeftUpLeg up to 0.55; literal tail weight on hand verts = 0.000 (the owner's 'hand weighted to tail' read was the scrambled pose). Edge stretch >1.5x ~11%, forearm+hand p99 6.1.",
+      "template_toes": "Shared Pantera template (A1 game model, Leopard King, classic \u2014 node-identical 49 joints + A4 Tail1-4) places ToeBase joints BEHIND the heel (ankle-toe offset z -0.158/-0.160) while toe geometry points +Z; disables analyzeRig foot alignment ('leg' fallback)."
+    },
+    "fix": {
+      "skeleton": "ToeBase bind positions moved forward of the ankle (offset z +0.158/+0.160, world z +0.186/+0.188) with IBM compensation: W_new*IBM_new == W_old*IBM_old (invariance err 1.11e-16; bind displacement <= 4.4e-07; weight sums exactly 1.0).",
+      "weights": "Rebuilt pose-invariantly from the skeleton: two-nearest-bind-segment linear fields + procedural Tail1-4 gradient + one edge-smoothing pass, top-4 renormalized. Result regions: ForeArm 0.58-0.59/Hand 0.40 (Spine 0.00), Hips-UpLeg UpLeg 0.72-0.75 (Spine 0.00), tail verts mean Tail weight 0.999, hand verts max Tail weight 0.0000.",
+      "clips": "T3Stance (75k) + T3Grab (35k) re-baked from the verified retarget port on the fixed skeleton, Spine1 channel added. Standard evaluation: world quats match port 0.000 deg, every limb segment error 0.00 deg mean/max.",
+      "stretch": "Edges >1.5x ~11% -> ~6%; forearm+hand p99 6.1 -> ~3.6. Honest residuals: waist-down p99 slightly above the shipped (wrong) field in neutral; p999 tail from far-from-skeleton sculpt outriggers (mane/muzzle/paws) shared by any field; ~15-20 deg genuine bind toe-shape difference between the Tripo sculpt and the T3-authored template is irreducible skeleton-only.",
+      "runtime": "t3anims.js UNCHANGED \u2014 swing vs pure-delta vs frame-aligned variants all measured against the authoring rig; none beats the shipped swing beyond the models' bind difference. The defect was in the files, not the runtime."
+    },
+    "scope3_feet_audit": {
+      "classic": "fixed (same template, same backward toes) \u2014 roster/pantera/attires/classic/pantera-classic.glb",
+      "a1": "fixed \u2014 game/assets/models/pantera.glb",
+      "crimson_p2_t7king_hires": "unskinned static part meshes (19 nodes, 0 skin joints) \u2014 no skeleton, nothing to patch",
+      "leoman_a2": "authoring rig, toes forward (+0.167) \u2014 clean, untouched",
+      "open_question": "ATTIRE-SLOTS.md names slot 3 file attires/snow-leopard/pantera-snow-leopard.glb which does not exist in the current tree; the classic build is the A3-side file present. A3's exact in-game wiring not fully resolved by this lane."
+    },
+    "pr": {
+      "number": 560,
+      "url": "https://github.com/mhvnsnt/western-heart/pull/560",
+      "branch": "fix/pantera-rig-correction-20261022",
+      "state": "MERGED",
+      "merge_commit": "cfce85df4bebe30cf6a08bca33ab71287fe41da6",
+      "merged_at": "2026-10-22T08:40:20Z",
+      "checks": "instruction-gate pass (after exact section-header fix), deletion-guard pass, guard pass; mergeStateStatus CLEAN before merge",
+      "files": [
+        "roster/pantera/attires/leopard-king/model-rigged.glb (blob 46d6e21f)",
+        "game/assets/models/pantera.glb (35e3fb5b)",
+        "roster/pantera/attires/classic/pantera-classic.glb (f0f0b7f0)",
+        "roster/pantera/attires/leopard-king/WORKLOG.md",
+        "docs/PANTERA-RIG-CORRECTION-2026-10-22.md",
+        "docs/tpose-refs/pantera-leopard-king/fix2-sheet-20261022.png",
+        "docs/tpose-refs/pantera/fix2-a1-sheet-20261022.png"
+      ],
+      "verified_on_main": "model-rigged.glb blob on main == 46d6e21f; pantera.glb == 35e3fb5b (checked via API after merge)"
+    },
+    "proof": {
+      "owner_copies": [
+        "~/workspace/your_files/pantera-a4-fixed2-sheet-20261022.png",
+        "~/workspace/your_files/pantera-a1-fixed2-sheet-20261022.png"
+      ],
+      "viewed_by_agent": "Both sheets viewed panel-by-panel before the PR was opened: original Tripo vs fixed IDLE (neutral f15) vs fixed STANCE (T3 f30), front view. A4: head/chest match the original sculpt, forearms/hands unstretched paws, legs coherent same-direction, boots forward and planted, tail a clean arc on Tail bones. A1: bind T-pose intact; idle = King grappler guard with fully formed hands; stance upright, feet forward. Rendered via headless Chromium + three.js (game's own stack) from static poses exported out of the exact shipped files, because the machine-wide Blender queue never cleared (5 concurrent lane Blenders, ~1.5-2.5 GB RAM free; forcing a render risked OOM-killing a 24-minute bake \u2014 never-kill law).",
+      "working_dir": "~/workspace/_pantera-fix2/ (glblib/rtport/skinlib, exps 1-13, build_fix*, gates*, posed GLBs, shots)"
+    },
+    "coordination": [
+      "PR #497 (T3 bank facing) carries the OLD degenerate foot_tip per the 2026-10-22 MEMORY note \u2014 its lane must rebase preserving #508; not touched here.",
+      "Doc Frank lane's #508 fixed the Bosconovitch bank at the source; King bank needed no bank change (verified sane).",
+      "Sibling clone ~/workspace/_docfrank-feet/wh was deleted by another lane mid-task; the A4 blob reached GitHub via a throwaway-branch git push (46d6e21f) and the PR was assembled with the Git Data API; throwaway branch deleted after. gh blob-create 401s on the 109 MB payload \u2014 git push is the reliable >50 MB blob route.",
+      "#448-era release untouched. PR #463 untouched. Bannon #78 untouched."
+    ]
+  },
+  "moves_expansion_fix3": {
+    "date": "2026-10-22",
+    "owner_update_20261022_0123": {
+      "his_read": "right now Pantera's looking really good he's looking like he's standing like king \u2014 stance direction confirmed RIGHT, keep improving along it.",
+      "directives": [
+        "keep giving him more moves",
+        "two-fighter interaction proof is the standing proof format: 'show me him doing moves on another fighter and the other fighter receiving the moves correctly'",
+        "root theory: the Tekken decode flipped body segments; corruption crept from the other characters into Pantera; segment-level flips are the quarry (his Star map: shins+feet, torso, head REVERSED; pelvis/thighs/knees/arms correct). Hunt the pattern in the Pantera path and fix at the source. Star's own fix = sibling lane."
+      ]
+    },
+    "godot_coordination_PROMINENT": {
+      "question": "Godot slice lane (branch feat/godot-slice-20261021) built a new world-delta FK solver (godot/scripts/bank_clip_loader.gd) for the same T3 King bank; rejected verbatim sharing / naive bind-premultiply / Z-mirror conjugation; accepted per-rig auto-detected conversion + quaternion sign-continuity + hip translation only on attack clips. If the shared decode held a direction/order fault, this lane's fix was to become the single source of truth.",
+      "verdict": "NO direction/order fault exists in the shared King decode. Evidence: (1) bank rotations == Leo man GLB native channels at 0.00 deg on all 22 bones x 75 keys (fix2 exp1); (2) the row-bake pipeline reproduces the shipped pack BIT-EXACTLY in a fresh environment (control rows 44/230 max delta 0; all four input SHA-256 match the pack's own recorded hashes). The defects fixed in #560 lived DOWNSTREAM of the decode: the #493 bake harness's foreign frame convention + missing Spine1 channel, the pose-mismatched NN weight transfer, and the template skeleton's backward ToeBase joints.",
+      "implication_for_godot": "The Godot solver's per-rig auto-detected conversions are compensating GENUINE per-rig template differences (e.g., the Pantera template's global bind frame \u2014 a pure rotation, det +1 \u2014 its non-identity rest locals Hips 180 deg / UpLegs 180 deg X / Feet -90 deg X / shoulders, and its -X named-Left placement), NOT a shared upstream decode error. Per-rig conversion belongs at the rig layer in both builds; the bank data itself (wh-anim/1 JSONs + rows.pack.json, now 255 rows) is the single source of truth and is shared unchanged. Recorded in-repo in docs/PANTERA-MOVES-EXPANSION-2026-10-22.md (PR #572)."
+    },
+    "segment_flip_audit": {
+      "method": "work/audit_segments2.py \u2014 Kabsch global frame fit (bind segment dirs, canonical vs target), then per-segment world-dir residuals source-FK vs game retarget (rtport, the validated t3anims.js port) over 12 real clips (rows 0,35,39,44,72,83,127,202,230,279,284,317). NOTE: a naive cross-space comparison without the global fit flags ~180 deg on EVERY segment for the Pantera template \u2014 an artifact of its global bind frame, disproven by the Leo man control and the on-rig gates; method matters, recorded so no lane re-raises that false alarm.",
+      "results": {
+        "leoman_control": "0.0 deg everywhere; fit det +1, bind residual 0.0",
+        "a4_fixed2_and_a1_fixed2": "fit det +1 (pure rotation), bind residual max 12.8 deg, NO bind outliers >20 deg, NO flips >90 deg, NO suspects 45-90 deg; worst posed residuals: Head 26.8 deg (row 202 f2, one fast frame), UpLegs ~17 deg, Spine 15 deg, feet 6.7 deg, all else <=6.7 deg"
+      },
+      "verdict": "No segment-level flip exists anywhere in the Pantera path (decode, template bind, baked clips post-#560, runtime retarget). The pattern the owner mapped lives on Star's model (sibling lane; their PR #561 star-xiaoyu-neutral-bind merged 2026-10-22) and lived in the discarded #493 bake (58-92 deg scramble, removed by #560)."
+    },
+    "moves_expansion": {
+      "gap_measured": "pantera.json (873 move entries) references 226 distinct King rows; shipped pack held 176 rows -> 79 referenced rows missing = 82 move entries (67 strikes, 10 throws, 5 specials) with no animation, falling back to generic light/medium/heavy clips.",
+      "bake": "Repo pipeline tools/anim/t3_row_bake.py in a sparse clone (wh2) + n0madic/Tekken3Remake research (motion.py) pulled to _pantera-fix2/t3r. Inputs SHA-verified vs pack header. Control rows 44+230 bit-exact. 79 rows baked, 0 missing. Merged additively: all 176 shipped rows byte-identical (entry-by-entry assert). New pack: 255 rows = every King row referenced by ANY WH moveset, 2,150,340 B, blob d051e644.",
+      "pr": {
+        "number": 572,
+        "url": "https://github.com/mhvnsnt/western-heart/pull/572",
+        "state": "MERGED",
+        "merge_commit": "1f363a6b8b6f73b441611822afb9117ae1a48dc5",
+        "merged_at": "2026-10-22T09:52:40Z",
+        "checks": "instruction-gate pass, deletion-guard pass, guard pass; CLEAN before merge",
+        "verified_on_main": "rows.pack.json blob on main == d051e644"
+      }
+    },
+    "interaction_proof": {
+      "sheet_owner_copy": "~/workspace/your_files/pantera-fight-proof-20261022.png",
+      "sheet_repo_copy": "docs/tpose-refs/pantera/fight-proof-20261022.png",
+      "method": "Staged with the game's OWN runtime (serve/fight.html: dl copy of game/js/t3anims.js loadT3Clips + retargetT3Clips, three.js, headless Chromium) \u2014 fixed A4 Leopard King vs Diablo (diablo-house49.glb) receiving with the T3 'hit' clip through the same retarget. Contact frames from clip data (max-reach), receiver placed at the contact point facing Pantera, both feet-planted (measured scene-graph gaps: x/z exact for all three; kick boot at his Head joint x/z, uppercut fist at face height on the shorter receiver).",
+      "captures": [
+        "KING 1+3 throw (row 273, NEW) f7 grab \u2014 Pantera's paws over Diablo's head/shoulders (shots/fight4-throw273-side.png)",
+        "KING b+2 uppercut (row 99, NEW) f5 \u2014 fist rises into his chin, Diablo's head snaps back, body arches, feet planted (shots/fight6-uppercut99-side.png)",
+        "KING row 103 turning high kick (NEW) f8 \u2014 boot at Diablo's head, receiver arching away, Pantera counter-leaned on his support leg (shots/fight6-kick103-side.png)"
+      ],
+      "viewed_by_agent": "All three viewed panel-by-panel in the composite sheet before the PR opened: contact lands, receiver faces Pantera and reacts (no frozen/wrong-facing receiver), no mesh interpenetration tangles, feet on the ground plane.",
+      "staging_honesty": "Contact-frame stills from the game's animation runtime, NOT live gameplay frames \u2014 labeled as such in the doc and PR. Hit detection/startup windows are fighter.js's existing path over the same row:<n> clips.",
+      "staging_lessons": "Several King rows are genuinely aerial (239 = somersault, bodyAxisY -0.77 IN THE SOURCE DATA; 57 = leap, hips 1.97 m; 69 = in-place rising knee) \u2014 limb-reach alone misreads them as grounded strikes; check body axis + root trajectory before choosing proof frames. Port (rtport) and source FK agree on all sampled rows (bodyAxisY within 0.01)."
+    },
+    "working_dirs": "~/workspace/_pantera-fix2/ (wh2 sparse clone with bake pipeline, pack-shipped.json / pack-merged.json, serve/ harness, work/audit_segments*.py, work/fight_shots*.py, shots/)"
+  }
+}

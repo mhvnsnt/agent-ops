@@ -1,0 +1,18 @@
+{
+ "id": "gap-closure-w2d-yyh-mdl",
+ "watchdog": true,
+ "status": "done",
+ "heartbeat": "2026-10-22T05:28:24.242784+00:00",
+ "updated_at": "2026-10-22T05:28:24.242784+00:00",
+ "task": "W2d YYH: MDL pointer relocation to GLB + remaining 4 roster PAK verification (CHUU/ELDERTOG/CARDGAME/MENUS)",
+ "repo": "mhvnsnt/game-reverse-engineering + mhvnsnt/western-heart (release yyh-dark-tournament-ps2-v1)",
+ "resume_brief": "W2d IN PROGRESS: replicate MDL pointer relocation from SLUS_208.05 loader and/or shadow-form section table, prove on one MDL, convert YTOGURO 10 MDL variants to GLB with 47-bone skeleton hookup, unpack-verify CHUU/ELDERTOG/CARDGAME/MENUS PAKs from chunks 12/13 vs W2 census, ship PRs instruction-gate format or evidence doc if relocation resists, no fabricated GLBs.",
+ "steps": {
+  "checkpoint": "done - created first, heartbeat first",
+  "read_w2b": "done - PR39 TEARDOWN-W2B MDL sec + w2b checkpoint + inventory read",
+  "relocation": "done - no pointer graph exists: offset-table container proven (37/37, 44/44, 30/30, 134/134 in-bounds); 0x8054699c = RGBA pixels",
+  "glb_convert": "done for v10 shadow forms x3 (PR #41, own-eyes Blender verified); v1 forms = documented VIF-packed blocker in TEARDOWN-W2D.md sec.3",
+  "pak_verify_4": "done - CHUU 25/25, ELDERTOG 28 (census said 29), CARDGAME 164 (census said 122), MENUS 2 (census said 5); all entries size-verified",
+  "prs": "done - GRE PR #41 stacked on PR #39 branch, not merged; no western-heart change needed"
+ }
+}

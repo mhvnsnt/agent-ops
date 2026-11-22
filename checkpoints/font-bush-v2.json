@@ -1,0 +1,12 @@
+{
+ "task": "Rebuild Bush font v2 from scratch: genuinely crude hand-drawn marker letters (the v1 came out as clean bubble letters - rejected by owner). 43 glyphs, TTF + PNG pack + specimen, verified with eyes.",
+ "repo": "~/workspace/font-wizard",
+ "resume_brief": "Rebuild the Bush font (v2) in ~/workspace/font-wizard/fonts/bush-v2/. The v1 at fonts/bush/Bush-Regular.ttf was rejected: it looks like neat clean bubble letters, not crude handmade marker. Build a new generator that draws each glyph as jittery hand-drawn marker strokes: multiple passes with random offsets, varying stroke width (marker pressure), rough edges via noise displacement, random per-glyph baseline shifts and slight rotations, dry-brush gaps and ink speckle. Target the In the Bushes locked style: kid-drawing, crude lo-fi, handmade deadpan (12 oz Mouse / Home Movies). 43 glyphs: A-Z, 0-9, !?.,'-\\& (lowercase maps to caps). Output: BushV2-Regular.ttf (fontTools), PNG pack (43 transparent glyphs), SPECIMEN.png, README.md. Then render proof images of several glyphs LARGE and inspect them yourself - they must look visibly hand-drawn, rough, uneven. Not smooth, not uniform, not bubble letters. Commit to branch fonts/bush-v2, open PR, merge per repo rules (branch->PR->merge, zero open PRs). Heartbeat the checkpoint.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T19:11:26.480188+00:00",
+ "stage": "pr-merged",
+ "notes": "DONE. Bush V2 built, visually verified (23+ glyphs inspected large with own eyes: genuinely crude hand-drawn marker, readable). PR #6 merged to main, branch deleted, zero open PRs. Outputs in fonts/bush-v2/: BushV2-Regular.ttf, 43 PNGs, SPECIMEN.png, README.md, work/gen_bushv2.py.",
+ "pr": 6
+}

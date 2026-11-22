@@ -1,0 +1,10 @@
+{
+  "task": "Catalog older WWE 2K games (2K14-2K18) on Archive.org",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/game-reverse-engineering",
+  "resume_brief": "Search Archive.org advancedsearch API for WWE 2K14, 2K15, 2K16, 2K17, 2K18 (PS3/Xbox 360 era). For each found: note exact identifier, size, platform, format. Do NOT download. Append findings to ~/workspace/game-reverse-engineering/wrestling-games/CATALOG.md. Catalog entries should include the Archive.org identifier, platform, size in GB, and format (ISO/PKG/etc).",
+  "updated_at": "2026-10-13T23:10:00Z",
+  "attempts": 0,
+  "notes": "COMPLETE. Found 9 full WWE 2K games (2K14-2K23) on Archive.org, ~412GB total. Catalog at ~/workspace/game-reverse-engineering/wrestling-games/CATALOG.md. Recommended: pull the 0.69GB ported moves/animations packs first (highest value), then 2K14 (1.26GB), then larger games as storage allows. All feed the separate wrestling game per owner separation plan."
+}

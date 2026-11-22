@@ -1,0 +1,9 @@
+{
+  "task": "Archive Real's Instagram photos to Atlas",
+  "status": "done",
+  "watchdog": true,
+  "repo": "mhvnsnt/atlas",
+  "resume_brief": "Archive ALL Instagram photos of Marquis Deshaun Whitacre into mhvnsnt/atlas on branch seed/atlas-v1. Accounts: @m2villainous (17841446253082141, primary), elephant.5649908 (17841435713616209), truthseekersjourney (17841467379885952). Pull all posts from m2villainous via instagram-cli (paginate), download full-size images to atlas/media/instagram-m2villainous/, profile pics to atlas/media/profile/, only photos OF him from the other two accounts to atlas/media/instagram-other/. Name files {account}_{date}_{caption-slug}.jpg, dedupe by URL/hash. Write atlas/media/INDEX.md catalog (look at each image, describe it) and atlas/media/FACEBOOK-WORKFLOW.md (how archived photos get onto FB Pages: CLI --file for drafts works; profile pic/cover/description must be uploaded in-app). Commit + push to seed/atlas-v1. READ-ONLY on Instagram accounts.",
+  "updated_at": "2026-10-08T14:30:00-05:00",
+  "attempts": 0
+}

@@ -1,0 +1,10 @@
+{
+  "task": "Build 2D animation rig packs (model sheets) for Static, Cipher, Echo, Onyx following the Ashes pattern: 10 Preston Blair visemes, 6 eye expressions, 5-10 hand poses, model sheet, animation guide. Output ~/workspace/character-rigs/<char>/",
+  "repo": "~/workspace/character-rigs",
+  "resume_brief": "Build rig packs for Static, Cipher, Echo, Onyx in ~/workspace/character-rigs/<char>/. Pattern: ~/workspace/ashes-mouth-pack/ (visemes/ 10 Preston Blair cards, eyes/ 6 cards, hands/ 5-10 cards, <CHAR>-MODEL-SHEET.md from ~/workspace/animation-techniques/templates/character-model-sheet-template.md, <CHAR>-ANIMATION-GUIDE.md). CRITICAL: generate ALL viseme cards from ONE single base image for pixel alignment (Ashes v2 lesson). Character likeness: Static = bleached-blond messy hair, dark full beard, light skin, muscular tattooed torso, green dragon chest tattoo; Cipher = green jester outfit masked, yellow/green robe; Echo = pink robe, female; Onyx = dark robe. Watch/read every card before calling done. Preston Blair standard. Checkpoint: ~/workspace/agent-ops/checkpoints/rig-packs-batch1.json",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T22:49:15.068397+00:00",
+  "notes": "All 4 rig packs VERIFIED done: static, echo, cipher, onyx. Each: 10 Preston Blair visemes (single-base pixel-aligned), 6 eye cards, 8 hand cards, filled model sheet, animation guide. Gaps fixed: echo missing ah/th visemes + blink piercings; onyx s-viseme built procedurally. Skin tones numeric-verified (onyx #986646 within 20)."
+}

@@ -1,0 +1,10 @@
+{
+  "task": "LOTI v3 disclaimer fix: 1 disclaimer per airing with rotation",
+  "repo": "~/workspace/trippedd-studio-loti-v2",
+  "resume_brief": "In ~/workspace/trippedd-studio-loti-v2 on branch feat/loti-commercial-v3 (PR #117 open, NOT merged): owner says the disclaimers card shows all 13 disclaimers on one page \u2014 it should show 1 disclaimer per airing. Find where the 13 disclaimers are defined (v1/v2 scripts in production/TRIPPEDD_EP01/segments/luck-of-the-irish/), rebuild the disclaimers card with a SINGLE disclaimer (large, readable, deadpan comic beat \u2014 same card duration slot), and create a rotation file (e.g. v3/disclaimer-rotation.json) tracking which disclaimer airs next so each future placement of the commercial across episodes/segments shows a different one. Use disclaimer #1 for v3. Re-mux the final MP4, QC the card beat by eye (legible, timed right), re-upload via remote-storage, commit+push to feat/loti-commercial-v3 (--no-verify). Do NOT merge PR #117. Report new MP4 SHA-256, URL+expiry, and the rotation state.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T22:08:09.565681+00:00",
+  "notes": "All three shipped: disclaimer fix + METHODS.md + hand-drawn lane (spec, use_hand_drawn.sh, step-9 fix)."
+}

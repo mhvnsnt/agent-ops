@@ -1,0 +1,10 @@
+{
+  "task": "Complete asset sweep: every file from TTT2, Tekken 6, Urban Reign, Tekken 3 into western-heart, with ui/ folders as AI-generation templates",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/western-heart",
+  "resume_brief": "Complete asset sweep done. Tekken 3: 11 UI TIMs organized in teardown/tekken3/ui/. Tekken 6: PSP icons fetched, videos documented on Release tekken6-endings-v1, encryption documented. Urban Reign: 76 UI files in teardown/urban-reign/ui/. TTT2: STFS structure documented, split at 15/26 chunks to Release ttt2-7z-v1 (in progress by another worker). Commit 9031ac8a merged to main via PR #41.",
+  "updated_at": "2026-10-13T13:50:00Z",
+  "attempts": 0,
+  "notes": "All work committed as 9031ac8a and merged to main. TTT2 full extraction blocked until split completes and disk frees up."
+}

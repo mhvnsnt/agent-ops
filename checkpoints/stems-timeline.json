@@ -1,0 +1,10 @@
+{
+  "task": "Load all 44 EP02 stems into Pocket Studio timeline cleanly",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/pocket-studio-v2",
+  "resume_brief": "All 44 EP02 stems loaded into Pocket Studio timeline. Dialogue (17), SFX (20), BGM (4), Ambient (3). Web Audio playback engine built and integrated. BGM/SFX compressed from 113MB to 12MB. All clips draggable, playable, with real waveforms. Baked placeholders removed. If resumed, verify app.html JS syntax and trigger artifact rebuild.",
+  "updated_at": "2026-10-12T03:00:00Z",
+  "attempts": 1,
+  "notes": "44 clips in PROJECT const. Audio engine (AE) syncs to playhead via 120ms tick. Mix tab has 4 faders. All files verified on disk."
+}

@@ -1,0 +1,9 @@
+{
+ "task": "TEARDOWN SWEEP \u2014 run teardowns on all full games for the Western Heart chimera build (Tekken 6 PSP, Tekken 3, WMXIX, WWF No Mercy, Urban Reign)",
+ "repo": "~/workspace/western-heart",
+ "resume_brief": "Check 5 games: 1) Tekken 6 PSP (teardown done PR #14, ISO may be deleted) 2) Tekken 3 (model mapping needs_owner, EXE tables blocked) 3) WMXIX (wrestling teardown running, skeleton+YANM decoded) 4) WWF No Mercy (ROM + teardown status) 5) Urban Reign (ISO download status, start teardown if landed). For each, create/update TEARDOWN.md in western-heart/teardown/{game}/ covering: extracted/documented, blocked+why, chimera build value, next steps. Branch\u2192PR\u2192merge. Report per-game status + PR URL.",
+ "status": "done",
+ "attempts": 1,
+ "watchdog": true,
+ "updated_at": "2026-10-13T06:28:39.493859+00:00"
+}

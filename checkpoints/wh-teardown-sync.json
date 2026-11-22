@@ -1,0 +1,10 @@
+{
+ "task": "WESTERN HEART TEARDOWN SYNC",
+ "repo": "western-heart",
+ "resume_brief": "Sync all game teardown outputs from game-reverse-engineering/ into western-heart/teardown/. The repo's teardown/ has canonical docs but game-reverse-engineering/ has the working files (models, extracts, tools). For each game: copy key outputs (READMEs, inventories, extracted data docs, tools) into teardown/<game>/, commit via branch->PR->merge. Skip large binaries (those go to GitHub Releases or TeraBox). Priority: urban-reign (PPK-GEOMETRY.md, tools), tekken6 (decrypt docs), virtua-fighter-5 (model READMEs), street-fighter-3d-games (CATALOG.md), tekken7 (model inventories). Do NOT touch active work files.",
+ "status": "done",
+ "attempts": 1,
+ "notes": "DONE 2026-10-14 08:15 EDT watchdog resume: audited all 5 priority games. Synced 3 files: teardown/street-fighter-3d-games/CATALOG.md (new dir), teardown/urban-reign/tools/afs_list.py, teardown/urban-reign/docs/stage-candidates.txt. PR #97 merged to main (cfe6129d). tekken6 decrypt docs + tekken7 inventories verified already synced (only large binaries differ, skipped per brief); tekken6/extracted left to the active decrypt lane; VF5 per-fighter READMEs redundant vs canonical models/README.md (not copied).",
+ "watchdog": true,
+ "updated_at": "2026-10-14T12:12:20.554526+00:00"
+}

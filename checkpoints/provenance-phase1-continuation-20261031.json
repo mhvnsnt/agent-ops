@@ -1,0 +1,45 @@
+{
+ "task": "Provenance Phase 1 continuation: exhaust provable anim_t3 corrections in 36 class 1-W files, Rin/Jin row 217 bake, Phase 2 F4 non-gated rows",
+ "status": "complete",
+ "watchdog": false,
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "Owner order 2026-10-31 'Resume the stalled lanes now' (G lane). Verify main HEAD before every PR (siblings merging in parallel; f2137c06 at dispatch). Read docs/movesets/MOVESET-PROVENANCE-2026-10-30.md + PHASE2 doc. Phase 1 landed 2,097 corrections (31 PRs); 8,593 guess-grade remain in 36 class 1-W files, mostly blocked on T3 branch condition codes (sibling lane decoding). Work only what is provable TODAY via A/B/C/S branchwalk proofs against each fighter's own T3 bank graph; unproven stays byte-identical, counted with named blocker. Then: bake jin row 217 (tools/anim/t3_row_bake.py --merge --bank jin) as its own PR, verify ONLY row 217 added, then rin b+2,1 correction PR. Then Phase 2 F4 rows for non-owner-gated fighters only (demonio devil_jin 34, gyou paul 47 per classification; koreshi layer is OWNER-GATED per brief - do not touch; class 2 files, class 1-S, class D files untouched). Instruction-gate PR format, merge gate MERGEABLE+CI green+zero unexpected deletions, Git Data API route, per-character isolation. Results doc: docs/movesets/MOVESET-PROVENANCE-PHASE1-CONTINUATION-2026-10-31.md. Never call data-corrected play-verified.",
+ "updated_at": "2026-10-31T12:28:07.079786+00:00",
+ "attempts": 1,
+ "notes": "[2026-10-31T11:02:47.029168+00:00] Lane started. Main verified f2137c06. Docs read. Phase 1 table (per-file corrected/remaining) captured from PHASE2 doc: total remaining guess-grade 8,593 across 36 files.\n[2026-10-31T11:45:49.644902+00:00] Sweep complete (analysis/summary.json in lane dir). Pantera PR #1369 open: 20 corrections (A4/S3/C13; 7 row changes, 13 label confirms), 13/14 checks green, menu-touch-e2e pending. Instruction-gate initially failed on exact section titles; body fixed, gate passes. Jin bake verified locally.\n[2026-10-31T11:52:01.645343+00:00] PR #1369 (pantera, 20 corrections) MERGED c9859b54; verified from main: 20 surgical provenance_fix records (A4/S3/C13), remaining guess-grade 175. Bake PR #1372 open, CI running (budgets/unit/material green; e2e+speed pending).\n[2026-10-31T12:28:07.079786+00:00] COMPLETE. All 4 PRs merged and verified from main by own re-parse. Results doc on main (PR #1375). Lane scratch retained at ~/workspace/_prov-cont-lane/ (sweep outputs incl. the 33 held paul proof records in analysis-run1/) pending parent confirmation before cleanup.",
+ "progress": {
+  "step": "complete",
+  "prs_merged": [
+   {
+    "pr": 1369,
+    "merge_commit": "c9859b540e42d3efb452a2bbd043be8947f711a7",
+    "file": "game/assets/movesets/pantera.json",
+    "corrections": 20
+   },
+   {
+    "pr": 1372,
+    "merge_commit": "cce19f43dd0c310ff715eedc81dd555be5b364ea",
+    "file": "game/assets/anim/t3/jin/rows.pack.json",
+    "corrections": "row 217 baked (226->227 rows, nothing else changed)"
+   },
+   {
+    "pr": 1374,
+    "merge_commit": "cea9a96af6fc7a2b6adf684e3955ecac0b0b82eb",
+    "file": "game/assets/movesets/rin.json",
+    "corrections": 2
+   },
+   {
+    "pr": 1375,
+    "merge_commit": "0c0017f6f46b3487c0f94d55ae126e558516119c",
+    "file": "docs/movesets/MOVESET-PROVENANCE-PHASE1-CONTINUATION-2026-10-31.md",
+    "corrections": "results doc"
+   }
+  ],
+  "prs_open": [],
+  "corrections_landed": 22,
+  "held": "33 paul-bank corrections proven only via gyou-spirit-body anchors (Owner Decision List item 5) - counted, not landed",
+  "remaining_guess_grade": 8552,
+  "phase2_f4": "442 rows accounted (koreshi 360 gated, demonio devil_jin 35, gyou paul 47), zero edits - T8-form true-map, T8 governs",
+  "bootstrap_resweep": "zero new proofs; Phase 1 exhausted with today's evidence"
+ }
+}

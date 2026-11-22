@@ -1,0 +1,141 @@
+{
+ "census_code_level": {
+  "battle_systems": "WorldEngine inline battleState + triggerWildBattle (createMochii-built stats, v5.2/v5.3 stat-scale fixes), trainer teams via trainer-teams-resolver; BattleView separate view also exists (App-level). Moves DB/learnsets/evolution landed by 2026-10-27 wiring lane.",
+  "entry_flow": "App.tsx: IntroSequence until introCompleted, then WORLD view (WorldEngine). Intro phases: BOOT -> INTRO -> TITLE -> MAIN_MENU -> SAVE_SLOTS -> PROF_INTRO_1 -> GENDER_SELECT -> NAME_ENTRY (NamePad, on-screen letters + physical keyboard) -> RIVAL_NAME -> PROF_INTRO_2 -> world.",
+  "first_route": "route_1 (28x40): tall-grass encounter table wired (rate 0.15 per step on TALL_GRASS tile with hasStarter, WorldEngine line ~777, pool of 4 species Lv3-4), 4 trainer NPCs with battles + postBattleDialog, south exit back to sector0, north exit to binary_fields.",
+  "first_town": "sector0 = 'Sector 0 - Boot Harbor' (32x28 tile grid, real tile art via PixiWorldCanvas/tileAtlas). NPCs: Mom (heal, wander), Hex (battle NPC), Technology Enthusiast. Signs x4 wired. Doors: Aeon's Lab (10,3), Your House (6,7), Hex's House (26,7). North gate x=15 corridor to route_1, gated by noStarter block events until starter picked.",
+  "legacy_shadow": "src/world/Maps.ts is a second, older map set (emoji NPCs) - WorldEngine imports FULL_WORLD from FullWorldMaps.ts only; Maps.ts appears unused by the live path (to confirm by grep for imports).",
+  "save": "saveSystem (saveGame/getSaves, autosave on map change + 60s, slots, START OVER autosave-hold). Save/continue exists.",
+  "second_town": "binary_fields = 'Silicon Town': NPCs (dojo guard, town girl, old man, all wander), signs, doors to dojo_1, mochiiplex_1 (heal nurse + shop clerk), dojo_8 (badges>=7 gated via doorGate).",
+  "spawn": "New game spawns in sector0_truck at (6,8) (canon truck opening, landed 2026-10-28): talk to Mom/movers, exit door -> sector0 (Boot Harbor) at (15,10). NOT a direct town spawn.",
+  "starter_beat": "Aeon's Lab: 5 starter choice NPCs (001/004/007/010/038, isChoice events), prof speech event, Hex lab-exit battle event (condition hasStarter) = first battle on the path."
+ },
+ "census_open_questions_for_playtest": [
+  "Does the full intro click through without dead ends (esp. SAVE_SLOTS new-game path)?",
+  "Truck: can the player actually reach the exit door and land in Boot Harbor?",
+  "Boot Harbor: Mom interact + heal, sign reads, house door + lab door round trips.",
+  "Lab: starter choice registers hasStarter; Hex exit battle fires and completes; return to town works.",
+  "Route gate opens with starter; tall-grass wild battle triggers and completes; battle exit returns to overworld at sane position/HP.",
+  "Route -> Silicon Town -> MochiiPlex heal/shop -> back to Boot Harbor full loop.",
+  "Any page errors / stuck states along the path."
+ ],
+ "coordination_notes": [
+  "PR #122 (Iwao Earth-first) exists - not redone, per task.",
+  "Budgets raise is another lane's rebuild (workspace _mochi-budgets-rebuild) - not touched.",
+  "No open PR covers the first-town path - no duplication.",
+  "Separate local checkout at ~/workspace/_mochi-first-town (sparse, blob-filtered) so other lanes' checkouts are never touched."
+ ],
+ "fixes": [],
+ "open_prs_checked": [
+  123,
+  122,
+  121,
+  108,
+  102
+ ],
+ "playtest": {
+  "stageA": "PASS 2026-10-29 ~15:2x CDT: full intro path played in local build (dist served :4173) with screenshots ~/workspace/_mochi-ft-shots/final-a2/ (01 boot, 02 title, 03 menu, 04 slots, 05 prof, 06 gender, 07 name entry typed ACE, 09 rival Hex, 10 world-first in truck with HUD+goal). Menu NEW GAME is DOM panel, click (640,508); Enter does NOT activate menu. localStorage is fresh per browser profile.",
+  "stageB": "PROVEN on camera (screenshots in ~/workspace/_mochi-ft-shots/nav/, all viewed): lab interior + 5 starter sprites; Tyrage choice dialogue YES -> party=1, goal advanced, autosave fired (nav7); Hex lab-exit event dialogue + battle screen SYS_BATTLE // HEX, Hex counter-picked Mochii vs Tyrage (nav9); battle is CLICK-driven for moves (Enter alone never executed a turn in ~5 min of loop; Tackle clicks at (995,640) fought it); Hex battle COMPLETED (goal advanced to 'Go to Route 1.0 ... then to Silicon Town', player back in Boot Harbor, menu panel: Map aeon_lab/Team 1/Caught 1) \u2014 the win itself landed in the half-loaded nav10 session, so mid-battle HP-drop frames are thin (nav9 pre-fight frame is the battle evidence). Mom town dialogue opened at spawn area and ate a leg of steps (movement frozen during dialogue). REMAINING: town-exit warp on camera, route_1 wild battle on camera, Silicon Town + MochiiPlex, return loop, reload-CONTINUE same-spot frame.",
+  "observed_issues": [
+   "Truck interior: player + Mom + movers render as drawn capsule figures with black eye-bar (fallback), not sheet sprites",
+   "HUD top-left panel: map-name/goal text overflow and overlap the door-prompt banner",
+   "Title screen: transient grey vertical bar in early captures, thin line later (likely loading shimmer) \u2014 characterize",
+   "Intro movie scenes are GAP placeholder cards (known)",
+   "Atlas-backed sprites (Hex, Prof, Mochiko) render with OPAQUE WHITE SQUARE background (sheet cell white bg not keyed) \u2014 seen town + lab",
+   "Boy player + Mom + movers + techie render as capsule fallback figures with black eye-bar (player_boy sheet slot is null in humanSheets)",
+   "Save quicksave (F5) entries lag the live state: probe repeatedly read stale map/pos while the game had warped; navigation must be visual",
+   "Pixi WebGL renderer chunk is dynamically imported; a failed fetch leaves a PERMANENT black world with HUD alive and no retry/error surface (nav11/nav13)",
+   "Gate approach: only the x=15 column is a walkable corridor to the north exits \u2014 counted-step navigation kept stalling east of the corridor",
+   "HUD top-left panel: goal text overflows the panel box and overlaps toasts",
+   "STEER 2026-10-29 ~17:34 CDT (owner via Ashes): after this slice \u2014 (1) battle black bars, (2) the flicker, (3) fill through the second dojo. Initial code read: path battle = WorldEngine inline battle (SYS_BATTLE, DOM billboards, w-screen/h-screen, black header + slate arena + black bottom panel); intro stage is a 1200x1500 portrait stage letterboxed on landscape. Root cause not yet pinned \u2014 phone-aspect battle captures planned."
+  ],
+  "stageB_final": {
+   "proven_on_camera": [
+    "Intro->name entry (ACE)->rival (Hex)->truck spawn->Boot Harbor town spawn (final-a2/, p6/)",
+    "NPC dialogue: truck Mom, town Mom (opened at spawn area), sign/techie attempts logged in p6",
+    "Lab door warp step-on (nav6: HUD Aeon Lab), lab interior with Prof/Mochiko/Hex + 5 starter sprites (nav6/nav7)",
+    "Starter pick: Tyrage choice dialogue, YES clicked, party=1, autosave fired, goal advanced (nav7-preyes/taken)",
+    "Hex lab-exit event dialogue + battle screen SYS_BATTLE // HEX, Hex counter-picked Mochii vs Tyrage (nav9-hexevent/hexbattle)",
+    "Save/continue: repeated loads restore state; menu CONTINUE panel shows ACE / Map aeon_lab / Team 1 / Caught 1 (nav8-start)"
+   ],
+   "proven_by_state_not_camera": [
+    "Hex battle completion: goal advanced to Route 1.0/Silicon Town + player back in Boot Harbor (nav11 HUD/END-TEXT). The winning clicks landed in the half-loaded nav10 session; mid-battle HP frames are thin. Battle moves are CLICK-driven: Enter alone never executed a turn in ~5 min of loop; clicks at the move button (995,640 @1280x800) fought."
+   ],
+   "not_yet_proven": [
+    "Town-exit warp (north gate, x=15 column) on camera",
+    "Route 1 tall-grass wild battle end-to-end on camera",
+    "Silicon Town arrival + MochiiPlex nurse heal",
+    "Return loop to Boot Harbor + reload-CONTINUE same-spot frame",
+    "House interior (1F/2F + clock event) on camera \u2014 legs kept missing positionally"
+   ],
+   "blocker": "VM saturation from sibling lanes (load 12-20, RAM ~8GB nearly full, daemon restarts ~20 min): Chromium renderer crashes (Target crashed / ERR_INSUFFICIENT_RESOURCES / PAGEERROR WebGL chunk fetch) killed nav12-nav23 attempts at the exit leg. Game-side state is intact in the profile save (post-Hex, Boot Harbor/lab doorstep).",
+   "resume_recipe": [
+    "Server: node ~/workspace/_mochi-ft-shots/static-server.mjs (serves ~/workspace/_mochi-ft/dist on :4173; dist is current main build)",
+    "Harness: node ~/workspace/_mochi-ft-shots/play-nav.mjs \"<actions>\" <tag> \u2014 profile ~/workspace/_mochi-ft-shots/profile holds ACE slot-1 (post-Hex). Actions: U/D/L/R steps, E interact, C:x:y click, A:n advance, S:name screenshot, W:ms wait.",
+    "Player start (last verified): Boot Harbor lab doorstep ~(10-11,4). Exit leg: R x4-5 to x15 column, U x4 onto (15,0) warp -> route_1; then L to x14, U x14 to (14,24), pace L/R on grass row y24 for wild battle; fight via C:995:640 clicks; north x14 to (14,0) -> Silicon Town.",
+    "Navigation must be VISUAL (landmark screenshots): the F5 quicksave probe lags live state and counted steps drift (dialogues freeze movement; NPC wander blocks)."
+   ]
+  }
+ },
+ "prs": [],
+ "repo": "mhvnsnt/Mochiichao-Diamond-Version-2d-fresh-start",
+ "started": "2026-10-29T18:45Z",
+ "status": "stage-b-core-proven-tail-environment-blocked",
+ "task": "Mochiichao first-town playable slice (PROGRESSION-STYLE DEVELOPMENT LAW, owner 2026-10-29)",
+ "environment_notes": [
+  "Local build tree ~/workspace/_mochi-ft (assembled via contents API, size-verified, NOT a git repo); dist served by node static server on :4173 (python http.server dropped the WebGL chunk under load \u2014 replaced)",
+  "Playwright moved to standalone harness ~/workspace/_mochi-ft-shots/harness/node_modules (19M); game node_modules removed to relieve user-quota EDQUOT (rebuild needs npm install first)",
+  "Harness: ~/workspace/_mochi-ft-shots/play-nav.mjs; persistent profile holds ACE slot-1 save (post-Hex state)"
+ ],
+ "steer_followups": {
+  "order": "owner 2026-10-29 ~17:34 CDT via Ashes: (1) battle black bars, (2) the flicker, (3) fill through second dojo \u2014 after stage B",
+  "flicker_root_cause": "PINNED in code: WorldEngine.tsx:267 animTick setState every 300ms + PixiWorldCanvas.tsx:616 useEffect(draw) with no dep array -> draw() destroys/recreates the ENTIRE tile Graphics (~900 tiles) + door Text labels on every render (~3.3x/s forever, plus NPC tick 650ms and every step). Missed frames show canvas bg #0a1a0a = flicker. Fix design: cache the static tile+label layer in a ref keyed by (map id/size, tile px) \u2014 it is drawn in world coords and does not depend on camera or animTick; only dynamic drawables rebuild per draw.",
+  "white_box_root_cause": "PINNED: human atlases (src/assets/human-characters/in-game-sheets/*) have OPAQUE light-grey cell backgrounds (e.g. hex atlas corners (223,223,223,255)); pixiSheet.ts sheetCellTexture/sheetCellTextureXY crop raw cells with no keying. Creature cuts are transparent (alpha 0 corners) so a corner-guarded edge flood-fill key in the two pixiSheet loaders fixes humans and no-ops creatures. One fix location.",
+  "battle_black_bars": "NOT yet pinned. Path battle = WorldEngine inline (SYS_BATTLE header black bar, dark slate arena, black bottom panel; root w-screen h-screen). Intro/title uses a 1200x1500 portrait stage letterboxed on landscape (LockedStage.tsx: scaleStage + .locked-stage-frame sides = stage background #050810 near-black). Needs phone-aspect (e.g. 390x844 / 360x740) captures of the actual battle to separate by-design bars from stage-frame bleed before changing code.",
+  "webgl_chunk": "Pixi WebGLRenderer is a lazy dynamic import; a failed fetch = permanent black world, HUD alive, no retry/error surface (seen nav11/nav13 when the python static server dropped the chunk; node server fixed serving). Worth a bootstrap retry/error note in the same fix pass."
+ },
+ "continuation_20261029_late": {
+  "lane": "continuation (flicker/whitebox/battle/tail)",
+  "prs": [
+   {
+    "n": 140,
+    "branch": "fix/pixi-static-layer-flicker-20261029",
+    "what": "Flicker fix: static tile+door-label layer cached in a ref keyed by (map id/name, map dims, tile px) in PixiWorldCanvas.tsx; dynamic drawables still rebuild per draw. Exactly the checkpoint fix design.",
+    "state": "OPEN UNSTABLE \u2014 no-deletion guard failing repo-wide (GitHub-side), left ready, not forced"
+   },
+   {
+    "n": 141,
+    "branch": "fix/whitebox-sprite-keying-20261029",
+    "what": "White-box fix: corner-guarded edge flood-fill key in both pixiSheet loaders (sheetCellTexture + sheetCellTextureXY); guards: all corners alpha 255 + corner spread <=12; tolerance 20/channel; fullImageTexture untouched.",
+    "state": "OPEN UNSTABLE \u2014 guard, as above"
+   },
+   {
+    "n": 143,
+    "branch": "fix/battle-stage-frame-bleed-20261029",
+    "what": "Battle black bars: by-design = black header + h-48 Black-pattern command panel (main already phone-tightened). Defect fixed = battle root w-screen/h-screen (100vh) overflowing the .game-screen 100dvh shell -> w-full/h-full. Applied onto current main WorldEngine (cee8a787) after main moved mid-run.",
+    "state": "OPEN \u2014 guard, as above"
+   }
+  ],
+  "verification": {
+   "builds": "vite production build EXIT 0 twice on the fix tree (byte-identical to main for every touched file pre-edit, verified by blob hash three ways)",
+   "whitebox_offline": "Algorithm simulated on real atlas PNGs: hex cell0 keys 1484/4096px, aeon cell0 2134/4096, announcer (pure white bg) 1347/4096, gin tinted bg keys; already-transparent atlas no-ops (alpha guard); creature world cells alpha-0 corners no-op",
+   "before_frame_viewed": "~/workspace/_mochi-ft-shots/nav/contcheck-start.png (old dist, viewed): Boot Harbor renders, goal=Route/Silicon Town (post-Hex save intact \u2014 the F5 probe reading aeon_lab/party0 is the known STALE probe, do not trust it), Hex atlas NPC bottom-right shows the solid WHITE BOX live, boy player + Mom = capsule fallbacks (their humanSheets slots are sheetUrl-null BY DESIGN on main: no boy atlas wired \u2014 that is PR #129's lane; Mom awaits a variant-pick UI)",
+   "overlap_warning": "PR #129 (open) touches PixiWorldCanvas/WorldEngine/humanSheets + wires a keyed Player D boy atlas + GbaBattleScene; PR #126 touches pixiSheet/PixiWorldCanvas. #140/#141/#143 are single-file and re-apply cleanly; expect textual conflicts with whichever lands first."
+  },
+  "not_done_environment_blocked": {
+   "items": [
+    "flicker frame-sequence after-capture",
+    "white-box in-game after screenshots (lab interior)",
+    "phone-aspect battle captures (390x844, 844x390)",
+    "tail on camera: town-exit warp -> Route 1.0 wild battle -> Silicon Town -> MochiiPlex heal -> return"
+   ],
+   "cause": "VM saturation all session: load 12-22, RAM ~7.7GB nearly full, sibling lanes (WH fightloop Chromium, Cape Jones Blender). Chromium renderer target crashes mid-run repeatedly (cap-frames x3, cap-battle x2, cap-battle3 x1 \u2014 died during load/early steps). Servers still up: :4173 old dist, :4174 fixed dist (main + fixes 1-2).",
+   "resume": [
+    "Wait for load < ~8, then: PORT=4174 node ~/workspace/_mochi-ft-shots/cap-battle3.mjs \"R,R,R,R,R,A:2,U,U,U,U,U,U,A:2,S:gate,L,U x14,A:2,S:grass,PACE,W:1500,BATTLECAP,FIGHT2,A:3,S:after,U x10 legs...\" contb \u2014 cap-battle3 = play-nav load flow verbatim + BATTLECAP (CDP phone metrics mid-battle) + FIGHT2 (PWR-button fight) + PACE (grass pacing). Steps use 700ms waits \u2014 do NOT shorten; 420ms steps dropped under load.",
+    "Then: node cap-frames.mjs 4174 after 10 (flicker sequence) and a lab-interior white-box after shot via play-nav legs from the checkpoint resume recipe.",
+    "Save state: profile ACE post-Hex in Boot Harbor (goal Route/Silicon Town) \u2014 VERIFIED live 2026-10-30 ~01:15 CDT via contcheck-start.png; ignore the F5 probe."
+   ]
+  },
+  "status": "fixes-landed-prs-open-captures-and-tail-environment-blocked"
+ }
+}

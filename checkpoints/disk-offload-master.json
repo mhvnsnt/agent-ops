@@ -1,0 +1,24 @@
+{
+  "task": "Master disk offload coordinator: upload everything to GitHub+TeraBox, commit uncommitted work, clear disk below 70%",
+  "status": "needs_owner",
+  "watchdog": true,
+  "repo": "multiple",
+  "resume_brief": "Coordinate disk offload: game-reverse-engineering (11G) verify GitHub+TeraBox then delete; trippedd-studio (19G) commit uncommitted on branch/PR/merge; font-wizard (2.4G) push branches; video-fix-tools (2.1G) commit 2518 files; ep01-loti-swap (6.7G) finish GitHub upload; audio-fix-work (4.6G) backup EP01 FIXED master. Lanes: game-re-verify, trippedd-commit, fontwizard-push, videofixtools-commit, loti-upload, audiofix-backup, cn-verify. Browser TeraBox uploads delegate to parent. Target disk <70%.",
+  "updated_at": "2026-10-15T13:58:19.199572+00:00",
+  "attempts": 3,
+  "lanes": {
+    "game-re": "VERIFIED GitHub (PR#5 merged, ISO 855638016B on release tekken6-psp-v1) / BLOCKED TeraBox (broker spool) \u2014 18G stays on disk per law (GitHub+TeraBox verify required)",
+    "trippedd": "VERIFIED (PR#265 merged) \u2014 19G deleted",
+    "fontwizard": "VERIFIED (PR#14 merged) \u2014 fonts (1.2G) deleted, repo skeleton retained",
+    "videofixtools": "RESOLVED 2026-10-15 ~09:15 EDT by watchdog resume of disk-store-fontstools.json: 5/5 SHA256 OK, release vft-archive-2026-10-15 published, 2.16G local + 4.3G staging deleted",
+    "loti+audiofix": "IN PROGRESS \u2014 lane workers ALIVE (watchdog 09:55 EDT): dl-remaining.sh running since 09:11, gh release download p2.part_aa active; .verify-loti/parts/ holds v2.part_aa..ae landed, p2.part_aa 175M downloading. Owned by disk-store-ep01loti.json + disk-store-loti-final.json",
+    "cn-verify": "Owned by cn-* checkpoints (cn-leak-okko-pull, cn-gigaleak-archiveorg-pull active)"
+  },
+  "notes": " | PULSE 03:20 EDT 2026-10-15: stale, resuming per watchdog protocol. | CLOSE-OUT 03:20 EDT pulse: verified lanes, status=stalled (gaps listed in unverified_items). | PULSE 09:55 EDT 2026-10-15: watchdog resume. State re-verified lane-by-lane. video-fix-tools gap CLOSED (published+byte-verified+deleted ~09:15 EDT). LOTI lane workers alive, downloads progressing (v2 aa-ae landed, p2.part_aa in flight). TeraBox still broker-spool blocked (runtime infra). attempts=3 -> status needs_owner per protocol; coordinator role complete, remaining gaps owned by lane checkpoints or blocked on infra. | OWNER 2026-10-15 ~10:01 EDT: game-reverse-engineering (18G) TeraBox upload goes AFTER other uploads finish. Sequencing: LOTI + current lanes first, then game-rev-eng. TeraBox browser lane is working again (uploads succeeding 09:36-09:39 EDT) \u2014 broker spool block appears cleared.",
+  "unverified_items": [
+    "TeraBox uploads blocked (broker spool capacity, runtime infra) \u2014 game-reverse-engineering 18G, game files incl T6 ISO, VF5 1.3GB, ep01 content, /home/hatch/ originals",
+    "ep01-loti-swap (5.4G) \u2014 verify downloads in progress, deletion gated on byte-verify (lane-owned)",
+    "disk 79% at 09:55 EDT (above 75% resting target; transient verify staging ~2.5G; disk-space-guardian cycles every 6h)"
+  ],
+  "final_report": "~/workspace/agent-ops/DISK-OFFLOAD-FINAL-REPORT-2026-10-15.md"
+}

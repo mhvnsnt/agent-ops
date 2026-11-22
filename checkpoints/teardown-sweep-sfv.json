@@ -1,0 +1,15 @@
+{
+ "task": "SFV: NOT ACQUIRED \u2014 owner decision pending. List only, no action.",
+ "repo": "n/a",
+ "resume_brief": "Owner order 2026-10-20 07:49 CDT: ALL teardown games to 100% (extracted+decrypted+decoded+assembled) wired into western-heart, closest-to-100% first, T5 in parallel by separate lane. No action per sweep order.",
+ "status": "blocked",
+ "watchdog": false,
+ "updated_at": "2026-10-20T13:14:08.120261+00:00",
+ "sweep": "teardown-completion-20261020",
+ "notes": [
+  "2026-10-20 07:53 CDT: listed; awaiting owner acquisition decision.",
+  "2026-10-20 ~08:00 CDT OWNER UPDATE: (1) Program is now 8 games \u2014 Tekken 5 is #8 under its own parallel coordinator; this sweep's 1-7 unchanged, DO NOT touch tekken5. (2) RESEARCH + PULL-IN MANDATE (owner verbatim core): 'do heavy research and pull in and wire up everything into the repo that we need... efficiently optimized and the highest quality possible.' Per game: research industry-standard RE tooling for the platform/format (open-source RE projects, format docs, community decoders, Ghidra extensions/loaders, MCP servers) before/during the crack; pull in the best; wire into repo tools/ + docs with license status honest; USE it (no hand-rolled guesswork where a proven tool exists); LOG every pull-in (what, source, license, where landed, what it unlocked) in the lane report + repo docs (RESEARCH-TO-REPO LAW). (3) Wired means PROVEN: a tool counts as wired only when a production pipeline runs real work through it with a proof artifact (per owner 07:56-07:58 CDT corrections). Mandate relayed to all 4 running lanes 08:00 CDT; queued lanes inherit it from this note.",
+  "2026-10-20 ~08:13 CDT STANDING LAW \u2014 PER-CHARACTER ISOLATION (owner 08:10 CDT): every character's skeleton, animations, and add-ons are separate and stay separate; per-character features live only on their own character's skeleton/animation set, never in shared state that can alter other characters' stances or animations (owner caught cross-contamination in the live build: characters bent/wrong from shared-state edits). Deliverables from this sweep must be per-character self-contained artifacts (own skeleton/clips/add-ons per file), pipelines must process characters independently with no shared mutable rig state, repo layouts namespaced per character, and WH wiring treats character data as immutable per-character input. Relayed to all 4 running lanes 08:13 CDT; queued/future lanes inherit from this note.",
+  "OWNER ACCEPTANCE TARGET (2026-10-20 ~20:57 CDT) - DONE redefined for this game: content LIVE in the western-heart playable build (fighters/moves/animations/stages usable in a real fight or the customization suite, verified in game/), following the PR #397 wiring standard + precedents PR #379/#382/#385. Teardown-side decode/assembly PRs are intermediate landings, NOT the finish. 'No public spec' is not a stop sign - RE comes from our own files (emulator ground truth + Ghidra). No hand-tooling."
+ ]
+}

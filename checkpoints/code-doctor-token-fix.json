@@ -1,0 +1,16 @@
+{
+  "task": "Fix leaked GitHub PAT + Telegram token in public Bannon repo (Code Doctor trust gate)",
+  "status": "done",
+  "watchdog": true,
+  "repo": "mhvnsnt/Bannon",
+  "resume_brief": "Bannon repo restructured - source files with tokens removed from current tree. No actual token values in current files (verified via GitHub code search). Tokens exist in git history per audit. Owner directive: do NOT revoke, just delete from files. Need decision on history rewrite.",
+  "updated_at": "2026-10-14T10:35:00-04:00",
+  "attempts": 1,
+  "findings": {
+    "current_files_clean": true,
+    "tokens_in_history": true,
+    "repo_restructured": true,
+    "owner_no_revoke": true
+  },
+  "outcome": "Owner decision 2026-10-14: leave git history as-is. Current files verified clean (0 hits for github_pat_, TELEGRAM_BOT_TOKEN). Tokens exist only in git history from 2026-07-06 onwards. No revocation, no history rewrite."
+}

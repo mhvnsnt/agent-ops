@@ -1,0 +1,9 @@
+{
+ "task": "DSW pre-animation package: supporting cast designs, color script, title sequence, board 16",
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "DAMN SHIT'S WILD pre-animation package (owner 2026-10-10): complete the real-TV lock package before animation. Bible: production/DAMN_SHITS_WILD/SHOW-BIBLE.md. EP01 script: production/DAMN_SHITS_WILD/EP01/EP01-THE-GROUP-CHAT.md. EP02: production/DAMN_SHITS_WILD/EP02/EP02-THE-RETURN.md. Aaron turnaround: production/DAMN_SHITS_WILD/EP01/stills/turnaround-aaron-ruben.webp (style reference \u2014 match it). ART STYLE LOCK (law): Archer/Assy McGee/Simpsons/Family Guy 2D blend, no AI slop. Build: (1) supporting character turnarounds \u2014 LINDA (group-chat admin energy, emoji mom), DENISE (40s, phone always out), MARCUS (laid-back bro), PAT (tired returns clerk), DEB (cat mom) \u2014 front + expressions each, same style as Aaron's sheet; (2) COLOR SCRIPT \u2014 show palette lock (document hex anchors + usage rules so every episode grades the same); (3) TITLE SEQUENCE design \u2014 the show's open (wavy trippy white-on-black card style per network, 'DAMN, SHIT'S WILD' title treatment, ~10s boards); (4) BOARD 16 \u2014 the 3D-device beat storyboard panel (Aaron in 3D feeling weird about it \u2014 board only, no 3D production). All stills-gated: present for owner approval, no animation. Branch->PR->merge (merge commits only, 0 open PRs). Heartbeat checkpoint, mark done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T05:47:03.317224+00:00"
+}

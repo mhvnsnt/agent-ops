@@ -1,0 +1,10 @@
+{
+ "task": "Real game video production: showcases, ads, cinematic trailer for Concrete Dragon",
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "VIDEO PRODUCTION from the real game for Concrete Dragon (~/workspace/ConcreteDragon). Owner wants the full real-game promotional video treatment: (1) GAMEPLAY CLIPS from different angles \u2014 capture real gameplay with varied camera work. (2) CHARACTER SHOWCASE reel \u2014 the fighters, their looks, their moves. (3) BOSS SHOWCASE reel \u2014 the bosses, their intros, their signature attacks. (4) MOVES SHOWCASE reel \u2014 ki blasts, energy waves, spins, chain throws, weapons. (5) MIX-BAG ADVERTISEMENT videos (1-2) \u2014 fast-cut hype ads from real footage. (6) NARRATIVE/STORYTELLING CINEMATIC AD \u2014 like real game trailers: hook, build, character moments, title card. ALL footage must be REAL game captures from the current main build \u2014 no faked footage, owner's standing law. Capture at high res, edit with ffmpeg (free). Use the game's real boss music tracks for the soundtrack. Output to ~/workspace/concrete-dragon-launch/videos/. Verify every video by watching it (sample frames across the whole timeline) before calling it done. Use a dedicated worktree for any game-file changes. Branch video-production -> PR -> merge for code; videos live in the launch dir. Heartbeat ~/workspace/agent-ops/checkpoints/cd-video-production.json. Report with the finished videos.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "notes": "[watchdog 2026-10-09 21:55 CDT] claim verified: PR #30 merge c57d106 in origin/main; all 7 video pairs present and playable (boss/character/trailer/gameplay/hype1/hype2/moves, 17.8-50.9s); verify/ frame samples p10/p50/p90 present. Status normalized from custom string to 'done'.",
+ "updated_at": "2026-10-10T02:58:13.181827+00:00"
+}

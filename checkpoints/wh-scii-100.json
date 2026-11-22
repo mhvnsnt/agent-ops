@@ -1,0 +1,9 @@
+{
+  "task": "Soulcalibur II teardown completion (WH pipeline). Xbox XISO fully torn down: OLK format RE'd, 1,097 files/664MB extracted (24 movesets/371 textures/125 models/577 anims), 21/24 fighters identified. Docs+tools merged to western-heart main (PR #154). Extraction tarball uploading to GitHub release soulcalibur2-xbox-extract-v1. TeraBox task 2N staged. RENAME-MAP.md updated (24 fighters PENDING owner WH names). TEARDOWN-STATUS.md updated to ~100%.",
+  "status": "done",
+  "watchdog": true,
+  "repo": "western-heart",
+  "resume_brief": "SCII teardown is ~100% complete. Remaining: (1) Verify GitHub release soulcalibur2-xbox-extract-v1 upload completed (gh release view). The upload was running in background (proc_56011f2af132). (2) TeraBox upload is browser-lane task 2N in ~/workspace/terabox-staging/BROWSER-TASKS.md \u2014 parent handles. (3) After GitHub+TeraBox verified, can delete local soulcalibur2-xbox-olk-extract.tar and olk_out/ to relieve disk (root.olk is reproducible from GitHub ISO). (4) Open non-blocking work: model vertex-format to GLB, texture dims to PNG, anim bone tracks, AFS audio/video extraction, identify moveset slots 1e/1f/20. All docs in western-heart repo teardown/soulcalibur-2/ (XBOX-EXTRACTION-REPORT.md, CHARACTER-MAP.md, tools/Olk_extract.py).",
+  "updated_at": "2026-10-14T22:10:00-04:00",
+  "attempts": 0
+}

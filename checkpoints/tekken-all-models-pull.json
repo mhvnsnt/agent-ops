@@ -1,0 +1,9 @@
+{
+  "attempts": 1,
+  "repo": "~/workspace/western-heart",
+  "resume_brief": "Downloading every free Tekken character 3D model from Archive.org, SFMLab, Open3DLab, DeviantArt, rigmodels, GTAinside, Models-Resource, and GitHub. Skipping 8 already owned (King, Xiaoyu, Steve, Asuka, Eddy, Jin, Heihachi, Yoshimitsu). Saving to ~/workspace/game-reverse-engineering/tekken7/models/{character}/ with catalog at tekken-model-pull-all.md.",
+  "status": "done",
+  "task": "Pull all free Tekken character models",
+  "updated_at": "2026-10-13T03:45:00Z",
+  "watchdog": true
+}

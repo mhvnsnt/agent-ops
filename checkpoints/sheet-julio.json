@@ -1,0 +1,9 @@
+{
+  "task": "Full Preston Blair sheet for JULIO (attempt 3 \u2014 prior workers died in restarts, nothing committed)",
+  "repo": "~/workspace/trippedd-studio",
+  "resume_brief": "In ~/workspace/trippedd-studio, on branch feat/sheet-julio off origin/main: build the COMPLETE Preston Blair character sheet for JULIO (Goodville real trio). NOTHING from prior attempts survived \u2014 start fresh. Kit: production/TRIPPEDD_EP01/goodville/kits/julio/ (extraction pieces on main). Sources: /home/hatch/workspace/user/files/1000173537_10_cm4h.png and /home/hatch/workspace/user/files/1000173536_14_nhu1.png. OWNER (2026-10-11): full sheet \u2014 heads (front, 3/4 L, 3/4 R, profile, beanie ON and OFF), face furniture (brows: neutral/angry/sad/suspicious/raised; eyes: open/closed/angry/happy/L/R/up/down/worried; mouths: neutral/smile/smirk/frown/open/ooh/yell on beard-black backing), bodies (front, 3/4, back, sitting, lean-over, walk), hands (open/fist/point/tumbler-grip/relaxed), black-tee options, preview sheet PNG. USE THE IMAGE LAW: derive from extracted cuts, img2img ON the cuts for angles, hand-tool only where needed, verify every piece zoomed vs the source likeness \u2014 hold the EXACT likeness, no drift. Commit INCREMENTALLY (every 15 min \u2014 restarts keep killing this task), open a PR (do NOT merge). Heartbeat ~/workspace/agent-ops/checkpoints/sheet-julio.json every 10 min. Report + mark done.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 1,
+  "updated_at": "2026-10-11T21:31:33.533156+00:00"
+}

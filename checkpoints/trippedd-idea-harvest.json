@@ -1,0 +1,10 @@
+{
+  "task": "Harvest all TRIPPEDD episode/premise/gag ideas from the repo into the idea bank",
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "IDEA HARVEST (owner 2026-10-10): The TRIPPEDD repo has episode/premise/gag ideas scattered across docs, production conversations, canon files, premise banks, and segment notes. Hunt them ALL down and consolidate into docs/creative/EPISODE-IDEA-BANK.md (exists on main, has 'James Order' as first entry). Search: docs/creative/, docs/production-conversations/, production/TRIPPEDD_EP01/, docs/series/, any *PREMISE*, *IDEA*, *GAG*, *PITCH* files, Goodville gags, Lost Acid alternates, segment concepts not yet built. For each idea: title, one-line premise, source path, status (idea/written/in-production). Do NOT duplicate 'James Order'. Branch->PR->merge (merge commits only, 0 open PRs). Heartbeat checkpoint, mark done.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T21:49:23.286561+00:00",
+  "notes": "[2026-10-10] Harvested 7 TRIPPEDD ideas from repo into docs/creative/EPISODE-IDEA-BANK.md (James Order kept first). PR #116 merged (fd59e7ef). DSW 14 premises noted separately."
+}

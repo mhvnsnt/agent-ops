@@ -1,0 +1,355 @@
+{
+ "attempts": 0,
+ "created": "2026-10-21T22:33:00-05:00",
+ "id": "gap-closure-finisher-20261021",
+ "notes": [
+  "Finisher coordinator spawned 2026-10-21 ~22:32 CDT by parent relay of coordinator 0d312f2e completion. Master checkpoint gap-closure-20261021.json READ (updated 23:37Z). Disk 92% used / 8.6G free; RAM 7G total tight; restart cadence ~10-25 min - checkpoint-first, heartbeat often, push after every step. PLAN: (1) read 6 workstream checkpoints, (2) re-dispatch W3c>W2c>W2d>W5b>W6b>W7d (max 2 heavy children at once), (3) central merge review WH #441/#451/#452/#453/#457/#463/#467/#494 + GRE #35/#38/#39 + wrestling-game #14 (NEVER #447/#458), (4) No Mercy wrong-window READ-ONLY audit, (5) relays: W7c PPSSPP RAM-dump note to T6 sweep/decrypt checkpoint + W1b queued follow-up in W1 checkpoint, (6) Route 3 brief checkpoint gap-closure-w4d-dolphin-route3.json (queued, do not start). [22:45 CDT] All 6 checkpoints read. Dispatched W3c/W2d/W5b/W6b/W7d + audit child. W2c HELD (watchdog touched 03:34Z). Relays + Route3 DONE. Merge review starting. [23:52 CDT] Merge review DONE: #451 MERGED (882c5291); 11 left open with reasons recorded (7 WH instruction-gate FAILURE; 4 GRE/WG no-deletion-guard zero-step FAILURE + token limits). W2c dispatched after staleness confirmed. Children in flight: W3c f2768f09, W2c 60db68d0, W2d 32b42284, W5b 2bff2dc0, W6b 16b5f19f, W7d 258957d5, audit 2028efac. [00:05 CDT] 04:13Z wave killed 6 children; banked progress verified in checkpoints; all relaunched as continuations. W2c alive throughout. Finisher direct work (merge review, relays, Route 3) unaffected - all persisted.",
+  "[watchdog 2026-10-22 04:45 CDT] Status normalized: 'DONE_ALL_WORKSTREAMS_COMPLETE' -> 'done'. Final report relayed to owner (finisher coordinator dcbd5375); 6 workstream lanes complete per finisher summary: #451/#499/#505/#508/#513/#521 + GRE #41 + wrestling #15-18 open/merged as noted. Remaining open PRs tracked by merge-law-ci-watch; no further watchdog action."
+ ],
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "GAP-CLOSURE FINISHER COORDINATOR. Parent relay of coordinator 0d312f2e completion (2026-10-21 ~22:30 CDT). Owner standing orders: fix ALL honest limits / fill ALL gaps / full extraction + wiring, full systems only, no deferrals (2026-10-21 08:19 CDT); T7 piecewise-only (10:57 CDT). Master: agent-ops/checkpoints/gap-closure-20261021.json. WORK 1 re-dispatch 6 restart-killed lanes from existing checkpoints in priority order: (a) W3c FIRST - worktree ~/workspace/_w3b-work/wh holds gate verdicts on TRUE data (FileTable window 0x16C31D8/0x1BD150 1-based; record split [PivotX s12][Rotation u10][PivotZ s10]; true counts Rock Bottom 70f, People's Elbow 112f, running elbow 39f, Spinebuster 13f, Stomp 20f, Spinning DDT 28f, taunts 17/82/24/102/103f); only corrective PR remains; PRs #447/#458 NEVER merge, W3c supersedes them, say so in PR body. (b) W2c YYH: unpack 32/32 done, ANI in hand 1,457,228 B; decode/conversion/PR pending. (c) W2d: 4-PAK verify DONE (CHUU 25/25, ELDERTOG 28 vs census 29, CARDGAME 164 vs census 122, MENUS 2 vs census 5 - reconcile in PR); MDL relocation + GLB + PRs pending. (d) W5b: prep on wrestling-game PR #14 (OPEN verified); entry0 -> BIGF census -> G1->G3; EAGL spec 7.9.4 priority-1 = __EAGLMicroCode defining-object hunt (W5e proved NOT in any held set; 768 corrupt .o need re-extraction from V2CP/V2IP); POINTS discipline stands. (e) W6b: CCI_dra_hef_skull + CI records first (completes skull mask color_slots; PR #467 delivered mask GLB); piecewise-only, never stage whole T7 locally. (f) W7d: T5 ctype-5 VIF-0x82 decode, 16 models, no step progress (W7e merged PR #485: T5 catalog 80 parts). WORK 2 central merge review: for EACH verify instruction-gate + deletion-guard + CI green + mergeable via gh, read diff for deletions (name any), merge ONLY if fully clean else leave open + record why here. Pile: western-heart #441 #451 #452 (incl 7.9.3/7.9.4 addenda) #453 #457 #463 #467 #494; game-reverse-engineering #35 #38 #39; wrestling-game #14. GRE #38 merge specifically requested once verified. WORK 3 No Mercy wrong-window audit READ-ONLY: did other fighters' No Mercy-derived banks use the same wrong FileTable window (VPWStudio NTSC_U_10 pairing 0x16C3238/0x1BD1B0 0-based) as W3's bake? Per-bank verdicts in a doc + this checkpoint. NO fixes (per-character isolation). WORK 4 relays (notes only): (i) W7c PPSSPP RAM-dump relay to T6 sweep/decrypt checkpoint; (ii) W1b ROK_AN->bank mapping queued follow-up in gap-closure-w1-allstars.json. WORK 5 create gap-closure-w4d-dolphin-route3.json (watchdog true, status queued) with full Route 3 brief; do NOT start emulator work. RAM: max 2 heavy children (Blender/Ghidra) at once; never kill another lane's process. Deliverable to parent: per-workstream outcomes (PRs + merge states), merge-review table, audit verdict summary, relay confirmations, Route 3 checkpoint path.",
+ "status": "done",
+ "task": "Gap-closure finisher coordinator: re-dispatch 6 restart-killed workstream lanes (W3c, W2c, W2d, W5b, W6b, W7d), central merge review of 12 open PRs (never #447/#458), No Mercy wrong-window read-only audit, 2 checkpoint relays, Route 3 brief checkpoint",
+ "updated_at": "2026-10-22T09:41:47.978250+00:00",
+ "watchdog": true,
+ "work": {
+  "merge_review": {
+   "western-heart#441": {
+    "verdict": "LEFT OPEN",
+    "add": "+26256/-1",
+    "files": "1 modified: customization/parts/defjam/PARTS-INDEX.json (rebuilt index)",
+    "checks": "instruction-gate FAILURE; deletion-guard SUCCESS; guard SUCCESS; MERGEABLE",
+    "why": "instruction-gate check failing on head - not fully clean per merge rule"
+   },
+   "western-heart#451": {
+    "verdict": "MERGED",
+    "merge_commit": "882c52912beb60309e1ca5512dcc0b13d8fa7d9c",
+    "merged_at": "2026-10-22T04:25:01Z",
+    "add": "+16455/-170",
+    "files": "WMXIX-MOVES.json modified +459/-170 (documented grapple-placeholder framing correction; line edits, NO file deleted) + WMXIX-MPC-ASSIGNMENT-DECODE doc added + WMXIX-MPC-INDEX.json added",
+    "checks": "gh pr checks on head: instruction-gate PASS, deletion-guard PASS, guard PASS; MERGEABLE, mergeStateStatus CLEAN (statusCheckRollup's extra FAILURE entries were stale runs)"
+   },
+   "western-heart#452": {
+    "verdict": "LEFT OPEN",
+    "add": "+581/-0",
+    "files": "3 (EAGL spec + 7.9.1/7.9.2/7.9.3/7.9.4 addenda + w5c tool)",
+    "checks": "instruction-gate FAILURE; deletion-guard SUCCESS; guard SUCCESS; MERGEABLE",
+    "why": "instruction-gate failing on head despite lanes' gate-format comments (gate reads PR body) - not fully clean"
+   },
+   "western-heart#453": {
+    "verdict": "LEFT OPEN",
+    "add": "+2280/-0",
+    "files": "5 added (T6 catalog set)",
+    "checks": "instruction-gate FAILURE; deletion-guard SUCCESS; guard SUCCESS; mergeable UNKNOWN at review time",
+    "why": "instruction-gate failing on head"
+   },
+   "western-heart#457": {
+    "verdict": "LEFT OPEN",
+    "add": "+81818/-0",
+    "files": "2 added (item-definitions.json + hunt doc)",
+    "checks": "instruction-gate FAILURE; deletion-guard SUCCESS; guard SUCCESS; mergeable UNKNOWN at review time",
+    "why": "instruction-gate failing on head"
+   },
+   "western-heart#463": {
+    "verdict": "LEFT OPEN",
+    "add": "+278/-0",
+    "files": "1 added (toguro-moves-yyh.json)",
+    "checks": "instruction-gate FAILURE; deletion-guard SUCCESS; guard SUCCESS; mergeable UNKNOWN at review time",
+    "why": "instruction-gate failing on head"
+   },
+   "western-heart#467": {
+    "verdict": "LEFT OPEN",
+    "add": "+178/-16",
+    "files": "CATALOG.json modified +157/-1, catalog.test.mjs modified +21/-15 (both intended: gap resolved + test flipped), skull-mask.glb + 2 proof PNGs added; NO files deleted",
+    "checks": "instruction-gate FAILURE; deletion-guard SUCCESS; guard SUCCESS; mergeable UNKNOWN at review time",
+    "why": "instruction-gate failing on head"
+   },
+   "western-heart#494": {
+    "verdict": "LEFT OPEN",
+    "add": "+20834/-0",
+    "files": "2 (sys/wprm decode)",
+    "checks": "instruction-gate FAILURE; deletion-guard SUCCESS; guard SUCCESS; MERGEABLE",
+    "why": "instruction-gate failing on head"
+   },
+   "game-reverse-engineering#35": {
+    "verdict": "LEFT OPEN",
+    "add": "+1632/-0",
+    "files": "3 added (CENSUS.md, iso_listing.txt, pak_manifests.json)",
+    "checks": "repo has ONLY no-deletion-guard workflow; its run on head 0b5376f concluded FAILURE with ZERO executed steps; logs blob 404, annotations/check-runs/rerun all 403 for coordinator token",
+    "why": "deletion-guard NOT green and no token-authorized path to re-verify; diff independently verified additions-only via files API, but merge rule requires the guard green"
+   },
+   "game-reverse-engineering#38": {
+    "verdict": "LEFT OPEN",
+    "add": "+3209/-0",
+    "files": "2 added (WWE All Stars census .json+.md)",
+    "checks": "no-deletion-guard run 39676763307 on head 7c4dff7 FAILURE, job 'guard' executed ZERO steps; same token limits as #35",
+    "why": "same as #35 - parent-requested merge cannot proceed until the guard produces a real (green) run; needs token with actions:write/checks:read or a human re-run"
+   },
+   "game-reverse-engineering#39": {
+    "verdict": "LEFT OPEN",
+    "add": "+27009/-0",
+    "files": "10 added (stacked on #35 branch feat/yyh-dark-tournament-census-20261021)",
+    "checks": "no-deletion-guard run 39717450915 FAILURE, zero steps; same token limits",
+    "why": "same guard blocker as #35; also stacked on #35 - merge order after guard clears: #35 to main, retarget #39 to main, verify, merge"
+   },
+   "wrestling-game#14": {
+    "verdict": "LEFT OPEN",
+    "add": "+1196/-0",
+    "files": "9 added (reconciliation doc, REMAINDER.json, W5B docs/manifest, 4 tools)",
+    "checks": "no-deletion-guard run 39635359089 on head 095033a FAILURE, zero steps; same token limits",
+    "why": "same guard blocker; W5b lane's stored prep is safe on the branch meanwhile"
+   },
+   "never_merge": [
+    "western-heart#447",
+    "western-heart#458"
+   ],
+   "guard_note": "GRE/WG no-deletion-guard.yml is a sound 1-step script (git diff --diff-filter=D BASE...HEAD, exit 0 when empty); failure with zero executed steps across 4 PRs in 2 repos indicates job-setup/infra failure, not PR content - but it is NOT green, so no merges. WH instruction-gate failures are body-format failures on otherwise clean diffs; fixing bodies is the lanes'/parent's call, not done here.",
+   "wh-499": {
+    "decision": "LEFT_OPEN",
+    "additions": 368,
+    "deletions": 122,
+    "files": 30,
+    "files_removed": 0,
+    "why": "W3c corrective PR; base=CornerStone stack branch (never-merge #458 head) - merges owned by cornerstone lane per master checkpoint; instruction-gate FAIL on head, guard pending at review; diff = corrective replacements only, 0 files removed"
+   }
+  },
+  "relays": {
+   "relay_i_w7c_ppsspp_ramdump": {
+    "done": true,
+    "target": "teardown-sweep-tekken6-psp.json notes[] appended + verified 22:40 CDT"
+   },
+   "relay_ii_w1b_queued": {
+    "done": true,
+    "target": "gap-closure-w1-allstars.json queued_followups[] += W1b (ROK_AN->bank mapping) + notes line; verified"
+   }
+  },
+  "route3": {
+   "done": true,
+   "path": "~/workspace/agent-ops/checkpoints/gap-closure-w4d-dolphin-route3.json",
+   "status": "queued, brief only, not started"
+  },
+  "work1_dispatch": {
+   "W3c": {
+    "agent": "f2768f09",
+    "dispatched": "2026-10-21T22:38-05:00",
+    "scope": "PR-only remainder; worktree step=converted_gated_records_doc_done_pr_next; NEVER merge #447/#458"
+   },
+   "W2d": {
+    "agent": "32b42284",
+    "dispatched": "2026-10-21T22:38-05:00",
+    "scope": "MDL relocation+GLB+PRs; pak_verify_4 done w/ mismatches to reconcile"
+   },
+   "W5b": {
+    "agent": "2bff2dc0",
+    "dispatched": "2026-10-21T22:41-05:00",
+    "scope": "entry0+BIGF census+G1-G3 extraction + S7.9.4 microcode hunt + 768 corrupt .o re-extraction"
+   },
+   "W6b": {
+    "agent": "16b5f19f",
+    "dispatched": "2026-10-21T22:41-05:00",
+    "scope": "CCI_dra_hef_skull + CI records first -> skull color_slots + catalog PR"
+   },
+   "W7d": {
+    "agent": "258957d5",
+    "dispatched": "2026-10-21T22:41-05:00",
+    "scope": "T5 ctype-5 VIF-0x82 decode, 16 models"
+   },
+   "W2c": {
+    "agent": "60db68d0",
+    "dispatched": "2026-10-21T23:50-05:00",
+    "scope": "ANI hdr[6] value-encoding decode (differential route first, Ghidra w/ bundled JDK second) -> proven clips A475/A472/A476 priority -> fragment PR",
+    "reason": "Watchdog heartbeat went stale (03:34Z, worker self-reported STOPPED at value-encoding step); dispatched after >25min stale per parent order + NO-DUPLICATE-WORK satisfied"
+   },
+   "w3c_1b_final": {
+    "status": "PR_OPEN_AWAITING_CENTRAL_REVIEW",
+    "reported_utc": "2026-10-22T04:40:34.161807+00:00",
+    "agent": "2f6a83dc",
+    "pr": {
+     "number": 499,
+     "url": "https://github.com/mhvnsnt/western-heart/pull/499",
+     "state": "OPEN",
+     "mergeable": "MERGEABLE",
+     "mergeStateStatus": "UNSTABLE",
+     "base": "feat/aki-fk-ik-rock-20261021",
+     "head": "feat/aki-trueclips-w3c-20261021",
+     "head_sha": "dfe3a003d7d3ea5b34163ee3c8665cc3ee4f7dd2",
+     "additions": 368,
+     "deletions": 122,
+     "changed_files": 30,
+     "files_removed": 0
+    },
+    "checks_at_review": "instruction-gate FAIL (head run 39723274091, same gate class as other body-format-correct PRs); guard PENDING at review time",
+    "gate_verdicts_on_true_data": "ALL 11 FAIL - 0 rows written, pack byte-identical, no t3_row wiring, harness proof PENDING. Rock Bottom 70f step+height (65.5deg/0.49m); People's Elbow 112f height only (51.1deg/0.48m); running elbow 39f step+height (71.9/0.49); Spinebuster 13f height only (51.6/0.48); Stomp 20f step+height (76.8/0.48); Spinning DDT 28f step+height (81.8/0.48); taunts 17/82/102/103f height only, 24f step+height. Systematic ~0.48-0.49m root height = AKI FK -> T3 IK bake blocker persists; extraction now correct (true window 0x16C31D8/0x1BD150 1-based, split [PivotX s12][Rotation u10][PivotZ s10]). Playable Rock clips remain blocked on the FK track (player recovery from ovl_c/ovl_d) - follow-on lane for parent/cornerstone."
+   },
+   "w2c_final": {
+    "status": "DONE_ANI_ENCODING_CRACKED_PROVEN",
+    "reported_utc": "2026-10-22T05:19:42.447670+00:00",
+    "agent": "60db68d0",
+    "encoding": "0xA2100103 records split skeleton: TRS bones (hdr[0], not in bone-index table) per-key 20B records @byte8+80 key-major (f32[3] trans + i16[4] quat/32767); Quat bones (hdr[3], table @hdr[4]) constant f32[3] trans @hdr[6] + per-key 8B i16[4] quats @hdr[8]; dt=1/30; identities hdr[1]=hdr[0]*K, hdr[7]=hdr[3]*K, hdr[4]=80+20*hdr[1], hdr[6]=hdr[4]+4*hdr[3], hdr[8]=hdr[6]+12*hdr[3], size=hdr[8]+8*hdr[7] verified 195/195 + 177/177 records",
+    "proof": "273,729 quaternions (142,833 YTOGURO + 130,896 ELDERTOG cross-PAK), 0 non-unit; within-clip rotation step median 0.72deg (n=124,503); XML chain boundaries coincide (A475->A472 mean 0.011deg, A472->A476 0.020deg - the closed finger-bullet chain); honest nuance: naive all-pairs index-sharing mean 3.08deg with A4913 outlier cluster, documented in evidence doc",
+    "clips": "ALL 195 ANI clips decoded, 3,039 keys (priority A475/A472/A476/A473/A3804/A470 first); 5 ANI-only ids; 74 XML clips have no ANI record (composites/reuse)",
+    "prs": {
+     "GRE #39": "updated, new head befb6f1e (ani_decode.py, ANI-KEYFRAME-DECODE.md, decoded clips) - still stacked on #35, guard still red (see merge review)",
+     "WH #510": "NEW, OPEN, MERGEABLE, stacked on #463 branch feat/cornerstone-toguro-finger-flip-20261021; 1 file toguro-moves-yyh.json +93/-1 (additive decoded_animation section + _meta addendum; ryuji-rock.json untouched; 2 stale W2b-era strings deliberately left, superseded in new section, flagged in PR body)"
+    },
+    "honest_limits": "quat handedness vs MDL bind not yet compared in-engine (W2d owns geometry); XML lenght<->K*dt unit not asserted; A4913 boundary nuance open",
+    "verified_by_coordinator": "PR #510 state/base/files via gh; GRE #39 head sha befb6f1e via gh; checkpoint status done"
+   },
+   "w2d_final": {
+    "status": "DONE_PARTIAL_GLBs_EVIDENCE_PR_OPEN",
+    "reported_utc": "2026-10-22T05:30:06.739472+00:00",
+    "agent": "1be9ab02",
+    "premise_correction": "The MDL relocation premise was WRONG, proven from bytes: MDLs are offset-table containers of named sections; W2b's 'pointer placeholder' 0x8054699c is RGBA texture pixel data (bytes 9c 69 54 80) from embedded image sections, cross-proven by YTOGURO.DAT's identical header + 0x80fefefe pixel gradient. Offset-table walk (the actual relocation) proven in-bounds on every variant: 37/37, 44/44, 30/30, 134/134, 11/11.",
+    "glbs_converted": [
+     "ytoguro-shadow-loose.glb 37 parts 1811 verts 123,800B",
+     "ytoguro-shadow.glb 44 parts 1580 verts 112,440B",
+     "ytoguro-shadow-a.glb 30 parts 1775 verts 120,080B"
+    ],
+    "glb_notes": "v10 shadow format fully decoded; all 3 carry 47-bone skeleton with RECZONES bind frames + true inverse bind matrices (bind pose exact); parts rigidly bound to first listed bone (v10 stores no per-vertex weights - stated approximation); NO textures in v10 data (grey material, nothing fabricated); own-eyes Blender renders in PR show Toguro bind pose; one flat ribbon part per file in unexplained rotated frame, kept + documented",
+    "blocker": "6 v1 forms resist conversion - payload is PS2 VIF-UNPACK-packed; genuine attempts (f32 strides 12/16, int16 scales 16/64/128/256, YYH-LZ layer test) all negative. Next route documented: VIF state machine + FUN_0019e8c0 cross-check validated against the shadow decode. Also: PAK '10 MDL variants' are 8 unique files (YTOGURL/YTOGURLC indexed twice).",
+    "pak_reconciliation": "ALL EXPLAINED from data (census method reproduced verbatim returns census counts): CHUU 25=25; ELDERTOG 29->28 census window overran 1,179B header into RESFILE.XML ref string; CARDGAME 122->164 name table ends 7,098B but census scanned 6,000B (41 names beyond window + straddle); MENUS 5->2 header only 92B so window read ~5.9KB of entry data (3 content strings). Detail: pak4-reconciliation.json in PR.",
+    "pr": {
+     "number": 41,
+     "repo": "game-reverse-engineering",
+     "url": "https://github.com/mhvnsnt/game-reverse-engineering/pull/41",
+     "state": "OPEN",
+     "mergeable": "MERGEABLE",
+     "base": "feat/yyh-toguro-teardown-20261021",
+     "additions": 533,
+     "deletions": 0,
+     "files": 8,
+     "verified_by_coordinator": "gh pr view + files API: all 8 files added"
+    },
+    "no_wh_pr": "no western-heart fragment changed; ryuji-rock.json untouched"
+   },
+   "w6b_final": {
+    "status": "DONE_SKULL_RECORDS_CATALOGED_PR_OPEN",
+    "reported_utc": "2026-10-22T05:41:33.824815+00:00",
+    "agent": "95f5d113",
+    "extraction": "Piecewise via RangeFile disk-block-cache over IA TR205 Extracted.7z (archive never staged; whole game never local). Header map from 7z header (listing is alphabetical, not solid order): DRA CI solid idx 12,094 @ unpacked 1,602,806,178; CCI solid idx 40,645 @ 1,643,604,002. py7zr stream stopped at last target end (packed consumed 452,984,832B); sliced all 80 skull CI/CCI (39 chars x CI+CCI + DRA skull_suit pair, 146,697B), every file UE magic c1832a9e verified.",
+    "records": {
+     "CI_dra_hef_skull.uasset": "1,451B sha256 a4082b9d6c339ca31300615537eea3b21f4ecba879e3d3e75d767a54f449e0c7",
+     "CCI_dra_hef_skull.uasset": "2,180B sha256 8cf8972b1ec9d3906603d6b17a6f92ca1379326c69f5903dd1f56f4436615b16"
+    },
+    "parse": "umodel_linux loads both (Ver 482) but 'no supported objects' for CustomizeCharacterItem/CharacterItem -> direct UE4 tagged-property parser. CI: Character=ID_DRA, ItemPosition=FULL_HEAD, MeshType=SkeletalMeshAnim, CommonGroup=cmn_hef, bAllowHairAcc=false, InstanceName=SK_CH_cmn_hef_skull, SourceSkeletalMesh->SK_CH_dra_hef_skull. CCI: ReleaseVer=ItemUpdate1, LocationName=MI_CH_cmn_hef_skull, CharacterItem->CI_dra_hef_skull.",
+    "color_slots_verdict": "4 - CCI.ItemColors[0].InstanceColors = 4 FLinearColor defaults [(0.782458,0.8,0.576,1),(0.024,0.051,0.005,1),(0,0,0,1),(1,1,1,1)], corroborated by ColorIndicies (4) + Index0Colors (4); cross-verified InstanceColors[k]==IndexColors[ColorIndicies[k]]. CCI.IndexColors has 5 entries = shared palette (system max 5), NOT this item's channel count - distinction documented in catalog + PR. All 39 chars' CCI color records identical; skull_suit pair is a separate item, not merged in.",
+    "catalog_test": "3/3 PASS (branch CATALOG.json + real catalogs.js runtime + real PARTS-REGISTRY.json)",
+    "pr": {
+     "number": 513,
+     "url": "https://github.com/mhvnsnt/western-heart/pull/513",
+     "state": "OPEN",
+     "mergeable": "MERGEABLE",
+     "base": "w6-t7-skull-mask-20261021",
+     "head": "w6b-t7-skull-records-20261022",
+     "additions": 3565,
+     "deletions": 3,
+     "files": 3,
+     "detail": "CATALOG.json +153/-3 (skull entry completed), records-dra.json +242 added, records-all-chars.json +3170 added; verified by coordinator via gh"
+    },
+    "store": "release w6-tekken7-parts-20261021: skull-mask-records-dra.zip (sha256 49214e48...acac) + skull-mask-records-all-chars.zip (62cedc04...a69d0), digests verified vs release listing (coordinator confirmed both assets present); blockcache_w6b 457MB cleared after store+verify, logged in disk-cleanup-log.md with re-pull command",
+    "source": "free IA source only; Steam $39.99 NOT purchased"
+   },
+   "w5b_final": {
+    "status": "DONE_CENSUS_EXACT_EXTRACTION_912_MICROCODE_VALID_NEGATIVE",
+    "reported_utc": "2026-10-22T06:12:10.479712+00:00",
+    "agent": "683dd7f1",
+    "motion_census": "EXACT MATCH - disc BIGF vs wrestling-game main, name-level set diff: WRES_ALL 423=423 (141 mnl/141 ord/141 orl), BASE00 3=3, BLAZIN 329=329 (164 ord/164 orl/1 mnl). Zero disc-only, zero repo-only. No missing motion files.",
+    "extraction": "912/912 extracted piecewise (HTTP 206 range-fetch, ISO never staged), stored, PR'd NOT merged: wrestling-game #15 G1 42 files (BLINGFX 2, DECALFX 1, FEPOSES 18, V2GA 21); #16 G2 217 (TROPHIES 41, PROPS 41, SHOPS 52, V2IP_CIN 56, V2BG_CIN 27); #17 G3 653 (V2CM 128, V2WP 212, V2TA 313). Counts match W5B manifest exactly; remote SHAs == local; tree counts reconcile. DEVIATION (noted in each PR body): branches off MAIN, not PR #14's branch (its tip predates the teardown tree). Verified by coordinator: PRs OPEN with exactly 42/217/653 files (binary diffs).",
+    "remaining_substep": "Converter/catalog extension (western-heart CATALOG.json) NOT run - census-first consumed the lane; stated in every PR body. Per-group census data is the input the converter step needs. FOLLOW-UP LANE for parent.",
+    "microcode_hunt_7_9_4": "EXHAUSTED - VALID NEGATIVE. Census tool (J4 path) in wrestling-game PR #18 (+101/-0, 2 files) + report W5B-MICROCODE-HUNT-2026-10-22.md. New archives 285 .o (283 parsed, 201 refs); corrupt population RE-EXTRACTED from disc: V2IP 156 .o (155 parsed, 292 refs) + V2CP_0..3 2,624 .o (ALL parsed, 1,993 refs). TOTAL 3,065 .o censused, 3,062 parsed, 2,486 __EAGLMicroCode refs - EVERY one an undefined extern (value=0,size=0); 0 definitions of LitGouraud0/IrradTexture_Skin0 or any family, in ANY held or disc-extractable set. POINTS stands; converter untouched. The defining object is NOT in the Def Jam archives censused - \u00a77.9.4 hunt is closed as a negative, not deferred.",
+    "side_finding": "DISC ORIGINALS ARE CLEAN: 2,624/2,624 re-extracted V2CP .o parse with 0 RefPack errors vs 767 corrupt held repo copies - the corruption was an OLD EXTRACTION ARTIFACT, not disc damage. Repair follow-up: replace corrupt caw-parts copies from disc re-extraction (reproducible via extract_chunk.py + retained manifests at ~/workspace/defjam-work/w5b/manifests/, 17 files). FOLLOW-UP for parent."
+   },
+   "w7d_final": {
+    "status": "DONE_CTYPE5_DECODED_NOT_CUSTOMIZATION_PR_OPEN",
+    "reported_utc": "2026-10-22T06:34:59.790767+00:00",
+    "agent": "e4812fc8",
+    "decode": "All 9 ctype-5 containers reproduced from release tekken5-disc-v1 by HTTP Range (no full-disc pull); every file DECRYPT-MATCH vs the real E5 word-sum checksum table (FileTableGetPS2 LCG method); census matches W7b byte-for-byte. VIF 0x82 grammar closed from the data (strict decoder tools/vif082.py): positions V3-32 @VU1, vertex colors V4-8 @VU3, UVs V2-32 @VU4, tristrip markers as 0x91 - NO normals/weights/bone indices (exactly why ModelMagic desyncs: fixed 0x91/0x93 section order). Ghidra not needed. 238/238 VIF blobs consumed to exactly their size fields; 5,124 verts / 2,468 tris, indices in range, positions finite; NUDP bounding spheres match decoded geometry; end-to-end re-run reproduced identical geometry.",
+    "glbs": "8 GLBs (16 models = 8 unique geometries; twins byte-identical) in release tekken5-ctype5-glbs-v1, sha256 recorded per-asset in catalog, pull-back verified hash-exact (coordinator confirmed 8 assets on the release).",
+    "characterization": "ENVIRONMENT/EFFECT class - NOT customization items, no skull/mask/head geometry: triangular-prism beam units (equilateral 150x173.2 section x 2500, saturated vertex colors, white alpha-gradient texture; 17-42 identical groups per model, placements not in NUDP); concentric-ring effect discs O2000 (f0022 stepped, f1061 shallow - an initial bbox-only 'flat panels' read was corrected by radial distribution + own-eyes renders before landing, disclosed in PR); one tall open cylindrical tube O~1996x3972 dark metallic (f0753). The old 'head portrait' label for 1061 confirmed bogus.",
+    "catalog": "Registered additively as decoded_ctype5_models[] in tekken5 CATALOG.json (parts[] untouched - T5 catalog stays 80 FULL_BODY parts); ctype-5 named gap flipped to decoded_not_customization_items; skull-mask gap addendum: DATA0 is now the only unexamined place. Catalog test 3/3 PASS.",
+    "pr": {
+     "number": 521,
+     "url": "https://github.com/mhvnsnt/western-heart/pull/521",
+     "state": "OPEN",
+     "mergeable": "MERGEABLE",
+     "base": "main",
+     "head": "gap/w7d-t5-ctype5-decode-20261021",
+     "additions": 1043,
+     "deletions": 9,
+     "files": 13,
+     "files_removed": 0,
+     "verified_by_coordinator": "gh pr view + files API (0 removed) + release asset list (8 GLBs)"
+    },
+    "process_note": "Lane serialized behind sibling heavy jobs ~25 min per instruction, then ran short single Blender sessions; no sibling process touched. /tmp scratch wiped by ~05:45Z VM restart - release pull-back (hash-exact) served as the recovery path; noted in disk-cleanup log."
+   }
+  },
+  "work3_audit": {
+   "status": "DONE_DOC_PR_OPEN_NOT_MERGED",
+   "reported_utc": "2026-10-22T05:05:47.654276+00:00",
+   "agent": "c5503cb2",
+   "doc_pr": {
+    "number": 505,
+    "url": "https://github.com/mhvnsnt/western-heart/pull/505",
+    "state": "OPEN",
+    "additions": 145,
+    "deletions": 0,
+    "files": 1,
+    "file": "docs/NO-MERCY-WRONG-WINDOW-AUDIT-2026-10-21.md"
+   },
+   "root_finding": "ALL No Mercy extractors on main import ONE shared FileTable class from teardown/wwf-no-mercy/tools/anim_extract.py carrying the WRONG U_10 window (FT 0x16C3238 / FIRST 0x1BD1B0, 0-based) since first commit 9976bfb8; no extractor overrides. Commit 772694040 (PR #39) claimed 'CORRECT FileTable offsets 0x16C31D8/0x1BD150... (fixed offsets)' but git show proves the code kept the wrong constants; clips never re-exported. VERIFIED by coordinator: gh api contents of anim_extract.py on main shows FT=0x16C3238/FIRST=0x1BD1B0 at lines 31-32.",
+   "verdicts": {
+    "WRONG-WINDOW": [
+     "animation bank 5,787 .npy + manifest",
+     "model bank ~3,570 OBJ/.vc (7,141 files)",
+     "texture bank 5,029 PNGs (5,381 files)",
+     "17 arena assemblies (inherited)",
+     "AKI->T3 retarget v1 (anim 339A)",
+     "AKI->T3 retarget v2 (falsely labelled 'CORRECTED bank NTSC_U_11'; loads never-re-exported bank)",
+     "mat-kings move DB 4,409 clips (linkage only; names/power window-independent)",
+     "ANIMATION-INDEX.json (inherited)",
+     "MOVE-DATABASE.json NM entries only"
+    ],
+    "CORRECT-WINDOW": [
+     "AKI->T3 v3 / aki-rock-v3 11 clips (W3c branch, PR #499, NOT on main)",
+     "CAW/name tables @0x168D790/0x168D930 (window-independent absolute tables)"
+    ],
+    "NOT-NM-DERIVED": [
+     "wrestling-game all assets",
+     "other 95 WH moveset files (T3/T7/KOF/SF/VF/DOA)",
+     "MOVE-DATABASE WMXIX/T7/T3 entries",
+     "re-docs move-database.md text (not window-dependent)"
+    ],
+    "INDETERMINATE": [
+     "3 GLB sidecars (no FileTable reference, no provenance manifest found)"
+    ]
+   },
+   "playable_wiring_flags": {
+    "ryuji-rock.json_ON_MAIN": "cornerstone_build.no_mercy_wired + MK/anim refs + frame data from wrong-window banks; mitigating: file's own aki_bake records show converted pose rows FAILED gate and did NOT ship - live layer is reference/frame-data only",
+    "game/js/stages.js": "17 playable No Mercy arena stages assembled from wrong-window model/texture banks",
+    "pantera": "wrong-window refs (MK-0125/NM-001) only in moveset-library pantera-moveset.json; playable game/assets/movesets/pantera.json CLEAR"
+   },
+   "fixes": "NONE made (read-only per brief) - fixes become separate per-character lanes for parent to route"
+  },
+  "restart_wave_0413Z": {
+   "event": "Daemon restart ~04:13Z killed all 6 wave-1/2 children (f2768f09 W3c, 32b42284 W2d, 2bff2dc0 W5b, 16b5f19f W6b, 258957d5 W7d, 2028efac audit). W2c 60db68d0 (dispatched after the wave) never died - confirmed running.",
+   "banked_before_death": {
+    "W3c": "step advanced to committed_pushed_pr_next (03:41Z) - corrective work committed+pushed; only PR creation remained",
+    "W5b": "W5b section updated 04:29Z: step0 adopted, entry0 parsed; next = motion diff + G1 extraction",
+    "W6b": "heartbeat only (03:40Z), no product",
+    "W7d": "adopted only (03:38Z), no progress",
+    "W2d": "heartbeat only (03:37Z), no step change",
+    "audit": "checkpoint created (03:41Z), no findings yet"
+   },
+   "relaunch_roster": {
+    "W3c": "2f6a83dc (PR-only continuation)",
+    "W2c": "60db68d0 (alive, uninterrupted)",
+    "W2d": "1be9ab02 (after 2 spawn failures: sqlx pool timeout, lock timeout)",
+    "W5b": "683dd7f1",
+    "W6b": "95f5d113",
+    "W7d": "e4812fc8",
+    "audit": "c5503cb2"
+   }
+  }
+ },
+ "outcome_summary": "WORK1: 6/6 lanes completed (W2c ANI cracked+proven PR#510/GRE#39-update; W2d 3 GLBs + PAK reconciliation PR#41, v1 forms VIF-blocked documented; W3c PR#499 true-data gate ALL FAIL - FK/IK blocker persists; W5b census exact + 912 extracted PRs#15-17 + microcode valid negative PR#18; W6b skull records color_slots=4 PR#513; W7d ctype-5 decoded = environment/effect not items PR#521). WORK2: merged #451 only; 11 pile PRs left open (7x instruction-gate fail; 4x no-deletion-guard zero-step failure, token 403) + new PRs #499/#505/#510/#513/#521/#41/#15-18 open in stacks. WORK3 audit DONE (PR#505): whole NM extraction wrong-window on main, playable wiring flagged. WORK4 relays landed+verified. WORK5 Route 3 brief checkpoint created (queued)."
+}

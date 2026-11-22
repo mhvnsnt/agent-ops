@@ -1,0 +1,9 @@
+{
+ "task": "Recolor logo-dragon-fixed-v1 to black letters for the CD tee",
+ "repo": "/home/hatch/workspace/money-machine-hq",
+ "resume_brief": "Recolor task: take ~/workspace/concrete-dragon-launch/marketing/logos/logo-dragon-fixed-v1-transparent.png (3888x608, white CONCRETE DRAGON letters + purple outline + black dragon illustration below, transparent bg) and selectively recolor ONLY the white letter pixels to black. Verified: letter interiors are real opaque white pixels (253,253,253,255) so a selective recolor works. Keep the purple outline and the dragon illustration untouched. Then upscale to tee-print size (~2x) with a quality pipeline, verify with your own eyes (open and read the PNG at 100% zoom: black letters clean, no white remnants, no halos, dragon intact), save as 05-concrete-dragon-logo-tee.png in ~/workspace/money-machine-hq/merch/redbubble-uploads/ (REPLACING the current file), commit on a NEW branch, push, report branch name + dimensions. Rules: USE THE IMAGE LAW (operate on actual pixels, no regenerating), NO-DESTRUCTIVE-EDITS (originals untouched \u2014 work on copies), heartbeat the checkpoint ~/workspace/agent-ops/checkpoints/redbubble-cd-dragon-fix.json as you work.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-14T03:05:00+00:00"
+}

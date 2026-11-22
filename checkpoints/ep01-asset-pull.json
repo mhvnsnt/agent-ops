@@ -1,0 +1,10 @@
+{
+  "task": "Pull all EP01 slate-gap material from repos into production structure",
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "EP01 ASSET PULL (owner 2026-10-10: 'pull all of that... everything is there' \u2014 stop reporting gaps when material exists). Consolidate ALL EP01-related production material from across accessible repos into production/TRIPPEDD_EP01/. Targets: (1) Shumafied \u2014 production/EP01/generated/subjectivity-sequence.md, assets/references/ep01/lost-acid-subjectivity-board.svg, any Shumafied renders/boards; (2) Joe \u2014 all Joe encounter references, the 16-panel motel prayer storyboard DESCRIPTION (binary is in ChatGPT Library, needs user transfer \u2014 document exactly which file); (3) Clothed and Confused \u2014 search docs/, production/, assets/ for survival-documentary treatment, Naked and Afraid refs, any boards/images; (4) Goodville gag family \u2014 Goodville: Not South Park ref (Library, needs transfer), any repo material; (5) Lost Acid ending \u2014 docs/pilot/EP01-ENDING-LOST-ACID.md + storyboards; (6) any other EP01 segment material (Cigars, Bag, TV, Smoking). Output: production/TRIPPEDD_EP01/ASSET-PULL-MANIFEST.md \u2014 what was pulled (paths), what exists in ChatGPT Library needing USER transfer (exact filenames), what is genuinely still missing. Copy (don't move) repo assets into production/TRIPPEDD_EP01/reference/. Branch->PR->merge (merge commits only, 0 open PRs). Heartbeat checkpoint, mark done.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T14:35:56.811961+00:00",
+  "notes": "PR #110 merged (cadd930c). Reference/ populated, ASSET-PULL-MANIFEST.md written. 4 Library files need user transfer. 0 open PRs."
+}

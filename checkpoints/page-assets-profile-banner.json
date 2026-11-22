@@ -1,0 +1,9 @@
+{
+ "task": "Design M. Heaven$ent Facebook Page profile picture + cover banner at correct FB dimensions, dark cinematic gold style, no AI tells.",
+ "repo": "~/workspace",
+ "resume_brief": "Design two Facebook Page assets for M. Heaven$ent (page_id 1355928877604019): (1) profile picture, min 720x720, must survive circle crop \u2014 centered emblem, readable small; (2) cover banner 1640x924 with safe-area composition. Style: dark cinematic, gold accents, artist/rapper persona per ~/workspace/money-machine-hq/social/VOICE-GUIDE.md (mad scientist shaman outcast turned artist). Any text: his voice, NO em dashes, nothing that reads as AI. Save to ~/workspace/media-pipeline/page-assets/ with exact pixel dimensions verified. Heartbeat the checkpoint after each step, commit to git, mark done at end.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-08T17:00:00+00:00"
+}

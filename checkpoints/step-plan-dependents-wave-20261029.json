@@ -1,0 +1,10 @@
+{
+ "task": "Land the 35 dependent step-plan PRs in mhvnsnt/western-heart",
+ "status": "COMPLETE",
+ "watchdog": false,
+ "repo": "mhvnsnt/western-heart",
+ "attempts": 2,
+ "resume_brief": "WAVE COMPLETE 2026-10-30. All 35 PRs merged and verified on main (HEAD bbbb2ab3a89a1f58ea72c91549f3a39cacb038bd) plus repair PRs #1236 #1237 #1248. Final: 2143 plan keys, steps 1321 verified / 461 review / 4365 unmapped. Full record in ~/workspace/_stepwave-work/ledger.md. Nothing left to resume.",
+ "notes": "#1096/#1073/#970/#377 untouched and still open per instructions. Incidents (all repaired and disclosed in PR bodies): #1097 stack-base merge recovered by #1236; #1099 audit clobber restored by #1237; #1124 stale audit fixed pre-merge; #1139 audit duplication removed by #1248; #1141 engine fix for attack-anim contract landed in-branch.",
+ "updated_at": "2026-10-30T10:53:25.225014+00:00"
+}

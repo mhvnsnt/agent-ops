@@ -1,0 +1,669 @@
+{
+ "already_closed": {
+  "dead_d1": "PR #1560 - 7/12 fixed from own data + menajerii u/f+4; 5 documented data gaps (owner adjudication)",
+  "filename_gap": "PRs #1562/#1563/#1564 - NO repo defect (clean-tree proof); residuals bucket-side (Mariposa slots 1+4) -> B2 queue",
+  "vainabel_1plus2": "NOT-A-BUG - throw in his own DOA source data"
+ },
+ "do_not_duplicate": [
+  "filename-gap lane (closed #1562-#1564)",
+  "megami bank-scale lane (in flight)",
+  "CJ v5 render and other running lanes - NEVER kill in-progress work"
+ ],
+ "evidence_base": {
+  "cannot_instance": 11,
+  "roster_pass_pr": 1559,
+  "totals_450_inputs": {
+   "correct_strikes": 349,
+   "dead": 20,
+   "fire_no_damage": 41,
+   "throw_animates_0_damage": 2,
+   "throws_connect": 36,
+   "wrong_throw_on_strike": 2
+  },
+  "verdicts_file": "docs/proof/2026-11-03/roster/roster-verdicts-20261103.json"
+ },
+ "final_gate": "Playwright acceptance (real fight + customization) + owner phone playtest on the republished live build; live Pages tree ~8 KB under 1 GB cap - net-new models bucket-routed.",
+ "fixes_completed_this_run": [
+  "S2 material bakes x3 - PR #1582 merged f483b7b1, CI 14/14, blobs verified on main",
+  "WH #1598 (wave3 L2 gashadokuro + star rigs)",
+  "WH #1599 (wave3 item2: kingtyrant/nightwolf/cainelias poseable rigs + cards; POSE-BLOCKERS empty)",
+  "Wave 3 item 3 (L3): five souls wired + unhidden with real models and cards in PR #1600; byou/tou documented-blocked by the no-wrong-body gate (#866); merge held on a parent bucket sync (stale kai-body on B2)",
+  "Wave 3 item 5 (L5 engine contexts) LANDED: PR #1601, merge 04e6d201, CI 14/14, read-back 19/19. NO ENTRY 561 -> 539 (CD declared-entry contexts + SSL/SSR ssSide)."
+ ],
+ "fixes_note": "No code fix shipped this run: every Wave 1 SHORT fix requires the probe/capture/render harness verification loop (DONE MEANS VERIFIED ON MAIN). Disclosed as a deviation in PR #1565.",
+ "handoff_doc": "docs/handoffs/ROSTER-100-FIX-2026-11-04.md",
+ "handoff_pr": 1565,
+ "handoff_pr_state": "MERGED squash 9dc4f2f70a3e69e38b936872ca8efdd895635d41, CI 13/13 green; doc on main 15,509 B blob fb3b76b9a19b8e9ccb7eb02dcc2cb22d204f627f",
+ "inventory_counts": {
+  "animations": {
+   "fire_no_damage_fighters": 24,
+   "fire_no_damage_inputs": 41,
+   "jun_missing_slots": [
+    "crouch",
+    "block",
+    "dash_fwd",
+    "hit",
+    "hit_launch",
+    "ko",
+    "sidestep_b",
+    "walk_fwd"
+   ],
+   "roger_missing_slots": [
+    "light",
+    "block",
+    "ko",
+    "hit_launch",
+    "sidestep_b"
+   ],
+   "rows_pack_hit_frames_absent": [
+    "roger",
+    "jun"
+   ],
+   "unbanked_noclip_remainder": 541
+  },
+  "inputs": {
+   "dead_d1_data_gaps": 5,
+   "dead_undiagnosed": 7,
+   "noentry_documented": 593,
+   "pantera_still_dead_owner_adjudication": 11,
+   "throw_execution_open": 2
+  },
+  "models": {
+   "cannot_instance": 11,
+   "material_gate_blocking": 3,
+   "missing_model": 8,
+   "rig_primary": 1,
+   "scale": 3,
+   "smutbase_fidelity_rebuild": 6
+  },
+  "select_images": {
+   "bindposed_0bone_on_grid": 5,
+   "fighters": 59,
+   "missing": 0,
+   "of_total_pngs": 72,
+   "placeholder_identical": 7,
+   "pngs_present": 59,
+   "stale_draft1_bytes": 71
+  }
+ },
+ "main_verified_tip_at_audit": "6dd872a42ee63a24f2906d61aaea501d6203f4ee",
+ "owner_order": "2026-11-04 ~18:04 CST: ALL models, character select images, animations, inputs fixed 100%, then move forward. Companion 18:01 CST: SmutBase six = exact source .blend fidelity, full source rigs/textures.",
+ "program": "roster-100-fix-20261104",
+ "queue": {
+  "owner_rulings_pending": [
+   "non-upright-start normalization incl t3_crouch",
+   "row-48 class stamp",
+   "pantera 11 still-dead slots + f+2 row conflict",
+   "5 dead-d1 data gaps",
+   "zen bank assignment",
+   "ryuji hybrid",
+   "tackle-mount re-classing (128)"
+  ],
+  "wave1_short": [
+   "S1 dead-input diagnosis+slotting (charger/dorowani/ryuji-rock/deathfang, 7 slots)",
+   "S2 material bakes x3 (kingtyrant/nightwolf/michiko)",
+   "S3 cainelias scale fix",
+   "S4 portrait recapture wave A",
+   "S5 roger/jun rows.pack.json + hit_frames.json",
+   "S6 fire-no-damage hit-data pass (41, waterfall first)",
+   "S7 throw-execution diagnosis (demonio/vainabel 1+3, pantera A1)",
+   "S8 demonio d+1 data investigation",
+   "S9 NO-ENTRY re-audit + spelling cleanup + anatomy 404s"
+  ],
+  "wave2": [
+   "M1 megami jun-bank scale fix - LANE ALREADY IN FLIGHT (launched 2026-11-04), verify landing only",
+   "M2 portrait freshness gate in test/portraits.test.mjs",
+   "M3 portrait recapture wave B (post-L1 / post-rig)"
+  ],
+  "wave3_long": [
+   "L1 smutbase six fidelity rebuild vs source .blends (+ pond boots)",
+   "L2 gashadokuro re-rig",
+   "L3 missing models x7 (rin/byou/tou/sha/kai/retsu/gyou) - bucket-routed",
+   "L4 vainabel DOA4 encrypted motion decode",
+   "L5 engine contexts for NO-ENTRY (128)"
+  ]
+ },
+ "status": "wave3: items 1-2 landed; item 3 PR #1600 open, blocked on bucket sync (parent action); items 4-7 in progress",
+ "updated": "2026-11-06",
+ "s1_execution": {
+  "pr": 1580,
+  "pr_url": "https://github.com/mhvnsnt/western-heart/pull/1580",
+  "merged_at": "2026-11-05T15:04:34Z",
+  "merge_commit": "3996ab07427240af0f931e3b84d30b721da638c4",
+  "base_main_at_branch": "3f63454e0709fea92fe522a7c2cdb6b1a464f800",
+  "ci": "14/14 checks green on head 6187d75d (instruction-gate, game-unit-tests, full set); merged MERGEABLE/CLEAN, merge commit, 0 files removed",
+  "verdicts": {
+   "charger d/f+2": "FIXED (class a binding/label gap) - bryan bank r149 row was in charger.json + charger-attire2.json under key 2_r149 with direction dropped by the 2026-10-20 merge; re-keyed to d/f+2 with the bank-recorded command (input d/f+2, t3_command 3+RP, input_slots [d/f+2], hit_words re-keyed, matches skull.json record of the same row). No fight datum changed. Re-probe: engine trace + browser fight both fire the r149 strike.",
+   "charger d/f+1": "DATA GAP (class c, merge-provenance) - bank r146 exists (skull carries it as d/f+1); zero occurrences of 146 in charger.json; source file blanka.json also lacks it. Import is owner adjudication (#1560 class-D pattern).",
+   "dorowani d/f+2": "DATA GAP (class c, pure source) - gon bank has no attack row entered by 3+RP; t3-gon.json has no d/f+2.",
+   "dorowani u/f+4": "DATA GAP (class c, pure source) - gon bank has no 9+RK attack entry; t3-gon.json has no u/f+4.",
+   "ryuji-rock d/f+1": "DATA GAP (class c, merge-provenance) - king bank r117 exists (armor-king carries it as d/f+1); not in his curated union build. Rides owner ruling #6 (ryuji hybrid).",
+   "ryuji-rock d/f+2": "DATA GAP (class c, merge-provenance) - king r202 Concussion Hook exists (armor-king carries it); not in his build. Rides owner ruling #6.",
+   "deathfang d/f+1": "DATA GAP (class c, merge-provenance) - heihachi bank standing table enters r109 on 3+LP (dmg 20); his curated merge carried only 16 heihachi rows, r109 not among them; Iori layer d/f+1 occurrences are all inside DP motions."
+  },
+  "regression": "Full-registry slot-map diff, real engine, all 163 moveset files: per charger file +1 playable binding (d/f+2) and the renamed row retired identity entry (2_r149) removed with it; 0 overwritten; every other file unchanged.",
+  "rider_s6": "charger d/f+2 fires the correct row but registers 0 HP damage in the software-GL browser harness at every spacing; the same bank row deals damage through skull in the reference harness (19) whose file carries later frame-data wiring. Referred to S6 (fire-no-damage, consumes S5 hit_frames production). Stated openly in the diagnosis doc section 1 and the PR body - NOT claimed fully fixed.",
+  "ci_incident": "First repair shape (one-entry slots table) failed CI full-movelist-combos: files without a slots table are skipped by that test, and enrolling charger failed its combo-route check. Fixed by re-keying the row instead (commit 6187d75d); game-unit-tests then green.",
+  "blob_verification_on_main": {
+   "game/assets/movesets/charger.json": "9ab4d6305e5891baa440afab16eaf0ae778572a4 (129643 B)",
+   "game/assets/movesets/charger-attire2.json": "f8e92b6b934d7e1b71385ca493567de1d3dc2480 (119927 B)",
+   "test/dead-input-s1-slotting.test.mjs": "5c8a6b61cf82aa78ccc9a92e918b6ceaef97884a (3492 B)",
+   "docs/movesets/DEAD-INPUT-S1-DIAGNOSIS-2026-11-05.md": "76e6a2c964ec6570c0ada6c5c22b26a0a8f686b6 (11628 B)",
+   "docs/handoffs/ROSTER-100-FIX-2026-11-04.md": "S1 EXECUTED block present on main (blob 9bcfac9cd73fcd9aff9497b89fdca00fbb13719a; sibling-lane edits coexist)",
+   "docs/proof/2026-11-05/dead-input-s1/": "6 files on main: browser-probe-{charger ea95763c, dorowani 921d2aa6, ryuji-rock 2cbb36da, deathfang 4b39bb7b}, fight-frame-charger-20261105.png 7b83ed7b (364296 B), reprobe-verdicts-s1-20261105.json ebadbeff"
+  },
+  "owner_decisions_opened": [
+   "Import-the-bank-row adjudication for the 4 merge-provenance gaps (charger d/f+1 r146; ryuji-rock d/f+1 r117 + d/f+2 r202, also rides ruling #6; deathfang d/f+1 r109).",
+   "charger d/f+2 damage-path: S6 workstream (hit-data wiring), not an owner decision unless S6 finds the row needs authored frame data."
+  ],
+  "executed": "2026-11-05"
+ },
+ "s5_execution": {
+  "item": "S5 bank data production \u2014 rows.pack.json + hit_frames.json for roger and jun",
+  "executed": "2026-11-05",
+  "pr": 1581,
+  "pr_url": "https://github.com/mhvnsnt/western-heart/pull/1581",
+  "merge_commit": "03a7ef5e8e7348de4eb2fcb8d46e1b2318be6c8c",
+  "ci": "14/14 checks pass (instruction-gate initially failed on section headings; body rewritten to the gate format and re-passed)",
+  "closes": "TTT2 banks handoff follow-up #3 (WH #1558/#1561)",
+  "tool": "tools/anim/ttt2_bank_rows.py (landed in PR #1581)",
+  "field_map": "docs/tech/ttt2-mota/RECORD-FIELDS.md (landed in PR #1581)",
+  "roger": {
+   "rows_pack_rows": 323,
+   "rows_pack_bytes": 5673599,
+   "hit_frames_rows": 336,
+   "missing": 36,
+   "missing_breakdown": {
+    "inter-frame jump gate": 24,
+    "non-body entry (type 16384)": 9,
+    "encoder variant": 2,
+    "row 48 withheld (owner ruling pending)": 1
+   },
+   "move_row_stamps": 15
+  },
+  "jun": {
+   "rows_pack_rows": 114,
+   "rows_pack_bytes": 2785318,
+   "hit_frames_rows": 115,
+   "missing": 5,
+   "missing_breakdown": {
+    "inter-frame jump gate": 4,
+    "row 48 withheld (owner ruling pending)": 1
+   },
+   "move_row_stamps": 5,
+   "unstamped_slots_note": "7 of 12 jun slots are Unknown-motbin/bank-2 sourced (#1561); no Jun move records exist for them, so no move_row was stamped and no Jun rows were produced for them"
+  },
+  "provenance": "Every row/frame from the decoded TTT2 motbin binaries (data005/data006/data004 decoded bins) via the #1557 join tables; hit windows/attack words/throw flags copied from the move records (+0x40/+0x44/+0x5C); stream frame counts from the decoded animations. No invented rows, frames, or damage (damage is not a hit_frames field in any bank and is not producible from motbin data).",
+  "join_cross_validation": {
+   "roger": "2179/2180 mapped at grid index (exception Co_Dummy_375, framing-edge artifact, in bake report)",
+   "jun": "742/749 mapped (7 unmapped are motbin header strings)"
+  },
+  "slot_row_parity": "Pack rows for shipped slot entries reproduce the shipped clips to int16 quantization (max quat error 2.6e-5)",
+  "blob_verification": "All 34 payload file blobs re-verified byte-identical on main via gh api after merge (0 mismatches); zero deletions proven by exact subtree-SHA tree audit against the parent commit",
+  "local_tests": "All 92 test/*.test.mjs pass locally with the payload in the tree (CI game-unit-tests also pass on the PR)",
+  "probes": {
+   "harness": "real fixed-step fights vs Pantera (Pantera shrine), engine fetching bank files in-page; proof JSONs in docs/proof/2026-11-05/roster-100-s5/ on main",
+   "menajerii": {
+    "t3actions": 15,
+    "pre": "all 12 sampled inputs generic; 1+3 generic grab 33.5; 2+4 = 0 (pre-existing anomaly)",
+    "post_and_postmerge": "all 12 bind real roger rows; 1+3 = row 1761 throw, 33.5 (unchanged); every damage identical to pre; 2+4 still 0 (throw-execution class, S7)"
+   },
+   "megami": {
+    "t3actions": 12,
+    "pre": "generic clips; 2+4 generic grab 0; d+1 dead (#1560 genuine data gap)",
+    "post_and_postmerge": "10/12 bind real jun rows, damages identical to pre; 1+3/2+4 both plan row-111 throw (32.1 / 0, unchanged); d+1 still dead; b+1 binds the real forward-roll kick (row 241, window 22-23f): whiffs point-blank (0), connects at 1.8-3.0 m for 16.5 = pre damage (probe-megami-b1-spacing.json)"
+   },
+   "bank_files_engine_view": "pre: 404/404 both banks; post: roger pack 323 + hit 336, jun pack 114 + hit 115"
+  },
+  "deviations": [
+   "Buttons 0 except 4 slot identities (medium LK, heavy RK, Roger grab 1+3, Jun grab 2+4): motbin cancel/branch graph not cracked; S6 inherits it",
+   "Jun 7/12 slots carry no move_row (no Jun records exist for them)",
+   "Row 48 withheld in both banks pending the owner row-48 class-stamp ruling",
+   "Presentation gate (upright start / floor) report-only for library rows; verdicts in the bake reports (roger 155/323, jun 63/114)",
+   "Slot clips modified in place: top-level move_row only, animation data untouched",
+   "Jun grab hit row first_active is 0 because its source record reads 0; engine measured-window fallback applies, as before S5"
+  ],
+  "handoff_doc_updated": "docs/handoffs/ROSTER-100-FIX-2026-11-04.md S5 execution record + Workstream 3 status line (in PR #1581)"
+ },
+ "s2_execution": {
+  "item": "S2 material bakes x3 (kingtyrant, nightwolf, michiko)",
+  "state": "LANDED on main",
+  "pr": 1582,
+  "merge_commit": "f483b7b11581790004dc568f87303a106c3407ee",
+  "merged_at": "2026-11-05T15:45:08Z",
+  "ci": "14/14 green (incl. material-gate, clobber-guard, instruction-gate, budgets)",
+  "kingtyrant": "HairBase diffuse from his own source package teardown/models/tekken7/eddy-t7-fbx.zip; audit 23ok/1untextured -> 24/24 ok; 25,643,940 -> 26,682,804 B; blob on main 9e6c90d0dd182e05eaaf9676175ba49b9755d360",
+  "nightwolf": "boots_d + topb_d from her own classic-costume TXD (julia-chang-classic-costume-b.rar); audit 35ok/2untextured -> 37/37 ok; 20,880,260 -> 21,494,640 B; blob on main 712f51329af915923d1f771093da90c086f09a60; deviation: Version B colorway (teal/white) - brown colorway diffuses survive nowhere on disk/repo",
+  "michiko": "21-material split from her own source DFF binmesh + 21 TXD textures (katarina-alves-t7-p1.7z); audit 0ok/1placeholder -> 21/21 ok; 1,163,716 -> 21,824,640 B (shipped file had zero textures); blob on main e3a945dc8d4789f784232761c74b6c99d0101282; deviation: ~180 eye-stack tris ambiguity, both textures her own",
+  "gate_after": "196 keys: 165 pass, 4 donor-resolves (king-tyrant_alt1 now resolves from king-tyrant), 9 template exempt, 4 outfit-rule exempt, 14 quarantined; regenerated status also surfaces pre-existing armor-king-attire1 (1 untextured) - not caused by S2, later bake pass",
+  "proof": "instance via game/material-proof.html 3 rendered / 0 failed; fights vs Pantera (classic attires) all reached roundState fight, stills viewed; docs/proof/2026-11-05/roster-100-s2/ (11 files)",
+  "side_observation": "nightwolf Tripo attire-1 model lies prone in fight idle (pre-existing, untouched by S2; her baked classic attire stands/fights correctly) - anim/rig lane territory"
+ },
+ "s4_execution": {
+  "item": "S4 portrait recapture Wave A (visible, rigged, textured fighters from current attire-1 models)",
+  "pr": 1583,
+  "pr_url": "https://github.com/mhvnsnt/western-heart/pull/1583",
+  "merged_at": "2026-11-05T16:43:36Z",
+  "merge_commit": "1e3f80336e23266658344a2154bd1f1f082c526b",
+  "head_commit": "342ef75a5ae14208a6677b7265eacae6a1065db3",
+  "ci": "13/14 success on the PR head (instruction-gate, game-unit-tests, material-gate, menu-touch-e2e, speed-quality, deletion-guard, clobber-guard, guards all green); the budgets check run was CANCELLED after 10m4s (run 127379657086, no failure conclusion recorded) and is not a required check \u2014 the PR merged CLEAN. Correction recorded 2026-11-05 after the late CI-watch output surfaced the discrepancy vs the in-flight tally.",
+  "scope_fighters": 39,
+  "scope_note": "38 Wave A per the brief exclusions (50 visible - 5 pose-blockers - 6 SmutBase) + michiko, who joined mid-run when S2 (#1582) de-quarantined her, per the brief rule",
+  "captures": "all 39 completed stance:true, zero errors, repo tool tools/portraits/capture.mjs unmodified, serve tree hash-verified file-by-file against main blobs",
+  "byte_changed_pngs": [
+   "demonio",
+   "phantom",
+   "diablo",
+   "skull",
+   "samura1",
+   "sakura",
+   "burger",
+   "purplerain",
+   "thor",
+   "docfrank",
+   "kronos",
+   "rave",
+   "buffalo-bill",
+   "chordz"
+  ],
+  "byte_identical_reproductions": 24,
+  "byte_identical_note": "deterministic capture pipeline: unchanged models re-render the shipped card exactly; the capture log + rewritten manifest entries are the provenance the audit found missing; no Wave A portrait is the shared placeholder blob and none is a bind pose",
+  "retained_not_shipped": {
+   "pantera": "fresh capture rejected: king bank stance fails the PreviewPane fit gate on the current rig (Left shoulder swung 0.66 rad from bind vs 0.6 threshold) and the CMU fallback frames the back of his mane; shipped card + manifest entry retained; referred to the rig/gate lane"
+  },
+  "flagged_shipped": {
+   "diablo": "fresh capture shipped; framing catches horn/wing mass, no clean face \u2014 same defect class as the shipped card (model head geometry defeats head-crop framing); rig-lane item",
+   "burger": "fresh capture shipped; framing lands inside the mouth-rig geometry \u2014 shipped card was likewise broken (geometry smear); rig-lane item"
+  },
+  "bank_stance_fallbacks": "six fighters captured on the game CMU guard fallback (stanceSource cmu-14_01, recorded truthfully): pantera + demonio gate-rejected (0.66 / 0.71 rad shoulder swing), diablo/skull/burger/docfrank silent (no stance action survives retarget). Demonio shipped state was already the fallback. All other bank fighters reproduced their shipped guard angles exactly.",
+  "manifest": "entries for all 39 rewritten by the tool from measured captures (pantera held per above); out-of-wave entries byte-identical, including the 7 hidden fighters false claims (L3/M2 territory, named in PR deviation 7)",
+  "test": "test/portraits.test.mjs PASS on the result tree (50 select fighters, 5 pose blockers)",
+  "proof_dir": "docs/proof/2026-11-05/portrait-wave-a/ (contact-sheet-s4-20261105.png viewed fighter by fighter, portrait-hashes-s4-20261105.json, capture-log-s4-20261105.json)",
+  "payload_verification": "all 19 committed blobs re-read on main via gh api after merge: sha+size match 19/19",
+  "exclusions_honored": "SmutBase six untouched (M3), 5 pose-blockers untouched (S3/L2), hidden fighters untouched (L3), live Pages build (gh-pages) untouched, zero deletions",
+  "bucket_note": "asset bucket copies of demonio attire-1, the negativo refit and purplerain are stale vs main; captures used git-verified repo bytes throughout"
+ },
+ "s3_execution": {
+  "status": "complete",
+  "executed": "2026-11-05",
+  "pr": 1584,
+  "pr_head": "c06e37c9b8ba3f8baac30659aaf90ee93d69a2c7",
+  "merge_commit": "108024c5cd3c3801039f546d8f370a42a2b6d613",
+  "merged_at": "2026-11-05T17:01:58Z",
+  "ci": "14/14",
+  "fighter": "cainelias (roster/cain-elias)",
+  "diagnosis": "Both attire GLBs are raw gltfpack-packed Tripo pulls: single unskinned mesh, 0.979 m standing figure with origin at its center (geometry y -0.4895..+0.4894), no skeleton. Every normalization layer skips him: (1) loader grounding in game/js/assets.js _ingest reads only SkinnedMesh bounds, so groundY stays 0 and his lower half spawns below the floor; (2) roster-full.js entry carries no bodyScale; (3) canon-sizing entry (cainelias, Undertaker 208 cm) is apply:false and keyed 'cainelias' while his model/form key is 'cain-elias', so canonRootScale returns null in the live scene.",
+  "fix": "Normalization baked into both GLB files (JSON chunk only): root node gains uniform scale + ground lift. attire1 scale 1.858144 lift 0.909593; attire2 scale 1.858405 lift 0.909636. BIN chunks byte-identical to the shipped files (guard test test/cainelias-scale.test.mjs pins their sha256; test skips loudly in sparse CI checkouts without roster/, enforces fully where models are present).",
+  "target": "1.81896 m = canon 208 cm at the same-scene roster anchor (Pantera 1.749 m at canon 200 cm, settled live-scene measure)",
+  "before": {
+   "height_m": 0.979,
+   "bbox_min_y": -0.49,
+   "root_y": 0,
+   "method": "live scene vs Pantera, AI frozen, grounded idle, 3 samples"
+  },
+  "after": {
+   "height_m": 1.819,
+   "bbox_min_y": 0.0,
+   "bbox_max_y": 1.819,
+   "root_y": 0,
+   "arm_span_m": 1.217,
+   "width_m": 0.412,
+   "method": "same settled method, 3 samples; Pantera same-run 1.742-1.750 m"
+  },
+  "files_on_main": {
+   "roster/cain-elias/attires/attire1/model.glb": {
+    "size": 21711412,
+    "blob": "3d9830de257e3e8d355166bdbb4ec327425ee459",
+    "sha256": "1ebc6f62a2a2943f428cec02cd996b6cc6766af1037f93cc62b2be92bcfc35bf"
+   },
+   "roster/cain-elias/attires/attire2/model.glb": {
+    "size": 21921996,
+    "blob": "32e5ec2f44265d2ec53ed26d008368d5bb6cf61d",
+    "sha256": "4ce047ea4b8cce74d2170159c7d3098a616bea4a98d0422fec763cd814edd8d6"
+   },
+   "test/cainelias-scale.test.mjs": {
+    "size": 3571,
+    "blob": "abafaa498d"
+   },
+   "proof_dir": "docs/proof/2026-11-05/cainelias-scale-s3/ (measure-before/after.json, fight-before/after-20261105.png, inputs-115/075-before/after.json, throw-after.json)"
+  },
+  "input_reprobe": {
+   "harness": "game's own fight scene vs Pantera, real keyboard input, AI frozen, matched spacings 1.15 m and 0.75 m",
+   "baseline_1559": {
+    "1": 6.4,
+    "2": 11,
+    "3": 8.3,
+    "4": 16.5,
+    "1+2": 6.4,
+    "d/f+1": 11,
+    "d/f+2": 11,
+    "u/f+4": 11,
+    "1+3_throw": 22,
+    "d+1": "dead slot (documented data gap, #1560)"
+   },
+   "after_075": {
+    "1": 6.4,
+    "2": 11,
+    "3": 8.2,
+    "4": 16.5,
+    "1+2": 6.4,
+    "d/f+1": 11,
+    "d/f+2": 11,
+    "u/f+4": 11,
+    "1+3_throw": 22,
+    "d+1": "unchanged (crouch-1 falls back to standing 1)"
+   },
+   "notes": "All damages identical to baseline; '3' whiffed pre-fix at 0.75 m and connects post-fix (8.2 vs baseline 8.3, same untouched move data); jab reach at 1.15 m went whiff -> 6.4; throw verified on a dedicated long-settle check (Pantera 100 -> 78). No moveset file touched."
+  },
+  "deviations": [
+   "Both attires baked, not only attire 1 (identical defect in attire 2; #1580 attire-2 precedent).",
+   "Bake into the GLB files instead of canon-sizing apply:true: canon sizing cannot ground a center-origin mesh, its entry key (cainelias) does not match his form key (cain-elias), and its stance calibration targets skinned stance poses.",
+   "Target from same-scene canon ratio (1.81896 m) rather than the STANCE_PER_CM stance figure (1.699 m): he is an unskinned standing figure with no stance pose.",
+   "Settled measurements taken with AI frozen + grounded idle (disclosed in proof): the first unfrozen after-run caught him mid-jump (state jump, min-y 0.786) - a live-fight artifact, not the bake."
+  ],
+  "wave_b_note": "Post-fix portrait-lane numbers recorded in the handoff doc S3 section: idle height 1.819 m, min-y 0.000 (grounded), arm span 1.217 m, width 0.412 m. If canon sizing is ever applied to cainelias, its entry must be re-based and keyed to 'cain-elias' first or the runtime would double-scale him.",
+  "deletions": 0,
+  "live_pages_build_touched": false
+ },
+ "s7_execution": {
+  "item": "S7 throw-execution diagnosis \u2014 Demonio 1+3, Vain Abel 1+3, Menajerii 2+4, Pantera A1 vs bankless",
+  "executed": "2026-11-05",
+  "pr": 1589,
+  "pr_url": "https://github.com/mhvnsnt/western-heart/pull/1589",
+  "merge_commit": "2aebf11dab38b2e438a0c64ffd33a85e5a7fdd2d",
+  "ci": "13/13 checks pass (docs-only PR, no budgets check applies; instruction-gate initially failed on bare filenames in the Proof section \u2014 body rewritten with full paths and re-passed)",
+  "verdict": "ALL FOUR named cases are the single A1 engine mechanism (victim _throwHitDone never cleared after the first legacy slam), already fixed by WH #1579 before S7 ran. No per-fighter data defect exists (every named record carries its damage in the fighter's own file). S7 changed NO code and NO data; the PR lands the diagnosis + order-controlled verification record.",
+  "reconciliation_1579": "WH #1579 (merge f281ede8) cleared _throwHitDone in _enterThrownExec and startThrowLock (verified present in fighter.js on main) and reclassified pantera rows 415/417 to throw (C1). Every prior 0 reading fits its signature: first throw of a session dealt data damage, later throws animated at 0.",
+  "probes": {
+   "method": "fresh fixed-step harness fights per run on main 1e3f8033 serve tree (fighter.js sha256-verified vs pinned blob); state carries between inputs in a sequence, victim HP refilled per input only; delta to a2aa63e8 verified by compare to touch no exercised file",
+   "pantera_vs_zen": {
+    "order": "1+3,2+4,1+3",
+    "dealt": [
+     23.5,
+     23.5,
+     23.5
+    ],
+    "supersedes": "23.5 then 2+4=0 (#1551)"
+   },
+   "demonio_vs_pantera": {
+    "first": 16.6,
+    "after_d1_throw": 16.6,
+    "sequence_1+3_2+4_1+3": [
+     16.6,
+     16.6,
+     16.6
+    ],
+    "resolved_record_damage": 19,
+    "ratio": 0.874,
+    "supersedes": "1+3=0 after d+1 throw (roster pass 2026-11-03)"
+   },
+   "vainabel_vs_pantera": {
+    "first": 19.3,
+    "after_1+2_throw": 19.3,
+    "data_damage": 21,
+    "supersedes": "1+3=0 after 1+2 (roster pass); 19.3 when first (video run)"
+   },
+   "menajerii_vs_pantera": {
+    "2+4_first": 33.5,
+    "s5_order_1+3_2+4": [
+     33.5,
+     33.5
+    ],
+    "reverse_2+4_1+3": [
+     33.5,
+     33.5
+    ],
+    "data_damage": 35,
+    "supersedes": "2+4=0 in S5 order on the pre-#1579 tree"
+   },
+   "megami_vs_pantera_observation": {
+    "2+4_first": 32.1,
+    "s5_order_1+3_2+4": [
+     32.1,
+     32.1
+    ],
+    "data_damage": 35,
+    "supersedes": "2+4=0 in S5 order on the pre-#1579 tree"
+   }
+  },
+  "engine_coverage_observation": "Every connected throw ran the LEGACY lock path; the paired file-grapple lookup declines per bank (jin: attempt rows carry no throw branches in the reactions pack; roger/jun: no reactions bank registered; vainabel: no T3 bank; zen: no bank by owner decision). Legacy prices damage from the attacker's own record, so damage is exact; pair coverage is an animation-coverage question for bank authoring, not a damage defect.",
+  "deviations": [
+   "1: no code/data change \u2014 proven cause already fixed by #1579; a second fix would be invented work (#1579, #1565)",
+   "2: Megami probed/reported as observation only; not a named S7 case, no Megami change made (#1581)",
+   "3: probes on main 1e3f8033 tree; main advanced to a2aa63e8 mid-lane, delta verified by compare to touch no exercised file; PR based on a2aa63e8 (#1584)",
+   "4: one Menajerii reverse attempt whiffed vs a jumping/walking victim (probe settle artifact) \u2014 preserved as probe-menajerii-rev-whiff-attempt.json, settle hardened, standing-victim re-run supersedes it (#1581)",
+   "5: canvas grabs black under swiftshader \u2014 proof is engine trace + damage numbers, no screenshots (#1581)",
+   "6: serve tree assembled file-by-file at the pinned commit after a sparse-clone fetch was reaped mid-lane; served fighter.js sha-identical to the pinned blob; no repo file modified for serving (#1580)"
+  ],
+  "diagnosis_doc": "docs/movesets/THROW-EXECUTION-S7-DIAGNOSIS-2026-11-05.md",
+  "proof": "docs/proof/2026-11-05/roster-100-s7/ (12 probe JSONs + probe_s7.py)",
+  "handoff_doc_updated": true,
+  "deletions": 0,
+  "live_pages_build_touched": false
+ },
+ "s6_execution": {
+  "item": "S6 fire-no-damage hit-data pass (41 inputs)",
+  "executed": "2026-11-05",
+  "pr": 1591,
+  "pr_url": "https://github.com/mhvnsnt/western-heart/pull/1591",
+  "merge_commit": "ae76d7400ebd1b8b65e2cdc5c42f01fa9df748bb",
+  "ci": "14/14 green (instruction-gate pass on first push; menu-touch-e2e last, completed success)",
+  "verdict": "zero hit-data defects; no game data file changed",
+  "classes": {
+   "A_harness_artifact_deals_recorded_damage": 30,
+   "B_throw_completes_with_model_loaded": 5,
+   "C_honest_zero_source_data": 4,
+   "D_in_range_only": 2
+  },
+  "root_causes": [
+   "roster-pass placement relative to a still-relocating defender (ready gate opens before round-start positioning settles; attacker left facing away at the active window)",
+   "paired throws do not complete damage in a model-less probe tree; with the verified fight model loaded the pair binds and pairDamage lands"
+  ],
+  "charger_rider": "CLOSED as harness artifact - charger d/f+2 fires bank row 149 and deals exactly its recorded 9 at 1.1 m in the fixed-step harness (probe-E-charger.json); no charger data change; S1 fix stands",
+  "s5_buttons_referral": "nil blast radius for the 41 (no roger/jun-bank fighter in the set); stays a TTT2 bank-production limitation",
+  "s3_scale_class_check": "zero of 41 (coordinator's add, S3/#1584 class); every damaging input connects at 1.1 m; mariposa-monarch measured 1.933 m / minY -0.006",
+  "diagnosis_doc": "docs/movesets/FIRE-NO-DAMAGE-S6-DIAGNOSIS-2026-11-05.md",
+  "proof": "docs/proof/2026-11-05/fire-no-damage-s6/ (34 files incl. verdicts-s6-20261105.json)",
+  "handoff_doc_updated": true,
+  "blob_verification": "diagnosis doc, verdicts, and sampled proof blobs re-read from main post-merge: byte-identical; handoff S6 block identical on main (file also carries parallel lanes' blocks; clean merge, no conflict markers)",
+  "deviations": 6,
+  "correction_sweep_20261105": {
+   "pr": 1594,
+   "merge_commit": "a0619f3b428191cdb535738632a467244f81ddf2",
+   "reason": "post-merge audit found 4 hollow proof files in PR #1591 (waterfall v2/diag/diag2/pre held a failed duplicate run's ready:false output); the original PR's post-merge verification sampled other files",
+   "re_proved_from_readback_files": {
+    "waterfall_strikes": "probe-waterfall-v2.json (v2d+v2c): 1+2 17.4/17.4, d/f+1 7.3/7.3, d+1 2.8@1.1, d/f+2 17.5/5.5 \u2014 supersedes the lost run's stdout numbers 25.2/10.8/4.1/8.1",
+    "root_cause_traces": "probe-waterfall-diag.json + diag2.json (old placement reproduced) + pre.json summary",
+    "throws_both_spacings": "throw-sweep-*.json x10: waterfall pair 19.3/19.3, zui pair 17.4/17.4, bruno pair 19.3/19.3, chordz pair 17.4/17.4, gashadokuro LEGACY SLAM 17.4/17.4 (pairAfter false)",
+    "classC_contact": "probe-G-zui.json (zui 3/4 contact both spacings, moveDmg 0) + probe-G-docfrank.json (1+2 contact both spacings, moveDmg 0)"
+   },
+   "chatur": "no S6 row exists \u2014 roster-verdicts probe lists enumerate exactly the 41; chatur pose-only",
+   "verdict_changes": "none",
+   "verified": "every file in PR #1594 read back from main with contents checked (19/19 OK)"
+  }
+ },
+ "s8_execution": {
+  "pr": 1587,
+  "pr_url": "https://github.com/mhvnsnt/western-heart/pull/1587",
+  "merged_at": "2026-11-05T19:28:02Z",
+  "merge_commit": "ebe30a5b2ae27248d636cd616ef80a3686be798f",
+  "base_main_at_branch": "31666412d5df09c4dbc3416a281f85ced619ed0c",
+  "branch_head_at_merge": "6f427fb31cf5402c4307c408ded56485bd4d79b6 (includes Data-API merge of main 2aebf11d resolving the handoff-doc conflict, both sides kept)",
+  "ci": "14/14 checks green on final head (instruction-gate, game-unit-tests, menu-touch-e2e 14m53s, budgets, all guards). First menu-touch-e2e attempt was cancelled at its 30m timeout stuck in the Install Playwright step (runner stall, test never ran; token could not rerun) - re-triggered via a trailing-newline chore commit, passed on the fresh runner, then passed again on the post-merge-resolution head.",
+  "data_answer": "Demonio d+1 is a strike in every source layer of his own build: T7 source record 'Corpse Thrust' (mid, dmg 24, anim_ref t7:jin:jin_95), T8 source record 'Corpse Thrust > Black Wing Flash' (target m,t, dmg 21,10, blockable strike with an on-hit attack-throw transition, not a grab), T3 bank row 188 (strike, dmg 21, throw flag 0, attack word 535, used_by includes Demonio's forms). What was bound: slots['d+1'] -> the T8-derived record reclassed by the 2026-10-21 source merge (commit 16e1057b, merge_sources.py) as move_class throw + isGrab + unblockable + throw_break (none present in any source dataset), then stamped by the 2026-10-23/24 anim-fix to bank row 139 'class-only' (common_anim generic, throw flag 1, used_by excludes Demonio). His own strike record sat unslotted in all 4 files; _prepare builds the slot table from slots first, so it could never surface.",
+  "verdicts": {
+   "demonio d+1": "FIXED (same-class slotting defect, S1 pattern) - slots['d+1'] re-pointed to his own Corpse Thrust strike record d+1~t7.jin. Fight probe vs Pantera at 0.75 m: before = Black Wing Flash throw (key d+1, word 2048, row 139, defender thrownExec, 21 dmg, #1559 verdict reproduced); after = Corpse Thrust strike (key d+1~t7.jin, word 535, row 188, 21 dmg, no throw state).",
+   "demonio-bloodline-ember d+1": "FIXED - slots['d+1'] -> d+1~t7.jin (strike dmg 14, row 188). His bound throw record carried a divergent anim stamp (row 117 'approximate') - documented, untouched.",
+   "demonio-human d+1": "FIXED - slots['d+1'] -> d+1~donor.demonio (strike dmg 14, row 188).",
+   "demonio-winged d+1": "FIXED - slots['d+1'] -> d+1~t7.jin (strike dmg 14, row 188)."
+  },
+  "isolation": "Full-registry prepared-slot diff over all 163 moveset files: exactly 4 slot changes, all Demonio d+1. 80-input neighbour sweep (20 x 4 files): exactly the 4 intended diffs. No fight datum created/changed/deleted; the throw-classed record stays in moves untouched in all four files. Deletions: 0 files (4 replaced slot lines). Commit built via the Git Data API per the repo NO-SPARSE-COMMIT LAW (this lane's checkout was sparse).",
+  "deviations": [
+   "1: T8 attack-throw transition (+10 on standing hit) not modeled - engine has no strike->attack-throw transition mechanic; the T8-derived record remains in moves unslotted as its data of record. Engine feature, out of S8 scope.",
+   "2: stale specials[] summaries {input d+1, damage 31, throw true} in demonio.json + demonio-winged.json documented, not edited (not the execution path).",
+   "3: ember's throw record anim stamp (row 117) differs from the other files (row 139) - provenance variance in the same merge artifact, documented.",
+   "4: fight proof is numeric engine traces, not screenshots - arena render crashed the headless page on 2 of 5 probe runs (SwiftShader instability); one unrelated stage-floor-break event seen once and excluded; quoted runs are the clean pair."
+  ],
+  "proof": "docs/movesets/DEMONIO-D1-S8-DIAGNOSIS-2026-11-05.md; docs/proof/2026-11-05/demonio-d1-s8/ (trace-verdicts-s8-20261105.json, fight-before/results.json, fight-after/results.json + console logs); test/demonio-d1-s8.test.mjs (9/9 local; full local suite 426 pass, only profiles-index failing locally on ENOENT from the sparse checkout - passed in CI). Payload blobs self-verified on main by sha + size (10/12 exact from the original manifest; handoff doc superseded by the verified merge-resolution blob 55a0d938 containing S2+S7+S8 records; fight-after/results.json superseded by its trailing-newline blob 82cf6e7a, content verified).",
+  "live_pages": "untouched"
+ },
+ "s9_execution": {
+  "pr": 1593,
+  "pr_url": "https://github.com/mhvnsnt/western-heart/pull/1593",
+  "merged_at": "2026-11-05T19:56:15Z",
+  "merge_commit": "adf4669158d1faf22a7fbd0515d7179781de874c",
+  "base_main_at_branch": "ebe30a5b2ae27248d636cd616ef80a3686be798f",
+  "branch_head_at_merge": "f05cebde58b4c3255cd73c759f3faaa9d0c6238c (built via the Git Data API from verified tree SHAs; the lane scratch is a sparse blobless clone, NO-SPARSE-COMMIT observed)",
+  "ci": "14/14 checks green on head f05cebde (instruction-gate after two body-format fixes: exact section headers, a #ref on every deviation, ticked self-check box; game-unit-tests, material-gate, menu-touch-e2e, budgets, all guards). All 17 payload blobs self-verified on main by sha + size after the merge. Deletion filter empty; PR carried zero deletions.",
+  "no_entry_result": "593 -> 561 on the merge base ebe30a5b (baseline re-measured after S6 #1591 and S8 #1587 landed mid-lane; count identical, every fighter unchanged). Audit: 55 fighters, 15,737 inputs, 5,577 prefixed; engine 2,859, stance-entered 2,002 -> 2,034, chain-throw 123. Only phantom (17 -> 2), cyborgx (58 -> 51), megami (14 -> 4) moved.",
+  "duplicates_47": "Split on evidence. 22 duplicate stance spellings cleared by a data-declared stance_alias (phantom INS->IND, POISON_WIND->POI; cyborgx BKP->BACKUP, CLOCKWORK->CLK) plus a never-overwrite alias pass in movesets.js _prepare and alias-aware audit classification: 7 inputs newly reachable (phantom INS string chain x4 + INS.3+4* as IND.*, POISON_WIND.1+2 as POI.1+2, BKP.1+2 'Rocket Punch' as BACKUP.1+2), 15 shadowed duplicates whose canonical twins keep the slots (probe-verified). 25 byou t7.* keys are dataset row-id keys, not spellings: no input notation exists for them anywhere in the repo; documented and regrouped with megami's 4 t8.* keys as the artifact row-id class (29). No row renamed or removed; nothing fabricated.",
+  "megami_izu": "Wired: stance_after {\"f+1+2\": \"IZU\"} added to megami.json (the one-line wiring the 2026-11-02 closeout teed up for after the Jun bank landed; bank #1558/#1561, rig #1576). All 10 IZU rows fire; probe + guard test verify f+1+2 stanceAfter = IZU.",
+  "pond_documented_not_wired": "Pond's stance wiring is an 80-row completion pass, not hygiene: stance_after is empty; entry moves identified in her own data (b+3+4 LAB, 3+4~t7.masterraven HAZ, 3+4 MIST, qcf STRIDE, SZN.B) and recorded in docs/movesets/NO-ENTRY-S9-REAUDIT-2026-11-05.md; per-row clip verification and DEEP/REV/RAGE entry identification still owed. Zen's 20 rows untouched (owner's standing no-bank decision).",
+  "anatomy_verdict": "The two named 404s are CONFIRMED and the class is 13 fighters, not 2: xray.js prefetch built the path from the fighter id while the anatomy JSON lives under the roster directory. Cross-check 59 roster-full ids x 43 anatomy dirs; each mapped file's own fighter field and skin mesh_ref point at that directory's own models. Fixed with a documented ANATOMY_DIR map in game/js/xray.js (cyborgx->cyborg-x, mariposa-monarch->mariposa, samura1->sam-ur-a1, baek-master-white->baek, docfrank->doc-frank, awapop->awa-pop, dxmmii-patchwork->dxmmii, pond->tsuyu-asui, ryusan->mina-ashido, tobi->miruko, chatur->rahkasa, megami->parvati, menajerii->vixen) + guard assertions in test/xray.test.mjs. 22 fighters have no anatomy file under any directory: fail-silent by design, not defects.",
+  "remaining_561": "Tackle family 132 (tool-exact TACKLE 118 + MD1 6 + MD2 6 + UT 2; the 2026-11-02 closeout hand-grouped 128 with TACKLE 4 low - correction recorded for owner ruling 7, nothing re-classed), bank-linked 100 (pond 80, zen 20), artifact row-id keys 29, remainder 300 (engine contexts + no-entry-move gaps, unchanged).",
+  "proof_paths": [
+   "docs/movesets/NO-ENTRY-S9-REAUDIT-2026-11-05.md",
+   "docs/proof/2026-11-05/roster-100-s9/audit-before.json",
+   "docs/proof/2026-11-05/roster-100-s9/audit-before.md",
+   "docs/proof/2026-11-05/roster-100-s9/audit-after.json",
+   "docs/proof/2026-11-05/roster-100-s9/audit-after.md",
+   "docs/proof/2026-11-05/roster-100-s9/probe_s9.mjs",
+   "docs/proof/2026-11-05/roster-100-s9/probe_s9.out.txt",
+   "docs/movesets/STANCE-REACHABILITY-AUDIT-2026-11-01.md",
+   "docs/handoffs/ROSTER-100-FIX-2026-11-04.md"
+  ],
+  "deviations": "1) Anatomy scope 2 -> 13 on proven cause (declared in the PR + re-audit doc). 2) The 47 split: 22 alias-cleared, 25 regrouped artifact (no fabrication). 3) Megami wired / Pond documented-not-wired. 4) Tackle family recounted 128 -> 132 tool-exact; re-classing left to owner ruling 7. Local full test suite could not run to completion inside the lane's sparse scratch (tests reading paths outside the sparse spec fail ENOENT there); the two guard suites covering this change ran green locally (stance 6/6, xray 62/62) and CI's full-checkout game-unit-tests passed."
+ },
+ "m2_execution": {
+  "item": "M2 portrait freshness gate (Wave 2, first item)",
+  "pr": 1595,
+  "head_commit": "698fab9c7d5e37850f4c0fb13e4466d5e0d0822e",
+  "merge_commit": "839565071bf9152b54dec0cb515bd1ca1dbb84d2",
+  "base": "a0619f3b428191cdb535738632a467244f81ddf2",
+  "ci": "14/14 checks success on PR head (assets-budget, build-public-dist, deletion-guard, e2e, game-unit-tests, guard, instruction-gate, material-gate, menu-touch-e2e, pr-safety-guard, public-dist-deploy, rig-guard, speed-quality, ui-sources). instruction-gate failed once on the first body (deviations 2 and 3 lacked a #ref) and passed after a body-only patch adding the precedent refs (#1583, #1594). No cancelled checks.",
+  "verified_on_main": "All 8 payload files read back from main via the contents API and byte-compared to the submitted payload: MATCH on every file (test/portraits.test.mjs, tools/portraits/KNOWN-PLACEHOLDERS.json, docs/handoffs/ROSTER-100-FIX-2026-11-04.md, docs/proof/2026-11-05/portrait-gate-m2/{notes.md,gate-pass.txt,gate-fail-unregistered-placeholder.txt,gate-fail-registry-gap.txt,gate-fail-duplicate.txt}).",
+  "gate_proof": "Extended test PASS on unmodified main (50 select fighters, 6 pose blockers, 7 registered placeholders); FAIL exit 1 on (a) unregistered placeholder bytes (aotsuki), (b) registry gap (rin removed; FAIL output names the false steve-fox manifest claim), (c) unregistered byte-identical duplicate (skull overwritten with pantera card). Registry names exactly rin/byou/tou/sha/kai/retsu/gyou (sha256 61d84488574aa8ba43a09d1eb4a3ab633ef3b056674ba28a41618340bec789fc) plus one knownDuplicateGroups entry ryuji/ryuji-rock (owner ruling #6).",
+  "deletions": "none",
+  "date": "2026-11-05"
+ },
+ "m3_execution": {
+  "item": "M3 portrait recapture Wave B",
+  "pr": 1597,
+  "pr_url": "https://github.com/mhvnsnt/western-heart/pull/1597",
+  "branch": "roster100-wave2-m3-waveb",
+  "head_commit": "830f5f40707f039c97e41d6a14e6f4e2e40cc2a2",
+  "base_commit": "839565071bf9152b54dec0cb515bd1ca1dbb84d2",
+  "merge_commit": "47e37b430ec4881ba92c420db5d1487b29efd644",
+  "ci": "14/14 checks success as observed via the Actions check-runs API (budgets, canon-names, clobber-guard, coverage-guard, deletion-guard, game-unit-tests, guard, instruction-gate, material-gate, menu-touch-e2e, pr-safety-guard, rig-guard, speed-quality, ui-sources). instruction-gate failed once on the first PR body (two section headings missing their exact template suffixes) and passed after a body-only PATCH. No cancelled checks.",
+  "verified_on_main": "Contents of all 13 payload files read back from main at 47e37b43 and byte-compared to the submitted payload: MATCH on every file (6 portrait PNGs, portraits-manifest.json, POSE-BLOCKERS.json, 4 proof files, handoff doc).",
+  "shipped": [
+   "pond (bones 224)",
+   "tobi (255)",
+   "ryusan (521, stance false->true)",
+   "chatur (264)",
+   "megami (469)",
+   "menajerii (450)"
+  ],
+  "captured_not_shipped": {
+   "michiko": "capture byte-identical to current card; no change",
+   "kingtyrant": "bones 0 / stance false / framed false - attire-1 GLB has no skinned mesh/skeleton in the select path; fallback capture byte-identical to current card; card + POSE-BLOCKERS entry retained",
+   "nightwolf": "same class as kingtyrant; card + POSE-BLOCKERS entry retained",
+   "cainelias": "skeleton-less (S3 scale fix added no skeleton); fallback capture differs from current card but is unposed; current card retained per brief; POSE-BLOCKERS entry retained"
+  },
+  "not_attempted": {
+   "star": "blocked on L2",
+   "gashadokuro": "blocked on L2 (re-rig)"
+  },
+  "pose_blockers_change": "ryusan removed (stance now applies via the roster-standard cmu-14_01 select stance; her bank stance still fails the PreviewPane fit gate at 1.23 rad - documented in the handoff M3 record as a rig/anim-lane item). Blockers now 5: kingtyrant, nightwolf, star, cainelias, gashadokuro.",
+  "gate_rerun": "test/portraits.test.mjs on the post-change tree: PASS (50 select fighters, 5 pose blockers, 7 registered placeholders), exit 0",
+  "deletions": "none",
+  "date": "2026-11-06"
+ },
+ "l2_execution": {
+  "pr": 1598,
+  "branch": "wave3-l2-gashadokuro-star-rig",
+  "base": "47e37b430ec4881ba92c420db5d1487b29efd644",
+  "merge_commit": "453e7a7c20d51630f2f7071015c6026c0ce7bffd",
+  "merged_at": "2026-11-06",
+  "ci": "14/14 unique checks SUCCESS on final runs (instruction-gate failed twice on PR-body form - missing exact section title pattern then one deviation missing its #ref - fixed by body-only edits; final run SUCCESS; menu-touch-e2e 23 min SUCCESS)",
+  "readback": "28/28 payload files verified on main: 26 by full byte compare, the 2 GLBs by git blob SHA (gashadokuro 6c8037d2, star 3258e6a8) after the contents-raw endpoint returned non-file bytes for the >1MB files",
+  "gashadokuro": "roster/kuma/attires/attire1/source/gashadokuro-a1-rigged.glb (38,869,564 B, blob 6c8037d2) built from his own Tripo static kuma-a1.glb via tools/auto_rig refit (pantera template, measured 16-joint fit correction, bone heat 0.006m/80k proxy, Head pivot mid-skull); 50 joints, 1.95 m; wired in game/js/assets.js. Fight: bones 0->50, T3 kuma bank binds (22 actions), stance height 0.891 m sunk minY -0.445 -> 1.81-1.90 m grounded; damage parity 8/10 identical at 1.1 m, throws 17.4 both and upgraded legacy-lock -> paired path; input-4 total varies with animated-body hit connection (aotsuki control 10.1 same class). Gates: validate PASS, seams PASS, official anim_check p99.9 3.29 vs 2.5 gate = documented deviation (median over-2x elongation 5.35 mm; 40 RightFoot kick spikes = aotsuki's count; seam_safe_smooth died 2x OOM-class on 8 GB VM, not in shipped path; secondary_chains rejected - mis-detected dorsal plates/tail as hair). Card recaptured: bones 50, stance cmu-14_01 (bank stance rejected 0.72 rad - item-7 class), framed, viewed true to character.",
+  "star": "roster/star/attires/attire1/model-rigged.glb (26,306,404 B, blob 3258e6a8) from her own Tripo static model.glb via same refit (template fit used - landmark pass degenerated on her left arm; LeftHandThumb3 restored - the pantera template GLB itself lacks it); 50 joints, 1.59 m. Gates: validate PASS, anim_check p99.9 1.459 PASS (aotsuki baseline 1.784), seams PASS. Fight: xiaoyu bank binds (22 actions), 1.502 m grounded, 7/10 dealt totals identical, 3 switched fallback->real bank rows (intended); throws stay legacy path 17.4 (bank pair coverage unchanged). Card recaptured, viewed (puffs/red latex/gloves). DATA NOTE for owner ruling #8: her moveset JSON t3_row labels vs engine-resolved bank rows do not line up 1:1 - moveset data untouched.",
+  "portraits_gate": "PASS on post-change tree: 50 select fighters, 3 pose blockers (kingtyrant, nightwolf, cainelias remain), 7 registered placeholders",
+  "pose_blockers_removed": [
+   "gashadokuro",
+   "star"
+  ],
+  "proof_dir": "docs/proof/2026-11-06/l2-gashadokuro-star/",
+  "deletions": "none",
+  "size_delta_bytes": 65175968
+ },
+ "item2_execution": {
+  "status": "LANDED",
+  "pr": 1599,
+  "branch": "wave3-item2-poseability",
+  "base": "453e7a7c20d51630f2f7071015c6026c0ce7bffd",
+  "merge_commit": "b80cb66b2fb086192adc5d58ecab08962fb32cd7",
+  "ci": "14/14 unique checks SUCCESS on final runs (instruction-gate passed after two body-only fixes: exact section titles, then full-path-only backticks in Proof)",
+  "readback": "41/41 payload files verified on main b80cb66b (40 by tree blob SHA byte compare; POSE-BLOCKERS confirmed by contents API after tree truncation, blocked == {})",
+  "fighters": {
+   "kingtyrant": "rigged 50-joint refit at 1.644 m (roster-anchor Eddy 188); eddy bank binds; damage 7/10 identical, throws paired-upgrade at 17.4; card cmu-14_01 (eddy stance fit-rejected 0.69 rad); stretch p99.9 1.616 PASS, seams PASS",
+   "nightwolf": "rigged 50-joint refit at 1.67 m (her classic rig's measured figure); fine-proxy bake; julia bank binds; damage 9/10 identical; stance 1.572 m grounded (was 0.973 sunk); card cmu-14_01; stretch p99.9 2.433 PASS, seams PASS",
+   "cainelias": "rigged 50-joint refit at 1.819 m (S3 scale preserved, node transform baked into geometry); king bank binds; damage 10/10 IDENTICAL incl dead d+1 unchanged; card on his OWN tekken-bank stance; seams PASS; stretch p99.9 10.26 = documented deviation (pants hip-fold class, in-game + exact-LBS clean)"
+  },
+  "pose_blockers_after": "EMPTY \u2014 0 pose blockers roster-wide; portraits gate PASS on post-change tree",
+  "proof": "docs/proof/2026-11-06/item2-poseability/ (notes.md, 6 fight JSONs, 6 fight stills, posed renders, card zoom crops, fit/heat/anim gate JSONs)",
+  "deviations": "cainelias stress-clip stretch (documented, counter-evidence); nightwolf fine-proxy bake replaces smoothed coarse bake; anim_check 40-spike baseline class for kingtyrant/nightwolf; Blender proof_pose hair-sheet artifact on cainelias proven tool-side (in-game + LBS clean), unsurgeried bake shipped; serve neutralization; Data-API commits"
+ },
+ "item3_execution": {
+  "status": "pr_open_blocked_on_bucket_sync",
+  "pr": 1600,
+  "branch": "wave3-item3-l3-souls",
+  "head": "d55c088cc3b4f1f1f657868a45382251ccda9bdf",
+  "landed_in_pr": {
+   "wired": [
+    "rin -> rin-body",
+    "sha -> sha-body (geodesic hair-weight repair)",
+    "kai -> kai-body (hair material authored-colour repair, quarantine lifted)",
+    "retsu -> retsu-body",
+    "gyou -> gyou-attire1 (own Tripo spirit body rigged 1.75 m, validate/seams PASS, stress stretch 11.60 declared)"
+   ],
+   "unhidden": [
+    "rin",
+    "sha",
+    "kai",
+    "retsu",
+    "gyou"
+   ],
+   "cards_recaptured": [
+    "rin (own jin bank stance)",
+    "kai",
+    "retsu",
+    "gyou (cmu-14_01 fallback)"
+   ],
+   "blocked_fighters": {
+    "byou": "no own-body in holdings; only Lei file is Rave's fighter model \u2014 no-wrong-body gate (owner order 2026-10-23, #866) forbids; stays modelPending (gate's prescribed state)",
+    "tou": "no Paul/own-body file anywhere in repo; declared rider body is Pantera's \u2014 same gate forbids; stays modelPending"
+   },
+   "sha_card": "remains registered placeholder; bank stance fit-rejected 0.99 rad (idol-pose bind) + stance-aim CMU fallback deforms head at bust framing (aim-off diagnostic card clean); POSE-BLOCKERS entry added; fix transferred to item 7"
+  },
+  "ci": "13/14 unique checks pass on final head; menu-touch-e2e FAILS for a proven external cause: e2e flow picks kai vs gyou; non-bundled models load remote-first; the B2 bucket still serves PRE-REPAIR kai-body (blob 6feb25ad) and the runtime material audit throws 'model kai-body blocked by material gate: 1 untextured' -> startFight recovery loop, HUD never shows. Reproduced locally byte-for-byte with the bucket file; same flow starts cleanly with the repaired file.",
+  "parent_action_required": "Sync 3 objects to the western-heart-assets bucket (rclone, parent-held bucket-scoped key) from PR #1600's branch: game/assets/models/kai-body.glb (blob 4cd9341a), game/assets/models/sha-body.glb (repaired), roster/gyou/spirit-body/model-rigged.glb (new, 32,476,664 B; bucket 404s it today). Then re-run PR #1600's menu-touch-e2e (gh run rerun --failed) and the lane merges + read-back.",
+  "local_gates": "portraits PASS (55 select fighters, 1 pose blocker, 3 registered placeholders); no-wrong-body PASS (59 fighters, 3 pending); model-key-guard resolution tests PASS"
+ },
+ "item5_execution": {
+  "status": "landed",
+  "pr": 1601,
+  "branch": "wave3-item5-l5-contexts",
+  "base": "b80cb66b",
+  "merge_commit": "04e6d201",
+  "merged_by": "overnight pipeline 2026-11-06 15:14Z (verified MERGEABLE/CLEAN, 14/14)",
+  "ci": "14/14 unique checks SUCCESS on final runs (instruction-gate failed once on the shortened Deviations section title; body-only fix; menu-touch-e2e pass 14m12s)",
+  "readback": "19/19 payload files verified on main by blob SHA",
+  "result": "NO ENTRY 561 -> 539. CD context wired for declared entries only (rin f,n,d,d/f; demonio f,n,d,df; gyou d,d/f \u2014 cd_entry in data; buffer latches off the motion itself and off the entry firing). SSL/SSR wired via ssSide in _inputCtx (foe-flank convention); side-specific prefixes outrank generic SS (negativo priority case).",
+  "fight_proof": "demonio CD.d/f+2 from the raw motion connects (20; control 10.5); rin CD.d/f+2 (8.1) on the combined item-3+item-5 tree; gyou CD.3 fires on a bare press in-window, connects (1.7), chains into LFS per his stance_after, CD.4 fires; purplerain SSL.3+4 (25.8) / SSR.3+4 (26.7) with flank L/R cross-check; negativo SSL.2 (9.9) / SSR.2 directional.",
+  "documented_not_wired": "CD rows awapop 8 / pantera 4 / tobi 2 (no declared entry in their data); KND/FCD/SLD/SIT byou+rave (no declared entry); tackle family 132 untouched (owner ruling #7); pond prefixes = item 6.",
+  "proof_dir": "docs/proof/2026-11-06/item5-l5-contexts/",
+  "date": "2026-11-06"
+ }
+}

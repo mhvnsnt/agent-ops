@@ -1,0 +1,45 @@
+{
+ "lane": "torch-a1-wirein",
+ "notes": [
+  "Pattern follows michiko-a1-wirein lane: raws -> GitHub release; rig via tools/auto_rig/rig_tripo_static.py (PR #456); wiring = roster-full.js attires {'1P','2P','3P'} + MODEL_URLS in game/js/assets.js; rigged output -> game/assets/models/torch-tripo-a1.glb.",
+  "Coordination: house49 wire-up lane leaves Torch slot resolution to this lane (it keeps Star/Diablo + Star textures + A/B record).",
+  "Pull verified: 19,456,040 B, sha256 4f24f0c325b222658247325848dfee2d03164d30d9a61cf001404d976bd0f66d, images=3 TEXTURED, skins=0 nodes=1 = unrigged statue -> rig via tools/auto_rig/rig_tripo_static.py. EXT_meshopt_compression + KHR_mesh_quantization (decode before Blender).",
+  "Clone: ~/workspace/_torch-a1-work/wh (lean blobless sparse: game/js, tools/auto_rig, tools/anim; main 1c8ffd06 at clone) on branch feat/torch-a1-valkyrie-20261021. Donor BVH 135_04.bvh fetched singly into clone assets/ (rig intake path). NODE_PATH=~/workspace/tools/gltf-transform/node_modules.",
+  "Wiring design (Doc Frank precedent): roster-full Torch model -> 'torch-tripo-a1'; ATTIRE_VARIANTS['torch'] = [Valkyrie of Flame (TRIPO), Anna Base]; groundY is keyed by fighter id and measured at load, so the new model grounds itself.",
+  "A2 resume lane (2026-10-22 ~12:50-14:00Z): prior lane errored at 12:49:15Z mid-gate-wait with NO rigged output (rig runs 1-5 + with-clip manual backend all OOM-137 in the clip bake; noclip backend never fired before the gate died). Resume lane re-armed the gate, completed backend + finisher, shipped PR #576 MERGED. A1 untouched throughout."
+ ],
+ "owner_instruction": "Torch Attire 1 (2026-10-21 ~22:18 CDT): https://studio.tripo3d.ai/3d-model/300d0c63-c7c8-4972-b08e-b2e9c169254f \u2014 Attire name (canon): 'Valkyrie of Flame'. Owner description verbatim: 'fully nude and blue skin but controls fire that is normal colored and can control different colors of fire too, red windswept hair and Valkyrie helm, blue furry nude crotch and little hairs flaring off her fat hips and glutes'. Ladder: A1 Tripo Valkyrie of Flame / Anna-based model (incl. -house49) falls back behind it.",
+ "repo": "mhvnsnt/western-heart",
+ "started": "2026-10-21 ~22:19 CDT",
+ "steps": {
+  "archive_release": "done (release torch-a1-tripo-20261021; asset digest == local sha256)",
+  "canon_docs": "done (CANON.md Torch section attire record + roster/torch/ATTIRE-SLOTS.md, owner description verbatim)",
+  "playtest": "NOT RUN - box saturated all night (load 9-20, repeated service restarts, CI queue backlog); a full local game build fetch was started and stood down. Indirect verification: validate PASS (missing_bones []), shipped GLB parsed directly (1 skin/73 joints/3 images/anim), JS node --check clean, model renders through the game gate renderer. Recommend the game QA lane playtest Torch A1 on the next deployed build.",
+  "pr_merge": "DONE - PR #570 MERGED 2026-10-22T09:51:12Z, merge commit 4fe9eb5c707516a5431b2c276ea97ec6bebe8fc9. All gates green: instruction-gate PASS, deletion-guard PASS, guard PASS. 24 files, 0 deletions.",
+  "pull": "done",
+  "render_proof": "DONE - ~/workspace/your_files/torch-a1-valkyrie-front-20261021.png (rest T-pose front, textured, viewed) + copy in report dir + 9 gate pose renders.",
+  "rig": "DONE via rig_tripo_static.py (patched gamerig_backend) - heat solved first proxy (23,885 verts, 0 unweighted), validate PASS, smooth SMOOTH_OK. Wrapper died post-gate to box OOM; remaining steps re-run with wrapper commands on kept work dir (recovery_note in rig_report.json).",
+  "verify_pull": "done",
+  "wire_attires": "DONE + MERGED on main (verified via gh: GLB 29,802,744 B on main, roster model=torch-tripo-a1, ATTIRE-SLOTS.md present)."
+ },
+ "status": "complete",
+ "attire_2": {
+  "name": "Red demon",
+  "owner_description_verbatim": "with mileena from mortal Kombat style teeth on this attire and red skin, still full nude",
+  "tripo_url": "https://studio.tripo3d.ai/3d-model/7f8c7874-de2a-438f-a84f-744d1eef21e9",
+  "sent_by_owner": "2026-10-21 ~22:40 CDT",
+  "raw_glb": {
+   "bytes": 18006604,
+   "sha256": "52e6840dbc07ec670a75514ffa4252c4bf497292399e2c28e490e4e3450a99c7",
+   "skins": 0,
+   "images": 3,
+   "verts": 1029809
+  },
+  "release": "torch-a2-tripo-20261021 (digest verified == local sha256)",
+  "pull_note": "egress proxy severed urllib responses (IncompleteRead x14); tripo-pull patched with curl transport fallback (installed + repo copies); pull then resolved via public-api",
+  "facing": "+X measured (foot-shin delta X +0.055, Z -0.005)",
+  "wiring": "assets.js torch-tripo-a2 + attires.js slot 2 + CANON.md + roster/torch/ATTIRE-SLOTS.md (Anna base -> slot 3); A1 untouched",
+  "status": "COMPLETE - PR #576 MERGED 2026-10-22T14:00:45Z, merge commit e8562339a5df5527119524e2a4992d0b46198188. Rig finished by the resume lane: the original wait gate died with the prior lane's session at poll 231/240; re-armed as wait-manual-noclip2.sh, GATE CLEAR at iteration 30, gamerig backend (noclip configuration) BACKEND EXIT 0 - heat solved first proxy (23,942 proxy verts, 0 unweighted), 73 DEF joints. Finisher (finish-rig.sh, wait-gated): validate PASS (missing_bones []), pose renders, meshopt encode -> game/assets/models/torch-tripo-a2.glb 28,530,756 B, verified live on main via gh contents API (exact size). smooth_weights exited 'no animations to evaluate against' - no smoothing applied, declared as PR deviation 4. anim_check JSONs report 'no animations in file' by design (noclip, deviation 2). Proof render viewed by the resume lane: deep red skin, silver mane, horned headpiece, Mileena-style teeth visible, body intact, feet forward - ~/workspace/your_files/torch-a2-reddemon-front-20261021.png (pose renderer front/back camera labels are swapped for this +X-facing model; the shipped front proof is the true front view, PR deviation 5). All CI gates PASS (instruction-gate after a body restructure into the gate format + per-deviation #refs, deletion-guard, guard); mergeStateStatus CLEAN at merge. Playtest NOT RUN (box saturated by parallel lanes) - declared in PR, QA-lane recommendation stands, same as A1 (#570)."
+ },
+ "note_both_attires": "This checkpoint covers Torch A1 (complete, PR #570 merged) and A2 Red demon (follow-up PR, in progress 2026-10-22)."
+}

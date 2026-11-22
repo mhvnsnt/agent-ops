@@ -1,0 +1,10 @@
+{
+ "task": "LEOMON MODEL HUNT \u2014 MORE PARTS: find more 3D Leomon models (any Digimon game, any format) to harvest paws, hands, feet, gauntlets",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/game-reverse-engineering/tekken7/king/leomon/models",
+ "resume_brief": "Owner directed finding MORE 3D Leomon models beyond the Digimon Links rip already downloaded (~/workspace/game-reverse-engineering/tekken7/king/leomon/Leomon IceLeomon/). Purpose: harvest paws, hands, feet, gauntlets and other attachable pieces for Pantera Attire 2. Search Models Resource (other Digimon games: ReArise, Cyber Sleuth, World DS), DeviantArt (XPS/XNALara), Sketchfab (downloadable), SFMLab/Open3DLab, other game rip sites. For each find document: source URL, game, format, what's usable. Download if free and accessible. Save to ~/workspace/game-reverse-engineering/tekken7/king/leomon/models/. Already have: Leomon/IceLeomon Digimon Links mobile rip. Checkpoint: ~/workspace/agent-ops/checkpoints/leomon-model-hunt.json. Report back findings + downloads.",
+ "updated_at": "2026-10-13T17:40:00+00:00",
+ "attempts": 1,
+ "notes": "DONE. Downloaded 4 free models: (1) Leomon PSP Digimon Adventure (6 separate geos: face/hair/obj/body/ita/ef_head), (2) Armed MadLeomon Fusion Fighters (DAE/FBX/SMD), (3) MadLeomon Armed Mode Digimon Masters (OBJ), (4) MadLeomon Final Mode Digimon Masters (OBJ). All in ~/workspace/game-reverse-engineering/tekken7/king/leomon/models/. Catalog: HUNT-RESULTS.md. Two more need browser (DeviantArt, logged in as fmmgmars): Heavy Leomon XPS (wolfblade111) and LoaderLeomon MMD (Jargonfox, ReArise). Paid-only: Cults3D/CGTrader sculptures. Not found free: SaberLeomon, GrapLeomon, Panjyamon standalone, Sketchfab Leomon."
+}

@@ -1,0 +1,12 @@
+{
+ "task": "KING LEOMON ATTIRE 2 \u2014 FULL REFERENCE MATCH. Match reference ~/workspace/user/files/1000173926_7_p8l9.jpg exactly: full lion head with golden spiky mane (head swap, not King's jaguar head), beaded necklace with fang, black studded leather armbands, PANTERA text in PURPLE on trunks front, black pants, furry yellow/brown leg warmers, lion paw hands/feet with black claws, lion tail with golden tuft. Renders: ~/workspace/king-leomon-attire2-front.png, ~/workspace/king-leomon-attire2-back.png.",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/game-reverse-engineering/tekken7/king",
+ "resume_brief": "Subagent task: render King model as Leomon Attire 2 matching reference image ~/workspace/user/files/1000173926_7_p8l9.jpg. Assets: leomon-attire textures at ~/workspace/game-reverse-engineering/tekken7/king/leomon-attire/ (18 textures painted, PANTERA logo still bronze needs purple change). Head swap meshes at ~/workspace/game-reverse-engineering/tekken7/king/leomon/ (leomon_headneck_facing.obj or leomon_headneck_v2.obj, leomon_mane_v3.obj). King FBX: ~/workspace/game-reverse-engineering/tekken7/king/5PMH7G85GYN7P71W3BD1V0249.fbx. Steps: 1) write checkpoint (done), 2) change PANTERA trunks logo bronze->purple neon in pants logo texture, 3) paint furry leg warmers on lower leg textures, 4) ensure paw hands/feet textures with claws, 5) load King FBX in Blender, swap King's head with Leomon head+neck, attach mane, attach tail (with golden tuft) \u2014 tail base: leomon mane dir has assets; Pantera tail precedent exists, 6) render front 1:1 to ~/workspace/king-leomon-attire2-front.png and back 1:1 to ~/workspace/king-leomon-attire2-back.png using CYCLES, env -u PYTHONPATH, LD_LIBRARY_PATH=~/workspace/tools/egl-stack/usr/lib/x86_64-linux-gnu, blender at ~/workspace/tools/blender/blender-4.0.2-linux-x64/blender. New filenames only, never overwrite.",
+ "updated_at": "2026-10-13T17:17:23.121586+00:00",
+ "attempts": 0,
+ "notes": [
+  "2026-10-13: COMPLETE. Front: ~/workspace/king-leomon-attire2-front.png, Back: ~/workspace/king-leomon-attire2-back.png. Lion head faces forward (-X), mane positioned behind face (MANE_DX=0.18, MANE_SCALE=1.2, HEAD_SCALE=0.85) so face is visible. PANTERA logo changed from KING/bronze to PANTERA/purple. Tail with golden tuft added. King's head/eyes/teeth hidden. Fixed OBJs: leomon_headneck_fixed.obj, leomon_mane_fixed.obj (correct transform (x,y,z)->(-z,-x,y)). Scene script: /tmp/build_leomon_scene.py."
+ ]
+}

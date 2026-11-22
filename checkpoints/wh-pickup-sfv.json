@@ -1,0 +1,10 @@
+{
+ "task": "Pull rest of SFV on-screen cast (DeviantArt PharaohIllusion XPS + SFMLab, Rashid precedent) into teardown/street-fighter-5/models/",
+ "repo": "/home/hatch/workspace/western-heart",
+ "resume_brief": "Continue pulling the SFV on-screen cast. Workdir /home/hatch/workspace/western-heart, branch feat/sfv-cast-20261013. Precedent: teardown/street-fighter-5/models/rashid/ (DeviantArt PharaohIllusion XPS + SFMLab SFM, README per character). Pull remaining base-roster cast the same way, one dir per character with README in rashid format, preserve original archives. Skip unavailable characters with a note. Watch disk (keep under 85%). Branch->PR->merge, zero open PRs. Heartbeat this checkpoint after every step.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-14T02:08:57.147115+00:00",
+ "notes": "DONE 2026-10-13. Direct downloads impossible in this lane: DA free-quota exhausted 2026-10-13 (/download 404s anonymously), SFMLab behind Anubis bot-wall, subagents have no live browser. Delivered CAST-STATUS.md (verified per-character DA+SFMLab URL manifest, blockers, browser handoff spec, WH federation notes) via PR #74 merged to main@4cd59c5e. Zero open PRs. 8/15 characters have verified download URLs (Ryu, Chun-Li, Ken-fallbacks, Cammy, Vega-fallback, Zangief-SFM, R.Mika, Laura); Bison/Nash/Dhalsim/Birdie/Karin/FANG/Necalli NOT-FOUND via public search \u2014 browser worker must check PharaohIllusion SFV gallery folder (168 deviations). Branch feat/sfv-cast-20261013 pushed and merged."
+}

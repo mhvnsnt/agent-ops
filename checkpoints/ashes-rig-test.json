@@ -1,0 +1,10 @@
+{
+ "attempts": 0,
+ "repo": "~/workspace/ashes-mouth-pack",
+ "resume_brief": "Build ~/workspace/ashes-mouth-pack/ashes-rig-test.mp4 (~15s, 720p): 0-8s talking test cycling 13 mouth visemes at ~6fps (closed,ah,ee,oh,mbp,ah,oo,ee,fv,l,snarl,rest,closed) composited on a single base face to avoid popping; 8-11s eyes test (neutral,blink,happy,angry,surprised,neutral); 11-15s hands test (open palm,pointing,fist,thumbs up,shaka). Use full-face viseme cards from ~/workspace/ashes-mouth-pack/visemes/, eyes from eyes/, hands from hands/. Upload to remote storage and return URL.",
+ "status": "done",
+ "task": "Create Ashes animation test video showing his rig in action",
+ "updated_at": "2026-10-10T20:30:00Z",
+ "watchdog": true,
+ "notes": "ashes-rig-test.mp4 complete: 15.0s, 1280x720, 30fps. Uploaded."
+}

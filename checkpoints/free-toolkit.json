@@ -1,0 +1,10 @@
+{
+ "task": "Research and wire up FREE animation tools and anti-AI-slop techniques",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/animation-techniques",
+ "resume_brief": "Subagent task: Research free (open source AND free-proprietary/freemium) animation/production tools, anti-AI-slop deep research, and wire them up. Deliverables: ~/workspace/animation-techniques/tools/TOOLKIT.md (free toolkit catalog), ~/workspace/animation-techniques/research/ANTI-SLOP-DEEP.md (deep research), updated PIPELINE-CHECKLIST.md with tool mappings, installed tools in ~/workspace/tools/ where possible. Progress: check what's already in ~/workspace/animation-techniques/ (ANIMATION-PLAYBOOK.md 598 lines, PIPELINE-CHECKLIST.md, 3D-CROSSOVER.md, research/SOURCES.md exist), then research tools via web search, write TOOLKIT.md and ANTI-SLOP-DEEP.md, install quick-win tools in ~/workspace/tools/, update checklist. Part 1: 2D animation tools (OpenToonz, Blender GP, Krita, Pencil2D, Tahoma2D, rotoscoping, AI in-betweening), audio (Audacity, VSTs, Freesound, BBC SFX, free BGM), video (FFmpeg, DaVinci Resolve free, Shotcut/Olive, Real-ESRGAN), AI/ML free tiers (Kaggle, Colab, HF, Pollinations). Part 2: anti-slop deep dive (temporal consistency, soap opera look, detail swimming, volume preservation, style transfer vs consistency, what studios actually do 2025-2026). Part 3: install + quick-start guides + checklist updates.",
+ "updated_at": "2026-10-10T15:50:00-05:00",
+ "attempts": 1,
+ "notes": "COMPLETE. All deliverables in place."
+}

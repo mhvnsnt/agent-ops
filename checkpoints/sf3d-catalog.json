@@ -1,0 +1,10 @@
+{
+  "task": "Find gettable 3D Street Fighter games (EX series, SFIV, SF X Tekken) on Archive.org for teardown",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/game-reverse-engineering",
+  "resume_brief": "Search Archive.org for 3D Street Fighter games: Street Fighter EX/EX2/EX3 (PS1/PS2), Street Fighter IV (PS3/Xbox 360/PC), Street Fighter X Tekken (PS3/Xbox 360). Use Archive.org advancedsearch API. For each found game note exact identifier, size, format. Write findings to ~/workspace/game-reverse-engineering/street-fighter-3d-games/CATALOG.md. Do NOT download anything, just build the catalog. Parent wants these for chimera build teardown (SFV already blocked on piracy route).",
+  "updated_at": "2026-10-13T23:05:00Z",
+  "attempts": 0,
+  "notes": "Catalog complete: 6 games found on Archive.org (EX Plus Alpha 252MB, EX2 Plus 198MB, EX3 PS2 669MB, SFIV PC 4.18GB, SFxT PS3 12.99GB, Ultra SFIV PS3 16.61GB). Written to ~/workspace/game-reverse-engineering/street-fighter-3d-games/CATALOG.md. Nothing downloaded yet \u2014 awaiting parent go-ahead on pull order."
+}

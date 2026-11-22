@@ -1,0 +1,10 @@
+{
+ "task": "Fix the three defects the owner found in the proof video: feet through floor, rig webbing/stretching, card flashing/positioning.",
+ "repo": "~/workspace/bannon-video-pipe",
+ "resume_brief": "Fix three owner-reported defects in the entrance video pipeline: (1) character feet penetrate the floor plane \u2014 clamp root motion / offset character so feet stay on ground; (2) rig webbing and mesh stretching during mocap \u2014 diagnose whether it is the STICKUP_repaired.glb skinning or the retarget, fix the deformation; (3) title cards flashing, repeating, or out of screen bounds \u2014 fix edit.py card overlay timing and positioning. Then re-render the proof video and verify each defect is gone with frame inspection before reporting. Heartbeat checkpoint, mark done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 5,
+ "updated_at": "2026-10-09T07:40:46.289949+00:00",
+ "notes": "FIXED video verified and delivered: STICKUP_v2_proof_50s_FIXED.mp4 (50.1s). All 3 defects confirmed fixed via frame inspection. Watcher also caught/reverted a rest-pose regression (17e7a51)."
+}

@@ -1,0 +1,27 @@
+{
+  "task": "Full disk push-to-cloud and clean (owner directive 2026-10-16 13:04 EDT)",
+  "status": "partial - need parent for browser uploads",
+  "started_at": "2026-10-16T17:10:00Z",
+  "last_heartbeat": "2026-10-16T17:25:00Z",
+  "disk_start": "96% (94G/100G, 4.5G free)",
+  "disk_now": "97% (95G/100G, 3.4G free)",
+  "target": "below 70%",
+  "completed": [
+    "Deleted 336M aborted store tar (source intact)",
+    "Deleted __pycache__ and .pyc files (~3G freed)",
+    "Committed and pushed western-heart (4247 files) to branch procgen-research-pullin"
+  ],
+  "deleted": [
+    {"path": "~/workspace/agent-ops/.store-staging/store_concrete-dragon-itch-builds-automigrate-2026-10-16.tar", "size": "336M"},
+    {"path": "__pycache__ dirs across workspace", "size": "~3G"}
+  ],
+  "need_parent_browser_upload": [
+    "22 small.mp4 files (~800MB total) in ~/workspace/ - list: ep02-dialoguefixed-small.mp4, ep02-final-small.mp4, ep02-final-v2-small.mp4, ep02-final-v3-small.mp4, ep02-final-v4-small.mp4, ep02-final-v5-small.mp4, ep02-repaired-small.mp4, ep02-sounddesign-small.mp4, ep02-v6b-small.mp4, ep02-v6e-small.mp4, ep02-v7-small.mp4, ep02-v8-small.mp4, ep02-v8b-small.mp4, wg-ep01-dialogue-v10-small.mp4, wg-ep01-dialogue-v2-small.mp4, wg-ep01-dialogue-v3-small.mp4, wg-ep01-dialogue-v4-small.mp4, wg-ep01-dialogue-v5-small.mp4, wg-ep01-dialogue-v6-small.mp4, wg-ep01-dialogue-v7-small.mp4, wg-ep01-dialogue-v8-small.mp4, wg-ep01-dialogue-v9-small.mp4. Upload to TeraBox, verify, then delete local."
+  ],
+  "git_repos_pushed": ["western-heart (procgen-research-pullin branch)"],
+  "git_repos_pending": ["StreetBrawl (2 files)", "money-machine-hq (24 files, on main - needs branch)", "god-molecule-studio (14 files)", "ConcreteDragon (9 files)"],
+  "protected_in_flight": [
+    "game-reverse-engineering/ 23G - TeraBox batch 11/25 in progress (parent lane)",
+    "cn-pull-bigend/ 17G, cn-pull-smallend/ 4.6G, cn-gigaleak-pull/ 3.9G, hero-parts-pull/ 8.3G, wmxix-iso/ 1.4G - all IN-FLIGHT, DO NOT TOUCH"
+  ]
+}

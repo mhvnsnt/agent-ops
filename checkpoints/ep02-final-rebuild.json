@@ -1,0 +1,10 @@
+{
+  "task": "Rebuild EP02 final v2: swap 5 repaired visual shots into dialoguefixed-v1 timeline, keep audio as-is",
+  "repo": "/home/hatch/workspace/trippedd-studio",
+  "resume_brief": "Rebuild EP02 final v2. Base: ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/wizard-gang-ep02-dialoguefixed-v1.mp4 (5:45, corrected dialogue). Swap in 5 fixed shots from ~/workspace/ep02-repair-work/fixed-shots/: s10-summons-8s.mp4 -> 52-60s, street-crew-cartoon.mp4 -> 95-105s, clash-cartoon.mp4 -> 106-110s, basketball-cartoon.mp4 -> 200-210s, podcast-cartoon.mp4 -> 264-274s. Frame-accurate replacement via ffmpeg; keep audio track untouched. QC: timeline still 5:45, pilot 0-50s untouched, no black frames at swaps, spot-check dialogue sync. Output: wizard-gang-ep02-final-v2.mp4 in ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/. Do NOT add BGM.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T19:25:07.525161+00:00",
+  "notes": "Build complete. wizard-gang-ep02-final-v2.mp4 (344.9s, H264+AAC, 159MB). All 5 visual swaps verified clean, no black frames. Pilot SSIM 0.986 (content preserved). Audio stream-copied untouched. Dialogue present at 173/183/193/312/330/340s."
+}

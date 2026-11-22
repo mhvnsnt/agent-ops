@@ -1,0 +1,10 @@
+{
+  "task": "Write Western Heart canon document",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/western-heart",
+  "resume_brief": "Writing CANON.md for Western Heart: complete character bible tying all 7 owner-designed fighters + 4 bonus characters to Eastern Mind lore (five lands, nine souls, Soul Surge, Purifier Twist). Reading ROSTER.md, Pantera IDENTITY.md, BONUS-CHARACTERS.md, DESIGN.md, and western-heart design docs. Structure: world overview, full canon entries for each fighter with backstory/personality/lore connections, the Nine Souls integration, overarching story.",
+  "updated_at": "2026-10-13T02:32:00Z",
+  "attempts": 0,
+  "notes": "CANON.md written (380 lines), PR #12 merged to main. Zero open PRs."
+}

@@ -1,0 +1,10 @@
+{
+  "attempts": 0,
+  "repo": "~/workspace/western-heart",
+  "resume_brief": "Pulling priority free assets into ~/workspace/game-reverse-engineering/western-heart-assets/: (1) tk fighting-game repo from GitHub kamijan44012-ux/tk, (2) Quaternius Universal Base Characters + Universal Animation Library 2 from itch.io, (3) Kenney Particle Pack + Impact Sounds from kenney.nl, (4) selective CMU mocap fighting clips from konyshevgmbh/cmu-mocap (shallow clone, copy only listed clips, delete rest), (5) ambientCG textures via API (2-3 wood, 2-3 fabric, 2 metal, 1K-JPG). Total budget <2GB (only 11GB free). Skipping: Sonniss GDC (too big), Mixamo/Sketchfab/Freesound (signup). Then write INVENTORY.md, commit small assets to western-heart branch assets/free-pull-1, PR+merge.",
+  "status": "done",
+  "task": "Pull priority free assets for Western Heart",
+  "updated_at": "2026-10-13T03:55:00Z",
+  "watchdog": false,
+  "result": "Pulled 126MB across 5 categories. PR #15 merged. All assets in western-heart/assets/free-pull-1/"
+}

@@ -1,0 +1,10 @@
+{
+  "attempts": 0,
+  "repo": "/home/hatch/workspace/agent-ops/worktrees/anim-w2-a",
+  "resume_brief": "Lane A Wave 2: append 100+ honest #### entries to docs/ANIMATION_TOOL_CATALOG.md in isolated worktree anim-w2-a (branch anim-wave2-lane-a, base a773b05). New pockets: mocap/rotoscope OSS tools, AI inbetweening depth, vertical-format delivery tools. Licenses verified upstream; GPL/AGPL to docs/ANIMATION_QUARANTINE.md with next free row numbers. Pre-append dedup grep against catalog AND quarantine. Commit + push branch (no force-push, no >100MB binaries).",
+  "status": "done",
+  "task": "Anim pull W2 Lane A: catalog deepening 206->400+",
+  "updated_at": "2026-10-08T00:16:43-04:00",
+  "watchdog": true,
+  "notes": "DONE: 101 new catalog entries (206->307), 20 quarantine rows (77->97). 4 commits pushed on anim-wave2-lane-a, no dupes, no binaries, only catalog+quarantine touched."
+}

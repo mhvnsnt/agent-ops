@@ -1,0 +1,9 @@
+{
+ "task": "Concept art based on the REAL Concrete Dragon game \u2014 no invented content",
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "CONCEPT ART from the REAL game for Concrete Dragon (~/workspace/ConcreteDragon). Owner directive: concept art and key art must be BASED ON THE ACTUAL GAME \u2014 real characters, real moves, real art style. NOT made-up imagination, NOT false advertising showing stuff that never appears in the game or art styles the game doesn't have (the graffiti-banner incident is the standing warning). Method: (1) Capture fresh real-game frames from the current main build (post all merged lanes: collision, blocking, ki blasts, new HUD). (2) Build concept art FROM those captures \u2014 character portraits (Kid Blue, bosses), action key art, move illustrations \u2014 via paint-over/edit/composition on real frames, or image generation strictly guided by real captures as reference. Every piece must be traceable to something actually in the game. Output to ~/workspace/concrete-dragon-launch/concept-art-real/. The owner reviews every piece with his own eyes \u2014 present the source capture alongside each art piece so he can verify it's real. Branch concept-art -> PR -> merge for any game-file changes (art itself lives in the launch dir). Heartbeat ~/workspace/agent-ops/checkpoints/cd-concept-art.json. Report with side-by-side proof (source frame + art piece).",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-09T18:47:25.166656+00:00"
+}

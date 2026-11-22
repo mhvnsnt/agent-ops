@@ -1,0 +1,9 @@
+{
+ "task": "Research the history of the big open lot by the pink building next to Fazoli's on Myatt Dr, Madison TN 37115 (near 36.2962,-86.6982): was it a drive-in theater or what? Use parcel records, historical aerials, cinema archives.",
+ "repo": "~/workspace",
+ "resume_brief": "Research what the big open lot next to the pink building by Fazoli's on Myatt Dr, Madison TN 37115 was historically (drive-in theater? what?). Use Davidson County parcel records, historicaerials.com or similar historical imagery, Cinema Treasures, newspaper archives. Write findings to ~/workspace/research_notes/myatt-dr-lot-history.md with sources. Commit any files to git.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-08T16:20:50.068101+00:00"
+}

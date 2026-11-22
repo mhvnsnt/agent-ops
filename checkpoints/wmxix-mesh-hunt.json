@@ -1,0 +1,10 @@
+{
+ "task": "WMXIX YOBJ vertex format decoder hunt \u2014 pull in GameCube GX research, Dolphin source, Yukes extractors",
+ "repo": "~/workspace/game-reverse-engineering/wwe-wrestlemania-xix",
+ "resume_brief": "Pull in everything that helps crack the YOBJ (Yukes GameCube model) vertex format for WWE WrestleMania XIX arenas: Dolphin emulator GX vertex loader source, GameCube GX display list decoder research, existing YOBJ/Yukes model extractors from GitHub, Ninja Ripper as fallback. Pull targets go to ~/workspace/tools/wmxix-mesh-decode/. Known state: YOBJ header partially decoded (GCTC/FIXE/GX display list/vertex attrs/vertex payload offsets) in tools/yukes_fmt.py and tools/yobj_v3_probe.py; vertex dequantization unsolved after 5 approaches. Continue by examining prior probe code and docs (docs/WMXIX-TEARDOWN.md), then cloning the pulled research repos and writing up which approach looks most likely to crack it.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-13T06:18:51.710258+00:00",
+ "notes": "Pulled: tekken57/blender_scripts (X-Rey author GitHub), l1145a1/YOBJ-Mesh-Object-Editor-PSP (full Python YOBJ parser), Dolphin VertexLoader source (sparse). Documented: X-Rey, rroexporter, BrienJ XHP plugin, Ninja Ripper fallback, Smacktalks precision intel. KEY FINDING: fixed-point s16 vertices with /64 (precision 6) dequantization validated against head geometry (30-unit bbox for 142-unit model). Approach doc at tools/wmxix-mesh-decode/APPROACH.md."
+}

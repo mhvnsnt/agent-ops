@@ -1,0 +1,9 @@
+{
+ "task": "Real marketing asset pipeline for Concrete Dragon itch.io + game pages",
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "MARKETING ASSETS from real game content for Concrete Dragon (~/workspace/ConcreteDragon). Owner directive: replace ALL false pictures/ads/banners on the itch.io sell page and game pages with REAL ones \u2014 built from the actual game and the concept art lane. (1) Capture fresh real-game shots from the current main build (title, select, combat, boss, new HUD). (2) Pull concept art from the concept-art lane (~/workspace/concrete-dragon-launch/concept-art-real/ \u2014 coordinate; it's producing cartoony/painterly/native themes from real captures). (3) Composite custom text (OFL fonts \u2014 Saira Stencil One already the game font, pick complementary faces), logos, game art ON TOP of shots/concepts. (4) Deliver a real marketing mix: itch.io cover (630x500), page banner, 5+ screenshots, title/logo cards, ad cards \u2014 some pure concept, some title cards, some raw game shots. Everything traceable to real game content \u2014 NO false advertising, owner's standing law. (5) Build this as a REUSABLE open-source pipeline: scripts + templates + font pack in ~/workspace/marketing-pipeline/ with docs, so it works for ALL his games/repos/products/services \u2014 not a one-off. Free tools only: ImageMagick, Python PIL, OFL fonts. Output game assets to ~/workspace/concrete-dragon-launch/marketing/. Use a dedicated worktree for any game-file changes. Branch marketing-assets -> PR -> merge for code; assets live in the launch dir. Heartbeat ~/workspace/agent-ops/checkpoints/cd-marketing-assets.json. The itch.io page itself is a draft handled in another lane \u2014 you produce the assets; report when they're ready for upload.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 2,
+ "updated_at": "2026-10-09T18:35:00+00:00"
+}

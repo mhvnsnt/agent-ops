@@ -1,0 +1,9 @@
+{
+ "task": "P15 hitstop retune tranche for Concrete Dragon (backlog IMPROVE_LOOP_BACKLOG.md P15)",
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "Resume P15 hitstop-retune tranche. Work: branch off main in ~/workspace/ConcreteDragon; retune game-3d/src/main.js ATK table hitstop toward genre norms (jab 0.10s, cross 0.12s, kick 0.16s, launcher 0.14s per docs/RESEARCH_FIGHTER_MECHANICS.md MAP), accept cancel inputs during hitstop (SF2 2-in-1 rule), optional Smash-style defender micro-vibration; headless playtest-verify (zero console errors, screenshots eyes-on, combo timing still works); commit incrementally, branch-PR-merge (never straight to main, never force-push, keep-both on conflicts), watch CI green, append docs/CHANGELOG.md entry + backlog shipped note. Laws: game must actually work, no fake gameplay, CC0/manifest clean.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-10T10:20:28.286Z"
+}

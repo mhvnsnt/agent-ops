@@ -1,0 +1,26 @@
+{
+ "id": "gap-closure-w2b-yyh-toguro",
+ "iso_sha256_check": "chunk0 sha == census 4c839170..., chunk13 sha == census 8a163b93... (both verified on pull-back)",
+ "pak_format": "PROVEN from data: header magic DEADBEEF, u32@4=1286 (data-start rel), u32@8=32 entry count, u32@12=1; index at off 24, 32 entries x 16B {name_off, packed_size, data_off, unpacked_size} offsets rel to byte 8; packed chain verified (off[i]+packed[i]==off[i+1], last ends exactly at file size 2835136); names at 536; LZ-style packed stream (literal runs + 2-3B back-refs), decompressor being RE'd from SLUS via Ghidra r5900",
+ "pullback": "done - sparse ISO (truncate 1327497216), chunk0 (SLUS @1740800 len 2680624 + YTOGURO PAK @65490944 len 2835136, both in chunk0) + chunk13 (loose MDLs @~1.326B); own ISO9660 dir parser walked 401 entries == census; NOTE dd bs=1M bug caught+fixed (chunks are 100,000,000 B decimal)",
+ "repo": "mhvnsnt/game-reverse-engineering + mhvnsnt/western-heart (release yyh-dark-tournament-ps2-v1, SLUS-20805)",
+ "resume_brief": "W2b COMPLETE. RESOURCE.PAK format + LZ decompressor RE-d from SLUS_208.05 via Ghidra (FUN_002bc280/FUN_002bbf50/FUN_00114b00) and shipped as tools/resource_pak.py+yyh_lz.py in game-reverse-engineering PR #39: YTOGURO PAK 32/32 entries unpacked size-verified; 26/26 staged roster PAKs unpack cleanly. Fingernail blast (FINGER_FLIP_BULLETS) mechanics fully proven from YTOGURO.XML clips A475/A472/A476 + EFFECT.XML FxBullet (speed 1000, range 1000, life 2.0, radius 20.5, dmg 60, cost 100, spawn R Hand, flash R Finger01). CornerStone fragment = western-heart PR #463 (toguro-moves-yyh.json). Gaps (documented, not faked): ANI keyframe payload -> clips, MDL geometry -> GLB, CHUU/ELDERTOG/CARDGAME/MENUS unpack-verify (chunks 12/13).",
+ "status": "done",
+ "steps": {
+  "ani_mdl_decode": "partial (honest) - ANI header/skeleton/section decoded, keyframe payload quantized not fully decoded; MDL skeleton/name/section evidence, mesh payload not fully decoded; clip table fully decoded from YTOGURO.XML (264 clips)",
+  "checkpoint": "done",
+  "finger_flip": "done - mechanics proven from EFFECT.XML FxBullet + YTOGURO.XML clips A472/A475/A476",
+  "ghidra": "running - analyzeHeadless proc, log ghidra.log",
+  "pak_unpacker": "done - resource_pak.py+yyh_lz.py; YTOGURO 32/32 entries, roster 26/26 chunk-0 PAKs all size-verified",
+  "prs": "done - game-reverse-engineering PR #39 (stacked on #35 branch, 7 files additions-only); western-heart PR #463 (toguro-moves-yyh.json, +278/-0, created via git API after blobless-clone push stalled in lazy backfill; local push left alone, will non-ff reject harmlessly)",
+  "pullback": "done",
+  "read_w2": "done",
+  "roster_inventory": "done - roster_unpack_inventory.json (26 PAKs unpack-verified) + W2 manifests for chunk12/13 PAKs",
+  "clear_scratch": "done - logged in disk-cleanup-log.md 2026-10-21 W2b entry"
+ },
+ "task": "W2b YYH Dark Tournament Toguro teardown: RESOURCE.PAK unpacker, YTOGURO ANI/MDL decode, FINGER_FLIP_BULLETS mechanics, CornerStone fragment",
+ "updated_utc": "2026-10-21T22:10:00Z",
+ "watchdog": true,
+ "updated_at": "2026-10-21T15:53:00-05:00",
+ "notes": "[watchdog 2026-10-21T15:53CDT] lane verified ALIVE: workdir activity at 15:49 CDT (ghidra3.log import+succeeded, disassembly txts 15:33-15:47), no duplicate spawn per 9b rule; missing updated_at was heartbeat-miss, not dropped work. Heartbeat restored."
+}

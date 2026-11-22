@@ -1,0 +1,9 @@
+{
+ "task": "Pull full-stack physics wave into blend-physics-playground repo",
+ "repo": "~/workspace/blend-physics-playground",
+ "resume_brief": "Continue the physics full-stack pull wave: vendor ragdoll-kitten + molecular-plus addons, Quaternius CC0 rigs, physics-engine demos (pybullet/mujoco/pymunk), ragdoll drill doc; push via branch feat/physics-fullstack-wave -> PR -> squash-merge; zero open PRs.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-14T08:15:00+00:00"
+}

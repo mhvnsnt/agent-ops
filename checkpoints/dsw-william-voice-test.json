@@ -1,0 +1,12 @@
+{
+ "task": "William voice test: Chatterbox clone test generating 3 Aaron dialogue lines for owner decision",
+ "repo": "/home/hatch/workspace/trippedd-studio",
+ "resume_brief": "WILLIAM VOICE DECISION TEST (owner 2026-10-09): owner must hear William's voice saying Aaron's dialogue \u2014 3 lines \u2014 before deciding the show's voice. Ref: ~/workspace/voice-clone-work/aaron-ruben/william-voice-ref.m4a (37.7s, dry deliberate delivery). Build a TEST voice clone with the approved free Chatterbox path (see ~/workspace/cloud-wiring/kaggle/chatterbox_batch_tts.py and ~/workspace/voice-clone-work/ for the established pipeline). Generate 3 EP01 lines: 'Neat.' / 'damn. shit's wild.' / 'sandwich plans.' \u2014 directed deadpan, pauses intact. Label everything VOICE TEST \u2014 NOT FINAL. Verify audio is real (duration + non-silent). Deliver via Mars Fmmg Messenger thread (messenger skill, labeled 'AARON RUBEN \u2014 voice test (Damn, Shit's Wild)') AND in chat. Do NOT build a final clone; this is for his decision only. Heartbeat checkpoint, mark done.",
+ "status": "done",
+ "attempts": 3,
+ "notes": "[2026-10-10] SUPERSEDED: redundant with voice-renders-ep02 lane (other conversation) which already has the Aaron Ruben/William clone in scope + GPU pipeline access. This lane did local CPU attempts only (OOM). William voice work now owned solely by voice-renders-ep02. Do not resume this checkpoint. [watchdog 2026-10-10] Marked done: lane was already superseded by voice-renders-ep02 (per checkpoint notes) which owns the William/Aaron clone + GPU pipeline; William ref voice already delivered to Mars Fmmg thread 2026-10-10. Do not resume.",
+ "watchdog": true,
+ "updated_at": "2026-10-10T17:12:34.956134+00:00",
+ "blocker": "Chatterbox CPU generation OOM-killed (exit 137) on 7.7GB VM. Model loads (~2.5GB weights) but T3 sampling spikes past available RAM with other production lanes running. Tried: proxy env fix, HF_HUB_OFFLINE, 6s trimmed ref, full fp16 (broke mel frontend), t3-only fp16 (OOM during load). No swap available in container. Engine works; VM RAM is the blocker.",
+ "interim_delivery": "2026-10-10: William actual podcast voice (37.7s ref) verified (mean -19dB, max -0.6dB), converted to MP3, sent to Mars Fmmg thread labeled AARON RUBEN voice test (Damn, Shit Wild) with clear note it is the reference not the 3 test lines."
+}

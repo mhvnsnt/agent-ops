@@ -1,0 +1,9 @@
+{
+  "task": "LOTI v3: iris-out transition must keep the REAL background",
+  "repo": "~/workspace/trippedd-studio-loti-v2",
+  "resume_brief": "In ~/workspace/trippedd-studio-loti-v2 on branch feat/loti-commercial-v3 (PR #117 open, NOT merged): owner defect \u2014 at t34-35 the circle fade-out/pinhole shrink transition lets the background go from REAL to 2D (cartoonized). The background behind the 2D mascot sticker must stay REAL photographic through the entire transition. Find how the iris-out is built (comp/v3-iris.mp4 and/or assemble_v3.py), rebuild that transition segment over the REAL photographic plate (v3/keys/src-freeze-t35.0.png or the source Shot C frame) with the sticker mascot on top, so the pinhole shrink closes over the real world. Splice via stream copy (don't re-encode the whole video), eye-QC the full t33-36 window (background stays photographic, no 2D pop, no flashes at joints), re-upload via remote-storage, commit+push to feat/loti-commercial-v3 (--no-verify), do NOT merge. Report new SHA-256, URL+expiry, QC notes.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T22:47:20.603075+00:00"
+}

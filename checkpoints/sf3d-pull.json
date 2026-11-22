@@ -1,0 +1,42 @@
+{
+ "task": "Pull 6 3D Street Fighter games from Archive.org, teardown each into western-heart",
+ "status": "needs_owner",
+ "watchdog": true,
+ "repo": "~/workspace/western-heart",
+ "resume_brief": "Pull 3D Street Fighter games from Archive.org using aria2c. Games: 1) EX2 Plus PS1 198MB (street-fighter-ex-2-plus.-7z), 2) EX Plus Alpha PS1 252MB (street-fighter-ex-plus-alpha.-7z), 3) EX3 PS2 669MB (street-fighter-ex-3-usa_202404), 4) SFIV PC 4.18GB (Street_Fighter_IV_CSF), 5) SF X Tekken PS3 12.99GB (street-fighter-x-tekken-blus-30722), 6) Ultra SFIV PS3 16.61GB (ultra-street-fighter-iv-blus-31218). Strategy: small EX games download local, extract, teardown to western-heart/teardown/street-fighter-<game>/, push via branch-PR-merge, upload to TeraBox. Large games need chunked pipeline due to tight disk. Catalog at ~/workspace/game-reverse-engineering/street-fighter-3d-games/CATALOG.md. Commit incrementally.",
+ "updated_at": "2026-10-14T11:25:56.013103+00:00",
+ "attempts": 3,
+ "games": {
+  "ex2-plus": {
+   "status": "resumed, downloading (~98%, 194/198MB)",
+   "id": "street-fighter-ex-2-plus.-7z",
+   "size": "198MB"
+  },
+  "ex-plus-alpha": {
+   "status": "resumed, downloading (~9%, 22.6/252MB)",
+   "id": "street-fighter-ex-plus-alpha.-7z",
+   "size": "252MB"
+  },
+  "ex3": {
+   "status": "pending",
+   "id": "street-fighter-ex-3-usa_202404",
+   "size": "669MB"
+  },
+  "sf4-pc": {
+   "status": "pending",
+   "id": "Street_Fighter_IV_CSF",
+   "size": "4.18GB"
+  },
+  "sfxt-ps3": {
+   "status": "pending",
+   "id": "street-fighter-x-tekken-blus-30722",
+   "size": "12.99GB"
+  },
+  "usf4-ps3": {
+   "status": "pending",
+   "id": "ultra-street-fighter-iv-blus-31218",
+   "size": "16.61GB"
+  }
+ },
+ "notes": "Archive.org very slow (~0.5MB/min). Both EX downloads running in background via curl. Teardown dirs created. | Watchdog 2026-10-13 21:05 EDT (attempt 2): prior worker dead (daemon-restart kill, no download procs, heartbeat stale 106m). Both EX downloads RESUMED via curl -C - in background (setsid/nohup): EX2 Plus ~194/198MB nearly done, EX Plus Alpha 22.6/252MB moving fast (~470KB/s). Partial files preserved in game-reverse-engineering/street-fighter-3d-games/downloads/. Next run: verify completion, extract, teardown to western-heart/teardown/street-fighter-*/, branch-PR-merge, then pull EX3. | Watchdog 2026-10-14 01:12 EDT (attempt 3): prior worker dead (no download procs). Disk healthy (78%, 22G free). Both EX partial files intact. Resuming downloads. | Watchdog 2026-10-14 07:25 EDT (attempts=3): rule-7 ceiling hit \u2014 do not resume. State verified: both download curls dead (daemon-restart kill #3, last write 01:31 EDT); Street Fighter EX2 Plus.7z = 207,533,625 bytes, 84,423 bytes SHORT of 198MB target (truncated); Street Fighter EX Plus Alpha.7z = 263,912,228 bytes, 328,924 bytes SHORT of 252MB target (truncated); games ex3/sf4-pc/sfxt-ps3/usf4-ps3 still pending; teardown scaffolding only (street-fighter-ex2-plus docs committed fc71c74c). Disk at 86% (14G free). Root cause: archive.org throttled to ~0.5MB/min AND daemon restarts keep killing long curls, so 15-min watchdog cycles can never finish even the 2 small EX games. NEEDS OWNER: decide \u2014 (a) dedicated long-lived download lane outside watchdog with resume-only curl, (b) drop/differ this lane, or (c) run pulls from another host. Partial files preserved in game-reverse-engineering/street-fighter-3d-games/downloads/ for curl -C - resume."
+}

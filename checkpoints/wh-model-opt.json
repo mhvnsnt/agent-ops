@@ -1,0 +1,4 @@
+{"task": "Optimize western-heart fighter models: compress + on-demand loading + teardown docs + pulled tools. Branch->PR->merge, redeploy gh-pages.",
+"status": "done", "watchdog": true, "repo": "/home/hatch/workspace/western-heart",
+"resume_brief": "DONE. PR #99 merged, gh-pages deployed, live verified (demonio.glb 11MB, loadModels in assets.js).",
+"updated_at": "2026-10-14T14:25:00Z", "attempts": 0}

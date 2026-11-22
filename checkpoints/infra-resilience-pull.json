@@ -1,0 +1,10 @@
+{
+ "task": "Pull open-source/free tools that solve pipeline fragility: render resume across restarts, safe process supervision, EGL-independent rendering, non-destructive monitoring.",
+ "repo": "~/workspace/3d-toolkit",
+ "resume_brief": "Research and pull OSS tools solving: (1) render jobs surviving daemon restarts (job queues, checkpoint/resume, systemd user services), (2) safe process supervision (no destructive kill loops), (3) Blender rendering without fragile EGL (software GL, containerized Blender), (4) robust monitoring. Pull into ~/workspace/3d-toolkit/infra/, write INFRA.md with wire-up guide. Heartbeat checkpoint, mark done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-10T00:21:45.666948+00:00",
+ "notes": "Complete. Pulled blenderqueue+queuefy (MIT). Built egl-restore.sh + systemd service (INSTALLED+ENABLED). Built render-pipeline.service (installed, not enabled). Built safe-watcher.py (tested, works). INFRA.md written. Committed 413fd7b."
+}

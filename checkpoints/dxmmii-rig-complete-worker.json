@@ -1,0 +1,9 @@
+{
+ "attempts": 0,
+ "repo": "western-heart",
+ "resume_brief": "DXMMII rig: fixed Rigify DEF misplacement + roll mirror bug (same roll both sides). Rebuilding 04r/05r with neutral f1. Then QC renders, build doc, done.",
+ "status": "done",
+ "task": "Transfer 5-state 4-arm rig (Pinv fix verified) to the real DXMMII model, fix leg gaps, fix detach playback with keyframeable constraints, render 5 states eyes-QC'd",
+ "updated_at": "2026-10-16T11:45:00Z",
+ "watchdog": true
+}

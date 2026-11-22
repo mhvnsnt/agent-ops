@@ -1,0 +1,11 @@
+{
+ "task": "Prove the fixed Stick-Up rig with animations before any entrance-kit work runs.",
+ "status": "needs_owner",
+ "watchdog": true,
+ "repo": "~/workspace/bannon-video-pipe/repo",
+ "resume_brief": "BLOCKED: No working repaired rig exists. STICKUP_rig_v3.glb was deleted (existed 11:31, gone by 12:00, cause unknown). STICKUP_v3.glb from parallel hand-repair lane exists but probe renders (/tmp/probe_base/fwd_45.png, fwd_90.png) show MASSIVE webbing/stretching \u2014 the hand-repair failed. Bind pose is clean on all versions; the defect only manifests on arm rotation. The retarget approach (rotation-only copy) is sound; the skin weights are the problem. NEXT: shoulder repair lane must produce a working GLB before rig proof can proceed. Do NOT attempt entrance-kit video work.",
+ "updated_at": "2026-10-09T13:27:32.534630+00:00",
+ "attempts": 3,
+ "failure": "No working repaired rig exists to prove. STICKUP_v3.glb never produced; STICKUP_rig_v3.glb deleted; STICKUP_repaired.glb shoulder weights web past 15deg. Shoulder repair lane FAILED (PR #50). Manual work required.",
+ "notes": "2026-10-09 08:25 CDT watchdog (attempt 3): still blocked. Verified on disk: no STICKUP_v3.glb and no STICKUP_rig_v3.glb anywhere in ~/workspace (workspace-wide find clean). stickup-shoulder-repair branch HEAD 138b0e5 committed only scripts+REPORT.md, no model shipped (commit message: 'No model shipped per zero-webbing rule'). PR #50 OPEN documents the failed 6-repaint + Corrective Smooth attempt; manual Prisma 3D work required (owner-side). Escalating per attempts>=3 rule. needs_owner: owner must do the manual shoulder weight-paint in Prisma 3D (or approve an alternative) before rig proof can proceed."
+}

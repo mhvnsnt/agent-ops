@@ -1,0 +1,10 @@
+{
+ "task": "Extract King's default pose rotations from Tekken 3 motion data and render full-body front-facing model",
+ "repo": "~/workspace/game-reverse-engineering/tekken3",
+ "resume_brief": "DONE: King (record 87) full-body rendered to renders/king/king_full_front.png. Pipeline: BNS record 90 (motion bank) -> stance move slot 0 -> anim stream frame 0 -> pose_build_matrices -> joint composition -> 808 tris rendered. KEY FINDING: USA EXE tables at 0x80096xxx are shifted -0x424 from Japan Rev.1 addresses. Scripts at /tmp/t3k/stage4.py (assembly) and stage5.py (render). Remaining: seam faces (262 skipped) cause visual gaps; textures not yet applied.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-12T15:37:14.624854+00:00",
+ "notes": "King full-body rendered. 808 tris, idle stance frame 0. Seam gaps visible (262 skipped faces). USA EXE table shift -0x424 documented."
+}

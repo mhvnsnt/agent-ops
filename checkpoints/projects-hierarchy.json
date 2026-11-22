@@ -1,0 +1,9 @@
+{
+ "task": "Restructure pocket-studio-v2 Projects tab from flat cards into hierarchical folder tree + add 5-section Effects tab",
+ "repo": "~/workspace/pocket-studio-v2",
+ "resume_brief": "Task COMPLETE. All work done in ~/workspace/pocket-studio-v2/app.html (single-file artifact source). (1) Projects tab is now a folder tree: 9 top-level folders (Wizard Gang, God Molecule, Damn Shit's Wild, In the Bushes, Bannon, Concrete Dragon, TRIPPEDD, Font Wizard, Goodville) with subfolders, expand/collapse, status badges (Posted/In Progress/Draft/Empty), tappable YouTube/Facebook links on posted items, file-path references, empty-folder '+ to add' rows (no-op toast). Leaves open the editor: in-progress -> EDIT mode, posted/draft -> VIEW-ONLY mode (banner shown, note/record/save + clip volume/delete hidden, clip drag + long-press menu + mix faders gated). EP02 v8b is the default leaf: tree opens to Wizard Gang > Episodes, header select populated with 12 leaves, editor boots in edit mode, DEFAULT_VIDEO_URL updated to https://muse.ai/files/1299464149925011/2923847461309916/2z1fnrzhfcpls4ucsext5boe/ep02-v8b-preview.mp4. (2) New FX tab with 5 sections: Character Swap, Clone & Composite, Face & Body Warp, Clone/Mini-Me Ctrl+Collin Style, Record->Cutout->Overlay guided workflow with tappable flow diagram. Verified: node --check clean, 25/25 Node DOM-shim logic tests pass (expand/collapse on 2+ folders, mode switching, badges, links). NOTE: no artifact.edit tool exists at subagent level - edit was made to the local app.html source; the artifact slug pocket-studio-v2 still needs redeploying from this file by the parent.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T18:23:58.779327+00:00"
+}

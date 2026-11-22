@@ -1,0 +1,17 @@
+{
+  "task": "Regenerate 3 BioMechania roster renders clean (ANTIPHON canon fix, BEASTJACK + CHROMAJACK de-annotated)",
+  "repo": "/home/hatch/workspace/your_files/tripo-inputs",
+  "resume_brief": "Regenerate three BioMechania Tripo-input renders using the media generation pipeline (same tool that made media-generation-*.webp in /home/hatch/workspace/your_files/tripo-inputs/). Locked framing for all: wide/landscape, full character visible, full arm reach with clear margins on all sides, pure white void background, flat readable lighting, roughly orthographic, T-pose for bipeds. ABSOLUTELY NO text, labels, captions, headers, footers, leader lines, or watermarks anywhere in the image. 1) ANTIPHON (REQUIEM): keep the existing design (binary red/blue split body, restraint straps) but fix the head per owner canon \u2014 serene face FRONT, skull as a full second face on the RIGHT SIDE at 90 degrees (NOT 180 apart, NOT a side appliqu\u00e9); render the head in a slight turn so both the front face and right-side skull read. 2) BEASTJACK (PRISM): same jade kirin/dragon zord design (scale plating, serpentine tail, amber visor, bronze under-armor), but CLEAN \u2014 the current file has annotation callouts and leader lines all over it. 3) CHROMAJACK (PRISM): same rainbow-iridescent chameleon zord (curled tail crest, independent eye-turret sensors, zygodactyl claw feet), but CLEAN \u2014 the current file is an annotated reference sheet with title header and design-notes footer. Write new files alongside the old ones (do not overwrite): media-generation-antiphon-requiem-tpose-void-1-<uuid>.webp etc. Heartbeat the checkpoint after each render. Mark done when all three exist and are visually verified clean.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T16:22:42.732407+00:00",
+  "result": {
+    "files": [
+      "/home/hatch/workspace/your_files/tripo-inputs/media-generation-antiphon-requiem-tpose-void-1-1aa443c1-db85-42c4-a2cf-97a103db9d10.webp",
+      "/home/hatch/workspace/your_files/tripo-inputs/media-generation-beastjack-prism-tpose-void-1-b770eb42-b4c1-4290-8271-5ba201136754.webp",
+      "/home/hatch/workspace/your_files/tripo-inputs/media-generation-chromajack-prism-tpose-void-1-e76f4315-bf1e-4dd9-8632-ba888baf9f74.webp"
+    ],
+    "verification": "all three visually inspected and passing"
+  }
+}

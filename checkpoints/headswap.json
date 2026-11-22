@@ -1,0 +1,11 @@
+{
+  "task": "Full head swaps (not face swaps) on 6 Kiko clips: pier-8s, cont-1, cont-3, cont-6, cont-7, cont-9. Use face parsing for full head mask incl. hair. Output to .../video/headswap/. Verify every output visually.",
+  "repo": "~/workspace/trippedd-studio",
+  "resume_brief": "Redo Kiko face swaps as FULL HEAD REPLACEMENTS. Target clips in ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/video/ (pier-8s, cont-1, cont-3, cont-6, cont-7, cont-9). Muta refs in ~/workspace/voice-clone-work/kiko/muta-refs/. Toolkit at ~/workspace/video-fix-tools/character-replace/TOOLKIT.md. Fast script at ~/workspace/video-fix-tools/character-replace/tools/swap_retinaface_fast.py. Face assignment: pier-8s->muta-1, cont-1->muta-3, cont-3->muta-1, cont-6->muta-white-5, cont-7->muta-1, cont-9->muta-3. Use face parsing (BiSeNet) for full head mask incl. hair \u2014 replace ENTIRE head incl. hair. muta-3 is a mask: manually define source region. Output to ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/video/headswap/. Verify every output visually: long hair must be GONE, Muta's head on there, full head region not a face patch.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-12T13:20:00-05:00",
+  "progress": "COMPLETE. 3 winners delivered: cont-3-headswap-bald.mp4 (bald profile, perfect pose match), cont-9-headswap.mp4 (frontal face paint, perfect pose match), cont-1-headswap.mp4 (mask on profile, decent). 3 clips not suitable: pier-8s (faces 18-51px, too small), cont-6 (back view, no face), cont-7 (silhouette, transplant pasted onto moon - deleted).",
+  "notes": "\n2026-10-12T17:50Z: BiSeNet fails on Muta face paint (black paint classified as hair) and dark profile frames. Pivoted to landmark-based full head transplant."
+}

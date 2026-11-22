@@ -1,0 +1,11 @@
+{
+  "task": "COMPREHENSIVE STORAGE AUDIT + SALVAGE \u2014 audit everything on disk, save what's needed to GitHub/TeraBox, clean up disk space. NEVER delete anything unverified.",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace",
+  "resume_brief": "Storage audit subagent: inventory ~/workspace top-level dirs, check what's backed up on GitHub/TeraBox/Releases, check active checkpoints and running agents for in-use files, push what's pushable (verify byte-for-byte), delete only after verification, log everything to ~/workspace/agent-ops/disk-cleanup-log.md. THE LAW: upload first, verify, THEN delete. Checkpoint at ~/workspace/agent-ops/checkpoints/storage-audit-salvage.json.",
+  "updated_at": "2026-10-13T15:20:00Z",
+  "attempts": 1,
+  "progress": "browser_downloads 1.7G->16M, tekken6 movies 337M deleted (verified on release), Gun Jack variants salvaged, 4 unidentified FBX staged, WMXIX ISO backup uploading (3 parts)",
+  "result": "Freed ~2GB (browser_downloads 1.68GB, tekken6 movies 337MB). Salvaged 3 Gun Jack T7 variants + 4 unidentified FBX. WMXIX ISO backup deferred (upload timeouts, lane active). TTT2 7z (13GB) frees when split worker completes."
+}

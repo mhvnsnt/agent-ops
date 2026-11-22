@@ -1,0 +1,9 @@
+{
+ "task": "Build PHYSICS LAB tab for physics-playground-pwa (vanilla JS port of jiggle/softbody/fluid/ragdoll/face systems)",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/blend-physics-mobile",
+ "resume_brief": "A builder subagent is implementing a new LAB tab in ~/workspace/blend-physics-mobile/ (the physics-playground-pwa PWA staging dir). Spec: 6 new files under lab/ (lab.js controller + lab-jiggle.js + lab-softbody.js + lab-fluid.js + lab-ragdoll.js + lab-face.js), index.html additions (tab-lab section + tab button + script tags), sw.js cache bump to physics-playground-v6. All vanilla JS IIFEs, three.js r147 UMD global THREE, mobile laws (48px targets, no h-overflow, safe-area). If the builder died, read its brief from the subagent spawn message in this chat and re-spawn it, or finish the implementation directly.",
+ "updated_at": "2026-10-14T21:30:00-04:00",
+ "attempts": 0
+}

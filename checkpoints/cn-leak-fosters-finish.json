@@ -1,0 +1,9 @@
+{
+ "task": "Finish Fosters Phase 2: extract 507 from 7z, push to GitHub+TeraBox",
+ "repo": "~/workspace/cn-leak-pull-100",
+ "resume_brief": "DONE: All 507 files extracted from Fosters.7z and verified (507/507, 0 bad). Pushed to GitHub release fosters-7z-v1 (16 assets total: 8 v1 parts for 1200 files + 8 v2 parts for 507 files, 5.73GB). 61x25MB TeraBox parts staged at ~/workspace/cn-leak-pull-100/fosters-terabox/ (fosters-7z-v2.zip.p25-000..060, 1.5GB). Fosters.7z (3.2GB) kept until parent verifies TeraBox upload, then delete.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-15T04:15:00.000000+00:00"
+}

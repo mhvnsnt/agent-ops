@@ -1,0 +1,10 @@
+{
+ "task": "Aggressive storage offload: push bulk to Drive/GitHub, free local disk",
+ "repo": "/home/hatch/workspace",
+ "resume_brief": "Storage offload worker. Owner directive 2026-10-08: keep local disk as free as possible \u2014 push everything possible to Google Drive, repos, GitHub, databases. No storage roadblocks ever. Steps: (1) Audit /home/hatch disk usage \u2014 find the biggest consumers (render dirs, venvs, weight caches, archives, video pipes, old worktrees, agent-ops scratch). (2) For each bulk item: verify it is backed up or push it to its canonical home (episode masters + voice files -> Google Drive; code/work -> GitHub via branch->PR->merge; venvs -> pip-freeze manifests in agent-ops/venv-manifests/; downloadable weights -> document source URL + hash, do NOT re-upload weights to Drive). (3) SAVE BEFORE DELETE \u2014 never delete uncommitted work, active game repos, .DO_NOT_DELETE marked dirs (esp. trippedd-studio/production/WIZARD_GANG_EP01/), or anything unbacked. (4) Bring usage well below 75%, targeting ~60% if achievable without touching protected dirs. (5) Log every cleanup to ~/workspace/agent-ops/disk-cleanup-log.md: what, size, where the backup lives. (6) Report: before/after usage, top items moved, what was deleted and where it is backed up, what remains and why it stays local. Do NOT touch the running voice worker's cb_weights (has .DO_NOT_DELETE__voice_weights_in_use marker) or the cipher venv while renders are active.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-09T02:40:00+00:00",
+ "notes": "Freed ~8.9G (piptmp 3.2G, AshLanev2/.output 1.7G, 2x stale Blender 2.6G, 3x node_modules 1.1G, pip cache 350M). Net disk 80%->80%: concurrent workers wrote ~8G. 60% target not achievable without disrupting active work. Drive at 86% blocks cloud offload. Full details in disk-cleanup-log.md 2026-10-08 21:35 CDT entry."
+}

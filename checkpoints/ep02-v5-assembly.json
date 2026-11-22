@@ -1,0 +1,9 @@
+{
+ "task": "Assemble EP02 v5: swap 7 fixed clips into v4c video timeline (keep audio), rebuild sound design SFX pass on v4, output wizard-gang-ep02-final-v5.mp4",
+ "repo": "~/workspace/trippedd-studio",
+ "resume_brief": "DONE. Output at ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/wizard-gang-ep02-final-v5.mp4 (158MB, 344.8s). Review copy at ~/workspace/ep02-final-v5-small.mp4 (38MB) - needs upload to remote storage (pending user confirmation as subagent). All 7 video swaps verified, SFX rebuilt on v4 audio, pilot 0-50s intact.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T02:05:03.986678+00:00"
+}

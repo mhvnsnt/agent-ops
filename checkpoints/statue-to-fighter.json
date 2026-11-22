@@ -1,0 +1,10 @@
+{
+  "task": "Build Statue-to-Fighter tool: convert solid 3D statue into Tekken-style rigid-part rigged character",
+  "repo": "~/workspace/tools/statue-to-fighter",
+  "resume_brief": "Build the statue-to-fighter CLI tool at ~/workspace/tools/statue-to-fighter/. COMPLETE. Main script statue_to_fighter.py takes solid OBJ/GLB, auto-detects joints via proportional template + arm-span detection, assigns vertices rigidly (Y-planes for spine, closest-segment for limbs), outputs GLB with skeleton. 15 parts, 16 joints, validated. Wired into Pocket Studio 3D tab. README written. Tested on synthetic humanoids.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-12T15:19:15.297245+00:00",
+  "notes": "Tool complete and tested. 15 rigid parts, 16 joints, valid GLB. Wired into Pocket Studio 3D tab."
+}

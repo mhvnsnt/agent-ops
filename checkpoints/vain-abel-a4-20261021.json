@@ -1,0 +1,42 @@
+{
+  "attire_name": "Half mask Horror of the Haze",
+  "notes": [
+    "RELAUNCH #3 (2026-10-22 ~01:50 UTC): two predecessors died in daemon restarts; checkpoint existed but ALL steps were pending and no A4 GLB was on disk (disk-wide find for the UUID found nothing) => redid from step 1. A1/A2/A3 untouched throughout.",
+    "PULL DONE via tools/tripo-pull/tripo-pull.py driven through the proven curl transport shim (pull_via_tool.py, copied from the A3 lane record \u2014 sandbox proxy truncates plain urllib reads; only the transport is shimmed, resolution/verification/manifest are the tool's own code). Public-api strategy. Project: 'wrestler character 3d model' by fmmf.mars. GLB: wrestler_character_3d_model.glb, 20,336,888 B, sha256 5b4f8519a8f3affa92979ef644e441dac8fdc0282516b76259a8ef597c6bc288, glTF magic OK.",
+    "VERIFY DONE: tool manifest + @gltf-transform/cli inspect on a decompressed copy (57,710,908 B, render-only; shipped file stays the byte-identical meshopt original). 1 mesh / 1 primitive / 1 material / 3 textures (Color 4096x4096 jpeg, ORM 4096, NormalGL 4096 png \u2014 TEXTURED, images=3 > 0), ~1,004,251 verts, 0 skins / 0 joints / 0 animations (raw Tripo static, same as the A2/A3 pulls \u2014 rigging is a separate pipeline step). EXT_meshopt_compression + KHR_mesh_quantization.",
+    "RELEASE DONE: vain-abel-a4-tripo-20261021 on mhvnsnt/western-heart; API-verified assets: vainabel_attire4_half-mask-horror-of-the-haze_original.glb = 20,336,888 B (exact size match) + vainabel_attire4.manifest.json (1,499 B), both state=uploaded.",
+    "WIRING STAGED in ~/workspace/_vainabel-a4-work/edit/ from FRESH main fetches (base main 6d02746b): game/js/assets.js +MODEL_URLS vainabel-attire4 (node --check OK), game/js/attires.js +ATTIRE 4 variant line (node --check OK), ATTIRE-SLOTS.md intro 2-3 -> 2-4, TRIPO-REGISTRY.md VAIN ABEL row extended to Attires 2-4 (+A4 link, +attire4 path, +A4 name, +a4_front.png render ref). STILL OWED after render: ATTIRE-SLOTS slot-4 row, MODEL-INVENTORY row, registry changelog bullet, SHA256SUMS line (all carry the own-eyes look description).",
+    "RENDER GATE RUNNING in background (run_render_gate.sh): waits for zero other Blender processes + >=2600MB available RAM (box saturated by other lanes \u2014 never kill theirs), then renders a4_posx + a4_negx Workbench textured views from the decompressed copy via the A2-proven render_front.py + egl-stack invocation.",
+    "RENDER SLOT REALITY (2026-10-22 ~04:35Z): after ~2.5h of strict gating (zero-Blender + RAM), no window occurred \u2014 the fleet runs 2-3 Blenders concurrently all night in chains (autorig bakes, cs-round2 renders, deathfang video passes) and zero-Blender instants coincide with RAM dips from other python loads. Gate amended to fire when <=1 other Blender binary is running AND available RAM >= 2600MB (combined footprint ~1.3GB theirs + ~1.6GB mine stays well inside the 8GB box; nothing is killed or preempted). Deviation will be listed in the PR body.",
+    "RENDER DONE + OWN-EYES VERDICT (2026-10-22 ~04:40Z): a4_posx.png = TRUE FRONT, a4_negx.png = back (mask strap). FRONT reads unmistakably as Vain Abel / Purple Haze line: bald muscular wrestler, purple-and-black HALF MASK over the upper face with mouth+jaw exposed (matches the owner title), long diagonal stitched scar across the bare torso (A3 motif), dog tags, black pants with purple stitched flame patterns, purple-flame boots, fingerless glove + forearm wrap. Textures clean and fully textured \u2014 no clay, no smear. Ears present at the sides under the mask straps (same owner-noted pattern as A2/A3). Character identity PASS \u2014 wired as Attire 4. Render: Workbench textured 1000x1000 from the meshopt-decompressed copy, sha256 977a2adcec1564cfbb0ddd37ed4160110c79dad3b99580bd3fa4bb59aa631463; owner copy at ~/workspace/your_files/vain-abel-a4-front-20261021.png; repo ref docs/tpose-refs/vainabel/a4_front.png."
+  ],
+  "owner_directive": "2026-10-21 ~19:52 CDT: Vain abel attire 4 https://studio.tripo3d.ai/3d-model/4d00d686-d8fd-41b0-a82e-37f66a18adb2 \u2014 'I think this is his 4th tripo model. (Half mask Horror of the Haze)'",
+  "repo": "mhvnsnt/western-heart",
+  "roster_dir": "roster/vainabel",
+  "steps": {
+    "archive_release": "done",
+    "checkpoint_created": true,
+    "pr": {
+      "status": "done",
+      "note": "PR #503 opened first; its no-deletion-guard run was cancelled at checkout by runner infra and GitHub then created no runs for #503 across reopened/synchronize/labeled events (verified) \u2014 #503 closed with an explanatory comment and resubmitted as PR #514 (identical branch). #514 went DIRTY as main advanced; forward-merge commit c7b4fe47 (keep-both-sides, A4 re-applied onto main ed427e4d) restored MERGEABLE and its synchronize fired all three gates: instruction-gate PASS, deletion-guard PASS, guard PASS -> CLEAN -> merged 2026-10-22T05:53:19Z."
+    },
+    "proof_render": {
+      "status": "done",
+      "note": "Workbench TEXTURE front render (true front = +X, confirmed against -X back view): ~/workspace/your_files/vain-abel-a4-front-20261021.png (sha256 977a2adcec), viewed own-eyes: PASS identity (half mask, scar, purple haze); repo ref docs/tpose-refs/vainabel/a4_front.png; render-seen-list appended. Render waited for a safe slot under an amended threshold (<=1 other Blender + >=2600MB free) because the strict zero-Blender gate never opened in ~2.5h of fleet-wide concurrent Blender chains; nothing was killed."
+    },
+    "pull": "done",
+    "verify": "done",
+    "wire_attire4": {
+      "status": "done",
+      "note": "8 files: attire4/model.glb (byte-identical), ATTIRE-SLOTS.md slot 4, assets.js vainabel-attire4 key, attires.js ATTIRE 4 variant, TRIPO-REGISTRY row 2-4 + changelog, MODEL-INVENTORY row, a4_front.png, SHA256SUMS line. A1-A3 untouched; movesets untouched."
+    },
+    "archive": {
+      "status": "done",
+      "note": "release vain-abel-a4-tripo-20261021: vainabel_attire4_half-mask-horror-of-the-haze_original.glb = 20,336,888 B uploaded + manifest.json; API-verified."
+    }
+  },
+  "task": "vain-abel-attire4-tripo-wirein",
+  "uuid": "4d00d686-d8fd-41b0-a82e-37f66a18adb2",
+  "status": "DONE - PR #514 merged to main (merge commit 375abe94d3c07ba3ec481840f4d617548bf7419d, 2026-10-22T05:53:19Z); all three gates PASS on head c7b4fe47; A4 verified on main via API (model.glb 20,336,888 B; a4_front.png 820,825 B; assets.js + ATTIRE-SLOTS entries present).",
+  "updated": "2026-10-22T05:57:48.032134+00:00"
+}

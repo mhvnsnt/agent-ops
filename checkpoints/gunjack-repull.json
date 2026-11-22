@@ -1,0 +1,10 @@
+{
+  "task": "Re-pull Gun Jack variants + attire/variant sweep for SAM-UR-A1 base",
+  "repo": "~/workspace/game-reverse-engineering/tekken7/models/gun-jack",
+  "resume_brief": "1. Check ~/workspace/game-reverse-engineering/tekken7/models/gun-jack/ and ~/workspace/browser_downloads/ for Gun Jack files. 2. If missing and rigmodels blocked (rate-limit until 2026-10-14 12:00 EDT), try DeviantArt/SFMLab/Open3DLab for Gun Jack/Jack-7 models. 3. Sweep for other attire/variant models missing from named roster. 4. Organize found files into models/gun-jack/. Report what was found/pulled/blocked.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-13T13:32:11.892459+00:00",
+  "notes": "Gun Jack T7 variants NOT on disk (rigmodels only, blocked until 2026-10-14). T3 Gun Jack already in western-heart. Ganryu organized. Negan missing (rigmodels tomorrow)."
+}

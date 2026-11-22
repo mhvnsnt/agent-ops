@@ -1,0 +1,9 @@
+{
+  "task": "Pull the stronger/better tiers for every animation tool family (the power drill and jackhammer)",
+  "repo": "~/workspace/video-fix-tools",
+  "resume_brief": "The owner wants the FULL LADDER for every tool family in ~/workspace/video-fix-tools/ (registry at TOOLS-REGISTRY.md): 'if you have a screwdriver we need a power drill, and a jackhammer, and everything in between.' For EACH family already wired (background removal, tracing, sticker/cutout, looping, frame interpolation/RIFE, cartoon stylization, 2D animation, EbSynth-adjacent), research and pull STRONGER/BETTER variants: e.g. bg-removal beyond isnet-general-use (RMBG-2.0, BiRefNet variants that fit CPU or are queued for GPU), tracing beyond vtracer, upscalers (Real-ESRGAN) for frame cleanup, denoise/restoration, stronger interpolation, audio cleanup for commercial dialogue. Pull each into video-fix-tools/, verify it RUNS on a real input, register in TOOLS-REGISTRY.md with its tier (light/medium/heavy) and requirements. FREE ONLY \u2014 nothing paid, no cards. Heavy GPU-only tools: download/verify where possible, else document the exact one-command pull for Kaggle/Colab and mark QUEUED-GPU. Do not touch trippedd-studio worktrees. Report the new ladder per family.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T18:11:54.638180-05:00"
+}

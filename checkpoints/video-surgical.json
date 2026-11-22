@@ -1,0 +1,19 @@
+{
+  "task": "Surgical video loading diagnosis: minimal bundle test",
+  "status": "needs_owner",
+  "watchdog": true,
+  "repo": "~/workspace/pocket-studio-v2",
+  "updated_at": "2026-10-14T04:57:43.790758+00:00",
+  "attempts": 3,
+  "resume_brief": "Surgical test for Pocket Studio video loading failure (code=4 src-not-supported). Moved 30 of 31 videos from assets/videos/ to .videos-backup/ (only ep02-preview.mp4 8.2MB remains). Added CDN HEAD probe to video error handler that reports HTTP status/content-type/content-length on failure, distinguishing 404-not-deployed from decode failure. Bumped cache-buster to v=20261011d. JS syntax verified clean. NEXT: trigger artifact.edit rebuild on pocket-studio-v2 from ~/workspace/pocket-studio-v2/app.html, then have owner test. If EP02 loads with 8.2MB bundle -> it was a 99MB size issue; restore videos selectively or keep minimal + Import. If still fails -> read the new CDN HEAD diagnostic from owner's screenshot to see if it's 404 (deployment dropping files) or 200-with-wrong-type.",
+  "notes": [
+    "Video file itself verified valid: H.264 480x270, AAC, moov at byte 32 (faststart), 344.8s",
+    "Error overlay already had Import Video file-picker fallback (pre-existing, line 290)",
+    "Other projects' video_urls will 404 during this test - expected, EP02 is the test target",
+    "Backup location: ~/workspace/pocket-studio-v2/.videos-backup/ (30 files)",
+    "Watchdog 2026-10-11 18:27 CDT: resumed from ready_for_rebuild. Verified surgical tree intact: assets/videos/ holds ONLY ep02-preview.mp4 (8.2MB), .videos-backup/ holds 30 files, app.html carries cache-buster v=20261011d (line 926) and CDN HEAD probe (lines 1830/1834). Triggered artifact.edit rebuild on pocket-studio-v2 (builder dispatched async). Pocket Studio is client-only so invoke_action was unavailable; edit is the rebuild path. NEXT: verify the build finished (artifact.status pocket-studio-v2), then owner tests EP02 video load to decide 99MB-size vs 404-deployment. Work not complete this run.",
+    "Watchdog 2026-10-11 18:28 CDT: artifact.edit rebuild confirmed RUNNING (operation=edit, agent_id=20e13d7b-1b55-4fa6-8e95-275dc6948a9b). Builder handoff will arrive automatically; next run verifies completion and hands the EP02 load test to the owner.",
+    "Watchdog 2026-10-11 18:29 CDT: artifact.edit rebuild SUCCEEDED and builder-verified. Shipped bundle carries ONLY assets/videos/ep02-preview.mp4 (8.2MB; MD5 matched working tree), HEAD probe + v=20261011d confirmed in shipped index.html, desktop+mobile captures show EP02 preview frame rendering with timeline 0:00.0/5:44.8, no load error, no console errors. NEXT (owner test): load EP02 in Pocket Studio. If it plays -> the 99MB bundle was the issue (restore videos selectively or keep minimal + Import). If it still fails -> read the CDN HEAD diagnostic line in the error overlay to decide 404-not-deployed vs decode failure.",
+    "Watchdog 2026-10-14 00:55 EDT: state re-verified. Artifact pocket-studio-v2 has NO build running; the 2026-10-11 surgical rebuild (minimal 8.2MB bundle + HEAD probe + v=20261011d) is still the last successful build \u2014 shipped bundle unchanged. Working tree ~/workspace/pocket-studio-v2 has moved on since the surgery: assets/videos/ now holds 5 EP02 files (ep02-bed/ducked-bed/main/preview/silent, Oct 11 22:31-22:33), .videos-backup/ intact with 30 files, and app.html (Oct 12 11:17, watermark-removal commit e16d629) no longer carries the v=20261011d cache-buster or HEAD probe in the tree \u2014 a future artifact.edit rebuild from this tree would ship the current 5-file bundle WITHOUT the diagnostic probe. Remaining step is still owner-only: load EP02 in Pocket Studio and report play vs fail. attempts 2->3."
+  ]
+}

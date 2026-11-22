@@ -1,0 +1,14 @@
+{
+  "task": "Add DriftEngine 3D model viewer to Chimera Emulator Hub",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/ts-spaces/chimera-emulator-hub",
+  "resume_brief": "Add a 3D Models/Fighters viewer section to the Chimera Emulator Hub using DriftEngine (open-source WebGPU 3D engine at ~/workspace/tools/driftengine/). COMPLETE: viewer built with Vite + @driftengine/core 4.13.5 + @driftengine/assets + @driftengine/drft, deployed to 3d-viewer/ in the hub, pushed to https://github.com/mhvnsnt/chimera-emulator-hub (commit d5fa37c). Models: pantera_tiny.glb, leomon-mane.obj, leomon-head.obj bundled; thumbnails included. Touch orbit controls (drag rotate, pinch/wheel zoom). Verified live on GitHub raw URLs.",
+  "updated_at": "2026-10-13T20:55:00Z",
+  "attempts": 0,
+  "notes": [
+    "2026-10-13: Viewer source at ~/workspace/chimera-3d-viewer/ (Vite project, keep for rebuilds)",
+    "2026-10-13: NOTE - the served web artifact (.space-build/) was not rebuilt; parent may need to run the artifact builder for the live hub link to pick up 3d-viewer/. GitHub repo is current.",
+    "2026-10-13: WebGPU render not verified headless (no GPU); code follows DriftEngine examples/models pattern exactly, WebGL2 fallback included. Owner testing on phone is the real verification."
+  ]
+}

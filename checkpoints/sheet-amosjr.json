@@ -1,0 +1,9 @@
+{
+ "task": "Full Preston Blair sheet(s): amosjr",
+ "repo": "~/workspace/trippedd-studio",
+ "resume_brief": "In ~/workspace/trippedd-studio: build COMPLETE Preston Blair character sheet(s) for amosjr (Goodville). Owner 2026-10-11: full sheets for the whole cast, hold the likenesses, make them actually good. USE THE IMAGE LAW \u2014 derive from the key art /home/hatch/workspace/trippedd-studio/assets/references/ep01/source/Goodville - Not South Park.png and the existing kit pieces. Full spec: heads (front/3-4 L/3-4 R/profile), face furniture (eyes/brows/mouths full expression sets), bodies (front/3-4/back/sitting/walk), hands, all outfits in kit, preview sheet PNG. Verify every piece vs the source likeness. Branch feat/sheet-amosjr off origin/main. Commit, open PR (do NOT merge). Heartbeat ~/workspace/agent-ops/checkpoints/sheet-amosjr.json every 10 min. Report + mark done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-11T21:05:56.610984+00:00"
+}

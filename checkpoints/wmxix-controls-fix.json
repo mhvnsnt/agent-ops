@@ -1,0 +1,10 @@
+{
+  "task": "Fix WMXIX mobile testbed controls to real GameCube WrestleMania XIX button layout, verified against the actual game manual",
+  "repo": "~/workspace/wmxix-mod-testbed",
+  "resume_brief": "Fix the WMXIX mobile testbed controls in ~/workspace/wmxix-mod-testbed/testbed/ to use the REAL GameCube WrestleMania XIX controls verified against the actual instruction manual (find it on archive.org; manual wins over any assumed mapping). Owner correction 2026-10-15 ~15:49 EDT: PUNCH/KICK/GRAPPLE/BLOCK are wrong. Real controls: Control Stick=move, A=grapple near/strike far (context-sensitive), B=run (hold)/climb/pickup, X=Irish whip/throw, Y=finisher (special full), L=block, R=reversal (timed), Z=switch target/taunt, C-Stick=taunt, Start=pause. Mobile layout: joystick left; A (big primary), B, X, Y in GameCube diamond right; L/R shoulders; Z small; Start pause icon. Implement context-sensitivity (A near= grapple, far=strike; B held=run; Y only when special full). Branch -> PR -> merge to mhvnsnt/wrestlemania-xix-mod. Do not touch modding-tools scaffold.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-15T19:53:15.185526+00:00",
+  "notes": " | DONE 2026-10-15: PR #4 merged to main. Real GameCube controls verified vs Prima Official Strategy Guide (2004) via archive.org identifier wwe-wrestlemania-xixprimas-official-strategy-guide-2004. Manual wins over assumptions: A=grapple(tap light/hold heavy), B=strike(tap light/hold heavy/combo), X=run(hold)/Irish whip(tap)/climb, Y=weapon, L=grapple reversal, R=strike reversal, Z=target, Start=pause, D-pad=taunt, A+B full special=special move. NO block button in real WMXIX. Mobile: GameCube diamond layout, L/R shoulders, 300ms tap/hold threshold, special meter HUD. CONTROLS.md in testbed/."
+}

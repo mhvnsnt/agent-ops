@@ -1,0 +1,9 @@
+{
+  "task": "Social Operations Playbook \u2014 13 Pages",
+  "status": "done",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/money-machine-hq",
+  "resume_brief": "Build the complete Social Operations Playbook for 13 Facebook Pages in money-machine-hq/social/ on branch social/playbook-v1. Create 13 page files (social/pages/<slug>.md) each with Voice & Personality, Universe Bible, Content Pillars, First Week (5 ready-to-post drafts under 1024 chars in page voice), CTA Strategy, Growth Levers. Then OPERATIONS.md, AUTONOMY-MAP.md, VOICE-GUIDE.md. Sources: ~/MEMORY.md, money-machine-hq/offers/. Push branch, do NOT merge. Checkpoint at ~/workspace/agent-ops/checkpoints/social-playbook.json.",
+  "updated_at": "2026-10-08T06:15:00-04:00",
+  "attempts": 0
+}

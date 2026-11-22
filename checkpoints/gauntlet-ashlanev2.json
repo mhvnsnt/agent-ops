@@ -1,0 +1,10 @@
+{
+  "task": "Proving Ground gauntlet #6: AshLanev2",
+  "status": "done",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/game-sweep/AshLanev2",
+  "resume_brief": "Continue Proving Ground gauntlet #6 on AshLanev2 (mhvnsnt/AshLanev2). Local clone: ~/workspace/game-sweep/AshLanev2 (healthy; do NOT use attire-pull/repo, broken partial clone). Work: audit gates G1-G7 (see ~/workspace/money-machine-hq/proving-ground/PROVING-GROUND.md), fix smallest viable repairs on branch proving-ground/ashlanev2, verify with proof, document ~/workspace/money-machine-hq/proving-ground/results/ashlanev2.md on proving-ground-spec branch, commit+push. Previous gauntlets #1-5 PASS. Constraints: no secrets in commits, no canon changes, no main merge without owner approval.",
+  "updated_at": "2026-10-08T01:50:00-04:00",
+  "attempts": 2,
+  "notes": "Two subagents died in daemon restarts; main agent took over directly"
+}

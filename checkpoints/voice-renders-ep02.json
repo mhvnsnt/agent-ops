@@ -1,0 +1,10 @@
+{
+  "attempts": 3,
+  "repo": "~/workspace/voice-clone-work",
+  "resume_brief": "VOICE RENDER work for Wizard Gang animated series, episode 2. Three tasks, all under ~/workspace/voice-clone-work: (1) STATIC exact line: render script ~/workspace/voice-clone-work/static/render_static_v2.py run via ~/workspace/voice-clone-work/redo_static_therain.sh; venv at ~/workspace/voice-clone-work/cipher/venv/bin/python; last attempt stuck at sampling 1/1000 then died. Script line: 'Ayo! You see that fire? That's the bat signal, baby \u2014 council's in session! Everybody move like you got somewhere to be! STEP UP!!!' \u2014 deeper, gritty, gruff New York/Italian Enzo-style. STEP UP!!! as one phrase, never U-P. (2) CIPHER 'THE RAIN!': script ~/workspace/voice-clone-work/cipher/render_therain.py; manic, feral, high-pitched, possessed/Gollum-like; match C1v3 timbre (approved base ~/workspace/voice-delivery/voice-cipher-c1-v3.mp3); output to ~/workspace/voice-delivery/voice-cipher-therain-v1.m4a. (3) AARON RUBEN voice clone: reference at ~/workspace/voice-clone-work/aaron-ruben/william-voice-ref.m4a (38s podcast clip of William Carlin); build clone following pattern in static/ and cipher/ dirs. Rules: verify EVERY output personally (file exists, duration sane, not silent, right content) before claiming done; heartbeat checkpoint after each step. Report: which done (paths+verification), which blocked (specific reason).",
+  "status": "needs_owner",
+  "task": "Wizard Gang EP02 voice renders: Static exact line, Cipher THE RAIN!, Aaron Ruben voice clone",
+  "updated_at": "2026-10-09T18:15:00-05:00",
+  "watchdog": true,
+  "notes": "Venv REBUILT OK (torch 2.6.0+cpu, chatterbox imports). BUT renders BLOCKED by hardware: VM has 8GB RAM, only 1.4GB available, no swap, no GPU. Chatterbox model is 3.5GB; 1000-step CPU diffusion sampling gets OOM-killed within minutes (both static and therain died during sampling). Tried twice. Cannot complete on this hardware without: (a) more RAM/swap, (b) GPU, or (c) code change to reduce diffusion steps (hardcoded 1000 in chatterbox). Aaron Ruben ref verified OK (38s, william-voice-ref.m4a)."
+}

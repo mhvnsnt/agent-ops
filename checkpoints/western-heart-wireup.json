@@ -1,0 +1,10 @@
+{
+  "attempts": 1,
+  "repo": "~/workspace/western-heart",
+  "resume_brief": "Studying tk fighting game code (fighter.js, game.js, characters.js, ai.js) in western-heart/assets/free-pull-1/tk-fighting-game/ and writing docs/TK-COMBAT-ANALYSIS.md (frame data, hitboxes, health/super meter, combo counting, adaptation to Nine-Soul Meter/Soul Surge). Documenting animation retargeting pipeline (Quaternius + CMU mocap clips to Tekken 7 King skeleton) in docs/ANIMATION-PIPELINE.md. Creating western-heart/prototype/ structure with README, combat design, fighter data template (Pantera), stage template (ambientCG textures). Updating assets/free-pull-1/INVENTORY.md with file-to-system mapping. Branch: prototype/wire-up-1, PR -> merge. King skeleton reference at ~/workspace/game-reverse-engineering/tekken7/king/.",
+  "status": "done",
+  "task": "Wire up Western Heart prototype \u2014 integrate free-pull-1 assets into working foundation",
+  "updated_at": "2026-10-13T04:35:00Z",
+  "watchdog": true,
+  "notes": "Complete. PR #16 merged. All docs, prototype structure, and inventory mapping on main."
+}

@@ -1,0 +1,10 @@
+{
+  "task": "Audit 66 phone FBX animations: which exist in repos/games/Drive vs missing anywhere",
+  "repo": "mhvnsnt/drive-storage",
+  "resume_brief": "Audit the ~66 FBX animation files listed in ~/workspace/agent-ops/fbx-audit/phone-fbx-list.txt (Mixamo-style, ~43-45MB each, from owner's phone screenshots 2026-10-12). For EACH file determine: ACCOUNTED (exists in any of his repos, games, or Drive) or MISSING (nowhere else). Sources to check: (1) mhvnsnt/drive-storage repo via GitHub API \u2014 git-tracked files AND drive-assets-v1 release assets (the Oct 12 migration had ~100 .fbx files, likely overlapping); (2) local game repo checkouts under ~/workspace (find *.fbx) \u2014 Bannon, AshLane, western-heart, Brutal Fist, StreetBrawl/Concrete Dragon, trippedd-studio; (3) his other mhvnsnt GitHub repos via API for .fbx files; (4) Google Drive via hatch_gws_cli drive API (the screenshots may show a Drive folder \u2014 tab id fragment 1d062b115dbb4aacb200ba71d0d6cb7d; try resolving exact filenames there, also fixes 3 TRUNCATED names). Match by exact filename first, then fuzzy (case/punctuation), then by size (~43-45MB is a strong signal). Also note status of the 3 non-animation files (Turbo VPN apk = re-downloadable installer; TRIPPEDD_god-molecule repo backup zip; codedummy zip). Deliverable: a clear two-list report \u2014 ACCOUNTED (with where each was found) and MISSING ANYWHERE (exact names). Write the full report to ~/workspace/agent-ops/fbx-audit/FBX-AUDIT-REPORT.md and report the counts + missing names back. Read-only on Drive \u2014 no deletions. Heartbeat this checkpoint; mark done at end.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-12T20:35:00Z",
+  "notes": "DONE. 66 phone FBX audited: 18 ACCOUNTED (mhvnsnt/drive-storage animations/, byte-size matched), 48 MISSING ANYWHERE (phone is only copy). Report: ~/workspace/agent-ops/fbx-audit/FBX-AUDIT-REPORT.md. 3 non-animation files assessed (VPN apk re-downloadable; god-molecule zip superseded by Oct-12 commits; codedummy zip superseded by Oct-7 repo). Read-only throughout; nothing deleted."
+}

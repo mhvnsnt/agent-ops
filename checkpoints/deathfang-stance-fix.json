@@ -1,0 +1,142 @@
+{
+ "assets_verified": {
+  "donor": "~/workspace/browser_downloads/sess-1014139967/iori_yagami_fixed.glb present (79 joints, Bip001, bound in Iori stance)",
+  "human_shipped_glb": "roster/deathfang/attires/attire1/model.glb 16329504 B (sparse clone, matches PR #443 record)",
+  "originals_release": "deathfang-tripo-pulls-20261020 \u2014 tag lookup 404 via API at lane start (list endpoint showed the tag once); NOT needed yet: shipped GLBs store bind-pose geometry, simp targets re-derive from them. Release must NEVER be overwritten regardless.",
+  "wolf_shipped_glb": "roster/deathfang/attires/attire2/model.glb 17394144 B (matches)"
+ },
+ "footprint": "sparse clone ~34MB + scratch; Blender gated on free RAM (rig-seq2.sh of personality lane is running \u2014 never kill, launch only in windows)",
+ "lane": "deathfang-stance-fix",
+ "order": "Owner verdict 2026-10-21 ~12:02 CDT rejecting PR #443 stance execution: (1) head twisted/contorted BOTH forms, (2) torso + hands stretch/weight crumple, (3) stance reads unnatural vs real Iori, (4) human hair twists + clips through body. Fix automatically with OSS stack + coordinate with Rig & Pose Studio lane for manual tools.",
+ "rig_pose_studio_coordination": "No rig-pose-studio.json checkpoint exists yet at lane start (checked 2026-10-21 ~12:15 CDT) \u2014 nothing to consume yet; this lane proceeds on the established tools/auto_rig stack and records its methods in RIG-NOTES addendum so the Studio lane can consume them. DEATHFANG human+werewolf are named Studio test cases per parent.",
+ "scratch": "~/workspace/_wh-work/deathfang-stance-fix/",
+ "started": "2026-10-21T12:10:00-05:00",
+ "starting_record": "roster/deathfang/rig/RIG-NOTES.md + metrics on main; prior lane PROGRESS.md at ~/workspace/_wh-work/deathfang-scratch/ (pipeline df_rig_bake.py + skin_donor.py, tools mirror ~/workspace/_wh-work/deathfang-tools)",
+ "status": "DONE \u2014 PR #486 MERGED 2026-10-22T02:28:45Z (merge commit 2b95bbc7), all gates PASS, state was CLEAN at merge. Fixed GLBs + pipeline scripts + RIG-NOTES addendum + proof set on western-heart main.",
+ "steps": [
+  {
+   "n": 1,
+   "what": "census shipped weights (dominant-region + location-based)",
+   "state": "done"
+  },
+  {
+   "n": 2,
+   "what": "frame-matched ground truth donor vs shipped (probe renders + positions)",
+   "state": "done"
+  },
+  {
+   "n": 3,
+   "what": "diagnosis writeup",
+   "state": "done - diag/DIAGNOSIS.md"
+  },
+  {
+   "n": 4,
+   "what": "human fix bake iteration 1 (frame column + tail-facing head + sanitizer)",
+   "state": "done - column fixed (shoulder tilt +3..+9), head still wrong (tail != facing)"
+  },
+  {
+   "n": 5,
+   "what": "human fix bake iteration 2 (head from donor matrix axes)",
+   "state": "BAKING (bake-human2.log)"
+  },
+  {
+   "n": 6,
+   "what": "probe iteration 2 + own-eyes renders; if head reads right, bake wolf identically",
+   "state": "pending"
+  },
+  {
+   "n": 7,
+   "what": "validate.py + anim_check stretch re-measure both forms; census re-audit",
+   "state": "pending"
+  },
+  {
+   "n": 8,
+   "what": "proof videos + stills + head/shoulder crops both forms; side-by-side sheets vs donor; own-eyes view all",
+   "state": "pending"
+  },
+  {
+   "n": 9,
+   "what": "follow-up PR (fixed GLBs, RIG-NOTES addendum, metrics, pipeline scripts), merge only when CLEAN",
+   "state": "pending"
+  }
+ ],
+ "suspects_to_test": [
+  "Head: direction-only transfer (Vector.rotation_difference minimal arcs, stance + per-frame) carries NO anatomical roll for the head \u2014 head orientation is a swing of rest by minimal arcs; donor neck-segment direction + arc composition can cant the face sideways = 'twisted/contorted'.",
+  "Torso: BVH donor-surface weights (donor bound hunched, broad jacket weights) + trust composition + 2-pass smoothing smear spine levels -> shear/crumple under per-bone pivots.",
+  "Hands: finger/hand weights smeared across chains by the same transfer+smoothing -> crumple in claw pose.",
+  "Hair (human): hair verts secondary weights to spine/shoulder chains drag hair into torso when hunched; head twist compounds it."
+ ],
+ "worktree": "~/workspace/_wh-work/deathfang-stance-fix/wh (sparse blobless clone of mhvnsnt/western-heart main; branch fix/deathfang-stance-20261021 at ship time)",
+ "diagnosis": {
+  "head_twist": "direction-only transfer carries no roll: shipped head cant -43deg vs donor carriage; positions/neck pitch exact. Fix: frame-carried head transfer from donor head evaluated matrix axes (tail dir is 52deg off facing - iteration 1 used it, still wrong; matrix axes are the correct source).",
+  "torso_crumple": "two steps: (a) spine-chain arcs rolled chest: shoulder tilt -17 vs donor +7..+15 -> frame-carried column (hip/shoulder lateral lines); iteration1 shoulder tilt +3..+9 = fixed. (b) skin is 94% capsule fallback (metrics: capsule_fallback 58057/59485): wolf chest dominated by shoulders 24+15%, human torso blends hips+neck+shoulders (mean dom 0.50). Fix: anatomical chain sanitizer in skin_donor (26408/67755 verts changed, 6733.6 mass dropped on human) + sanitizer-restricted smoothing.",
+  "hair": "above-neck verts only ~61% head-chain on human (RightShoulder 9%, Spine2 8%, arms 2%); wolf mane ~31% non-head. Fix: sanitizer head-zone rule (Head+Neck only above neck joint) + head frame fix.",
+  "doc": "diag/DIAGNOSIS.md in lane scratch"
+ },
+ "stretch_regression": {
+  "anim_check_p999": {
+   "shipped_human": [
+    8.77,
+    8.87,
+    9.88
+   ],
+   "fixed3_human": [
+    11.58,
+    11.41,
+    12.95
+   ]
+  },
+  "zone_tool_p999": {
+   "shipped_human": 5.34,
+   "fixed3_human": 13.74,
+   "shipped_wolf": 6.58,
+   "fixed_wolf": 11.67
+  },
+  "bands": "waist p99 3.54->11.56, chest 4.61->9.95, feet improved",
+  "bisect": "V1 frame-only baking now; V2 sanitizer-only queued"
+ },
+ "verified_visual": {
+  "human": "proof-angle idle: natural stance, guard hand at chest, torso straight, head bowed with hair over face on chest",
+  "wolf": "level-bowed head (shipped: ~45deg skull roll), mane one mass",
+  "weights": "human hair zone 100% head-chain (was ~80%)"
+ },
+ "recipe": "df_rig_bake (frame-carried column+head) + skin_donor sanitizer v2 (chain sets + capped bridges) -> diffuse_weights.py 18 passes alpha 0.5 -> patch_skin.py byte-patch JOINTS_0/WEIGHTS_0",
+ "final_measurements": {
+  "human_anim_check_p999": {
+   "Battle_Idle": 4.245,
+   "Skill_01": 4.098,
+   "Skill_03": 4.558,
+   "shipped": [
+    8.77,
+    8.87,
+    9.88
+   ]
+  },
+  "wolf_anim_check_p999": {
+   "Battle_Idle": 6.065,
+   "Skill_01": 6.746,
+   "Skill_02": 7.342,
+   "shipped": [
+    9.96,
+    10.89,
+    12.11
+   ]
+  },
+  "diffusion": "human 18 passes L1 p999 2.0->0.34; wolf 28 passes ->0.31"
+ },
+ "recovery_relaunch_20261021_1919": {
+  "by": "recovery lane (predecessor died in daemon restart)",
+  "inherited_state": "Final bakes DONE: work/human-final.glb + human-final-d.glb (16333308 B), work/wolf-final.glb + wolf-final-d.glb + wolf-final-d28.glb (17397904 B). Validation JSONs present for both finals (humanfinal-*/wolffinal-*). Probe renders hfin_*/wfin_* at phases 0.2/0.5 present. Human proof video render COMPLETED (vid/human, Idle:2 + Skill_03:1, DFVID_OK). Wolf video NOT yet rendered.",
+  "repo_state": "wh/ sparse clone on main @99d5766 (post-#448); branch fix/deathfang-stance-20261021 does NOT exist on remote yet \u2014 no PR opened. Fixed GLBs not yet in repo tree.",
+  "remaining": [
+   "read final metrics/validate JSONs + resolve zone-tool vs anim_check stretch discrepancy for FINALS",
+   "own-eyes view of hfin/wfin probes + human vid frames vs shipped probes",
+   "render wolf proof video (Blender window permitting)",
+   "compose videos + before/after stills",
+   "ship branch + PR (gate-format body), merge only when CLEAN"
+  ]
+ },
+ "pr": 486,
+ "merge_commit": "2b95bbc7b5d16de73c9af2108bf0512a0d139407",
+ "gate_proof": "PR #490 merged: ORIGINAL-vs-FIXED body-integrity sheets (both forms) added to roster/deathfang/rig/proof-stance-fix/ + gate note in RIG-NOTES. Own-eyes verdict: proportions identical, shipped defects visibly removed, no new deformation; pose not matched per owner clarification (integrity is the comparison)."
+}

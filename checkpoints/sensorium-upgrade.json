@@ -1,0 +1,9 @@
+{
+ "task": "Upgrade sensorium + Goodville show tooling: working venv, Goodville-trained style model, pipeline wiring",
+ "repo": "~/workspace/trippedd-studio",
+ "resume_brief": "Upgrade the sensorium (tools/brain/sensorium/ \u2014 read SENSORIUM.md first) and all Goodville-show tooling in ~/workspace/trippedd-studio, per owner directive 2026-10-11 ('upgrade all that shit'). Concrete jobs: (1) Make sensorium actually RUN in this environment \u2014 the ai-qc venv (~/workspace/tools/ai-qc/venv/) is missing and system python lacks sklearn; fix deps properly (persistent venv under ~/workspace, not /tmp). (2) Extend style_hold beyond EP02 labels: train/score against the GOODVILLE key art (assets/references/ep01/source/Goodville - Not South Park.png) so it judges Goodville style-lock, not just EP02 drift. Document its Goodville accuracy honestly. (3) Wire sensorium into the promo pipeline so every render gets taste/smell/sync gates automatically (hook into production/TRIPPEDD_EP01/goodville/promo-15s/ build scripts or a wrapper). (4) Audit + fix any other broken show tooling the promo builds hit (note: disk was at 83% during the last build \u2014 check current usage and clean per the disk law if needed, save-then-clean, never delete unbacked work). (5) Add Preston Blair character-construction checks if feasible: validate character part proportions against the key-art model sheet (head/body ratios per character) as an automated likeness gate \u2014 this is the 'eyes' the owner is asking for. Work on branch feat/sensorium-upgrade off origin/main, commit incrementally, heartbeat ~/workspace/agent-ops/checkpoints/sensorium-upgrade.json every 10 min, open a PR when done (do not merge). Report: what was upgraded, what now runs that didn't before, Goodville style_hold accuracy, what you could NOT fix. Mark done at the end.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-11T14:10:58.780736+00:00"
+}

@@ -1,0 +1,35 @@
+{
+ "task": "Backup 6 files from /home/hatch/ to TeraBox AND GitHub, verify, then delete",
+ "status": "needs_owner",
+ "watchdog": true,
+ "repo": "cn-gigaleak",
+ "resume_brief": "Backup 6 files from /home/hatch/ to GitHub + TeraBox, verify on both, then delete locals. Files: Grim_Adventures.zip (245,444,608B -> cn-gigaleak-grim-adventures release), PPG_flas.rar (38,268,928B -> cn-gigaleak-powerpuff-girls release), CL_Kamp_Kringle_SB.pdf (33,739,790B), Regular Show Style Guide.pdf (28,587,527B), CL_Character_Art_Pack.pdf (23,809,859B), Regular Show_Chars_Descriptions.pdf (9,859,059B) (4 PDFs -> drive-storage or RS repo release). TeraBox requires browser lane (subagents cannot do it) - stage copies under ~/workspace/terabox-staging/cn-gigaleak/ and report to parent for browser delegation. Verify on BOTH before deleting from /home/hatch/. Skip ollama/nltk_data.",
+ "updated_at": "2026-10-15T19:43:02.620727+00:00",
+ "attempts": 3,
+ "github_done": [
+  "Regular.Show_Chars_Descriptions.pdf",
+  "CL_Character_Art_Pack.pdf",
+  "CL_Kamp_Kringle_SB.pdf",
+  "PPG_flas.rar",
+  "Regular.Show.Style.Guide.pdf",
+  "grim-backup-aa",
+  "grim-backup-ab",
+  "grim-backup-ac"
+ ],
+ "terabox_done": [],
+ "deleted": [],
+ "terabox_staged": "~/workspace/terabox-staging/home-hatch-backup/ (6 files, hardlinked, zero extra disk)",
+ "terabox_blocked": "subagent cannot do browser tasks - needs parent delegation for TeraBox upload to /CN-Gigaleak/",
+ "note": "2026-10-15 keep-working pulse: GitHub part VERIFIED DONE \u2014 all 8 assets on mhvnsnt/drive-storage release home-hatch-backup-2026-10-14. Remaining: TeraBox upload+verify (needs parent browser lane; terabox-staging/ has 1.5G staged) then delete /home/hatch/ locals. Not deleted per safe-storage law.",
+ "last_parent_action": {
+  "at": "2026-10-15T11:35:22.397862+00:00",
+  "by": "keep-working-pulse 2026-10-15 07:30 EDT",
+  "action": "resume-spawned"
+ },
+ "blockers": [],
+ "last_heartbeat": "2026-10-15T11:36:27Z",
+ "last_block_probe": "2026-10-15T11:36:37.497616+00:00",
+ "blocker": "TeraBox browser lane unusable: live browser has NO TeraBox session (probe 2026-10-15 07:39 EDT found sign-in missing on terabox.com; Google login fmmg.mars@gmail.com + phone 2FA not signed in). Needs owner sign-in in the live browser; then re-probe with a small upload, then resume.",
+ "github_verification": "GitHub leg VERIFIED 2026-10-15 07:35 EDT: all 8 assets present on mhvnsnt/drive-storage release home-hatch-backup-2026-10-14 (title 'Home-hatch backup 2026-10-14', published 2026-10-15T03:57:18Z). GitHub side DONE \u2014 future resumes must NOT re-upload. Remaining only: TeraBox upload+verify, then delete /home/hatch/ locals.",
+ "notes": "2026-10-15 15:43 EDT watchdog run: (1) /home/hatch/ originals (Grim_Adventures.zip, PPG_flas.rar, 4 PDFs) AND the terabox-staging/home-hatch-backup/ hardlink set are BOTH gone from disk \u2014 removed by an unlogged process (not recorded in disk-cleanup-log.md; not in trash; not found by find). TeraBox leg never completed, so SAFE-STORAGE leg was violated \u2014 BUT GitHub leg fully intact: 8/8 assets on mhvnsnt/drive-storage release home-hatch-backup-2026-10-14, byte sizes exactly match sources (grim 245444608 = aa 104857600 + ab 104857600 + ac 35729408; PPG_flas.rar 38268928; 4 PDFs exact). Nothing lost \u2014 all 6 files recoverable from GitHub. (2) Restaging from the GitHub release into ~/workspace/.staging-home-hatch/ (bg gh download in flight ~15:41 EDT, ~40MB/379MB at ~105KB/s); on completion, concat grim parts -> Grim_Adventures.zip (verify 245444608B) and hardlink all 6 originals into ~/workspace/terabox-staging/home-hatch-backup/ for the TeraBox browser lane. (3) TeraBox probe 15:38 EDT: live browser still SIGNED OUT at terabox.com (Login dialog: Google/Facebook/Apple/email/phone/QR options); no sign-in attempted. BLOCKER: OWNER must sign into TeraBox in the live browser; then a browser lane can upload the 6 staged files to /CN-Gigaleak/ and verify. Nothing left to delete (locals already gone) -> mark done after TeraBox verify. Disk 78% (23G free); re-staging safe. attempts -> 3, escalating to needs_owner: the ONLY remaining work requires the owner's TeraBox sign-in, which no detached run can perform."
+}

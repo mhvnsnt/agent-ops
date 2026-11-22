@@ -1,0 +1,89 @@
+{
+ "audit": {
+  "evidence": [
+   "roster/TRIPO-REGISTRY.md Pantera row (owner-confirmed Leo man Tripo 2026-10-19; Drive provenance correction 2026-10-20; Leopard King UUID 094c2f37)",
+   "docs/ROSTER-COUNT-CANON-2026-10-21.md line 88: 'Per-fighter distinct pulls: Pantera 2 (Leo man - owner-provided via Drive, no UUID; Leopard King 094c2f37)'",
+   "roster/pantera/attires/ATTIRE-SLOTS.md (slot map + provenance per slot)",
+   "GitHub contents API sizes/blobs for all six wired GLBs on main @ 882c5291",
+   "game/js/attires.js ATTIRE_VARIANTS['pantera'] + game/js/assets.js MODEL_URLS pantera keys"
+  ],
+  "not_slots": "attires/classic/pantera-classic.glb (7,625,912 B) is the archived pre-reskin classic build (Snow Leopard's source), never a wired slot; attires/cyborg/ is a concept doc only (CYBORG-88), no model exists.",
+  "tekken_reskins": [
+   {
+    "class": "Tekken 7 King reskin - owner's own first reskin; Tekken-version per 2026-10-21 order",
+    "game_key": "pantera",
+    "name": "T7King P1 reskin (Pantera P1 Original)",
+    "path": "game/assets/models/pantera.glb (full-res source docs/tpose-refs/pantera-t7king/pantera-t7king.glb, 14.7MB)"
+   },
+   {
+    "class": "Reskin of the older classic build (T7 King P1 source) per owner 2026-10-17",
+    "game_key": "pantera-snow-leopard",
+    "name": "Snow Leopard",
+    "path": "roster/pantera/attires/snow-leopard/pantera-snow-leopard.glb (7,434,348 B)"
+   },
+   {
+    "class": "Texture-only Creation Suite reskin on the T7 King base (2026-10-18)",
+    "game_key": "pantera-crimson-rage",
+    "name": "Crimson Rage",
+    "path": "roster/pantera/attires/crimson-rage/pantera-attire5-crimson.glb (14,675,572 B)"
+   },
+   {
+    "class": "Official Tekken 7 Player 2 scheme wired onto the T7King base",
+    "game_key": "pantera-p2",
+    "name": "T7 P2",
+    "path": "roster/pantera/attires/p2-wired/pantera-attire4-p2.glb (14,548,052 B)"
+   }
+  ],
+  "tripo_originals": [
+   {
+    "game_key": "pantera-leoman",
+    "name": "Leo man",
+    "provenance": "Owner-confirmed Tripo model (owner 2026-10-19: 'Leo man is the tripo model for that attire slot 2, the one we had in game for so long and the original tripo model'); delivered owner-provided via Google Drive, NOT a Tripo URL pull (owner correction 2026-10-20). Drive original 23,645,536 B archived in release leoman-restore-20261020 (pantera_leoman_original.glb).",
+    "rig_state": "RIGGED - lab build pantera_leoman_t3real: WH-Canonical-22 rig with real decoded Tekken 3 King clips embedded (king_on_pantera_leoman bank baked on this rig). Not a statue.",
+    "uuid": null,
+    "wired_blob": "3314a2f70ccf2fbe266660ab6e33eb5f7e8d1f22",
+    "wired_path": "roster/pantera/attires/leomon/model.glb",
+    "wired_size": 4414284
+   },
+   {
+    "game_key": "pantera-leopard-king",
+    "name": "Leopard King",
+    "provenance": "Tripo URL pull https://studio.tripo3d.ai/3d-model/094c2f37-1c61-43fb-82ff-7124100a1021 ('tiger humanoid' by jaywillf69). Raw static 23,362,216 B at roster/pantera/attires/leopard-king/model.glb.",
+    "rig_state": "RIGGED - PR #493 build: canonical 49-bone Pantera/King template + Tail1-4. NOTE: owner rejected #493's deformation on sight 2026-10-21 22:41 CDT; a separate re-examination lane owns the deformation fix. This lane only reorders slots; the file itself is untouched.",
+    "uuid": "094c2f37-1c61-43fb-82ff-7124100a1021",
+    "wired_blob": "c114b974b9d8f08bbb06d50df1d5d97e05981e90",
+    "wired_path": "roster/pantera/attires/leopard-king/model-rigged.glb",
+    "wired_size": 81618172
+   }
+  ],
+  "tripo_originals_count": 2
+ },
+ "edits_planned": [
+  "game/js/attires.js - ATTIRE_VARIANTS['pantera'] reorder + labels + comment (default = list[0] via selectedAttireModel, so Leo man becomes the default attire)",
+  "game/js/assets.js - Pantera MODEL_URLS comment updated to new slot numbers (no key targets change; base 'pantera' key untouched - souled vessels ride it)",
+  "roster/pantera/attires/ATTIRE-SLOTS.md - new slot table with provenance per slot + history entry + supersession note",
+  "roster/TRIPO-REGISTRY.md - Pantera exception superseded + Pantera row slot order + history entry"
+ ],
+ "gate_note": "instruction-gate initially failed twice on body format (literal section headers, then backticked non-path tokens in Proof); body fixed, final run SUCCESS; deletion-guard + guard SUCCESS; merged CLEAN with a merge commit.",
+ "lane": "pantera-ladder-reorder",
+ "main_head_at_audit": "882c52912beb60309e1ca5512dcc0b13d8fa7d9c",
+ "notes": [
+  "Owner said slots 1-5 should be Tripo models; records prove only 2 Pantera Tripo originals exist. Reported honestly - slots 1-2 are Tripo, 3-6 are the Tekken reskins in their previous relative order. Nothing invented to fill 3-5.",
+  "Blender busy machine-wide at lane start (kevin heat bake + cs-round2 render) - proof render of new Slot 1 waits for a free Blender slot; no other lane's work killed or interrupted."
+ ],
+ "old_to_new_map": {
+  "1": "Leo man (Tripo) - was slot 2",
+  "2": "Leopard King (Tripo 094c2f37) - was slot 4",
+  "3": "T7King P1 reskin - was slot 1",
+  "4": "Snow Leopard - was slot 3",
+  "5": "Crimson Rage - was slot 5 (unchanged position)",
+  "6": "T7 P2 - was slot 6 (unchanged position)"
+ },
+ "owner_order": "2026-10-21 ~23:14 CDT: his entire one, two, three, four, five should be his Tripo models; Tekken-version reskins towards the back, not one or two; stop showing the reskins, show the Tripo 3D models he put in and made for him. Supersedes the 2026-10-17 Pantera exception (T7King reskin at slot 1).",
+ "pr": "https://github.com/mhvnsnt/western-heart/pull/504 (MERGED, merge commit 4caa0f311acd075e9d480f2e22846ad82e166368)",
+ "proof_render": "~/workspace/your_files/pantera-slot1-leoman-tripo-front-20261021.png (front render of new Slot 1 Leo man from the wired GLB, textured, own-eyes viewed: golden lion mane/head, bare torso, clawed gauntlets, tiger-graphic pants, paw feet, tail)",
+ "repo": "mhvnsnt/western-heart",
+ "rig_work_needed": "None. Both Tripo originals are already rigged and wired (Leo man: WH-Canonical-22 + embedded T3 clips; Leopard King: PR #493 King-template rig). No pulled-but-unwired or statue Pantera Tripo exists in the records.",
+ "status": "done-merged",
+ "verified_on_main": "game/js/attires.js on main @ 4caa0f31 shows the new ladder; default resolves to pantera-leoman (module executed pre-merge)"
+}

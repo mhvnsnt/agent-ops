@@ -1,0 +1,20 @@
+{
+  "attempts": 2,
+  "repo": "western-heart",
+  "resume_brief": "WWE 2K SERIES PULL (Western Heart all-night teardown push). Prior state: animation packs DONE (pushed to wrestling-game PR #1 + Release wwe2k19-animation-packs-v1); 'wwe-2-k-14' archive was MISLABELED = actually SvR2011 PSP (ULUS-10543), true WWE 2K14 still needed. Next: (1) Verify animation packs are still in wrestling-game repo / GitHub release. (2) Search Archive.org metadata for the TRUE WWE 2K14 PS3/Xbox360 (the wwe-2-k-14 identifier was wrong). (3) Resume or start true-2K14 pull ONLY if disk allows (currently ~87%, hard ceiling 88% \u2014 stage tiny files only, no multi-GB downloads without cleanup). (4) For 2K15-2K23 (33-84GB each): do NOT download to VM; research/document acquisition paths in CATALOG.md addendum; stage for TeraBox via browser lane (browser tasks must be delegated to parent \u2014 subagent cannot do browser). (5) Extract wrestler models/CAW parts/animations/arenas from anything pulled. (6) Save to TeraBox (via parent browser delegation) + wrestling-game GitHub repo (branch->PR->merge). (7) Apply WH proprietary renames to teardown files; track old->new in RENAME-MAP.md. CRITICAL LAWS: NEVER-DELETE-GAME-FILES, RESUME-DON'T-REDOWNLOAD (curl -C-/wget -c/aria2c), SAFE-STORAGE-FIRST (TeraBox+GitHub before any cleanup). Catalog: ~/workspace/game-reverse-engineering/wrestling-games/CATALOG.md.",
+  "status": "done",
+  "task": "WWE 2K series pull: verify anim packs, find true WWE 2K14, research 2K15-2K23 acquisition, extract+store+rename",
+  "updated_at": "2026-10-14T21:12:00-04:00",
+  "watchdog": true,
+  "notes": [
+    "Anim packs: verified safe in wrestling-game (teardown/ docs + release wwe2k19-animation-packs-v1 assets). Nothing to resume.",
+    "True WWE 2K14: NOT FOUND on Archive.org (3 candidates checked, all mislabeled/mods). Documented in CATALOG.md addendum.",
+    "WWE 2K14 DLCs (44.6MB): downloaded byte-verified, 12 PS3 PKG unlock stubs cataloged. Release wwe2k14-dlcs-v1 created on wrestling-game with zip asset (44,660,178 bytes verified).",
+    "2K15-2K23: all 8 identifiers re-verified live; priority+URLs+TeraBox spec documented. No VM download (disk 95% emergency).",
+    "RENAME-MAP.md: WWE 2K section appended (anim packs + 12 DLCs, WH names pending owner).",
+    "Owner 20:34 directive honored: killed 688MB re-download + 176MB clone during 95% disk emergency.",
+    "In flight: game-reverse-engineering branch wwe2k-lane-docs pushed, PR pending (push backgrounded).",
+    "Deferred: wrestling-game tree doc for DLCs (zip safe in release; doc safe in game-reverse-engineering).",
+    "PR #4 (game-reverse-engineering) merged. All docs on main. Lane complete."
+  ]
+}

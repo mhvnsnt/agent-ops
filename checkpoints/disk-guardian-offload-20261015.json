@@ -1,0 +1,11 @@
+{
+ "task": "disk-guardian bulk offload: hero-parts-pull (8.2G) + 8 untouched-7d bulk dirs (~1.34G) -> GitHub release bulk-archive-2026-10-15 on mhvnsnt/drive-storage (Drive quota exceeded, GitHub is the pipe)",
+ "repo": "none",
+ "resume_brief": "Resume the disk-guardian bulk offload lane v2. Script: ~/workspace/agent-ops/disk-guardian-offload-20261015.sh, state: ~/workspace/.guardian-offload-20261015. V2 design (disk-safe): tar|split streams 1G parts (no intermediate tar); each part is uploaded to DRAFT GitHub release bulk-archive-2026-10-15 on mhvnsnt/drive-storage, download-back sha256-verified individually, then the part is deleted immediately. A source dir is rm -rf'd ONLY after ALL its parts are verified (verified.list count == parts.sha256 count); deletions logged to ~/workspace/agent-ops/disk-cleanup-log.md. Release published (draft=false) only after every item's source dir is gone. Items: 8 small untouched-7d dirs + hero-parts-pull in 3 pieces (extracted, okko-out, top-level). Script is idempotent: re-run it and it skips completed steps. Heartbeats the checkpoint per part. NEVER delete a source dir before full verification. Abort if df shows >=87%.",
+ "status": "superseded-by-disk-guardian-cron",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-16T07:44:54.543753+00:00",
+ "last_heartbeat": "2026-10-16T01:34:01.750118+00:00",
+ "notes": "\n21:26 lane started, release bulk-archive-2026-10-15 ready\n21:15 v1 killed: tar-to-disk design would have breached 88% ceiling (staging hit 7.5G, disk 86%). v2 streams tar|split with per-part verify+delete. Also: accidentally SIGKILLed gumball lane's 'gh release upload gumball-part-am' (PID 26180) via sloppy pkill - no remote asset was created, local 508559360B segment intact, lane's watchdog resume will redo the upload per its own protocol.\n21:31 lane v2 started\n21:34 lane v2 started\n[Watchdog 2026-10-16 03:57 EDT] Superseded: disk-space-guardian cron owns offload now (auto-migrate process active 03:39, disk 76%). This one-off lane's v2 design notes preserved above. Retired."
+}

@@ -1,0 +1,9 @@
+{
+  "task": "Photo curation + viral content engine",
+  "status": "done",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/money-machine-hq",
+  "resume_brief": "Subagent task: (1) Curate Real's best photos from Instagram @m2villainous (account_id 17841446253082141), Facebook profile (Real M. Heavensent), and ~/workspace/profile-images/ \u2014 download to ~/workspace/social-assets/curated/, inspect each image, pick top 3 for profile pic use, save #1 as ~/workspace/social-assets/profile-pic-best.jpg, write CURATION.md. (2) Build viral content engine doc at /home/hatch/workspace/money-machine-hq/social/viral-engine.md on branch social/playbook-v1 \u2014 brand identity for 'mad scientist shaman outcast turned artist/rapper/content creator/director', 5-7 viral content formats, meme/clip pipeline with free tools, posting rhythm, music tie-in. Don't invent photos of him; don't generate AI images of his likeness.",
+  "updated_at": "2026-10-08T06:25:00-05:00",
+  "attempts": 0
+}

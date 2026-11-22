@@ -1,0 +1,10 @@
+{
+ "task": "Put Pantera in fighting arena with animations: rig body via statue-to-fighter, pull Mixamo fight anims, build arena, render showcase",
+ "repo": "/home/hatch/workspace/game-reverse-engineering",
+ "resume_brief": "Pantera arena animation showcase: (1) Rig King/Pantera FBX body using ~/workspace/tools/statue-to-fighter/statue_to_fighter.py - test on ~/workspace/game-reverse-engineering/tekken7/king/5PMH7G85GYN7P71W3BD1V0249.fbx, may need to join 19 meshes first in Blender. (2) Download Mixamo animations (fighting idle, win pose, intro, punch) - check ~/workspace/tools/ for existing Mixamo tools. (3) Retarget anims to rigged Pantera. (4) Build arena from CC0 assets (Kenney.nl, Quaternius) or existing ~/workspace/ assets. (5) Render 3-4s clip or keyframes with UNIQUE filenames (pantera_arena_*.png/mp4, never overwrite). Keep Pantera textures from ~/workspace/game-reverse-engineering/tekken7/king/pantera/. Tail rig is handled by SEPARATE worker (pantera-tail-rig.json) - do not touch tail. Blender 4.0.2 at ~/workspace/tools/blender/blender-4.0.2-linux-x64/blender, use LD_LIBRARY_PATH=~/workspace/tools/egl-stack/usr/lib/x86_64-linux-gnu and env -u PYTHONPATH. Commit to western-heart repo.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-12T20:49:19.019412+00:00",
+ "notes": "COMPLETE: Pantera rigged to Mixamo skeleton, 3 showcase keyframes rendered (stance, jab, combo), committed to western-heart (PR #2 merged). Tail rig is separate worker."
+}

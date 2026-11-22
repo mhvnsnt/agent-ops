@@ -1,0 +1,10 @@
+{
+ "task": "P16 SoR4 health-rally tranche for Concrete Dragon (backlog IMPROVE_LOOP_BACKLOG.md P16)",
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "P16 health rally: branch off main in ~/workspace/ConcreteDragon; change desperation cost from permanent 10% HP loss to SoR4-style rally health \u2014 bank the cost as recoverable green/rally HP, attacking recovers it, taking hits loses it (per docs/RESEARCH_FIGHTER_MECHANICS.md MAP); headless playtest-verify with screenshots reviewed frame-by-frame (rally banked, recovered via attacking, lost on hit, zero console errors); commit incrementally, branch-PR-merge (never straight to main, never force-push, keep-both on conflicts, syntax-verify after resolution), watch CI green, append docs/CHANGELOG.md entry + backlog shipped note + itch devlog highlights; heartbeat the existing checkpoint, mark done at end. Laws: game must actually work, no fake gameplay, CC0/manifest clean.",
+ "notes": "Dispatched 2026-10-10 08:05 CDT by concrete-dragon-pipeline cron wave 22. Main at 9114cf8, CI Build #75 green. Money arm: itch.io live .99 verified 2026-10-10, needs nothing. | 08:10 CDT worker started: branch p16-rally off main(9114cf8), implementing SoR4 rally in src. | 08:25 CDT: implementation committed (8e8ccfb) on p16-rally; playtest-p16-rally.mjs running headless. | 08:55 CDT: main playtest 23/25. 5/6 shots eyes-reviewed OK. 2 fails diagnosed: (1) rallyfull moment missed because OLD BLOOD kill-heal topped HP to full and forfeited the bank by design \u2014 focused probe running to prove the moment on true full conversion; (2) one resource-load console error under investigation (URL capture in probe). | 09:05 CDT: PR #47 opened (p16-rally -> main). Full playtest re-run in progress (deterministic moment section). CI runs on main push only \u2014 will merge then watch build. | 09:10 CDT DONE: PR #47 merged to main (a17955a), CI build 38057521991 green, 0 open PRs. Goal timeline logged.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T13:59:26.794852+00:00"
+}

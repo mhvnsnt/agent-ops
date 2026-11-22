@@ -1,0 +1,22 @@
+{
+ "task": "PPSSPP debugger trace to crack Tekken 6 DATA401 distance formula",
+ "status": "superseded-by-wh-tekken6-decrypt6.json",
+ "watchdog": true,
+ "repo": "western-heart",
+ "resume_brief": "T6 distance formula research complete. Tried: standard DEXT (fails at 1065 bytes), brute-force DEXT (213KB partial), EBOOT RE (found table, complex logic), alternative formulas (failed). Core issue: dsym=21 decodes correctly but DBASE[21]=1537 gives impossible distance. PPSSPP debugger is the definitive solution but requires building from source (1-2 days). See DYNAMIC-BLOCKER-2026-10-16.md and research notes.",
+ "updated_at": "2026-10-17T12:56:00+00:00",
+ "attempts": 1,
+ "findings": {
+  "working_files": "20 files, 144 bytes each, metadata only (0.1% of content)",
+  "stuck_files": "56 files, 99.9% of content (actual models/stages)",
+  "failure_point": "dsym=21, dist=1721 > outlen=1065, Huffman decoding verified correct",
+  "tried": [
+   "standard DEXT",
+   "brute-force DEXT",
+   "EBOOT disassembly",
+   "alternative formulas"
+  ],
+  "recommendation": "PPSSPP WebSocket debugger for ground-truth (dsym, dist) pairs, OR pivot to TTT2 models"
+ },
+ "notes": "[watchdog 2026-10-17T12:56Z] Resumed as oldest active managed checkpoint. Verified: T6 PSP decrypt6 workdir (~/workspace/game-reverse-engineering/tekken6/work/decrypt6) is off local disk; no T6 PSP decrypt commits in western-heart since PR #187 (2026-10-16); distance formula still unresolved per wh-tekken6-decrypt6.json (needs_owner since 2026-10-16 08:05Z, 20/76 byte-exact) and wh-tekken6-100.json (blocked, blocker re-verified 2026-10-17T05:57Z). This checkpoint's deliverable (research + recommendation, incl. PPSSPP-trace and TTT2-pivot options) was completed 2026-10-16 and consumed by the decrypt6 lane, which lists the PPSSPP trace as its own next option. No PPSSPP build-from-source started here (1-2 day effort, owned by decrypt6 lane which awaits owner decision; starting one would duplicate parked work). Marking superseded by wh-tekken6-decrypt6.json; findings preserved."
+}

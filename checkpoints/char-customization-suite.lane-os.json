@@ -1,0 +1,10 @@
+{
+ "task": "Lane: open-source asset pulls (CC0 packs, hair, decal techniques) + ATTRIBUTION.md",
+ "repo": "/home/hatch/workspace/game-sweep/cc-os",
+ "resume_brief": "Resume: LANE-OPEN SOURCE worker. Work complete: PR #24 open (https://github.com/mhvnsnt/AshLanev2/pull/24). Branch feature/opensource-pulls pushed with docs/customization/ATTRIBUTION.md + scripts/customization pullers. Staging at ~/workspace/customization-pulls/ (~70MB: kaykit, kenney, quaternius/hair, hair/dread-ponytail, MANIFEST.md, notes/decal-techniques.md). All licenses verified CC0 except MB-Lab (AGPL, reference-only) and MakeHuman (CC0 exception for exports). Nothing further to do; lane closed.",
+ "watchdog": true,
+ "status": "done",
+ "notes": "PR #24 open and verified. Disk 82%. All pulls license-verified.",
+ "attempts": 0,
+ "updated_at": "2026-10-09T02:44:00.290326+00:00"
+}

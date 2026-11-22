@@ -1,0 +1,10 @@
+{
+  "task": "BioMechania line BRAND names: study real mech naming (official + fan communities) from Zoids/Transformers/Gundam/Evangelion/Bionicle/Kamen Rider/Power Rangers, then propose better brand names per line, MDickie-twisted, collision-checked",
+  "repo": "/home/hatch/workspace/BioMechania",
+  "resume_brief": "Brand-name research + proposal round for BioMechania. Owner correction (2026-10-09): the 9 anchors (SKITTER, POUNDCAKE, VANGEL, VERNIER, ZOYD, FORMCHAIN, MASKJACK, HENSHIN, RANGERDANGER) are approved as INDIVIDUAL mech names \u2014 don't touch them. The 13 LINE brand names (ANTSY, HEFT, BANGER, VESPERS, SORTIE, BESTIARY, PACKLAW, SWITCHFRAME, TOTEMFORGE, KICKFORGE, COLORCORPS, JETWASH, PATCHGANG) were rejected as not good enough. TASK: (1) RESEARCH real naming: official mech names and naming patterns from Zoids (Blade Liger, Geno Saurer...), Transformers, Gundam (model designations + names), Evangelion, Bionicle (Matoran language patterns), Kamen Rider, Power Rangers (zord names) \u2014 AND real fan-community naming (fan wikis, custom builds, fan-made mechs) for how fans name lines/units. Document the patterns you find (compounds, designations, language families). (2) PROPOSE new brand names for all 13 lines built FROM those patterns, MDickie-style proprietary twists (evoke the source, legally distinct), web-check each for trademark/franchise collision (hardest bar \u2014 brands are the most visible). Deliverable: new section in docs/MECH_NAMING_SLATE.md (same research/mech-naming-slate branch \u2014 pull it first, don't clobber the 184 names) with brand proposals per line, pattern notes, collision checks. Pushed, not merged \u2014 owner picks. Report back the 13 proposed brands. Standing rules: heartbeat this checkpoint, branch->PR only, disk <=75%.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-10T04:10:03.914290+00:00",
+  "notes": "Completed by parent 2026-10-10 after 2 daemon-restart worker deaths: BRAND NAMES v2 section appended to docs/MECH_NAMING_SLATE.md on research/mech-naming-slate (commit 69b578c, verified on origin). 13 v2 brands, collision-checked. Owner picks."
+}

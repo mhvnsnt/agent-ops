@@ -1,0 +1,10 @@
+{
+ "attempts": 2,
+ "repo": "~/workspace/ConcreteDragon",
+ "resume_brief": "Combat fix task for ConcreteDragon branch feature/cd-menu-combat-overhaul, game-3d/src/main.js only. Steps: (1) read main.js fully, (2) find/fix teleporting root-motion/state-snap bug, (3) fix jump attacks, (4) add animation blending on state changes, (5) add 3-hit jab string, launcher->air juggle, 1-2 supers with meter, wire to touch controls, (6) check build/asset-manifest.json for unused anim clips, (7) run node build.mjs in game-3d and smoke test. Commit incrementally to branch. Do NOT touch template.html or menu HTML/CSS, no videos/promos.",
+ "status": "done",
+ "task": "Concrete Dragon combat fix: teleporting bug, animation blending, more combos/supers, jump attacks",
+ "updated_at": "2026-10-10T00:43:07.320534+00:00",
+ "watchdog": true,
+ "notes": "Watchdog resume 2026-10-09 18:05 CDT (attempt 2). State found: branch feature/cd-menu-combat-overhaul, last combat commit 0c57934 covered clip-freeze aliasing, root-motion lunges via startTravel, faceNearestEnemy snap fix, dive-kick active window, Melee_Block_Hit/Spawn_Ground wiring, crossfade 0.08->0.12. main.js on disk == HEAD (5484 lines). REMAINING from brief: (a) verify no other teleporting root-motion/state-snap paths, (b) finish jump attacks, (c) systematic animation blending on state changes, (d) 3-hit jab string + launcher->air juggle + 1-2 supers with meter + touch wiring, (e) unused-clip audit of build/asset-manifest.json, (f) node build.mjs + smoke test."
+}

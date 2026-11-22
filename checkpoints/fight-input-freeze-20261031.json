@@ -1,0 +1,12 @@
+{
+ "attempts": 1,
+ "notes": "LANE COMPLETE 2026-10-31 15:32 CDT. PR #1458 merged (main 0306417f, all 14 checks green), republished (deploy tip c5a929ec on gh-pages-m1-20261029; live manifest = 0306417f / 2128 files / 988,808,801 B; live JS verified carrying the fix; check_module_graph exit 0 on the final tree). Handoff doc on main: docs/tech/FIGHT-INPUT-FREEZE-FIX-2026-10-31.md + completion comment on PR #1458. Evidence in ~/workspace/your_files/wh-fight-freeze-fix-20261031/ (repro logs for both symptoms + acceptance log + README). ACCEPTANCE GAP (environment, not game): the in-fight press battery + fight screenshot could not be completed on this VM (daemon restarts, swiftshader starvation); the fixed tree loads the exact repro matchup cleanly (49.7s match load, both fighters bound, no bounce/error). Recommend parent confirm the press battery on the owner's phone or a quiet VM. Open threads handed off in the PR comment: Pantera stance-fit/current-action inconsistency (stance lane); Burger 3,4 + Pantera string unmapped data (step-plan lanes) - those moves now present with bank generic animations meanwhile.",
+ "progress_seq": 12,
+ "repo": "mhvnsnt/western-heart",
+ "resume_brief": "Lane restarted after daemon kill (first run landed nothing). Reproduce owner symptoms (fight kicks to stage select; button inputs freeze animations) on a LOCALLY SERVED main@d27629c1 tree with the _playverify-20261030 harness (Chromium cannot reach live site through the egress proxy). Prime suspect: t3anims.js T7_STANCES changes from PRs #1368/#1371. Then bisect, fix root cause via instruction-gate PR (Git Data API), republish with build_pages.py --shell-only --core as a Git Data API delta on deploy tip 6e56f2d3, acceptance run + handoff doc docs/tech/FIGHT-INPUT-FREEZE-FIX-2026-10-31.md.",
+ "status": "complete",
+ "task": "FIGHT INPUT FREEZE + STAGE-SELECT KICK fix (western-heart): reproduce on local main@d27629c1 tree, bisect 05c5e851..d27629c1, root-cause fix via instruction-gate PR, republish, acceptance run",
+ "updated_at": "2026-10-31T20:32:00Z",
+ "watchdog": true,
+ "workdir": "~/workspace/_fightfreeze-20261031/"
+}

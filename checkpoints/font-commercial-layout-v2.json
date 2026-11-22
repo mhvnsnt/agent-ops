@@ -1,0 +1,9 @@
+{
+ "task": "Font commercial generator layout v2: big title within safe area, small tagline/CTA in margins; re-render Block Burner commercial",
+ "repo": "mhvnsnt/font-wizard",
+ "resume_brief": "Edit ~/workspace/font-wizard/pipeline/make_commercial.py for new layout (title 200-220px within 5% safe inset; tagline/CTA 60-80px lower-third margins; end card font name big gold), re-render Block Burner commercial with BUY IT./WE made THIS, verify frames, commit branch->PR->merge, upload MP4 via remote-storage, report URL. Do NOT post to YouTube.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T12:20:00-05:00"
+}

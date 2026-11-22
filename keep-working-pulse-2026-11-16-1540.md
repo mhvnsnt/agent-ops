@@ -1,0 +1,11 @@
+# Keep-working pulse — 2026-11-16 15:40 EST
+
+- Subagents: 6B 41st successor (281dd0e3) running, active ~35s ago — the interrupted 40th successor was already superseded by the watchdog; no action. CEILING W6 + W8+W9 lanes running, active seconds ago. Theft-track coordinator (ff938959) running, its 4 legal-research tracks all completed ~15:36–15:44 EST. Lightning recovery browser check completed ~15:35 EST.
+- Watch item — V71 deploy (36d4126e): idle ~58 min (was ~27 min at 15:10) — still regressing; owned by chat 57f66fac, not mine to steer. Flagging only.
+- Watch item — CEILING coordinator (6a87b5c3): quiet ~29 min (was active 1s ago at 15:10). Its child lanes W6/W8+W9 are active, so CEILING work itself is moving; coordinator quiet only. Flagging only.
+- Older stored lanes idle for days (bun ~41h, Wizard Gang ~70h) — long-lived, not failed. No failed agents in this run's list beyond the already-superseded 40th successor.
+- Managed checkpoints: cn-gigaleak-archiveorg-pull.json 15:33 (~8 min ago) — fresh. gap-closure-w4d-dolphin-route3 (queued) / concrete-dragon-improve-loop (paused) / charfix-worker-batch3 (paused), all 15:12 with watchdog=True — parked by design, not stalled-running. No resume by this pulse. Dream Girl quality loop run file 15:25 — moving.
+- Disk: 79% (117G/150G on /home/hatch, 33G free) — below 85% threshold, improved from 81% at 15:10. No action; disk-full-cleanup worker owns it.
+- Grokbot: no new owner proof file. proofs/ last activity Nov 3, grokbot-handoffs/incoming empty since Oct 14, grokbot-learn.json status done since Oct 14. No new patterns.
+- PRs: physics-playground-pwa 10 open (newest #161, Nov 10 docs retraction); dream-girl #89 DO NOT MERGE + #9 review-only — unchanged; western-heart 10 open, several marked proof/do-not-merge; cape-jones none. build-a-bitch / concrete-dragon / wizard-gang do not resolve under mhvnsnt/ with those names (different repo names) — not checked this run. Nothing green+mergeable identified; merging is the coordinator's call, not a pulse action.
+- Verdict: work is moving overall — 6B follow-up lane live (41st successor), CEILING child lanes active, theft-track research landed. Two watch items flagged only (V71 deploy idle, CEILING coordinator quiet) — both other-chat owned, no action taken this run.

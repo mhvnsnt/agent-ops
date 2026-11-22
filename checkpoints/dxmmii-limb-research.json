@@ -1,0 +1,9 @@
+{
+  "task": "Web research: Goro/Kintaro rig files + four-armed character rigging techniques for DXMMII detachable extra arms",
+  "status": "done",
+  "watchdog": true,
+  "repo": "western-heart",
+  "resume_brief": "Research complete. Report at ~/workspace/dxmmii-limbs/RESEARCH.md. Key finds: Goro MK Onslaught FBX with in-game bones (DeviantArt), MK9 Goro+Kintaro Steam Workshop packs, Rigify multi-arm support, modular-mesh + bone-scaling + blend-shape technique for detach/grow/retract.",
+  "updated_at": "2026-10-16T08:10:00Z",
+  "attempts": 0
+}

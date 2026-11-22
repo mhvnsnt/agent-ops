@@ -1,0 +1,12 @@
+{
+ "task": "T7 stance batch: bake real Tekken 7 format-200/0xC8 stances onto 12 Western Heart fighters (Diablo, Skull, Retsu, Saku Ra, Sha, Phantom, Gyou, Tobi, Gashadokuro, Aotsuki, Nightwolf, Chordz) and wire each into the game via the T7_STANCES path (or the generalized T7 loader if it lands on main), one instruction-gate PR per fighter, self-merge green. Deferred: Burger (Claude re-rig), Purple Rain (rig-fix lane), Negativo (Claude's).",
+ "repo": "mhvnsnt/western-heart",
+ "workdir": "/home/hatch/workspace/_stance-batch-20261031",
+ "resume_brief": "T7 stance batch lane. Per fighter: (1) prove T7 base from game/assets/anim/t7/clip-maps/ + CANON.md + docs/movesets/T7-CLIP-MAPPING-2026-10-30.md; if base or a 0xC8 stance clip can't be proven from GRE release t7-rotsm-clips-v1 banks, mark UNMAPPED with evidence. (2) Control test with tools/anim/t7_c8_control_test.py on target rig (ground contact, hip/head heights, loop seam, no root drift) must PASS. (3) Bake via t7_c8_pantera_stance_bake.py adapted per fighter. (4) Wire via T7_STANCES in game/js/t3anims.js (check main first for the generalized T7 loader; use it if landed), own PR per fighter, instruction-gate format, zero deletions, self-merge when MERGEABLE + checks green. Blender runs short + non-overlapping with Demonio/PurpleRain lanes. Root motion: motbin distance always 0; stances in-place, raw root channel only.",
+ "status": "complete",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-31T13:19:50.030998+00:00",
+ "progress_seq": 2,
+ "notes": "Lane started 2026-10-31 ~08:14 CDT. Main at start: 6b82c649 (Claude loader PR not yet landed; #1377 open). Fighters pending: Diablo, Skull, Retsu, Saku Ra, Sha, Phantom, Gyou, Tobi, Gashadokuro, Aotsuki, Nightwolf, Chordz. || COMPLETE 2026-10-31: batch found ALREADY LANDED by sibling lane (PR #1368 19f5ac0c = 11 of 12; PR #1371 d27629c1 = Chordz + deferred trio). This lane verified on main 6b82c649: per-bank t7_source provenance (0xC8 sKAM00_ clips), loop seams 0.12-1.52deg, root first=last (no drift; jsonToClip skips root_t anyway), all 12 bank bindings match bankIdFor/FIGHTER_BANK, live Pages 200 for bryan/stance.json + lars/skeleton.json. No new PRs \u2014 no duplicate work. Deferred trio (burger/purplerain/negativo) also already wired in T7_STANCES by #1368/#1371."
+}

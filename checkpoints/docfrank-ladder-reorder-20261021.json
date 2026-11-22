@@ -1,0 +1,25 @@
+{
+  "notes": [
+    "BEFORE ladder: [doc-frank BASE(Bosco base GLB), doc-frank-big, wowomomo pair, hood pair, frankenstein pair, doc-frank-machine-shop RESKIN]. Player default=ladder[0]=doc-frank base. Roster main entry model=doc-frank-machine-shop (reskin). No MODEL_URLS key exists for attire1/pre-transform/model.glb (Attire 1's own pre-form GLB).",
+    "Provenance verified from READMEs: A1 post=Tripo 2c6cff79; A2 pair=Tripo; A3 base=Tripo f40c7cde; A4 pair=Tripo 2bea6cac/690d28a2; machine-shop=texture reskin of base doc-frank.glb (PR #263); base doc-frank.glb=Bosconovitch base attire.",
+    "EDITS: assets.js +key doc-frank-a1 -> attire1/pre-transform/model.glb; attires.js ladder reordered (A1 pair, A2 pair, A3 pair, A4 pair, base, machine-shop) + labels w/ provenance; roster-full.js docfrank.model doc-frank-machine-shop -> doc-frank-a1; guard test OWNERSHIP docfrank += doc-frank-a1; ATTIRE-SLOTS.md rewritten w/ provenance per slot.",
+    "PROOF: probe ALL PASS (defaults=doc-frank-a1 both paths); pose export through real t3anims on renamed a1 GLB: 669 clips, stance@40% shoulders +20.8 head +28.7 pelvis -2.1, 0 NaN; front render viewed by agent (upright, forward, drunken guard).",
+    "GLB FIX: attire1/pre-transform/model.glb bone names were raw Tripo descriptive names -> canonBoneName null -> analyzeRig null (could never animate). Renamed 51 joint nodes to canonical twin names (base doc-frank.glb, structure verified 0 mismatches); BIN chunk byte-identical. Script: roster/doc-frank/bind-fix/rename_bones.py.",
+    "STATICS in forefront slots: A1 transformed, A2 base+transformed, A3 transformed, A4 base+transformed (skins=0) - reported, not rigged per lane order.",
+    "Gate fixes during PR: full exact section headings required; every deviation bullet needs its own #ref (used #465)."
+  ],
+  "owner_order": "2026-10-21 ~19:08 CDT: Tripo 3D models at the forefront (slots 1-4) for Doc Frank like every other character; Bosconovitch base model + reskins/retextures ladder BACK behind them. Defaults must resolve to Tripo Attire 1, not base model or machine-shop reskin.",
+  "repo": "mhvnsnt/western-heart",
+  "started": "2026-10-21T19:10:00-05:00",
+  "steps": {
+    "attire_slots_md": "done",
+    "audit": "done",
+    "checkpoint": "done",
+    "defaults": "done",
+    "pr": "done",
+    "proof": "done",
+    "reorder": "done"
+  },
+  "task": "DOC FRANK ATTIRE LADDER REORDER",
+  "result": "PR #483 MERGED 2026-10-22T02:08:20Z, merge commit 6d02746bbee9e6de1bac8f2041882be7a9b4a5b1. All gates PASS (instruction-gate, deletion-guard, guard). Merged state re-verified on origin/main: ladder order, roster model doc-frank-a1, canonical GLB bone names."
+}

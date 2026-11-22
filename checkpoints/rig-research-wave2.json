@@ -1,0 +1,10 @@
+{
+  "attempts": 0,
+  "repo": "/home/hatch/workspace/game-sweep/AshLanev2",
+  "resume_brief": "Continue researching open-source rigging/skinning/retargeting tools. Read ~/workspace/agent-ops/checkpoints/rig-tools.json to see what's already cataloged, then research MORE. Append findings to rig-tools.json. Write top-5 to ~/workspace/charfix/research-wave2.md.",
+  "status": "done",
+  "task": "tool research wave 2",
+  "updated_at": "2026-10-08T04:35:00+00:00",
+  "watchdog": true,
+  "notes": "Wave 2 complete: 30 new tools appended to rig-tools.json (49 total). Top-5 writeup at ~/workspace/charfix/research-wave2.md. Nothing installed; game repo untouched. Next wave could cover: DemBones license confirmation, Puppeteer/MagicArticulate GPU-box trial, Manifold pull-in, mocapsmooth+animsmith wired into anim QA."
+}

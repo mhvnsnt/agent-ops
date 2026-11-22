@@ -1,0 +1,10 @@
+{
+  "task": "EP02 full sound design pass: BBQ sizzle/tongs, fire crackle, pencil writing, Static laughs, basketball dribbles, Kiko emotional BGM, fireworks",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/trippedd-studio",
+  "resume_brief": "Build sound design for wizard-gang-ep02-final-v3.mp4 (use v4 if exists). Owner notes in OWNER-REVIEW-2026-10-10.md SOUND DESIGN section. Download CC0 SFX via ~/workspace/free-apis/sfx-downloader.py (Openverse API). Synthesize missing ones with numpy/scipy. Mix: SFX under dialogue (-6dB duck), don't touch pilot 0-50s, peak -1.0dB. Output wizard-gang-ep02-sounddesign-v1.mp4 + stems in ~/workspace/ep02-repair-work/sfx/. Timing: BBQ 2:10-2:20 (flip at 2:16), fire+pencil 2:20-2:30 (pencil stops 2:22-2:26), tongs 2:40-2:43, laughs 2:46/2:49, basketball 3:10-3:16, Kiko BGM 4:59, fireworks 5:05-end.",
+  "updated_at": "2026-10-10T21:35:00Z",
+  "attempts": 0,
+  "notes": "Complete. Output: wizard-gang-ep02-sounddesign-v1.mp4 (152MB, 5:45, peak -1.0dB). All SFX synthesized (no licensing issues). Laughs verified already in dialogue. Stem saved."
+}

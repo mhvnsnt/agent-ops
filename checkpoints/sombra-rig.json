@@ -1,0 +1,6 @@
+{"task": "Rig SOMBRA_NEGRA.glb with 58-joint Mixamo-compatible skeleton. Owner approved.",
+ "status": "done", "watchdog": false, "repo": "~/workspace/bannon-video-pipe",
+ "method": "blender_autorig.py (AshLanev2 rig-tools) with JAGER hierarchy JSON + surface-heat fallback",
+ "result": "assets/models/SOMBRA_NEGRA_rigged.glb: 58 Mixamo joints (exact match to JAGER/BANNON), 1 skin, 22 meshes, 18 materials preserved. Committed to bannon-video-pipe/repo.",
+ "proof": "T-pose render verified visually - white face paint, skeleton vest, T-pose correct, textures intact",
+ "updated_at": "2026-10-08T09:25:00-04:00", "attempts": 0}

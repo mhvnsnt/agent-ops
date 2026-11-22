@@ -1,0 +1,10 @@
+{
+  "task": "Urban Reign ISO re-download + stage extraction for Western Heart chimera build Game 6",
+  "repo": "~/workspace/game-reverse-engineering/urban-reign",
+  "resume_brief": "Re-download Urban Reign PS2 ISO (4.14GB) from Internet Archive item urban-reign-usa_202608 to ~/workspace/game-reverse-engineering/urban-reign/urban-reign-usa.iso. Verify size/integrity. Map file structure, identify stage/arena data, extract stage/environment files (PS2 formats). Document in TEARDOWN.md in the same dir. Push teardown docs to western-heart repo teardown/urban-reign/ via branch->PR->merge. If disk gets tight: STOP and report, never delete anything. Download may be resumable if a partial file exists.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 1,
+  "updated_at": "2026-10-13T07:54:05.322993+00:00",
+  "notes": "DONE 2026-10-13: ISO downloaded (4,140,924,928 bytes, MD5 7de3002510bdf1397d3fbc5b94158377). File structure mapped: 2 AFS archives (DVD000: 2431 files incl. 7 stage .ppk packages + 100 mission .ppks; DVD001: 1173 files, movies+audio). PPK format identified (magic ppk\\0). TEARDOWN.md written. Pushing to western-heart next."
+}

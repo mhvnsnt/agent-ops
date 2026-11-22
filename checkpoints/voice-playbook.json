@@ -1,0 +1,9 @@
+{
+ "task": "Build Real's Voice Playbook: his personal business-voice guide (formal/informal code-switching)",
+ "repo": "/home/hatch/workspace",
+ "resume_brief": "Build REAL'S VOICE PLAYBOOK at ~/workspace/voice/VOICE-PLAYBOOK.md. Owner (Real / Marquis Deshaun Whitacre, artist/rapper/builder) asked: 'we need to get my voice and the way I talk and the way I say things down. When I'm formal and informal doing business, speaking to companies, all different type of shit.' FIRST read ~/workspace/money-machine-hq/social/VOICE-GUIDE.md so you do not duplicate it \u2014 that covers his PAGE voices; this is the PERSONAL business-voice layer. The playbook must cover: (1) his natural voice (informal, direct, street-real) with examples drawn from his actual messages; (2) business-formal voice for DMs to prospects, emails, talking to companies \u2014 same man, cleaned up, not fake; (3) on-camera/social voice; (4) code-switching guide: which voice for which situation, with concrete before/after rewrites of the same message in each register; (5) words/phrases to avoid in business contexts; (6) his story in 3 lengths (one-liner, short paragraph, full) for intros and pitches. Ground everything in his real words and manner \u2014 no corporate-speak, no guru fluff. Nothing publishes or sends. Write the file, heartbeat the checkpoint, mark done, report back a tight summary.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-08T15:36:59.559679+00:00"
+}

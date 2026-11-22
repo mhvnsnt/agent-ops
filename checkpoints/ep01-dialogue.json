@@ -1,0 +1,9 @@
+{
+  "task": "EP01 dialogue insertion: 5 lines/SFX into wizard-gang-ep01-16x9.mp4",
+  "status": "done",
+  "watchdog": true,
+  "repo": "trippedd-studio",
+  "resume_brief": "Insert 5 dialogue/SFX elements into ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/wizard-gang-ep01-16x9.mp4 (5:00, 300.16s) using ChatterboxTTS zero-shot with weights at ~/workspace/voice-clone-work/cb_weights/ and refs in ~/workspace/voice-clone-work/<character>/. Elements: (1) 0:04 Ashes 'yes, it's time... The wizards... Have.. Arrived' evil villain; (2) 20.5-27s Static+Cipher Beavis/Butthead laughing; (3) 27-32s chain rattle SFX; (4) 0:33 Sombra Negra 'I think I've been here before' (Damian Priest voice); (5) 0:39 Kiko 'Check out my robe!' (3-layer song voice stack). Mix into existing audio, no replacement. Deliver ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/wizard-gang-ep01-16x9-dialogue-v1.mp4 (H.264 yuv420p +faststart). Commit to branch, PR, merge. Verify durations match within 0.1s and each line audible at its timestamp.",
+  "updated_at": "2026-10-12T23:35:00-05:00",
+  "attempts": 4
+}

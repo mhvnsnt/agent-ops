@@ -1,0 +1,10 @@
+{
+ "task": "Retire the original AshLane repo: rename to AshLane-prototype, pull valuable content into AshLanev2 non-destructively, mark retired.",
+ "repo": "~/workspace/game-sweep/AshLanev2",
+ "resume_brief": "Retire the original AshLane: (1) inventory mhvnsnt/AshLane vs mhvnsnt/AshLanev2 \u2014 list what the original has that V2 lacks; (2) rename GitHub repo mhvnsnt/AshLane to mhvnsnt/AshLane-prototype (gh repo rename, non-destructive, creates redirect) and local dir ~/workspace/game-sweep/AshLane to AshLane-prototype; (3) selectively pull valuable additive content (art, docs, assets \u2014 NEVER overwrite V2 code) from the original into AshLanev2 via branch + PR; (4) mark the original retired with a README banner pointing to AshLanev2. Heartbeat checkpoint, mark done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-08T21:06:11.163663+00:00",
+ "notes": "All steps complete: inventory done (31 files pulled), GitHub renamed to AshLane-prototype, local dir renamed, V2 PR #23 open (unmerged), prototype README banner pushed."
+}

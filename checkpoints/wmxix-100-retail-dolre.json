@@ -1,0 +1,12 @@
+{
+  "task": "DOL VERTEX-DECODER RE for WMXIX 100% Retail — find the YOBJ vertex decoder in main.dol (file-type table at DOL offset 0x30B2B0 / vaddr 0x8030E2B0), trace XREFs to YOBJ dispatch, derive the s16x3 batch decoding, deliver decode_yobj_verts or a precise decoder pseudocode report",
+  "status": "done",
+  "watchdog": true,
+  "repo": "~/workspace/wmxix-mod-testbed",
+  "resume_brief": "DONE (partial). DOL extracted (work/dol-re/main.dol). Loader RE'd (0x8007A71C/0x8007AACC, POF0 relocation). s16x3 proven as triangle-strip positions (/64). decode_yobj_verts delivered in tools/yobj_vertex_decode.py. OPEN: Table1/Table2 strip boundaries, batch->bone skinning mapping. See docs/YOBJ-DOL-DECODER-REPORT.md.",
+  "updated_at": "2026-10-16T00:30:00-04:00",
+  "attempts": 0,
+  "result": "positions solved, skinning assembly open",
+  "report": "teardown/wwe-wrestlemania-xix/docs/YOBJ-DOL-DECODER-REPORT.md",
+  "decoder": "teardown/wwe-wrestlemania-xix/tools/yobj_vertex_decode.py"
+}

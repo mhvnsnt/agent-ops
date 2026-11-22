@@ -1,0 +1,25 @@
+## Owner instruction (verbatim quote)
+"Fix all characters who model key is incorrectly painted at the wrong character"
+
+## Method the owner specified
+The owner's model-key order sent the full roster through an audit (PR #418, docs/MODEL-KEY-AUDIT-2026-10-21.md). The audit found Zui's Tripo A1/A2 GLBs sitting in roster/zui/attires/ with NO MODEL_URLS keys — unreachable in game — and named the fix a roster-lane job ("Wiring his Tripos in is a roster-lane job"). Standing owner law (2026-10-18, roster/zui/ATTIRE-SLOTS.md): a Tripo model the owner made is the fighter's main attire (Attire 1), wired automatically; the steve-fox.glb base designated "canon = Zui" stays wired as an alternate.
+
+## Method actually used
+1. Inventory by evidence: ATTIRE-SLOTS.md + TRIPO-REGISTRY.md fix A1 = roster/zui/attires/attire1/model.glb "Drunken Monk" Tripo (20,699,580 B, blob 285049e6) as the DEFAULT slot and A2 = roster/zui/attires/attire2/model.glb "Rework v2" (22,441,284 B, blob feebe307). Both validated: glTF 2.0 magic + full parse; A1 = 1 mesh / 1 textured material / 3 embedded images; A2 = 46 meshes / 29 textured materials / 58 images / 1 skin.
+2. Wiring (Zui's entries only): MODEL_URLS keys `zui-attire1` / `zui-attire2` in game/js/assets.js; `ATTIRE_VARIANTS['zui']` in game/js/attires.js with the Tripo A1 as default (list head), A2 second, the steve-fox canon base + zui_alt1/zui_alt2 T7 reskins laddering back as alternates; game/js/roster-full.js zui `model:` 'steve-fox' -> 'zui-attire1' (the enemy/raw path reads the raw roster field, per the PR #418 audit). Nothing deleted; steve-fox.glb untouched and still the five souls' declared base.
+3. Guard: game/tests/model-key-guard.test.mjs OWNERSHIP table graduated for zui (own = [zui-attire1, zui-attire2], base = steve-fox retained as declared alternate), exactly as the guard's own header prescribes when a fighter's own model is wired; the audit doc, ATTIRE-SLOTS, TRIPO-REGISTRY and MODEL-INVENTORY were updated in step.
+4. Front render of the Tripo A1 with the repo tpose tool (Cycles, white bg), viewed with my own eyes before inclusion.
+
+## Deviations (none / list, each with owner approval link)
+- Render axis: this Tripo faces +X on import while the repo tool's front camera assumes a -Y-facing model turned to -X, so the tool's side camera produced the face-on view; the tpose commit landed the two PNGs swapped vs their names, and this PR swaps the contents so names match content — `docs/tpose-refs/zui/a1_front.png` is the face-on front (sha256 89c6c0e4...), `docs/tpose-refs/zui/a1_side.png` is the profile (sha256 cb5ceb67...), both own-eyes verified. Tool and model untouched. https://github.com/mhvnsnt/western-heart/blob/main/docs/tpose-refs/_tools/tpose_render_cycles_faceY.py
+- Render source copy: the front image was rendered from a texture-downscaled (1024px) decompressed copy after two full-size render attempts were OOM-killed (exit 137) under this VM's parallel-lane RAM pressure; geometry is the same gltf-transform output, only texture resolution was reduced on the render copy. The repo model file is the untouched original. https://github.com/mhvnsnt/western-heart/blob/main/roster/zui/attires/attire1/model.glb
+
+## Proof (paths to files, frames, test output)
+- Resolution proof executed on this branch (real `game/js/roster-full.js` + `game/js/attires.js` + `game/js/assets.js`, same chain as the guard): ZUI playerKey=zui-attire1, enemyKey=zui-attire1; variants = [zui-attire1 (default), zui-attire2, steve-fox, zui_alt1, zui_alt2]. Pre-fix, both paths resolved 'steve-fox' and his Tripos were unreachable.
+- Isolation: roster-wide resolved-path diff pre/post = exactly one added path (`roster/zui/attires/attire1/model.glb`). No other fighter's resolution changed; the diff touches only Zui's entries/files (8 text files + 2 render PNGs).
+- Guard: `game/tests/model-key-guard.test.mjs` on this tree -> 3/3 pass via node --test (own-model on both paths; declared-base riders unchanged; every resolved URL points at an existing file).
+- Render: `docs/tpose-refs/zui/a1_front.png` — bald Drunken Monk, prayer-bead necklace, full irezumi + kanji torso tattoos, saffron sash, wine gourds at the hip, sake cup in hand; textures clean, no smear, no clay (own-eyes verified, sha256 89c6c0e4...).
+- Model files byte-verified against main: git hash-object of both GLBs reproduces the main blob SHAs.
+
+## Self-check: I verified the result against the literal instruction
+- [x] The owner's order was to fix all characters whose model key is incorrectly pointed at the wrong character. For Zui the audit's finding was sharper: his own Tripo models had no keys at all, so he silently loaded Steve Fox. After this PR, every Zui key resolves to Zui's own models, his default on BOTH live resolution paths is his Tripo Attire 1 per standing Tripo law, his canon Steve Fox base remains reachable as an alternate (not deleted, not the default), and the regression guard now fails if Zui ever defaults to another character's model again. No other fighter's entries were changed, and his moveset data was not touched (separate lane).

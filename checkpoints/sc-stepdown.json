@@ -1,0 +1,15 @@
+{
+ "task": "Soulcalibur version stepdown: SCV \u2192 SCIV \u2192 SCIII \u2192 SCII until one fits on disk. Download first fitting version, verify, extract, teardown, push to western-heart/teardown/soulcalibur-X/ via branch\u2192PR\u2192merge.",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/game-reverse-engineering/soulcalibur",
+ "resume_brief": "Soulcalibur stepdown task: owner wants the most recent SC game that fits on disk. SCVI (50GB+) too big. Targets in order: SCV (PS3/X360, ~8-10GB) \u2192 SCIV (PS3/X360, ~8GB) \u2192 SCIII (PS2, ~4GB) \u2192 SCII (GC/PS2/Xbox, ~2-3GB). Check Archive.org for each, check disk space FIRST with 15% buffer, download first that fits. Disk was 91% (8.9GB free of 100GB) at last check. If a version is found: verify download, map file structure, extract characters/stages/animations/UI, document combat mechanics for federation, push to western-heart/teardown/soulcalibur-X/ via branch\u2192PR\u2192merge. All prior versions may be pending \u2014 check before re-downloading.",
+ "updated_at": "2026-10-13T17:35:00Z",
+ "attempts": 2,
+ "notes": [
+  "2026-10-13: SCV/SCIV not available as standalone dumps on IA (only in No-Intro sets). SCIII PS2 (soul-calibur-iii, 1.85GB zip) selected \u2014 fits in 8.0GB free. SCII GC (1.38GB) as fallback. Downloading SCIII now.",
+  "2026-10-13T16:11:56Z: SCIII download (100% at 11:35 per sc3-download2.log) is MISSING from disk - file gone, no trace. SCII fallback download alive: wget PID 8666, 584MB/1.38GB (~42%) growing ~100KB/s, ETA ~2h. Disk 96% (4.2G free); remaining 800MB fits. Extraction+teardown pending download completion - next run continues.",
+  "2026-10-13: SCII PS2 ISO (1.38GB) uploaded to Release soulcalibur2-ps2-v1, verified byte-exact (1376845824). Local deleted. TEARDOWN.md written. Pushing to western-heart next.",
+  "2026-10-13: PR #49 merged. TEARDOWN.md in western-heart/teardown/soulcalibur-2/. Task complete."
+ ]
+}

@@ -1,0 +1,9 @@
+{
+ "task": "Compose one original synth boss track per Concrete Dragon boss, wire per-boss music switching, branch-PR",
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "Owner directive 2026-10-09: every boss gets its own individual music track (he approved the finding, said make it). In ~/workspace/ConcreteDragon: (1) Enumerate ALL bosses from the repo (game-3d/src, docs, roster - THE FOREMAN plus any others). (2) Compose ONE original loopable boss track per boss, 100% synth-composed in Python (numpy -> wav, then compress to web-friendly format). FREE-ONLY and ORIGINAL: no samples, no downloads, no CC0 pulls, nothing licensed - fully owned compositions. Boss-fight energy, fits the game's street vibe, seamless loops, keep each under ~2MB. (3) Wire it: boss fight starts -> that boss's track plays; boss defeated -> back to the stage loop. Find the existing music trigger first and keep the diff minimal and isolated on branch music-boss-tracks -> PR -> merge (never straight to main). (4) Verify: files are valid audio (real duration, non-silent, seamless loop check), trigger code paths run with zero console errors in headless playtest; be honest that headless cannot verify audible mix quality. Heartbeat ~/workspace/agent-ops/checkpoints/concrete-dragon-boss-music.json after every step; incremental commits.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-09T13:21:39.722469+00:00"
+}

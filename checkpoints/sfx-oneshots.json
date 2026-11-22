@@ -1,0 +1,10 @@
+{
+ "task": "Find original isolated one-shot SFX for EP02 scene beds",
+ "status": "done",
+ "watchdog": true,
+ "repo": "~/workspace/pocket-studio-v2",
+ "resume_brief": "Subagent task: find original isolated one-shot SFX files used to build EP02 scene beds s10-s29. Search ~/workspace/audio-libs/, trippedd-studio production audio/sfx folders, and build scripts that mixed scene beds. Also verify Ashes/Bill Saber N1/N2 voices. Copy found one-shots to ~/workspace/pocket-studio-v2/assets/stems/sfx-oneshots/, then update app.html timeline to add them as individual clips. Checkpoint: ~/workspace/agent-ops/checkpoints/sfx-oneshots.json",
+ "updated_at": "2026-10-12T04:30:00Z",
+ "attempts": 1,
+ "notes": "Done. Extracted 47 isolated one-shot SFX by importing compose_ep01_music.py synth functions (scene beds are 100% numpy-synthesized, no samples). Rendered each one-shot (grill sizzle, dice shakers, rimshot, whistles, bounce thumps, fire crackle/riser, flare, fog horns, 6 firework pops, claw blips, plushie sparkles, mic squeal, camera flash, Ashes declaration hits, coin shimmers, dice rattles) with exact EP02 timeline positions. Converted to MP3 (1.1MB total) in assets/stems/sfx-oneshots/. Added all 47 as draggable timeline clips in app.html PROJECT (now 91 clips total: 17 dialogue, 67 sfx incl. 47 oneshots, 4 bgm, 3 ambient). JS syntax verified, PROJECT parses. N1/N2 Bill $aber voices confirmed present (voice-narrator-n1.mp3 29K, voice-narrator-n2.mp3 24K; also n1-v2, ashes-l7, ashes-whisper exist). NOTE: app.html NOT rebuilt into artifact yet \u2014 parent must run artifact.edit on pocket-studio-v2."
+}

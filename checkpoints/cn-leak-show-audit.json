@@ -1,0 +1,10 @@
+{
+ "task": "Audit Scooby-Doo + Space Ghost CN gigaleak holdings vs 100% claim",
+ "repo": "/home/hatch/workspace",
+ "resume_brief": "Subagent audit: inventory ~/workspace/cn-gigaleak-raw/ scooby and space-ghost holdings, compare vs torrent manifests in torrents/, check GitHub repo mhvnsnt/cn-gigaleak-scooby-doo-mystery-inc push state per chunk, search workspace for any Space Ghost materials, and report % complete per show with missing pieces. Read-only; no downloads, pushes, or deletes.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-14T06:55:00+00:00",
+ "result": "Scooby: GH holds ~12.73GB/~470 files of 14.34GB/4461 expected (~81% bytes, ~10-16% files); HB Classics Boomerang scooby subset (3,615 files/2.18GB) entirely missing. Space Ghost: ZERO files anywhere (GH repo=README only, staging dir empty, raw empty); torrent contains 498 files/847.3MB. Manifests saved: CNleaks-manifest.csv (72,369 rows), CNleaks-manifest-scooby-spaceghost.csv (4,959 rows)."
+}

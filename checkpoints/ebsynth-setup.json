@@ -1,0 +1,10 @@
+{
+  "task": "Pull in and set up EbSynth for the Wizard Gang EP02 repair pipeline (download, install to ~/workspace/video-fix-tools/ebsynth/, test on a sample clip with a 2D-styled keyframe, document install/run steps, write wrapper script run_ebsynth.py).",
+  "status": "done",
+  "watchdog": true,
+  "repo": "/home/hatch/workspace/video-fix-tools",
+  "resume_brief": "Set up EbSynth (free, non-open-source video style-transfer tool from ebsynth.com) for Wizard Gang EP02 repair. Steps: (1) Download Linux beta from ebsynth.com (check https://ebsynth.com/beta/ or main site for Linux build). (2) Install to ~/workspace/video-fix-tools/ebsynth/. (3) Test: pick a clip from ~/workspace/trippedd-studio/production/WIZARD_GANG_EP01/ep02-retest/, extract one frame, create a 2D-styled keyframe (cartoon filter via Python/GIMP), run EbSynth to propagate style across the clip. (4) Document exact install steps, CLI usage, what worked/didn't in ~/workspace/video-fix-tools/ebsynth/README.md. (5) Write wrapper script ~/workspace/video-fix-tools/ebsynth/run_ebsynth.py taking (input_video, keyframe_image, output_video). Heartbeat checkpoint ~/workspace/agent-ops/checkpoints/ebsynth-setup.json after each step. EbSynth is free but not open-source; per project rules that is fine. It is a GUI+CLI tool; the CLI (ebsynth command) is what the pipeline needs. If Linux beta is unavailable, document the blocker and try the Windows build under Wine as fallback, or report back.",
+  "updated_at": "2026-10-10T13:25:00Z",
+  "attempts": 0,
+  "notes": "DONE. EbSynth (public-domain jamriska/ebsynth) built on Linux CPU, installed at video-fix-tools/ebsynth/ebsynth. Wrapper run_ebsynth.py + README.md written. Test: EP02 shot 12-3 clip, 100 frames @10fps 640x360, cartoon-filter keyframe, EbSynth propagation verified clean 2D output following motion (~40s/frame CPU). Test proof in video-fix-tools/ebsynth/test-proof/. 30-frame background batch still running in /tmp (proof complete without it). NOTE: video-fix-tools/ is not a git repo, nothing to commit."
+}

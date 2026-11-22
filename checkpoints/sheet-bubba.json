@@ -1,0 +1,12 @@
+{
+  "task": "Full Preston Blair sheet for bubba + SP expression set (brows/eyes/mouths)",
+  "repo": "~/workspace/trippedd-studio",
+  "resume_brief": "In ~/workspace/trippedd-studio, on branch feat/sheet-bubba off origin/main: build the COMPLETE Preston Blair character sheet for BUBBA (Goodville real trio). Kit dir: production/TRIPPEDD_EP01/goodville/kits/bubba/ (extraction-based pieces already on main). Owner 2026-10-11: full sheet \u2014 separate heads, faces, eyes, mouths, hairs, angles, face angles, clothing options, different hands, body positions and angles. Generated if needed, hand-tooled if needed \u2014 BUT every piece must hold the EXACT likeness of the extracted character. No new likenesses from hand-tooling drift. METHOD: USE THE IMAGE LAW \u2014 derive everything from the extracted cuts (upper_with_face.png, head_sep.png, etc.); angles via img2img ON the cuts (tools/image-gen/gen.py or tools/image-edit/ai_edit.py), never text-only; hand-tool only where extraction/generation can't reach, verified side-by-side against the source /home/hatch/workspace/user/files/1000173537_10_cm4h.png and /home/hatch/workspace/user/files/1000173536_14_nhu1.png. DELIVERABLES for bubba: heads (front, 3/4 L, 3/4 R, profile), full face furniture (eyes: open/closed/angry/happy/L/R; mouths: neutral/smile/grin/frown/open/ooh; brows), hair variants, bodies (front, 3/4, back, sitting, lean-over, walk frames), hands (open/fist/point/grip/relaxed), every clothing option in the kit. Preview sheet PNG compositing everything. Manifest + drill log. Verify EVERY piece zoomed vs the source likeness. Commit, open PR (do NOT merge). Heartbeat ~/workspace/agent-ops/checkpoints/sheet-bubba.json every 10 min. Report + mark done.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-11T21:17:10.967761+00:00",
+  "notes": "profile/34 heads: 5 attempts failed likeness gate (gen drift, warp artifacts, hand-draw drift). Marked PENDING per likeness law - needs ChatGPT turn or self-hosted model.",
+  "pr": "https://github.com/mhvnsnt/TRIPPEDD-Production-studios-/pull/199",
+  "branch": "feat/sheet-bubba-v1"
+}

@@ -1,0 +1,9 @@
+{
+  "task": "Close remaining Create Fighter gaps",
+  "repo": "~/workspace/.createfighter-gaps2",
+  "resume_brief": "COMPLETE. Gap 3 DONE (PR #163): custom moveset slots wired to match execution - ATTACK_SLOT_MAP, resolveCustomMove, preloadMoveDatabase, tryAttack integration. Gap 2 PARTIAL (PR #167): EAGL .o format analyzed and documented, full converter needs multi-day RE (vertex stride, index decoding, bone palette). Gap 4 BLOCKED: disk at 95%, OpenGameArt download URLs return HTML not zips. WWE 2K BLOCKED: CAW assets are game-embedded, not standalone downloads - needs WWE 2K19 game files (51GB) + owner approval + disk space. All work pushed via branch->PR->merge.",
+  "status": "done",
+  "watchdog": true,
+  "attempts": 0,
+  "updated_at": "2026-10-15T03:30:00Z"
+}

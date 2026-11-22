@@ -1,0 +1,10 @@
+{
+ "task": "Propagate infra resilience tools (EGL auto-restore, safe watcher, render queue) to ALL production repos and pipelines.",
+ "repo": "~/workspace/3d-toolkit",
+ "resume_brief": "Wire ~/workspace/3d-toolkit/infra/ into every production repo/pipeline: (1) find all repos with Blender/render/video pipelines, (2) copy or symlink the infra tools (egl-restore.sh, safe-watcher.py, INFRA.md), (3) update pipeline scripts to use xvfb-run, (4) document per-repo. Heartbeat checkpoint, mark done.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-10T01:48:04.212530+00:00",
+ "notes": "All production repos have infra tools. PRs: AshLanev2 #31, trippedd-studio #91, god-molecule-studio #8, God-molecule-production-stage #1, Forge3D #2, agent-ops #1. All merged, zero open PRs. bannon-video-pipe: files copied (no git repo)."
+}

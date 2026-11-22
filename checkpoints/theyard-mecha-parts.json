@@ -1,0 +1,11 @@
+{
+ "task": "Theyard mecha customizer lane: parts",
+ "repo": "/home/hatch/workspace/BioMechania",
+ "resume_brief": "Lane parts of the theyard mecha customizer build. See the full lane brief in your handoff message; heartbeat this file after every commit/step.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 0,
+ "updated_at": "2026-10-10T01:57:40.489581+00:00",
+ "note": "Batch 1 committed (hound-vis). Full 27-part build launching in background. NOTE: MEMORY now says BioMechania is canonical mecha repo \u2014 parts stay in theyard per brief; flagging for coordinator to relocate.",
+ "notes": "COMPLETE: 7 breach parts merged (PR #5). 55 parts total."
+}

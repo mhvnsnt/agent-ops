@@ -1,0 +1,9 @@
+{
+ "task": "Rebuild Concrete Dragon page PFP + banner from REAL game pixels only (false-advertising fix)",
+ "repo": "/home/hatch/workspace/ConcreteDragon",
+ "resume_brief": "Owner verdict 2026-10-09: the graffiti-style PFP/banner look nothing like the actual game - false advertising. Redo both using ONLY real Concrete Dragon game pixels: no generation, no restyling. In ~/workspace/ConcreteDragon: (1) Capture a clean high-res fighter-select screen (1280x1280) and 1920x1080 gameplay action frames using the fixed-timestep headless capture method (see the concrete-dragon-launch worker's approach: puppeteer-core, rAF patch, debug API). (2) PFP: tight square crop of Kid Blue (blue fighter) head/upper-body from the select screen - must read clearly at 196px. (3) Banner 1640x624: most dynamic real action frame (boss scrum / special shockwave), cropped; composite the game's REAL rendered CONCRETE DRAGON title pixels from the select capture if clean, else no text. Composite with ffmpeg/PIL only. (4) Output to ~/workspace/concrete-dragon-launch/page-art-real/concrete-dragon-pfp-real.png and concrete-dragon-banner-real.png. Verify both with your own eyes (they must look like the actual game) and report paths + what each shows. Heartbeat ~/workspace/agent-ops/checkpoints/concrete-dragon-real-art.json after every step.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-09T13:24:58.285429+00:00"
+}

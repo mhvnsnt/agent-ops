@@ -1,0 +1,32 @@
+{
+ "task": "Merge 4 hardening/sweep PRs",
+ "repo": "/home/hatch/workspace/bannon-video-pipe/repo",
+ "resume_brief": "STANDALONE BRIEF \u2014 owner standing law (2026-10-09): never leave PRs open. Merge these 4, all verified to exist: Bannon #54 (statue-to-game integrations \u2014 branch statue-integrations), Forge3D #1 (weight-paint PWA), money-machine-hq #8 (weight-paint PWA), God-Molecule-Show-Studio #3 (weight-paint PWA). YOUR JOB: for each, fetch, confirm mergeable vs main, merge (merge commit, never squash, never force-push), push. Boundary-aware conflict resolution + syntax verification if any conflict (unlikely \u2014 all additive). Verify each landed on main. RULES: heartbeat THIS checkpoint every 15 min; report merged SHAs per repo.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-09T16:31:25.934021+00:00",
+ "result": {
+  "Bannon_54": {
+   "state": "MERGED",
+   "main_sha": "2d4f17231fd50d13d9724c9245e389a0803059bc",
+   "verified": "tools/statue-to-game/INTEGRATIONS.md on main"
+  },
+  "Forge3D_1": {
+   "state": "MERGED",
+   "main_sha": "f5443e5df03dcd36ef83b9801a59c082960a9413",
+   "verified": "tools/weight-paint-pwa/ (README, index.html, lib) on main"
+  },
+  "money-machine-hq_8": {
+   "state": "MERGED",
+   "main_sha": "abd9b27f2f8756019567571641d614e109070d07",
+   "verified": "tools/weight-paint-pwa/ (README, index.html, lib) on main"
+  },
+  "God-Molecule-Show-Studio_3": {
+   "state": "MERGED",
+   "main_sha": "ff403f4ac5d267af9a3bf3bc923efdfdff27a2a4",
+   "verified": "tools/weight-paint-pwa/ (README, index.html, lib) on main"
+  },
+  "method": "gh pr merge --merge (merge commits, no squash, no force-push)"
+ }
+}

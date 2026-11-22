@@ -1,0 +1,10 @@
+{
+ "task": "Design WESTERN SOUL fighting game (Tekken 3 engine + Eastern Mind universe)",
+ "repo": "~/workspace/game-reverse-engineering/western-soul",
+ "resume_brief": "Design WESTERN SOUL \u2014 a new fighting game combining Tekken 3's fighting engine with Eastern Mind: The Lost Souls of Tong-Nou's surreal universe. Read Eastern Mind analysis at ~/workspace/animation-techniques/steal-like-artist/osamu-sato/analysis/ and Tekken 3 teardown at ~/workspace/game-reverse-engineering/tekken3/. Write full game design doc (concept, roster, stages, systems fusion, art direction, narrative, technical plan) to ~/workspace/game-reverse-engineering/western-soul/. Owner's vision: 'a fighting game inside the Tong-Nou Eastern Mind game and narrative and universe.' This is the owner's game \u2014 not a Tekken mod, not an Eastern Mind remake.",
+ "status": "done",
+ "watchdog": true,
+ "attempts": 1,
+ "updated_at": "2026-10-12T14:58:08.642429+00:00",
+ "notes": "Watchdog 2026-10-12 09:55 CDT: stale (30m). State check showed the work landed under the corrected game name WESTERN HEART in ~/workspace/game-reverse-engineering/western-heart/ (6 docs, 7123 words: design, roster, stages, systems, asset-manifest, technical-plan). Successor checkpoint western-heart-design.json marks that task done. No work remained; closing this predecessor checkpoint."
+}

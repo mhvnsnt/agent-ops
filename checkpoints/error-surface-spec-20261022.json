@@ -1,0 +1,22 @@
+{
+ "date": "2026-10-22",
+ "deliverable": "~/workspace/your_files/error-surface-spec-20261022.png (PIL-rendered infographic card, viewed by the lane before delivery)",
+ "frozen_decision": {
+  "census": "Per-fighter census ships either way (names the throwing call; samura1 + Iori-rig are suspect zero) \u2014 it is the runner-up, NOT a 4th surface.",
+  "default": "A",
+  "options": {
+   "A": "PAUSE + BANNER + BUTTONS (arcade pause) \u2014 DEFAULT, ships silent if owner doesn't pick. ~1 session: wrap _update in try/catch, on throw enter mode A.",
+   "B": "TEKKEN-STYLE RETRY CARD \u2014 auto-retry fighter updates 3x; 3rd failure restarts round with state intact. ~1-2 sessions (retry logic + round-state checkpoint/restore).",
+   "C": "HARD STOP BACK TO CHARACTER SELECT \u2014 reuse leaveFight() teardown. ~1 session."
+  },
+  "rule": "Owner picks ONE frozen mode; lanes build to it and do NOT rebuild until chosen; no reply = A ships."
+ },
+ "lane": "error-surface-spec",
+ "sources_read": {
+  "context_md": "~/workspace/_docfrank-facing/context.md \u2014 NOT FOUND: the whole _docfrank-facing/ dir is gone from disk (store-off lane archived it after the 2026-10-21 sweep's HELD note). Spec's game.js claims are independently corroborated by TRIAGE-REPORT #2 and the triage lane's own code reads, so the card stands on verified sources regardless.",
+  "triage_report": "~/workspace/_playtest-triage-work/TRIAGE-REPORT-20261021.md \u2014 bug #2 verified: game.js _loop re-arms rAF FIRST (L175), game.js has NO try/catch anywhere, _update decrements timer + setTimer (L205-207) BEFORE input + p1/p2.update (L277-278); per-frame throw = timer counts, fighters/input dead. Census suspects: samura1 static GLB (nodes=1, skins=0), Iori-rig bank bind failure (#469 gate sweep)."
+ },
+ "status": "DELIVERED \u2014 card rendered + own-eyes verified (1160x1370 PNG, no clipping/overlap, A marked selected+DEFAULT, all spec copy present). Awaiting owner pick; no reply = A ships.",
+ "task": "Frozen ERROR SURFACE mode spec + owner decision card (spec-only, no code)",
+ "card_sha256": "3ff54a62c8f4843380b14e1f5c9a300ada29daa612b52a09f3b52c0ef190e24d"
+}
