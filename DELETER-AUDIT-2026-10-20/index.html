@@ -1,0 +1,10039 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Indexes, conventions, manifests, and handoffs for the agent fleet.">
+      
+      
+        <meta name="author" content="Mars FMMG">
+      
+      
+      
+        <link rel="prev" href="../DEATHFANG-RYUJI-ORDER/">
+      
+      
+        <link rel="next" href="../DISK-AUDIT-20261016/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+      
+        <title>DELETER AUDIT — 2026-10-20 - Agent Ops Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#deleter-audit-2026-10-20" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Agent Ops Hub" class="md-header__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agent Ops Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DELETER AUDIT — 2026-10-20
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Agent Ops Hub" class="md-nav__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Agent Ops Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    agent-ops — restart resilience for agent work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AGENTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AGENTS.md
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ALIST-TERABOX-WEBDAV-EVALUATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AList Evaluation — TeraBox -&gt; WebDAV -&gt; rclone Bridge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ANTI-CLOBBER-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ANTI-CLOBBER LAW (owner 2026-10-17)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AUDIT-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repo audit — 2026-10-14 (Grok Bot)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BANNON-CONFLICT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BANNON Conflict-Lane Pickup — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BOX-OFFLOAD-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BOX OFFLOAD LOG — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BROADCAST-NO-LOCAL-CLUTTER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BROADCAST TO ALL AGENTS — 2026-10-17
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BROWSER-TRANSFER-COOKIE-ARIA2-SOP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cookie -&gt; aria2/curl Lane SOP (browser-transfer replacement)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BRUTALFIST-CONFLICT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BRUTAL-FIST conflict-resolution lane — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CATCHUP-AUDIT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WESTERN HEART — CATCH-UP AUDIT (2026-10-23)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHECKPOINT_PROTOCOL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkpoint Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLAIMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAIMS (prevents collisions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COMPUTE_ARSENAL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Free Compute Arsenal — fmmg.mars@gmail.com (Mars FMMG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CROSS-REPO-STRANDED-AUDIT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CROSS-REPO STRANDED-WORK AUDIT — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CUT001R-6B-VM-RESTART-LOSS-20261115/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CUT 001R — 6B lane — VM RESTART LOSS RECORD (2026-11-15)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DEATHFANG-RYUJI-ORDER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DEATHFANG + Ryuji/Rock Hybrid — Owner Orders 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DELETER AUDIT — 2026-10-20
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DELETER AUDIT — 2026-10-20
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context-from-task-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context (from task brief)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verdict-in-one-paragraph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verdict in one paragraph
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-census-scheduled-jobs-authoritative-cronlist-2026-10-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Census — scheduled jobs (authoritative: cron.list, 2026-10-20)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Census — scheduled jobs (authoritative: cron.list, 2026-10-20)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#duplicate-guardian-question-resolved-no-duplicate-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Duplicate-guardian question — RESOLVED, no duplicate schedule
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-census-running-processes-sampled-2026-10-20-1020-and-1031-cdt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Census — running processes (sampled 2026-10-20 ~10:20 and ~10:31 CDT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-census-scripts-on-disk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Census — scripts on disk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Census — scripts on disk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3a-gated-route-through-clouddogdelete_gatecheck_delete_gate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3a. GATED (route through clouddog.delete_gate.check_delete_gate)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3b-accountable-own-verify-journal-naming-actor-proof-pull-back-no-gate-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3b. ACCOUNTABLE (own verify + journal naming actor + proof + pull-back; no gate module)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3c-rogue-risk-can-delete-with-neither-gate-nor-journal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3c. ROGUE-RISK (can delete with neither gate nor journal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-notes-on-the-two-structural-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Notes on the two structural findings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Notes on the two structural findings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-the-guardian-is-accountable-by-instruction-not-by-construction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 The guardian is accountable by instruction, not by construction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-enforce-apply-is-not-the-gate-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 enforce --apply is not the gate module
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-journal-integrity-quirk-minor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Journal integrity quirk (minor)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-sf-toolstar-verdict-not-lost-fully-recoverable-locally-simply-never-stored" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. sf-tools.tar — VERDICT: NOT LOST. Fully recoverable locally; simply never stored.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-wt-verify-unattributed-disappearance-what-can-and-cannot-be-established" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. wt-verify — unattributed disappearance; what can and cannot be established
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-residual-risk-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Residual risk list
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-census-counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Census counts
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DISK-AUDIT-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DISK AUDIT — 2026-10-16
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DISK-CLEAR-GUARD-RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Clear Guard — Rules (mandatory, no override)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../END-OF-SESSION-BACKUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    END-OF-SESSION BACKUP (watchdog procedure)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FREE-AI-AGENTS-SETUP-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Free AI Coding Agents — Research &amp; Setup (2026-10-16)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FREE-CLI-AGENTS-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Free CLI Coding Agents — Setup Report 2026-10-16
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FREE-TOOL-ARSENAL-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FREE TOOL ARSENAL — 2026-10-16
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FRICTION-RESEARCH-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FRICTION RESEARCH — recurring problems, real fixes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FRICTION-RESEARCH-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FRICTION RESEARCH LOG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GHIDRA-SFEX-PIPELINE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ghidra SF EX Vertex Decode Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GRE-51-52-REVIEW-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GRE PR #51 + #52 Landing Review — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-CANON/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — CANON (where the game's knowledge lives)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF INDEX — fleet state, one place, no "missing"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-REPOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — REPOS (per-repo state + landing order)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-TEARDOWNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — TEARDOWNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-WESTERN-HEART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — WESTERN HEART (mhvnsnt/western-heart)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOW-GROKBOT-WORKS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How Grok Bot works (copy this process)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDEMPOTENCY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idempotency Rules — write work so a re-run can't duplicate or corrupt it
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LANE-RESILIENCE-SOP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane Resilience SOP — the at-least-once contract for lane authors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LANE_GUARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane Guard — crash-resilient + collision-proof lanes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-IT-YOURSELF-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE-IT-YOURSELF LAW (owner 2026-10-15) — canonical copy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-QUEUE-BRIEFING-CONFIRMATIONS-2026-10-24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE-QUEUE BRIEFING — CONFIRMATIONS (2026-10-24)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-QUEUE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE QUEUE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MIRROR-HUNT-2026-10-17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CN Gigaleak Mirror Hunt — 2026-10-17
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MULTIVERSE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MULTIVERSE — one universe, many games
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NO-DATA-LOSS-RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NO-DATA-LOSS RULES (owner law — mhvnsnt)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NO-SPARSE-COMMIT-PROPAGATION-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NO-SPARSE-COMMIT LAW propagation run — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PENDING-LANES-2026-11-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PENDING LANES — written 2026-11-09 ~16:05 CST by the Build-A-Bitch chat parent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../REMAINING-PULL-AUDIT-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CN Gigaleak — Remaining Pull Audit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-CONVENTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Conventions (all repos, all agents)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-PULLIN-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RESEARCH → PULL-IN INDEX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESUME_BRIEF_TEMPLATE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resume Brief Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RIG-MAP-Beth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RIG MAP Beth
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RIG-MAP-Jerry_200_REV/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RIG MAP Jerry 200 REV
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RIG-MAP-Morty/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RIG MAP Morty
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RIG-MAP-Rick/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RIG MAP Rick
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RIG-MAP-Summer_0907/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RIG MAP Summer 0907
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SF-TEARDOWN-PULL-ORDER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SF 3D Teardown Pull — Owner Order 2026-10-19 ~20:26 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SITTING-SAGA-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SITTING SAGA — where the finished chair work lives (2026-10-23)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SITTING-TAKES-COMPARISON-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Three Sitting Takes — Plain-Language Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SITTING-WT-AUTOSEAT-HANDOFF-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    wt-autoseat take — handoff (2026-10-19)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SITTING-WT-MOCAPSIT-HANDOFF-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — wt-mocapsit (mocap sitting retarget take), 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SITTING-WT-SITCANON-HANDOFF-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SITTING-WT-SITCANON HANDOFF — sitting-canon take (stored 2026-10-19)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T6-RECON-HANDOFF-2026-10-16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    T6 Recon Handoff — 2026-10-16
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TAG-TEAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TAG-TEAM board (live)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TEAM-RESEARCH-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WHOLE-TEAM RESEARCH — 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TERABOX-PENDING-gympartner-gaps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TeraBox-pending: torbox-pull gym-partner gaps (2026-10-16)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-ALTERNATIVES-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Alternatives — Free/Open-Source Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-BREAKTHROUGH-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Breakthrough Program — Final Report (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-LANE5-AGENT-REVIEW-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox BAD_TOKEN — Lane 5 All-Agents Review (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-RESEARCH-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Research — 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-SUPPORT-TICKET-DRAFT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Support Ticket — DRAFT (do not send without owner approval)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WH-498-RELAND-2026-10-24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WH-#498 RE-LAND REPORT — 2026-10-24
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WH-841-CONFLICT-2026-10-24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WH-#841 conflict lane — FINAL REPORT (2026-10-24 ~02:22Z)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WH-974-REVERT-2026-10-24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    INCIDENT 2026-10-24 ~02:28Z — WH #974 merge built on stale branch tree (main's payloads dropped)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WH-FIXABLE-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WH fixable-PRs work log — 2026-10-23 (conflict-resolution worker)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WH-PR-TRIAGE-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WESTERN-HEART PR TRIAGE — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WIREUP-COORDINATOR-BRIEF-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WHOLE-TEAM WIRE-UP — Coordinator Brief 2026-10-19 ~21:10 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WORKING-METHOD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working Method
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adr-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-NNNN:
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browser-downloads-slps02182-dedup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SLPS02182 dedup evidence — browser_downloads/sess-3802796762
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cape-jones-to-wizard-gang-2026-11-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cape Jones → Wizard Gang transfer + FLA production program — running log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../caps-audit-2026-11-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Free-Tier Caps Audit — 2026-11-04 (READ-ONLY)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ci-watch-log-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CI Watch run — 2026-10-23 ~03:27–03:33 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ci-watch-report-2026-10-22-2257/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CI-watch sweep — 2026-10-23T04:01:08Z
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cjwg-cape-inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cape Jones → Wizard Gang Transfer Inventory — mhvnsnt/cape-jones @ main
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cjwg-parts-audit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wizard Gang FLA Puppets — REAL Parts Audit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cjwg-tools-audit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CJWG Tools Audit — What Is Actually Runnable Locally Right Now
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cjwg-trippedd-inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TRIPPEDD-Production-studios- — Current Main Inventory (Wizard Gang target repo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-census-20261021-sweep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DISK CENSUS — cleanup sweep 2026-10-21 ~11:58 CDT (owner order 11:55 CDT)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-cleanup-log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Cleanup Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-guardian-eval-20261022-0214/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Guardian Evaluation — 2026-10-22 ~02:45 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dreamgirl-watchdog-respawns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dream Girl Lane Watchdog — Respawn Ledger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fla-puppets-program-2026-10-30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FLA PUPPETS + RIGS + SCENE FILES PROGRAM — log (2026-10-30)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grokbot-activity-proof-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot / MoneyManBusch activity proof — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-14-2120/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-14 21:20 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-14-2130/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-14 21:30 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-14-2150/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-14 21:50 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-0020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 00:20 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-0030/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 00:30 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-0150/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 01:50 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-0200/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 02:00 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-0250/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 02:50 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-0300/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 03:00 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-0420/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 04:20 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-0700/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 07:00 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-1350/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 13:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-1420/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 14:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-1710/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 17:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-1800/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 18:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-2000/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 20:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-2130/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 21:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-2230/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 22:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-2240/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 22:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-2300/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 23:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-0520/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 05:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-0610/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 06:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-0650/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 06:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-0720/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 07:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-0750/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 07:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-0810/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 08:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-0840/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 08:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-0900/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 09:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 10:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1130/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 11:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1210/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 12:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1220/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 12:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1300/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 13:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1310/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 13:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1320/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 13:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1420/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 14:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1440/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 14:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1450/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 14:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1510/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 15:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1540/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 15:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1600/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 16:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1620/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 16:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1730/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 17:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1750/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 17:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1820/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 18:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1840/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 18:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1850/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 18:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1900/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 19:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1910/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 19:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-2000/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 20:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-2010/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 20:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-2110/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 21:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-2150/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 21:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-2220/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 22:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-2250/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 22:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0000/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 00:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0010/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 00:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 00:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0040/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 00:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0050/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 00:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0100/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 01:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0130/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 01:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0140/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 01:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0230/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 02:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0240/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 02:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0440/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 04:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0520/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 05:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0630/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 06:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0740/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 07:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0800/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 08:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0810/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 08:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0830/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 08:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0910/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 09:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0950/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 09:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-1020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 10:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-1040/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 10:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-1130/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 11:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-1140/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 11:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-1150/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 11:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-1210/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 12:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-1240/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 12:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-1250/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 12:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-1340/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 13:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-1540/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 15:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-1700/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 17:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-1750/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 17:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-1910/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 19:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-1940/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 19:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-1950/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 19:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-2010/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 20:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-2030/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 20:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-2040/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 20:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-2110/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 21:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-2120/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 21:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-2140/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 21:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-2150/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 21:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-2230/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 22:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-2240/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 22:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-0100/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 01:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-0210/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 02:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-0250/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 02:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-0300/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 03:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-0320/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 03:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-0340/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 03:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-0700/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 07:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-0840/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 08:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-1200/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 12:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-1700/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 17:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-1720/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 17:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-1730/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 17:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-1820/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 18:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-1920/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 19:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-2020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 20:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-2030/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 20:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-1710/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 17:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-1730/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 17:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-1750/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 17:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-1820/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 18:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-1840/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 18:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-1900/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 19:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-1940/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 19:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-1950/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 19:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-2000/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 20:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-2300/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 23:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-2350/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 23:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0000/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 00:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0030/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 00:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0040/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 00:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0050/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 00:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0130/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 01:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0140/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 01:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0150/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 01:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0200/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 02:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0220/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 02:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0300/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 03:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0340/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 03:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0420/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 04:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0430/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 04:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0440/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 04:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0450/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 04:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0540/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 05:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0700/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 07:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0710/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 07:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0740/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 07:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1130/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 11:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1230/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 12:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1240/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 12:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1330/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 13:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1410/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 14:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1510/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 15:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1600/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 16:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1630/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 16:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1750/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 17:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1850/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 18:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-coord-results-2026-10-23-1340/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE COORD RESULTS — 2026-10-23 13:40 CDT run (parent: overnight-idle-pipeline)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-2026-10-22-1612/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    merge-law-ci-watch — run 2026-10-22 16:12 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-2026-10-22/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    merge-law-ci-watch — run 2026-10-22 04:57 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-2026-10-23-0930/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    merge-law-ci-watch run 2026-10-23 09:30 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    merge-law-ci-watch run 2026-10-23 04:57 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-2026-10-24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    merge-law-ci-watch sweep — 2026-10-24 ~21:27 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-2026-10-30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    merge-law-ci-watch sweep — Fri 2026-10-30 ~17:55 CDT (run scheduled 17:42 CDT)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-2026-10-31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    merge-law-ci-watch sweep — 2026-10-31 ~11:50 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-2026-11-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Merge law ci watch 2026 11 08
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-20261104/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Merge-law CI watch sweep — 2026-11-04 ~21:12 CST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-report-20261021/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    merge-law-ci-watch run report — 2026-10-21 ~00:35 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pantera-ATTIRE-SLOTS-20261022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PANTERA — Attire Slots (owner 2026-10-17)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pantera-leopard-king-WORKLOG-20261022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WORKLOG — Pantera Attire 6 "Leopard King" + Slot-2 Tripo correction (2026-10-19)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../re-toolchain-deletion-inventory-20261023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deletion inventory — feat/re-toolchain-research-20261016 split (2026-10-23)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-pr-body-20261108-0344/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync pr body 20261108 0344
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-pr-body-20261108-0514/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync pr body 20261108 0514
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-pr-body-20261108-0844/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync pr body 20261108 0844
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-pr-body-20261108-1244/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync pr body 20261108 1244
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-pr-body-20261108-1544/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync pr body 20261108 1544
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-pr-body-20261108-1814/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync pr body 20261108 1814
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-pr-body-20261108-1844/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync pr body 20261108 1844
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toonboom-re-2026-10-30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Toon Boom Format RE — 2026-10-30
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-claims-recheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Claims Re-Check — 2026-10-20 evening (coordinator lane, parent-ordered)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane1-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Auth — Lane 1, Round 2 (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane2-debrid-live/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LANE 2 (RETRY) — Debrid-Link + AllDebrid Live Tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane3-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 3 — Alternative Debrid / Seedbox Sweep for a 350 GB Single-File Torrent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane4-compute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 4 — Free compute / cloud-to-cloud transfer layer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane5-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 5 — All-Agents Tooling on TorBox BAD_TOKEN (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane6-oss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Lane 6 — Open-Source Wire-Up + Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane7-seedbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 7 — Free-Trial Seedbox Angle (Seedhost.eu + Pulsed Media + others)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verify-diffs-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CN Gigaleak Verify — File-Name Diffs (2026-10-19)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wave3-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LANDING WAVE 3 — MOVESETS — FINAL REPORT (2026-10-23 CDT)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wh-pr-conflict-resolve-20261020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Western Heart PR conflict resolution — 2026-10-20
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wizard-gang-cut-apart-proof-2026-10-30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cut-apart proof lane — log (2026-10-30)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wizard-gang-eps-backlog-2026-10-30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EPS Backlog Render — 2026-10-30 (PAUSED by owner order ~17:07 CDT)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wizard-gang-real-anim-local-tools-2026-10-29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wizard Gang — REAL-ANIMATION Upgrade: Local Tools + Real Cartoon Production-File Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wizard-gang-real-anim-repo-audit-2026-10-29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wizard Gang — REAL-ANIMATION Repo Audit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wizard-gang-v2-missing-tools-wireup-2026-10-29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wizard Gang V2 — NO-MISSING-TOOLS Wire-Up Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wizard-gang-v2-wireup-lane1-2026-10-29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wizard Gang REAL-ANIMATION V2 — Wire-up Lane 1 Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zui_pr431_body/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zui pr431 body
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_288" >
+        
+          
+          <label class="md-nav__link" for="__nav_288" id="__nav_288_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent handoff
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_288_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_288">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent handoff
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-handoff/PRODUCERBOT_WORKFLOW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PRODUCERBOT WORKFLOW
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_289" >
+        
+          
+          <label class="md-nav__link" for="__nav_289" id="__nav_289_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_289_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_289">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Research
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_289_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_289_1" id="__nav_289_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloudcorp 2026 11 02
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_289_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_289_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cloudcorp 2026 11 02
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CloudCorpRecords pull-in — 2026-11-02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/INVENTORY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CloudCorpRecords — Complete Public Repo Inventory (excl. xod, internet-of-things)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/WATCHLIST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CloudCorpRecords — RESEARCH / WATCH list (everything not in the top 25)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_289_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_289_1_4" id="__nav_289_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audits
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_289_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_289_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Audits
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/actionpin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — actionpin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/agent-evals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — agent-evals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/agentsfile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — agentsfile (@reneturcios/agentsfile)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/audioport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — audioport (@reneturcios/audioport)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/cidiff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — cidiff
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/commitcheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — commitcheck
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/depguard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — depguard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/flowcheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — flowcheck
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/greenlight/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — greenlight
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/hookcheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — hookcheck
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/imageport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — imageport (@reneturcios/imageport)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/injectcheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — injectcheck
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/logdigest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — logdigest (@reneturcios/logdigest)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/mcpaudit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — mcpaudit (@reneturcios/mcpaudit)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/mcpvet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — mcpvet (@reneturcios/mcpvet)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/muse-farm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — muse-farm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/muse-marketplace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — muse-marketplace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/prodforge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — prodforge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/readmeaudit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — readmeaudit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/scenemodel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — scenemodel (@reneturcios/scenemodel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/shipcheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — shipcheck (@reneturcios/shipcheck)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/skillcheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — skillcheck (@reneturcios/skillcheck)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/specforge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — specforge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/testdelta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — testdelta (@reneturcios/testdelta)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/videokit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — videokit (@reneturcios/videokit)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/xod-parts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — Xod parts (scoped extraction candidates only)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_289_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_289_1_5" id="__nav_289_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test runs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_289_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_289_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Test runs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/test-runs/agentsfile-RESULT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    agentsfile 0.1.0 — TEST RUN RESULT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/test-runs/xod-sentinel-RESULT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Xod sentinel smoke test — standalone run result
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context-from-task-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context (from task brief)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verdict-in-one-paragraph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verdict in one paragraph
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-census-scheduled-jobs-authoritative-cronlist-2026-10-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Census — scheduled jobs (authoritative: cron.list, 2026-10-20)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Census — scheduled jobs (authoritative: cron.list, 2026-10-20)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#duplicate-guardian-question-resolved-no-duplicate-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Duplicate-guardian question — RESOLVED, no duplicate schedule
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-census-running-processes-sampled-2026-10-20-1020-and-1031-cdt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Census — running processes (sampled 2026-10-20 ~10:20 and ~10:31 CDT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-census-scripts-on-disk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Census — scripts on disk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Census — scripts on disk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3a-gated-route-through-clouddogdelete_gatecheck_delete_gate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3a. GATED (route through clouddog.delete_gate.check_delete_gate)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3b-accountable-own-verify-journal-naming-actor-proof-pull-back-no-gate-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3b. ACCOUNTABLE (own verify + journal naming actor + proof + pull-back; no gate module)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3c-rogue-risk-can-delete-with-neither-gate-nor-journal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3c. ROGUE-RISK (can delete with neither gate nor journal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-notes-on-the-two-structural-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Notes on the two structural findings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Notes on the two structural findings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-the-guardian-is-accountable-by-instruction-not-by-construction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 The guardian is accountable by instruction, not by construction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-enforce-apply-is-not-the-gate-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 enforce --apply is not the gate module
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-journal-integrity-quirk-minor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Journal integrity quirk (minor)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-sf-toolstar-verdict-not-lost-fully-recoverable-locally-simply-never-stored" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. sf-tools.tar — VERDICT: NOT LOST. Fully recoverable locally; simply never stored.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-wt-verify-unattributed-disappearance-what-can-and-cannot-be-established" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. wt-verify — unattributed disappearance; what can and cannot be established
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-residual-risk-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Residual risk list
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-census-counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Census counts
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="deleter-audit-2026-10-20">DELETER AUDIT — 2026-10-20<a class="headerlink" href="#deleter-audit-2026-10-20" title="Permanent link">&para;</a></h1>
+<p>Status: COMPLETE (audit run 2026-10-20 ~10:20–10:45 CDT, resumed after two runtime restarts; findings appended as verified throughout).</p>
+<h2 id="context-from-task-brief">Context (from task brief)<a class="headerlink" href="#context-from-task-brief" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Overnight investigation (disk-cleanup-log.md ~04:05 CDT entry) RESOLVED the "rogue sweeper" question: NO rogue lane. Deletions were (1) main agent's authorized hand-clear, (2) VM/overlay reset of ephemeral /opt/wt-staging, (3) mirror lane's legitimate delete-after-verify.</li>
+<li>One genuine casualty: 4 intermediate .blends (bake_test.blend, cs_test.blend, pipeline2_in.blend, proof_before.blend) deleted ~03:59-04:00Z unstored/unjournaled via the pre-PR#45 daemon --apply path. Gate merged in PR #45, repo mhvnsnt/CloudDog-Muse-Storage-Disc-Assistant main 3e64090.</li>
+<li>This audit does NOT re-hunt a rogue. It is the census + proof of what can delete now.</li>
+</ul>
+<h2 id="verdict-in-one-paragraph">Verdict in one paragraph<a class="headerlink" href="#verdict-in-one-paragraph" title="Permanent link">&para;</a></h2>
+<p>Every AUTOMATED deleter currently running on this box is either (a) routed through the PR #45 delete gate (<code>clouddog.delete_gate.check_delete_gate</code>), or (b) an accountable verify-then-delete lane that journals actor + proof + pull-back to disk-cleanup-log.md. The 24/7 daemon — the actor that caused the 03:59Z casualty — is now DRY-RUN (heartbeat <code>dry_run: true</code>, <code>cleared: 0</code>; supervise.sh has --apply explicitly revoked 2026-10-20). NO currently-running process was found that can delete with neither gate nor journal. The residual risk is NOT a hidden program: it is (1) agent-level ad-hoc deletion (the guardian cron and any interactive agent can <code>rm</code> on prompt discipline alone — no code gate exists for that surface), and (2) latent pre-gate code paths that are not scheduled or running but still exist on disk (legacy <code>cmd_reap</code> v1, a dormant pre-gate checkout). Both are itemised below with dispositions.</p>
+<hr />
+<h2 id="1-census-scheduled-jobs-authoritative-cronlist-2026-10-20">1. Census — scheduled jobs (authoritative: cron.list, 2026-10-20)<a class="headerlink" href="#1-census-scheduled-jobs-authoritative-cronlist-2026-10-20" title="Permanent link">&para;</a></h2>
+<p>51 schedules returned (incl. disabled + runtime system jobs). Delete-capable among them:</p>
+<table>
+<thead>
+<tr>
+<th>Actor</th>
+<th>Schedule</th>
+<th>What it can delete</th>
+<th>Class</th>
+<th>Journal evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>disk-space-guardian</td>
+<td>interval 10m, enabled, timeout 1800s</td>
+<td>Ad-hoc: pushed-clean git clones (<code>rm -rf</code>), venvs, verified bulk; spawns <code>cloud_dog.py enforce --apply</code>; spawns mirror lanes</td>
+<td>ACCOUNTABLE-by-instruction / ROGUE-RISK surface (see §4.1) — its own clears are governed only by its prompt (verify + log), no code gate</td>
+<td>disk-cleanup-log.md — entries are detailed (actor, sizes, HEADs, pull-back) in every sampled run</td>
+</tr>
+<tr>
+<td>cloud-dog-daemon-keepalive</td>
+<td>interval 5m, enabled</td>
+<td>Nothing. Restarts daemon via supervise.sh when heartbeat stale/dead</td>
+<td>Not a deleter</td>
+<td>Restart lines in disk-cleanup-log.md</td>
+</tr>
+<tr>
+<td>overnight-idle-pipeline</td>
+<td>interval 30m, enabled</td>
+<td>Its own lock file only; body explicitly: "NEVER delete anything. Only the disk-space-guardian's existing rules may delete"</td>
+<td>Not a deleter</td>
+<td>overnight-log.md</td>
+</tr>
+<tr>
+<td>worker-watchdog (15m), keep-working-pulse (10m)</td>
+<td>enabled</td>
+<td>No deletion instructions (resume checkpoints; stale-lock handling only)</td>
+<td>Not deleters</td>
+<td>—</td>
+</tr>
+<tr>
+<td>All other ~45 schedules (incl. goal crons under ~/workspace/goals/*/crons/)</td>
+<td>various</td>
+<td>grep for cloud_dog/delete/rm/guardian matched only the jobs above plus gigaleak-pikpak-pull-loop, torbox-magnet-retry, continuous-friction-research, watermark-removal-watch, fosters-v2-terabox-retry — all pull/retry/watch jobs; none carries a workspace delete path</td>
+<td>Not deleters</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Runtime system jobs (feed-pulse-00..23, deterministic-doctor, profile-image)</td>
+<td>system</td>
+<td>Bodies are runtime-managed, not inspectable from workspace files; no evidence in any log of workspace deletion by them</td>
+<td>Uninspectable — no adverse evidence</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="duplicate-guardian-question-resolved-no-duplicate-schedule">Duplicate-guardian question — RESOLVED, no duplicate schedule<a class="headerlink" href="#duplicate-guardian-question-resolved-no-duplicate-schedule" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>cron.list</code> shows exactly ONE <code>disk-space-guardian</code> job: interval@10m, enabled.</li>
+<li>Three older definitions (interval@15m, @30m, @6h) exist ONLY under <code>~/workspace/cron.d/_archive/</code> and are absent from the scheduler list — archived, not live.</li>
+<li>Explanation for the ~1-min-apart guardian invocations a run flagged (04:03 / 04:04:40 CDT log entries): the job's timeout is 1800s against a 600s cadence, so a long run and the next scheduled run can overlap in wall-clock logging; the 04:15 CDT run itself noted the sibling run and avoided duplicating its work. Overlap is possible by configuration; a duplicate <em>schedule</em> does not exist. Recommendation: none required; if tighter accounting is wanted, the fix is a run-lock in the guardian body, not schedule surgery.</li>
+</ul>
+<h2 id="2-census-running-processes-sampled-2026-10-20-1020-and-1031-cdt">2. Census — running processes (sampled 2026-10-20 ~10:20 and ~10:31 CDT)<a class="headerlink" href="#2-census-running-processes-sampled-2026-10-20-1020-and-1031-cdt" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Actor</th>
+<th>State at audit</th>
+<th>What it can delete</th>
+<th>Class</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CloudDog daemon <code>python3 -m clouddog.cli daemon --interval 600 --roots /home/hatch/workspace</code> (src/clouddog)</td>
+<td>RUNNING (pid 25288, restarted as 3041 after VM restart during this audit)</td>
+<td>In --apply posture it would delete only via gate; <strong>currently deletes nothing</strong></td>
+<td><strong>GATED + currently inert</strong></td>
+<td>heartbeat.json: <code>dry_run: true, stored 0, verified 0, cleared 0, skipped_sacred 199</code>; supervise.sh carries the 2026-10-20 "AUTONOMY REVOKED" note — no <code>--apply</code> flag; daemon.py:35 imports check_delete_gate, calls it at :409/:539; reaper.py:334 and streamer.py:714 likewise</td>
+</tr>
+<tr>
+<td>Guardian-spawned <code>python3 ~/workspace/cloud-dog/cloud_dog.py enforce --apply</code></td>
+<td>RUNNING at first sample (pid 19085)</td>
+<td>Registry entries only</td>
+<td><strong>ACCOUNTABLE</strong> (not gate-module — see §4.2)</td>
+<td>cmd_enforce → cmd_reap_v2: V1 <code>evaluate()</code> front-decider (SACRED blocked, KEEP_LOCAL/STORE skipped, game files strict) → <code>decide_delete</code> laws engine → live per-store verify → delete → <code>audit_log("reap", …)</code> + registry status + disk-cleanup-log line. Repeated log lines this morning: <code>enforce: reaped=0</code> (registry empty of pending)</td>
+</tr>
+<tr>
+<td>Mirror/upload lanes: tk5 <code>upload_release.sh</code>, take2 <code>.take2-mirror/final-verify.sh</code>, <code>gh release upload</code> (clouddog-20261020-twerk, tekken5-e7-extract-v1), tekken5 ISO curl download</td>
+<td>RUNNING / IN-FLIGHT</td>
+<td>Delete-as-you-go of own verified parts only</td>
+<td><strong>ACCOUNTABLE</strong></td>
+<td>Per-lane logs in disk-cleanup-log.md with sizes/sha256/pull-back. <strong>UNTOUCHED by this audit per NEVER-KILL-IN-PROGRESS law</strong></td>
+</tr>
+<tr>
+<td>Everything else in <code>ps aux</code> (blender renders, ffmpeg, git fetches, playwright, http.server)</td>
+<td>RUNNING</td>
+<td>No delete path observed</td>
+<td>Not deleters</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-census-scripts-on-disk">3. Census — scripts on disk<a class="headerlink" href="#3-census-scripts-on-disk" title="Permanent link">&para;</a></h2>
+<h3 id="3a-gated-route-through-clouddogdelete_gatecheck_delete_gate">3a. GATED (route through <code>clouddog.delete_gate.check_delete_gate</code>)<a class="headerlink" href="#3a-gated-route-through-clouddogdelete_gatecheck_delete_gate" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Script/module</th>
+<th>Delete path</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>~/workspace/cloud-dog/src/clouddog/daemon.py</code></td>
+<td>gated at :409/:539</td>
+<td>Live daemon engine; dry-run posture above</td>
+</tr>
+<tr>
+<td><code>~/workspace/cloud-dog/src/clouddog/reaper.py</code></td>
+<td>gated at :328-334</td>
+<td>Registry reap for the v1 engine</td>
+</tr>
+<tr>
+<td><code>~/workspace/cloud-dog/src/clouddog/streamer.py</code></td>
+<td>gated at :708-714</td>
+<td>Stream/delete-as-you-go; claims leg consults work-claims table (:493)</td>
+</tr>
+<tr>
+<td>Gate legs (delete_gate.py:77): policy verdict + registry/store proof + claims + journal — fail-closed (<code>GateBlock</code>). PR #45 commits verified in <code>~/workspace/cloud-dog</code> git log: 041f0b7 (gate module), 6810c00 (daemon routed), ff2b0e1 (reaper/streamer routed), f8ff789 (claims fail-closed), merge 3e64090.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="3b-accountable-own-verify-journal-naming-actor-proof-pull-back-no-gate-module">3b. ACCOUNTABLE (own verify + journal naming actor + proof + pull-back; no gate module)<a class="headerlink" href="#3b-accountable-own-verify-journal-naming-actor-proof-pull-back-no-gate-module" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Script</th>
+<th>Verify before delete</th>
+<th>Journal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cloud_dog.py</code> cmd_reap_v2 / cmd_enforce</td>
+<td>V1 evaluate + laws decide_delete + live store verify; game-file strict bar runs an actual pull-back prover</td>
+<td>audit.jsonl + registry + cleanup-log</td>
+</tr>
+<tr>
+<td><code>cloud_dog.py</code> cmd_dedup (:2589)</td>
+<td>full hash equality vs kept copy + decide_delete</td>
+<td>audit_log("dedup") + cleanup-log</td>
+</tr>
+<tr>
+<td><code>cloud_dog.py</code> cmd_mirror parts (:1832/:1884/:2103)</td>
+<td>per-part upload+verify before unlink; manifest retained</td>
+<td>mirror manifest + audit</td>
+</tr>
+<tr>
+<td><code>agent-ops/mirror-one.sh</code></td>
+<td>per-part remote <strong>size</strong> verify (3 attempts), original deleted only if ALL parts verified; failure leaves everything</td>
+<td>cleanup-log line with pull-back command</td>
+</tr>
+<tr>
+<td><code>agent-ops/mirror-wh-work-20261020.sh</code> (MIRROR-WW)</td>
+<td>per-part size verify, delete-as-you-go; source <code>rm -rf</code> only after full re-download stream sha256 verify</td>
+<td>MIRROR-WW lines in cleanup-log. <strong>Fail-closed proof in the wild:</strong> 04:49 CDT re-download sha256 MISMATCH on moveset-cluster-b-t7 → "local dir KEPT"</td>
+</tr>
+<tr>
+<td><code>agent-ops/guardian-mirror-20261020-0744.sh</code>, <code>mirror</code> lanes (<code>.take2-mirror/</code>, tk5 <code>upload_release.sh</code>)</td>
+<td>same split/upload/verify pattern</td>
+<td>cleanup-log</td>
+</tr>
+<tr>
+<td><code>tools/fetch/store</code> (<code>--delete-local</code>)</td>
+<td>upload-verify before delete; updates STORAGE-MANIFEST.json</td>
+<td>manifest + log</td>
+</tr>
+<tr>
+<td><code>agent-ops/stream_store.py</code>, <code>stream_chunk_upload.py</code>, <code>resume-cn-gigaleak-store.py</code>, <code>t6ps3_upload.py</code>, <code>gh-upload-cn-work.sh</code>, <code>jt-archive-lane.sh</code>, <code>doa4-verify-reap.sh</code>, <code>ep01-master-upload.sh</code>, <code>ep01-fixed-master-upload.sh</code>, <code>wg-chunks-upload.sh</code>, <code>ttt2_chunk_upload6.sh</code>, <code>bakeoff-offload.sh</code></td>
+<td>per-chunk/part verify-then-unlink pattern (grep-located; same lane family)</td>
+<td>lane logs / cleanup-log</td>
+</tr>
+<tr>
+<td><code>agent-ops/disk-guardian-offload-20261015.sh</code> (2026-10-15 one-off)</td>
+<td>download-back sha256 per part; source deleted only after EVERY part verified; checkpointed</td>
+<td>cleanup-log + checkpoint json. <strong>Read in full during this audit — earlier suspicion of an unguarded <code>rm -rf $3</code> was refuted: the rm sits behind the verify gate in code</strong></td>
+</tr>
+<tr>
+<td><code>agent-ops/offload-triple-xxx.sh</code> (2026-10-14 one-off)</td>
+<td>remote size verify per tar; on any failure logs "NOT deleted" and deletes nothing</td>
+<td>cleanup-log + STORAGE-MANIFEST.json entries with sha256</td>
+</tr>
+<tr>
+<td><code>agent-ops/loti-verify-run.sh</code>, <code>vft-verify-run.sh</code></td>
+<td>verify-run pattern; vft also <code>gh release delete</code>s its own backup release at end-of-lane (by design, after local verify)</td>
+<td>lane logs</td>
+</tr>
+<tr>
+<td><code>cloud-dog/stream_blob_reaper.py</code></td>
+<td>deletes ONLY on local sha256 == remote hash; writes manifest entry</td>
+<td>manifest.json (weakest journal in this class — no cleanup-log line, no gate). Standalone helper; no live lane found invoking it during this audit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3c-rogue-risk-can-delete-with-neither-gate-nor-journal">3c. ROGUE-RISK (can delete with neither gate nor journal)<a class="headerlink" href="#3c-rogue-risk-can-delete-with-neither-gate-nor-journal" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Running/scheduled?</th>
+<th>Disposition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ad-hoc agent shell deletion</strong> — the guardian agent's own prompt-authorised clears (pushed-clean clones, venvs, "documented" model weights) and any interactive agent's <code>rm</code></td>
+<td>Guardian runs every 10m by design</td>
+<td><strong>Cannot be code-gated from this lane; NOT touched (owner law + it is the owner's own standing cleanup order).</strong> Recommendation in §6</td>
+</tr>
+<tr>
+<td><strong><code>cloud_dog.py</code> cmd_reap (v1, :959)</strong> — direct <code>cloud_dog.py reap --apply</code> path: policy-leg + GitHub verify only; bypasses laws <code>decide_delete</code> AND the delete_gate claims leg</td>
+<td>Not scheduled (guardian calls <code>enforce</code>, which dispatches to v2), not running</td>
+<td><strong>Latent. NOT hot-patched by this audit</strong> — the engine is live (an enforce process was mid-run) and repo rules require branch→PR→green tests for engine changes. Recommendation in §6</td>
+</tr>
+<tr>
+<td><strong><code>cloud_dog.py</code> cmd_daemon (legacy, :2389)</strong> — standalone daemon inside cloud_dog.py</td>
+<td>Not running; supervisor launches <code>clouddog.cli</code> (src) instead</td>
+<td>Latent; same recommendation</td>
+</tr>
+<tr>
+<td><strong>Dormant pre-gate checkout <code>~/workspace/CloudDog-Muse-Storage-Disc-Assistant</code></strong> at daf88af (PR #40 — predates the gate)</td>
+<td>Nothing references it: supervise.sh and the guardian both use <code>~/workspace/cloud-dog</code> (at 3e64090, gate merged)</td>
+<td>Latent; <strong>not deleted by this audit</strong> (audit deletes nothing; also a repo checkout). Recommendation: pull it to main or remove the checkout so no future lane can run pre-gate code from it by mistake</td>
+</tr>
+<tr>
+<td><code>/tmp</code> + <code>/opt</code> ephemeral trees (e.g. /opt/wt-staging)</td>
+<td>VM/overlay resets delete these with no journal by platform design</td>
+<td>Out of gate reach by construction — nothing irreplaceable may live there; already the standing lesson of the overnight resolution</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Actions taken by this audit: NONE destructive.</strong> No process killed, no file deleted, no script edited. The two one-off scripts initially suspected (§3b, last-but-two rows) were read in full and cleared. All other dispositions are recommendations for the parent/owner, because the remaining rogue-risk items are either (a) the owner's own authorised agent behaviour, or (b) live-engine code whose fix must go through the repo's branch→PR→test path.</p>
+<hr />
+<h2 id="4-notes-on-the-two-structural-findings">4. Notes on the two structural findings<a class="headerlink" href="#4-notes-on-the-two-structural-findings" title="Permanent link">&para;</a></h2>
+<h3 id="41-the-guardian-is-accountable-by-instruction-not-by-construction">4.1 The guardian is accountable by instruction, not by construction<a class="headerlink" href="#41-the-guardian-is-accountable-by-instruction-not-by-construction" title="Permanent link">&para;</a></h3>
+<p>Its log discipline is genuinely good (sampled entries name actor, byte counts, HEADs, stash state, pull-back). But nothing <em>prevents</em> a guardian run from deleting on a mistaken "pushed-clean" judgement — the same failure shape as the historical incidents, one level up. The gate+journal design goal is met for the <em>engine</em> paths the guardian invokes (<code>enforce --apply</code>), not for the guardian's own hands.</p>
+<h3 id="42-enforce-apply-is-not-the-gate-module">4.2 <code>enforce --apply</code> is not the gate module<a class="headerlink" href="#42-enforce-apply-is-not-the-gate-module" title="Permanent link">&para;</a></h3>
+<p><code>cloud_dog.py</code> contains zero references to <code>delete_gate</code>. Its v2 reap is a parallel implementation of the same invariant (policy front-decider + laws + live verify + audit journal) and fails closed when the policy engine cannot import. It is honestly classed ACCOUNTABLE, not GATED. Unifying it onto <code>check_delete_gate</code> (so the claims leg also binds registry reaps) is the single highest-value hardening left.</p>
+<h3 id="43-journal-integrity-quirk-minor">4.3 Journal integrity quirk (minor)<a class="headerlink" href="#43-journal-integrity-quirk-minor" title="Permanent link">&para;</a></h3>
+<p>During this audit, <code>~/.clouddog/heartbeat.json</code> was briefly overwritten by a pytest daemon instance (roots=/tmp/pytest-of-root/…, pid 4080) — test runs share the production heartbeat path. A keepalive reading that heartbeat could misjudge daemon health. No deletion resulted. Worth a test-isolation fix in the engine repo.</p>
+<hr />
+<h2 id="5-sf-toolstar-verdict-not-lost-fully-recoverable-locally-simply-never-stored">5. sf-tools.tar — VERDICT: NOT LOST. Fully recoverable locally; simply never stored.<a class="headerlink" href="#5-sf-toolstar-verdict-not-lost-fully-recoverable-locally-simply-never-stored" title="Permanent link">&para;</a></h2>
+<p>Own-eyes evidence (2026-10-20 ~10:35 CDT):
+- <code>~/workspace/_sf-scratch/sf-tools/</code> — source dir INTACT (188M).
+- <code>~/workspace/_sf-scratch/sf-tools.tar</code> — INTACT, 196,249,600 bytes, sha256 <code>6891176bf54d561c2936486228d6acbb65cf9177bc1e3e7440b0aa6e7b949ca4</code>.
+- <code>sf-tools.tar.part-aa</code> (104,857,600) + <code>sf-tools.tar.part-ab</code> (91,392,000) — present; concatenated sha256 == tar sha256 exactly (verified this audit). Parts are byte-perfect splits of the tar.
+- Store side: <code>gh release view scratch-mirror-20261020 --repo mhvnsnt/clouddog-storage</code> lists 23 assets (pipeline_wk, pipeline2_wk, ex-plus-alpha, MUS, MOV, pipeline_out, weld_applied, bake_test_out parts) — <strong>zero sf-tools assets</strong>. <code>wh-work-mirror-20261020</code> also has zero sf-tools assets.
+- Correction to the record: the 04:15 CDT guardian note "no sf-tools files locally" was wrong (or looked only in meshrepair-scratch). The files were in <code>_sf-scratch</code> the whole time; timestamps (tar 07:59Z, parts 08:00Z) predate the 03:27 CDT lane death — the lane died mid-UPLOAD, and its delete-as-you-go never fired because no part ever verified on the store. The fail-closed design worked; the watch item can close.
+- Remaining action (not this audit's to run): mirror <code>_sf-scratch/sf-tools.tar</code> via mirror-one-style lane, verify, then clear per ONE-STORE. Until then it is unstored-but-safe locally, ~196MB + 188M source.</p>
+<h2 id="6-wt-verify-unattributed-disappearance-what-can-and-cannot-be-established">6. wt-verify — unattributed disappearance; what can and cannot be established<a class="headerlink" href="#6-wt-verify-unattributed-disappearance-what-can-and-cannot-be-established" title="Permanent link">&para;</a></h2>
+<p>Established:
+- <code>~/workspace/wt-verify/</code> (3.9G, parts part-aa..ai downloaded from cape-jones release assets, all DLV-OK per its dl2-progress.log) vanished ~04:06–04:12 CDT 2026-10-20. Directory still absent at this audit.
+- Zero entries in BOTH CloudDog journals (<code>~/.clouddog/audit.jsonl</code>: 0 matches; <code>~/workspace/agent-ops/cloud-dog-audit.jsonl</code>: 0 matches), no disk-cleanup-log entry, no surviving checkpoint/process/script attributing the deletion (grep across agent-ops <em>.md/</em>.log, checkpoints, and both daily memory files found only the anomaly reports themselves).
+- The data is safe: it was download-verified copies of cape-jones release assets; restorable from the releases. No data loss.</p>
+<p>Cannot be established: who/what deleted it, or the exact mechanism. The overnight best hypothesis (the verify lane self-cleaned its staging after completion) remains unproven either way. This audit found no new attribution evidence and does not manufacture any.</p>
+<p>Which NEW mechanism would have caught a recurrence:
+- <strong>Gate journal</strong> — would NOT have caught it if the deleter was an agent shell (gate binds engine code paths only). Would have caught it if any engine path (daemon/reaper/streamer/enforce) had done it: every gated delete now writes an audit event with path + verdict legs.
+- <strong>Claims</strong> — a live work-claim on wt-verify would have made the gate BLOCK an engine deletion and would have named the owning lane in the claims table, attributing the work even if a non-engine actor removed the files.
+- <strong>Mirror log</strong> — a delete-as-you-go lane deleting its own verified parts writes cleanup-log lines per part (as MIRROR-WW and mirror-one do); a 3.9G self-clean would have left ~35 part lines. Their absence is itself evidence the deleter was none of the accountable lanes.
+- Net: a recurrence is attributable by construction ONLY if the dir is (a) under a work-claim and (b) deleted by an engine path or an accountable lane. An unclaimed dir deleted by an ad-hoc agent shell remains unattributable — that is residual risk §7.1, and the practical fix is claiming staging dirs at lane start.</p>
+<h2 id="7-residual-risk-list">7. Residual risk list<a class="headerlink" href="#7-residual-risk-list" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Agent ad-hoc deletion is ungated by construction.</strong> Any agent (guardian included) can <code>rm</code> outside every journal. Mitigations in place: prompt law + cleanup-log discipline (observed working). Not fully closable without an OS-level control.</li>
+<li><strong>Legacy <code>cloud_dog.py</code> reap v1 + legacy daemon</strong> bypass the gate module (v1 reap: policy+verify only). Not scheduled/running. Fix path: route cmd_reap → cmd_reap_v2 semantics / check_delete_gate, via branch→PR→pytest in the CloudDog repo.</li>
+<li><strong><code>enforce --apply</code> ≠ gate module</strong> (§4.2): registry reaps don't consult the claims leg. Unify onto <code>check_delete_gate</code>.</li>
+<li><strong>Dormant pre-gate checkout</strong> <code>~/workspace/CloudDog-Muse-Storage-Disc-Assistant</code> @ PR #40. Pull to main or remove before a future lane runs it by mistake.</li>
+<li><strong>Daemon --apply is revoked by a comment + flag absence in supervise.sh</strong>, not by an engine-enforced trust state. One mistaken edit re-arms it (though the gate would then bind every delete — the invariant holds; only the autonomy posture would change).</li>
+<li><strong>Heartbeat path shared with tests</strong> (§4.3) — keepalive health judgements can be spoofed by a test run.</li>
+<li><strong>Guardian run overlap</strong> (timeout 1800s &gt; cadence 600s): two runs can interleave log entries and duplicate relaunch decisions (observed 04:03/04:15 — mirror lane relaunched twice, harmlessly because lanes are idempotent). A run-lock would make attribution cleaner.</li>
+<li><strong>sf-tools (and _sf-scratch generally) is unstored</strong>: safe today, single-copy. Mirror it before any future disk crunch tempts a hand-clear.</li>
+</ol>
+<h2 id="8-census-counts">8. Census counts<a class="headerlink" href="#8-census-counts" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Scheduled jobs reviewed: 51 (cron.list, incl. disabled + system). Delete-capable scheduled actors: 2 (disk-space-guardian; cloud-dog-daemon-keepalive as daemon restarter only).</li>
+<li>Running delete-capable processes found: 3 families (daemon — gated/inert; enforce --apply — accountable; mirror/upload lanes — accountable, in-flight, untouched).</li>
+<li>Script families classified: GATED 3 modules (+ gate itself); ACCOUNTABLE 20+ scripts/lanes; ROGUE-RISK 4 items (1 structural/agent-surface, 2 latent legacy code paths, 1 dormant checkout) + ephemeral /tmp//opt by-design.</li>
+<li>Rogue-risk items shut down/patched on the spot: <strong>none</strong> — each remaining item is either owner-authorised agent behaviour (cannot shut down without countermanding the owner's standing order) or live-engine code (fix belongs in a tested PR, not an audit hot-patch). All are itemised with recommendations above rather than silently left.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,10160 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Indexes, conventions, manifests, and handoffs for the agent fleet.">
+      
+      
+        <meta name="author" content="Mars FMMG">
+      
+      
+      
+        <link rel="prev" href="../wizard-gang-eps-backlog-2026-10-30/">
+      
+      
+        <link rel="next" href="../wizard-gang-real-anim-repo-audit-2026-10-29/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+      
+        <title>Wizard Gang — REAL-ANIMATION Upgrade: Local Tools + Real Cartoon Production-File Inventory - Agent Ops Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#wizard-gang-real-animation-upgrade-local-tools-real-cartoon-production-file-inventory" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Agent Ops Hub" class="md-header__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agent Ops Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Wizard Gang — REAL-ANIMATION Upgrade: Local Tools + Real Cartoon Production-File Inventory
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Agent Ops Hub" class="md-nav__button md-logo" aria-label="Agent Ops Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Agent Ops Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    agent-ops — restart resilience for agent work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AGENTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AGENTS.md
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ALIST-TERABOX-WEBDAV-EVALUATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AList Evaluation — TeraBox -&gt; WebDAV -&gt; rclone Bridge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ANTI-CLOBBER-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ANTI-CLOBBER LAW (owner 2026-10-17)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AUDIT-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repo audit — 2026-10-14 (Grok Bot)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BANNON-CONFLICT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BANNON Conflict-Lane Pickup — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BOX-OFFLOAD-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BOX OFFLOAD LOG — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BROADCAST-NO-LOCAL-CLUTTER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BROADCAST TO ALL AGENTS — 2026-10-17
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BROWSER-TRANSFER-COOKIE-ARIA2-SOP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cookie -&gt; aria2/curl Lane SOP (browser-transfer replacement)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BRUTALFIST-CONFLICT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BRUTAL-FIST conflict-resolution lane — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CATCHUP-AUDIT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WESTERN HEART — CATCH-UP AUDIT (2026-10-23)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHECKPOINT_PROTOCOL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkpoint Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLAIMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAIMS (prevents collisions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COMPUTE_ARSENAL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Free Compute Arsenal — fmmg.mars@gmail.com (Mars FMMG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CROSS-REPO-STRANDED-AUDIT-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CROSS-REPO STRANDED-WORK AUDIT — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CUT001R-6B-VM-RESTART-LOSS-20261115/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CUT 001R — 6B lane — VM RESTART LOSS RECORD (2026-11-15)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DEATHFANG-RYUJI-ORDER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DEATHFANG + Ryuji/Rock Hybrid — Owner Orders 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DELETER-AUDIT-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DELETER AUDIT — 2026-10-20
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DISK-AUDIT-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DISK AUDIT — 2026-10-16
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DISK-CLEAR-GUARD-RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Clear Guard — Rules (mandatory, no override)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../END-OF-SESSION-BACKUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    END-OF-SESSION BACKUP (watchdog procedure)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FREE-AI-AGENTS-SETUP-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Free AI Coding Agents — Research &amp; Setup (2026-10-16)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FREE-CLI-AGENTS-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Free CLI Coding Agents — Setup Report 2026-10-16
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FREE-TOOL-ARSENAL-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FREE TOOL ARSENAL — 2026-10-16
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FRICTION-RESEARCH-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FRICTION RESEARCH — recurring problems, real fixes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FRICTION-RESEARCH-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FRICTION RESEARCH LOG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GHIDRA-SFEX-PIPELINE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ghidra SF EX Vertex Decode Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GRE-51-52-REVIEW-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GRE PR #51 + #52 Landing Review — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-CANON/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — CANON (where the game's knowledge lives)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF INDEX — fleet state, one place, no "missing"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-REPOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — REPOS (per-repo state + landing order)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-TEARDOWNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — TEARDOWNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANDOFF-WESTERN-HEART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — WESTERN HEART (mhvnsnt/western-heart)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOW-GROKBOT-WORKS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How Grok Bot works (copy this process)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDEMPOTENCY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idempotency Rules — write work so a re-run can't duplicate or corrupt it
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LANE-RESILIENCE-SOP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane Resilience SOP — the at-least-once contract for lane authors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LANE_GUARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane Guard — crash-resilient + collision-proof lanes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-IT-YOURSELF-LAW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE-IT-YOURSELF LAW (owner 2026-10-15) — canonical copy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-QUEUE-BRIEFING-CONFIRMATIONS-2026-10-24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE-QUEUE BRIEFING — CONFIRMATIONS (2026-10-24)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MERGE-QUEUE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE QUEUE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MIRROR-HUNT-2026-10-17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CN Gigaleak Mirror Hunt — 2026-10-17
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MULTIVERSE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MULTIVERSE — one universe, many games
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NO-DATA-LOSS-RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NO-DATA-LOSS RULES (owner law — mhvnsnt)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NO-SPARSE-COMMIT-PROPAGATION-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NO-SPARSE-COMMIT LAW propagation run — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PENDING-LANES-2026-11-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PENDING LANES — written 2026-11-09 ~16:05 CST by the Build-A-Bitch chat parent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../REMAINING-PULL-AUDIT-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CN Gigaleak — Remaining Pull Audit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-CONVENTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Conventions (all repos, all agents)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESEARCH-PULLIN-INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RESEARCH → PULL-IN INDEX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESUME_BRIEF_TEMPLATE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resume Brief Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RIG-MAP-Beth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RIG MAP Beth
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RIG-MAP-Jerry_200_REV/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RIG MAP Jerry 200 REV
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RIG-MAP-Morty/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RIG MAP Morty
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RIG-MAP-Rick/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RIG MAP Rick
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RIG-MAP-Summer_0907/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RIG MAP Summer 0907
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SF-TEARDOWN-PULL-ORDER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SF 3D Teardown Pull — Owner Order 2026-10-19 ~20:26 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SITTING-SAGA-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SITTING SAGA — where the finished chair work lives (2026-10-23)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SITTING-TAKES-COMPARISON-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Three Sitting Takes — Plain-Language Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SITTING-WT-AUTOSEAT-HANDOFF-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    wt-autoseat take — handoff (2026-10-19)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SITTING-WT-MOCAPSIT-HANDOFF-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HANDOFF — wt-mocapsit (mocap sitting retarget take), 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SITTING-WT-SITCANON-HANDOFF-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SITTING-WT-SITCANON HANDOFF — sitting-canon take (stored 2026-10-19)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T6-RECON-HANDOFF-2026-10-16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    T6 Recon Handoff — 2026-10-16
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TAG-TEAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TAG-TEAM board (live)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TEAM-RESEARCH-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WHOLE-TEAM RESEARCH — 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TERABOX-PENDING-gympartner-gaps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TeraBox-pending: torbox-pull gym-partner gaps (2026-10-16)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-ALTERNATIVES-20261016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Alternatives — Free/Open-Source Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-BREAKTHROUGH-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Breakthrough Program — Final Report (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-LANE5-AGENT-REVIEW-2026-10-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox BAD_TOKEN — Lane 5 All-Agents Review (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-RESEARCH-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Research — 2026-10-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TORBOX-SUPPORT-TICKET-DRAFT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Support Ticket — DRAFT (do not send without owner approval)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WH-498-RELAND-2026-10-24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WH-#498 RE-LAND REPORT — 2026-10-24
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WH-841-CONFLICT-2026-10-24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WH-#841 conflict lane — FINAL REPORT (2026-10-24 ~02:22Z)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WH-974-REVERT-2026-10-24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    INCIDENT 2026-10-24 ~02:28Z — WH #974 merge built on stale branch tree (main's payloads dropped)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WH-FIXABLE-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WH fixable-PRs work log — 2026-10-23 (conflict-resolution worker)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WH-PR-TRIAGE-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WESTERN-HEART PR TRIAGE — 2026-10-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WIREUP-COORDINATOR-BRIEF-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WHOLE-TEAM WIRE-UP — Coordinator Brief 2026-10-19 ~21:10 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WORKING-METHOD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working Method
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adr-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-NNNN:
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browser-downloads-slps02182-dedup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SLPS02182 dedup evidence — browser_downloads/sess-3802796762
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cape-jones-to-wizard-gang-2026-11-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cape Jones → Wizard Gang transfer + FLA production program — running log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../caps-audit-2026-11-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Free-Tier Caps Audit — 2026-11-04 (READ-ONLY)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ci-watch-log-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CI Watch run — 2026-10-23 ~03:27–03:33 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ci-watch-report-2026-10-22-2257/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CI-watch sweep — 2026-10-23T04:01:08Z
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cjwg-cape-inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cape Jones → Wizard Gang Transfer Inventory — mhvnsnt/cape-jones @ main
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cjwg-parts-audit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wizard Gang FLA Puppets — REAL Parts Audit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cjwg-tools-audit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CJWG Tools Audit — What Is Actually Runnable Locally Right Now
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cjwg-trippedd-inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TRIPPEDD-Production-studios- — Current Main Inventory (Wizard Gang target repo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-census-20261021-sweep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DISK CENSUS — cleanup sweep 2026-10-21 ~11:58 CDT (owner order 11:55 CDT)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-cleanup-log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Cleanup Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-guardian-eval-20261022-0214/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Guardian Evaluation — 2026-10-22 ~02:45 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dreamgirl-watchdog-respawns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dream Girl Lane Watchdog — Respawn Ledger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fla-puppets-program-2026-10-30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FLA PUPPETS + RIGS + SCENE FILES PROGRAM — log (2026-10-30)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grokbot-activity-proof-2026-10-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot / MoneyManBusch activity proof — 2026-10-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-14-2120/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-14 21:20 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-14-2130/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-14 21:30 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-14-2150/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-14 21:50 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-0020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 00:20 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-0030/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 00:30 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-0150/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 01:50 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-0200/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 02:00 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-0250/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 02:50 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-0300/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 03:00 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-0420/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 04:20 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-0700/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 07:00 CT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-1350/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 13:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-1420/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 14:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-1710/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 17:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-1800/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 18:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-2000/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 20:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-2130/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 21:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-2230/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 22:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-2240/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 22:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-15-2300/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-15 23:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-0520/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 05:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-0610/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 06:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-0650/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 06:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-0720/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 07:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-0750/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 07:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-0810/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 08:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-0840/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 08:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-0900/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 09:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 10:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1130/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 11:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1210/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 12:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1220/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 12:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1300/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 13:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1310/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 13:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1320/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 13:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1420/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 14:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1440/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 14:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1450/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 14:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1510/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 15:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1540/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 15:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1600/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 16:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1620/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 16:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1730/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 17:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1750/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 17:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1820/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 18:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1840/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 18:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1850/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 18:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1900/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 19:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-1910/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 19:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-2000/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 20:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-2010/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 20:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-2110/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 21:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-2150/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 21:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-2220/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 22:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-16-2250/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-16 22:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0000/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 00:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0010/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 00:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 00:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0040/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 00:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0050/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 00:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0100/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 01:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0130/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 01:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0140/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 01:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0230/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 02:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0240/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 02:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0440/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 04:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0520/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 05:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0630/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 06:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0740/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 07:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0800/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 08:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0810/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 08:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0830/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 08:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0910/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 09:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-0950/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 09:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-1020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 10:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-1040/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 10:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-1130/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 11:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-1140/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 11:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-1150/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 11:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-1210/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 12:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-1240/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 12:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-1250/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 12:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-17-1340/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-17 13:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-1540/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 15:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-1700/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 17:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-1750/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 17:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-1910/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 19:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-1940/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 19:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-1950/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 19:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-2010/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 20:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-2030/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 20:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-2040/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 20:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-2110/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 21:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-2120/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 21:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-2140/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 21:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-2150/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 21:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-2230/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 22:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-18-2240/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-18 22:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-0100/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 01:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-0210/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 02:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-0250/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 02:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-0300/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 03:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-0320/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 03:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-0340/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 03:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-0700/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 07:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-0840/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 08:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-1200/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 12:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-1700/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 17:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-1720/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 17:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-1730/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 17:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-1820/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 18:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-1920/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 19:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-2020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 20:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-19-2030/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-19 20:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-1710/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 17:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-1730/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 17:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-1750/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 17:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-1820/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 18:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-1840/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 18:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-1900/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 19:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-1940/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 19:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-1950/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 19:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-2000/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 20:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-2300/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 23:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-20-2350/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-20 23:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0000/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 00:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0030/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 00:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0040/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 00:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0050/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 00:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0130/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 01:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0140/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 01:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0150/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 01:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0200/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 02:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0220/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 02:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0300/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 03:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0340/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 03:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0420/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 04:20 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0430/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 04:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0440/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 04:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0450/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 04:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0540/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 05:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0700/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 07:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0710/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 07:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-0740/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 07:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1130/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 11:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1230/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 12:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1240/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 12:40 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1330/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 13:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1410/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 14:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1510/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 15:10 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1600/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 16:00 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1630/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 16:30 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1750/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 17:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keep-working-pulse-2026-11-21-1850/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keep-working pulse — 2026-11-21 18:50 EST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-coord-results-2026-10-23-1340/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MERGE COORD RESULTS — 2026-10-23 13:40 CDT run (parent: overnight-idle-pipeline)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-2026-10-22-1612/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    merge-law-ci-watch — run 2026-10-22 16:12 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-2026-10-22/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    merge-law-ci-watch — run 2026-10-22 04:57 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-2026-10-23-0930/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    merge-law-ci-watch run 2026-10-23 09:30 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-2026-10-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    merge-law-ci-watch run 2026-10-23 04:57 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-2026-10-24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    merge-law-ci-watch sweep — 2026-10-24 ~21:27 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-2026-10-30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    merge-law-ci-watch sweep — Fri 2026-10-30 ~17:55 CDT (run scheduled 17:42 CDT)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-2026-10-31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    merge-law-ci-watch sweep — 2026-10-31 ~11:50 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-2026-11-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Merge law ci watch 2026 11 08
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-20261104/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Merge-law CI watch sweep — 2026-11-04 ~21:12 CST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-law-ci-watch-report-20261021/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    merge-law-ci-watch run report — 2026-10-21 ~00:35 CDT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pantera-ATTIRE-SLOTS-20261022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PANTERA — Attire Slots (owner 2026-10-17)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pantera-leopard-king-WORKLOG-20261022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WORKLOG — Pantera Attire 6 "Leopard King" + Slot-2 Tripo correction (2026-10-19)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../re-toolchain-deletion-inventory-20261023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deletion inventory — feat/re-toolchain-research-20261016 split (2026-10-23)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-pr-body-20261108-0344/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync pr body 20261108 0344
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-pr-body-20261108-0514/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync pr body 20261108 0514
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-pr-body-20261108-0844/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync pr body 20261108 0844
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-pr-body-20261108-1244/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync pr body 20261108 1244
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-pr-body-20261108-1544/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync pr body 20261108 1544
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-pr-body-20261108-1814/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync pr body 20261108 1814
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-pr-body-20261108-1844/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync pr body 20261108 1844
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toonboom-re-2026-10-30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Toon Boom Format RE — 2026-10-30
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-claims-recheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Claims Re-Check — 2026-10-20 evening (coordinator lane, parent-ordered)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane1-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox API Auth — Lane 1, Round 2 (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane2-debrid-live/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LANE 2 (RETRY) — Debrid-Link + AllDebrid Live Tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane3-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 3 — Alternative Debrid / Seedbox Sweep for a 350 GB Single-File Torrent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane4-compute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 4 — Free compute / cloud-to-cloud transfer layer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane5-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 5 — All-Agents Tooling on TorBox BAD_TOKEN (2026-10-20)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane6-oss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TorBox Lane 6 — Open-Source Wire-Up + Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torbox-lane7-seedbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lane 7 — Free-Trial Seedbox Angle (Seedhost.eu + Pulsed Media + others)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verify-diffs-2026-10-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CN Gigaleak Verify — File-Name Diffs (2026-10-19)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wave3-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LANDING WAVE 3 — MOVESETS — FINAL REPORT (2026-10-23 CDT)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wh-pr-conflict-resolve-20261020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Western Heart PR conflict resolution — 2026-10-20
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wizard-gang-cut-apart-proof-2026-10-30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cut-apart proof lane — log (2026-10-30)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wizard-gang-eps-backlog-2026-10-30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EPS Backlog Render — 2026-10-30 (PAUSED by owner order ~17:07 CDT)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wizard Gang — REAL-ANIMATION Upgrade: Local Tools + Real Cartoon Production-File Inventory
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wizard Gang — REAL-ANIMATION Upgrade: Local Tools + Real Cartoon Production-File Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary-table-tool-job-in-a-real-cartoon-pipeline-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SUMMARY TABLE — tool → job in a real cartoon pipeline → status
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-a-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PART A — DETAIL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PART A — DETAIL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a1-frame-by-frame-drawing-2d-animation-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A1. Frame-by-frame drawing / 2D animation apps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a2-cutout-puppet-rigging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A2. Cutout / puppet rigging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a3-inbetweening" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A3. Inbetweening
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a4-color-paint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A4. Color / paint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a5-lip-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A5. Lip-sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a6-storyboard-pre-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A6. Storyboard / pre-production
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a7-editing-nle-compositing-render-production-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A7. Editing / NLE / compositing / render / production management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a8-voice-existing-pipeline-listed-for-completeness-not-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A8. Voice — EXISTING pipeline, listed for completeness, NOT animation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a9-flash-tooling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A9. Flash tooling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-b-real-professional-cartoon-production-files-on-hand-study-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PART B — REAL PROFESSIONAL CARTOON PRODUCTION FILES ON HAND (study material)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PART B — REAL PROFESSIONAL CARTOON PRODUCTION FILES ON HAND (study material)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#b1-fosters-home-for-imaginary-friends-the-single-closest-pipeline-match-illustrator-flash-after-effects-per-its-own-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B1. Foster's Home for Imaginary Friends — the single closest pipeline match (Illustrator → Flash → After Effects, per its own catalog)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b2-gumball-the-amazing-world-of-gumball-flash-puppet-rig-show" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B2. Gumball (The Amazing World of Gumball) — Flash puppet-rig show
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b3-ok-ko-lets-be-heroes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B3. OK K.O.! Let's Be Heroes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b4-other-held-production-art-sets-formats-from-the-pull-catalogs-in-workspaceagent-opscn-gigaleak-pullcatalogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B4. Other held production-art sets (formats from the pull catalogs in ~/workspace/agent-ops/cn-gigaleak-pull/catalogs/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strongest-ready-to-use-stack-what-can-animate-a-real-episode-today-no-installs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STRONGEST READY-TO-USE STACK (what can animate a real episode today, no installs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wizard-gang-real-anim-repo-audit-2026-10-29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wizard Gang — REAL-ANIMATION Repo Audit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wizard-gang-v2-missing-tools-wireup-2026-10-29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wizard Gang V2 — NO-MISSING-TOOLS Wire-Up Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wizard-gang-v2-wireup-lane1-2026-10-29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wizard Gang REAL-ANIMATION V2 — Wire-up Lane 1 Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zui_pr431_body/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zui pr431 body
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_288" >
+        
+          
+          <label class="md-nav__link" for="__nav_288" id="__nav_288_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent handoff
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_288_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_288">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent handoff
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-handoff/PRODUCERBOT_WORKFLOW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PRODUCERBOT WORKFLOW
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_289" >
+        
+          
+          <label class="md-nav__link" for="__nav_289" id="__nav_289_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_289_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_289">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Research
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_289_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_289_1" id="__nav_289_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloudcorp 2026 11 02
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_289_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_289_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cloudcorp 2026 11 02
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CloudCorpRecords pull-in — 2026-11-02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/INVENTORY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CloudCorpRecords — Complete Public Repo Inventory (excl. xod, internet-of-things)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/WATCHLIST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CloudCorpRecords — RESEARCH / WATCH list (everything not in the top 25)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_289_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_289_1_4" id="__nav_289_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audits
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_289_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_289_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Audits
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/actionpin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — actionpin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/agent-evals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — agent-evals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/agentsfile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — agentsfile (@reneturcios/agentsfile)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/audioport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — audioport (@reneturcios/audioport)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/cidiff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — cidiff
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/commitcheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — commitcheck
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/depguard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — depguard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/flowcheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — flowcheck
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/greenlight/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — greenlight
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/hookcheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — hookcheck
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/imageport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — imageport (@reneturcios/imageport)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/injectcheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — injectcheck
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/logdigest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — logdigest (@reneturcios/logdigest)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/mcpaudit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — mcpaudit (@reneturcios/mcpaudit)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/mcpvet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — mcpvet (@reneturcios/mcpvet)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/muse-farm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — muse-farm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/muse-marketplace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — muse-marketplace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/prodforge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — prodforge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/readmeaudit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — readmeaudit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/scenemodel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — scenemodel (@reneturcios/scenemodel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/shipcheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — shipcheck (@reneturcios/shipcheck)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/skillcheck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — skillcheck (@reneturcios/skillcheck)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/specforge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit — specforge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/testdelta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — testdelta (@reneturcios/testdelta)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/videokit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — videokit (@reneturcios/videokit)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/audits/xod-parts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit — Xod parts (scoped extraction candidates only)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_289_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_289_1_5" id="__nav_289_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test runs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_289_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_289_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Test runs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/test-runs/agentsfile-RESULT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    agentsfile 0.1.0 — TEST RUN RESULT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research/cloudcorp-2026-11-02/test-runs/xod-sentinel-RESULT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Xod sentinel smoke test — standalone run result
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary-table-tool-job-in-a-real-cartoon-pipeline-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SUMMARY TABLE — tool → job in a real cartoon pipeline → status
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-a-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PART A — DETAIL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PART A — DETAIL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a1-frame-by-frame-drawing-2d-animation-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A1. Frame-by-frame drawing / 2D animation apps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a2-cutout-puppet-rigging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A2. Cutout / puppet rigging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a3-inbetweening" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A3. Inbetweening
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a4-color-paint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A4. Color / paint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a5-lip-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A5. Lip-sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a6-storyboard-pre-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A6. Storyboard / pre-production
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a7-editing-nle-compositing-render-production-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A7. Editing / NLE / compositing / render / production management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a8-voice-existing-pipeline-listed-for-completeness-not-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A8. Voice — EXISTING pipeline, listed for completeness, NOT animation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a9-flash-tooling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A9. Flash tooling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-b-real-professional-cartoon-production-files-on-hand-study-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PART B — REAL PROFESSIONAL CARTOON PRODUCTION FILES ON HAND (study material)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PART B — REAL PROFESSIONAL CARTOON PRODUCTION FILES ON HAND (study material)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#b1-fosters-home-for-imaginary-friends-the-single-closest-pipeline-match-illustrator-flash-after-effects-per-its-own-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B1. Foster's Home for Imaginary Friends — the single closest pipeline match (Illustrator → Flash → After Effects, per its own catalog)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b2-gumball-the-amazing-world-of-gumball-flash-puppet-rig-show" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B2. Gumball (The Amazing World of Gumball) — Flash puppet-rig show
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b3-ok-ko-lets-be-heroes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B3. OK K.O.! Let's Be Heroes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b4-other-held-production-art-sets-formats-from-the-pull-catalogs-in-workspaceagent-opscn-gigaleak-pullcatalogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B4. Other held production-art sets (formats from the pull catalogs in ~/workspace/agent-ops/cn-gigaleak-pull/catalogs/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strongest-ready-to-use-stack-what-can-animate-a-real-episode-today-no-installs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STRONGEST READY-TO-USE STACK (what can animate a real episode today, no installs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="wizard-gang-real-animation-upgrade-local-tools-real-cartoon-production-file-inventory">Wizard Gang — REAL-ANIMATION Upgrade: Local Tools + Real Cartoon Production-File Inventory<a class="headerlink" href="#wizard-gang-real-animation-upgrade-local-tools-real-cartoon-production-file-inventory" title="Permanent link">&para;</a></h1>
+<p><strong>Date:</strong> 2026-10-29 · <strong>Scope:</strong> owner order 2026-10-29 — eliminate AI-slop-only production, pull/wire REAL cartoon tooling already on hand
+<strong>Method:</strong> every entry below was checked on disk 2026-10-29 (directory listing, binary/install markers, READMEs, run scripts). <strong>Nothing was installed, deleted, run as a heavy install, or pushed.</strong> GUI apps were NOT launched in this pass — status wording is: <code>WORKS</code> = binary present (+ headless/GUI run verified in the cited in-tree README/log where stated), <code>STORED-ONLY</code> = source/README only, no runnable binary on this VM, <code>MISSING</code> = claimed in a README/index but the directory/binary is NOT on local disk today.
+<strong>Important disk-vs-repo distinction:</strong> <code>~/workspace/tools/README.md</code> (55 KB master index) describes the stack as it was pulled 2026-10-16→23. Several AppImage installs it lists (<code>krita-6.0.4/</code>, <code>tahoma2d/</code>, <code>storyboarder/</code>, <code>appimages/</code>, <code>basicpbc/</code>, <code>opentoonz/</code>, <code>inkscape/</code>) are <strong>no longer on local disk</strong> — they were cleared in the Oct-21→ disk cleanups. Their <em>source/wiring</em> copies survive in the cape-jones repo at <code>~/workspace/cape-jones/production/tools/</code> (checked separately below). Do not quote the tools README as proof a binary exists; use the Status column here.</p>
+<hr />
+<h2 id="summary-table-tool-job-in-a-real-cartoon-pipeline-status">SUMMARY TABLE — tool → job in a real cartoon pipeline → status<a class="headerlink" href="#summary-table-tool-job-in-a-real-cartoon-pipeline-status" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Job in a real cartoon pipeline</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blender 4.0.2 (<code>tools/blender/</code>)</td>
+<td>Grease Pencil frame-by-frame + 2D cutout rigs, VSE assembly, render</td>
+<td><strong>WORKS</strong> — binary present; headless needs <code>xvfb-run -a env -u PYTHONPATH</code> (TOOLS.md)</td>
+</tr>
+<tr>
+<td>Blender 4.5.3 (<code>tools/blender-4.5/</code>)</td>
+<td>Same, newer Grease Pencil; target for tiny-2d-rig / coa_tools2</td>
+<td><strong>WORKS</strong> — binary present</td>
+</tr>
+<tr>
+<td>Pencil2D 0.7.2 (<code>tools/pencil2d/</code>)</td>
+<td>Lightweight hand-drawn frame-by-frame (bitmap+vector)</td>
+<td><strong>WORKS</strong> — AppImage extracted, <code>squashfs-root/usr/bin/pencil2d</code> + <code>run.sh</code> present (154 MB)</td>
+</tr>
+<tr>
+<td>Tiny 2D Rig Tools (<code>tools/blender-addons/tiny-2d-rig/</code>)</td>
+<td>Blender cutout character rigs: auto armature, IK/drivers, mouth/hand time-offset swaps</td>
+<td><strong>WORKS-WITH</strong> — single addon, targets Blender 4.3+ → fits installed 4.5.3; not yet installed into Blender's addons folder</td>
+</tr>
+<tr>
+<td>COA Tools 2 (<code>cape-jones/production/tools/coa_tools2/</code>)</td>
+<td>Cutout animation in Blender (sprite parts → mesh/rig), Krita/GIMP/Photoshop exporters</td>
+<td>STORED-ONLY (source in repo; upstream tested on Blender 5.1.2, supports 3.4+ line)</td>
+</tr>
+<tr>
+<td>Guided Tweening (<code>tools/blender-addons/guided-tweening/</code>)</td>
+<td>Grease Pencil guided inbetweening hints, stroke-by-stroke</td>
+<td><strong>BLOCKED</strong> — requires Blender 5.0 / GP3; newest local Blender is 4.5.3</td>
+</tr>
+<tr>
+<td>Smart2D (<code>tools/blender-addons/smart2d/</code>)</td>
+<td>Smart Bones for Grease Pencil 2D rigs</td>
+<td><strong>BLOCKED</strong> — refuses to load below Blender 5.0 (its own README)</td>
+</tr>
+<tr>
+<td>GreaseWriter (<code>tools/greasewriter/</code>)</td>
+<td>Blender Grease Pencil writing/text animation addon</td>
+<td>STORED-ONLY (addon <code>.py</code>, uninstalled)</td>
+</tr>
+<tr>
+<td>OPEN-TOON 0.2.0-exp.71 (<code>tools/open-toon/</code>)</td>
+<td>Standalone 2D drawing/animation app: timeline/Xsheet, onion skin, pose/motion curves, Milo example rig, PNG-seq export</td>
+<td>STORED-ONLY — full source (16 MB); its README says no <code>.71</code> binary published, older AppImage NOT on disk; needs source build</td>
+</tr>
+<tr>
+<td>Synfig Studio 1.5.5</td>
+<td>Vector tweening / bone rigs (auto-inbetweened vector)</td>
+<td><strong>MISSING locally</strong> — <code>tools/synfig/</code> is an EMPTY directory (0 B); cape-jones <code>production/tools/synfig/</code> is README-only (pin + install instructions). AppImage (<code>appimages/…</code>) no longer on disk</td>
+</tr>
+<tr>
+<td>Tahoma2D 1.6 (OpenToonz fork)</td>
+<td>Primary hand-drawn workhorse in cape-jones wiring docs: raster/vector, Xsheet, Fx schematic, bundles rhubarb</td>
+<td><strong>MISSING locally</strong> — no <code>tools/tahoma2d/</code> or tar.gz on disk; cape-jones <code>production/tools/tahomad2d/</code> is README-only</td>
+</tr>
+<tr>
+<td>OpenToonz 1.8.0</td>
+<td>Node-based compositing/effects (Toonz Schematic), multiplane camera</td>
+<td><strong>MISSING locally</strong> — cape-jones <code>production/tools/opentoonz/</code> is README-only; no binary/source on disk</td>
+</tr>
+<tr>
+<td>Krita (host app) 6.0.4</td>
+<td>Drawing + frame-by-frame animation, paint</td>
+<td><strong>MISSING locally</strong> — no Krita binary/AppImage anywhere in <code>tools/</code>; <code>krita-6.0.4/</code> dir gone. Plugins below are orphaned until the host is re-pulled</td>
+</tr>
+<tr>
+<td>krita-ai-diffusion 1.53.0 (<code>tools/krita-ai-diffusion/</code>)</td>
+<td>AI inpaint/gen INSIDE Krita (AI-ASSIST only, not animation)</td>
+<td>STORED-ONLY — plugin source + <code>krita_ai_diffusion-1.53.0.zip</code> (3.1 MB) present; needs Krita host</td>
+</tr>
+<tr>
+<td>krita-batch-exporter (<code>tools/krita-batch-exporter/</code>)</td>
+<td>Batch-export Krita layers/assets for production</td>
+<td>STORED-ONLY — plugin source + <code>install.sh</code>; needs Krita host</td>
+</tr>
+<tr>
+<td>krita-spritesheet-generator (<code>tools/krita-spritesheet-generator/</code>)</td>
+<td>Krita animation → spritesheet export</td>
+<td>STORED-ONLY — plugin source; needs Krita host</td>
+</tr>
+<tr>
+<td>Glaxnimate (<code>cape-jones/production/tools/glaxnimate/</code>)</td>
+<td>Vector motion graphics: titles, lower-thirds, end cards; tweening, precomps, Lottie/SVG/GIF/WebP export, Python scripting</td>
+<td>STORED-ONLY — full KDE source in cape-jones repo (PR #208, merged 2026-10-23, WIRING.md in tree); NOT in <code>tools/</code>, no AppImage/binary on disk</td>
+</tr>
+<tr>
+<td>Friction 1.0.0-rc.3 (<code>tools/friction/</code>)</td>
+<td>Vector-first motion graphics (Enve successor class)</td>
+<td><strong>WORKS</strong> — AppImage extracted, <code>squashfs-root/usr/bin/friction</code> + <code>run.sh</code> present (GUI, needs display)</td>
+</tr>
+<tr>
+<td>AnimeInbet (ICCV 2023) (<code>tools/animeinbet/</code>)</td>
+<td><strong>AI-ASSIST</strong> line-art inbetweening (graph/geometrized, not pixel warp)</td>
+<td>STORED-ONLY — source + <code>inbetween.py</code>; training data/weights NOT on disk (<code>download.sh</code> points to Google Drive), no verified local run</td>
+</tr>
+<tr>
+<td>LayerInbetween (SIGGRAPH 2026) (<code>tools/layerinbetween/</code>)</td>
+<td><strong>AI-ASSIST</strong> occlusion-aware stroke inbetweening with automatic layering</td>
+<td>STORED-ONLY — source; needs conda env + a SEPARATE SAM2 env (its README); no env built</td>
+</tr>
+<tr>
+<td>ToonCrafter (<code>tools/tooncrafter/</code>)</td>
+<td><strong>AI-ASSIST ONLY</strong> generative cartoon interpolation between keyframes</td>
+<td>STORED-ONLY — source, NO weights, <strong>no verified inference output ever</strong> (Kaggle FP16 pruned checkpoint is the planned path, <code>KAGGLE-SETUP.md</code> in tree)</td>
+</tr>
+<tr>
+<td>ToonComposer (<code>tools/tooncomposer/</code>)</td>
+<td><strong>AI-ASSIST</strong> generative post-keyframing (inbetween + colorize in one pass)</td>
+<td>STORED-ONLY — source + samples; needs HF model/GPU</td>
+</tr>
+<tr>
+<td>Palettator (<code>tools/palettator/</code>)</td>
+<td>Extract a locked show palette from a reference image → palette files for Krita/GIMP</td>
+<td>STORED-ONLY (runnable Python) — <code>main.py</code> present, no venv built; trivial deps</td>
+</tr>
+<tr>
+<td>OmniColor (<code>tools/omnicolor/</code>)</td>
+<td><strong>AI-ASSIST</strong> multi-modal lineart colorization</td>
+<td>STORED-ONLY — source; needs Python 3.10+ / PyTorch / CUDA (its README) — GPU lane only</td>
+</tr>
+<tr>
+<td>BasicPBC (Paint Bucket Colorization, CVPR 2024)</td>
+<td>Frame colorization by paint-bucket inclusion matching</td>
+<td><strong>MISSING locally</strong> — listed in tools README as <code>basicpbc/</code>, directory not on disk; was already classed RESEARCH-ONLY/GPU</td>
+</tr>
+<tr>
+<td><code>tools/color/presets.sh</code> + <code>color-thief/</code></td>
+<td>Final grade (6 tested ffmpeg looks incl. <code>vibrant-cartoon</code>) + palette extraction (JS)</td>
+<td><strong>WORKS</strong> — presets.sh tested 2026-10-11 on a WG EP02 still (proof in <code>color/proof/</code>); ffmpeg 8.1.2 is on the system</td>
+</tr>
+<tr>
+<td>Sketch Simplification (<code>tools/sketch-simplification/</code>)</td>
+<td>Rough sketch → clean line cleanup stage</td>
+<td>STORED-ONLY — source; model download script unrun</td>
+</tr>
+<tr>
+<td>Rhubarb Lip Sync 1.14.0 (<code>tools/rhubarb/</code>)</td>
+<td>Audio → mouth cues (JSON/DAT, Preston-Blair) — THE lip-sync engine</td>
+<td><strong>WORKS</strong> — ELF binary present (7,331,192 B) + <code>res/</code> PocketSphinx data alongside</td>
+</tr>
+<tr>
+<td><code>tools/lipsync/</code> (rhubarb_to_visemes.py, caption.py)</td>
+<td>Rhubarb cues → per-frame viseme PNG EDL + preview; faster-whisper captions</td>
+<td><strong>WORKS</strong> — scripts present, documented in its README; system faster-whisper 1.2.1 per that README</td>
+</tr>
+<tr>
+<td>OpenFaceFX (<code>tools/openfacefx/</code>)</td>
+<td>Transcript+voice → face/mouth animation curves; exports OpenToonz <code>.dat</code></td>
+<td>STORED-ONLY (runnable Python) — source, MIT, numpy-only per its README; alpha status (its own badge)</td>
+</tr>
+<tr>
+<td>Gentle (<code>tools/gentle/</code>)</td>
+<td>Forced alignment (Kaldi) for dialogue timing</td>
+<td>STORED-ONLY — source; needs its install/Docker path</td>
+</tr>
+<tr>
+<td>Storyboard app (<code>tools/storyboard/</code>)</td>
+<td>Storyboarding (Tauri/Rust + web UI, v0.1.0)</td>
+<td>STORED-ONLY — source; needs bun + cargo build. NOTE: this is NOT Wonder Unit Storyboarder</td>
+</tr>
+<tr>
+<td>Storyboarder 2.1.0 (Wonder Unit)</td>
+<td>Boards + native animatics</td>
+<td><strong>MISSING locally</strong> — <code>storyboarder/</code> dir claimed in tools README is gone</td>
+</tr>
+<tr>
+<td><code>tools/script-tools/</code></td>
+<td>Fountain screenplay → dialogue cue sheet; boards+audio → animatic MP4</td>
+<td><strong>WORKS</strong> — <code>fountain_to_cues.py</code> + <code>build_animatic.py</code> present, pure Python/ffmpeg</td>
+</tr>
+<tr>
+<td><code>tools/pre-production/</code></td>
+<td>Writing: Manuskript (novel/show planning), Screenplain (Fountain→HTML/FDX), Trelby (screenwriting)</td>
+<td>STORED-ONLY — all source trees present</td>
+</tr>
+<tr>
+<td>Natron 2.5.0 (<code>tools/natron/</code>)</td>
+<td>Node compositing / finishing (After Effects/Nuke class)</td>
+<td><strong>WORKS</strong> — full no-installer tree + <code>bin/NatronRenderer</code>; local <code>natron-render.sh</code> wrapper fixes libGLU/libOpenGL; headless renders verified 2026-10-19 and 2026-10-23 (tools README)</td>
+</tr>
+<tr>
+<td>MLT / melt</td>
+<td>Headless NLE engine: render MLT-XML timelines as code (Flowblade/Kdenlive/Shotcut engine)</td>
+<td>STORED-ONLY — NO <code>melt</code> binary on this system (checked <code>which melt</code>); source at <code>cape-jones/production/tools/mlt/</code> with WIRING.md (cmake build or apt)</td>
+</tr>
+<tr>
+<td>Flowblade</td>
+<td>Full Linux NLE (multitrack, compositors, titling, proxy, batch render) on MLT</td>
+<td>STORED-ONLY — source at <code>tools/video-editing/flowblade-src/</code> AND <code>cape-jones/production/tools/flowblade/</code> (PR #209, WIRING.md); GUI is workstation-side, VM value is the MLT-XML project format</td>
+</tr>
+<tr>
+<td>Kdenlive</td>
+<td>NLE (MLT engine)</td>
+<td><strong>MISSING</strong> — not present in any form; only named as an MLT sibling / Track-D recommendation</td>
+</tr>
+<tr>
+<td>Olive / Pitivi (<code>tools/video-editing/olive-src/</code>, <code>pitivi-src/</code>)</td>
+<td>Alternative NLEs</td>
+<td>STORED-ONLY — source trees only</td>
+</tr>
+<tr>
+<td>OpenTimelineIO (<code>tools/OpenTimelineIO/</code>)</td>
+<td>Timeline interchange (OTIO) between NLEs / pipeline</td>
+<td>STORED-ONLY — full source clone; not pip-installed/verified in this pass</td>
+</tr>
+<tr>
+<td>frei0r (<code>tools/frei0r/</code> + <code>trackA-vfx/frei0r/</code>)</td>
+<td>Video effect plugins for MLT/Flowblade</td>
+<td>STORED-ONLY — source</td>
+</tr>
+<tr>
+<td>OpenCue (<code>tools/opencue/</code>)</td>
+<td>Production render-farm queue (cuebot/cuegui/rqd)</td>
+<td>STORED-ONLY — source + docker-compose; nothing deployed/running</td>
+</tr>
+<tr>
+<td>CGRU / Afanasy (<code>tools/cgru/</code>)</td>
+<td>Render farm + production rules/asset system</td>
+<td>STORED-ONLY — source + <code>setup.sh</code>; not installed</td>
+</tr>
+<tr>
+<td>Flamenco (<code>tools/flamenco/</code>)</td>
+<td>Blender render-farm manager</td>
+<td>STORED-ONLY — Go source; needs build; not running</td>
+</tr>
+<tr>
+<td>Kitsu (<code>tools/kitsu/</code>) + Zou (<code>tools/zou/</code>)</td>
+<td>Production tracking (shots/assets/tasks) — Kitsu UI + Zou API backend</td>
+<td>STORED-ONLY — frontend + backend source; needs DB/server deployment; nothing running</td>
+</tr>
+<tr>
+<td>JPEXS FFDec 26.3.0 (<code>tools/jpexs-ffdec/</code>)</td>
+<td>Decompile SWF → shapes/sprites/sounds/ActionScript, export SVG/PNG</td>
+<td><strong>WORKS</strong> — <code>ffdec.jar</code> (5,077,736 B) + <code>ffdec.sh</code> present, AND Java is back: <code>tools/java/jdk-21.0.5+11-jre/bin/java</code> verified <code>openjdk 21.0.5</code> in this pass (the flash-tools README's "java wiped" note is stale)</td>
+</tr>
+<tr>
+<td>FlashXFLParser</td>
+<td>Parse .fla-as-XFL (DOMDocument.xml, library/timelines) for rig structure</td>
+<td><strong>MISSING locally</strong> — <code>tools/FlashXFLParser/</code> claimed in flash-tools-README.md is gone. Workaround in that same README still works: a <code>.fla</code> is a ZIP — unzip → XFL XML → parse directly</td>
+</tr>
+<tr>
+<td>Chatterbox (<code>tools/chatterbox/</code>) + TTS zoo</td>
+<td><strong>VOICE pipeline (existing), NOT animation</strong> — see §A7</td>
+<td>STORED-ONLY source (voice lane proven separately in <code>~/workspace/voice-clone-work/</code>)</td>
+</tr>
+<tr>
+<td>Audacity (<code>tools/audacity/</code>)</td>
+<td>Audio edit/mix/master at end of voice chain</td>
+<td><strong>WORKS</strong> — AppImage extracted, <code>run.sh</code> present (GUI, needs display)</td>
+</tr>
+<tr>
+<td>Aegisub (<code>tools/aegisub/</code>) / SubtitleEdit (<code>tools/subtitleedit/</code>)</td>
+<td>Subtitle timing/authoring</td>
+<td>STORED-ONLY — source trees</td>
+</tr>
+<tr>
+<td>Duik (<code>tools/trackA-rigging/rxlaboratory-duik/</code>)</td>
+<td>After Effects character rigging (industry standard)</td>
+<td>STORED-ONLY / REFERENCE — ExtendScript source; no After Effects on this VM, cannot run here</td>
+</tr>
+<tr>
+<td>ChibiRigKit (<code>tools/ChibiRigKit/</code>)</td>
+<td>Auto-rig helper scripts</td>
+<td>STORED-ONLY — shell/ps scripts + characters dir</td>
+</tr>
+<tr>
+<td>SP-Studio parts (<code>tools/sp-studio-parts/</code>)</td>
+<td>South-Park-style cutout part libraries + avatar source</td>
+<td>STORED-ONLY — parts library (directly relevant reference for cutout construction)</td>
+</tr>
+<tr>
+<td>TheAnimeScripter (<code>tools/TheAnimeScripter/</code>)</td>
+<td>Anime post: interpolation/upscale/dedup utilities</td>
+<td>STORED-ONLY — source; <strong>AI-ASSIST post</strong>, not an animator</td>
+</tr>
+<tr>
+<td>ClipAnima (<code>tools/clipanima/</code>) / EverAnimate (<code>tools/everanimate/</code>)</td>
+<td>Web clip animation / generative animation</td>
+<td>STORED-ONLY — <strong>AI/gen</strong>, excluded from the real-animation stack</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Count note:</strong> <code>~/workspace/tools/</code> has exactly 230 entries. The table above is every entry relevant to making a real 2D cartoon; the remainder is 3D/game/teardown, AI video-gen, infra, and research docs (see §A8).</p>
+<hr />
+<h2 id="part-a-detail">PART A — DETAIL<a class="headerlink" href="#part-a-detail" title="Permanent link">&para;</a></h2>
+<h3 id="a1-frame-by-frame-drawing-2d-animation-apps">A1. Frame-by-frame drawing / 2D animation apps<a class="headerlink" href="#a1-frame-by-frame-drawing-2d-animation-apps" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Blender 4.0.2</strong> — <code>~/workspace/tools/blender/blender-4.0.2-linux-x64/blender</code>. Grease Pencil is built in. Proven headless on this VM under <code>xvfb-run -a</code> (bare <code>-b</code> segfaults without libEGL — TOOLS.md). This is the incumbent: Wizard Gang's canon animation direction is already "Blender Grease Pencil puppet rigs."</li>
+<li><strong>Blender 4.5.3</strong> — <code>~/workspace/tools/blender-4.5/blender-4.5.3-linux-x64/blender</code>. Newer GP; the version the local 2D addons actually fit (see A2).</li>
+<li><strong>Pencil2D 0.7.2</strong> — <code>~/workspace/tools/pencil2d/</code> (<code>run.sh</code> → <code>squashfs-root/AppRun</code>, binary <code>squashfs-root/usr/bin/pencil2d</code>). Simplest real hand-drawn tool on the box; <code>.pclx</code> projects. A second, source-only copy sits at <code>cape-jones/production/tools/pencil2d/</code>.</li>
+<li><strong>OPEN-TOON 0.2.0-experimental.71</strong> — <code>~/workspace/tools/open-toon/</code>. Source only (CMake/conan). Features per its README: vector + MyPaint brushes, layers/exposures/onion skin, Timeline/Xsheet, visual pose animation + motion curves, orthographic camera, PNG-sequence export, editable example rig <code>examples/milo-continuous.otoon</code>. No binary published for <code>.71</code>; the older <code>.11</code> Linux AppImage it links is NOT on disk.</li>
+<li><strong>Synfig</strong> — EMPTY <code>~/workspace/tools/synfig/</code> + README-only at <code>cape-jones/production/tools/synfig/</code> (pin 1.5.5, stable fallback 1.4.5, GPLv2+). The AppImage was never extracted (Type-1 AppImage needs libfuse, unavailable) and is no longer on disk. Vector-tween slot is currently VACANT locally.</li>
+<li><strong>Tahoma2D 1.6 / OpenToonz 1.8.0</strong> — README-only in <code>cape-jones/production/tools/{tahomad2d,opentoonz}/</code>. Those READMEs are good wiring docs (Tahoma = primary drawing, <code>.tnz</code> interchange, bundles its own rhubarb; OpenToonz = node-compositing room) but there is no binary or source on this machine today. Re-pull = AppImage (Tahoma) / Flatpak (OpenToonz) — a future wiring task, not done here.</li>
+<li><strong>Krita</strong> — host app MISSING. Present are only its plugins: <code>krita-ai-diffusion/</code> (v1.53.0, plugin zip 3,140,257 B), <code>krita-batch-exporter/</code> (plugin + install.sh), <code>krita-spritesheet-generator/</code> (plugin). Tools README claims Krita 6.0.4 at <code>krita-6.0.4/run.sh</code> — that directory does not exist today. Re-pulling the Krita AppImage reactivates all three plugins at once.</li>
+<li><strong>Glaxnimate</strong> — NOT in <code>tools/</code>; full source at <code>~/workspace/cape-jones/production/tools/glaxnimate/</code> (KDE, GPL-3.0, PR #208 merged 2026-10-23; <code>CAPE-JONES-WIRING.md</code> in tree: AppImage use, cmake build, PyPI headless scripting). Motion-graphics slot: titles/lower-thirds/end-cards, Lottie/animated-SVG/WebP for shorts.</li>
+<li><strong>Friction 1.0.0-rc.3</strong> — <code>~/workspace/tools/friction/</code> extracted AppImage, binary present. Vector motion graphics, GUI-only.</li>
+<li>Also present, minor: <code>png-to-animated-svg-src/</code> (PNG→animated SVG source), <code>motion-graphics/hyperframes/</code> (HTML motion graphics), <code>comic-manga/fonts/</code>.</li>
+</ul>
+<h3 id="a2-cutout-puppet-rigging">A2. Cutout / puppet rigging<a class="headerlink" href="#a2-cutout-puppet-rigging" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Tiny 2D Rig Tools</strong> — <code>~/workspace/tools/blender-addons/tiny-2d-rig/</code> (addon + <code>tiny_2d_rig_tools/</code>). Generate human armature, auto IK + drivers, custom time-offset properties to swap mouth/hand drawings, turnaround system, rig control panel. <strong>The best fit on the box today</strong> — pairs with Blender 4.5.3.</li>
+<li><strong>COA Tools 2</strong> — <code>cape-jones/production/tools/coa_tools2/</code>. Cutout animation addon for Blender with Photoshop/GIMP/Krita sprite exporters and automatic mesh generation. Source in repo; upstream's current addon is tested on Blender 5.1.2 (3.4+ lineage).</li>
+<li><strong>Smart2D</strong> — <code>tools/blender-addons/smart2d/Smart2D.py</code>. Smart Bones via Action constraints. <strong>Requires Blender 5.0+, refuses older</strong> — blocked until a Blender 5 pull.</li>
+<li><strong>Guided Tweening</strong> — <code>tools/blender-addons/guided-tweening/guided_tweening.py</code>. Frame-aware guided inbetween hints for Grease Pencil. <strong>Targets Blender 5.0 / GP3</strong> — same block.</li>
+<li><strong>GreaseWriter</strong> — <code>tools/greasewriter/</code> (Blender addon, <code>__init__.py</code> + operators/extras). Uninstalled.</li>
+<li><strong>Duik (RxLaboratory)</strong> — <code>tools/trackA-rigging/rxlaboratory-duik/</code>. The After Effects rigging standard; source only, no AE on this VM — study/reference for rig design, not a runnable lane.</li>
+<li><strong>Rigging-sketches-for-2D-character-animation</strong> — <code>tools/trackA-rigging/Rigging-sketches-for-2D-character-animation/</code> (C++/Python contour/annotation research code). Reference.</li>
+<li><strong>ChibiRigKit</strong> — <code>tools/ChibiRigKit/</code> (<code>AUTO_RIG.sh</code> etc.). Stored scripts.</li>
+<li><strong>wiggle-bones</strong> — <code>tools/wiggle-bones/wiggle_2_ultimate.py</code> (Blender secondary-motion/jiggle addon, single file) + <code>cape-jones/production/tools/wiggle2/</code>.</li>
+<li><strong>SP-Studio parts</strong> — <code>tools/sp-studio-parts/</code> (parts library + <code>south-park-avatars-src/</code>): a working example of a part-library cutout system — useful construction reference for Wizard Gang's own part kits.</li>
+<li><strong>Cascadeur</strong> — <code>tools/cascadeur/</code> is EMPTY (0 B); browser-download tool, never landed. 3D reference only in any case.</li>
+</ul>
+<h3 id="a3-inbetweening">A3. Inbetweening<a class="headerlink" href="#a3-inbetweening" title="Permanent link">&para;</a></h3>
+<ul>
+<li>REAL (manual, in the apps above): onion-skin/key/breakdown workflow in Blender GP, Pencil2D, (when restored) Tahoma2D/Synfig tweening, Glaxnimate path/tween animation.</li>
+<li><strong>AI-ASSIST only — never the animator of record:</strong></li>
+<li><strong>AnimeInbet</strong> — <code>tools/animeinbet/</code> (ICCV 2023, geometrized line inbetweening; <code>inbetween.py</code>, <code>main.py</code>). Missing its MixamoLine240 data/weights (Google Drive download unrun).</li>
+<li><strong>LayerInbetween</strong> — <code>tools/layerinbetween/</code> (SIGGRAPH 2026, occlusion-aware, automatic layering). Needs conda env + separate SAM2 env; neither built.</li>
+<li><strong>ToonCrafter</strong> — <code>tools/tooncrafter/</code> (SIGGRAPH Asia 2024). NO weights on disk, NO verified output to date. Planned path is Kaggle with the Kijai pruned FP16 checkpoint (see its <code>KAGGLE-SETUP.md</code>).</li>
+<li><strong>ToonComposer</strong> — <code>tools/tooncomposer/</code> (post-keyframing: inbetween+colorize). Source only, GPU/HF model needed.</li>
+<li><strong>TheAnimeScripter</strong> — <code>tools/TheAnimeScripter/</code> (interpolation/upscale post utilities). Source only.</li>
+<li>RIFE/FILM-class interpolators (<code>tools/rife-v46/</code>, <code>rife425/</code>, <code>trackA-interpolation/</code> ABME/DistilDRBA/frame-interpolation/GMFSS etc.) — pixel interpolators for post, documented in-tree as failing on cartoon dis-occlusion vs ToonCrafter; post tools, not inbetweeners of record.</li>
+</ul>
+<h3 id="a4-color-paint">A4. Color / paint<a class="headerlink" href="#a4-color-paint" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Palettator</strong> — <code>tools/palettator/main.py</code> (GPL-3.0, Python): extract palette from a frame/reference, export for Krita/GIMP. The show-palette lock tool.</li>
+<li><strong><code>tools/color/</code></strong> — <code>presets.sh</code>: 6 tested ffmpeg grades (incl. <code>vibrant-cartoon</code> for WG 2D episodes, <code>noir</code>, <code>teal-orange</code>); tested with proof sheet. This is the finishing grade, not paint.</li>
+<li><strong>OmniColor</strong> — <code>tools/omnicolor/inference.py</code>: AI lineart colorization, multi-modal control, temporal stability claims; CUDA-only in practice. AI-ASSIST.</li>
+<li><strong>BasicPBC</strong> — MISSING locally (see table). Was research-only/GPU even when present.</li>
+<li><strong>SketchColour / AnimeColor</strong> — named in tools README as GPU-only research; no usable local dirs found in this pass.</li>
+<li><strong><code>tools/sketch-simplification/</code></strong> — line cleanup (rough → clean) source; <strong><code>tools/color-thief/</code></strong> — JS palette extraction source.</li>
+<li>Paint itself happens inside Krita (missing host), Blender GP fill, Pencil2D, Tahoma2D (missing) — see the re-pull note in §Stack.</li>
+</ul>
+<h3 id="a5-lip-sync">A5. Lip-sync<a class="headerlink" href="#a5-lip-sync" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Rhubarb 1.14.0</strong> — <code>~/workspace/tools/rhubarb/rhubarb</code> (ELF, 7.3 MB) + <code>res/</code> (PocketSphinx). WORKS. Pipeline per <code>tools/lipsync/README.md</code>: WAV 16 kHz mono → <code>rhubarb -r pocketSphinx -f json</code> (or <code>-f dat --datUsePrestonBlair</code> for Preston-Blair DAT) → <code>rhubarb_to_visemes.py</code> → <code>cues.tsv</code> + <code>frames.json</code> (per-frame EDL) + <code>preview.mp4</code> QC + viseme PNG mapping (X→rest, A→mbp, B→ee, C→ee, D→ah, E→oh, F→oo, G→fv, H→l).</li>
+<li><strong>OpenFaceFX</strong> — <code>tools/openfacefx/</code>: audio+transcript → animation curves, OpenToonz <code>.dat</code> export, numpy-only/CPU, MIT, alpha.</li>
+<li><strong>Gentle</strong> — <code>tools/gentle/</code>: Kaldi forced aligner, source only.</li>
+<li><strong><code>tools/post-pipeline/lipsync_align.py</code></strong> — dispatcher over whisperx / whisper-timestamped / MFA / aeneas for word/phoneme timestamps feeding Rhubarb/OpenFaceFX.</li>
+<li>Tahoma2D also bundles a rhubarb binary upstream (per its cape-jones README) — relevant only after re-pull.</li>
+</ul>
+<h3 id="a6-storyboard-pre-production">A6. Storyboard / pre-production<a class="headerlink" href="#a6-storyboard-pre-production" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>tools/script-tools/</code></strong> — WORKS: <code>fountain_to_cues.py</code> (Fountain script → WG-format dialogue cue sheet) and <code>build_animatic.py</code> (shot images + audio → timed animatic MP4, crossfades, burnt-in labels). Fountain editors are external/free per its README.</li>
+<li><strong><code>tools/storyboard/</code></strong> — Tauri storyboard app v0.1.0, source only (bun/cargo build). Storyboarder (Wonder Unit) itself is MISSING locally.</li>
+<li><strong><code>tools/pre-production/</code></strong> — <code>manuskript/</code> (show/story planning), <code>screenplain/</code> (Fountain→HTML/FDX), <code>trelby-src/</code> (screenwriting). Source trees.</li>
+<li><strong><code>tools/post-pipeline/</code></strong> — the glue shelf (all Python, CPU): <code>animatic_builder.py</code>, <code>fountain_to_animatic.py</code>, <code>fountain_to_beats.py</code>, <code>storyboard_sheet.py</code>, <code>kinetic_type.py</code>, <code>lower_thirds.py</code>, <code>palette-enforce.py</code>, <code>cleanup_lines.py</code>, <code>deghost.py</code>, <code>comp_glow.py</code>, <code>finish.py</code>, <code>flipaclip_post.sh</code>, <code>cape_jones_pipeline.sh</code>, <code>dialogue_pipeline.py</code>, <code>proxy_gen.py</code>, <code>grades.py</code>, <code>metadata_gen.py</code>, etc. Stored scripts — the pipeline wiring layer, individually testable.</li>
+</ul>
+<h3 id="a7-editing-nle-compositing-render-production-management">A7. Editing / NLE / compositing / render / production management<a class="headerlink" href="#a7-editing-nle-compositing-render-production-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Natron 2.5.0</strong> — WORKS headless (see table). Repo-side finishing templates live at <code>cape-jones/production/tools/natron/</code> (<code>natron_comp_finish.py</code>: Read→Grade→Saturation→Sharpen→Merge→Write).</li>
+<li><strong>MLT/melt + Flowblade</strong> — STORED-ONLY (see table). This is the intended "episode assembly as code" lane (MLT-XML timelines rendered headlessly) once melt is built/installed; today ffmpeg 8.1.2 + NatronRenderer + Blender VSE cover assembly.</li>
+<li><strong>OpenTimelineIO</strong> — <code>tools/OpenTimelineIO/</code> source clone (timeline interchange).</li>
+<li><strong>Render farm</strong> — all STORED-ONLY, none running: OpenCue (<code>tools/opencue/</code>, docker-compose), CGRU/Afanasy (<code>tools/cgru/</code>), Flamenco (<code>tools/flamenco/</code>, Blender farm, Go source). For a one-VM + Kaggle operation these are shelf-ware until a real multi-node need exists; Blender/Natron headless batch + Kaggle is the working substitute.</li>
+<li><strong>Production tracking</strong> — Kitsu UI (<code>tools/kitsu/</code>, Vue source) + Zou API (<code>tools/zou/</code>, Python source): STORED-ONLY, needs deployment (DB, server). Nothing tracked in it today.</li>
+<li><strong>Audio finish</strong> — Audacity (WORKS, GUI), Aegisub (source), <code>tools/espeak-ng/</code> (source; system TTS fallback).</li>
+</ul>
+<h3 id="a8-voice-existing-pipeline-listed-for-completeness-not-animation">A8. Voice — EXISTING pipeline, listed for completeness, NOT animation<a class="headerlink" href="#a8-voice-existing-pipeline-listed-for-completeness-not-animation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Chatterbox</strong> — <code>tools/chatterbox/</code> (Resemble AI, MIT, zero-shot cloning; Kiko voice is locked to ChatterboxTTS in the WG voice lane at <code>~/workspace/voice-clone-work/</code>).</li>
+<li>Also on disk (all source/stored, voice-only): <code>f5-tts/</code>, <code>cosyvoice/</code>, <code>parler-tts/</code>, <code>orpheus-tts/</code>, <code>matcha-tts/</code>, <code>kitten-tts/</code>, <code>pocket-tts/</code>, <code>neutts/</code>, <code>luxtts/</code>, <code>boyoluxtts-comfyui/</code>, <code>OpenVoice/</code>, <code>Dia/</code>, <code>sesame-csm/</code>, <code>diffsinger/</code>, <code>tts-webui-docker/</code>, plus support: <code>demucs/</code>, <code>rvc/</code>, <code>so-vits-svc/</code>, <code>resemble-enhance/</code>, <code>voicefixer/</code>, <code>hifi-gan/</code>, <code>vocos/</code>, <code>encodec/</code>, <code>whisper-timestamped/</code>, <code>gentle/</code>, <code>phonemizer/</code>, <code>espeak-ng/</code>.</li>
+<li>Excluded from this inventory (not cartoon-animation relevant): the other ~150 <code>tools/</code> entries — 3D asset/game teardown (ghidra, tekken, tripo), AI video-gen (wan/ltx/comfyui video nodes), image-gen, infra (rclone/restic/aria2), and the research <code>.md</code> library (which itself is a useful index: <code>README.md</code>, <code>COMPLETE-PIPELINE.md</code>, <code>STUDIO-GRADE-PULL.md</code>, <code>2026-PULL-SUMMARY.md</code>, <code>TRACK-A..E</code> pulls).</li>
+</ul>
+<h3 id="a9-flash-tooling">A9. Flash tooling<a class="headerlink" href="#a9-flash-tooling" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>JPEXS FFDec 26.3.0</strong> — <code>tools/jpexs-ffdec/</code> (<code>ffdec.jar</code>, <code>ffdec.sh</code>, <code>lib/</code>). WORKS now that Java 21 is present at <code>tools/java/jdk-21.0.5+11-jre/bin/java</code> (verified <code>--version</code> output in this pass). Decompiles SWF (not <code>.fla</code> directly) → SVG/PNG/ActionScript/sounds.</li>
+<li><strong>FlashXFLParser</strong> — MISSING locally (was a Unity/C# reference project). The workflow in <code>tools/flash-tools-README.md</code> does not depend on it: unzip <code>.fla</code> → XFL (<code>DOMDocument.xml</code> + <code>LIBRARY/</code>) → parse XML directly, or run FFDec on a compiled <code>.swf</code> sibling.</li>
+<li><strong><code>tools/projectorrays/</code></strong> — Director/Shockwave decompiler source (adjacent retro-Flash-era tooling, stored).</li>
+</ul>
+<hr />
+<h2 id="part-b-real-professional-cartoon-production-files-on-hand-study-material">PART B — REAL PROFESSIONAL CARTOON PRODUCTION FILES ON HAND (study material)<a class="headerlink" href="#part-b-real-professional-cartoon-production-files-on-hand-study-material" title="Permanent link">&para;</a></h2>
+<p>Locations + formats only. These are the owner's CN-gigaleak holdings: GitHub releases/repos are the store; local disk copies were cleared after verification (disk = cache). "Held" below means verified on GitHub in the cited audits/catalogs, not sitting in a local folder today.</p>
+<h3 id="b1-fosters-home-for-imaginary-friends-the-single-closest-pipeline-match-illustrator-flash-after-effects-per-its-own-catalog">B1. Foster's Home for Imaginary Friends — the single closest pipeline match (Illustrator → Flash → After Effects, per its own catalog)<a class="headerlink" href="#b1-fosters-home-for-imaginary-friends-the-single-closest-pipeline-match-illustrator-flash-after-effects-per-its-own-catalog" title="Permanent link">&para;</a></h3>
+<p><strong>Study copy already inside the show's own repo</strong> — <code>mhvnsnt/TRIPPEDD-Production-studios-</code>, path <code>production/WIZARD_GANG_EP01/animation-study/</code>:
+- <code>animation-study/fosters-cnleaks/Cartoon Network Leaks/FOSTERS/</code> — 14 sub-collections (verified via GitHub API in this pass):
+  - <code>FOSTERS BACKGROUNDS/</code> → <code>BG TIFFS/</code> + <code>EPS/</code> (painted background art, TIFF + EPS)
+  - <code>FOSTERS CHARACTER ART PACK/</code> → <code>Fosters Character Art/</code> + <code>Fosters Logos/</code> (EPS character art)
+  - <code>FOSTERS MAIN MODEL TURNS/</code> → <code>Flash/</code> (Flash-format model turns)
+  - <code>CN DOT COM FLASH ANIMATIONS/</code> → <code>Bloo/</code>, <code>Cheese/</code> (Flash web animations)
+  - <code>FOSTERS DIGITAL INK NOTES/</code> → 20 <code>.ai</code> digital-ink files, B&amp;W + Paint versions per character (BLO, CHS, COC, ED, FRA, GOO, MAC, MME, MRH, WIL; 272 KB–1.88 MB each) + <code>#Uf021OLD/</code>, <code>#Uf021Update 2007/</code>
+  - <code>FOSTERS 3D/</code>, <code>FOSTERS ADDITIONAL ARTWORK/</code>, <code>FOSTERS ASSETS CHECKLIST/</code>, <code>FOSTERS CNE/</code>, <code>FOSTERS GOOD WILT HUNTING/</code>, <code>FOSTERS LOGLINES/</code>, <code>FOSTERS LOGOS/</code>, <code>FOSTERS MUSIC/</code>, <code>FOSTERS OUTLINES/</code>
+- <code>animation-study/fosters-home/CATALOG.md</code> — a public-materials catalog (pipeline write-up, crew interviews) — documentation, NOT production files.
+- <code>animation-study/grim-adventures/</code>, <code>animation-study/robot-chicken/</code> — sibling study dirs in the same repo path.
+- A partial local checkout of the Space Ghost study set sits at <code>~/workspace/tmp-sg-files/production/WIZARD_GANG_EP01/animation-study/space-ghost/Space Ghost C2C/SPACE GHOST C2C PRODUCTION ART/SPACE GHOST SETS/…</code> (set/BG art folders; treat the GitHub repo as canonical).</p>
+<p><strong>Full Foster's holdings on GitHub</strong> — repo <code>mhvnsnt/cn-gigaleak-fosters-home</code>, releases:
+- <code>fosters-cnleaks-main-v1</code> (draft) — CNLeaks main collection, parts 002–007, 8,170,145,861 B, 80 assets (part 001 skipped by design).
+- <code>frankie-rig-fla-v1</code> (draft) — Frankie Foster puppet-rig <code>.fla</code>, 18,385,408 B, md5 <code>81a240319f85a851c84ad0a42780c493</code>.
+- <code>fosters-flash-v1</code> — Foster's Flash source files, zip 90,993,866 B.
+- <code>fosters-001-cowchicken-v1</code> (draft) — "Fosters Main Model Turns" set, 1,252,329,554 B, md5 <code>5aecc71c…</code>.
+- <code>fosters-complete-v1</code>, <code>fosters-7z-v1</code> (1,200 files), <code>fosters-cnleaks-002-v1</code>, <code>-006-v1</code>, <code>-007-v1</code>.
+- Audit verdict (2026-10-15 full audit): Foster's COMPLETE — 10.69 GB held vs 7.08 GB torrent manifest.</p>
+<h3 id="b2-gumball-the-amazing-world-of-gumball-flash-puppet-rig-show">B2. Gumball (The Amazing World of Gumball) — Flash puppet-rig show<a class="headerlink" href="#b2-gumball-the-amazing-world-of-gumball-flash-puppet-rig-show" title="Permanent link">&para;</a></h3>
+<p>Repo <code>mhvnsnt/cn-gigaleak-gumball</code>, releases:
+- <code>gumball-leak-v1</code> (draft) — <code>Gumball_leaks.rar</code>, 43,516,516,745 B in 86 segments.
+- <code>gumball-flash-v1</code> — Gumball Flash sources, split parts <code>gflash-part-aa..ad</code> (~1.94 GB total; matches the IA <code>gumball-flash</code> 1.94 GB item).
+- <code>gumball-s2-rigs-v1</code> (draft, untagged-…) + the CNLeaks-001 S2 rigs zip, 1,709,550,213 B, md5 <code>9ba3ee3421d267dc4479e1a7f4e8f459</code>.
+- <code>gumball-bibles-v1</code> — bibles and guides (PDFs).
+- <strong>⚠ CONTRADICTED — do not resolve by guessing:</strong> the pull catalogs (<code>agent-ops/cn-gigaleak-pull/STORAGE-AUDIT.md</code> + cow-chicken catalogs) repeatedly list "Gumball <code>.fla</code> puppet rigs" as gap #1 (naming e.g. <code>GB200_ORIGINAL_PUPPET_GUMBALL_VERSION_008.fla</code> + Darwin/Anais/Richard rigs as wanted, 0 <code>.fla</code> in the cow-chicken pulls), while the later checkpoint records the S2-rigs zip as filling that gap. Which specific <code>.fla</code> rigs are inside <code>gumball-flash-v1</code> / the S2 zip has NOT been file-listed in this pass — a contents listing of those two releases is the open verification step before anyone claims "we have Gumball's rigs."</p>
+<h3 id="b3-ok-ko-lets-be-heroes">B3. OK K.O.! Let's Be Heroes<a class="headerlink" href="#b3-ok-ko-lets-be-heroes" title="Permanent link">&para;</a></h3>
+<p>Repo <code>mhvnsnt/cn-gigaleak-ok-ko</code>, releases: <code>okko-cnleaks-v1</code> (draft, 7,910,137,932 B, 76 assets), <code>ok-ko-complete-v1</code>, <code>okko-extract-20261016</code>, <code>okko-v1</code>. Audit status: PARTIAL vs torrent (428 files / 12.05 GB manifest; IA mirrors held). Formats inside the sets were not file-listed in this pass.</p>
+<h3 id="b4-other-held-production-art-sets-formats-from-the-pull-catalogs-in-workspaceagent-opscn-gigaleak-pullcatalogs">B4. Other held production-art sets (formats from the pull catalogs in <code>~/workspace/agent-ops/cn-gigaleak-pull/catalogs/</code>)<a class="headerlink" href="#b4-other-held-production-art-sets-formats-from-the-pull-catalogs-in-workspaceagent-opscn-gigaleak-pullcatalogs" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Scooby-Doo! Mystery Inc</strong> — <code>mhvnsnt/cn-gigaleak-scooby-doo</code> + <code>-mystery-inc</code> (COMPLETE; 845 files, 12,158,804,223 B uncompressed): SDMI Main Model Pack (model pages PDF), Color BGS + Flattened, Props, Mystery Machine, Production Art (monsters, line art, size comps), Storyboards (incl. <code>.mov</code> animatics), Scripts. Extensions: tif 238, pdf 187, jpg 174, psd 105, eps 56, png 22, mov 10. Releases <code>scooby-mystery-inc-v1</code> (79/79, 8,254,299,700 B), <code>gp-cowchicken-v1</code> set, <code>scooby-complete-v1</code>.</li>
+<li><strong>Dexter's Lab</strong> — <code>mhvnsnt/cn-gigaleak-dexters-lab</code>, <code>dexters-lab-complete-v1</code> (COMPLETE; 2,298 files): eps 1,803, pdf 7, ai 2, png 2, aiff 2; character dirs (Dexter 129, Dee Dee 69, Mandark 12…).</li>
+<li><strong>Cow &amp; Chicken</strong> — <code>mhvnsnt/cn-gigaleak-cow-and-chicken</code>, <code>cow-and-chicken-v1</code> (1,213 files): eps 1,164, tif 24, pdf 4.</li>
+<li><strong>My Gym Partner's a Monkey</strong> — <code>mhvnsnt/cn-gigaleak-gym-partner</code>, <code>gp-cowchicken-v1</code> (435 files): Backgrounds (psd 96, jpg 20, eps 4, ai 1, tif 1 — layered PSD BG layouts, 5.01 GB uncompressed), Character Art (eps 199…), Style Guide (pdf/ai/eps), Design Elements (eps), Logos. 0 <code>.fla</code>.</li>
+<li><strong>Johnny Test</strong> — <code>mhvnsnt/cn-gigaleak-johnny-test</code>, <code>johnny-test-cowchicken-v1</code> (863 files): episodic scenes (jpg/tif/png), scripts (doc/xls/pdf), character art (ai 69, eps 41), backgrounds, bible, size chart, fonts. 0 <code>.fla</code> despite being a Flash show — art/docs only.</li>
+<li><strong>Powerpuff Girls (Special + Original)</strong> — <code>mhvnsnt/cn-gigaleak-powerpuff-girls-special</code> (<code>ppg-special-cowchicken-v1</code>, 182 files): Backgrounds (pdf 43 + layered psd 43 color keys), Characters (pdf 26 + psd 26 model sheets), Storyboards (pdf, Acts 1–3), 3D Models (Maya <code>.ma</code> 22 + tif/tga textures). Original set: <code>mhvnsnt/cn-gigaleak-powerpuff-girls</code> (1,139,224,028 B, 19/19).</li>
+<li><strong>Space Ghost Coast to Coast</strong> — <code>mhvnsnt/cn-gigaleak-space-ghost</code> (COMPLETE, 474 files, 473,840,806 B, md5 <code>1815fb02…</code>) + the TRIPPEDD study copy in B1 (production set art).</li>
+<li><strong>Teen Titans</strong> — <code>mhvnsnt/cn-gigaleak-teen-titans</code> (<code>teen-titans-cnleaks-v1</code>, 735,973,135 B, 10 assets; 970 files per audit) — also copied 100% into cape-jones (PRs #77/#80).</li>
+<li><strong>Ed, Edd n Eddy / Grim Adventures / KND / Looney Tunes Classic / MGM Shorts</strong> — CNLeaks mirror releases, all byte-verified complete: EEnE <code>eenee-cnleaks-v1</code> 3,737,106,862 B; Grim <code>grim-complete-v1</code> 3,660,969,279 B; KND <code>knd-cnleaks-v1</code> 2,479,603,837 B; LTC <code>ltc-cnleaks-v1</code> 890,887,787 B (repo <code>cn-gigaleak-looney-tunes</code>); MGM <code>mgm-shorts-complete-v1</code> 5,804,899,798 B (repo <code>cn-gigaleak-mgm-shorts</code>). Internal formats not file-listed in this pass.</li>
+<li><strong>Smiling Friends + unsorted Flash (MANIFEST ONLY — not held):</strong> the torrent inventory at <code>~/workspace/cn-pull-bigend/cnzip_filelist.txt</code> lists <code>Cartoon Network/FLA Files/SmileFriends/Charlie.fla</code>, <code>PimRigUpdate.fla</code>, and unsorted <code>.fla</code> (BOSS_* BG/CH files, <code>ch_max.fla</code>, <code>ch_ruby.fla</code>, posters) plus <code>Cartoon Network/PDFs/</code> — dozens of Hanna-Barbera model-sheet PDFs/AI (Character Model Sheet, HB Reference Guide, per-show <code>mdl.pdf</code>s). These are in the 350 GB torrent manifest / <code>Cartoon Network.zip</code> listing only — the VM cannot reach the swarm, so they are NOT held. Do not cite them as on-hand study material.</li>
+</ul>
+<hr />
+<h2 id="strongest-ready-to-use-stack-what-can-animate-a-real-episode-today-no-installs">STRONGEST READY-TO-USE STACK (what can animate a real episode today, no installs)<a class="headerlink" href="#strongest-ready-to-use-stack-what-can-animate-a-real-episode-today-no-installs" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Draw + rig + animate:</strong> Blender 4.5.3 (Grease Pencil) + Tiny 2D Rig Tools (cutout rigs, mouth/hand swaps) — fallback Blender 4.0.2 (proven headless path). Pencil2D 0.7.2 for fast hand-drawn passes/tests.</li>
+<li><strong>Lip-sync:</strong> Rhubarb 1.14.0 + <code>tools/lipsync/rhubarb_to_visemes.py</code> (WORKS end-to-end on paper: voice WAV → viseme EDL → mouth swaps on the rig).</li>
+<li><strong>Pre-production:</strong> Fountain → <code>script-tools/fountain_to_cues.py</code> (cue sheet) → record/voice → <code>script-tools/build_animatic.py</code> / <code>post-pipeline/fountain_to_animatic.py</code> (animatic).</li>
+<li><strong>Composite + finish:</strong> Natron 2.5.0 headless (<code>natron-render.sh</code>, verified) → <code>tools/color/presets.sh</code> grade (<code>vibrant-cartoon</code>) → ffmpeg 8.1.2 assembly/encode.</li>
+<li><strong>Study/reference on the same desk:</strong> Foster's study copy in TRIPPEDD-Production-studios- (model turns, EPS character art, BG TIFF/EPS, digital-ink <code>.ai</code>, Flash animations) + Frankie <code>.fla</code> rig and Foster's Flash sources on <code>cn-gigaleak-fosters-home</code> releases, opened with JPEXS FFDec 26.3.0 + the bundled Java 21 (both WORKS).</li>
+<li><strong>Known gaps to close before this is a full stack (re-pulls, in priority order):</strong> (a) Krita AppImage — reactivates 3 orphaned Krita plugins and gives a real paint app; (b) Tahoma2D AppImage — the wired primary drawing workhorse + its bundled rhubarb; (c) Blender 5.x — unblocks Smart2D + Guided Tweening; (d) Synfig AppImage (needs a FUSE-capable route) or OPEN-TOON source build — fills the vacant vector-tween slot; (e) melt build/apt — turns Flowblade/MLT-XML into a headless assembly lane; (f) file-list <code>gumball-flash-v1</code> + S2-rigs releases to settle the Gumball <code>.fla</code> contradiction in B2.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>
