@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-22t0844z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-22t0914z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1347,10 +1347,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-22t0914z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-22T09:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-22t0844z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
         Overnight pipeline — 2026-11-22T08:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-22t0814z-addendum-same-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-22T08:14Z (addendum, same run)
       
     </span>
   </a>
@@ -13000,10 +13022,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-22t0914z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-22T09:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-22t0844z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
         Overnight pipeline — 2026-11-22T08:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-22t0814z-addendum-same-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-22T08:14Z (addendum, same run)
       
     </span>
   </a>
@@ -16773,6 +16817,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-22t0914z-30-min-run">Overnight pipeline — 2026-11-22T09:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-22t0914z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE DELTA: 0 merged BY this run. 1 LANDED-VERIFIED by lane, verified on main BY THIS RUN: CJ #421 memory-backup sync (merge 31bfff84 == tip, merged 09:22:53Z; 3 files +24/-8, memory-backup/ only). 4 Bannon PRs merged into muse/web-upgrade by the fold lane, verified on web-upgrade BY THIS RUN (payloads on web-upgrade, NOT main — the web-upgrade→main fold is still owed): #311 (2c88154d), #313 (63072566), #314 (2a31d48e), #305 (d618345b == web-upgrade tip). 0 false claims reopened (verify-done 5/5 HOLD/LANDED). 0 stale checkpoints resumed; canon-sync nothing new (MEMORY.md md5 unchanged ca9881f8); queue sync PR pending this run; queue: WH 47 + Bannon 18 + PPWA 25 + CJ 0 + PA3D 0 + GRE 3 + DG 3 + PA2D 3 + WG 2 + CD 2 + AO 1 + wrestling 2 = 106 open (was 110; -4 = Bannon web-upgrade merges), blocked 16+.</li>
+<li>STEP 1: tips moved vs 08:44Z baseline: CJ 311cc10c -&gt; 31bfff84 (#421, verified below); AO 0d68c87e -&gt; cb96796d (#999, the 08:44Z run's own queue sync — verified below); Bannon web-upgrade bb330b59 -&gt; d618345b (4 merges). PA3D b270d506 HOLD (Gateon, verified below). All other main tips UNCHANGED (WH 9f65d26a, Bannon a27baf73, PPWA 3a0bb5d6, GRE c94a4643, DG 17be49b2 — repo is dream-girl, not DreamGirl — PA2D 16921c65, wrestling e1702afd, CD 678cd1ce). 0 new PRs created since 08:44Z. WH #1792 + #1820 OWNER-HELD — not merged. Bannon #198/#286 mergeable null/unknown — held, fold lane owns. PPWA #294 mergeable true/unstable, combined status success (Vercel only) but check-runs API 403 — cannot verify green; branch diverged; Scarlett viseme systemic failure stands — held, do not re-run e2e. PA2D #1/#2/#4 + GRE #84/#96/#97 + DG #91 mergeable true, combined pending 0 statuses (no checks configured) — held per CLEAN-but-no-checks precedent; PA2D #1 body holds "DO NOT MERGE — coordinator/owner decides". DG #9 DIRTY. Excluded/owner-held untouched: WH #377, CJ #156/#157/#167, DG #89; PPWA #246/#290/#293 merge calls stay owner's; Bannon #78 stay-vs-revert still owner's call.</li>
+<li>STEP 2 verify-done (5/5 HOLD/LANDED, 0 false claims): PA3D Gateon b270d506 (3/3 spot blobs MATCH on main: test51 9eae3c0f, main.js 01ef44f2, M6_tower_top.glb d852e22d; 08:44Z run verified 41/41); AO #999 cb96796d == tip (blobs 45b6b68d/bdcd5563 on main); Bannon web-upgrade tip d618345b == #305 merge commit (parents [2a31d48e, 964e39aa]); WH #1831 INDEX.json 17,516 B on main (sha d6f110be); CJ #420 CANON-MASTER-SHOW.md 7,031 B sha 1630b311 on main.</li>
+<li>STEP 3 checkpoints: 1245 scanned, 0 unparseable, 0 running, 0 stale-watchdog; done 1038; needs_owner 65 untouched. checkpoint_audit.py still missing (tools/ archived). Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 UNCHANGED ca9881f8 — nothing new. Last-sync md5 stays ca9881f8.</li>
+<li>STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 76% (113G/150G, 37G free) — under 85%. In-flight sacred work untouched: DG 6B gate_and_run_6b.sh (pid 2073) alive; Orre-remainder Blender measure_map pids 170986/171033 GONE since the 04:14 EST disk-guardian check (lane-owned, not restarted by this run); CJ parking-lot Blender render (pid 118251 at 08:43Z) no longer running.</li>
+<li>STEP 6/7/8: no new thread, no new pulls — live lanes own the work (Bannon web-upgrade fold lane actively merging; DG 6B Run 67 waiter live; PA3D coordinator #12 Orre-remainder; Sato lanes). Stand down.</li>
+<li>BLOCKED &gt;72h (carried): Bannon #78 stay-vs-revert decision owed; untracked siblings TRIPPEDD-Animation-Studio + Wrestli6game-3 decision owed; AO #952 force-push reset decision owed; WH #1792 P2 baek-master-white combo question (PR green, merge call owner's); TorBox re-sign-in (Turnstile — user's own click); zrok/live-view (fresh token owed, stable share DOWN 401). NEW BLOCKED: PPWA #294 held — checks unreadable (403), branch diverged, Scarlett viseme failure systemic (merge call owner's/lane's; no e2e re-runs); Bannon #198/#286 mergeable unknown (fold lane owns); WH #1820 gate-fixed but owner-held by its own body — merge call owner's.</li>
+<li>Queue sync: AO PR pending this run (to follow).</li>
+<li>RECONCILIATION NOTE: this run's local MERGE-QUEUE.md/overnight-handoff.md were BEHIND main — the 08:44Z run's sync (#999) had landed on main but its entry was missing locally. Adopted main's files as base (blob-verified) and re-inserted the local-only 08:14Z addendum (PR #998) before writing this entry, so no run record is lost.</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-22t0844z-30-min-run">Overnight pipeline — 2026-11-22T08:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-22t0844z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE DELTA: 0 merged BY this run. 1 LANDED-VERIFIED by lane, verified on main BY THIS RUN: PA3D Gateon Port merge b270d506 (wave1/gateon-port direct merge, 41/41 blobs match branch head 5786670c vs main tree — 22 GLBs + 8 proof PNGs + SOURCES.md + src/main.js + src/world.js + tests; Orre harbour town). 5 Bannon PRs merged into muse/web-upgrade by the fold lane, verified on web-upgrade BY THIS RUN (payloads on web-upgrade, NOT main — the web-upgrade→main fold is still owed): #312 (1d0b47cc), #315 (7ffe5645), #293 (4de3a9de), #295 (95e6fce4), #310 (bb330b59 == web-upgrade tip). #310 closed 08:44:25Z, during this run. 0 false claims reopened (verify-done 5/5 HOLD/LANDED). 0 stale checkpoints resumed; canon-sync nothing new (MEMORY.md md5 unchanged ca9881f8); queue sync PR pending this run; queue: WH 47 + Bannon 22 + PPWA 25 + CJ 0 + PA3D 0 + GRE 3 + DG 3 + PA2D 3 + WG 2 (carried, repo unresolvable) + CD 2 + AO 1 + wrestling 2 = 110 open (was 115; -5 = Bannon web-upgrade merges), blocked 16+.</li>
@@ -16784,6 +16841,10 @@
 <li>STEP 6/7/8: no new thread, no new pulls — live lanes own the work (Bannon web-upgrade fold lane actively merging; DG 6B render chain Run 67 LIVE; PA3D Gateon done, The Under next per coordinator). Stand down.</li>
 <li>BLOCKED &gt;72h (carried): Bannon #78 stay-vs-revert decision owed; untracked siblings TRIPPEDD-Animation-Studio + Wrestli6game-3 decision owed; AO #952 force-push reset decision owed; WH #1792 P2 baek-master-white combo question (PR green, merge call owner's); TorBox re-sign-in (Turnstile — user's own click; key fix pending, 77 Gym Partner files unpulled); zrok/live-view (fresh token owed, stable share DOWN 401). NEW BLOCKED: Bannon #311 conflict vs web-upgrade (fold lane owns); Bannon #313/#314 mergeable unknown. WH #1820 gate-fixed but owner-held by its own body — merge call owner's.</li>
 <li>Queue sync: AO PR pending this run (to follow).</li>
+</ul>
+<h2 id="overnight-pipeline-2026-11-22t0814z-addendum-same-run">Overnight pipeline — 2026-11-22T08:14Z (addendum, same run)<a class="headerlink" href="#overnight-pipeline-2026-11-22t0814z-addendum-same-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC PR #998 LANDED-VERIFIED: merged 0d68c87e == main tip; tree blobs byte-identical to local git hashes (MERGE-QUEUE.md f009c901, overnight-handoff.md eb8ebbf2). Instruction-gate + guard green first try. Run tally: 0 game items merged, 1 sync landed-verified this run.</li>
 </ul>
 <h2 id="overnight-pipeline-2026-11-22t0814z-30-min-run">Overnight pipeline — 2026-11-22T08:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-22t0814z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
