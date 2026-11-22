@@ -1,0 +1,823 @@
+{
+ "items": {
+  "ep01-basecut-master": {
+   "type": "drive",
+   "description": "EP01 THE WALK basecut master 1080p (2.7G, 28 chunks)",
+   "drive_folder": "1vjwx0Skj5gtsihzsrYrUgskYq4C0CQve",
+   "drive_folder_name": "TRIPPEDD-EP01-basecut-backup-2026-10-10",
+   "chunked": true,
+   "chunk_prefix": "EP01-THE-WALK-basecut-master-1080p.mp4.part_",
+   "chunk_count": 28,
+   "size": "2.7G",
+   "bytes": 2900000000,
+   "restore_path": "ep01/EP01-THE-WALK-basecut-master-1080p.mp4",
+   "stored_at": "2026-10-11T00:00:00Z",
+   "note": "Reassemble: cat EP01-THE-WALK-basecut-master-1080p.mp4.part_* > EP01-THE-WALK-basecut-master-1080p.mp4"
+  },
+  "ep01-basecut-review": {
+   "type": "drive",
+   "description": "EP01 basecut review MP4 (61M)",
+   "drive_folder": "1vjwx0Skj5gtsihzsrYrUgskYq4C0CQve",
+   "drive_id": "REVIEW_FILE_ID_PENDING",
+   "size": "61M",
+   "restore_path": "ep01/EP01-THE-WALK-basecut-review.mp4",
+   "stored_at": "2026-10-11T00:00:00Z"
+  },
+  "bannon-out-renders-2026-10-11": {
+   "type": "drive",
+   "description": "Bannon character renders (849M)",
+   "restore_path": "bannon-video-pipe/out.tar",
+   "size": "889.6MB",
+   "bytes": 889589760,
+   "stored_at": "2026-10-11T18:32:58.068373+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1Nh2pAjYP7FEgzaT8BWi4uG-zuCF4tGsB",
+    "115JVm9WSno_RR6HyYUIkCGRf96HvQMu4",
+    "1xpavxhCVRAGdkSPaitC6fPoSyOeTVSM-",
+    "1sb-wSdb6p9tqJpJ5R6CqTOVXiKfGuDgt",
+    "1BYeTKReVIe3ztBK3aUdf-3IQd1DIvoLU",
+    "1zZPP3c_lFp0Dzy5EyZemGpk3NAO3QS3I",
+    "1TVVRxoVcGokQW6_y8-np4XcZkQGSfYcw",
+    "1ZLQRFEW1-4li28-4nea5Zgzw7RnPjKwK",
+    "1uEKxfBIU3syl3_DAM1ogOZsb0J7xHw37"
+   ]
+  },
+  "bannon-stickup-v2-work-2026-10-11": {
+   "type": "drive",
+   "description": "Stick-Up v2 work (1G, rejected version)",
+   "restore_path": "bannon-video-pipe/stickup-v2-work.tar",
+   "size": "1053.1MB",
+   "bytes": 1053102080,
+   "stored_at": "2026-10-11T18:46:01.672808+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "11SxJGFPIm9cD8dVnfTghQSyIOeKOYkAm",
+    "1vlf6e8Rnj5iNC0aAiHyJoDwGZGhEAvLI",
+    "1E-VC4arC9CUoTsUNwVrfzmquQ_mPQHlg",
+    "1zrvyR_SrqZiD0DQRCRNta_iLNeKMELPW",
+    "1JQpJPEVfC7eDJ7rHlDstD06O2dQDzmkH",
+    "13a2mJgpYSc5P8iF99WJjJgEzZrrXmZrD",
+    "1D-bBHfwiDDfP_GQMreEYKz20z1QBES94",
+    "19aWelvU18iQczqZ5_F6-9iKophNbTYMb",
+    "1prr00hvIGQ9kGTFfI5N4TLdD9kBsOhio",
+    "1ssLwk88nj4kwnG8UOlELTfoFyDJlixBH",
+    "16glZrh6Bw9VG-DdHaV_l2CLrBK88wtqe"
+   ]
+  },
+  "ep02-repair-work-automigrate-2026-10-12": {
+   "type": "drive",
+   "description": "ep02-repair-work",
+   "restore_path": "ep02-repair-work.tar",
+   "size": "1890.5MB",
+   "bytes": 1890549760,
+   "stored_at": "2026-10-12T09:35:39.520673+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1axZvYVuRTsfTF5Yzu8DT4MQXv6-xqy63",
+    "1H1gKeHZ0IWewsGgx7cVkfeRBwel1kWSP",
+    "1cU4CXwC6yhIgKvr98wEXYKSXwriaRdDC",
+    "1GFL1NP3hCeX7Auc7vFrr5r9MA3fGeyEU",
+    "1hwMF0yb3MqcA2rZGZ1vwGn_W9HUO_pjQ",
+    "13SNhVtZKjlImIgUJJvzxo8NIGKf6bFSS",
+    "1xJ6oIMGxkfo7XOuSzWe3VyRlJU9LxCK6",
+    "1he3ykIfHcBmWyVC3u89RjM1OWxkR-1jT",
+    "1KZc6z46PvAUF5_iQ6qY6VCugxVTz1lWP",
+    "1SNSlMygFak5flvnXRGBfm_GQKOGfiD3T",
+    "1SrVRqrp3yhtZrezIvvqJ6h7UEG3hP5_5",
+    "1MBvVGEDRvWc8kYerxtG-nQrVZdzR7eL3",
+    "1mHSHZlJqNOVk3g2AbItx2RaW0BUBSu-f",
+    "1Fo99rbFzzyPAhH0cSXZ9I48mgeHBe6nR",
+    "1Suu8a0j4B9JVI4920KT4FKrd0PJyepyi",
+    "1-U-ySbA2d1i0jEjw7Sjx0FkCdJ4XxV6y",
+    "1wqjBoWgfgqQf4ICrMrILD4hF5IrA-7FC",
+    "1dWovwU-OFml_sCXi1UoPiGVmmwYy8BMd",
+    "1SQ0PIpW5XC9KM6yDPH_wrJVyoxXnrggF"
+   ]
+  },
+  "steal-like-artist-other-packs-automigrate-2026-10-12": {
+   "type": "drive",
+   "description": "animation-techniques/steal-like-artist/other-packs",
+   "restore_path": "animation-techniques/steal-like-artist/other-packs.tar",
+   "size": "3247.7MB",
+   "bytes": 3247728640,
+   "stored_at": "2026-10-12T15:37:54.968922+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1AJwT-6bpHkB85voQOFFxWf2bNMQ4cBkp",
+    "1ihUwGPeY53qjS92tlxtq-fBGhiDfP5zR",
+    "1OvVCxze3WEfev2ilTJXne-gD7yRPtr_N",
+    "1VfMnSyymg-QUbkdqDPiNTs27mG-AKok1",
+    "1STEk4i61yQXPQVTv0g15gUbutH20SKLG",
+    "1MA4c6NHDlyzS6Y_kU4imNvDu8Nz3RqdC",
+    "12ABESLtu_pkc_t7uOkrIlbHW2iBWq_lD",
+    "1F-wyeANH_t8hIkuYMnRfi_bY3A_H-JNg",
+    "1XDqOneYzNFF4LRb1npQgxKUGOKEpvLPZ",
+    "1KdupehTvzHXsaMhqcRAVU14khqqNrFlp",
+    "1e3yPXm3aPSbeRIBOJRP6s6Rv7JCcKoFm",
+    "1yoauMCHgZRJo_8mG9BqI6V-Kzyx01ESY",
+    "1D05rd7-XfO5DSWA5r_-Ek2U7JQz-0vIt",
+    "16-z_WF4pNwThtSYlKhy4hZ4ssNQGb9eW",
+    "1TIDoRc0Rv_gQODauf7uFWgAhHQPG3hTB",
+    "1ZORNONWxYmH_XYxnDnYf9SPh6XgYgL3s",
+    "1fwlK9rmxW6hBj5yhZT1Oy9GjuWi9_N83",
+    "1zXYnXsuXmntAiNe3zZIU1E1cQIUwiuie",
+    "1jRN7rTDk46eqJxda6Av2ABKXx0LSVoXV",
+    "1m_35fIq19OLDvO2rCczr_4FOlSMY82AW",
+    "1lxovWzGoTcf_RDUHyl2mk4rmuORypvwx",
+    "1fJ2MlVPU_O8iGsaBAkhi_D6pD-3wIxso",
+    "1zHwpW3cH3qv81eASMxl34sxj7MPWJZ_q",
+    "1gZYCgEVWrzGk4WA-oxnyJ1EQDH5Qmtlm",
+    "1WMUvcm_vXg1SIOTJC2zc5zG3qiaQ6Dcd",
+    "1w40R6mNrohG1GJVgy5J5tb0kgUJfcajT",
+    "1rHCn_2qHunPAAw0akB7qwzdyfYi5H7ZQ",
+    "1WME_xgPtLyN_CbNRFABhfduT-BtgrNKC",
+    "1c17F2nEX1mVPKrH-9WuOXdTbF69C-nVA",
+    "19oP_TpmiBJ7IwG-nF9ce9lpzGJLT9e-h",
+    "1xnWPJ5YipKfsJQv9kg7lQDgqxuzE8SdZ"
+   ]
+  },
+  "steal-like-artist-osamu-sato-automigrate-2026-10-12": {
+   "type": "drive",
+   "description": "animation-techniques/steal-like-artist/osamu-sato",
+   "restore_path": "animation-techniques/steal-like-artist/osamu-sato.tar",
+   "size": "669.7MB",
+   "bytes": 669726720,
+   "stored_at": "2026-10-12T17:31:51.826892+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1nnkx0T2G9FBgDpTucN401R87_nCOIBUn",
+    "1RVWbt85J1IuOzirPCfp0h5MqWX3-ljPt",
+    "1QjXyOGxAjVT1lVZYHkUJELIjhEvJu20u",
+    "1xxjfEx4Hlbdsd2TK6HczpPztxA9qNq8K",
+    "1JlBryPcox4U4qNNizIDxm4cpJRlWov6F",
+    "1HeYahANSnsccBADpP1HnsfuJSadU4rDk",
+    "1KoYpMU1ZiaBUiOYJIFsFjaME6vdYjndv"
+   ]
+  },
+  "glb-renders-models-automigrate-2026-10-12": {
+   "type": "drive",
+   "description": "Character GLB renders (82 files, idle since Oct 6)",
+   "restore_path": "glb-renders/models.tar",
+   "size": "1241.0MB",
+   "bytes": 1241036800,
+   "stored_at": "2026-10-12T20:54:31.917917+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1vHSLCZHAdfdD1QY4-M-R-d5GWFZnsZsE",
+    "1ejtLTGvL6C7WLdrTxBaVXIXYzIMFa_8d",
+    "1lysF2bfPat7nlHEQ1jDEKTJOLSboMZKR",
+    "1AeFPYiRxi20dIWUcXi_YnyONFRSeKxte",
+    "1ULOUlzvu-dDgPBP4_k9xRpUWJb7LCAZ9",
+    "1SWXMtvVmguDd29ciTeuFeQsovqGZec9Y",
+    "1gm_IVjVIFKWAwGx6X_Hk9FHWFodLjCk1",
+    "1ssLtIPlpMqqj3cZqBzPkdXdZBOqXkNpn",
+    "18IUEmY39enBbgBpgyyG-mJEnU1YM5bge",
+    "1VFstu-JVzhNxZL2jQj6jARDjjTLJzwpH",
+    "1Zz4yzSVUYt1xlMe6yB0uoJbYWn9O32-S",
+    "1RI1HMdSoKARozf7hHPEK5e_xzokZUiUf"
+   ]
+  },
+  "teardown-batch-b-automigrate-2026-10-13": {
+   "type": "drive",
+   "description": "western-heart teardown batch B (42,320 entries, 769,476,340 bytes)",
+   "restore_path": "terabox-staging/teardown-batch-b.tar.gz",
+   "size": "769.5MB",
+   "bytes": 769476340,
+   "stored_at": "2026-10-14T03:01:26.987855+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1avKJMOfa9PVTEkQaLoCcUZ4lmfJC7nw1",
+    "11SYxobMfI2IKZLOLVPt426fUufiImhOq",
+    "1M8JmF1Hs-zFdA83cy6wSJsT0aQ5d7860",
+    "1EJQvxqmq6i1bj4qN5esDdI_GjG_NIcCf",
+    "1SG4X_7K-49xw1rLEbzNDCzHH07Ocb4pW",
+    "1GDizB7PdsNJqO_QS9re827aXWSpNNYJt",
+    "18RmJ10r6s15qh9h5n-s3HQBGADTOLVUV",
+    "10MvCMBlGWylPKQBU2zzZixLYh9fMd2Ea"
+   ]
+  },
+  "model-fixes-automigrate-2026-10-13": {
+   "type": "drive",
+   "description": "model-fixes",
+   "restore_path": "model-fixes.tar",
+   "size": "638.1MB",
+   "bytes": 638146560,
+   "stored_at": "2026-10-14T03:40:11.373814+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1PKZmc68DKF-G2ZyulQ37bGues8E8jjsJ",
+    "1wuU5SIeo7zZpDaLdjtk17oX3eBMZ2l1F",
+    "1CwLShLrhRMd2lCFBZdjyxMUWDd78KEt3",
+    "1sTHELcW6Qw-4GDatYPBWBqkyx2V2stqf",
+    "1ELVKcXTRzMSVCLd-9OqSdcec1jRrhoL6",
+    "172-jAo2jExLdsJAsHc4pueGmqK82nscm",
+    "1hpuS4yEnnWHXK3ETc8O-EfdFBe_tfMz-"
+   ]
+  },
+  "rig-fix-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "rig-fix",
+   "restore_path": "rig-fix.tar",
+   "size": "364.0MB",
+   "bytes": 363960320,
+   "stored_at": "2026-10-14T04:05:53.821761+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "18hWqYAOAuQpjeYebyzBwPMTlFB1QybNz",
+    "13KYIYGsAGFiyXoqmA5z1rETyb9dFaaxn",
+    "1dYD3SbvMZs3Jli2mVS45PZXTC--ByNDm",
+    "1-vtfgkFSBkLMawgjyrclr0HpVOlY4kkS"
+   ]
+  },
+  "quaternius-packs-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "quaternius-packs",
+   "restore_path": "quaternius-packs.tar",
+   "size": "334.2MB",
+   "bytes": 334223360,
+   "stored_at": "2026-10-14T04:10:50.329817+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1O67tFTBJNyPqye6EdiWibexUUDV11KVf",
+    "1-BxHPD20w1I-ckKRtw8JFp1aPscMrQjp",
+    "1IFRm7tGZJ5k--yqtRHVOs7BeboVYd029",
+    "1vEu1pVOHC874a_OR-F23g042uZYAF5lH"
+   ]
+  },
+  "rigging-pipe-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "rigging-pipe",
+   "restore_path": "rigging-pipe.tar",
+   "size": "259.1MB",
+   "bytes": 259143680,
+   "stored_at": "2026-10-14T04:17:34.854002+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "15z9oq4dXr9pMNOLvn5_-OJAwJFa6qJi2",
+    "1KYFEuU0zgOizbCMsBm-1JSxVijyqC1mB",
+    "1fBqY9DFiL2w3H3esH-TV1m4oxMxj3F6o"
+   ]
+  },
+  "os-pull-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "os-pull: pulled open-source combat integration reference material (batman-arkham-combat, deathblood-lazer, souls-like-controller), untouched 7+ days, automigrated by disk-space-guardian",
+   "restore_path": "os-pull.tar",
+   "size": "378.0MB",
+   "bytes": 378030080,
+   "stored_at": "2026-10-14T05:56:12.688204+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1ME5oZW_a-CNjEZDIhIVahX6JkOrqracu",
+    "1mRsTg9FgGifEO-EvuAO0ODb-7cSZdKyu",
+    "1TkxxISd5aYmG1ycXx2rUAohdGslOQ0Bd",
+    "1cVGRp97VacMX4C6VsI1aOiHtq02_Grc1"
+   ]
+  },
+  "new-drive-assets-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "new-drive-assets: glb/fbx analysis outputs, untouched 7+ days, automigrated by disk-space-guardian",
+   "restore_path": "new-drive-assets.tar",
+   "size": "377.5MB",
+   "bytes": 377518080,
+   "stored_at": "2026-10-14T06:04:15.599874+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1CHctzOMj03lg-vnpBVMA675VBzuaZnBT",
+    "1p0HMoUUDm81RfizbAOoWVUV9Qq1BJm7A",
+    "1ij0RQw0dznsUkObxsIxxDTdqs5z-Vy1v",
+    "1xg_gHWluG2aHZxKJ7KrkeybB3Lu5YqvU"
+   ]
+  },
+  "attire-pull-cain-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "attire-pull/cain",
+   "restore_path": "attire-pull/cain.tar",
+   "size": "182.3MB",
+   "bytes": 182302720,
+   "stored_at": "2026-10-14T06:48:54.567223+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1Oe7cBVz_vmWOX9EStmmEdSHXlVOrsEEV",
+    "10pJvCNcBTkzUnnNWneDTeqmbE-UGGXm1"
+   ]
+  },
+  "attire-pull-edwin-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "attire-pull/edwin",
+   "restore_path": "attire-pull/edwin.tar",
+   "size": "121.4MB",
+   "bytes": 121364480,
+   "stored_at": "2026-10-14T06:52:18.212720+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1zy99esew9YTzjsrpBqF0QIhRhdTw6iDE",
+    "1DAk4wvsA4tByX8VeDkoT2QOpm-XH5IQM"
+   ]
+  },
+  "bannon-teardown-drive2-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "bannon-teardown/drive2",
+   "restore_path": "bannon-teardown/drive2.tar",
+   "size": "184.7MB",
+   "bytes": 184709120,
+   "stored_at": "2026-10-14T06:54:31.211503+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1f68Y_KUqjDEwfle-arQ_BSo9tLstlRnO",
+    "168mBh-TbByS0r7RTqpfkp8sdmuVZH96-"
+   ]
+  },
+  "ashlane-federation-combat-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "ashlane-federation/combat",
+   "restore_path": "ashlane-federation/combat.tar",
+   "size": "126.5MB",
+   "bytes": 126545920,
+   "stored_at": "2026-10-14T06:56:53.986019+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1OHvh7AgCy45LZ65z26DCjbLwEr_lbU9t",
+    "120dnLg3TeVrztYuLDyuDEuPpMMLc1TuU"
+   ]
+  },
+  "bannon-video-pipe-captures-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "bannon-video-pipe/captures",
+   "restore_path": "bannon-video-pipe/captures.tar",
+   "size": "71.7MB",
+   "bytes": 71659520,
+   "stored_at": "2026-10-14T06:58:34.803918+00:00",
+   "drive_id": "1ACm5ROIhiOM5fKWD9rnqJIMWUC7mQRfo"
+  },
+  "sombra-negra-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "sombra-negra",
+   "restore_path": "sombra-negra.tar",
+   "size": "241.0MB",
+   "bytes": 252672000,
+   "stored_at": "2026-10-14T07:10:00+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "14o3Il03-9p4f1-000XcHBgUv8RZCoeow",
+    "1iYJhrxHfrbYaFSmuSSJgvlZFa20NR7nP",
+    "18smzjou67RLp4e7tMI6TZcf9FFCu8ITO"
+   ]
+  },
+  "bannon-teardown-drive3-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "bannon-teardown/drive3",
+   "restore_path": "bannon-teardown/drive3.tar",
+   "size": "82.8MB",
+   "bytes": 82810880,
+   "stored_at": "2026-10-14T07:40:17.426886+00:00",
+   "drive_id": "1DyHwhoQi6oyKz21krsMedvzUGpSaDtyW"
+  },
+  "bannon-teardown-drive5-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "bannon-teardown/drive5",
+   "restore_path": "bannon-teardown/drive5.tar",
+   "size": "55.3MB",
+   "bytes": 55306240,
+   "stored_at": "2026-10-14T07:42:31.785994+00:00",
+   "drive_id": "1JuO6LRiUD5CV2udLqMIEg2zvguEfUVpi"
+  },
+  "bannon-teardown-drive6-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "bannon-teardown/drive6",
+   "restore_path": "bannon-teardown/drive6.tar",
+   "size": "61.7MB",
+   "bytes": 61726720,
+   "stored_at": "2026-10-14T07:43:27.235107+00:00",
+   "drive_id": "1e4_Eje7Z3rXdYCa7SeZK9PW-VitcvQCC"
+  },
+  "promo-work-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "promo-work",
+   "restore_path": "promo-work.tar",
+   "size": "108.5MB",
+   "bytes": 108451840,
+   "stored_at": "2026-10-14T07:44:36.511516+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1LSiEMc2r7KEAOCerjOBbCeyJLxQArLRT",
+    "1S7tAphAvbHp2-SugmDb07s0QY_MVJhxs"
+   ]
+  },
+  "game-sweep-references-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "game-sweep/references",
+   "restore_path": "game-sweep/references.tar",
+   "size": "64.6MB",
+   "bytes": 64624640,
+   "stored_at": "2026-10-14T07:50:56.748124+00:00",
+   "drive_id": "1iN12UpbvJ4c-lW-JGkBKRidM1bFjoVCV"
+  },
+  "anim-work-repo-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "anim-work/repo",
+   "restore_path": "anim-work/repo.tar",
+   "size": "90.3MB",
+   "bytes": 90286080,
+   "stored_at": "2026-10-14T07:54:18.637365+00:00",
+   "drive_id": "1vCJsnZNLm9-51JgTLFpiN0tN1jZPg-vF"
+  },
+  "triple-xxx-automigrate-2026-10-14": {
+   "bytes": 182784000,
+   "sha256": "29fb777bbd31c8f2fb85320cbed59b91649865c9f80ae1611e2c5a1100517d24",
+   "store": "github-release",
+   "repo": "mhvnsnt/google-drive-repo",
+   "tag": "triple-xxx-automigrate-2026-10-14",
+   "asset": "triple-xxx-automigrate-2026-10-14.tar",
+   "source": "~/workspace/triple-xxx",
+   "uploaded": "2026-10-14T07:42:44Z",
+   "by": "worker-watchdog"
+  },
+  "attire-pull-rest-automigrate-2026-10-14": {
+   "bytes": 506757120,
+   "sha256": "bafc8601d4d74c914461c3ec1cf90840bc0c175941c9b1100517d24",
+   "store": "github-release",
+   "repo": "mhvnsnt/google-drive-repo",
+   "tag": "attire-pull-rest-automigrate-2026-10-14",
+   "asset": "attire-pull-rest-automigrate-2026-10-14.tar",
+   "source": "~/workspace/attire-pull (wreck, pablo, props, tarzanian, sensei + scripts)",
+   "uploaded": "2026-10-14T08:14:34Z",
+   "by": "disk-space-guardian 04:01 run"
+  },
+  "wg-ep01-dialogue-v6-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "Wizard Gang EP01 16x9 dialogue render v6 (superseded by v9); cold-stored by disk-space-guardian",
+   "restore_path": "trippedd-studio/production/WIZARD_GANG_EP01/wizard-gang-ep01-16x9-dialogue-v6.mp4",
+   "size": "205.0MB",
+   "bytes": 205003848,
+   "stored_at": "2026-10-14T08:38:13.876561+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1P0ffVwJOoHFahgxcXQUpnUhfubO9FWFn",
+    "1mWNcChPfnZJgXQpXEpiUgPMPGolMf_hB"
+   ]
+  },
+  "wg-ep01-dialogue-v7-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "Wizard Gang EP01 16x9 dialogue render v7 (superseded by v9); cold-stored by disk-space-guardian",
+   "restore_path": "trippedd-studio/production/WIZARD_GANG_EP01/wizard-gang-ep01-16x9-dialogue-v7.mp4",
+   "size": "205.0MB",
+   "bytes": 204997238,
+   "stored_at": "2026-10-14T08:45:59.417492+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1TDKgtbUDVnwfvCz38CpYptjm2Etzw8YB",
+    "1ffYF7tYYT1EN78WPCuUhkBAWbopkXM-P"
+   ]
+  },
+  "wg-ep01-dialogue-v8-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "Wizard Gang EP01 16x9 dialogue render v8 (superseded by v9); cold-stored by disk-space-guardian",
+   "restore_path": "trippedd-studio/production/WIZARD_GANG_EP01/wizard-gang-ep01-16x9-dialogue-v8.mp4",
+   "size": "205.0MB",
+   "bytes": 204996737,
+   "stored_at": "2026-10-14T08:49:06.857018+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1gcmAWv3SAtPqXV1kVUktpyWXdmamyBOC",
+    "1uafDqYn-7DkWmy624TStmfQAAzBrijBe"
+   ]
+  },
+  "card-audit-models-automigrate-2026-10-14": {
+   "type": "drive",
+   "description": "card-audit GLB model set (436M), untouched 7d+, automigrated by disk-guardian 2026-10-14",
+   "restore_path": "card-audit/models.tar",
+   "size": "456.5MB",
+   "bytes": 456458240,
+   "stored_at": "2026-10-14T11:33:39.266265+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1EA-Dbb68hUL6VRmwsYnuzFKeQp6EzgzE",
+    "14DC9gObNH93m_bqJ7IwoxjYQv8PaP2ab",
+    "1yOdsvh72pyXxANP8spjnJzc4W8AtC4Q9",
+    "1XdtmhLh_zsQqGzXYPgmwo_DxVh465NOm",
+    "1H3S-xnV6qHdlzzwUt6YzBCHXEAQ5HyET"
+   ]
+  },
+  "steal-like-artist-packs2-automigrate-2026-10-14": {
+   "bytes": 936069120,
+   "sha256": "7c36ea380a73dc1b3fcf5b086fe8643b8e4c74ddcc7f22f87847f2ed475af084",
+   "store": "github-release",
+   "repo": "mhvnsnt/google-drive-repo",
+   "tag": "steal-like-artist-packs2-automigrate-2026-10-14",
+   "asset": "gh_steal-like-artist-packs2.tar",
+   "source": "~/workspace/animation-techniques/steal-like-artist (source dir intact on disk)",
+   "uploaded": "2026-10-14T12:07:01Z",
+   "by": "disk-space-guardian 07:46 run (completed interrupted 06:46 automigrate)"
+  },
+  "ep01-raw-footage-2026-10-14": {
+   "type": "github-release",
+   "store": "github-release",
+   "repo": "mhvnsnt/google-drive-repo",
+   "tag": "ep01-raw-footage-2026-10-14",
+   "description": "EP01 raw phone footage (19 VID_20260906 clips); 17 size-verified on release, local copies deleted by disk-space-guardian 2026-10-14 07:46 run (2.07GB freed). 2 clips (110016345, 122211926) still local pending upload.",
+   "deleted_local": "2026-10-14T12:15:00Z",
+   "by": "disk-space-guardian 07:46 run"
+  },
+  "ep01-raw-110016345": {
+   "type": "github-release",
+   "description": "EP01 raw phone clip VID_20260906_110016345.mp4 (476M)",
+   "repo": "mhvnsnt/google-drive-repo",
+   "release_tag": "ep01-raw-footage-2026-10-14",
+   "asset_name": "VID_20260906_110016345.mp4",
+   "bytes": 476082487,
+   "stored_at": "2026-10-14T12:15:29Z",
+   "restore_path": "ep01-chronomap/VID_20260906_110016345.mp4",
+   "note": "Size-verified on release by guardian-retry-upload.sh; local copy deleted by disk-space-guardian 2026-10-14 08:16 EDT"
+  },
+  "ep01-raw-122211926": {
+   "type": "github-release",
+   "description": "EP01 raw phone clip VID_20260906_122211926.mp4 (984M)",
+   "repo": "mhvnsnt/google-drive-repo",
+   "release_tag": "ep01-raw-footage-2026-10-14",
+   "asset_name": "VID_20260906_122211926.mp4",
+   "bytes": 983855492,
+   "stored_at": "2026-10-14T12:22:09Z",
+   "restore_path": "ep01-chronomap/VID_20260906_122211926.mp4",
+   "note": "Size-verified on release by guardian-retry-upload.sh; local copy deleted by disk-space-guardian 2026-10-14 08:16 EDT"
+  },
+  "wg-video-intermediates-automigrate-2026-10-14": {
+   "bytes": 1314232320,
+   "sha256": "e633930902ffc74d8473c8582bd588e6c84977cd0ceb4968673d9a260b6a31f2",
+   "store": "github-release",
+   "repo": "mhvnsnt/google-drive-repo",
+   "tag": "wg-video-intermediates-automigrate-2026-10-14",
+   "asset": "gh_wg-video-intermediates.tar",
+   "source": "trippedd-studio production/WIZARD_GANG_EP01/video/ (source dir intact in repo)",
+   "uploaded": "2026-10-14T15:05:00Z",
+   "by": "disk-space-guardian 10:46 run (full-tar digest-verified on release; local staging deleted, 2.35G freed)"
+  },
+  "cn-gigaleak-work-automigrate-2026-10-14": {
+   "bytes": 10160814080,
+   "sha256": null,
+   "store": "drive-parts + github-release",
+   "repo": "mhvnsnt/google-drive-repo",
+   "tag": "cn-gigaleak-work-automigrate-2026-10-14",
+   "layout": [
+    "Google Drive: cn-gigaleak-work-automigrate-2026-10-14.part_000..049 (50 x 104857600 = 5242880000 bytes, offsets 0..5242879999) \u2014 drive_ids in .store-staging/.cn-gigaleak-work-automigrate-2026-10-14.progress.json",
+    "GitHub release: cn-gigaleak-work-automigrate-2026-10-14.gh1.bin (1639311360 bytes, sha256:e8c0d93abcc285b61b34dd4202df138073de042712dcc68de14619271711ebc8, offsets 5242880000..6882191359)",
+    "GitHub release: cn-gigaleak-work-automigrate-2026-10-14.gh2.bin (1639311360 bytes, sha256:413fed30bb4025024df39f159a0ab2c553a18dc3a784091c4e394cbc92698126, offsets 6882191360..8521502719)",
+    "GitHub release: gh3chunk_00..07 (7 x 209715200 + 171304960 = 1639311360 bytes, offsets 8521502720..10160814079; reassembled sha256:44b26bc317816788dcf841150231384e89e8a5e6d4dc28b62cd3db743b2e7811 verified)"
+   ],
+   "source": "CN gigaleak work dir (tar root arcname: work/), tared 2026-10-14; source dir cleaned by gigaleak lane \u2014 staging tar was sole local copy, now deleted after full verification",
+   "uploaded": "2026-10-14T15:03:33Z",
+   "by": "disk-space-guardian 10:46 run (all pieces digest-verified; local staging 12.7G deleted)"
+  },
+  "tekken6-psp.iso": {
+   "type": "github-release",
+   "repo": "mhvnsnt/western-heart",
+   "tag": "tekken6-psp-v1",
+   "asset": "tekken6-psp.iso",
+   "bytes": 855638016,
+   "sha256": "b5e52660a52caeca351e93c54bb4db0011325af0c1e3c67230bddde8f7cecf44",
+   "description": "Tekken 6 PSP ISO (source: Archive.org tekken-6_202309 'Tekken 6.iso'). Local copy deleted 2026-10-14 ~11:36 EDT during 11:35 guardian Drive store run WITHOUT manifest/verification record \u2014 recovered: verified byte-exact on GitHub release 2026-10-14 11:55 EDT. Checkpoint tekken6-psp-redownload.json (TeraBox hold) still open for TeraBox upload.",
+   "stored_at": "2026-10-13T07:02:35Z",
+   "noted_at": "2026-10-14T15:42:46.533938+00:00"
+  },
+  "guardian-drive-test-2026-10-14": {
+   "type": "drive",
+   "description": "../../../tmp/drive_test_small.txt",
+   "restore_path": "../../../tmp/drive_test_small.txt",
+   "size": "0.0MB",
+   "bytes": 22,
+   "stored_at": "2026-10-15T02:37:00.614201+00:00",
+   "drive_id": "14CM8FH1_KheFyfN5TOsAO99uS5w49SAl"
+  },
+  "ep01-loti-swap-2026-10-14": {
+   "type": "github-release",
+   "store": "github-release",
+   "repo": "mhvnsnt/drive-storage",
+   "release_tag": "ep01-loti-swap-2026-10-14",
+   "description": "EP01 LOTI-swap work dir: EP01-THE-WALK-v2.mp4 (2.44G, sha256 bd36d4d8...) + p2.mp4 (2.2G, sha256 c5891313...) as 500M parts, plus qc PNGs/loti-qc-txts.tar and digests. Byte-verified via download-back (.verify-loti, ALL_ROUNDS_DONE 2026-10-15 19:25 EDT). Local copies deleted by disk-space-guardian 2026-10-15 21:45 EDT run (8.8G freed). Restore: gh release download <tag> --repo mhvnsnt/drive-storage; cat v2.part_* > EP01-THE-WALK-v2.mp4; cat p2.part_* > p2.mp4.",
+   "bytes": 4645266409,
+   "stored_at": "2026-10-14T00:00:00Z",
+   "verified_at": "2026-10-15T23:25:45Z",
+   "deleted_local": "2026-10-16T01:45:00Z",
+   "by": "disk-space-guardian 21:31 run"
+  },
+  "codedummy-automigrate-2026-10-15": {
+   "type": "drive",
+   "description": "case-studies/CODEDUMMY",
+   "restore_path": "case-studies/CODEDUMMY.tar",
+   "size": "288.7MB",
+   "bytes": 288747520,
+   "stored_at": "2026-10-16T02:48:02.913787+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1Um5Sz1Phevk35qRcPB8BML0HDE2mHuRx",
+    "1pW0s_o_uaM-HFmpOCcTe9RFzOAeMhN1M",
+    "1Xyf4k_xm2DTOgBx8wXeOmoCcZEQgL7rc"
+   ]
+  },
+  "ashlane-portraits-automigrate-2026-10-15": {
+   "type": "drive",
+   "description": "AshLane character portrait webp assets + all-portraits.zip, untouched since 2026-10-06; auto-migrated by disk-space-guardian at 72% usage",
+   "restore_path": "ashlane-portraits.tar",
+   "size": "124.2MB",
+   "bytes": 124180480,
+   "stored_at": "2026-10-16T03:03:06.774816+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1SRpmEvCmYYouJCEgt3oYLOGQ1EHk03KA",
+    "1dwbARlxC-gxqx7hEHba6Ra6ljLy81TYS"
+   ]
+  },
+  "charfix-output-automigrate-2026-10-16": {
+   "type": "drive",
+   "description": "rigged GLB character models, charfix pipeline output, untouched since 2026-10-08",
+   "restore_path": "charfix/output.tar",
+   "size": "229.2MB",
+   "bytes": 229171200,
+   "stored_at": "2026-10-16T04:02:46.254791+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1XYg0NpKsXLDlrgaqVTwg2tbTW_tZ4cc8",
+    "1c5Zw2fxw29ihLEv0L8tAEVLyz3dIHKcE",
+    "1tY23QQrsAjMa9dOn4Sct4MJR0F2jqpub"
+   ]
+  },
+  "cain-skinning-automigrate-2026-10-16": {
+   "type": "drive",
+   "description": "cain-skinning",
+   "restore_path": "cain-skinning.tar",
+   "size": "140.3MB",
+   "bytes": 140308480,
+   "stored_at": "2026-10-16T04:17:43.172752+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1DyRnRn9V4WBEeuzVt9wN4gh9qrGgwYX9",
+    "1Q2K1YWtd0PfhZS2F67kWOeaDXw8b8rml"
+   ]
+  },
+  "ashlane-art-automigrate-2026-10-16": {
+   "type": "drive",
+   "description": "ashlane-art",
+   "restore_path": "ashlane-art.tar",
+   "size": "161.8MB",
+   "bytes": 161751040,
+   "stored_at": "2026-10-16T04:20:18.369722+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1YJNYedaXiW67FLX43T69YroP2uC5AAEY",
+    "1-8-73Mr2d99FxdJVYmpoEVagm2sk6b1o"
+   ]
+  },
+  "guardian-selftest-20261016": {
+   "type": "drive",
+   "description": "tools/fetch/README.md",
+   "restore_path": "tools/fetch/README.md",
+   "size": "0.0MB",
+   "bytes": 801,
+   "stored_at": "2026-10-16T06:24:05.663932+00:00",
+   "drive_id": "1OQVoiFtnNkeViTOEPtkQqTAV0RiHEBFE"
+  },
+  "okko-v1-hero-parts-20261016": {
+   "type": "github_release",
+   "description": "hero-parts-pull OKKO extraction archives (okko-out 6.0G + extracted 2.2G), 10 tars verified size-exact + 3x2MiB range hashes",
+   "repo": "mhvnsnt/cn-gigaleak-ok-ko",
+   "release_tag": "okko-v1",
+   "release_id": 415284023,
+   "assets": 10,
+   "bytes": 8727070720,
+   "local_deleted": "2026-10-16T17:50:00-05:00 by disk-space-guardian",
+   "stored_at": "2026-10-16T22:56:40.757557+00:00"
+  },
+  "tekken6-ps3-full-v1-20261016": {
+   "type": "github_release",
+   "description": "TEKKEN.psarc (PS3) 10 parts + manifest, sha256 c98fb02602d58564ef4e80d386310cb3c48634566990a5050ef20ef2a4afd340 verified vs local",
+   "repo": "mhvnsnt/western-heart",
+   "release_tag": "tekken6-ps3-full-v1",
+   "release_id": 415183956,
+   "draft": true,
+   "assets": 11,
+   "bytes": 4831493723,
+   "local_deleted": "2026-10-16T18:00:00-05:00 by disk-space-guardian (idle-queue #7)",
+   "stored_at": "2026-10-16T22:56:40.757557+00:00"
+  },
+  "bannon-repair-automigrate-2026-10-19": {
+   "type": "drive",
+   "description": "bannon-repair worktree (feat/char-customization-suite, .wt-bannon-soul2), snapshot 2026-10-19; LOCAL KEPT (uncommitted work)",
+   "restore_path": "bannon-repair.tar",
+   "size": "113.0MB",
+   "bytes": 112988160,
+   "stored_at": "2026-10-19T11:35:43.844329+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1NQRRa_O54N61kidSvOR1X_BtUAMktDIr",
+    "1YbXVTatfF70rQVlpiKkS_S3WEX-n6c1f"
+   ]
+  },
+  "forge3d-pipeline-automigrate-2026-10-19": {
+   "type": "drive",
+   "description": "forge3d-pipeline/track1-tripo-recovery (403M), lane done (forge3d-closeout, deliverables in Forge3D repo); automigrated by disk-space-guardian",
+   "restore_path": "forge3d-pipeline.tar",
+   "size": "421.7MB",
+   "bytes": 421734400,
+   "stored_at": "2026-10-19T11:37:03.693030+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1hSS9dvS5xiIkuW2GDftT58j_a81l0e0-",
+    "1wvBohNAOICgBtGdxa9bdj0tFJVjPZhpN",
+    "1gvoaT-5_xHHSvjJSZOuob_gwuyvNVP13",
+    "16zQ5PRVB5p9ZUlCiPPGmqVKg1pOgUIGx",
+    "1Jc8LnNxexXJIawaeehwsJcRmN-FzlvUY"
+   ]
+  },
+  "sfex-teardown-20261018": {
+   "type": "drive",
+   "description": "SFEX teardown working dir snapshot (scripts+work, 935M), 2026-10-18",
+   "restore_path": "sfex-teardown.tar",
+   "size": "980.3MB",
+   "bytes": 980305920,
+   "stored_at": "2026-10-19T11:47:19.293375+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1OwVrTBTbu2NIpMcD28QsNGYSBaJJjnFT",
+    "1VA0YXvBZS4CYLhkGgOypE196ElwUZDtX",
+    "1WvT8aTE2EA90yZF0pCqWRJrrc3guMbhi",
+    "1glGghmlmuwTVv0QWDjw8G7KuaoCR0R9F",
+    "1mygK5dWAujpstwFuEwiWEt78JVNQ4Y2K",
+    "1jTit5Gi7FLmP0kVU_8PMEmoF42o4IBvq",
+    "1xq1b__qIXZzktvQobvocqmKgistXFmEg",
+    "1npVib1jhMYr_aNQblGR_95yo2U3-7a4u",
+    "1LssqajosqClA6AQVUGA-2kRJWzbReE0p",
+    "1sDc_J6gPcW323bclc--XgRm_dxSZlS2V"
+   ]
+  },
+  "bannon-repair-archive-2026-10-19": {
+   "type": "drive",
+   "description": "bannon-repair",
+   "restore_path": "bannon-repair.tar",
+   "size": "113.0MB",
+   "bytes": 112988160,
+   "stored_at": "2026-10-19T15:18:07.841207+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1sNGGxX3O4nhhwFYuFLgFJTxb0vKB6mz9",
+    "1b90tGZ_YqV-avdhV2D83GO-yuyHLNXae"
+   ]
+  },
+  "BioMechania-bruiser-parts-archive-2026-10-19": {
+   "type": "drive",
+   "description": "BioMechania bruiser parts (126M), archived 2026-10-19 disk-guardian auto-migrate",
+   "restore_path": "BioMechania-bruiser-parts.tar",
+   "size": "131.6MB",
+   "bytes": 131624960,
+   "stored_at": "2026-10-19T15:18:57.066319+00:00",
+   "chunked": true,
+   "drive_ids": [
+    "1FI-GO8bi8dBe9_XhKSlAI244GGl-LK2D",
+    "1GBh7Y0j8M2g-mfdG_hTRF0MosYZvQZMA"
+   ]
+  },
+  "menu-research-dl-archive-2026-10-19": {
+   "type": "drive",
+   "description": "menu-research-dl",
+   "restore_path": "menu-research-dl.tar",
+   "size": "82.5MB",
+   "bytes": 82483200,
+   "stored_at": "2026-10-19T16:02:19.356968+00:00",
+   "drive_id": "1J-1g08HDSRzD_tauXcoR4JjBlhKypPvg"
+  },
+  "font-commercial-archive-2026-10-19": {
+   "type": "drive",
+   "description": "font-commercial",
+   "restore_path": "font-commercial.tar",
+   "size": "69.5MB",
+   "bytes": 69539840,
+   "stored_at": "2026-10-19T16:03:46.389689+00:00",
+   "drive_id": "1fbaYxgVrd4EB2ZxXTpkRsPgdZI1uP9PS"
+  },
+  "api-wiring-archive-2026-10-19": {
+   "type": "drive",
+   "description": "api-wiring staging: voices/ TTS samples, proof/ evidence, src/bin checkpoints; untouched since 2026-10-06; auto-migrated by disk-space-guardian",
+   "restore_path": "api-wiring.tar",
+   "size": "104.6MB",
+   "bytes": 104622080,
+   "stored_at": "2026-10-19T16:07:03.929031+00:00",
+   "drive_id": "1_vZt3opiQiwj9touzgJSRw8XqdcgkjjJ"
+  }
+ },
+ "github_repos": {
+  "mhvnsnt/AshLanev2": "game repo (active)",
+  "mhvnsnt/AshLane": "game repo",
+  "mhvnsnt/TRIPPEDD-Production-studios-": "network hub (active) \u2014 feat/loti-commercial-v3 branch pushed, duplicate checkout removed 2026-10-11",
+  "mhvnsnt/font-wizard": "font tools (active)",
+  "mhvnsnt/Bannon": "bannon video pipe"
+ },
+ "updated_at": "2026-10-19T16:08:55.081135+00:00",
+ "note": "fetch/store tools at ~/workspace/tools/fetch/. Run ./fetch --list to browse.",
+ "zero_disk_summary": {
+  "completed_at": "2026-10-11T18:48:00.390971+00:00",
+  "disk_before": "96%",
+  "disk_after": "67%",
+  "freed": "~29G",
+  "tools": "tools/fetch/ (fetch + store), backed up to font-wizard",
+  "guard": "disk-space-guardian auto-migrates at 70%"
+ }
+}
