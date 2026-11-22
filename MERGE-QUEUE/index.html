@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-22t2144z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-22t2214z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,28 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-22t2214z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-22T22:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-22t2144z-addendum-same-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-22T21:44Z (addendum, same run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-22t2144z-30-min-run" class="md-nav__link">
@@ -13269,6 +13291,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-22t2214z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-22T22:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-22t2144z-addendum-same-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-22T21:44Z (addendum, same run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-22t2144z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -17284,6 +17328,22 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-22t2214z-30-min-run">Overnight pipeline — 2026-11-22T22:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-22t2214z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE DELTA: 2 merged BY this run, both LANDED-VERIFIED on main. PA3D #10 (merge 75d2853 == tip; 1000.glb sha 06d35c7e + 1001.glb sha 9df02c11 match PR shas; +1523/-0, 135 GLB files). WH #1846 canon-sync (merge fd055e8 == tip; CANON-MASTER.md sha e142e868 == PR sha, 117,887 B). 3 lane landings verified BY THIS RUN: DG #93 (merge 369123b == tip; HANDOFF.md 0d570608 == PR sha, 9,629 B), CD #75 (merge 3b31785 == tip; HANDOFF.md c637b896 == PR sha, 4,621 B), wrestling-game #24 (merge 9dd4c61 == tip; HANDOFF.md 0e5a5e9b == PR sha, 6,912 B). 0 false claims reopened (verify-done 5/5 HOLD/LANDED, incl. WH #1845 tip unchanged 4011ca6).</li>
+<li>STEP 1: WH #1834/#1840 still UNSTABLE — only pr-status-board FAILURE, all else SUCCESS (incl. instruction-gate, material-gate, game-unit-tests) — held, merge-sweep lane active. WH #1842 still UNSTABLE — game-unit-tests + material-gate FAILURE (technician.glb, lane-owned). WH #1836/#1837 BLOCKED — instruction-gate FAILURE only (bodies lane-owned; #1837 deviation needs an owner approval #ref that does not exist). WH #1820/#1835 OWNER-HELD. CJ #429 re-checked: MERGEABLE CLEAN, cast SUCCESS — held per precedent (owner's call). PPWA #290/#293 checks unreadable via token (403 pattern) — cannot verify green; merge calls stay owner's. #294 UNSTABLE, #295 DIRTY carried. Bannon NEW #391/#392/#393/#394 (mergeable=true, UNSTABLE; checks unreadable via token — held per precedent). Bannon #386/#388 flipped UNSTABLE → DIRTY (conflicts; fold lane owns). #387/#389 still UNSTABLE, checks unreadable. PA3D #7 held; #8 SAFETY STOP. GRE #84/#96/#97 + DG #91 held per precedent. DG #9 DIRTY; #89 draft excluded. WG: wizard-gang-voice-pipe #5/#6 open (counted as WG 2); wizard-gang-storage #4/#5 ALSO open (2, not previously counted in queue total — noted, not double-counted). AO #952 force-push reset decision still owed. Excluded/owner-held untouched: WH #377, DG #89, Bannon #78 stay-vs-revert still owner's call.</li>
+<li>STEP 2 verify-done 5/5 HOLD/LANDED, 0 false claims (see delta).</li>
+<li>STEP 3 checkpoints: 1245 scanned, 0 unparseable, 0 watchdog-running, 0 stale-watchdog; checkpoint_audit.py still missing (tools/ archived). Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 CHANGED 49194aea → de6632aa (Kutz Chordz one-guy correction + Ren Truth mouth, owner 2026-11-22). Synced by WH #1846 (this run, LANDED-VERIFIED): both lines into CANON-MASTER.md CHORDZ + REN sections. Gate fix needed mid-run: first body failed instruction-gate ("method used differs, deviations none") — fixed by listing the #1835/#1834 deviation with real #refs; gate then SUCCESS. Per-fighter Chordz CANON.md carried by #1835 (not duplicated — same-file conflict); Ren has no per-fighter CANON.md on main. Last-sync md5 now de6632aa.</li>
+<li>STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 82% (123G/150G, 27G free) — under 85%. In-flight sacred work untouched: Blender finger-rig renders (cainelias, pond, debug_clearNormals) + DG CUT 001R 208th successor (frames 31–36) running this run.</li>
+<li>STEP 6/7/8: no new thread, no new pulls — live lanes own the work (merge-sweep lane; finger-rig lanes; DG CUT 001R 208th; PA3D Switch hunt Lane B; Bannon web-upgrade fold lane owns the 3e65f2ab fold into main).</li>
+<li>BLOCKED &gt;72h (carried): Bannon #78 stay-vs-revert decision owed; untracked siblings TRIPPEDD-Animation-Studio + Wrestli6game-3 decision owed; AO #952 force-push reset decision still owed; TorBox re-sign-in (key dead, 77 Gym Partner files unpulled); zrok/live-view (fresh token owed, stable share DOWN 502; localhost.run tunnel rotating as designed). NEW BLOCKED: Bannon #386/#388 now DIRTY (conflicts — fold lane owns); Bannon web-upgrade fold target 3e65f2ab still NOT on main (fold lane owns). Queue: WH 45 + Bannon 27 + PPWA 26 + CJ 1 + PA3D 2 + GRE 3 + DG 3 + PA2D 0 + WG 2 + CD 2 + AO 1 + wrestling 2 = 114 open (21:44Z had 111), blocked 16+ carried. NOTE: wizard-gang-storage #4/#5 (2 open) are NOT in the 114 — confirm scope next run.</li>
+<li>IDLE: last user msg 2026-11-22T17:07:56Z (~307 min idle at run start); no lock file; lock created, deleted at run end.</li>
+</ul>
+<h2 id="overnight-pipeline-2026-11-22t2144z-addendum-same-run">Overnight pipeline — 2026-11-22T21:44Z (addendum, same run)<a class="headerlink" href="#overnight-pipeline-2026-11-22t2144z-addendum-same-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC PR #1012 LANDED-VERIFIED: merged 352b9a7 == main tip; tree blobs byte-identical to local git hashes (MERGE-QUEUE.md 824b4c61, overnight-handoff.md a6d2e51c). Instruction-gate + guard green first try. Run tally: 0 game items merged by this run, 1 sync landed-verified this run; 5 lane landings verified on main (WH #1845, Bannon #357, PA3D #9, GRE #98, AO #1011).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-22t2144z-30-min-run">Overnight pipeline — 2026-11-22T21:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-22t2144z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE DELTA: 0 merged BY this run. 5 main landings verified BY THIS RUN (lanes): WH #1845 (merge 4011ca6 == tip; usfiv-ryu.json sha 6874a87 == PR sha, usfiv-adn.json c51090d == PR sha — 50 files); Bannon #357 (merge eb352e4 == tip; docs/HANDOFF_CURRENT_WORK.md sha ba46564 == PR sha, 102,263 B); PA3D #9 (merge 6da86f1 == tip; HANDOFF.md 7,575 B 30ed5b0); GRE #98 (merge 0d1aa59 == tip; HANDOFF.md 8,181 B 3a8e6c8); AO #1011 (merge c388cd8 == tip; 21:14Z run's sync record). 0 false claims reopened (verify-done 5/5 HOLD/LANDED). NEW OPEN-PR queue items: Bannon #386/#387/#388/#389 (all UNSTABLE, created 21:30–21:36Z). CORRECTION — Bannon #383/#384 are NOT on main: they merged into muse/web-upgrade (base muse/web-upgrade), and the 21:14Z run's "verified on web-upgrade" stands; web-upgrade tip moved 832157db -&gt; 3e65f2ab (#385, 21:10:53Z) and the branch is now DELETED — fold target is commit 3e65f2ab, retrievable by SHA, verified NOT in main's first 700 commits (range e3f2d4b→eb352e4 fully covered, e3f2d4b found in-window). Bannon main tip eb352e4 = #357 merge (16:45Z). Queue: WH 45 + Bannon 23 + PPWA 26 + CJ 1 + PA3D 3 + GRE 3 + DG 3 + PA2D 0 + WG 2 + CD 2 + AO 1 + wrestling 2 = 111 open (20:44Z had 110; 21:14Z had 107), blocked 16+ carried. NOTE: the 21:14Z run merged WH #1845 itself and synced only its run-record file (#1011); its queue entry never entered MERGE-QUEUE.md — its delta is folded into this entry.</li>
