@@ -1,7 +1,7 @@
 # HANDOFF — Agent Ops
 
-**Last updated: 2026-11-22 (America/New_York).**
-**Repo:** `mhvnsnt/agent-ops` (PUBLIC), default branch `main`.
+**Last updated: 2026-11-23 (America/New_York).**
+**Repo:** `mhvnsnt/agent-ops` (PUBLIC), default branch `main`, main tip 0e14200 (#1047, 2026-11-23).
 **Purpose of this file:** any agent that picks up work here reads this FIRST, then the linked docs. It states what we've done, where we're at, and what we're working toward — so the owner can say "go to this repo, pick up the work" and you just know. Update this file in the same PR whenever the state changes (add, don't delete).
 
 ## 1. What this repo is
@@ -13,14 +13,15 @@ Two files every lane should know: the teardown-idle queue (`TEARDOWN-IDLE-QUEUE.
 ## 2. Where we're at
 
 ### DONE
+- **Overnight pipeline queue sync — running every 30 min (2026-11-23).** Syncs #1040 (4314328) through #1047 (0e14200, main tip) landed Nov 23; each run verifies landings by lanes and re-counts the queue live. **Queue: 155 open across the fleet as of the 2026-11-23T15:44Z run** (WH 45 + Bannon 67 + PPWA 26 + CJ 1 + PA3D 2 + GRE 4 + DG 3 + PA2D 0 + WG 2 + CD 2 + AO 1 + wrestling 2; wizard-gang-storage #4/#5 not counted in the 155 by convention). Landings verified by the pipeline Nov 23 include CJ #442, AO #1046, DG #93, PPWA #301, WH #1849. `MERGE-QUEUE.md` is the live queue — this handoff points at it, it does not duplicate it.
 - **Overnight pipeline queue sync — running daily (2026-11-22).** Merge queue syncs #1003 (58d5a6f) and #1004 (0f3f374, merge-queue-sync-20261122T1144Z) landed today; the overnight pipeline keeps the cross-repo queue current.
 - **Releases:** `wave2-proofs-backup-20261030` (2026-10-31); `lane-archive-stepwave-work-20261120` (draft).
 
 ### IN PROGRESS
-- **Queue sync addendum (open PR #952).** Overnight pipeline 2026-11-20T05:44Z: queue sync addendum. Open since 2026-11-20, not merged.
+- **Queue sync addendum (open PR #952).** Overnight pipeline 2026-11-20T05:44Z: queue sync addendum. Open since 2026-11-20, not merged — **and now CONFLICTING** (head db76b09, verified 2026-11-23). Needs conflict resolution keeping both sides, not force.
 
 ### BLOCKED
-- **Nothing blocked.** The ops pipeline is running. The known cross-repo blockers live in their own repos' HANDOFF.md files (Bannon #309–#311 conflicts, physics-playground #246 e2e, pokemon-arena-3d GFPAK-OPEN safety stop) — this repo tracks them, it doesn't own them.
+- **PR #952 is CONFLICTING (see above).** The ops pipeline is otherwise running. The known cross-repo blockers live in their own repos' HANDOFF.md files (Bannon #424 sync-to-main, physics-playground #246 e2e, pokemon-arena-3d GFPAK-OPEN safety stop) — this repo tracks them, it doesn't own them. **Correction 2026-11-23:** Bannon #309–#311 are NOT conflicting anymore — all three MERGED 2026-11-22 (#309 9eaca42, #310 bb330b5, #311 2c88154).
 
 ## 3. What we're working toward
 
@@ -49,7 +50,7 @@ Two files every lane should know: the teardown-idle queue (`TEARDOWN-IDLE-QUEUE.
 | Checkpoints / watchdog / Proving Ground | Ops directories in repo (see README) |
 | Overnight pipeline / queue sync | Pipeline configs + sync commits (e.g. #1003 / #1004) |
 | Releases | `wave2-proofs-backup-20261030`, `lane-archive-stepwave-work-20261120` (draft) |
-| Open PRs | #952 Overnight pipeline 2026-11-20T05:44Z: queue sync addendum |
+| Open PRs | #952 Overnight pipeline 2026-11-20T05:44Z: queue sync addendum — OPEN and CONFLICTING (head db76b09); the only open PR in this repo as of 2026-11-23 |
 
 ## 6. Open decisions needing the owner
 
