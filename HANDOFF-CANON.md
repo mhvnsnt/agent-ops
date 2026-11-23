@@ -50,3 +50,7 @@ Some fighters genuinely have no recorded canon anywhere (owner's own list includ
 - Owner bios/canon go in **word-for-word** where he dictated them; mark owner-locked sections as such (see `roster/zen/CANON.md` for the format).
 - Anything the owner talked about gets harvested from the record — never declare material "missing" without checking all three locations above.
 - When you record new canon in a session, the session isn't done until it's committed to the repo (branch → PR → merge → verified on main, per HANDOFF-INDEX.md).
+
+## 2026-11-23 — Canon-sync landings (overnight pipeline)
+
+- `docs/canon-archive/CANON-MASTER.md` on western-heart main now carries the 2026-11-20 moveset-library-design ruling (WH #1848, merge 416e3e3) and the 2026-11-22 Deadlift Alley-Oop ruling (WH #1849, merge 72fead43, blob 1518e624) — both verified on main by the overnight pipeline. MEMORY.md last-sync md5 4f468fb4 (2026-11-23).
