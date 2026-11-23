@@ -1,3 +1,12 @@
+## Overnight pipeline — 2026-11-23T15:44Z (30-min run)
+- QUEUE DELTA: 0 merged BY this run. 1 main landing BY A LANE, verified this run: CJ #442 (docs/GUMBALL-BACKGROUNDS.md — Pull 1 catalogue, merge 8426807 == main tip, blob 457aebd 6,073 B, +112/-0). NEW Bannon open: #487 (C2 lateral crush fix, head 9da0f0b, UNSTABLE, fold lane owns). AO #1046 LANDED-VERIFIED this run (merge 19c67a0 == tip). 0 false claims (verify-done 5/5 HOLD). Queue: 155 open (was 154; +1 Bannon #487), 16 blocked >72h.
+- STEP 1: No new PRs since 15:14Z except Bannon #487. WH #1820/#1835 CLEAN but owner-held; #1834/#1840/#1842 UNSTABLE; #1836-#1839 BLOCKED; PPWA #294 owner's call; Bannon fold-lane PRs UNSTABLE (max #487); Bannon #424 CONFLICTING (fold lane owns); CJ #429 owner-held; PA3D #7/#8 do-not-merge; AO #952 UNKNOWN.
+- STEP 2: verify-done 5/5 HOLD (CJ #442, AO #1046, DG #93, PPWA #301, WH #1849 tip unchanged).
+- STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog. Nothing to resume.
+- STEP 4: MEMORY.md md5 49ba4e66 unchanged — canon-sync nothing new.
+- STEP 5: Disk 80% (31G free). No render processes running.
+- BLOCKED >72h (16 carried, unchanged) + carried: TorBox key dead; zrok stable share DOWN. Open owner decision: delete empty published i-am-weasel-torbox-v1 release?
+- IDLE: last user msg 2026-11-22T17:07:56Z (~1357 min idle).
 ## Overnight pipeline — 2026-11-23T15:14Z (30-min run)
 - QUEUE DELTA: 0 merged BY this run. 1 main landing BY A LANE, verified this run: Bannon #427 (mocap kit follow-up, merge 4f02c16 == tip, 3/3 blobs match, +199/-0). AO #1045 LANDED-VERIFIED this run (merge be86f6e == tip). 0 false claims (verify-done 5/5 HOLD). Queue: 154 open, 16 blocked >72h, unchanged.
 - STEP 1: No new PRs in any game repo since 14:44Z. WH #1820/#1835 CLEAN but owner-held; #1834/#1840/#1842 UNSTABLE; #1836-#1839 BLOCKED; PPWA #294 owner's call; Bannon fold-lane PRs UNSTABLE (max #486); Bannon #424 CONFLICTING (fold lane owns); CJ #429 owner-held; PA3D #7/#8 do-not-merge; AO #952 UNKNOWN.
