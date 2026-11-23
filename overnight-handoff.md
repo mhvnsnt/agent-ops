@@ -12349,3 +12349,9 @@ Overnight pipeline 2026-11-08T07:14Z (queue delta first: 0 merged BY this run; 3
 - Mergeability re-checked live: all headline heads unchanged. Only mergeable+not-held item was CD2 #12 — merged. Everything else CLEAN is owner-held (WH #1835, CJ #429, PPWA #290/#293) or do-not-merge (PA3D #7/#8).
 - wrestling-arcade + wizard-gang re-verified gone/404 this run. wizard-gang-storage still 2 open, not counted.
 - Checkpoints: 1245 scanned, 0 running, 0 stale-watchdog. Canon-sync: nothing new. Disk 80%. at-inflate2.py running — untouched. zrok stable share still down (carried, needs owner token).
+
+## Overnight pipeline — 2026-11-23T23:44Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 0 lane landings in-window; 0 false claims (verify-done 5/5 HOLD). Queue 82 open, unchanged (WH 33, Bannon 16, PPWA 25, CJ 1, PA3D 2, GRE 1, DG 2, WG 2 carried unverified, CD2 0).
+- Mergeability re-checked live: all headline heads unchanged. No green+mergeable non-held PRs. CLEAN items are all owner-held (WH #1835, CJ #429, PPWA #290/#293) or do-not-merge (PA3D #7/#8). Bannon #166 checks unreadable via token — carried.
+- wrestling-arcade + wizard-gang re-verified gone/404 this run. wizard-gang-storage #4/#5 still 2 open, not counted.
+- Checkpoints: 1245 scanned, 0 running, 0 stale-watchdog. Canon-sync: nothing new. Disk 80%. zrok stable share still down (carried, needs owner token).
