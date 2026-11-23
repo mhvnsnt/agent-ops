@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-23t1814z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-23t1844z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-23t1844z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-23T18:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-23t1814z-30-min-run" class="md-nav__link">
@@ -13731,6 +13742,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-23t1844z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-23T18:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-23t1814z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -18208,6 +18230,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-23t1844z-30-min-run">Overnight pipeline — 2026-11-23T18:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-23t1844z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: AO #1052 LANDED-VERIFIED this run (merge 64257b2 == main tip, parents [b750359, 53f66aa], the 18:14Z run's own sync PR; MERGE-QUEUE.md blob 3560ed2 + overnight-handoff.md blob f1f1b15 byte-identical to local git hashes). This run's own sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 0 main landings by lanes (all 12 main tips verified via git ls-remote, unchanged vs 18:14Z baseline except AO 64257b2 = #1052). 5 Bannon merges into muse/web-upgrade only, NOT main: #438 (18:18:52Z), #437 (18:22:53Z), #498 (18:23:29Z), #423 (18:32:42Z), #484 (18:45:04Z, merge a36f01a == web-upgrade tip). NEW open: Bannon #500 (Land moveset variants + run4, 465 files, created 18:19:49Z, base muse/wrestling-arcade, UNSTABLE — fold lane owns). 0 false claims reopened (verify-done 5/5 HOLD). Queue live recount: WH 33 + Bannon 46 + PPWA 25 + CJ 1 + PA3D 2 + GRE 1 + DG 2 + PA2D 0 + WG 2 + CD 0 + AO 0 + wrestling 0 = 112 open (was 116; -4 Bannon net, fully explained: +1 created (#500) -5 merged into web-upgrade). NOTE: wizard-gang-storage #4/#5 (2 open) still NOT in the 112 — counting convention unchanged. All counts re-verified live this run via open-PR lists.</li>
+<li>STEP 1: mergeability re-checked live: WH #1835 CLEAN head 4cc7135 but OWNER-HELD; #1820 DIRTY head 8eb1a30 owner-held; #1837 BLOCKED head 46b1279; #1851 UNSTABLE head 44e8f8a (Lane E T7 throw fix; lane owns). PPWA #290/#293 CLEAN (heads 182c5f0/e22ab37 — owner's call), #294 UNSTABLE (head dce6bf7). Bannon #424 DIRTY head a36f01a (== web-upgrade tip; fold lane owns); #500 UNSTABLE head fc0edb7 (base muse/wrestling-arcade; fold lane owns). CJ #429 UNKNOWN head c852419 — owner's call, NOT merged. PA3D #7/#8 CLEAN now (heads b9bde11/22ba5d1) but do-not-merge bodies — NOT merged. AO open = 0. Excluded/owner-held untouched: WH #377, DG #89 (draft), Bannon #382 (draft), CJ #156/#157/#167. No merges by this run — nothing green+mergeable and not held.</li>
+<li>STEP 2 verify-done (5/5 HOLD, 0 false claims): AO #1052 merge 64257b2 == tip, blobs 3560ed2/f1f1b15 MATCH local; Bannon #484 merge a36f01a == web-upgrade tip; WH tip 64b0246 unchanged (#1838 holds); DG tip 3ec5afc unchanged (#95 holds); CJ tip 8b06532 unchanged.</li>
+<li>STEP 3 checkpoints: 1245 scanned, 1 unparseable (NEW): checkpoints/cn-gigaleak-archiveorg-pull.json truncated mid-string at 18:35:48Z (765,952 B, unterminated string line 568) — live CN pull lane checkpoint, likely quota-wall casualty; lane must re-heartbeat/rewrite when writes recover; NOT deleted, NOT repaired by this run (writes blocked). 0 running, 0 stale-watchdog; checkpoint_audit.py still missing (tools/ archived). Nothing to resume.</li>
+<li>STEP 4 canon-sync: nothing new (MEMORY.md md5 49ba4e66 unchanged since the 15:14Z run).</li>
+<li>STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 83% (123G/150G, 27G free) BUT DISK QUOTA EXCEEDED on ALL /home/hatch writes — lock file, log append, new-file create all fail EDQUOT (first failed 18:44Z, still failing 18:51Z); quota wall BACK after clearing 17:15Z–18:35Z. Queue sync done via GitHub contents API in-memory instead (no local git writes). No ffmpeg/blender processes running at check.</li>
+<li>STEP 6/7/8: no new thread, no new pulls — Bannon fold lane actively merging (5 merges + 1 new PR in-window); stand down.</li>
+<li>BLOCKED &gt;72h (12, unchanged): Bannon #78 stay-vs-revert (note: #78 itself merged 2026-11-19; blocked item is the stay-vs-revert decision only); untracked siblings decision; WH #377; CJ #156/#157/#167; PA3D #8 safety-stop; DG #89; WH #1820/#1835; PPWA #290/#293/#294; CJ #429; Bannon #123/#237. Plus carried: TorBox key dead; zrok stable share DOWN. Open owner decision (still unanswered): delete the empty published i-am-weasel-torbox-v1 release?</li>
+<li>IDLE: last user msg 2026-11-23T16:03:20Z (161 min idle at run start); lock NOT created (EDQUOT — no lock file existed; nothing to delete at run end).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-23t1814z-30-min-run">Overnight pipeline — 2026-11-23T18:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-23t1814z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1051 LANDED-VERIFIED this run (merge b750359 == main tip, parents [6892692, fd4cc79], the 17:44Z run's own sync PR; MERGE-QUEUE.md blob a8e8146 + overnight-handoff.md blob 26cbbfd byte-identical to local git hashes). This run's own sync PR (number + merge recorded in next run's addendum).</li>
