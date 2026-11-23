@@ -54,3 +54,8 @@ Some fighters genuinely have no recorded canon anywhere (owner's own list includ
 ## 2026-11-23 — Canon-sync landings (overnight pipeline)
 
 - `docs/canon-archive/CANON-MASTER.md` on western-heart main now carries the 2026-11-20 moveset-library-design ruling (WH #1848, merge 416e3e3) and the 2026-11-22 Deadlift Alley-Oop ruling (WH #1849, merge 72fead43, blob 1518e624) — both verified on main by the overnight pipeline. MEMORY.md last-sync md5 4f468fb4 (2026-11-23).
+
+## 2026-11-23 addendum (Lane D handoff refresh — verified live)
+
+- **The canon archive IS on main now.** The "Archive push IN FLIGHT" line in the table above is superseded: `docs/canon-archive/CANON-MASTER.md` on western-heart main carries owner rulings through WH #1849 (Deadlift Alley-Oop, merge 72fead43, blob 1518e624) and #1848 (moveset-library design, 416e3e3), both verified on main by the overnight pipeline. The overnight pipeline's STEP 4 canon sync runs every 30 min; MEMORY.md last-sync md5 was 49ba4e66 at the 15:44Z run.
+- The "only 4 of 67 roster dirs have a canon file" count above is Oct-23 state and was NOT re-verified in this refresh — do not quote it as current. The bios-harvest state is whatever the repo shows today.
