@@ -15,7 +15,7 @@ anything billing-adjacent gets asked first.
 | Service | What we have | How to drive it | Best for |
 |---|---|---|---|
 | **Kaggle** (`marsfmmg`) | 30 GPU-hrs/week, T4×2, phone-verified 2026-10-10 | Browser session (Google OAuth as Mars FMMG). API token was NEVER saved — `~/workspace/cloud-wiring/kaggle/kaggle.json` is still a template | Blender Cycles renders, batch GPU jobs, image/video model runs |
-| **Google Colab** | Free T4 + v5e-1 TPU confirmed live 2026-10-10; availability not guaranteed, no paid units | Browser session as Mars FMMG | Backup GPU when Kaggle quota is out |
+| **Google Colab** | Free T4 + v5e-1 TPU confirmed live 2026-10-10; availability not guaranteed. Google AI Pro DOES include GPU via 200 Colab units/mo (MEMORY.md correction 2026-11-23 — earlier 'no paid units' note was wrong) | Browser session as Mars FMMG | Backup GPU when Kaggle quota is out |
 | **Lightning AI** | Credits on account (5 + disputed 30 — see billing incident 2026-10-10) | Browser session | Backup GPU |
 | **Hugging Face** | Verified account, ZeroGPU + Spaces | API / browser | Inference, Spaces demos |
 | **Pollinations.ai** | Tested working 2026-10-10, zero-signup text+image API | Direct HTTPS API | Quick text/image generation, no GPU needed |
