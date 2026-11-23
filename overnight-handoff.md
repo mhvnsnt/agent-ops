@@ -1,3 +1,12 @@
+## Overnight pipeline — 2026-11-23T19:44Z (30-min run)
+- QUEUE DELTA: 0 merged BY this run. 0 new main landings by lanes (all main tips unchanged vs 19:35Z). Bannon fold lane: 3 more merges into muse/wrestling-arcade only (#499/#500/#503) — main landing still via #424, DIRTY. 0 false claims (verify-done 5/5 HOLD: CJ #449/#450/#452 on main, AO #1054 == tip, Bannon #488 == tip). Queue: 94 open (was 97; -3 Bannon net, fully explained), 12 blocked >72h (unchanged).
+- STEP 1: No green+mergeable+not-held PRs. WH #1851 UNSTABLE (Lane E); #1835 CLEAN owner-held; PPWA #290 CLEAN owner's call; #294 UNSTABLE; CJ #429 CLEAN owner's call; Bannon #424 DIRTY (fold lane owns). AO open 0.
+- STEP 2: verify-done 5/5 HOLD (CJ #449/#450/#452, AO #1054, Bannon #488).
+- STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog. Nothing to resume.
+- STEP 4: MEMORY.md md5 49ba4e66 unchanged — canon-sync nothing new.
+- STEP 5: Disk 80% (31G free); quota wall quiet this run. Failure-alerts nothing new. No render processes touched (lane du scan only).
+- BLOCKED >72h (12): Bannon #78 stay-vs-revert; untracked siblings; WH #377; CJ #156/#157/#167; PA3D #8; DG #89; WH #1820/#1835; PPWA #290/#293/#294; CJ #429; Bannon #123/#237. Plus carried: TorBox key dead; zrok stable share DOWN. Open owner decision: delete empty published i-am-weasel-torbox-v1 release?
+- IDLE: last user msg 2026-11-23T16:03:20Z (221 min idle).
 ## Overnight pipeline — 2026-11-23T19:14Z (30-min run)
 - QUEUE DELTA: 1 merged BY this run: WH #1853 LANDED-VERIFIED (merge 38b0b4d == tip; instruction-gate body fix by this run — un-backticked non-diff refs; 28 files add-only, 3 blobs MATCH on main). 2 main landings by lanes verified: CJ #451 (Gumball school catalogue, merge 9eaedc9 == tip, blobs MATCH), AO #1053 (18:44Z run's sync PR, merge 90cce13 == tip, blobs MATCH). Bannon fold lane: 18 merges into muse/web-upgrade only (#458-#487 range; tip now 8b6a6d7 == #424 head, DIRTY), 3 new opens (#501/#502/#503) — main landing still via #424. 0 false claims (verify-done 5/5 HOLD). Queue: 97 open (was 112; -15 net, fully explained), 12 blocked >72h (unchanged).
 - STEP 1: No other green+mergeable+not-held PRs. WH #1835 CLEAN owner-held; #1820 DIRTY owner-held; #1837 BLOCKED; #1851 UNSTABLE (Lane E); PPWA #290/#293 CLEAN owner's call; #294 UNSTABLE; Bannon #424 DIRTY (fold lane owns, head moved 8b6a6d7); CJ #429 UNKNOWN owner's call; PA3D #7/#8 CLEAN but do-not-merge; AO open 0.
