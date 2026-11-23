@@ -1,3 +1,13 @@
+## Overnight pipeline — 2026-11-23T21:44Z (30-min run)
+- QUEUE DELTA: 0 merged BY this run. AO #1058 (21:14Z run's sync PR) verified landed (merge 4658ed3 == tip, blobs fbf238e/b6ed016 MATCH). 0 main landings by lanes. Bannon fold lane: 4 merges into muse/web-upgrade (#507/#509/#510/#511; #511 merge 10c2c74 == tip), 2 new opens (#510/#511, created+merged in-window) — main landing still via #424, DIRTY. 0 false claims (verify-done 5/5 HOLD). Queue: 88 open (was 90; WH +1 new #1854 BLOCKED, Bannon -3, fully explained), 12 blocked >72h (unchanged).
+- WRESTLING-ARCADE STILL GONE (re-verified 21:44Z, ls-remote 404). Fold capture unverified; fold lane owns.
+- STEP 1: No green+mergeable+not-held PRs. WH #1851 UNSTABLE (Lane E); #1835 CLEAN owner-held; #1820 DIRTY owner-held; #1837 BLOCKED; #1854 NEW BLOCKED (teardown round 2). PPWA #290/#293 CLEAN owner's call; #294 UNSTABLE. CJ #429 CLEAN owner's call. Bannon #424 DIRTY head now 10c2c74 (fold lane owns). PA3D #7/#8 CLEAN but do-not-merge. DG #9 DIRTY. GRE #99 UNSTABLE (owner decision). AO open 0.
+- STEP 2: verify-done 5/5 HOLD (AO #1058, Bannon #511/#507/#509 on web-upgrade, WH/CJ/DG tips unchanged).
+- STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog. Nothing to resume.
+- STEP 4: MEMORY.md md5 4cc08540 unchanged — canon-sync nothing new.
+- STEP 5: Disk 80% (31G free); quota wall quiet this run. Failure-alerts nothing new. No render processes touched.
+- BLOCKED >72h (12): Bannon #78 stay-vs-revert; untracked siblings; WH #377; CJ #156/#157/#167; PA3D #8; DG #89; WH #1820/#1835; PPWA #290/#293/#294; CJ #429; Bannon #123/#237. Plus carried: TorBox key dead; zrok stable share DOWN. Open owner decision: delete empty published i-am-weasel-torbox-v1 release?
+- IDLE: last user msg 2026-11-23T16:03:20Z (341 min idle).
 ## Overnight pipeline — 2026-11-23T21:14Z (30-min run)
 - QUEUE DELTA: 0 merged BY this run. AO #1057 (20:44Z run's sync PR) verified landed (merge 48fe893 == tip, blobs b3f6026/7b47aad MATCH). 0 main landings by lanes. Bannon fold lane: #489 merged into muse/web-upgrade (92c5982 == tip), 2 new opens (#508/#509) — main landing still via #424, DIRTY. 0 false claims (verify-done 5/5 HOLD). Queue: 90 open (was 89; +1 Bannon net, fully explained), 12 blocked >72h (unchanged).
 - WRESTLING-ARCADE STILL GONE (re-verified 21:14Z, ls-remote 404). Fold capture unverified; fold lane owns.
