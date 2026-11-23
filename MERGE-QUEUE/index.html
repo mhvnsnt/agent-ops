@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-23t0044z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-23t0114z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,28 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-23t0114z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-23T01:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-23t0044z-addendum-same-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-23T00:44Z (addendum, same run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-23t0044z-30-min-run" class="md-nav__link">
@@ -13335,6 +13357,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-23t0114z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-23T01:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-23t0044z-addendum-same-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-23T00:44Z (addendum, same run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-23t0044z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -17416,6 +17460,22 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-23t0114z-30-min-run">Overnight pipeline — 2026-11-23T01:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-23t0114z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE DELTA: 0 merged BY this run. 3 main landings verified BY THIS RUN (lanes): Bannon #404 (merge fae70b2; 3/3 sampled blobs match on main), #405 (merge 2448073; 3/3 match), #410 (merge 4954e7f == tip; 3/3 match). 5 web-upgrade landings verified BY THIS RUN (payloads on muse/web-upgrade, NOT main; fold still owed by fold lane): Bannon #388 (merge 2bd33d7), #408 (65c1041), #409 (81593c0 == web-upgrade tip), #411 (4f601c7), #412 (55f4f1c); web-upgrade tip 236f5ff -&gt; 81593c0 (ahead 50). 0 false claims reopened (verify-done 5/5 HOLD). Queue: WH 45 + Bannon 22 + PPWA 26 + CJ 1 + PA3D 2 + GRE 3 + DG 3 + PA2D 0 + WG 2 + CD 2 + AO 1 + wrestling 2 = 109 open (was 108; +1 net Bannon: 3 main merges + 5 web-upgrade merges off, 9 new PRs on — #404-#412), blocked 16+ carried. NOTE: wizard-gang-storage #4/#5 (2 open) are NOT in the 109 — counting convention unchanged.</li>
+<li>STEP 1: re-checked held candidates — WH #1820/#1835 still CLEAN but OWNER-HELD (heads 8eb1a30/4cc7135); #1834/#1840/#1842 still UNSTABLE (same heads eb76ce6/65e5877/7a13d99); #1836/#1837 still BLOCKED (instruction-gate, same heads a00ecae/46b1279). CJ #429 still MERGEABLE CLEAN head c852419 — held per precedent, owner's call. Bannon #388 merged to web-upgrade (see delta); #198 still UNKNOWN (head 5a4c89f); #399 still UNSTABLE base muse/wrestling-arcade (head c469f4e, fold lane owns); #123/#237 still UNKNOWN (heads 4787fcf/797609b; carried as conflicting per prior runs); NEW #406/#407 UNKNOWN base muse/web-upgrade (heads 3c35eb8/b0d2724, fold lane owns); #409 merged to web-upgrade (see delta). PA3D #7/#8 still CLEAN (heads b9bde11/22ba5d1) — NOT merged: bodies carry "DO NOT MERGE by this lane"; #8 is the GFPAK-OPEN SAFETY STOP record + owner question still open. GRE #84/#96/#97 UNSTABLE held (same heads caeddb0/2102b48/dd622f6); DG #9 DIRTY (head 399eb3d), #91 UNSTABLE held; AO #952 mergeable UNKNOWN, force-push reset decision still owed. WGAME #22/#23 UNSTABLE, CD #71/#74 BLOCKED unchanged. PPWA #290/#293 still CLEAN status success (merge calls stay owner's), #294 UNSTABLE, #295 DIRTY, #299/#300 UNKNOWN. Excluded/owner-held untouched: WH #377, DG #89 (draft), Bannon #78, Bannon #382 (draft), CJ #156/#157/#167.</li>
+<li>STEP 2 verify-done (5/5 HOLD, 0 false claims): Bannon #404/#405/#410 3/3 blobs each on main (see delta); WH #1846 CANON-MASTER.md sha e142e868, 117,887 B on main; CJ #430 merge 92bfa420 == tip.</li>
+<li>STEP 3 checkpoints: 1245 scanned, 0 unparseable, 0 watchdog-running, 0 stale-watchdog; checkpoint_audit.py still missing (tools/ archived). Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 CHANGED 5c889d00 -&gt; 3d5c0476 (SAM2 v9 failed own-eyes verification, v10 running with stop rule — workstream status, no new game canon). No commit owed. Last-sync md5 now 3d5c0476.</li>
+<li>STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 83% (123G/150G, 27G free) — under 85%. In-flight sacred work untouched: Blender finger-rig render (charger, pid 24967), disk-guardian du scan, cn-gigaleak release upload per prior runs (lane-owned). No quota-wall errors this run.</li>
+<li>STEP 6/7/8: no new thread, no new pulls — Bannon lanes actively merging right now (8 merges in this window); stand down, no duplicate work.</li>
+<li>BLOCKED &gt;72h (16 carried, unchanged): Bannon #78 stay-vs-revert decision owed; untracked siblings TRIPPEDD-Animation-Studio + Wrestli6game-3 decision owed; AO #952 force-push reset decision still owed; TorBox re-sign-in (key dead, 77 Gym Partner files unpulled); zrok/live-view (stable share DOWN; localhost.run tunnel rotating as designed). Plus carried items: row-48 stamp, non-upright-start, live-opponent proof videos, Jun bank rows, bank-row import adjudication, OWNER RULING #8, quantum-jam decisions, live Worker deploy pending. NEW: Bannon web-upgrade fold target now 81593c0 (#409, includes #388/#408/#411/#412) — still NOT on main, fold lane owns; Bannon main tip fc6d6b5 -&gt; 4954e7f (#404/#405/#410). PA3D #8 owner question (GFPAK-OPEN: go ahead anyway, or leave stopped?) still open.</li>
+<li>IDLE: last user msg 2026-11-22T17:07:56Z (~487 min idle at run start); no lock file; lock created, deleted at run end.</li>
+</ul>
+<h2 id="overnight-pipeline-2026-11-23t0044z-addendum-same-run">Overnight pipeline — 2026-11-23T00:44Z (addendum, same run)<a class="headerlink" href="#overnight-pipeline-2026-11-23t0044z-addendum-same-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC PR #1018 LANDED-VERIFIED: merged 511083ca == main tip; tree blobs byte-identical to local git hashes (MERGE-QUEUE.md 966ca231, overnight-handoff.md ea6b2c44); compare d23b307...511083ca +25/−0, 2 files. Instruction-gate + guard green first try (head 02e7c5f). Run tally: 0 game items merged by this run, 1 sync landed-verified this run; 1 main landing verified this run (Bannon #402, fc6d6b5) + 3 web-upgrade landings verified (Bannon #386/#401/#403).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-23t0044z-30-min-run">Overnight pipeline — 2026-11-23T00:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-23t0044z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE DELTA: 0 merged BY this run. 1 main landing verified BY THIS RUN: Bannon #402 (merge fc6d6b5 == main tip, merged 00:41:32Z; "Batch 1: land decoded 2K26 content — docs, bricks, registries, arenas/shows, modes"; compare eb352e4...fc6d6b5 = 300 files, +9,610/−0, 0 removed; 4/4 payload blobs verified on main). 3 web-upgrade landings verified BY THIS RUN (payloads on muse/web-upgrade, NOT main; fold still owed by fold lane): Bannon #386 (merge 67fd4db, 00:27:36Z), #401 (merge c1fe9df, 00:39:51Z, 21 files +11,362/−0; 2/3 sampled files NOT on main — tools/bricks-2k26/append_bricks_FIXED.py + tools/show-mode-wiring/BANNON_SHOW_MODE_WIRING.html both 404 on main), #403 (merge 236f5ff == web-upgrade tip, 00:52:49Z; docs-consolidation). Bannon #400 (merge 76388e5, 23:15:22Z) also web-upgrade-only (diverged vs main, behind 352) — location correction, no false claim (never claimed on main). Bannon main tip eb352e4 → fc6d6b5; all other 11 main tips UNCHANGED (WH fd055e8, PPWA 6da2bf7, CJ 92bfa42, DG 369123b, GRE 0d1aa59, PA3D 75d2853, PA2D 5ee8cbd, wrestling 9dd4c61, CD 3b31785, AO d23b307, WG voice-pipe 8030efc). 0 false claims reopened (verify-done 5/5 HOLD). Queue: WH 45 + Bannon 21 + PPWA 26 + CJ 1 + PA3D 2 + GRE 3 + DG 3 + PA2D 0 + WG 2 + CD 2 + AO 1 + wrestling 2 = 108 open (was 109; −1 = Bannon #386 merged off the open-PR count into web-upgrade), blocked 16+ carried. NOTE: wizard-gang-storage #4/#5 (2 open) are NOT in the 108 — counting convention unchanged.</li>
