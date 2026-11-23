@@ -1,3 +1,12 @@
+## Overnight pipeline — 2026-11-23T18:14Z (30-min run)
+- QUEUE DELTA: 0 merged BY this run. 0 main landings by lanes in-window. AO #1051 LANDED-VERIFIED (merge b750359 == tip; the 17:44Z run's sync PR; blobs match). Bannon fold lane: 6 merges into muse/web-upgrade only (#472/#476/#449/#416/#494/#445; #445 merge 2cbef36 == web-upgrade tip), 3 new opens (#497/#498/#499) — main landing still via #424, DIRTY. 0 false claims (verify-done 5/5 HOLD). Queue: 116 open (was 119; -3 Bannon net, fully explained), 12 blocked >72h (unchanged).
+- STEP 1: No green+mergeable+not-held PRs. WH #1835 CLEAN owner-held; #1820 DIRTY owner-held; #1837 BLOCKED; #1851 UNSTABLE (Lane E); PPWA #290/#293 CLEAN owner's call; #294 UNSTABLE; Bannon #424 DIRTY (fold lane owns, head moved 2cbef36); CJ #429 CLEAN owner's call; PA3D #7/#8 CLEAN but do-not-merge; AO open 0.
+- STEP 2: verify-done 5/5 HOLD (AO #1051, Bannon #445 on web-upgrade, WH #1838 tip unchanged, DG #95 tip unchanged, CJ tip unchanged).
+- STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog. Nothing to resume.
+- STEP 4: MEMORY.md md5 49ba4e66 unchanged — canon-sync nothing new.
+- STEP 5: Disk 83% (27G free). Failure-alerts nothing new. No render processes touched (lane du scan only).
+- BLOCKED >72h (12): Bannon #78 stay-vs-revert; untracked siblings; WH #377; CJ #156/#157/#167; PA3D #8; DG #89; WH #1820/#1835; PPWA #290/#293/#294; CJ #429; Bannon #123/#237. Plus carried: TorBox key dead; zrok stable share DOWN. Open owner decision: delete empty published i-am-weasel-torbox-v1 release?
+- IDLE: last user msg 2026-11-23T16:03:20Z (131 min idle).
 ## Overnight pipeline — 2026-11-23T17:44Z (30-min run)
 - QUEUE DELTA: 0 merged BY this run. 2 main landings by lanes verified: DG #95 (janae 3d v1.5/v1.6, merge 3ec5afc == tip, blob MATCH), CJ 3 direct pushes (BROTHERMAN rig binaries, 8b06532 == tip, blob MATCH). AO #1050 already counted by the 17:15Z run. Bannon merges to muse/web-upgrade only (#470/#471; #471 merge d335e2d == web-upgrade tip and #424 head) + #496 to muse/wrestling-arcade — main landing still via #424, DIRTY. NEW opens: Bannon #493/#494/#495 (fold lane). 0 false claims (verify-done 5/5 HOLD, blobs match). Queue: 119 open (was 117; +2 Bannon net, fully explained), 12 blocked >72h (unchanged).
 - STEP 1: No green+mergeable+not-held PRs. WH #1835 CLEAN owner-held; #1820 DIRTY owner-held; #1851 UNSTABLE (Lane E); PPWA #290/#293 CLEAN owner's call; #294 UNSTABLE; Bannon #424 DIRTY (fold lane owns, head moved d335e2d); CJ #429 CLEAN owner's call; PA3D #7/#8 CLEAN but do-not-merge; AO open 0.
