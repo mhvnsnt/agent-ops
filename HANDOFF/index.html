@@ -9525,8 +9525,8 @@
 
 
 <h1 id="handoff-agent-ops">HANDOFF — Agent Ops<a class="headerlink" href="#handoff-agent-ops" title="Permanent link">&para;</a></h1>
-<p><strong>Last updated: 2026-11-22 (America/New_York).</strong>
-<strong>Repo:</strong> <code>mhvnsnt/agent-ops</code> (PUBLIC), default branch <code>main</code>.
+<p><strong>Last updated: 2026-11-23 (America/New_York).</strong>
+<strong>Repo:</strong> <code>mhvnsnt/agent-ops</code> (PUBLIC), default branch <code>main</code>, main tip 0e14200 (#1047, 2026-11-23).
 <strong>Purpose of this file:</strong> any agent that picks up work here reads this FIRST, then the linked docs. It states what we've done, where we're at, and what we're working toward — so the owner can say "go to this repo, pick up the work" and you just know. Update this file in the same PR whenever the state changes (add, don't delete).</p>
 <h2 id="1-what-this-repo-is">1. What this repo is<a class="headerlink" href="#1-what-this-repo-is" title="Permanent link">&para;</a></h2>
 <p>Agent operations: checkpoints, watchdog, Proving Ground, the overnight pipeline, and the merge-queue sync. This is the ops home — the machinery that keeps all the other repos' lanes moving, synced, and verified. If a lane's checkpoint, queue state, or cleanup log lives anywhere, it lives here (or points here).</p>
@@ -9534,16 +9534,17 @@
 <h2 id="2-where-were-at">2. Where we're at<a class="headerlink" href="#2-where-were-at" title="Permanent link">&para;</a></h2>
 <h3 id="done">DONE<a class="headerlink" href="#done" title="Permanent link">&para;</a></h3>
 <ul>
+<li><strong>Overnight pipeline queue sync — running every 30 min (2026-11-23).</strong> Syncs #1040 (4314328) through #1047 (0e14200, main tip) landed Nov 23; each run verifies landings by lanes and re-counts the queue live. <strong>Queue: 155 open across the fleet as of the 2026-11-23T15:44Z run</strong> (WH 45 + Bannon 67 + PPWA 26 + CJ 1 + PA3D 2 + GRE 4 + DG 3 + PA2D 0 + WG 2 + CD 2 + AO 1 + wrestling 2; wizard-gang-storage #4/#5 not counted in the 155 by convention). Landings verified by the pipeline Nov 23 include CJ #442, AO #1046, DG #93, PPWA #301, WH #1849. <code>MERGE-QUEUE.md</code> is the live queue — this handoff points at it, it does not duplicate it.</li>
 <li><strong>Overnight pipeline queue sync — running daily (2026-11-22).</strong> Merge queue syncs #1003 (58d5a6f) and #1004 (0f3f374, merge-queue-sync-20261122T1144Z) landed today; the overnight pipeline keeps the cross-repo queue current.</li>
 <li><strong>Releases:</strong> <code>wave2-proofs-backup-20261030</code> (2026-10-31); <code>lane-archive-stepwave-work-20261120</code> (draft).</li>
 </ul>
 <h3 id="in-progress">IN PROGRESS<a class="headerlink" href="#in-progress" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Queue sync addendum (open PR #952).</strong> Overnight pipeline 2026-11-20T05:44Z: queue sync addendum. Open since 2026-11-20, not merged.</li>
+<li><strong>Queue sync addendum (open PR #952).</strong> Overnight pipeline 2026-11-20T05:44Z: queue sync addendum. Open since 2026-11-20, not merged — <strong>and now CONFLICTING</strong> (head db76b09, verified 2026-11-23). Needs conflict resolution keeping both sides, not force.</li>
 </ul>
 <h3 id="blocked">BLOCKED<a class="headerlink" href="#blocked" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Nothing blocked.</strong> The ops pipeline is running. The known cross-repo blockers live in their own repos' HANDOFF.md files (Bannon #309–#311 conflicts, physics-playground #246 e2e, pokemon-arena-3d GFPAK-OPEN safety stop) — this repo tracks them, it doesn't own them.</li>
+<li><strong>PR #952 is CONFLICTING (see above).</strong> The ops pipeline is otherwise running. The known cross-repo blockers live in their own repos' HANDOFF.md files (Bannon #424 sync-to-main, physics-playground #246 e2e, pokemon-arena-3d GFPAK-OPEN safety stop) — this repo tracks them, it doesn't own them. <strong>Correction 2026-11-23:</strong> Bannon #309–#311 are NOT conflicting anymore — all three MERGED 2026-11-22 (#309 9eaca42, #310 bb330b5, #311 2c88154).</li>
 </ul>
 <h2 id="3-what-were-working-toward">3. What we're working toward<a class="headerlink" href="#3-what-were-working-toward" title="Permanent link">&para;</a></h2>
 <p><strong>The goal:</strong> every lane checkpointed, every queue synced, every deletion logged, nothing ever lost. The ops repo is the save system for the whole operation: a lane that dies leaves a resume point, not a mystery.</p>
@@ -9591,7 +9592,7 @@
 </tr>
 <tr>
 <td>Open PRs</td>
-<td>#952 Overnight pipeline 2026-11-20T05:44Z: queue sync addendum</td>
+<td>#952 Overnight pipeline 2026-11-20T05:44Z: queue sync addendum — OPEN and CONFLICTING (head db76b09); the only open PR in this repo as of 2026-11-23</td>
 </tr>
 </tbody>
 </table>
