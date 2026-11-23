@@ -81,3 +81,10 @@ Held/problem PRs: #497 (CONFLICTING — merging as-is REGRESSES the #508 feet fi
 
 - **WH #1849 (merged 2026-11-23, merge 72fead43, verified on main by the overnight pipeline):** Canon-sync — DEADLIFT ALLEY-OOP owner ruling 2026-11-22 recorded in `docs/canon-archive/CANON-MASTER.md` (new `### 2026-11-22 owner ruling — Deadlift Alley-Oop` section, line 1939). Payload verified: blob 1518e624, compare +4/-0, 0 deletions. All 4 required checks green (instruction-gate, guard, clobber-guard, deletion-guard).
 - Prior canon-sync on the same path: **WH #1848 (merge 416e3e3):** 2026-11-20 moveset-library-design owner ruling in CANON-MASTER.md, verified on main.
+
+## 2026-11-23 — Landing wave #1822–#1849 (Lane D handoff refresh — verified live)
+
+- **Moveset/teardown wave:** #1822 Kevin full canon moveset (8d42064) · #1823 canon-moveset inventory (02e047f) · #1824 T7 receiver fix logged as permanent (d3f8642) · #1825 canon fix: Zen's Tripo body, Gyou's conditional Paul, RIN Steve-body retire (75efc0d) · #1826 SCVI teardown (4a39733) · #1827 VF5 teardown (f7eed39) · #1832 SFIV + SFxT wired (6afccc4) · **#1845 USFIV v6: AE parse 244/244, 44 fighters, 3,853 moves (4011ca6)**.
+- **Canon syncs:** #1829 move-editor + roster-clarification (eb6be66) · #1846 Kutz Chordz + Ren Truth mouth (fd055e8) · #1847 Ren is not Demonio; Tou green model stays (bad2b83) · #1848 moveset-library design (416e3e3) · #1849 Deadlift Alley-Oop (72fead43, main tip).
+- **Fixes:** #1828 github.io shell unblocked (925dd75) · #1841 pr-status-board fix (985cd6e) · #1843 Batch2 Dragunov slice (5d26b8b) · #1844 Scimitar pose-safe re-encode (b2a52a7) · **#911 select-card audit MERGED (6f1726a)**.
+- **Queue: 45 open** as of 2026-11-23. Held: #1820/#1835 CLEAN but owner-held; #1834/#1840/#1842 UNSTABLE, held; #1836–#1839 BLOCKED, held (MERGE-QUEUE.md 2026-11-23T15:44Z run).

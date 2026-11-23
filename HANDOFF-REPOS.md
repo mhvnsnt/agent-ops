@@ -60,3 +60,29 @@ State verified 2026-10-23. Sources: `MERGE-QUEUE.md`, `CROSS-REPO-STRANDED-AUDIT
 ## Owner-held / do-not-merge (fleet-wide, binding)
 
 Bannon #78 (excluded draft) · western-heart #377 (evidence) · cape-jones #156/#157 (do-not-merge) · cape-jones #167 + sitting takes (owner decision pending) · ConcreteDragon #62 (owner decision: land or close) · Bannon #22 + GRE's 7 orphan branches (owner deletion/close calls only).
+
+## 2026-11-23 addendum (Lane D handoff refresh — verified live, supersedes the Oct-23 counts above)
+
+Open-PR counts below were re-counted live 2026-11-23; the Oct-23 numbers above are stale — do not use them. (Queue convention: wizard-gang-storage #4/#5 are NOT counted in the fleet total.)
+
+| Repo | Open now | What changed since Oct 23 |
+|---|---|---|
+| western-heart | 45 | Landing waves through #1849 (main tip 72fead43); #911 merged; held: #1820/#1835 clean-but-owner-held, #1834/#1840/#1842 unstable, #1836–#1839 blocked |
+| Bannon | 65 | Main tip 4f02c16 (#427 mocap kit follow-up). **#309/#310/#311 MERGED 2026-11-22 — the "conflicting" line above is WRONG.** Fold lane active on `muse/web-upgrade` (tip e094389): #447/#451/#454/#455/#456/#457 landed there; #424 sync-to-main OPEN, head e094389, mergeability UNKNOWN. #78 MERGED 2026-11-19 despite exclusion — stays-or-revert is the owner's call |
+| physics-playground-pwa | 26 | #296/#298/#299/#300/#301 landed (tip 6da2bf7); R7 V3 PARTIAL landed (#287); #294/#290/#293 owner-held |
+| cape-jones | 2 | #430–#444 landed (tip f0ece39); open #429 (owner-held) + #445 (Brotherman rig docs) |
+| pokemon-arena-3d | 2 | #10 Switch 132 models landed (tip 75d2853); open #7/#8 do-not-merge |
+| game-reverse-engineering | 4 | #98 (this repo's HANDOFF.md) merged; open #84/#96/#97 + #99 God Within Urban Reign Redux v0.5 manifest (owner-held) |
+| dream-girl | 3 | #93 (HANDOFF.md) merged (tip 369123b); open #9/#89/#91; CUT 001R v3 staged on branch `tools/production-line-v4` (tip 7bd5ac7), NOT merged |
+| pokemon-arena-2d | 0 | QUEUE CLEAR — #1/#2/#4/#5/#7 all merged 2026-11-22 |
+| wizard-gang-voice-pipe | 2 | #7 + #8 (HANDOFF.md) merged (tip 8030efc); open #5/#6 |
+| wizard-gang-storage | 2 | #7 (HANDOFF.md) merged (tip 2881630); open #4/#5 |
+| ConcreteDragon | 2 | #75 (HANDOFF.md) merged (tip 3b31785); open #71/#74 |
+| ConcreteDragon2 | 1 | #13 (HANDOFF.md) merged (tip ce6023a); open #12 |
+| wrestling-game | 2 | #24 (HANDOFF.md) merged (tip 9dd4c61); open #22/#23 |
+| money-machine-hq | 4 | #38 (HANDOFF.md) merged; Nov 23 daily sweep 73b4d53; open #12/#29/#36/#37 |
+| code-doctor | 1 | #6 (HANDOFF.md) merged (tip c090f7c); open #5 |
+| Moneymachine-private | 1 | #4 (HANDOFF.md) merged (tip dce4c78); open #3 |
+| agent-ops | 1 | Syncs #1040–#1047 landed (tip 0e14200); open #952, CONFLICTING |
+
+Fleet total on the queue convention: **154 open** (155 at the 15:44Z pipeline run; Bannon −2, CJ +1 after it).
