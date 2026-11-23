@@ -1,3 +1,12 @@
+## Overnight pipeline — 2026-11-23T14:44Z (30-min run)
+- QUEUE DELTA: 1 merged BY this run: CJ #441 (docs/DOCUMENTS-CATALOGUE.md — Documents.zip full catalogue, 79,772 entries; merge c617838 == main tip, parents [87ff842, cf742d2], blob 912aa585f 9,051 B, +194/-0). 0 lane landings. 0 false claims (verify-done 5/5 HOLD). Queue: 154 open post-merge (CJ 1, #429 remains), 16 blocked >72h.
+- STEP 1: CJ #441 was CLEAN + MERGEABLE with green checks → merged per Step 1. All other key PRs held for recorded reasons (WH #1834/#1840/#1842 UNSTABLE, #1836-#1839 BLOCKED; PPWA #294 owner's call; Bannon fold-lane PRs UNSTABLE; Bannon #424 CONFLICTING; CJ #429 + WH #1820/#1835 owner-held; PA3D #7/#8 do-not-merge; AO #952 UNKNOWN).
+- STEP 2: verify-done 5/5 HOLD (WH #1849, AO #1044, CJ #440, DG production-line-v4 7bd5ac7, GRE #99 29e394f). Correction: Bannon web-upgrade branch is `muse/web-upgrade`, tip cc12d56 unchanged.
+- STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog. Nothing to resume.
+- STEP 4: MEMORY.md md5 49ba4e66 unchanged — canon-sync nothing new.
+- STEP 5: Disk 80% (31G free). No render processes running.
+- BLOCKED >72h (16 carried, unchanged) + carried: TorBox key dead; zrok stable share DOWN. Open owner decision: delete empty published i-am-weasel-torbox-v1 release?
+- IDLE: last user msg 2026-11-22T17:07:56Z (~1296 min idle).
 ## Overnight pipeline — 2026-11-23T14:14Z (30-min run)
 - QUEUE DELTA: 0 merged BY this run. 1 main landing BY A LANE, verified this run: CJ #440 (CN-INVENTORY.md, merge 87ff842 == main tip, parents [c096f27, 0d9ed19], docs/CN-INVENTORY.md e5a87d53 26,381 B, +168/-0). NEW Bannon open: #486 (Universal rig W4A, head 8f6c115, UNSTABLE, fold lane owns). AO #1043 LANDED-VERIFIED this run (merge b3945ba == main tip, parents [f00c860, f92b7aa], blobs byte-identical). 0 false claims reopened (verify-done 5/5 HOLD). Queue: 154 open (was 153; +1 Bannon #486), 16 blocked >72h.
 - STEP 1: Bannon fold lane still active (#486 new 14:01Z). All other key PRs unchanged and held for their recorded reasons (WH #1834/#1840/#1842 UNSTABLE; PPWA #294 owner's call; Bannon #424 DIRTY; CJ #429 + WH #1820/#1835 owner-held; PA3D #7/#8 do-not-merge bodies; AO #952 DIRTY).
