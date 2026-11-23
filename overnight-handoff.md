@@ -12343,3 +12343,9 @@ Overnight pipeline 2026-11-08T07:14Z (queue delta first: 0 merged BY this run; 3
 - STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 81% (120G/150G, 30G free). No in-flight sacred work touched (other lane's curl release download + du scan running at check).
 - STEP 6/7/8: no new thread, no new pulls — live lanes own the work; stand down.
 - BLOCKED >72h (16 carried, unchanged): WH conflicting 12 + #713 + #377 owner-held; Bannon #78 owner-held; GRE #84 checks-unreadable; WH #1714/#1702/#1701/#1678 gate-fail (Megami-face deviation, owner decision pending); CD #71 gate-fail. Plus carried items: row-48 stamp, non-upright-start, live-opponent proof videos, Jun bank rows, bank-row import adjudication, TorBox key dead, OWNER RULING #8, quantum-jam decisions, live Worker deploy pending.
+
+## Overnight pipeline — 2026-11-23T23:21Z (30-min run)
+- QUEUE DELTA: 1 merged BY this run — CD2 #12 (ConcreteDragon2 docs: pre-made parts first rule; merge f536ac0 == tip, blob verified). 3 lane landings verified on main: Bannon #516 (PS-8, merge 3efde87), Bannon #517 (PS-7 beard, merge 07cb40b), AO #1061 (22:44Z sync PR, merge 3f9ba96). 0 false claims (verify-done 5/5 HOLD + #517). Queue 82 open, unchanged (WH 33, Bannon 16, PPWA 25, CJ 1, PA3D 2, GRE 1, DG 2, WG 2 carried unverified, CD2 0 newly tracked).
+- Mergeability re-checked live: all headline heads unchanged. Only mergeable+not-held item was CD2 #12 — merged. Everything else CLEAN is owner-held (WH #1835, CJ #429, PPWA #290/#293) or do-not-merge (PA3D #7/#8).
+- wrestling-arcade + wizard-gang re-verified gone/404 this run. wizard-gang-storage still 2 open, not counted.
+- Checkpoints: 1245 scanned, 0 running, 0 stale-watchdog. Canon-sync: nothing new. Disk 80%. at-inflate2.py running — untouched. zrok stable share still down (carried, needs owner token).
