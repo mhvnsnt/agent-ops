@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-23t1544z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-23t1644z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-23t1644z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-23T16:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-23t1544z-30-min-run" class="md-nav__link">
@@ -13687,6 +13698,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-23t1644z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-23T16:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-23t1544z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -18120,6 +18142,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-23t1644z-30-min-run">Overnight pipeline — 2026-11-23T16:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-23t1644z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: this run's own sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 9 main landings BY LANES, verified this run: WH #1834 (Ren mouth, merge 4cefd4a), #1836 (Kevin default model, merge 615591f), #1839 (finger-rig C3, merge ce89189), #1840 (Rin portrait, merge 648b3e4), #1850 (Lane D handoff, merge f30fec7), #1852 (Lane D handoff follow-up, merge befde07 == main tip); CD #71 (Xbox gamepad+shell, merge a2b86bf), #74 (Itch docs, merge 51c3cd5 == main tip); Bannon #488 (Lane D handoff, merge 71d9545 == main tip). Payload blobs verified on main 5/5 (WH HANDOFF.md 59fc5eb, rin.png 7c3f458, model.glb 597a952, CD itch-draft.md e13f900, Bannon HANDOFF.md eda963b — all match merge-commit blobs byte-for-byte, sizes match). Ancestry verified for all 6 WH merges + both CD merges + AO #1047 (behind_by=0 vs tips). 14 more Bannon PRs merged into muse/web-upgrade (NOT main): #432, #440, #442, #443, #450, #452, #453, #456, #457, #460, #461, #477, #479, #481 — payload staged on web-upgrade, lands on main only via #424 (still CONFLICTING). NEW opens: WH #1851 (Lane E T7 throw fix, created 16:32:57Z, MERGEABLE but UNSTABLE — game-unit-tests fail; also owner-call topic, NOT merged), Bannon #489 (C1 morph crush fix, 16:25:59Z, base web-upgrade), #490 (gallery sources round 2, 16:38:00Z, base web-upgrade). Lane D handoff-refresh sweep landed on main in ALL repos ~16:32Z (WH #1850/#1852, Bannon #488, AO #1048, CJ #446, PPWA #303, DG #94, GRE #100, PA3D #11). 0 false claims (verify-done 5/5 HOLD). Queue live recount: WH 37 + Bannon 53 + PPWA 26 + CJ 1 + PA3D 2 + GRE 4 + DG 3 + PA2D 0 + WG 2 + CD 0 + AO 1 + wrestling 2 = 131 open (was 155; -24). COUNT DRIFT NOTE: explained events account for -20 (WH 6 main merges +1 new, Bannon 15 closed +2 new, CD 2 merged); remaining -4 (3 WH + 1 Bannon) vs the 15:44Z baseline is unexplained — no closed-unmerged PRs found in-window; live open-PR lists are ground truth now, prior baseline likely overstated.</li>
+<li>STEP 1: mergeability: WH #1851 MERGEABLE/UNSTABLE (game-unit-tests fail) — not merged. #1820/#1835 CLEAN but owner-held; #1842 UNSTABLE; #1837/#1838 BLOCKED; #377 excluded. PPWA #294 owner's call; Bannon #487 mergeable UNKNOWN (fold lane owns); Bannon #424 CONFLICTING (fold lane owns, web-upgrade tip moved to 46db04d 16:45:23Z — active push, do not touch); CJ #429 owner-held; PA3D #7/#8 do-not-merge; AO #952 UNKNOWN. Excluded/owner-held untouched: WH #377, DG #89 (draft), Bannon #382 (draft), CJ #156/#157/#167.</li>
+<li>STEP 2 verify-done (5/5 HOLD, 0 false claims): WH #1852, #1840, #1834, CD #74, Bannon #488 — blobs match (see above).</li>
+<li>STEP 3 checkpoints: 1245 scanned, 0 unparseable, 0 running, 0 stale-watchdog; checkpoint_audit.py still missing (tools/ archived). Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 49ba4e66 UNCHANGED since last sync — nothing new. Last-sync md5 stays 49ba4e66.</li>
+<li>STEP 5: failure-alerts.log nothing new (last 2026-10-20). Disk 83% (27G free on volume) BUT DISK QUOTA EXCEEDED on writes — <code>git clone</code> and <code>git fetch</code> both fail (cannot create work tree / cannot open FETCH_HEAD); local agent-ops clone (7.9G, branch lindy-privacy-policy-20261107, dirty tree with lane-owned modifications) cannot fetch; origin/main ref there is stale at 19c67a0. Queue sync done via GitHub contents API in-memory instead (no local git writes). Local MERGE-QUEUE.md/overnight-handoff.md NOT rewritten in place (quota rewrite risk on 4.75MB file); they are byte-identical to remote main pre-sync — next run restores from main. No ffmpeg/blender processes running at check (one lane du scan only, untouched).</li>
+<li>STEP 6/7/8: stand down — Bannon fold lane active (web-upgrade push 16:45:23Z, new PRs #489/#490 this window); Lane D sweep just landed; no new pulls.</li>
+<li>BLOCKED &gt;72h (14, was 16 — CD #71/#74 RESOLVED this run, both merged to main and verified): Bannon #78 stay-vs-revert (note: #78 itself merged 2026-11-19; blocked item is the stay-vs-revert decision only); untracked siblings decision; AO #952 force-push reset; WH #377; CJ #156/#157/#167; PA3D #8 safety-stop; DG #89; WH #1820/#1835; PPWA #290/#293/#294; CJ #429; Bannon #123/#237; GRE #84/#96/#97; WGAME #22/#23. Plus carried: TorBox key dead; zrok stable share DOWN. Open owner decision (still unanswered): delete the empty published i-am-weasel-torbox-v1 release?</li>
+<li>IDLE: last user msg 2026-11-23T16:03:20Z (41 min idle at run start); lock created, deleted at run end.</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-23t1544z-30-min-run">Overnight pipeline — 2026-11-23T15:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-23t1544z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1046 LANDED-VERIFIED this run (merge 19c67a0 == main tip, parents [be86f6e, 359f73e], the 15:14Z run's own sync PR). This run's own sync PR (number + merge recorded in next run's addendum).</li>
