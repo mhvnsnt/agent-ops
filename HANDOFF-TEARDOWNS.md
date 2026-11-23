@@ -62,3 +62,10 @@ Fresh, active program (2026-10-23), all four phase PRs MERGEABLE/CI-blocked, non
 **Rule for future runs:** on repos where a lane is force-pushing main, LANDED-VERIFIED requires re-checking the ref AFTER the lane's push window closes.
 **Concrete owner question:** does the GRE teardown lane get to keep force-pushing main, or must it merge via PRs/API like everyone else?
 **Also lane-owned in-flight:** GRE #55 "Yakuza Kiwami b1 (battle, boot, motion PARs)" — OPEN, mergeable=false/dirty, +828,709/-0, 19 commits. Same lane; stand down.
+
+## 2026-11-23 addendum (Lane D handoff refresh — verified live)
+
+- **game-reverse-engineering #98 MERGED 2026-11-22 (0d1aa59):** this repo's HANDOFF.md itself — the repo pickup doc is on main. **#99 OPEN (owner-held):** "God Within: Urban Reign Redux v0.5 pull manifest (verified 2026-11-23)", branch `godwithin/urban-reign-redux`. Open set is now #84 / #96 / #97 / #99. GRE #84 (ARCHIVE-ORG-FIRST law in `docs/RULES.md`) is STILL open, not merged — the Nov-06 addendum's "opened, queued" still holds.
+- **western-heart teardown wave landed Nov 22–23:** #1826 SCVI complete moveset teardown (4a39733) · #1827 VF5 complete teardown (f7eed39) · #1832 SFIV (25) + SFxT (55) movesets wired (6afccc4) · **#1845 USFIV v6: AE parse 244/244 — 44 fighters, 3,853 moves (4011ca6)**. The moveset audit + scramble fix (102 of 645 files scrambled, 94 Tekken 7) is still the open work; no scramble fixes have landed yet.
+- **Bannon #309 / #310 / #311 MERGED 2026-11-22** (#309 9eaca42, #310 bb330b5, #311 2c88154) — any "conflicting / cannot merge as-is" note about them in the fleet docs is now WRONG.
+- The Oct-23 per-game sections above are otherwise unchanged in this refresh — verify a teardown's state against its repo/checkpoint before acting; the repo wins any disagreement.
