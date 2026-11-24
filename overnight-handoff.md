@@ -12406,3 +12406,16 @@ Overnight pipeline 2026-11-08T07:14Z (queue delta first: 0 merged BY this run; 3
 - IDLE: last user msg 2026-11-23T16:03:20Z (641 min idle at run start).
 - SYNC PR: #1069 gate body fixed 02:56Z (gate-format sections added); re-run of failed gate job 403 via token, fixed by synchronize push.
 - SYNC PR #1069 gate round 2: self-check tick + method-match fix applied; synchronize push to re-run gate.
+
+## Overnight pipeline — 2026-11-24T03:14Z (30-min run)
+- QUEUE DELTA: 0 merged BY this run. AO #1069 (02:44Z run's sync PR) verified landed (merge e1366fc == tip, blobs a77e989/06565e4 MATCH). 2 main landings by lanes verified: Bannon #521 inner-delt flip (merge d220d8a == tip; payload blobs 4a9e372/c4cef35 on main) and CJ #457 true-sep boards 02-07 (merge b006eef ancestor of tip a2f4065). Bannon #515 merged into muse/web-upgrade (f2d424f == branch tip, non-main). 0 false claims (verify-done 9/9 HOLD). Queue: 81 open (was 83; Bannon -2, fully explained).
+- CJ MAIN MOVED BY DIRECT PUSHES: tip 06a0c05 -> a2f4065 via 14 commits in-window (13 direct layer-PNG pushes + #457 merge). #455/#456 blobs hold.
+- WRESTLING-ARCADE STILL GONE (re-verified 03:14Z, ls-remote 404). WIZARD-GANG still 404. WG 2 carried unverified.
+- STEP 1: No green+mergeable+not-held PRs. WH #1851 UNSTABLE (Lane E); #1835 CLEAN owner-held; #1820 DIRTY owner-held; #1837 BLOCKED. PPWA #290/#293 CLEAN owner's call; #294 UNSTABLE. CJ #429 UNKNOWN owner's call. Bannon #166 UNKNOWN (checks unreadable). PA3D #7/#8 CLEAN but do-not-merge. DG #9 DIRTY. GRE #99 UNSTABLE (owner decision). AO open 0.
+- STEP 2: verify-done 9/9 HOLD (AO #1069, Bannon #519/#521, CJ #455/#456/#457, WH #1854, DG #95, CD2 #12).
+- STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog. Nothing to resume.
+- STEP 4: MEMORY.md md5 d5ca4ce8 unchanged — canon-sync nothing new.
+- STEP 5: Disk 80% (30G free). Failure-alerts nothing new. at-inflate2.py (pid 5512) untouched; lane du scan in progress, untouched. Full-clone TLS fail, shallow retry OK.
+- STEP 6/7/8: no new thread, no new pulls.
+- BLOCKED >72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge.
+- IDLE: last user msg 2026-11-23T16:03:20Z (671 min idle at run start).
