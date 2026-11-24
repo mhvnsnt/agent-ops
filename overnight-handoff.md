@@ -1,3 +1,13 @@
+## Overnight pipeline — 2026-11-24T12:14Z (30-min run)
+- QUEUE DELTA: 0 merged BY this run. 0 lane landings in-window (all tips unchanged except AO 6ec2d62 = #1087 sync merge). 0 new opens, 0 closures. AO #1087 (11:44Z run's sync PR) verified landed (merge 6ec2d62 == tip, blobs 09765520/91158798 MATCH in branch commit be04379 tree, merge commit tree, and local hashes). 0 false claims (verify-done 8/8 HOLD). Queue: 79 open (unchanged).
+- STEP 1: No green+mergeable+not-held PRs. WH #1851 UNSTABLE (Lane E); #1835 CLEAN owner-held; #1820 DIRTY owner-held; #1837 BLOCKED. PPWA #290/#293 CLEAN owner's call; #294 UNSTABLE. CJ #429 CLEAN owner's call. PA3D #7/#8 CLEAN but do-not-merge. DG #9 DIRTY. GRE #99 UNSTABLE (owner decision). Bannon #560-#563 + #555/#553/#545/#539/#535/#529/#528 UNSTABLE (fold lane owns); #166 DIRTY (token issue). WG-storage #4/#5 UNSTABLE (re-verified, heads unchanged). AO open 0.
+- STEP 2: verify-done 8/8 HOLD (AO #1087, WH #1857/#1855, Bannon #557/#554/#549, CJ #457, DG #95).
+- STEP 3: 1245 checkpoints, 0 stale-watchdog. disk-cleanup.json running + fresh (11:56:43Z) - untouched. Nothing to resume.
+- STEP 4: MEMORY.md md5 07d2d8f1 unchanged - canon-sync nothing new.
+- STEP 5: Disk 80% (32G free). Failure-alerts nothing new. No render processes touched. zrok stable share still down (carried, needs owner token).
+- STEP 6/7/8: no new thread, no new pulls.
+- BLOCKED >72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge.
+- IDLE: last user msg 2026-11-23T16:03:20Z (1211 min idle at run start).
 ## Overnight pipeline — 2026-11-24T11:44Z (30-min run)
 - QUEUE DELTA: 0 merged BY this run. 1 lane landing verified: WH #1857 (preview-clips round 3 PC-1, merge a1f53dc == tip, 2 payload blobs on main). AO #1086 (11:14Z run's sync PR) verified landed (merge 0a06d1a == tip, blobs ca28630/8a86191 MATCH). 0 new opens. 0 false claims (verify-done 8/8 HOLD). Queue: 79 open (was 80; WH 34 -> 33, fully explained).
 - STEP 1: No green+mergeable+not-held PRs. WH #1851 UNSTABLE (Lane E); #1835 CLEAN owner-held; #1820 DIRTY owner-held; #1837 BLOCKED. PPWA #290/#293 CLEAN owner's call; #294 UNSTABLE. CJ #429 CLEAN owner's call. PA3D #7/#8 CLEAN but do-not-merge. DG #9 DIRTY. GRE #99 UNSTABLE (owner decision). Bannon #560-#563 + #555/#553/#545/#539/#535/#529/#528 UNSTABLE (fold lane owns); #166 DIRTY (token issue). WG-storage #4/#5 still open, heads unchanged (re-verified). AO open 0.
