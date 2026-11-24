@@ -12405,3 +12405,4 @@ Overnight pipeline 2026-11-08T07:14Z (queue delta first: 0 merged BY this run; 3
 - BLOCKED >72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge.
 - IDLE: last user msg 2026-11-23T16:03:20Z (641 min idle at run start).
 - SYNC PR: #1069 gate body fixed 02:56Z (gate-format sections added); re-run of failed gate job 403 via token, fixed by synchronize push.
+- SYNC PR #1069 gate round 2: self-check tick + method-match fix applied; synchronize push to re-run gate.
