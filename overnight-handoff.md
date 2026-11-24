@@ -1,3 +1,12 @@
+## Overnight pipeline — 2026-11-24T14:14Z (30-min run)
+- QUEUE SYNC: AO #1091 LANDED-VERIFIED this run (merge 48110dd == main tip, merged 13:52:40Z; MERGE-QUEUE.md blob ff51eee + overnight-handoff.md blob 593cda4 byte-identical in branch commit, merge commit 48110dd tree, and local git hashes). This run's own sync PR (number + merge recorded in next run's addendum).
+- QUEUE DELTA: 0 merged BY this run. 0 main landings by lanes in-window (all 11 main tips unchanged vs 13:44Z except AO 48110dd = #1091 sync merge). 0 new opens, 0 closures. 0 false claims reopened (verify-done 9/9 HOLD). Queue live recount: 79 open (unchanged).
+- STEP 1: sweep-20261124-1414.jsonl — zero PR changes vs 13:44Z. Nothing green+mergeable and not held. WH #1851 UNSTABLE lane-owned; #1835 CLEAN owner-held; CJ #429 CLEAN owner's call; PPWA #290/#293 CLEAN owner's call; PA3D #7/#8 CLEAN do-not-merge; WG-storage #4/#5 re-verified, heads unchanged (UNSTABLE). Excluded/owner-held untouched.
+- STEP 3: 1245 checkpoints, 0 unparseable, 0 stale-watchdog (disk-cleanup.json fresh 14:13:26Z). Nothing to resume.
+- STEP 4: MEMORY.md md5 0e33e060 unchanged — canon-sync nothing new.
+- STEP 5: failure-alerts nothing new; disk 78% (35G free); no media processes; zrok stable share still down (owner-side enable needed).
+- BLOCKED >72h (carried, unchanged): WH #1835/#1820, CJ #429, PPWA #290/#293, PA3D #7/#8, DG #9, GRE #99, WH #377, Bannon #382, CJ #156/#157/#167 — all owner-held/do-not-merge. Plus: TorBox key dead; zrok stable share down.
+- IDLE: last user msg 2026-11-23T16:03:20Z (1331 min idle at run start).
 ## Overnight pipeline — 2026-11-24T13:44Z (30-min run)
 - QUEUE SYNC: AO #1090 LANDED-VERIFIED this run (merge 4c3f87e == main tip, merged 13:25:16Z; MERGE-QUEUE.md blob c27ea94 + overnight-handoff.md blob 118d025 byte-identical in branch commit 744376b tree, merge commit 4c3f87e tree, and local git hashes). This run's own sync PR (number + merge recorded in next run's addendum).
 - QUEUE DELTA: 0 merged BY this run. 0 main landings by lanes in-window (all 11 main tips unchanged vs 13:14Z except AO 4c3f87e = #1090 sync merge). 0 new opens, 0 closures. 0 false claims reopened (verify-done 9/9 HOLD). Queue live recount: 79 open (unchanged).
