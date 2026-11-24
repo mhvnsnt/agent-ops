@@ -1,3 +1,12 @@
+## Overnight pipeline — 2026-11-24T21:44Z (30-min run)
+- QUEUE SYNC: AO #1106 LANDED-VERIFIED this run (merge 28d55cb == tip, blobs 8bdf6aa6/e2af8503 MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
+- QUEUE DELTA: 0 merged BY this run. 1 main landing in-window (AO #1106 sync). 2 new opens (Bannon #571 Land converted 2K26 AnimIT clips — Lane A, 7,458 clips round 3, base muse/web-upgrade, head 60a2942; Bannon #572 Sweep F-S2 weld seam lines on 17 models b02, base main, head 4cc2150; both UNSTABLE, no checks, fold lane owns), 0 closures. 0 false claims (verify-done 10/10 HOLD). Queue 88 open (was 86; +2 Bannon).
+- STEP 1: overnight-sweep.py stdout this run — only Bannon #571/#572 new + AO tip moved. Nothing green+mergeable and not held. WH #1851 UNSTABLE lane-owned; #1835 CLEAN owner-held; CJ #429 CLEAN owner's call; PPWA #290/#293 CLEAN owner's call; PA3D #7/#8 CLEAN do-not-merge; WG-storage #4/#5 UNSTABLE, tip unchanged. Excluded/owner-held untouched.
+- STEP 3: 1245 checkpoints, 0 unparseable, 0 stale-watchdog (disk-cleanup.json fresh 21:41:54Z). Nothing to resume.
+- STEP 4: MEMORY.md md5 8fe806ff unchanged — canon-sync nothing new.
+- STEP 5: failure-alerts nothing new; disk 78% (35G free); no media processes; zrok stable share still down (carried); wrestling-arcade still 404 (re-verified via ls-remote this run).
+- BLOCKED >72h (carried, unchanged): WH #1835/#1820, CJ #429, PPWA #290/#293, PA3D #7/#8, DG #9, GRE #99, WH #377, Bannon #382, CJ #156/#157/#167 — all owner-held/do-not-merge. Plus: TorBox key dead; zrok stable share down.
+- IDLE: last user msg 2026-11-23T16:03:20Z (~1781 min idle at run start).
 ## Overnight pipeline — 2026-11-24T21:14Z (30-min run)
 - QUEUE SYNC: AO #1105 LANDED-VERIFIED this run (merge f8919f3 == tip, blobs cee75148/7912fed4 MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
 - QUEUE DELTA: 0 merged BY this run. 1 main landing in-window (AO #1105 sync). 0 new opens, 0 closures. 0 false claims (verify-done 10/10 HOLD). Queue 86 open (unchanged).
