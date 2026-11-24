@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-24t0721z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-24t0800z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-24t0800z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-24T08:00Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-24t0721z-30-min-run" class="md-nav__link">
@@ -14017,6 +14028,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-24t0800z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-24T08:00Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-24t0721z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -18780,6 +18802,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-24t0800z-30-min-run">Overnight pipeline — 2026-11-24T08:00Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-24t0800z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: AO #1078 LANDED-VERIFIED this run (merge dafe501 == main tip, merged 07:23:38Z; MERGE-QUEUE.md blob 93f900f + overnight-handoff.md blob 7bf0764 byte-identical in branch commit 93b237b tree and merge commit dafe501 tree). This run's own sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 0 main landings by lanes in-window (all 11 main tips unchanged vs 07:21Z except AO dafe501: WH a130bdf, Bannon 435ef50, CJ cb644d2, PPWA e56e317, DG 3ec5afc, PA3D 0fdf407, CD2 f536ac0, GRE f40f0c0, wrestling c9ff241, CD 51c3cd5). 3 NEW Bannon opens: #553 (port #538 round-3 images to web-upgrade, head 8abeec5) + #554 (Poke-through P10, head 773fa03) + #555 (port #541 round-3 spaces to web-upgrade, head 22cfeb0), all UNSTABLE, lane owns. 1 NEW WH open: #1856 (canon sync No-game-dumps + T7 mocap fix, this run; head 5e3e0e7, UNSTABLE — menu-touch-e2e + speed-quality still running at last check, 0 failures; instruction-gate + all guards SUCCESS; next run merges when clean). 0 false claims reopened (verify-done 5/5 HOLD). Queue live recount: WH 34 + Bannon 16 + PPWA 25 + CJ 1 + PA3D 2 + GRE 1 + DG 2 + PA2D 0 + WG 2 (carried, UNVERIFIED) + CD 0 + CD2 0 + AO 0 + wrestling 0 = 83 open (was 79; +4 net, fully explained: Bannon +3 new #553/#554/#555, WH +1 new #1856).</li>
+<li>STEP 1: mergeability re-checked live via overnight-sweep.py (sweep-20261124-0744.jsonl, local-only). WH #1856 NEW UNSTABLE head 5e3e0e7 (+8/-0 add-only, instruction-gate SUCCESS) — NOT merged this run, 2 checks still running; next run merges when clean. All other headline heads UNCHANGED from 07:21Z: WH #1851 UNSTABLE head 44e8f8a (Lane E T7 throw fix; lane owns); #1835 CLEAN head 4cc7135 but OWNER-HELD; #1820 DIRTY head 8eb1a30 owner-held; #1837 BLOCKED head 46b1279; #1818/#1817 BLOCKED heads 56c358a/be0803c. PPWA #290/#293 CLEAN (heads 182c5f0/e22ab37 — owner's call), #294 UNSTABLE head dce6bf7. CJ #429 CLEAN head c852419 (owner's call, NOT merged). PA3D #7/#8 CLEAN (heads b9bde11/22ba5d1) but do-not-merge bodies — NOT merged. DG #9 DIRTY head 399eb3d. GRE #99 UNSTABLE head 29e394f (owner decision). Bannon #553/#554/#555 NEW UNSTABLE heads 8abeec5/773fa03/22cfeb0 (lane owns); #546/#547/#550/#551/#552/#545/#542 all UNSTABLE, heads unchanged (a6a329b/5e0fadd/e82191f/ee47a89/61d58a4/82adc79/95c8163); #539/#535/#529/#528 UNSTABLE heads 9b0ac4c/6a81e56/f1c4649/23628e8 (base web-upgrade, fold lane owns); #166 DIRTY head 4c18255 unchanged. AO open = 0. Excluded/owner-held untouched: WH #377, DG #89 (draft), Bannon #382 (draft), CJ #156/#157/#167. No merges by this run — nothing green+mergeable and not held.</li>
+<li>STEP 2 verify-done (5/5 HOLD, 0 false claims): AO #1078 merge dafe501 == tip, blobs 93f900f/7bf0764 MATCH main; Bannon #549 merge 435ef50 == tip, thumb blob fc22ec3 MATCH; WH #1855 merge a130bdf == tip, REPORT.md blob 1329115 MATCH; CJ #457 merge b006eef ancestor of tip cb644d2 (ahead_by 20); DG #95 merge 3ec5afc == tip.</li>
+<li>STEP 3 checkpoints: 1245 scanned, 0 unparseable; 0 running+watchdog stale (3 running no-watchdog legacy/template entries: demo-task, old-task, get-it-all-into-repos-20261121 — same as prior runs). checkpoint_audit.py still missing (tools/ archived). Nothing to resume. Local-only sweep: agent-ops checkout modifications are lane heartbeats only (checkpoints touched 01:01–02:33 EST, disk-cleanup-log 02:57 EST) — active lane files, left alone; no stranded local-only work found.</li>
+<li>STEP 4 canon-sync: MEMORY.md CHANGED since last sync (md5 d5ca4ce8 → a61b5316; memory-system curation 2026-11-24T07:26Z). Two 2026-11-22 owner orders were missing from WH docs/canon-archive/CANON-MASTER.md (verified absent from CANON-MASTER.md, DEV-NOTES-ARCHIVE.md, IMPORTED-CANON.md): NO-GAME-DUMPS BOUNDARY + T7 MOCAP PERMANENT FIX. Both committed via WH PR #1856 (branch overnight-canon-nogamedumps-t7mocap-20261124, commit 5e3e0e7, blob 709d91f, +8/-0 add-only; checks pending, next run merges when clean). DEADLIFT ALLEY-OOP already in CANON-MASTER.md (line 1939). DENTAL/GUMS entry is personal/health — never committed to any repo. PA3D ground-fix closure already in PA3D HANDOFF.md line 20 — nothing owed.</li>
+<li>STEP 5 friction: failure-alerts.log nothing new (last 2026-10-20, lane-owned). Disk 81% (120G/150G, 30G free) — below 85% bar. No ffmpeg/blender/aria2c/wget/curl processes running — nothing sacred touched. wizard-gang repo still absent from mhvnsnt repo list; wrestling-arcade still gone (carried, not re-probed this run).</li>
+<li>STEP 6/7/8: no new thread, no new pulls — Bannon fold lane actively landing; stand down.</li>
+<li>BLOCKED &gt;72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge. Concrete owner questions for these are in prior handoffs — no new decision surfaced this run.</li>
+<li>IDLE: last user msg 2026-11-23T16:03:20Z (941 min idle at run start).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-24t0721z-30-min-run">Overnight pipeline — 2026-11-24T07:21Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-24t0721z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1077 LANDED-VERIFIED this run (merge 3cae932 == main tip, merged 06:52:45Z; MERGE-QUEUE.md blob eaf025e + overnight-handoff.md blob 7178a19 byte-identical in branch commit 5e51b3a tree and merge commit 3cae932 tree). This run's own sync PR (number + merge recorded in next run's addendum).</li>
