@@ -1,3 +1,12 @@
+## Overnight pipeline — 2026-11-24T23:14Z (30-min run)
+- QUEUE SYNC: AO #1109 LANDED-VERIFIED this run (merge e66378a == tip, merged 23:02:41Z; blobs d616e0a0/b703e11d MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
+- QUEUE DELTA: 0 merged BY this run. 1 main landing in-window (AO #1109 sync). 0 new opens, 0 closures. 0 false claims (verify-done 10/10 HOLD). Queue 75 open (unchanged) + 1 staged-batch entry (14 payloads on muse/web-upgrade awaiting Bannon #575, still DIRTY head da9afb8, fold lane owns).
+- STEP 1: overnight-sweep.py stdout this run — zero PR changes vs 22:44Z (first pass interrupted by a service restart, re-run exit 0). Nothing green+mergeable and not held. WH #1835 CLEAN owner-held; #1851 UNSTABLE lane-owned; CJ #429 CLEAN owner's call; PPWA #290/#293 CLEAN owner's call; PA3D #7/#8 CLEAN do-not-merge; WG-storage #4/#5 UNSTABLE, tip unchanged. Excluded/owner-held untouched.
+- STEP 3: 1245 checkpoints, 0 unparseable, 0 stale-watchdog (disk-cleanup.json fresh 23:02:44Z). Nothing to resume.
+- STEP 4: MEMORY.md md5 8fe806ff unchanged — canon-sync nothing new.
+- STEP 5: failure-alerts nothing new; disk 78% (35G free); no media processes; zrok stable share still down (carried); wrestling-arcade still 404 (carried).
+- BLOCKED >72h (carried, unchanged): WH #1835/#1820, CJ #429, PPWA #290/#293, PA3D #7/#8, DG #9, GRE #99, WH #377, Bannon #382, CJ #156/#157/#167 — all owner-held/do-not-merge. Plus: TorBox key dead; zrok stable share down.
+- IDLE: last user msg 2026-11-23T16:03:20Z (~1871 min idle at run start).
 ## Overnight pipeline — 2026-11-24T22:44Z (30-min run)
 - QUEUE SYNC: AO #1108 LANDED-VERIFIED this run (merge ce1b5b9 == tip, merged 22:26:50Z; blobs 68072387/571bb008 MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
 - QUEUE DELTA: Bannon fold lane landed a batch in-window 22:17–22:41Z — 15 PRs closed: 14 merged into staging branch muse/web-upgrade (NOT main; payloads stay queued as one staged batch, landing via #575), 1 merged to main: #166 (merge 0ae60cb == tip, LANDED-VERIFIED). New open: Bannon #575 (final sync web-upgrade → main, head da9afb8, DIRTY — fold lane owns the conflict). 0 false claims (verify-done 10/10 HOLD). Queue 75 open PRs (was 89; −14 net) + 1 staged-batch entry (14 payloads on muse/web-upgrade awaiting #575).
