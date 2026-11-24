@@ -1,3 +1,12 @@
+## Overnight pipeline — 2026-11-24T22:44Z (30-min run)
+- QUEUE SYNC: AO #1108 LANDED-VERIFIED this run (merge ce1b5b9 == tip, merged 22:26:50Z; blobs 68072387/571bb008 MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
+- QUEUE DELTA: Bannon fold lane landed a batch in-window 22:17–22:41Z — 15 PRs closed: 14 merged into staging branch muse/web-upgrade (NOT main; payloads stay queued as one staged batch, landing via #575), 1 merged to main: #166 (merge 0ae60cb == tip, LANDED-VERIFIED). New open: Bannon #575 (final sync web-upgrade → main, head da9afb8, DIRTY — fold lane owns the conflict). 0 false claims (verify-done 10/10 HOLD). Queue 75 open PRs (was 89; −14 net) + 1 staged-batch entry (14 payloads on muse/web-upgrade awaiting #575).
+- STEP 1: overnight-sweep.py stdout this run — only Bannon moved (15 closures, 1 new #575, AO tip moved). All 14 staged merge commits verified ancestors of da9afb8 (behind_by=0). #575 DIRTY, NOT merged. Nothing else green+mergeable and not held. WH #1851 UNSTABLE lane-owned; #1835 CLEAN owner-held; CJ #429 CLEAN owner's call; PPWA #290/#293 CLEAN owner's call; PA3D #7/#8 CLEAN do-not-merge; WG-storage #4/#5 UNSTABLE, tip unchanged. Excluded/owner-held untouched.
+- STEP 3: 1245 checkpoints, 0 unparseable, 0 stale-watchdog (disk-cleanup.json fresh 22:45:13Z). Nothing to resume.
+- STEP 4: MEMORY.md md5 8fe806ff unchanged — canon-sync nothing new.
+- STEP 5: failure-alerts nothing new; disk 78% (35G free); no media processes; zrok stable share still down (carried); wrestling-arcade still 404 (re-verified via API this run).
+- BLOCKED >72h (carried, unchanged): WH #1835/#1820, CJ #429, PPWA #290/#293, PA3D #7/#8, DG #9, GRE #99, WH #377, Bannon #382, CJ #156/#157/#167 — all owner-held/do-not-merge. Plus: TorBox key dead; zrok stable share down.
+- IDLE: last user msg 2026-11-23T16:03:20Z (~1841 min idle at run start).
 ## Overnight pipeline — 2026-11-24T21:44Z (30-min run)
 - QUEUE SYNC: AO #1106 LANDED-VERIFIED this run (merge 28d55cb == tip, blobs 8bdf6aa6/e2af8503 MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
 - QUEUE DELTA: 0 merged BY this run. 1 main landing in-window (AO #1106 sync). 2 new opens (Bannon #571 Land converted 2K26 AnimIT clips — Lane A, 7,458 clips round 3, base muse/web-upgrade, head 60a2942; Bannon #572 Sweep F-S2 weld seam lines on 17 models b02, base main, head 4cc2150; both UNSTABLE, no checks, fold lane owns), 0 closures. 0 false claims (verify-done 10/10 HOLD). Queue 88 open (was 86; +2 Bannon).
