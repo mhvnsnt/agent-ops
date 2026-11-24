@@ -1,3 +1,12 @@
+## Overnight pipeline — 2026-11-24T15:14Z (30-min run)
+- QUEUE SYNC: AO #1093 LANDED-VERIFIED this run (merge 4006725 == tip, blobs 90c5c86/8b73871 MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
+- QUEUE DELTA: 0 merged BY this run. 0 main landings by lanes in-window (all 11 tips unchanged vs 14:44Z except AO). 0 new opens/closures. 0 false claims (verify-done 9/9 HOLD). Queue 79 open (unchanged).
+- STEP 1: sweep-20261124-1514.jsonl — only AO tip moved. Nothing green+mergeable and not held. WH #1851 UNSTABLE lane-owned; #1835 CLEAN owner-held; CJ #429 CLEAN owner's call; PPWA #290/#293 CLEAN owner's call; PA3D #7/#8 CLEAN do-not-merge; WG-storage #4/#5 UNSTABLE. Excluded/owner-held untouched.
+- STEP 3: 1245 checkpoints, 0 unparseable, 0 stale-watchdog (disk-cleanup.json fresh 14:58:53Z). Nothing to resume.
+- STEP 4: MEMORY.md md5 0e33e060 -> 8fe806ff (rewordings only, no new canon). Last-sync md5 now 8fe806ff.
+- STEP 5: failure-alerts nothing new; disk 78% (35G free); no media processes; zrok stable share still down (owner-side enable needed).
+- BLOCKED >72h (carried, unchanged): WH #1835/#1820, CJ #429, PPWA #290/#293, PA3D #7/#8, DG #9, GRE #99, WH #377, Bannon #382, CJ #156/#157/#167 — all owner-held/do-not-merge. Plus: TorBox key dead; zrok stable share down.
+- IDLE: last user msg 2026-11-23T16:03:20Z (1391 min idle at run start).
 ## Overnight pipeline — 2026-11-24T14:44Z (30-min run)
 - QUEUE SYNC: AO #1092 LANDED-VERIFIED this run (merge abbdd2c == main tip, merged 14:23:33Z; MERGE-QUEUE.md blob 86f2370 + overnight-handoff.md blob a8f8e3d byte-identical in branch commit, merge commit abbdd2c tree, and local git hashes). This run's own sync PR (number + merge recorded in next run's addendum).
 - QUEUE DELTA: 0 merged BY this run. 0 main landings by lanes in-window (all 11 main tips unchanged vs 14:14Z except AO abbdd2c = #1092 sync merge). 0 new opens, 0 closures. 0 false claims reopened (verify-done 9/9 HOLD). Queue live recount: 79 open (unchanged).
