@@ -1,3 +1,12 @@
+## Overnight pipeline — 2026-11-24T20:44Z (30-min run)
+- QUEUE SYNC: AO #1104 LANDED-VERIFIED this run (merge 1a79235 == tip, blobs e80cb1d/f4f638c MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
+- QUEUE DELTA: 0 merged BY this run. 1 main landing in-window (AO #1104 sync). 1 new open (Bannon #570, sweep(F-S1) weld black seam lines batch b01, 17 files, UNSTABLE, base main, head 5ef59aa, fold lane owns), 0 closures. 0 false claims (verify-done 10/10 HOLD). Queue 86 open (was 85; +1 Bannon).
+- STEP 1: overnight-sweep.py stdout this run — only Bannon #570 new + AO tip moved. Nothing green+mergeable and not held. WH #1851 UNSTABLE lane-owned; #1835 CLEAN owner-held; CJ #429 CLEAN owner's call; PPWA #290/#293 CLEAN owner's call; PA3D #7/#8 CLEAN do-not-merge; WG-storage #4/#5 UNSTABLE, tip unchanged. Excluded/owner-held untouched.
+- STEP 3: 1245 checkpoints, 0 unparseable, 0 stale-watchdog (disk-cleanup.json fresh 20:42:02Z). Nothing to resume.
+- STEP 4: MEMORY.md md5 8fe806ff unchanged — canon-sync nothing new.
+- STEP 5: failure-alerts nothing new; disk 78% (35G free); no media processes; zrok stable share still down (carried); wrestling-arcade still 404 (re-verified via ls-remote this run).
+- BLOCKED >72h (carried, unchanged): WH #1835/#1820, CJ #429, PPWA #290/#293, PA3D #7/#8, DG #9, GRE #99, WH #377, Bannon #382, CJ #156/#157/#167 — all owner-held/do-not-merge. Plus: TorBox key dead; zrok stable share down.
+- IDLE: last user msg 2026-11-23T16:03:20Z (~1721 min idle at run start).
 ## Overnight pipeline — 2026-11-24T20:14Z (30-min run)
 - QUEUE SYNC: AO #1103 LANDED-VERIFIED this run (merge 768967b == tip, blobs fb1dadf/f642c38 MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
 - QUEUE DELTA: 0 merged BY this run. 1 main landing in-window (AO #1103 sync). 0 new opens, 0 closures. 0 false claims (verify-done 10/10 HOLD). Queue 85 open (unchanged).
