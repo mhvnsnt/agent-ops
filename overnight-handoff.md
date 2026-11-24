@@ -12386,3 +12386,11 @@ Overnight pipeline 2026-11-08T07:14Z (queue delta first: 0 merged BY this run; 3
 - STEP 1: mergeability re-checked live, all headline heads unchanged except CJ #429 back to CLEAN (recompute noise; owner's call). No green+mergeable non-held PRs. CLEAN items all owner-held (WH #1835, CJ #429, PPWA #290/#293) or do-not-merge (PA3D #7/#8).
 - STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog. STEP 4: MEMORY.md md5 d5ca4ce8 unchanged — canon-sync nothing new. STEP 5: Disk 80% (31G free). Failure-alerts nothing new. at-inflate2.py (pid 5512) untouched. zrok stable share still down (carried, needs owner token).
 - IDLE: last user msg 2026-11-23T16:03:20Z (581 min idle).
+
+## Overnight pipeline — 2026-11-24T02:14Z (30-min run)
+- QUEUE DELTA: 0 merged BY this run. AO #1067 (01:44Z run's sync PR) verified landed (merge a44c0bd == tip). 0 main landings by lanes (all 11 main tips unchanged vs 01:44Z). 1 NEW OPEN-PR: Bannon #521 (created 01:54:55Z, muse/inner-delt-fix -> main; inner-delt flip fix Brock + Mil; MERGEABLE/UNSTABLE head 249bdfc, +604/-0, 4 files; checks unreadable via token — NOT merged). 0 false claims (verify-done 7/7 HOLD: CJ #453/#454, WH #1853, CD2 #12, Bannon #123/#237, AO #1065 — all merge commits ancestors of current tips). Queue: 83 open (was 82; +1 Bannon #521), 11 blocked >72h (unchanged).
+- STEP 1: No green+mergeable+not-held PRs. WH #1851 UNSTABLE (Lane E); #1835 CLEAN owner-held; #1820 DIRTY owner-held; #1837 BLOCKED. PPWA #290/#293 CLEAN owner's call; #294 UNSTABLE. CJ #429 CLEAN owner's call. Bannon #515 UNKNOWN (fold lane owns); #521 NEW UNSTABLE; #166 DIRTY head 03343de. PA3D #7/#8 CLEAN but do-not-merge. DG #9 DIRTY. GRE #99 UNSTABLE (owner decision). AO open 0.
+- STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog. Nothing to resume.
+- STEP 4: MEMORY.md md5 d5ca4ce8 unchanged — canon-sync nothing new.
+- STEP 5: Disk 80% (30G free). Failure-alerts nothing new. at-inflate2.py (pid 5512) untouched; separate lane's du audit (pid 101222) untouched. zrok stable share still down (carried, needs owner token).
+- STEP 6/7/8: no new thread, no new pulls.
