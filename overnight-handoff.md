@@ -1,3 +1,12 @@
+## Overnight pipeline — 2026-11-24T23:44Z (30-min run)
+- QUEUE SYNC: AO #1110 LANDED-VERIFIED this run (merge 17699e5 == tip, merged 23:26:12Z; blobs 59b651ec/c92d05e0 MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
+- QUEUE DELTA: 0 merged BY this run. 1 main landing in-window (AO #1110 sync). 1 new open: Bannon #576 (Unscanned-128 U5, UNSTABLE, fold lane owns). 0 closures. 0 false claims (verify-done 10/10 HOLD). Queue 76 open (was 75; +1 net) + 1 staged-batch entry (14 payloads on muse/web-upgrade awaiting Bannon #575, still DIRTY head da9afb8, fold lane owns).
+- STEP 1: overnight-sweep.py (sweep-20261124-2344.jsonl, exit 0) — only Bannon #576 new + AO tip moved. Nothing green+mergeable and not held. WH #1835 CLEAN owner-held; #1851 UNSTABLE lane-owned; CJ #429 CLEAN owner's call; PPWA #290/#293 CLEAN owner's call; PA3D #7/#8 CLEAN do-not-merge; WG-storage #4/#5 UNSTABLE, tip unchanged. Excluded/owner-held untouched.
+- STEP 3: 1245 checkpoints, 0 unparseable, 0 stale-watchdog (disk-cleanup.json fresh 23:42:42Z). Nothing to resume.
+- STEP 4: MEMORY.md md5 8fe806ff unchanged — canon-sync nothing new.
+- STEP 5: failure-alerts nothing new; disk 78% (35G free); no media processes; zrok stable share still down (carried); wrestling-arcade still 404 (re-verified via API this run).
+- BLOCKED >72h (carried, unchanged): WH #1835/#1820, CJ #429, PPWA #290/#293, PA3D #7/#8, DG #9, GRE #99, WH #377, Bannon #382, CJ #156/#157/#167 — all owner-held/do-not-merge. Plus: TorBox key dead; zrok stable share down.
+- IDLE: last user msg 2026-11-23T16:03:20Z (~1901 min idle at run start).
 ## Overnight pipeline — 2026-11-24T23:14Z (30-min run)
 - QUEUE SYNC: AO #1109 LANDED-VERIFIED this run (merge e66378a == tip, merged 23:02:41Z; blobs d616e0a0/b703e11d MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
 - QUEUE DELTA: 0 merged BY this run. 1 main landing in-window (AO #1109 sync). 0 new opens, 0 closures. 0 false claims (verify-done 10/10 HOLD). Queue 75 open (unchanged) + 1 staged-batch entry (14 payloads on muse/web-upgrade awaiting Bannon #575, still DIRTY head da9afb8, fold lane owns).
