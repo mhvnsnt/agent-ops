@@ -1,3 +1,12 @@
+## Overnight pipeline — 2026-11-24T16:14Z (30-min run)
+- QUEUE SYNC: AO #1095 LANDED-VERIFIED this run (merge b3735f3 == tip, blobs ebb1269/9d6bec0 MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
+- QUEUE DELTA: 0 merged BY this run. 0 main landings by lanes in-window (all 11 tips unchanged vs 15:44Z except AO). 0 new opens/closures. 0 false claims (verify-done 9/9 HOLD). Queue 79 open (unchanged).
+- STEP 1: sweep-20261124-1614.jsonl — zero PR changes vs 15:44Z. Nothing green+mergeable and not held. WH #1851 UNSTABLE lane-owned; #1835 CLEAN owner-held; CJ #429 CLEAN owner's call; PPWA #290/#293 CLEAN owner's call; PA3D #7/#8 CLEAN do-not-merge; WG-storage #4/#5 UNSTABLE, tip unchanged. Excluded/owner-held untouched.
+- STEP 3: 1245 checkpoints, 0 unparseable, 0 stale-watchdog (disk-cleanup.json fresh 16:12:26Z). Nothing to resume.
+- STEP 4: MEMORY.md md5 8fe806ff unchanged — canon-sync nothing new.
+- STEP 5: failure-alerts nothing new; disk 78% (35G free); no media processes; zrok stable share still down (carried, not re-probed).
+- BLOCKED >72h (carried, unchanged): WH #1835/#1820, CJ #429, PPWA #290/#293, PA3D #7/#8, DG #9, GRE #99, WH #377, Bannon #382, CJ #156/#157/#167 — all owner-held/do-not-merge. Plus: TorBox key dead; zrok stable share down.
+- IDLE: last user msg 2026-11-23T16:03:20Z (~1440 min idle at run start).
 ## Overnight pipeline — 2026-11-24T15:44Z (30-min run)
 - QUEUE SYNC: AO #1094 LANDED-VERIFIED this run (merge a57a3e7 == tip, merged 15:22:17Z, blobs 12c7d67/01ed7bc MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
 - QUEUE DELTA: 0 merged BY this run. 0 main landings by lanes in-window (all 11 tips unchanged vs 15:14Z except AO). 0 new opens/closures. 0 false claims (verify-done 9/9 HOLD). Queue 79 open (unchanged). NEW BRANCH-ONLY: DG tools/production-line-v4 (tip 7bd5ac7, ahead 99/behind 143 vs main) — CUT 001R v3 + Janae 3D r3 + 6B gates claimed done, NO MERGE; cited SHAs do not resolve on dream-girl, payload UNVERIFIED, owner-held (001R call + DG embargo), no PR opened.
