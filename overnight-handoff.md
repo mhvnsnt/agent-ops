@@ -12394,3 +12394,15 @@ Overnight pipeline 2026-11-08T07:14Z (queue delta first: 0 merged BY this run; 3
 - STEP 4: MEMORY.md md5 d5ca4ce8 unchanged — canon-sync nothing new.
 - STEP 5: Disk 80% (30G free). Failure-alerts nothing new. at-inflate2.py (pid 5512) untouched; separate lane's du audit (pid 101222) untouched. zrok stable share still down (carried, needs owner token).
 - STEP 6/7/8: no new thread, no new pulls.
+## Overnight pipeline — 2026-11-24T02:44Z (30-min run)
+- QUEUE DELTA: 0 merged BY this run. AO #1068 (02:14Z run's sync PR) verified landed (merge c80a0f9 == tip, blobs 6e26ecb0/87ebc5f9 MATCH). 0 main landings by lanes; all tips unchanged vs 02:14Z except AO. 0 false claims (verify-done 7/7 HOLD). Queue: 83 open (unchanged).
+- STEP 1: No green+mergeable+not-held PRs. WH #1851 UNSTABLE (Lane E); #1835 CLEAN owner-held; #1820 DIRTY owner-held; #1837 BLOCKED. PPWA #290/#293 CLEAN owner's call; #294 UNSTABLE. CJ #429 CLEAN owner's call. Bannon #515 UNKNOWN (fold lane owns); #521 UNSTABLE; #166 DIRTY. PA3D #7/#8 CLEAN but do-not-merge. DG #9 DIRTY. GRE #99 UNSTABLE (owner decision). AO open 0.
+- STEP 2: verify-done 7/7 HOLD (AO #1068, Bannon #519, CJ #455/#456, WH #1854, DG #95, CD2 #12). CORRECTION: Bannon #519 arena file lives at assets/models/2k26/arena/arena2k26.glb (blob c7261fd MATCH) — prior runs' "docs/2k26-customize" path was wrong; payload was on main all along.
+- STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog. Nothing to resume.
+- STEP 4: MEMORY.md md5 d5ca4ce8 unchanged — canon-sync nothing new.
+- STEP 5: Disk 80% (30G free). Failure-alerts nothing new. at-inflate2.py (pid 5512) untouched. zrok stable share still down (carried, needs owner token).
+- STEP 6/7/8: no new thread, no new pulls.
+- BLOCKED >72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge.
+- IDLE: last user msg 2026-11-23T16:03:20Z (641 min idle at run start).
+- SYNC PR: #1069 gate body fixed 02:56Z (gate-format sections added); re-run of failed gate job 403 via token, fixed by synchronize push.
+- SYNC PR #1069 gate round 2: self-check tick + method-match fix applied; synchronize push to re-run gate.
