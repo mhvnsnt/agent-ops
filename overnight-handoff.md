@@ -1,3 +1,12 @@
+## Overnight pipeline — 2026-11-24T19:14Z (30-min run)
+- QUEUE SYNC: AO #1101 LANDED-VERIFIED this run (merge 3201590 == tip, blobs fe882af/f737f49 MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
+- QUEUE DELTA: 0 merged BY this run. 1 main landing in-window (AO #1101 sync). 1 new open (Bannon #568, Unscanned-128 U3, UNSTABLE, base main, fold lane owns), 0 closures. 0 false claims (verify-done 10/10 HOLD). Queue 84 open (was 83; +1 Bannon).
+- STEP 1: sweep-20261124-1914.jsonl — only Bannon #568 new + AO tip moved. Nothing green+mergeable and not held. WH #1851 UNSTABLE lane-owned; #1835 CLEAN owner-held; CJ #429 CLEAN owner's call; PPWA #290/#293 CLEAN owner's call; PA3D #7/#8 CLEAN do-not-merge; WG-storage #4/#5 UNSTABLE, tip unchanged. Excluded/owner-held untouched.
+- STEP 3: 1245 checkpoints, 0 unparseable, 0 stale-watchdog (disk-cleanup.json fresh 19:14:38Z). Nothing to resume.
+- STEP 4: MEMORY.md md5 8fe806ff unchanged — canon-sync nothing new.
+- STEP 5: failure-alerts nothing new; disk 78% (35G free); no media processes; zrok stable share still down (carried); wrestling-arcade still 404 (carried, last probed 18:44Z). First sweep attempt interrupted by an exec service restart; re-ran in background, completed clean.
+- BLOCKED >72h (carried, unchanged): WH #1835/#1820, CJ #429, PPWA #290/#293, PA3D #7/#8, DG #9, GRE #99, WH #377, Bannon #382, CJ #156/#157/#167 — all owner-held/do-not-merge. Plus: TorBox key dead; zrok stable share down.
+- IDLE: last user msg 2026-11-23T16:03:20Z (1641 min idle at run start).
 ## Overnight pipeline — 2026-11-24T18:44Z (30-min run)
 - QUEUE SYNC: AO #1100 LANDED-VERIFIED this run (merge 97a6bc4 == tip, blobs 9ff2e3e/e17d3f4 MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
 - QUEUE DELTA: 0 merged BY this run. 1 lane landing in-window: WH #1858 (aki-n64 round 3 PC-2, merge 9872b47 == tip, 182,973 additions / 0 deletions, payload verified on main). 1 new open (Bannon #567, UNSTABLE, base muse/web-upgrade, fold lane owns), 0 closures. 0 false claims (verify-done 10/10 HOLD). Queue 83 open (was 82; +1 Bannon).
