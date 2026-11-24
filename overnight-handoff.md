@@ -1,3 +1,12 @@
+## Overnight pipeline — 2026-11-24T20:14Z (30-min run)
+- QUEUE SYNC: AO #1103 LANDED-VERIFIED this run (merge 768967b == tip, blobs fb1dadf/f642c38 MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
+- QUEUE DELTA: 0 merged BY this run. 1 main landing in-window (AO #1103 sync). 0 new opens, 0 closures. 0 false claims (verify-done 10/10 HOLD). Queue 85 open (unchanged).
+- STEP 1: sweep-20261124-2014.jsonl — zero PR changes vs 19:44Z. Nothing green+mergeable and not held. WH #1851 UNSTABLE lane-owned; #1835 CLEAN owner-held; CJ #429 CLEAN owner's call; PPWA #290/#293 CLEAN owner's call; PA3D #7/#8 CLEAN do-not-merge; WG-storage #4/#5 UNSTABLE, tip unchanged. Excluded/owner-held untouched.
+- STEP 3: 1245 checkpoints, 0 unparseable, 0 stale-watchdog (disk-cleanup.json fresh 20:14:26Z). Nothing to resume.
+- STEP 4: MEMORY.md md5 8fe806ff unchanged — canon-sync nothing new.
+- STEP 5: failure-alerts nothing new; disk 78% (35G free); no media processes; zrok stable share still down (carried); wrestling-arcade still 404 (re-verified via ls-remote this run).
+- BLOCKED >72h (carried, unchanged): WH #1835/#1820, CJ #429, PPWA #290/#293, PA3D #7/#8, DG #9, GRE #99, WH #377, Bannon #382, CJ #156/#157/#167 — all owner-held/do-not-merge. Plus: TorBox key dead; zrok stable share down.
+- IDLE: last user msg 2026-11-23T16:03:20Z (~1691 min idle at run start).
 ## Overnight pipeline — 2026-11-24T19:44Z (30-min run)
 - QUEUE SYNC: AO #1102 LANDED-VERIFIED this run (merge c0cbc9a == tip, blobs 59f4424/44a49e0 MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
 - QUEUE DELTA: 0 merged BY this run. 1 main landing in-window (AO #1102 sync). 1 new open (Bannon #569, Crush + poke-through lane U1: fix 6 GLBs, UNSTABLE, base main, fold lane owns), 0 closures. 0 false claims (verify-done 10/10 HOLD). Queue 85 open (was 84; +1 Bannon).
