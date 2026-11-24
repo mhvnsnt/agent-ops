@@ -12749,3 +12749,15 @@ Overnight pipeline 2026-11-08T07:14Z (queue delta first: 0 merged BY this run; 3
 - STEP 6/7/8: no new thread, no new pulls.
 - BLOCKED >72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge.
 - IDLE: last user msg 2026-11-23T16:03:20Z (671 min idle at run start).
+
+## Overnight pipeline — 2026-11-24T22:14Z (30-min run)
+- QUEUE DELTA: 0 merged BY this run. AO #1107 (21:44Z run's sync) verified LANDED-VERIFIED this run (merge 2a132e5 == tip, blobs 2a45bcfd/86d2e7af MATCH). 1 new open (Bannon #573, UNSTABLE, fold lane owns), 0 closures. 0 false claims (verify-done 10/10 HOLD). Queue: 89 open (was 88; +1 net, fully explained).
+- STEP 1: No green+mergeable+not-held PRs. Bannon #573 NEW UNSTABLE head c053073; #166 head MOVED ba29a16 -> d981456, still DIRTY. WH #1851 UNSTABLE (Lane E); #1835 CLEAN owner-held; #1820 DIRTY owner-held; #1837 BLOCKED. PPWA #290/#293 CLEAN owner's call; #294 UNSTABLE. CJ #429 CLEAN owner's call. PA3D #7/#8 CLEAN but do-not-merge. DG #9 DIRTY. GRE #99 UNSTABLE (owner decision). AO open 0.
+- STEP 2: verify-done 10/10 HOLD (AO #1107, WH #1858/#1857/#1855, Bannon #559/#557, CJ #458/#457, DG #95, CD2 #12).
+- STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog. Nothing to resume.
+- STEP 4: MEMORY.md md5 8fe806ff unchanged — canon-sync nothing new.
+- STEP 5: Disk 78% (35G free). Failure-alerts nothing new. No ffmpeg/blender/aria2c/wget/curl processes running. zrok stable share still down (carried, needs owner token). wrestling-arcade still 404 (re-verified API + ls-remote); wizard-gang still 404 (real repo wizard-gang-storage resolves fine).
+- STEP 6/7/8: no new thread, no new pulls.
+- BLOCKED >72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge.
+- IDLE: last user msg 2026-11-23T16:03:20Z (1831 min idle at run start).
+- SYNC PR: this run's sync PR (number + merge recorded in next run's addendum).
