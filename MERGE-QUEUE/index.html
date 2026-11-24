@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-24t2044z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-24t2114z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-24t2114z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-24T21:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-24t2044z-30-min-run" class="md-nav__link">
@@ -14314,6 +14325,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-24t2114z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-24T21:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-24t2044z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -19374,6 +19396,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-24t2114z-30-min-run">Overnight pipeline — 2026-11-24T21:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-24t2114z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: AO #1105 LANDED-VERIFIED this run (merge f8919f3 == tip, merged 20:57:39Z; MERGE-QUEUE.md blob cee75148 + overnight-handoff.md blob 7912fed4 byte-identical in merge commit f8919f3 tree, contents API, and local git hashes). This run's own sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 1 main landing in-window by the 20:44Z run's sync: AO 1a79235 -&gt; f8919f3 (PR #1105). All other 10 main tips unchanged vs 20:44Z (WH 9872b47, Bannon 9ebfa7b, CJ b166a57, PPWA e56e317, DG 3ec5afc, PA3D 0fdf407, CD2 f536ac0, GRE f40f0c0, wrestling c9ff241, CD 51c3cd5). 0 new opens, 0 closures. 0 false claims reopened (verify-done 10/10 HOLD). Queue live recount: WH 33 + Bannon 20 + PPWA 25 + CJ 1 + PA3D 2 + GRE 1 + DG 2 + WG-storage 2 + CD 0 + CD2 0 + AO 0 + wrestling 0 = 86 open (unchanged).</li>
+<li>STEP 1: mergeability re-checked live via overnight-sweep.py (sweep-20261124-2114.jsonl). Zero PR changes vs 20:44Z — no new opens, no closures, no head/state changes. WH #1851 UNSTABLE head 44e8f8a (Lane E T7 throw fix; lane owns); #1835 CLEAN head 4cc7135 but OWNER-HELD; #1820 DIRTY head 8eb1a30 owner-held; #1837 BLOCKED head 46b1279; #1818/#1817 BLOCKED heads 56c358a/be0803c; #1798/#1797/#1796 BLOCKED heads f7c2045/67054ea/6f94ead; #1762 BLOCKED head 693f84a; #1714/#1702/#1701 BLOCKED heads c6d4234/524b662/29de082; #1696/#1600 DIRTY heads c675e6c/d55c088; #1678 BLOCKED head 43098ed; drafts #1569/#1527/#1526/#1525 DIRTY heads 451d865/b533dad/298a754/f358d2d; #1090 draft DIRTY head 4e5b935 held; #1073/#1057 DIRTY heads 216e4f2/f5cc4a3; #1072/#713 UNSTABLE heads c3b467c/9fdcfe0; #970/#908/#875/#826/#714/#706 DIRTY heads 5c8e440/eac4add/0aabe81/1e41fec/0bd4b7a/7394ffe; #377 excluded evidence; #182 draft. PPWA #290/#293 CLEAN (heads 182c5f0/e22ab37 — owner's call), #294 UNSTABLE head dce6bf7; rest UNSTABLE/DIRTY/drafts, lane-owned. CJ #429 CLEAN head c852419 (owner's call, NOT merged). PA3D #7/#8 CLEAN (heads b9bde11/22ba5d1) but do-not-merge bodies — NOT merged. DG #9 DIRTY head 399eb3d; #89 draft do-not-merge. GRE #99 UNSTABLE head 29e394f (owner decision). Bannon #560-#570 UNSTABLE heads unchanged (9b52c70/942127f/49609fb/1418224/22cfeb0/8abeec5/82adc79/9b0ac4c/6a81e56/f1c4649/23628e8/5a2fd79/5ede9c0/6b72457/211b0fb/2a7be15/5f4b97a/5ef59aa, fold lane owns); #382 draft DIRTY head 0949107; #166 DIRTY head ba29a16 (checks unreadable via token — NOT merged). WG-storage #4/#5 re-verified this run, heads unchanged 17769bd/2dd0681, tip 2881630 unchanged (UNSTABLE). AO open = 0. Excluded/owner-held untouched: WH #377, DG #89 (draft), Bannon #382 (draft), CJ #156/#157/#167. No merges by this run — nothing green+mergeable and not held.</li>
+<li>STEP 2 verify-done (10/10 HOLD, 0 false claims): AO #1105 merge f8919f3 == tip, blobs cee75148/7912fed4 MATCH main + local; WH #1858 merge 9872b47 == tip; Bannon #559 merge 9ebfa7b == tip; Bannon #557 merge 2ae4890 ancestor of tip (ahead_by 4); WH #1857 merge a1f53dc ancestor of tip (ahead_by 30); WH #1855 merge a130bdf ancestor of tip (ahead_by 48); CJ #458 merge b166a57 == tip; CJ #457 merge b006eef ancestor of tip (ahead_by 22); DG #95 merge 3ec5afc == tip; CD2 #12 merge f536ac0 == tip.</li>
+<li>STEP 3 checkpoints: 1245 scanned, 0 unparseable; 1 running-watchdog (disk-cleanup.json, updated 21:11:07Z, fresh — NOT touched). 0 stale-watchdog. checkpoint_audit.py still missing (tools/ archived). Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 8fe806ff UNCHANGED since last sync — canon-sync nothing new. Last-sync md5 still 8fe806ff. Daily-note tail since last sync is watchdog ticks / live-view watch (tunnel regenerated, zrok still 404) / DG lane watchdog / merge-law-ci-watch (57 PRs remain, 0 CLEAN) — no new game canon/decisions.</li>
+<li>STEP 5 friction: failure-alerts.log nothing new (last 2026-10-20, lane-owned). Disk 78% (35G free) — below 85% bar. No ffmpeg/blender/aria2c/wget/curl processes running — nothing sacred touched (lane du audit pid 252746 untouched). zrok stable share STILL DOWN (carried, not re-probed this run; needs owner-side zrok enable). wrestling-arcade STILL 404 (re-verified via ls-remote this run).</li>
+<li>STEP 6/7/8: no new thread, no new pulls — Bannon fold lane owns its UNSTABLE PRs; WH #1851 lane owns; stand down.</li>
+<li>BLOCKED &gt;72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge. Plus carried: TorBox key dead; zrok stable share DOWN. Open owner decision: delete the empty published i-am-weasel-torbox-v1 release?</li>
+<li>IDLE: last user msg 2026-11-23T16:03:20Z (~1743 min idle at run start).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-24t2044z-30-min-run">Overnight pipeline — 2026-11-24T20:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-24t2044z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1104 LANDED-VERIFIED this run (merge 1a79235 == tip, merged 20:23:08Z; MERGE-QUEUE.md blob e80cb1d + overnight-handoff.md blob f4f638c byte-identical in merge commit 1a79235 tree, contents API, and local git hashes). This run's own sync PR (number + merge recorded in next run's addendum).</li>
