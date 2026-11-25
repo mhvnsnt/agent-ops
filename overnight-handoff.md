@@ -1,3 +1,16 @@
+## Overnight pipeline — 2026-11-25T21:14Z (30-min run)
+- QUEUE SYNC: AO #1154 LANDED-VERIFIED this run (merge 55bac23 == tip, merged 20:50:04Z; the 20:44Z run's sync PR). This run's own sync PR (number + merge recorded in next run's addendum).
+- QUEUE DELTA: 0 merged BY this run. 0 new opens, 0 closures, 0 lane landings in-window. Queue 68 open (unchanged), 25 blocked. NEW LOCAL-ONLY item: wh-449 worktree, 33 uncommitted files (+9,943/-52,398) from 2026-10-24, HEAD 6e3ba07c = merged WH #449; stale vs current main, NOT committed — owner/lane decision needed: follow-up PR or drop.
+- STEP 1: No green+mergeable+not-held PRs. Only CLEAN PRs are held: CJ #429 (owner's call), WH #1835 (OWNER-HELD), PPWA #290/#293 (owner's call), PA3D #7/#8 (do-not-merge bodies). Bannon #565 UNSTABLE (fold lane owns); WH #1851 UNSTABLE (Lane E); WH #1820 DIRTY owner-held; Bannon #382 draft DIRTY.
+- STEP 2: verify-done 12/12 HOLD (AO #1154 + 11 repo tips unchanged) — 0 false claims.
+- STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog. Nothing to resume.
+- STEP 4: MEMORY.md md5 e4b7ce19 unchanged — canon-sync nothing new.
+- STEP 5: Disk 70% (46G free). Failure-alerts nothing new. No media processes running. VM uptime 51 min (same ~20:23Z restart). wrestling-arcade still 404 (carried). zrok stable still DOWN (carried, needs owner-side zrok enable). Approval-cards outage DAY 3 (carried).
+- STEP 6/7/8: no new thread, no new pulls.
+- BLOCKED >72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge.
+- IDLE: last user msg 2026-11-23T16:03:20Z (~3191 min idle at run start).
+- SYNC PR: this run's sync PR (number + merge recorded in next run's addendum).
+
 ## Overnight pipeline — 2026-11-25T20:44Z (30-min run)
 - QUEUE SYNC: AO #1153 LANDED-VERIFIED this run (merge 83a1d4c == tip, merged 20:21:20Z, 2-parent; MERGE-QUEUE.md blob 1659b350 + overnight-handoff.md blob bdb946ed match main; the 20:14Z run's sync PR). This run's own sync PR (number + merge recorded in next run's addendum).
 - QUEUE DELTA: 0 merged BY this run. 0 new opens, 0 closures, 0 lane landings in-window. Queue 68 open (unchanged), 25 blocked. Live recount from sweep-20261125-2044.jsonl (exit 0, 12 repos incl. WG-storage): WH 33 + Bannon 2 + PPWA 25 + CJ 1 + PA3D 2 + GRE 1 + DG 2 + WG-storage 2 + CD 0 + CD2 0 + AO 0 + wrestling 0 = 68 open — matches queue. Sweep diff vs 20:14Z: ZERO PR changes — only AO tip moved (d8db51c -> 83a1d4c, the 20:14Z sync #1153).
