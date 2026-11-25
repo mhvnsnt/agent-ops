@@ -1,3 +1,11 @@
+## Overnight pipeline — 2026-11-25T03:44Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 0 lane landings in-window. 1 new open: Bannon #586 (Port main #584, head 26676d8, UNSTABLE, fold lane owns). 0 closures. Queue 80 open (was 79; +1 net). AO #1118 LANDED-VERIFIED this run (merge 6dccb6f == tip; blobs fa2d646d/7f1f3ad2 MATCH).
+- VERIFY-DONE: 11/11 HOLD, 0 false claims (AO #1118, Bannon #584/#575/#576/#566, WH #1858/#1857/#1855, CJ #458, DG #95, CD2 #12).
+- CHECKPOINTS: 1245 scanned, 0 stale-watchdog. Nothing to resume.
+- CANON: MEMORY.md md5 8fe806ff unchanged — nothing new.
+- FRICTION: failure-alerts.log nothing new; disk 72%; no media processes; zrok stable still DOWN (carried); wrestling-arcade still 404 (carried).
+- BLOCKED >72h (carried): WH #1835/#1820, CJ #429, PPWA #290/#293, PA3D #7/#8, DG #9, GRE #99, WH #377, Bannon #382, CJ #156/#157/#167 — all owner-held/do-not-merge. Plus: TorBox key dead; zrok stable DOWN; delete empty i-am-weasel-torbox-v1 release? (owner decision).
+- IDLE: last user msg 2026-11-23T16:03:20Z (~2141 min).
 ## Overnight pipeline — 2026-11-25T03:14Z (30-min run)
 - QUEUE DELTA: 0 merged by this run. 1 landing in-window by the Bannon fold lane: #584 (merge 5b9faa6 == tip, "Vector-weight strip at load + full-roster catalog"). 1 new open: Bannon #585 (Sweep C-S3, head 43713ae, UNSTABLE, fold lane owns). 1 closure (#584). Queue 79 open (was 78 corrected — the 02:44Z log's "76" was an arithmetic slip; components then summed to 78). AO #1117 LANDED-VERIFIED this run (merge da937e6 == tip; blobs 7a4f247b/299f7a06 MATCH).
 - VERIFY-DONE: 10/10 HOLD, 0 false claims (AO #1117, Bannon #584/#575/#576/#566, WH #1858/#1857, CJ #458, DG #95, CD2 #12).
