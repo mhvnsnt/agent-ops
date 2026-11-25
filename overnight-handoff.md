@@ -1,3 +1,11 @@
+## Overnight pipeline — 2026-11-25T03:14Z (30-min run)
+- QUEUE DELTA: 0 merged by this run. 1 landing in-window by the Bannon fold lane: #584 (merge 5b9faa6 == tip, "Vector-weight strip at load + full-roster catalog"). 1 new open: Bannon #585 (Sweep C-S3, head 43713ae, UNSTABLE, fold lane owns). 1 closure (#584). Queue 79 open (was 78 corrected — the 02:44Z log's "76" was an arithmetic slip; components then summed to 78). AO #1117 LANDED-VERIFIED this run (merge da937e6 == tip; blobs 7a4f247b/299f7a06 MATCH).
+- VERIFY-DONE: 10/10 HOLD, 0 false claims (AO #1117, Bannon #584/#575/#576/#566, WH #1858/#1857, CJ #458, DG #95, CD2 #12).
+- CHECKPOINTS: 1245 scanned, 0 stale-watchdog. Nothing to resume.
+- CANON: MEMORY.md md5 8fe806ff unchanged — nothing new.
+- FRICTION: failure-alerts.log nothing new; disk 72%; no media processes; zrok stable still DOWN (carried); wrestling-arcade still 404 (carried).
+- BLOCKED >72h (carried): WH #1835/#1820, CJ #429, PPWA #290/#293, PA3D #7/#8, DG #9, GRE #99, WH #377, Bannon #382, CJ #156/#157/#167 — all owner-held/do-not-merge. Plus: TorBox key dead; zrok stable DOWN; delete empty i-am-weasel-torbox-v1 release? (owner decision).
+- IDLE: last user msg 2026-11-23T16:03:20Z (~2111 min).
 ## Overnight pipeline — 2026-11-25T02:44Z (30-min run)
 - QUEUE SYNC: AO #1116 LANDED-VERIFIED this run (merge f70b35c == tip, merged 02:22:04Z; MERGE-QUEUE.md blob ce008fb + overnight-handoff.md blob 734f8db byte-identical in merge commit f70b35c tree, contents API + local git hashes). This run's own sync PR (number + merge recorded in next run's addendum).
 - QUEUE DELTA: 0 merged BY this run. 0 lane landings in-window. 3 new opens: Bannon #581 (Sweep C-S1, head 3b471b5), #582 (sweep C-UV, head ad95c30), #583 (Sweep C-S2, head 288548b) — all UNSTABLE, checks [], fold lane owns. Bannon #579 head moved 6a4939f -> c4dac9c, still UNSTABLE (fold lane owns). 0 closures. 0 false claims reopened (verify-done 9/9 HOLD). Queue live recount: WH 33 + Bannon 12 + PPWA 25 + CJ 1 + PA3D 2 + GRE 1 + DG 2 + WG-storage 2 + CD 0 + CD2 0 + AO 0 + wrestling 0 = 76 open (was 75; +3 net, fully explained: 3 new Bannon opens).
