@@ -1,3 +1,14 @@
+## Overnight pipeline — 2026-11-25T00:44Z (30-min run)
+- QUEUE SYNC: AO #1112 LANDED-VERIFIED this run (merge 9eab698 == tip, merged 00:21:55Z; blobs 8861e5c3/90a809e9 MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
+- QUEUE DELTA: 0 merged BY this run. Bannon #575 LANDED in-window by the fold lane (merge 61a1746 == tip, 00:39:15Z) — the 14-payload staged batch is CLOSED, all 14 merge commits verified ancestors of tip 61a1746. 1 new open: Bannon #577 (UNSTABLE, fold lane owns). 1 closure. 0 false claims (verify-done 11/11 HOLD). Queue 72 open (unchanged count) + 0 staged-batch entries.
+- STEP 1: No green+mergeable+not-held PRs. Bannon #382 draft state flip is a token artifact. WH #1851 UNSTABLE (Lane E); #1835 CLEAN owner-held; #1820 DIRTY owner-held; #1837 BLOCKED. PPWA #290/#293 CLEAN owner's call; #294 UNSTABLE. CJ #429 CLEAN owner's call. PA3D #7/#8 CLEAN do-not-merge. DG #9 DIRTY. GRE #99 UNSTABLE (owner decision). WG-storage #4/#5 UNSTABLE, tip unchanged. AO open 0.
+- STEP 2: verify-done 11/11 HOLD (AO #1112, Bannon #575/#576/#566/#568/#569/#166, WH #1858, CJ #458, DG #95, CD2 #12).
+- STEP 3: 1245 checkpoints, 0 stale-watchdog. Nothing to resume.
+- STEP 4: MEMORY.md md5 8fe806ff unchanged — canon-sync nothing new.
+- STEP 5: Disk 73% (42G free). Failure-alerts nothing new. No media processes. zrok stable share still down (carried). wrestling-arcade still 404 (re-verified).
+- STEP 6/7/8: no new thread, no new pulls.
+- BLOCKED >72h (carried, unchanged): WH #1835/#1820, CJ #429, PPWA #290/#293, PA3D #7/#8, DG #9, GRE #99, WH #377, Bannon #382, CJ #156/#157/#167 — all owner-held/do-not-merge. Plus: TorBox key dead; zrok stable share down.
+- IDLE: last user msg 2026-11-23T16:03:20Z (~1961 min idle at run start).
 ## Overnight pipeline — 2026-11-25T00:14Z (30-min run)
 - QUEUE SYNC: AO #1111 LANDED-VERIFIED this run (merge 590c112 == tip, merged 23:52:06Z; blobs 40e8468c/1e4f7933 MATCH). This run's own sync PR (number + merge recorded in next run's addendum).
 - QUEUE DELTA: 0 merged BY this run. 4 Bannon main landings in-window by the fold lane (23:57Z): #566, #568, #569, #576 — all verified ancestors of new tip 9ecf777 (compare ahead_by 8, behind_by 0). 0 new opens, 4 closures. 0 false claims (verify-done 10/10 HOLD). Queue 72 open (was 76; -4 net) + 1 staged-batch entry (14 payloads on muse/web-upgrade awaiting Bannon #575, still unknown/DIRTY head da9afb8, fold lane owns).
