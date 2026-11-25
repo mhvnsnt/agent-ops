@@ -1,3 +1,16 @@
+## Overnight pipeline — 2026-11-25T06:44Z (30-min run)
+- QUEUE SYNC: AO #1125 LANDED-VERIFIED this run (merge b720b86 == tip, merged 06:20:41Z; MERGE-QUEUE.md blob d6a7a70 + overnight-handoff.md blob 9410dee byte-identical in merge commit b720b86 tree, contents API + local git hash-object). This run's own sync PR (number + merge recorded in next run's addendum).
+- QUEUE DELTA: 0 merged BY this run. 0 new opens, 0 closures, 0 lane landings in-window. Queue 70 open (unchanged), 25 blocked. Sweep diff vs 06:14Z: ZERO PR changes — only AO tip moved (2c0e015 -> b720b86, the 06:14Z sync #1125). Live recount from sweep-20261125-0644.jsonl (exit 0, 11 repos): WH 33 + Bannon 4 + PPWA 25 + CJ 1 + PA3D 2 + GRE 1 + DG 2 + WG-storage 2 (re-verified: #4/#5 heads 17769bd/2dd0681, tip 2881630 unchanged) + CD 0 + CD2 0 + AO 0 + wrestling 0 = 70 open — matches queue.
+- STEP 1: No green+mergeable+not-held PRs. CLEAN PRs all held: WH #1835 (OWNER-HELD), CJ #429 (owner's call), PPWA #290/#293 (owner's call), PA3D #7/#8 (do-not-merge bodies) — NOT merged. Bannon open: #586/#565/#564 UNSTABLE (fold lane owns), #382 draft DIRTY. WH #1851 UNSTABLE (Lane E). No merges by this run.
+- STEP 2: verify-done 8/8 HOLD (AO #1125, WH #1858, Bannon tip, CJ #458, DG #95, CD2 #12, PPWA tip, PA3D tip). 0 false claims.
+- STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog. Nothing to resume.
+- STEP 4: MEMORY.md md5 8fe806ff unchanged — canon-sync nothing new.
+- STEP 5: Disk 72% (43G free). Failure-alerts nothing new. No media processes running. zrok stable still DOWN (carried, not re-probed). wrestling-arcade still 404 (carried, not re-probed).
+- STEP 6/7/8: no new thread, no new pulls. LOCAL-ONLY sweep bounded: 7 worktrees checked read-only — dirty states already recorded in the queue; no new local-only items.
+- BLOCKED >72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge. Plus carried: TorBox key dead; zrok stable share DOWN. Open owner decision: delete the empty published i-am-weasel-torbox-v1 release?
+- IDLE: last user msg 2026-11-23T16:03:20Z (~2321 min idle at run start).
+- SYNC PR: this run's sync PR (number + merge recorded in next run's addendum).
+
 ## Overnight pipeline — 2026-11-25T06:14Z (30-min run)
 - QUEUE SYNC: AO #1124 LANDED-VERIFIED this run (merge 2c0e015 == tip, merged 05:51Z; MERGE-QUEUE.md blob 9eeff5a + overnight-handoff.md blob b8437b6 byte-identical in merge commit 2c0e015 tree, contents API + local git hash-object). This run's own sync PR (number + merge recorded in next run's addendum).
 - QUEUE DELTA: 0 merged BY this run. 0 new opens, 0 closures, 0 lane landings in-window. Queue 70 open (unchanged), 25 blocked. Sweep diff vs 05:44Z: ZERO PR changes — only AO tip moved (e1350c9 -> 2c0e015, the 05:44Z sync #1124). Live recount from sweep-20261125-0614.jsonl (exit 0, 11 repos): WH 33 + Bannon 4 + PPWA 25 + CJ 1 + PA3D 2 + GRE 1 + DG 2 + WG-storage 2 (re-verified: #4/#5 heads 17769bd/2dd0681, tip 2881630 unchanged) + CD 0 + CD2 0 + AO 0 + wrestling 0 = 70 open — matches queue.
