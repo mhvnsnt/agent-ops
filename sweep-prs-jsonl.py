@@ -43,7 +43,7 @@ def main():
             tip_time = br["commit"]["commit"]["committer"]["date"]
         except Exception as e:
             rows.append({"repo": repo, "error": str(e)[:200], "open_count": -1})
-            print(f"{repo}: TIP ERROR {e}", flush=True)
+            print(f"{repo}: TIP ERROR {e}", file=sys.stderr, flush=True)
             continue
         prs = gh(f"repos/{OWNER}/{repo}/pulls?state=open&per_page=100")
         items = []
@@ -68,12 +68,15 @@ def main():
             })
         rows.append({"repo": repo, "tip": tip, "tip_time": tip_time,
                      "open_prs": items, "open_count": len(items)})
-        print(f"{repo}: tip {tip} open {len(items)}", flush=True)
+        print(f"{repo}: tip {tip} open {len(items)}", file=sys.stderr, flush=True)
     with open(out, "w") as f:
         for r in rows:
             f.write(json.dumps(r) + "\n")
-    print(f"WROTE {out}")
-    print("TOTAL OPEN:", sum(r.get("open_count", 0) for r in rows if r.get("open_count", 0) > 0))
+    # All progress/summary output goes to stderr: the script writes the
+    # jsonl itself, so redirecting stdout into that same file corrupts it
+    # (2026-11-25 17:14Z run: WROTE/TOTAL lines spliced into the WH row).
+    print(f"WROTE {out}", file=sys.stderr)
+    print("TOTAL OPEN:", sum(r.get("open_count", 0) for r in rows if r.get("open_count", 0) > 0), file=sys.stderr)
 
 if __name__ == "__main__":
     main()
