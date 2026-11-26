@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-26t2044z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-26t2114z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-26t2114z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-26T21:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-26t2044z-30-min-run" class="md-nav__link">
@@ -15282,6 +15293,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-26t2114z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-26T21:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-26t2044z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -21310,6 +21332,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-26t2114z-30-min-run">Overnight pipeline — 2026-11-26T21:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-26t2114z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: AO #1193 verified LANDED this run (merge 1ca27797 == tip 1ca2779, merged 2026-11-26T20:55:06Z, MERGE-QUEUE.md blob 67cc5a00 MATCH main via contents API; overnight-handoff.md blob f76147d9 MATCH). This run's sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 0 new opens, 0 closures. 1 lane landing in-window: PA3D direct push 7265ba8 (2026-11-26T20:54:35Z, "Checkpoint: landings 2026-11-26 (recall merge, D5, wave-2 pull 9/9)" — work/wave1-extraction/CHECKPOINT.md only; shots.json blob 2344eebd MATCH main). Queue 75 open, 31 blocked — UNCHANGED vs 20:44Z. Live recount from sweep-20261126-2114.jsonl (exit 0, 12 repos incl WG-storage): WH 34 + Bannon 5 + PPWA 27 + CJ 1 + PA3D 2 + GRE 1 + DG 2 + WG-storage 2 + CD 0 + CD2 0 + AO 0 + wrestling 0 = 74 open in swept repos; + PA2D #9 draft = 75. Sweep diff vs 2044: ONLY AO tip fcfff98 -&gt; 1ca2779 (the 2044 sync #1193) + PA3D tip 734bb9d -&gt; 7265ba8 (the landing above); PA3D #7 clean-&gt;unknown, #8 dirty-&gt;unknown (heads unchanged — token read artifact, both still do-not-merge); WG-storage re-probed after a bad first sweep file (my argv mistake: passing a repo name replaces the default list — rerun covered all 12; WG tip 2881630, #4/#5 heads unchanged); no new opens, no closures, no other head moves, no 504s this run.</li>
+<li>STEP 1: no merges — CLEAN PRs all held: CJ #429 owner's call (head c852419). WH #1835 OWNER-HELD (head 4cc7135). PPWA #290/#293 owner's call (heads 182c5f0/e22ab37). WH #1861 DRAFT CLEAN head 94a3207 (never merge drafts). PPWA #305 UNSTABLE head 81751d0d — OWNER-HELD (owner's #305 merge call owed; CI never ran, runner oracle-ppp OFFLINE; do NOT merge). PPWA #304 UNSTABLE head 92d674e (canon sync). Bannon #596 UNSTABLE head 541dc27 (fold lane owns). PA3D #7/#8 do-not-merge (heads b9bde11/22ba5d1, states unreadable this run).</li>
+<li>STEP 2 verify-done (7/7 HOLD, 0 false claims): AO #1193 merge 1ca27797 == tip, blobs 67cc5a00/f76147d9 MATCH main; PA3D 7265ba8 on main (commits API), shots.json blob 2344eebd MATCH main; wave-2 pull 9/9 — verify-20261126.txt VERIFY-DONE 20:56:59Z, 9/9 sha256s, 3/3 published sha1 MATCH; release pokemon-arena-3d-wave2-20261122 (id 459896661) holds 4 assets (3 manuals + Colosseum 660,795,392 B size-exact), XD uploading; Megami v4 blend 557,629,024 B on disk (mtime 20:45Z), 33 frames in proof/frames, render running pid 16982 (started 21:11Z); WH #1858 merge 9872b47 ancestor of tip d65c53a (compare ahead, behind 0); DG #95 merge 3ec5afc == tip (identical). Bannon #575 carried via tip-unchanged (3121791; compare API 422 diff-too-long — not a claim failure).</li>
+<li>STEP 3 checkpoints: 1245 .json scanned, 0 unparseable; 0 watchdog-running, 0 stale-watchdog; checkpoint_audit.py still missing (tools/ archived). Nothing to resume. Wave-2 pull lane healthy: uploader pid 13285 alive (XD uploading since 21:07:31Z), part-hash job done 5/5 (21:01Z). Megami twerk v4 render running (pid 16982). Untouched.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 UNCHANGED dd77915a — canon-sync nothing new.</li>
+<li>STEP 5 friction: failure-alerts.log nothing new (last 2026-10-20). Disk 83% (27G free) — above the 75% resting target, below the 85% bar. QUOTA WALL (new, lane-reported 20:57–20:58Z): split died mid-write, probe write Errno 122 at ~124G used despite df showing 26G free — quota cap, not df-full; lane route-switched to stream-upload (release mirror in progress), deleted only the incomplete derived part-00 (reproducible, not a game file). Headroom ~0.9 GB — any new big local write risks Errno 122; disk-guardian 15:14 CST confirms ~1–1.7 GiB headroom, safe targets exhausted. Sacred, untouched: wave-2 uploader (pid 13285) + Megami Blender render (pid 16982) + at-inflate2.py (pid 8912 per guardian). M. Engine /health UP (200). wrestling-arcade 404 re-verified; zrok stable share DOWN re-verified (502, needs owner myzrok.io sign-in). Approval-cards outage DAY 3 carried.</li>
+<li>STEP 6/7/8: no new thread, no new pulls. Local-only observed (lane-owned, NOT committed): PPWA v71-models (PR #305 branch, Adri.glb + models-data.js/json + Kasumi/Melanie GLBs modified); PA3D main uncommitted assets/anim/28.glb, 311.glb, SOURCES.md + NEW assets/models/M2_out.glb + index.html (lane in-progress); DG ep01-puppets derived PNGs + montray manifest bak. Daily-note items carried: merge-law CI watch (58 PRs, 0 open+clean; money-machine-hq #31 already merged 2026-10-30 — stale list entry; BioMechania #26 branch-protection blocked); live-view watchdog (rotating tunnel regenerated, zrok still down); M. Engine supervisor watchdog exit 0.</li>
+<li>BLOCKED &gt;72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge; Bannon #592/#593/#595 owner-held (verdicts owed). Plus carried: TorBox key dead; zrok stable share DOWN; disk quota wall (~124G cap, ~0.9G headroom). Open owner decisions: PPWA #305 merge? Bannon #592/#593/#595 verdicts? delete the empty published i-am-weasel-torbox-v1 release? wh-449's 33 uncommitted files — follow-up PR or drop?</li>
+<li>IDLE: last user msg 2026-11-26T15:35:11Z (~339 min idle at run start).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-26t2044z-30-min-run">Overnight pipeline — 2026-11-26T20:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-26t2044z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1192 verified LANDED this run (merge fcfff98 == tip, merged 2026-11-26T20:24:05Z, MERGE-QUEUE.md blob c9474962 MATCH main via contents API == local hash-object; overnight-handoff.md blob e377b7a4 MATCH). This run's sync PR (number + merge recorded in next run's addendum).</li>
