@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-26t1914z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-26t1944z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-26t1944z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-26T19:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-26t1914z-30-min-run" class="md-nav__link">
@@ -15249,6 +15260,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-26t1944z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-26T19:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-26t1914z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -21244,6 +21266,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-26t1944z-30-min-run">Overnight pipeline — 2026-11-26T19:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-26t1944z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: AO #1190 verified LANDED this run (merge 909999c4 == tip, merged 2026-11-26T19:22:51Z, MERGE-QUEUE.md blob 6a6c80e1 MATCH main via contents API == local hash-object; overnight-handoff.md blob 56f5ff33 MATCH). This run's sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 0 new opens, 0 closures. 1 lane landing in-window: PA3D merge 199c3dc (2026-11-26T19:35:32Z, "Merge wave1/cipher-key-lair into main — Cipher Key Lair (D5) interiors", parents fd13d98 + 20a0dcc; 7 XD factory interiors, test56 +126 checks, suite 53,263/42 lane-verified). Queue 75 open, 31 blocked — UNCHANGED vs 19:14Z. Live recount from sweep-20261126-1944.jsonl (exit 0, 12 repos): WH 34 + Bannon 5 + PPWA 27 + CJ 1 + PA3D 2 + GRE 1 + DG 2 + WG-storage 2 + CD 0 + CD2 0 + AO 0 + wrestling 0 = 74 open in swept repos; + PA2D #9 draft (repo outside the sweep set) = 75. Sweep diff vs 1914: ONLY PA3D tip fd13d98 -&gt; 199c3dc (the landing above) + AO tip e6e5bf7 -&gt; 909999c (the 1914 sync #1190); CJ #429 unknown-&gt;clean (re-probed OPEN CLEAN, still held); PPWA #304 head 90d4fd5 -&gt; 92d674e (the 1914 run's canon append, recorded then); no new opens, no closures, no other head moves, no 504s this run.</li>
+<li>STEP 1: no merges — CLEAN PRs all held (re-probed): CJ #429 owner's call (head c852419, checks success). WH #1835 OWNER-HELD (head 4cc7135, checks failure+success). PPWA #290/#293 owner's call (heads 182c5f0/e22ab37, no checks). PA3D #7 do-not-merge (head b9bde11, OPEN CLEAN re-probed). PA3D #8 DIRTY re-probed (head 22ba5d1, do-not-merge; main moved under it again via 199c3dc). PPWA #305 UNSTABLE head 81751d0d — OWNER-HELD (owner's #305 merge call owed per MEMORY 12:54 CST bullet; CI never ran, runner oracle-ppp OFFLINE; do NOT merge). PPWA #304 UNSTABLE head 92d674e (canon sync; checks unreadable via this token — stays OPEN-PR until a later run sees CLEAN). Bannon #596 UNSTABLE head 541dc27 (fold lane owns). WH #1861 DRAFT CLEAN head 94a3207 (never merge drafts). PA2D #9 DRAFT head aee3956 (blocked on owner calls).</li>
+<li>STEP 2 verify-done (6/6 HOLD, 0 false claims): AO #1190 merge 909999c4 == tip, blobs 6a6c80e1/56f5ff33 MATCH main; PA3D 199c3dc merge == tip (Cipher Key Lair landing, parents fd13d98+20a0dcc); WH #1860 merge d65c53a == tip; Bannon #575 merge 3121791 == tip; DG #95 merge 3ec5afc == tip; PPWA #295 merge e56e317 == tip.</li>
+<li>STEP 3 checkpoints: 1245 .json scanned, 0 unparseable; 0 watchdog-running, 0 stale-watchdog; checkpoint_audit.py still missing (tools/ archived). Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 UNCHANGED 879a0ef1 (baseline from 19:14Z). Canon-sync nothing new. Mocap-figures own-repo thread carried (needs a lane; owner order, repo creation + locating the figures).</li>
+<li>STEP 5 friction: failure-alerts.log nothing new (last 2026-10-20, lane-owned). Disk 78% (34G free) — above the 75% resting target, below the 85% bar; disk-guardian 13:14 CST says safe targets exhausted, nothing clearable without a store-first lane. Sacred, untouched: 3 archive.org curl downloads (Colosseum nkit, Pokken Arcade, Pokken DX update) started 19:35 — Colosseum pid 73930 finished between checks, Pokken pair still running at 19:52Z; lane-owned. M. Engine supervisor /health UP on port 8771 (uptime 4283s at ~19:52Z — restarted ~18:41Z, ~2h death pattern continues, watchdog revived it; workersAlive 0). wrestling-arcade STILL 404 (re-verified this run). zrok stable share DOWN (re-verified this run: fmmg-live.shares.zrok.io = 502, fmmg-live.share.zrok.io = 404; needs owner-side sign-in). Approval-cards outage DAY 3 carried.</li>
+<li>STEP 6/7/8: no new thread started, no new pulls — Bannon fold lane owns #592/#593/#595/#596; WH #1851 lane owns; PA2D lane D on hold per the 17:39Z coordinator note. Stand down. LOCAL-ONLY sweep (bounded, read-only): 8 worktrees checked — HEADs match 19:14Z recorded values exactly (agent-ops b3735f3, wh-shallow 9b56d726, wh-449 6e3ba07c, watchdog-v2-runtime e6e5bf7, dream-girl 9488a9f, physics-playground-pwa 9c4c9c0, pokemon-arena-3d 9f06299); bannon-merge-lane still an empty clone (2 untracked mergetree38 files, already recorded). Dirty counts: agent-ops 1994 -&gt; 2001 (this run's sweep-1944 files + lock + log appends — recorded, untouched); wh-shallow 53495 stands; wh-449 33 (queued LOCAL-ONLY 21:14Z, still open question); watchdog-v2-runtime 4, dream-girl 4, physics-playground-pwa 7, pokemon-arena-3d 61. No new local-only items, nothing committed, nothing discarded.</li>
+<li>BLOCKED &gt;72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge (PA3D #8 now DIRTY — conflict from the 199c3dc merge); DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge; Bannon #592 owner-held (awaiting Mars's verdict on the Dimma hair graft — merge is his call); Bannon #593 owner-held (awaiting Mars's verdict — now SUPERSEDED by #595, close unmerged when #595 merges); Bannon #595 owner-held (awaiting Mars's verdict on the 2K26 staging measurements + wired staging system — merge is his call); PPWA #305 OWNER-HELD (owner's #305 merge call + playtest; live in-game morph driving NOT PROVEN). Plus carried: PA2D #9 DRAFT (blocked on owner calls: renderer-crash attribution go-ahead + build-7th-button-or-accept-6 + ult-charge rest); WH #1861 DRAFT (lane WIP, not ready for review); TorBox key dead; zrok stable share DOWN. Open owner decisions: delete the empty published i-am-weasel-torbox-v1 release? wh-449's 33 uncommitted Oct-24 files — commit as a follow-up PR or drop? Bannon #592 — merge the Dimma hair graft or not? Bannon #593 — superseded by #595, close unmerged? Bannon #595 — merge the 2K26 staging work or not? PPWA #305 — merge the Adri morphs or not? PA2D — main-comparison run for the renderer crash: go-ahead? PA2D — build the 7th button (6 moves + DASH) or accept the 6-button bar?</li>
+<li>IDLE: last user msg 2026-11-26T15:35:11Z (~249 min idle at run start).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-26t1914z-30-min-run">Overnight pipeline — 2026-11-26T19:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-26t1914z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1189 verified LANDED this run (merge e6e5bf7 == tip, merged 2026-11-26T14:55:06Z; AO tip still e6e5bf7, no AO PRs since). NOTE: the 18:14Z run's sync PR NEVER EXISTED — no AO #1190, no open sync PR, no "done" line in overnight-log, lock left 60 min stale (removed this run per the &gt;45-min rule). The 18:14 run died after writing its queue+handoff entries locally, before syncing; its entries are carried in THIS run's sync (branch merge-queue-sync-20261126T1914Z). This run's sync PR (number + merge recorded in next run's addendum).</li>
