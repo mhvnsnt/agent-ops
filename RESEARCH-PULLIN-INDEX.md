@@ -336,3 +336,22 @@ Docs: agent-ops `research-friction-20261118/01-live-view-tunnels.md`,
 | `var-tmp-audit.sh` (HARDCODED/OVERRIDABLE/GUARDED/MENTION sweep, exit 1 on hardcodes) | this pass, own code | ✅ wired — tested live on agent-ops: 7 HARDCODED + 3 OVERRIDABLE, exit 1, matches manual grep |
 | Quezada stage driver `PB="/var/tmp/pb-quezada"` + own comment "reassembled up to 2.4G: EXCEEDS tmpfs!" | live read of `disk-stage-20261116/quezada-stage-driver.sh` | 📄 queued — lane owner: PB env-override like pokemon's before the next pull-back |
 | tmpfs-guard adoption: zero lane scripts call it (only MERGE-QUEUE.md + .mq-main-tmp.md mention it) | live grep across agent-ops | 📄 queued — guardian/checkpoint-protocol follow-up from Nov 15 §4.3, still open |
+
+## Friction research — manifest gap (guardian can't clear idle workdirs) · 52 UNSTABLE PRs = broken no-deletion-guard · Tailscale Funnel excluded (2026-11-24)
+
+Docs: agent-ops `research-friction-20261124/01-manifest-gap.md`,
+`02-ci-unstable-guard.md`, `03-tailscale-funnel-excluded.md` +
+`manifest-gen.sh` (wired + tested this pass). Log:
+`FRICTION-RESEARCH-LOG.md` 2026-11-24 entry. No PR opened from the
+dirty agent-ops workdir (standing precedent) — clean-room clone PR
+carries this pass. No live lane touched; nothing stored/moved/deleted.
+
+| Finding / candidate | Source (license) | Status |
+|---|---|---|
+| `manifest-gen.sh` (paths + sha256 manifests, `--verify`, atomic `--out`, fail-closed on unreadable) | Own glue, stdlib only (sha256sum/sort/find) | ✅ **wired + tested** — scratch tree (spaces/hidden/symlink/.git) correct; `--verify` exit 0 clean / 1 tampered; guard [manifest] leg PASSES with its output; scale: 984 files / 353M real idle workdir hashed in ~10.7s (stdout-only, no manifest file written); unreadable dir/file fail-closed exit 2 (incl. a pre-check bug found + fixed in testing) |
+| rclone 1.75.2 (index said LANDED at `~/workspace/tools/rclone/rclone`) | rclone.org, MIT | ⚠️ **STALE INDEX — binary GONE**: `~/workspace/tools/rclone/` absent, `which rclone` finds nothing (tools/ archived 2026-10-31, never restored). Restore from release `tools-archive-2026-10-31` if a lane needs it; not required for manifests (stdlib covers it) |
+| hashdeep / git-annex as manifest tools | hashdeep (public domain-ish), git-annex (GPL-3.0) | ❌ evaluated, not pulled — heavier than the job; stdlib `sha256sum` covers it; re-evaluate rclone first if chunked/verified transfer is wanted |
+| no-deletion-guard failing on every PR event since ~Oct 15 across repos (52 UNSTABLE) | Live `gh` API this pass (Actions runs API works; check-runs 403; job steps empty; logs 404) | 📄 diagnosed — guard logic sound (PRs with ZERO deletions fail: chimera-roms #5 1 file/0 del, #8 1 file added/0 del); workflow file unchanged since Oct 14; single success ever was the PR that added it. Fix needs a browser read of one failed run's log (chimera-roms run 45039968566) or a token with checks:read — blocked on that, not re-researched further here |
+| M.-Engine- #21 `build_and_verify` FAILURE + AshLanev2 validation/asset-validation/Deploy-PWA failures (Nov 22) | Live API | 📄 genuine repo-specific CI failures, separate from the guard pattern — lane owners' work |
+| Tailscale Funnel as stable live-view route | Built-in client + `/opt/hatch/connectors/tailscale/CONNECTOR.md` | ❌ excluded — client-only by design ("accepts none, hosts nothing"); `funnel`/`serve` subcommands unavailable; installing upstream client forbidden by the connector doc. Stable URL stays: zrok re-enable (owner sign-in) vs localhost.run paid domain |
+| Full clone of chimera-roms into /tmp for guard reproduction | — | ❌ failed live — /tmp is 512 MB tmpfs, clone died ENOSPC; use durable disk or the compare API instead |
