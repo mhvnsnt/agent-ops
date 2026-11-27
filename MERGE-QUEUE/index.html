@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-27t1944z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-27t2014z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-27t2014z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-27T20:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-27t1944z-30-min-run" class="md-nav__link">
@@ -15656,6 +15667,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-27t2014z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-27T20:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-27t1944z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -22058,6 +22080,18 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-27t2014z-30-min-run">Overnight pipeline — 2026-11-27T20:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-27t2014z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: AO #1229 verified LANDED (merge d40aec2 == tip d40aec2 at sweep). This run's sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 4 Bannon lane landings verified (merge commits on main, tip 19f70c1): #620 pair previews (19f70c1 == tip), #614 grapple A (b8b5d99), #612 grapple B (3854291), #610 other clips (60aafff) — merged by the Stage 5 lane under Real's order "merge everything the clean way, first things first" (recorded in MEMORY.md during this run as BANNON CLEAN MERGES; the 19:44 run's FLAG on #592/#595 owner-held merges is ANSWERED by that order — owner ordered the clean merges; #592/#595 verdict question closed, no revert call outstanding unless he says otherwise). Bannon open 7 → 3 (#596 HELD: APEX STEER open question + video proof owed + tests/hybrid.test.cjs missing; #600 HELD WIP, content landed via Stage 5, 0 files vs base; #382 DRAFT/CONFLICTING TNA, revive-or-drop his call). 0 new opens. Queue 86 open (live sweep: WH 35 + Bannon 3 + CJ 1 + PPWA 28 + DG 3 + PA3D 2 + GRE 2 + WG 6 + wrestling 1 + BPP 4 + AO 0 + CD 0 + CD2 0 + PA2D 1), 38 blocked (41 - 3 landed-blocked #610/#612/#614; #620 was never blocked-counted).</li>
+<li>STEP 1: no merges by this run — only CLEAN PRs are owner-held/draft/do-not-merge (WH #1835 owner-held, CJ #429 owner's call, PPWA #290/#293 owner's call, PA3D #7 do-not-merge, PA2D #9 draft). WH #1867 head moved 5ede7fb → 79bd9e7 (lane pushed), still UNSTABLE, checks IN_PROGRESS. Bannon CI outage CONFIRMED still active: 5 runs 20:17:46Z all failure (Autonomous Build &amp; Verify Loop, deletion-guard, pr-clean-merge, Shipping gate, no-deletion-guard). DG #96 / GRE #101 / wrestling #25 / WG-storage #8 / WG-voice-pipe #10 / PPWA #304/#305/#306 / BPP #14 PULL-IN-FIRST stragglers carried (checks never ran — dead runner/CI outage). WH main unchanged (7c65f7d); AO main unchanged (d40aec2); PA3D main unchanged (f238c06); CJ main unchanged (ffc5b0d); Bannon main moved 429133c → 19f70c1 (4 merges in-window).</li>
+<li>STEP 2 verify-done (7/7 HOLD, 0 false claims): Bannon #610/#612/#614/#620 merge commits on main (19f70c1 == tip); AO #1229 d40aec2 == tip; WH #1866 7c65f7d == tip; CJ #463 ffc5b0d == tip; PA3D a519f41f ancestor (ahead 1); WH #1577 merge 3f63454e ancestor (ahead 1166, behind 0); WH #496 merged 2026-10-22T05:16:02Z. All compare/PR-API verified.</li>
+<li>STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog, 0 unparseable. checkpoint_audit.py still missing (tools/ archived). Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 CHANGED 0737082c → 0b6f23a7 → Bannon entry added live during this run. Diff vs 19:44 baseline: memory-system rewrites only (Fiverr/PA2D/AnimLab entries condensed) + NEW BANNON CLEAN MERGES entry (Real's "merge everything the clean way" order + round-1/round-2 landing record + HELD #596/#600/#382 + clip totals universal 4,317 / mixamo 4,315 / pair 1,687). No new unlanded game canon to commit: the merge record IS the Bannon main state (verified above) and the HELD items are already queue entries (#596/#600/#382). New baseline _canon-baseline-2014.md (updated to include the Bannon entry). Daily-note tail since 19:44Z is watchdog passes/corrections only, no new game canon/decisions.</li>
+<li>STEP 5 friction: failure-alerts.log nothing new (last 2026-10-20). Disk 83% (26G free). at-inflate2 pid 32951 alive (sacred, untouched). No ffmpeg/blender/aria2c/wget/curl media processes. Sweep fast-path PARTIAL this run: 8/15 repos failed JSON parse on the tip call (GitHub API flakiness — non-JSON error payload), all 8 re-probed OK via sweep-one-nochecks.sh; live sweep authoritative at 86.</li>
+<li>STEP 6/7/8: no new thread, no new pulls — Bannon fold lane owns #596/#600; WH #1851 lane owns; PA2D lane D on hold; Megami v4 + wave-2 lanes active. Stand down. LOCAL-ONLY sweep (bounded): PPWA v71-models GLBs + DG ep01-puppets PNGs + agent-ops stale branch merge-queue-sync-20261126T2014Z (remote deleted after #1192 merged; local working files are the live queue, sync via Git Data API only) all already recorded — no new local-only items, nothing committed from local checkouts, nothing discarded.</li>
+<li>BLOCKED &gt;72h (carried): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft (revive-or-drop: his call); CJ #156/#157/#167 do-not-merge; Bannon #596 HELD (APEX STEER question + video proof + missing tests); Bannon #600 HELD (WIP, content landed via Stage 5). NEW owner decisions owed: none new this run — #592/#595 verdict question CLOSED by Real's clean-merge order (recorded in MEMORY.md this run). Plus carried: TorBox key dead; zrok stable share DOWN; localhost.run 502 (watchdog-owned); disk quota wall (~124G cap); wrestling-arcade 404 intermittent.</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-27t1944z-30-min-run">Overnight pipeline — 2026-11-27T19:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-27t1944z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1228 verified LANDED (merge cfb2f3f == tip cfb2f3f at sweep). This run's sync PR (number + merge recorded in next run's addendum).</li>
