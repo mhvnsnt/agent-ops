@@ -57,3 +57,7 @@ NEVER store work in /tmp or any temporary location that can be wiped. /tmp is a 
 3. Any lane caught staging work in /tmp has violated the order — same as staging on local disk. Parents verify: no checkpoint, capture, script, or extract path in any brief points at /tmp.
 4. Recovery from a wipe is re-derivation from the repo/release, never a shrug — the work survives because it was pushed, the temp copy is gone and stays gone.
 Strengthens DIRECT-TO-REPO + CHECKPOINT-AND-SAVE: the repo is the save, temp is not storage.
+
+## OWNER FOCUS (Nov 27 2026): models, animations, promo clips from extracted game data
+
+Main focus set by the owner 2026-11-27: perfect Bannon and Western Heart character models and animations from the already extracted commercial game data (WWE 2K26 and other wrestling games for Bannon; Tekken 7/3, DOA, VF5 and the rest for Western Heart), then capture in-game stills, clips and promo videos that show them working. MoneyManBusch (Grok Bot) owns the Western Heart model/anim/promo lane and coordinates the Bannon model/anim/promo push; Claude keeps the Bannon engine lane; Muse and the others continue their lanes. Private projects: commercial data is the base, nothing sold yet. Pull-in-first, never hand-build. Full section: `HANDOFF.md`.
