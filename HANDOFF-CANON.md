@@ -59,3 +59,10 @@ Some fighters genuinely have no recorded canon anywhere (owner's own list includ
 
 - **The canon archive IS on main now.** The "Archive push IN FLIGHT" line in the table above is superseded: `docs/canon-archive/CANON-MASTER.md` on western-heart main carries owner rulings through WH #1849 (Deadlift Alley-Oop, merge 72fead43, blob 1518e624) and #1848 (moveset-library design, 416e3e3), both verified on main by the overnight pipeline. The overnight pipeline's STEP 4 canon sync runs every 30 min; MEMORY.md last-sync md5 was 49ba4e66 at the 15:44Z run.
 - The "only 4 of 67 roster dirs have a canon file" count above is Oct-23 state and was NOT re-verified in this refresh — do not quote it as current. The bios-harvest state is whatever the repo shows today.
+
+## 2026-11-26 — Canon-sync landings (overnight pipeline, 18:14Z run)
+
+- PPWA `docs/bios/adri.md` + `docs/HANDOFF.md` — Adri source-blend loss/correction/recovery + E2E infra verdict, opened as PR #304 this run (branch `canon-adri-recovery-20261126`, commits 68139d8 + 90d4fd5, +9/−0) — still OPEN, UNSTABLE; checks unreadable via this token (check-runs API 403, GraphQL statusCheckRollup not accessible). Merge only when a later run sees CLEAN. (Note: the 16:14Z run's canon-sync script existed but never ran — its sections were absent from main, verified 0 hits; this run executed it, fixed its `existing_pr` bug — `-f` flips `gh api` to POST and 422s — and ran the CJ half on re-run.)
+- CJ `docs/CANON-MASTER-SHOW.md` §8 — Purple Lot V2 owner rejection + Colab render sign-in block, PR #461 MERGED + VERIFIED on main this run (merge eb96e6a == tip, blob 5da5a607 MATCH branch).
+- PA2D `HANDOFF.md` §8 — LIVE + MERGES LANDED + PIECE 1 +2 BUTTONS gate-red, PR #10 MERGED + VERIFIED on main this run (merge c2a3a8d == tip, blob 91ba0480 MATCH branch). The branch work itself is DRAFT PR #9 (`mod/attack-buttons` @ aee3956), blocked on owner calls (renderer-crash attribution go-ahead, 7th-button call, ult-charge rest).
+- MEMORY.md baseline for the next run: md5 191fe0b1 (`_canon-baseline-1814.md`). NO-SPEND / FIVERR / legal / pauper items never synced (personal/financial/legal).
