@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-27t1744z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-27t1814z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-27t1814z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-27T18:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-27t1744z-30-min-run" class="md-nav__link">
@@ -15623,6 +15634,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-27t1814z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-27T18:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-27t1744z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -21992,6 +22014,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-27t1814z-30-min-run">Overnight pipeline — 2026-11-27T18:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-27t1814z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: AO #1226 verified LANDED (merge b311a77 == tip). This run's sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 2 lane landings verified: WH #1866 (promo-capture HUD-off, merge 7c65f7d == tip, +225/-0, 8 files, pure additions) and Bannon #617 (koc2-phases clip bank, merge e60adb1 == tip, +5,557,375/-0, 300 files, pure additions) — both merged by lanes despite red CI (outage), recorded not endorsed. 1 new open: Bannon #616 (promo-capture, same tooling as WH #1866, UNSTABLE, BLOCKED-ci-outage). Queue 100 open (WH 34 + Bannon 18 + CJ 1 + PPWA 28 + DG 3 + PA3D 2 + GRE 2 + WG 6 + wrestling 1 + BPP 4 + AO 0 + CD 0 + CD2 0 + PA2D 1), 53 blocked (52 carried + Bannon #616 ci-outage).</li>
+<li>STEP 1: no merges — only CLEAN PRs are owner-held/draft/do-not-merge (WH #1835, CJ #429, PPWA #290/#293, PA3D #7, PA2D #9 draft). Bannon CI outage CONFIRMED still active: 5 runs 18:15:46Z all failure (incl. deletion-guard, build gate). DG #96 stays BLOCKED (ci fast-fail). WG-storage #8 / WG-voice-pipe #10 guard-FAILURE (carried). GRE #101 + wrestling #25 queued on dead runner. PPWA #304/#305/#306 PENDING dead runner. WH main moved on #1866 (18:12Z); Bannon main moved on #617 (18:15Z).</li>
+<li>STEP 2 verify-done (10/10 HOLD, 0 false claims): WH #1866 7c65f7d == tip; Bannon #617 e60adb1 == tip; AO #1226 b311a77 == tip; WH #1863 71c3ab0 ancestor (ahead 8); WH #1864 b858c97 ancestor (ahead 4); WH #1865 064c8cd ancestor (ahead 2); Bannon #615 6f5f55e ancestor (ahead 2); Bannon #608 87b356f ancestor (ahead 14); CJ #462 210c6d6 ancestor (ahead 2); DG #95 3ec5afc == tip. All compare-API verified.</li>
+<li>STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog. checkpoint_audit.py still missing (tools/ archived). Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 b49b7493 UNCHANGED since 17:44 baseline — canon-sync nothing new. Daily-note tail since 17:44Z is watchdog/pulse runs only, no new game canon/decisions.</li>
+<li>STEP 5 friction: failure-alerts.log nothing new (last 2026-10-20). Disk 83% (26G free) — below 85% bar, but QUOTA WALL flicker hit this run: writes to agent-ops failed EDQUOT twice 18:17–18:18Z despite 26G free (same ~124 GiB wall the 12:20 CST pulse recorded; cleared within minutes, no data lost). SWEEP-TOOLING FIX: <code>gh pr list</code> with statusCheckRollup is GraphQL-inaccessible on this token for Bannon/PPWA/DG/GRE/wrestling/WG-storage/WG-voice-pipe/BPP ("Resource not accessible by personal access token") — future sweeps must omit statusCheckRollup for those repos (mergeStateStatus still works; checks via Actions-runs API). at-inflate2.py alive (pid 3352, started 17:11Z — sacred, untouched). No ffmpeg/blender/aria2c/wget/curl media processes. zrok stable share still down (re-probed this run: 502 in 1.0s, needs owner token). localhost.run tunnel STILL 502 — watchdog regenerated 18:22Z (https://3790bd20ff1b99.app.lhr.life/vnc.html) but the public URL returns 502 (1 check this run); BOTH public live-view paths down; watchdog owns regeneration.</li>
+<li>STEP 6/7/8: no new thread, no new pulls — Bannon Stage 5 + disk-clear lanes actively landing (2 merges in-window); PA3D coordinator #17 active; WH #1851 lane owns; stand down. LOCAL-ONLY sweep: deferred this run (quota-wall + sweep-repair work took the window; last full sweep 14:37Z found nothing new; worktree HEADs re-checked 17:14Z, no new local-only items reported).</li>
+<li>BLOCKED &gt;72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge; Bannon #592/#593/#595 owner-held (verdicts owed). NEW blocked: Bannon #616 (CI outage). Plus carried: TorBox key dead; zrok stable share DOWN; localhost.run 502 (watchdog-owned); disk quota wall (~124G cap); wrestling-arcade 404 intermittent; VM restart #11. Open owner decisions: PPWA #305 merge? Bannon #592 — merge the Dimma hair graft or not? Bannon #593 — superseded by #595, close unmerged? Bannon #595 — merge the 2K26 staging work or not? PA2D — main-comparison run for the renderer crash: go-ahead? PA2D — build the 7th button (6 moves + DASH) or accept the 6-button bar? DG CUT 001R — take the v3 rebuild as the episode opener as-is (honestly V2) or re-animate? NEW: Bannon/DG/WG CI fast-fail outage — who diagnoses/fixes the repo-wide CI failure? NEW: mhvnsnt/wizard-gang repo is gone (404) — deleted/renamed on purpose? WG docs now live on wizard-gang-storage + wizard-gang-voice-pipe.</li>
+<li>IDLE: last user msg 2026-11-26T22:09:27Z (~1205 min idle at run start).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-27t1744z-30-min-run">Overnight pipeline — 2026-11-27T17:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-27t1744z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1225 verified LANDED (merge 3bd4842 == tip, identical). This run's sync PR (number + merge recorded in next run's addendum).</li>
