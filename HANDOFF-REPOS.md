@@ -2,6 +2,13 @@
 
 State verified 2026-10-23. Sources: `MERGE-QUEUE.md`, `CROSS-REPO-STRANDED-AUDIT-2026-10-23.md` (live `gh` API audit, classification only — nothing was merged by the audit). Fleet pattern: of 69 open PRs audited outside western-heart, only 2 are conflicting (both Bannon). The dominant failure is finished, MERGEABLE work sitting unmerged — mostly CI-blocked (GitHub Actions quota outage; resets 2026-11-01 per records). Content is done; merges are what's owed.
 
+## 2026-11-27 — repo/CI state (overnight pipeline 16:50Z, verified via gh API)
+- **mhvnsnt/wizard-gang is GONE (404)** — repo GET + pulls list both 404. Wizard Gang work lives on **wizard-gang-storage** (open PRs #4/#5/#8) and **wizard-gang-voice-pipe** (open PRs #5/#6/#10). Do not queue anything under `wizard-gang` until the owner says whether the repo was deleted/renamed on purpose.
+- **Multi-repo CI fast-fail (infra, not PR content):** Bannon (all workflows fail in ~1–2s, logs 404 BlobNotFound, since ≥Nov 25), dream-girl `ci` (validate job fails in ~3s, same BlobNotFound logs, failing since Nov 23), wizard-gang-storage + wizard-gang-voice-pipe `no-deletion-guard` (failing since Oct 17). Doc-only PRs on these repos cannot turn green until the workflows themselves are diagnosed. Do NOT merge Bannon/DG/WG PRs on this run's authority while CI is dead.
+- **Dead self-hosted runner (oracle-ppp OFFLINE):** game-reverse-engineering + wrestling-game `no-deletion-guard` jobs sit QUEUED on labels=self-hosted,linux; physics-playground-pwa CI queued since Nov 26 18:25Z. PRs affected: GRE #101, wrestling #25, PPWA #304/#305/#306 — all PENDING, merge blocked until a runner returns.
+- **Token limit (known):** this PAT gets 403 on REST check-runs for Bannon/PPWA/DG/GRE/wrestling/WG repos. Workaround that works: GraphQL `statusCheckRollup.state` (top-level state readable; individual check names 403) + Actions-runs API for job detail. WH + CJ + AO check-runs read fine via REST.
+- WH #1864/#1865: only `speed-quality` in_progress (started 16:42:10Z) — merge when green, next run.
+
 ## Prioritized landing order (cross-repo)
 
 1. **wrestling-game W5 Def Jam set** #14 → #15 → #16 → #17 → #18 (unblocks the never-run western-heart CATALOG wiring).
