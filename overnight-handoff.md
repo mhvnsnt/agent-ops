@@ -1,3 +1,11 @@
+## Overnight pipeline — 2026-11-27T21:44Z (30-min run)
+- QUEUE DELTA: 0 merged BY this run. 0 lane landings in-window (0 tip moves on any of 15 repos since 21:14Z). 1 NEW OPEN-PR: Bannon #622 (Port Round 14, UNSTABLE head 24faa83, checks never ran — CI outage; lane-owned). AO #1232 sync verified landed (9a56270 == tip, blobs MATCH). Queue 86 open / 39 blocked.
+- VERIFY-DONE 8/8 HOLD, 0 false claims (AO #1232, WH #1867/#1866, Bannon #621/#620, CJ #463, DG #95, PA3D 4bd3630b ancestor). All compare/PR-API/contents-API verified.
+- Bannon CI outage still active (5 runs 21:47:17Z all failure). Bannon open 4 (#622 new). WH open 34 (#1861 draft, #1851 lane-owned, heads unchanged).
+- CHECKPOINTS: 1245, 0 stale-watchdog, 0 unparseable — nothing to resume. CANON-SYNC: MEMORY.md md5 changed 436da9c8 -> bbd6868b mid-run (PA3D ORRE close-outs flushed by memory system; already on main, nothing new to commit). DISK 83% (27G free). at-inflate2 restarted (pid 1808, started 21:31Z), alive, untouched. No media processes running.
+- BLOCKERS (owner decisions, carried): Bannon #596 APEX STEER question + video proof; #600 WIP/close-or-land; #382 revive-or-drop; WH #1835/#1820; CJ #429; PPWA #290/#293/#305; PA3D #7/#8; DG #9; GRE #99; DG portrait run awaiting owner's call (Studio 0.10 credits, 0 crops uploaded); zrok share DOWN (needs owner token).
+- This run's sync PR (number + merge recorded in next run's addendum).
+
 ## Overnight pipeline — 2026-11-27T21:14Z (30-min run)
 - QUEUE DELTA: 0 merged BY this run. 0 new lane landings in-window — no tip moved on any of the 15 repos since 20:44Z. Queue 85 open / 38 blocked (unchanged).
 - QUEUE SYNC: AO #1231 verified LANDED (merge 3deae4f == tip). This run's sync PR (number + merge recorded in next run's addendum).
