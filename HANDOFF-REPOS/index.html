@@ -1108,6 +1108,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2026-11-27-repoci-state-overnight-pipeline-1650z-verified-via-gh-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-11-27 — repo/CI state (overnight pipeline 16:50Z, verified via gh API)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#prioritized-landing-order-cross-repo" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9298,6 +9309,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2026-11-27-repoci-state-overnight-pipeline-1650z-verified-via-gh-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-11-27 — repo/CI state (overnight pipeline 16:50Z, verified via gh API)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#prioritized-landing-order-cross-repo" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9338,6 +9360,14 @@
 
 <h1 id="handoff-repos-per-repo-state-landing-order">HANDOFF — REPOS (per-repo state + landing order)<a class="headerlink" href="#handoff-repos-per-repo-state-landing-order" title="Permanent link">&para;</a></h1>
 <p>State verified 2026-10-23. Sources: <code>MERGE-QUEUE.md</code>, <code>CROSS-REPO-STRANDED-AUDIT-2026-10-23.md</code> (live <code>gh</code> API audit, classification only — nothing was merged by the audit). Fleet pattern: of 69 open PRs audited outside western-heart, only 2 are conflicting (both Bannon). The dominant failure is finished, MERGEABLE work sitting unmerged — mostly CI-blocked (GitHub Actions quota outage; resets 2026-11-01 per records). Content is done; merges are what's owed.</p>
+<h2 id="2026-11-27-repoci-state-overnight-pipeline-1650z-verified-via-gh-api">2026-11-27 — repo/CI state (overnight pipeline 16:50Z, verified via gh API)<a class="headerlink" href="#2026-11-27-repoci-state-overnight-pipeline-1650z-verified-via-gh-api" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>mhvnsnt/wizard-gang is GONE (404)</strong> — repo GET + pulls list both 404. Wizard Gang work lives on <strong>wizard-gang-storage</strong> (open PRs #4/#5/#8) and <strong>wizard-gang-voice-pipe</strong> (open PRs #5/#6/#10). Do not queue anything under <code>wizard-gang</code> until the owner says whether the repo was deleted/renamed on purpose.</li>
+<li><strong>Multi-repo CI fast-fail (infra, not PR content):</strong> Bannon (all workflows fail in ~1–2s, logs 404 BlobNotFound, since ≥Nov 25), dream-girl <code>ci</code> (validate job fails in ~3s, same BlobNotFound logs, failing since Nov 23), wizard-gang-storage + wizard-gang-voice-pipe <code>no-deletion-guard</code> (failing since Oct 17). Doc-only PRs on these repos cannot turn green until the workflows themselves are diagnosed. Do NOT merge Bannon/DG/WG PRs on this run's authority while CI is dead.</li>
+<li><strong>Dead self-hosted runner (oracle-ppp OFFLINE):</strong> game-reverse-engineering + wrestling-game <code>no-deletion-guard</code> jobs sit QUEUED on labels=self-hosted,linux; physics-playground-pwa CI queued since Nov 26 18:25Z. PRs affected: GRE #101, wrestling #25, PPWA #304/#305/#306 — all PENDING, merge blocked until a runner returns.</li>
+<li><strong>Token limit (known):</strong> this PAT gets 403 on REST check-runs for Bannon/PPWA/DG/GRE/wrestling/WG repos. Workaround that works: GraphQL <code>statusCheckRollup.state</code> (top-level state readable; individual check names 403) + Actions-runs API for job detail. WH + CJ + AO check-runs read fine via REST.</li>
+<li>WH #1864/#1865: only <code>speed-quality</code> in_progress (started 16:42:10Z) — merge when green, next run.</li>
+</ul>
 <h2 id="prioritized-landing-order-cross-repo">Prioritized landing order (cross-repo)<a class="headerlink" href="#prioritized-landing-order-cross-repo" title="Permanent link">&para;</a></h2>
 <ol>
 <li><strong>wrestling-game W5 Def Jam set</strong> #14 → #15 → #16 → #17 → #18 (unblocks the never-run western-heart CATALOG wiring).</li>
