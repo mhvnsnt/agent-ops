@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-27t0144z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-27t0214z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-27t0214z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-27T02:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-27t0144z-30-min-run" class="md-nav__link">
@@ -15381,6 +15392,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-27t0214z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-27T02:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-27t0144z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -21508,6 +21530,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-27t0214z-30-min-run">Overnight pipeline — 2026-11-27T02:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-27t0214z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: AO #1202 verified LANDED this run (merge 0e7d909 == tip 0e7d909, merged 2026-11-27T01:52:05Z, "Overnight pipeline 2026-11-27T01:44Z: queue + handoff sync (75 open, AO #1201 landed)"; MERGE-QUEUE.md blob afcae44a MATCH main via contents API == local hash-object; overnight-handoff.md blob 3204680c MATCH). This run's sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 0 new opens, 0 closures. Queue 75 open, 31 blocked — UNCHANGED vs 01:44Z. Live recount from sweep-20261127-0214.jsonl (exit 0, 12 repos): WH 34 + Bannon 5 + PPWA 27 + CJ 1 + PA3D 2 + GRE 1 + DG 2 + WG-storage 2 + CD 0 + CD2 0 + AO 0 + wrestling 0 = 74 open in swept repos; + PA2D #9 draft = 75. Sweep diff vs 0144: ONLY AO tip 9eae881 -&gt; 0e7d909 (the #1202 sync merge); no other tip moves, no closures, no head moves, no state flips, no 504s this run.</li>
+<li>STEP 1: no merges — CLEAN PRs all held (re-probed via sweep; heads/states unchanged per diff): CJ #429 owner's call (head c852419, checks success). WH #1835 OWNER-HELD (head 4cc7135, checks failure+success — not green anyway). PPWA #290/#293 owner's call (heads 182c5f0/e22ab37, no checks). PA3D #7 CLEAN (head b9bde11, do-not-merge). PPWA #305 UNSTABLE head 81751d0d — OWNER-HELD (owner's #305 merge call owed; CI never ran, runner oracle-ppp OFFLINE; do NOT merge). PPWA #304 UNSTABLE head 92d674e (canon sync). Bannon #592/#593/#595/#596 UNSTABLE heads 7aae92b/e7b0c43/ae0b1ba/541dc27 (fold lane owns / owner-held; #592/#595 file-level merge-ready per the Bannon pickup verification lane, REPORT.md 2026-11-26 — still the owner's call). PA3D #8 DIRTY do-not-merge. GRE #99 UNSTABLE head 29e394f (owner decision). WH #1861 DRAFT head 17d1188 (never merge drafts).</li>
+<li>STEP 2 verify-done (7/7 HOLD, 0 false claims): AO #1202 merge 0e7d909 == tip, blobs afcae44a/3204680c MATCH main; AO #1201 merge 9eae881 ancestor of tip 0e7d909 (compare ahead 2, behind 0); WH #1858 merge 9872b47 ancestor of tip d65c53a (compare ahead 4, behind 0 — fresh probe this run); Bannon #575 merge 61a1746 present in commits reachable from tip 3121791 (index 31 of first 100; compare API 422'd on diff size again); DG #95 merge 3ec5afc == tip; CJ #461 merge eb96e6a == tip; PPWA #295 merge e56e317 == tip. PLUS new verification — wave-2 pokken part-01 curl path DEAD after 3 attempts: attempt 3 FAIL 01:52:17Z curl rc 56 (~12.3 min in); driver ABORTED part-01 at 01:53:18Z after 3 consecutive ~12-min resets (pattern confirmed, 3 in a row). BUT a NEW path is alive: <code>gh release upload</code> pid 47263 (started 01:57Z) uploading part-01 via the gh CLI — alive 23:14 at 02:20Z, well past the ~12-min curl death window; release 459896661 part-01 still state "starter" (in flight, not landed). If the gh path lands, it breaks the reset pattern. Meanwhile the driver moved on: pokken-dx-update.nsp.part-00 attempt 1 FAIL 02:08:57Z curl rc 56 (~15 min), attempt 2 started 02:10:01Z (curl pid 50793, --max-time 3600 bounds ~03:10Z), alive 10:22 at 02:20Z. part-02 PULLBACK-OK 01:53:51Z (sha256 7be1cde4... == release digest) + LOCAL-DELETED, freed 33,510,981 B. Release 459896661: 11 assets (9 uploaded + part-01 starter + dx part-00 starter). NEXT RUN MUST VERIFY: gh part-01 lands (then pull-back + delete local) and dx part-00 attempt 2 outcome. Mirror driver pid 2801 live, owns curl retries — untouched; gh upload pid 47263 owned by another lane/guardian — untouched.</li>
+<li>STEP 3 checkpoints: 1245 .json scanned, 0 unparseable; 0 watchdog-running, 0 stale-watchdog; checkpoint_audit.py still missing (tools/ archived). Nothing to resume. No new VM restart (uptime 1:20 at 02:14Z; restart #5 was ~00:54Z). at-inflate2 run-4 (pid 29456, started 01:11:26Z): alive, 3.2/55.5 GB at 02:16:00Z — total offset ~17.5 GB, now PAST the ~17 GB offset where run-1 died, still alive; next progress line due ~02:43Z. Watch next run. Untouched (watchdog owns it).</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 UNCHANGED 9949d55c — canon-sync nothing new. Baseline saved _canon-baseline-0214.md. Carried flag (0044): the memory-system edit removed the standing no-spend sentence from the Oracle bullet — flagged, NOT restored by this run (memory is curated by the memory system; main-agent business).</li>
+<li>STEP 5 friction: failure-alerts.log nothing new (last 2026-10-20). Disk 82% (27G free) — below the 85% bar, above the 75% resting target; quota wall carried (~124G cap, headroom ~3 GiB per guardian 02:13Z run, which ran in parallel with this run and already logged the gh-part-01 + dx-attempt-2 state to the daily note). wrestling-arcade NOT re-probed this run (carried intermittent 404 from 01:14Z/01:49Z; fold content on Bannon main). zrok stable share STILL DOWN (carried; needs owner myzrok.io sign-in). Approval-cards outage DAY 3 carried. Sacred: gh upload pid 47263 + curl pid 50793 uploading, untouched; at-inflate2.py pid 29456 running, untouched; mirror driver pid 2801 live, untouched. No ffmpeg/blender/aria2c/wget media processes running.</li>
+<li>STEP 6/7/8: no new thread, no new pulls — Bannon fold lane owns its UNSTABLE PRs; WH #1851 lane owns; PA3D wave-2 lane owns mirror-v3. Stand down. LOCAL-ONLY sweep (bounded, read-only): 8 worktrees checked — HEADs match 01:14Z recorded values exactly (agent-ops 3c117795, wh-shallow 9b56d726, wh-449 6e3ba07c, watchdog-v2-runtime 6e47c36, dream-girl 9488a9f, PPWA 9c4c9c0, PA3D 9f06299); bannon-merge-lane empty clone (2 untracked mergetree38 files, already recorded). Dirty: agent-ops 2076 (was 2065 — this run's sweep/log files, recorded, untouched); wh-shallow 53495 stands; wh-449 33 stands; PA3D 61 is the active wave-2 lane's work. No new local-only items, nothing committed, nothing discarded.</li>
+<li>BLOCKED &gt;72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge; Bannon #592/#593/#595 owner-held (verdicts owed). Plus carried: TorBox key dead; zrok stable share DOWN; disk quota wall (~124G cap); wrestling-arcade 404 intermittent; pokken part-01 mirror-integrity watch — gh path in flight, must land; dx part-00 attempt 2 in flight. Open owner decisions: PPWA #305 merge? Bannon #592 — merge the Dimma hair graft or not? Bannon #593 — superseded by #595, close unmerged? Bannon #595 — merge the 2K26 staging work or not? PA2D — main-comparison run for the renderer crash: go-ahead? PA2D — build the 7th button (6 moves + DASH) or accept the 6-button bar? DG CUT 001R — take the v3 rebuild as the episode opener as-is (honestly V2) or re-animate?</li>
+<li>IDLE: last user msg 2026-11-26T22:09:27Z (~245 min idle at run start).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-27t0144z-30-min-run">Overnight pipeline — 2026-11-27T01:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-27t0144z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1201 verified LANDED this run (merge 9eae881 == tip 9eae881, merged 2026-11-27T01:19:41Z, "Overnight pipeline 2026-11-27T01:14Z: queue + handoff sync (75 open, AO #1200 landed)"; MERGE-QUEUE.md blob 798196ee MATCH main via contents API == local hash-object; overnight-handoff.md blob 0366936b MATCH). This run's sync PR (number + merge recorded in next run's addendum).</li>
