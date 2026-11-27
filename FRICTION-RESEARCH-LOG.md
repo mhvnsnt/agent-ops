@@ -421,3 +421,103 @@ Disk freed 0 by design (nothing verified 100%, nothing moved/deleted).
 **Recommended:** (1) live-view lane: apply the Nov 15 401 circuit-breaker (queued a third day running); owner decision: zrok re-enable (free, fresh console token) vs localhost.run paid custom domain (stable + priority bandwidth); (2) this reel: run the queued signed-in browser DevTools network capture — no more downloader lanes; the gap is a cookie bridge (signed-in browser session → VM-side downloader), not a downloader; (3) quezada driver owner: PB env-override like pokemon's before the next pull-back (reassembled 2.4G vs 2G tmpfs by its own comment); 6B lane: move Blender/gate/log off /var/tmp (open since Nov 15); guardian: run var-tmp-audit.sh on cadence.
 **Excluded:** cloudflared Quick Tunnel + localtunnel from this VM (egress-blocked, not vendor-broken — re-test if the egress allowlist changes); cobalt hosted API (unreachable / JWT-gated; self-host gated on the cookie bridge, and useless for this login-gated reel); bore (already failed Nov 13); gallery-dl / tikwm / Tikdown / fdown / Getfvid for this reel (already failed or same cookie wall); ngrok free (account + warning page, weaker than localhost.run).
 **Blocked / not done here:** zrok re-enable (needs a fresh console token — browser step); no live-view script edited; no cloudflared binary installed persistently (blocked tool, 40 MB); no paid plan taken; no video file obtained (motion study stays blocked); no cookies read/exported; no lane script edited; no /tmp or /var/tmp contents deleted (/tmp 89% flagged, guardian owns it).
+## 2026-11-21/22 — (RETRO NOTE, added 2026-11-24: this pass was never logged)
+
+Docs exist but no log entry was written at the time:
+`research-friction-20261121/01-live-view-tunnel.md`,
+`02-chromium-headless.md` + `playwright-chromium-smoke.py` +
+`tunnel-health-check.sh`. Summarized here from those docs only, not
+re-researched: (1) live-view dead on BOTH routes — zrok 401 (token dead
+~6 days, last successful serve 2026-11-15T19:07Z), localhost.run 502
+relay-side; tunnl.gg tested live twice, FAILED (edge never forwards,
+SSH dies in ~4 min) — do not wire; (2) "Chromium dead VM-wide" is
+WRONG — Playwright's bundled Chromium 1243 launches headless, WebGL
+1.0 via SwiftShader works, red-triangle screenshot verified with real
+pixels counted; capture/proof lanes should use Playwright Chromium,
+not a system binary. This retro note closes the log gap; the 11-21
+findings themselves stand as documented in their files.
+
+## 2026-11-24 ~23:05–23:55 EST — Manifest gap (guardian can't clear ~3.5G idle workdirs) · 52 UNSTABLE PRs = broken no-deletion-guard · Tailscale Funnel excluded (continuous-friction-research)
+
+**Docs:** `research-friction-20261124/01-manifest-gap.md`,
+`02-ci-unstable-guard.md`, `03-tailscale-funnel-excluded.md` +
+`manifest-gen.sh` (wired + tested). Index updated
+(RESEARCH-PULLIN-INDEX.md). No PR opened from the dirty agent-ops
+workdir (standing precedent — clean-room clone PR carries it). No
+live lane touched; nothing stored, moved, or deleted.
+Dedupe checked via `research-check.sh` (manifest generator, tailscale
+funnel, ci unstable pr checks — all new; restic/aria2/zstd/croc,
+zrok 401 loop, tmpfs-guard, supervisor deaths already decided — not
+re-researched).
+**Problems targeted (from MEMORY.md + disk-cleanup-log + live state,
+last few days):** (1) disk stuck at 72% (107G/150G) with ~3.5G of
+idle lane workdirs that the guardian re-lists every 10 min and can
+never clear — all BLOCKED on "no per-file stored manifest", which no
+tool generates; (2) merge-law-ci-watch 2026-11-24 22:57 EST: 58 PRs,
+ZERO CLEAN, 52 UNSTABLE — the watch lane can only see the word
+UNSTABLE, never why; (3) stable live-view URL still down (zrok 401,
+owner sign-in pending) — is Tailscale Funnel the untried stable
+route?
+**Verified live this pass:** disk 72% (107G/150G, 43G free) at
+23:05 EST; guardian's blocked set unchanged (dream-girl 18G active,
+`_adri-performance-v2-20261109` 353M/984 files unmirrored, ~3.5G cut
+lanes, all no-manifest); guard manifest format read from
+`disk-clear-guard.sh` (one relative path per line, .git excluded);
+**rclone is GONE from this VM** (`~/workspace/tools/rclone/` absent,
+`which rclone` finds nothing — tools/ archived 2026-10-31, never
+restored; the index's "rclone LANDED" entry is stale); hashdeep /
+git-annex not installed; stdlib sha256sum/sort/find all present
+(sha256sum `-z`/`-c` supported). CI sample: no-deletion-guard fails
+on EVERY pull_request run since ~Oct 15 in 4/4 sampled repos
+(chimera-roms, box-storage, wizard-gang-storage,
+Physics-sandbox-playground-), one success ever (box-storage Oct 14,
+the PR that added the guard); workflow file unchanged since Oct 14;
+chimera-roms #5 (1 file, 0 deletions) and #8 (1 file added, 0
+deletions, MERGED) both fail it — the guard fails on deletion-free
+PRs. Check-runs API 403s (PAT lacks checks:read), commit-status API
+returns `pending` with zero statuses, job steps come back empty, job
+logs 404 even for a 2-day-old run — the failure reason is not
+retrievable from this VM. Genuine separate failures also found:
+M.-Engine- #21 `build_and_verify` FAILURE; AshLanev2 Nov 22
+validation / asset-validation (job `glb`) / Deploy-PWA failures.
+Tailscale: binary present but `Not connected`, `funnel` subcommand
+unrecognized, and the connector doc forbids the route by design
+(client-only, "accepts none, hosts nothing", no upstream client).
+**Pulled in / wired:** `manifest-gen.sh` — paths mode
+(guard-compatible), `--hash` (sha256sum format), `--verify` (exit 0
+clean / 1 tampered), atomic `--out` (temp+rename, quota-cut safe),
+`.git` excluded by default, symlinks skipped with count, unreadable
+files fail closed (exit 2, no manifest written). Tested live:
+scratch tree correct incl. spaces/hidden/symlink/.git; `--verify`
+exit 0 clean, exit 1 on tampered file; guard [manifest] leg PASSES
+with its output (only [recency]+[git-dirty] blocked, correctly);
+scale run on the real `_adri-performance-v2-20261109/` (353M):
+984 lines in ~10.7s, stdout-only, no manifest file written; as
+`nobody`, unreadable files → exit 2 with per-file reports. One bug
+found by testing and fixed: unreadable *directory* used to die
+silently (rc 1, no message) under `set -e`+`pipefail` — now a
+`[ -r ] && [ -x ]` pre-check dies with a clear message (verified
+live as `nobody`).
+**Recommended:** (1) guardian lane: run `manifest-gen.sh --hash` on
+each idle workdir, use the hash manifest as the basis for
+store-verify (upload → pull-back → compare sha256), then the paths
+manifest becomes a real `--stored-manifest` and the guard can finally
+evaluate migrate/clear; (2) guard fix: open chimera-roms run
+45039968566 in the browser and read the `guard` job log (the failing
+step is the answer), or get a token with checks:read — the fix is
+likely BASE/HEAD resolution or deleted-branch checkout handling, NOT
+weakening the guard; after the fix, re-count the 52 UNSTABLE — a
+large share may flip CLEAN with no code change; (3) rclone restore
+from `tools-archive-2026-10-31` if any lane needs it (not required
+for manifests); (4) Tailscale: do not re-research for live-view —
+the connector doc settles it; stable URL stays zrok re-enable (owner
+sign-in) vs localhost.run paid domain.
+**Excluded:** hashdeep / git-annex (heavier than the job; stdlib
+covers it); Tailscale Funnel (connector design limit); re-cloning
+into /tmp for the guard reproduction (clone died ENOSPC — /tmp is
+512 MB tmpfs; use durable disk or the compare API).
+**Blocked / not done here:** no manifest file written for any real
+workdir (only the guardian lane should bless one as a stored-manifest
+basis); no guard workflow edited; no PR touched/labeled/merged; no
+token minted; no zrok/live-view change; no rclone restored. Disk
+freed 0 by design (nothing verified 100%, nothing moved/deleted).
