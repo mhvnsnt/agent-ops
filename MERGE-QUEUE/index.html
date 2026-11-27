@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-27t2144z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-27t2344z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-27t2344z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-27T23:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-27t2144z-30-min-run" class="md-nav__link">
@@ -15700,6 +15711,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-27t2344z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-27T23:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-27t2144z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -22146,6 +22168,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-27t2344z-30-min-run">Overnight pipeline — 2026-11-27T23:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-27t2344z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: AO #1233 verified LANDED (merge d03a0a0 == tip d03a0a0 at sweep). This run's sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 6 lane landings verified: WH #1868 Pantera King T7 slots (merge 54cf05f == tip, +141/-26, 7 files, merged 22:08:24Z); Bannon #623 ANIMFIX v1.3 (merge 72a8801 ancestor, ahead 2, merged 22:30:34Z) + #624 workflows repair (merge 5b1200d == tip, merged 22:44:06Z); PA3D Outskirt Stand + Snagem Hideout waves (compare f238c06...1be3d2b ahead 6 behind 0, +2533/-54, 55 files, tip 1be3d2b 22:28:39Z, direct-push merges, not PR-button) + Citadark follow-ups (merge f8214d46, compare 1be3d2b...e994b99 ahead 3 behind 0, +108760/-106, 27 files, tip e994b99 23:51:42Z — landed DURING this run, after the sweep). Bannon #622 MERGED-TO-BRANCH (base muse/web-upgrade, merge 071cab9 22:12:37Z) — NOT on main; exits the open list, parked behind web-upgrade→main (blocked on #309/#310/#311 owner decisions). 1 new open: Bannon #625 (gap audit, CLEAN, owner-held). Queue 86 open (live sweep: WH 34 + Bannon 4 + CJ 1 + PPWA 28 + DG 3 + PA3D 2 + GRE 2 + WG 6 + wrestling 1 + BPP 4 + AO 0 + CD 0 + CD2 0 + PA2D 1), 40 blocked (39 + #625 owner-held; #622 stays blocked, blocker changed ci-outage → web-upgrade-merge).</li>
+<li>STEP 1: no merges by this run — only CLEAN PRs are owner-held/draft/do-not-merge (WH #1835 owner-held, CJ #429 owner's call, PPWA #290/#293 owner's call, Bannon #625 owner-held, PA3D #7 do-not-merge, PA2D #9 draft). Bannon CI outage CONFIRMED still active: 6 runs 23:47:08Z all failure (deletion-guard, no-deletion-guard, Integration Gate, Shipping gate, Autonomous Build &amp; Verify Loop x2).</li>
+<li>STEP 2 verify-done (9/9 HOLD, 1 false claim FOUND + FIXED): AO #1233 d03a0a0 == tip; WH #1868 54cf05f == tip; Bannon #624 5b1200d == tip; Bannon #623 72a8801 ancestor (ahead 2); PA3D Outskirt + Snagem waves ancestors (compare ahead 6 behind 0); PA3D Citadark follow-ups f8214d46 ancestor of tip e994b99 (compare ahead 3 behind 0); CJ #463 ffc5b0d == tip; DG #95 3ec5afc == tip. FALSE CLAIM: MEMORY.md + program CHECKPOINT.md said AUDIT.md "staged as Bannon PR #625" — PR head f3ab0cd was an EMPTY commit (0 files, +0/-0), AUDIT.md nowhere in the repo (filename search 0 hits); the file existed only locally (~/workspace/_bannon-2k26-base-20261127/AUDIT.md, 41,380 B). FIXED this run via Git Data API: blob b220d49c7cc8dfc0e9c6c773418eda27720fc8b0 (SHA-matches the lane's claimed blob + local git hash-object), tree + commit d38eac5 on branch docs/bannon-gap-audit-20261127, docs/AUDIT.md 41,380 B verified on the branch via contents API. PR still owner-held, NOT merged. PR diff stats stale-cached (+0/-0, mergeState UNKNOWN; GitHub hasn't recomputed; contents + commit APIs are the proof). Bannon #622 NOT on main (merged to web-upgrade) — recorded as parked, not landed. All compare/PR-API/contents-API verified.</li>
+<li>STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog, 0 unparseable. checkpoint_audit.py lives at agent-ops/, not tools/ (body path stale). Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 CHANGED bbd6868b → 3c69a0b1 → 2981e774 (changed twice mid-run: 6 new Bannon entries — pair-system law, audit order, audit result, lane 2 + TeraBox pull, 2K26-base order, diagnosis — then the memory system flushed the PA3D #19 CLOSE-OUT at ~23:53Z). #19 close-out VERIFIED TRUE this run: main tip e994b99, Outskirt 76ed6d53, Snagem 5ae3aeb7, Citadark follow-ups f8214d46 — all on PA3D main (see STEP 2). Unlanded canon: Bannon pair-system law text NOT in Bannon main (code search 0 hits); the audit substance is now genuinely staged as #625 (fixed this run). The law text itself is canon-sync PENDING — to be committed to Bannon docs once #625 lands or CI recovers; no competing PR opened against the active lane-2 program while CI is dead. PA3D entry describes work already on PA3D main (Outskirt + Snagem + Citadark verified above). New baseline _canon-baseline-2344.md.</li>
+<li>STEP 5 friction: failure-alerts.log nothing new (last 2026-10-20). Disk 83% (26G free). at-inflate2 pid 7636 alive (relaunched after restart #15; was 5340 earlier this run; sacred, untouched). Blender render lane ACTIVE (2x blender + render_pair.py since 23:33Z, suplex grips — sacred, untouched). VM restart #15 (guardian 17:34 CST pass). zrok stable share STILL DOWN (DG watchdog 17:42/17:47 CST passes; localhost.run tunnel current b950e1da8377eb.app.lhr.life, watchdog-owned). Sweep fast-path PARTIAL again (7/15 parsed; 8 re-probed OK via sweep-one-nochecks.sh). Bannon compare API 422s even on a 1-file diff (repo tree too large for GitHub diff generation) — contents/commit APIs used instead.</li>
+<li>STEP 6/7/8: no new thread, no new pulls — Bannon lane 2 + render lane active; PA3D coordinator #19 landing (Outskirt + Snagem tonight); TeraBox fg-01.bin browser task running (watchdog). Stand down. LOCAL-ONLY sweep: the #625 local audit was this run's local-only item (now staged); full worktree-HEAD sweep deferred (last full sweep 14:37Z).</li>
+<li>BLOCKED &gt;72h (carried + updates): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge; Bannon #596 HELD (APEX STEER question + video proof + missing tests); Bannon #600 HELD (WIP, content landed via Stage 5). NEW: Bannon #625 owner-held (his call to merge — now carries its real payload); Bannon #622 parked behind web-upgrade→main (#309/#310/#311 owner decisions). Plus carried: TorBox key dead; zrok stable share DOWN; localhost.run 502 (watchdog-owned); disk quota wall (~124G cap); wrestling-arcade 404 intermittent; VM restart #15. Open owner decisions: PPWA #305 merge (ADRI #305)? PA2D — main-comparison run for the renderer crash: go-ahead? PA2D — build the 7th button (6 moves + DASH) or accept the 6-button bar? DG CUT 001R — take the v3 rebuild as the episode opener as-is (honestly V2) or re-animate? Bannon/DG/WG CI fast-fail outage — who diagnoses/fixes the repo-wide CI failure? mhvnsnt/wizard-gang repo is gone (404) — deleted/renamed on purpose?</li>
+<li>IDLE: last user msg 2026-11-27T23:03:43Z (41 min idle at run start).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-27t2144z-30-min-run">Overnight pipeline — 2026-11-27T21:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-27t2144z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1232 verified LANDED (merge 9a56270 == tip 9a56270 at sweep; blobs f3953e5/18b55ad MATCH contents API). This run's sync PR (number + merge recorded in next run's addendum).</li>
