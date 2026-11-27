@@ -1152,6 +1152,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2026-11-26-canon-sync-landings-overnight-pipeline-1814z-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-11-26 — Canon-sync landings (overnight pipeline, 18:14Z run)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -9473,6 +9484,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2026-11-26-canon-sync-landings-overnight-pipeline-1814z-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-11-26 — Canon-sync landings (overnight pipeline, 18:14Z run)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -9557,6 +9579,13 @@
 <ul>
 <li><strong>The canon archive IS on main now.</strong> The "Archive push IN FLIGHT" line in the table above is superseded: <code>docs/canon-archive/CANON-MASTER.md</code> on western-heart main carries owner rulings through WH #1849 (Deadlift Alley-Oop, merge 72fead43, blob 1518e624) and #1848 (moveset-library design, 416e3e3), both verified on main by the overnight pipeline. The overnight pipeline's STEP 4 canon sync runs every 30 min; MEMORY.md last-sync md5 was 49ba4e66 at the 15:44Z run.</li>
 <li>The "only 4 of 67 roster dirs have a canon file" count above is Oct-23 state and was NOT re-verified in this refresh — do not quote it as current. The bios-harvest state is whatever the repo shows today.</li>
+</ul>
+<h2 id="2026-11-26-canon-sync-landings-overnight-pipeline-1814z-run">2026-11-26 — Canon-sync landings (overnight pipeline, 18:14Z run)<a class="headerlink" href="#2026-11-26-canon-sync-landings-overnight-pipeline-1814z-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>PPWA <code>docs/bios/adri.md</code> + <code>docs/HANDOFF.md</code> — Adri source-blend loss/correction/recovery + E2E infra verdict, opened as PR #304 this run (branch <code>canon-adri-recovery-20261126</code>, commits 68139d8 + 90d4fd5, +9/−0) — still OPEN, UNSTABLE; checks unreadable via this token (check-runs API 403, GraphQL statusCheckRollup not accessible). Merge only when a later run sees CLEAN. (Note: the 16:14Z run's canon-sync script existed but never ran — its sections were absent from main, verified 0 hits; this run executed it, fixed its <code>existing_pr</code> bug — <code>-f</code> flips <code>gh api</code> to POST and 422s — and ran the CJ half on re-run.)</li>
+<li>CJ <code>docs/CANON-MASTER-SHOW.md</code> §8 — Purple Lot V2 owner rejection + Colab render sign-in block, PR #461 MERGED + VERIFIED on main this run (merge eb96e6a == tip, blob 5da5a607 MATCH branch).</li>
+<li>PA2D <code>HANDOFF.md</code> §8 — LIVE + MERGES LANDED + PIECE 1 +2 BUTTONS gate-red, PR #10 MERGED + VERIFIED on main this run (merge c2a3a8d == tip, blob 91ba0480 MATCH branch). The branch work itself is DRAFT PR #9 (<code>mod/attack-buttons</code> @ aee3956), blocked on owner calls (renderer-crash attribution go-ahead, 7th-button call, ult-charge rest).</li>
+<li>MEMORY.md baseline for the next run: md5 191fe0b1 (<code>_canon-baseline-1814.md</code>). NO-SPEND / FIVERR / legal / pauper items never synced (personal/financial/legal).</li>
 </ul>
 
 
