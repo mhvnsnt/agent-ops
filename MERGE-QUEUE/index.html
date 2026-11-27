@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-27t0514z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-27t0544z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-27t0544z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-27T05:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-27t0514z-30-min-run" class="md-nav__link">
@@ -15458,6 +15469,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-27t0544z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-27T05:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-27t0514z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -21662,6 +21684,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-27t0544z-30-min-run">Overnight pipeline — 2026-11-27T05:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-27t0544z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: AO #1209 verified LANDED this run (merge c2d7326 == tip c2d7326, merged 2026-11-27T05:20:27Z, "Overnight pipeline 2026-11-27T05:14Z: queue + handoff sync (75 open, AO #1208 landed)"; MERGE-QUEUE.md blob 69fb8d5e MATCH main via contents API == local hash-object; overnight-handoff.md blob 1a8c4364 MATCH). This run's sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 0 new opens, 0 closures. Queue 75 open, 31 blocked — UNCHANGED vs 05:14Z. Live recount from sweep-20261127-0544.jsonl (exit 0, 11 repos; WG-storage + PA2D probed separately): WH 34 + Bannon 5 + PPWA 27 + CJ 1 + PA3D 2 + GRE 1 + DG 2 + WG-storage 2 + CD 0 + CD2 0 + AO 0 + wrestling 0 = 72 swept + 2 WG + 1 PA2D = 75. Sweep diff vs 0514: ONLY AO tip 4c80da3 -&gt; c2d7326 (the #1209 sync merge); Bannon #595 in-sweep error CLEARED this run (head ae0b1ba, unstable, UNCHANGED); no other tip moves, no closures, no head moves, no state flips. WG-storage tip 2881630 UNCHANGED, #4/#5 heads unchanged 17769bd/2dd0681; PA2D #9 draft head aee3956, clean, open.</li>
+<li>STEP 1: no merges — CLEAN PRs all held: CJ #429 owner's call (head c852419, checks success — green but HELD, not merged). WH #1835 OWNER-HELD (head 4cc7135, checks failure+success — not green anyway). PPWA #290/#293 owner's call (heads 182c5f0/e22ab37, no checks). PA3D #7 CLEAN (head b9bde11, do-not-merge). PPWA #305 UNSTABLE head 81751d0 — OWNER-HELD (owner's #305 merge call owed; CI never ran, runner oracle-ppp OFFLINE; do NOT merge). PPWA #304 UNSTABLE head 92d674e (canon sync). Bannon #592/#593/#595/#596 UNSTABLE heads 7aae92b/e7b0c43/ae0b1ba/541dc27 (fold lane owns / owner-held). PA3D #8 DIRTY do-not-merge (head 22ba5d1). GRE #99 UNSTABLE head 29e394f (owner decision). WH #1861 DRAFT head 17d1188 (never merge drafts). WH #1851 UNSTABLE head 44e8f8a (Lane E, lane owns).</li>
+<li>STEP 2 verify-done (7/7 HOLD, 0 false claims): AO #1209 merge c2d7326 == tip, blobs 69fb8d5e/1a8c4364 MATCH main; WH #1858, Bannon #575, DG #95, CJ #461, PPWA #295, PA3D recall carried via tip-unchanged (d65c53a / 3121791 / 3ec5afc / eb96e6a / e56e317 / 7265ba8 identical to the 0514 proofs). PLUS wave-2 mirror FULLY COMPLETE — verified this run: PULLBACK-REMAINING DONE 05:25Z (colosseum PULLBACK-OK 05:24:50, all 3 manuals PULLBACK-OK 05:25:00-13, locals deleted); EVERY wave-2 asset now server-digest + pull-back verified. Manifest committed to branch wave2-manifest-20261126 (commit bfcb7c45, read-back verified via API, NOT merged — lane-owned, no PR yet). Suite next: main tarball downloading (started 05:40Z, curl pid 85968, --max-time 7200 bounds ~07:40Z), lane monitor ~06:00Z.</li>
+<li>STEP 3 checkpoints: 1245 .json scanned, 0 unparseable; 0 watchdog-running, 0 stale-watchdog; checkpoint_audit.py still missing (tools/ archived). Nothing to resume. No new VM restart (uptime 51 min at 05:44Z; restart #7 was ~04:53Z). at-inflate2 run-6 (pid 29720, started 05:11:33Z): alive, 2.1/55.5 GB at 05:37:37Z, total offset ~16.4 GB — below the ~19.4 GB death offset; next progress line due ~05:54Z. Untouched (watchdog owns it).</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 UNCHANGED 4d4f054f — canon-sync nothing new. Baseline saved _canon-baseline-0544.md.</li>
+<li>STEP 5 friction: failure-alerts.log nothing new (last 2026-10-20). Disk 75% (38G free) — below the 85% bar, down from 80% (wave-2 local deletes freed space). M. Engine /health STILL UNREACHABLE (502 via zrok, this run). wrestling-arcade 404 AGAIN (gh API this run; intermittent, fold content on Bannon main). zrok stable share STILL DOWN (502; needs owner myzrok.io sign-in) — western-heart.pages.dev 200 UP (carried). Approval-cards outage DAY 3 carried. NEW (Dream Girl live-view watchdog 05:37Z, from daily note): localhost.run tunnel ALSO down (502 "no tunnel", 3,641 regenerations — chronic churn); local desktop servers up, both public routes down. Sacred: main-tarball curl pid 85968 + at-inflate2 pid 29720, untouched. No ffmpeg/blender/aria2c/wget media processes running.</li>
+<li>STEP 6/7/8: no new thread, no new pulls — Bannon fold lane owns its UNSTABLE PRs; WH #1851 lane owns; PA3D wave-2 lane owns mirror-v3 completion (manifest branch, staging clear, full suite vs live baseline). Stand down. LOCAL-ONLY sweep (bounded, read-only): 8 worktrees checked — HEADs match 0514Z recorded values except watchdog-v2-runtime 4c80da3 -&gt; c2d7326 (that checkout tracks agent-ops main; the move IS the AO #1209 sync merge landing, expected, not new work): agent-ops 3c117795 on stale merge-queue-sync-20261126T2014Z, wh-shallow 9b56d726, wh-449 6e3ba07c, dream-girl 9488a9f, physics-playground-pwa 9c4c9c0, pokemon-arena-3d 9f06299; bannon-merge-lane empty clone (2 untracked mergetree38 files, already recorded). Dirty: agent-ops 2137 (was 2125 — this run's sweep/log files, recorded, untouched); wh-shallow 53495 stands; wh-449 33 stands; physics-playground-pwa 7; pokemon-arena-3d 61 is the active wave-2 lane's work. No new local-only items, nothing committed, nothing discarded.</li>
+<li>BLOCKED &gt;72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge; Bannon #592/#593/#595 owner-held (verdicts owed). Plus carried: TorBox key dead; zrok stable share DOWN (+ M. Engine unreachable); disk quota wall (~124G cap); wrestling-arcade 404 intermittent; localhost.run tunnel down (chronic); wave-2 manifest branch unmerged (lane-owned). Open owner decisions: PPWA #305 merge? Bannon #592 — merge the Dimma hair graft or not? Bannon #593 — superseded by #595, close unmerged? Bannon #595 — merge the 2K26 staging work or not? PA2D — main-comparison run for the renderer crash: go-ahead? PA2D — build the 7th button (6 moves + DASH) or accept the 6-button bar? DG CUT 001R — take the v3 rebuild as the episode opener as-is (honestly V2) or re-animate?</li>
+<li>IDLE: last user msg 2026-11-26T22:09:27Z (~455 min idle at run start).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-27t0514z-30-min-run">Overnight pipeline — 2026-11-27T05:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-27t0514z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1208 verified LANDED this run (merge 4c80da3 == tip 4c80da3, merged 2026-11-27T04:52:01Z, "Overnight pipeline 2026-11-27T04:44Z: queue + handoff sync (75 open, AO #1207 landed)"; MERGE-QUEUE.md blob 394d1afd MATCH main via contents API == local hash-object; overnight-handoff.md blob 9783c0ba MATCH). This run's sync PR (number + merge recorded in next run's addendum).</li>
