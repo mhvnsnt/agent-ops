@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-27t0844z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-27t0914z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-27t0914z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-27T09:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-27t0844z-30-min-run" class="md-nav__link">
@@ -15535,6 +15546,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-27t0914z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-27T09:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-27t0844z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -21816,6 +21838,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-27t0914z-30-min-run">Overnight pipeline — 2026-11-27T09:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-27t0914z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: AO #1216 verified LANDED this run (merge 96e5a91d == tip 96e5a91d, merged 2026-11-27T08:56:29Z, "Overnight pipeline 2026-11-27T08:44Z: queue + handoff sync (75 open, AO #1215 landed)"; MERGE-QUEUE.md blob 8c403e98 MATCH main via contents API == local hash-object; overnight-handoff.md blob 3bcd3b1d MATCH). This run's sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 0 new opens, 0 closures. Queue 75 open, 31 blocked — UNCHANGED vs 08:44Z (live recount via direct per-repo tip + open-PR list API calls: WH 34 + Bannon 5 + PPWA 27 + CJ 1 + PA3D 2 + GRE 1 + DG 2 + WG-storage 2 + CD 0 + CD2 0 + AO 0 + wrestling 0 = 74 swept + 1 PA2D = 75). Sweep diff vs 0844: ONLY AO tip b7f0dcf -&gt; 96e5a91 (the #1216 merge) and PA3D tip 28e9605 -&gt; 119e2c3 (+2 checkpoint commits, compare ahead 2/behind 0: 741671a "#15 402 gap closed, queue complete" + 119e2c3 "#16 start (9 lanes spawned)"; direct lane pushes, no PR). PA2D tip c2a3a8d UNCHANGED, #9 draft head aee3956 unchanged. Full sweep script FAILED this run (exit 120 after ~9.5 min, died during PPWA) — root cause is the disk quota wall (see STEP 5); the recount above is the fallback, all 12 repos + PA2D verified live.</li>
+<li>STEP 1: no merges — CLEAN PRs all held: CJ #429 owner's call (head c852419, checks success — green but HELD, not merged). WH #1835 OWNER-HELD (head 4cc7135, checks failure+success — not green anyway). PPWA #290/#293 owner's call (heads 182c5f0/e22ab37, no checks). PA3D #7/#8 do-not-merge. PPWA #305 UNSTABLE head 81751d0 — OWNER-HELD (owner's #305 merge call owed; CI never ran, runner oracle-ppp OFFLINE; do NOT merge). PPWA #304 UNSTABLE head 92d674e (canon sync). Bannon #592/#593/#595/#596 UNSTABLE heads 7aae92b/e7b0c43/ae0b1ba/541dc27 (fold lane owns / owner-held). GRE #99 UNSTABLE head 29e394f (owner decision). WH #1861 DRAFT head 17d1188 (never merge drafts). WH #1851 UNSTABLE head 44e8f8a (Lane E, lane owns). WH #1837 blocked head 46b1279; WH #1820 dirty head 8eb1a30. (Heads carried from the 0844 sweep; tips + open counts re-verified live this run; no new PRs, no tip moves except AO/PA3D.)</li>
+<li>STEP 2 verify-done (8/8 HOLD + AO #1216 + PA3D #15/#16, 0 false claims): AO #1216 merge 96e5a91d == tip, blobs 8c403e98/3bcd3b1d MATCH main; PA3D Key Lair .msg c986a71 + height-table 45616fa ancestors of 28e9605, hence of new tip 119e2c3 (compare ahead 2/behind 0); PA3D #15 close-out 741671a is the new tip's parent; WH #1858, Bannon #575, DG #95, CJ #461, PPWA #295 carried via tip-unchanged (d65c53a / 3121791 / 3ec5afc / eb96e6a / e56e317 identical to the 0844 proofs); WH #1859 merge 3af1f83b ancestor of unchanged tip d65c53a.</li>
+<li>STEP 3 checkpoints: 1245 .json scanned, 0 unparseable on re-scan (first pass showed 1 transient mid-write miss, cleared on rescan); 0 watchdog-running, 0 stale-watchdog; checkpoint_audit.py still missing (tools/ archived). Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 CHANGED c2e1ece5 -&gt; 14022377 (rewrite 08:59:28Z) — verified a memory-system reformat (blockquote wrap of existing entries), no new canon: no new 2026-11-27 entries; newest dated entry still the PA3D #15 close-out ~02:58 CST, already in repos. Canon-sync nothing new. Baseline file NOT saved locally (quota wall — see STEP 5); new md5 14022377 recorded here.</li>
+<li>STEP 5 friction: failure-alerts.log nothing new (last 2026-10-20). Disk 83% (26G free) — BUT the quota wall is now ACTIVE: all new-file writes and appends in ~/workspace fail "Disk quota exceeded" (used 132,511,313,920 B, ~123.4 GiB vs ~124 GiB cap; one write succeeded 09:33, all fail since). The full sweep died on it (exit 120: a hung gh call's traceback could not be written). This run's queue sync was done via an IN-MEMORY Git Data API flow (no local writes) — route-switch; local queue/handoff files are byte-identical to remote main, so the in-memory prepend equals the local flow. at-inflate2 pid 28109 ALIVE (sacred, untouched; run-8, 1.1/55.5GB at 09:06Z; VM restart #10 watch ~10:42Z). M. Engine supervisor pid 849 alive. zrok stable share STILL DOWN (502; needs owner myzrok.io enable token). western-heart.pages.dev 200 UP. vnc.html local 200. localhost.run tunnel eb9055366b63be.app.lhr.life (regenerated 09:16Z per live-view watchdog; supersedes 048a40149dcd96). No ffmpeg/blender/aria2c/wget/curl media processes running.</li>
+<li>STEP 6/7/8: no new thread, no new pulls — PA3D #16 owns its 9 lanes; Bannon fold lane owns its UNSTABLE PRs; WH #1851 lane owns. Stand down. Local-only worktree sweep DEFERRED this run (git status index refresh writes blocked by quota; last full sweep 08:44Z found nothing new) — recorded as deferred, not done.</li>
+<li>BLOCKED &gt;72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge; Bannon #592/#593/#595 owner-held (verdicts owed). Plus carried: TorBox key dead; zrok stable share DOWN; disk quota wall now ACTIVE (blocking local writes — guardian owns clearing; in-memory API sync is the workaround); VM restart pattern (#9 08:42:56Z, watch ~10:42Z for #10). Open owner decisions: PPWA #305 merge? Bannon #592/#593/#595 verdicts? PA2D main-comparison run go-ahead? PA2D 7th button or accept 6-button bar? DG CUT 001R as opener as-is or re-animate?</li>
+<li>IDLE: last user msg 2026-11-26T22:09:27Z (~666 min idle at run start).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-27t0844z-30-min-run">Overnight pipeline — 2026-11-27T08:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-27t0844z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1215 verified LANDED this run (merge b7f0dcf == tip b7f0dcf, merged 2026-11-27T08:22:02Z, "Overnight pipeline 2026-11-27T08:14Z: queue + handoff sync (75 open, AO #1214 landed)"; MERGE-QUEUE.md blob aeb19a18 MATCH main via contents API == local hash-object; overnight-handoff.md blob e1571d19 MATCH). This run's sync PR (number + merge recorded in next run's addendum).</li>
