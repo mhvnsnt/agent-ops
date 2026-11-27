@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-27t1348z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-27t1437z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-27t1437z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-27T14:37Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-27t1348z-30-min-run" class="md-nav__link">
@@ -15568,6 +15579,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-27t1437z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-27T14:37Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-27t1348z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -21882,6 +21904,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-27t1437z-30-min-run">Overnight pipeline — 2026-11-27T14:37Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-27t1437z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: AO #1219 verified LANDED this run (merge e32913f == tip e32913f, merged 2026-11-27T14:34:35Z, "Overnight pipeline 2026-11-27T13:48Z: queue + handoff sync (75 open, AO #1218 landed) + land local-only RESEARCH-PULLIN/TEARDOWN-IDLE additions"). This run's sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 0 new opens, 0 closures. Queue 75 open, 31 blocked — UNCHANGED vs 13:48Z (live tip + open-PR recount, 12 repos + PA2D = 75; sweep-fast-20261127-1437.jsonl). Only tip moves: PA3D 96e9257 -&gt; ed4d5df (#16 Under finisher merge 825cf8e + Mt. Battle finisher merge 6f5d2a0, direct pushes) and AO b83c90f -&gt; e32913f (#1219 sync merge).</li>
+<li>STEP 1: no merges — CLEAN PRs all held: CJ #429 owner's call (head c852419, checks SUCCESS — green but HELD). PPWA #290/#293 owner's call (carried). PA3D #7/#8 do-not-merge (heads b9bde11/22ba5d1 unchanged). WH #1835 OWNER-HELD.</li>
+<li>STEP 2 verify-done (5/5 HOLD, 0 false claims): AO #1219 e32913f == tip; PA3D #16 merges 825cf8e/6f5d2a0 ancestors of tip ed4d5df; DG #95 3ec5afc == tip; Bannon #575 61a1746 in main's recent 100; CJ #461 eb96e6a ancestor of tip 210c6d6 (ahead 2/behind 0). Carried by unchanged tips: WH #1859, PPWA #295.</li>
+<li>STEP 3 checkpoints: 1245 .json scanned, 0 unparseable; 0 watchdog-running, 0 stale-watchdog; checkpoint_audit.py still missing (tools/ archived). Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 ce5e6151 UNCHANGED — canon-sync nothing new. Last-sync md5 still ce5e6151.</li>
+<li>STEP 5 friction: failure-alerts.log nothing new (last 2026-10-20). Disk 83% (27G free) — below 85% bar. at-inflate2 pid 7000 ALIVE (sacred, untouched). No new VM restart (uptime 4:01). zrok stable share STILL DOWN — re-probed this run, 502 in 7.2s (owner-side enable needed). GitHub API 200. wrestling-arcade 404 carried.</li>
+<li>STEP 6/7/8: no new thread, no new pulls — PA3D #16 owns its lanes; Bannon fold lane owns its UNSTABLE PRs; WH #1851 lane owns. Stand down. LOCAL-ONLY sweep: HEADs match recorded values; dirty states all previously recorded. No new local-only items.</li>
+<li>BLOCKED &gt;72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge; Bannon #592/#593/#595 owner-held (verdicts owed). Plus carried: TorBox key dead; zrok DOWN; disk quota wall; wrestling-arcade 404 intermittent; VM restart #10.</li>
+<li>IDLE: last user msg 2026-11-26T22:09:27Z (~993 min idle at run start).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-27t1348z-30-min-run">Overnight pipeline — 2026-11-27T13:48Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-27t1348z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1218 verified LANDED this run (merge b83c90f == tip b83c90f, merged 2026-11-27T10:07:12Z, "Overnight pipeline 2026-11-27T09:47Z: queue + handoff sync (75 open, AO #1217 landed) + land local-only HANDOFF-CANON/FRICTION-LOG additions"; MERGE-QUEUE.md blob e0ba6d50 MATCH main via git trees API == local hash-object; overnight-handoff.md blob 86dbeb3f MATCH; HANDOFF-CANON.md blob b5494b55 MATCH; FRICTION-RESEARCH-LOG.md blob 87a286e0 MATCH). This run's sync PR (number + merge recorded in next run's addendum).</li>
