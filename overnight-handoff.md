@@ -1,3 +1,12 @@
+## Overnight pipeline — 2026-11-27T21:14Z (30-min run)
+- QUEUE DELTA: 0 merged BY this run. 0 new lane landings in-window — no tip moved on any of the 15 repos since 20:44Z. Queue 85 open / 38 blocked (unchanged).
+- QUEUE SYNC: AO #1231 verified LANDED (merge 3deae4f == tip). This run's sync PR (number + merge recorded in next run's addendum).
+- VERIFY-DONE 7/7 HOLD, 0 false claims (AO #1231, WH #1867/#1866, Bannon #621/#620, CJ #463, DG #95). All compare-API verified.
+- Bannon CI outage still active (5 runs 21:18:15Z all failure). Bannon open 3 (#596 HELD, #600 HELD, #382 draft). WH open 34. WH #1851 lane-owned, head unchanged 44e8f8a.
+- CHECKPOINTS: 1245, 0 stale-watchdog, 0 unparseable — nothing to resume. CANON-SYNC: nothing new (MEMORY.md md5 436da9c8 unchanged). DISK 83% (26G free). at-inflate2 pid 32951 alive, untouched. No media processes running.
+- MEMORY DRIFT NOTE (carried): MEMORY.md BANNON CLEAN MERGES entry still records tip 19f70c1 — Bannon tip is now 6543f1e (#621 landed). Memory-system update owed, not edited here.
+- BLOCKERS (owner decisions, carried): Bannon #596 APEX STEER question + video proof; #600 WIP/close-or-land; #382 revive-or-drop; WH #1835/#1820; CJ #429; PPWA #290/#293/#305; PA3D #7/#8; DG #9; GRE #99; DG portrait run awaiting owner's approval-card tap (Studio 0.10 credits); zrok share DOWN (needs owner token).
+- This run's sync PR (number + merge recorded in next run's addendum).
 ## Overnight pipeline — 2026-11-27T20:44Z (30-min run)
 - QUEUE DELTA: 0 merged BY this run. 2 lane landings verified LANDED-VERIFIED: WH #1867 (Pantera King T7 clips, merge 0a464de == tip, +279/-8, 11 files, 0 deletions) + Bannon #621 (ANIMFIX v1.2 round 3, merge 6543f1e == tip, +13524/-17, 34 files, 0 deletions; role-map.json bc691cd on main). AO #1230 sync verified landed (714f26b == tip). Queue 85 open / 38 blocked.
 - VERIFY-DONE 7/7 HOLD, 0 false claims (AO #1230, WH #1867/#1866, Bannon #621/#620, CJ #463, DG #95, PA3D a519f41f ancestor). All compare/PR-API/contents-API verified.
