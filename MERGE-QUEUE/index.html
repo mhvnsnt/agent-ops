@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-28t0844z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-28t0914z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-28t0914z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-28T09:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-28t0844z-30-min-run" class="md-nav__link">
@@ -15876,6 +15887,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-28t0914z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-28T09:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-28t0844z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -22498,6 +22520,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-28t0914z-30-min-run">Overnight pipeline — 2026-11-28T09:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-28t0914z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: AO #1250 verified LANDED (merge 7ddeff6 == tip 08:52:01Z; the 08:44Z run's sync PR). This run's sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 0 new PRs since 08:44Z (full 15-repo sweep recount: 88 open = 82 live-verified + 6 WG unverifiable; matches the 08:44Z live recount exactly). Queue 82 live-verified open / 42 blocked + 6 WG unverifiable = 88 carried (unchanged). All CLEAN PRs held (WH #1835 owner-held, CJ #429 owner's call, PA3D #7 do-not-merge, PA2D #9 draft, PPWA #290/#293 owner's call).</li>
+<li>STEP 1: no merges by this run. Bannon #628 head 49c4571 unchanged since 06:46:39Z push (mergeable, UNSTABLE — CI outage; lane 2 owns, head idle ~2h30m, watch only — no running checkpoint to resume from); #631 b3ee994 unchanged (mergeable, UNSTABLE); DG #97 a103d13 unchanged (mergeable, UNSTABLE). BPP #10/#11/#12/#14 MERGEABLE but checks never ran (CI outage) — NOT merged. All other tips unchanged except AO (8d630c0 -&gt; 7ddeff6, the #1250 sync). Bannon CI outage CONFIRMED still active: latest run drive-sync failure 07:52:23Z, no new runs since (Actions runs API this run). AO open PRs 0 (no existing sync PR to update).</li>
+<li>STEP 2 verify-done (7/7 HOLD, 0 false claims): AO #1250 7ddeff6 == tip (merge msg, 08:52:01Z); PA3D wave-3b payload on main via git-tree API (assets/models/xd_esaba_A.glb 7,207,292 B, proof/pokespot_raycast_spots.json 10,881 B, src/world.js 288,989 B — note: raycast JSON lives under proof/, not repo root; a root-path probe 404s and is NOT a missing file); WH #1868 54cf05f == tip; Bannon #600 0b6190e == tip; CJ #463 ffc5b0d == tip; DG #95 3ec5afc == tip; PA2D #12 aac953c == tip.</li>
+<li>STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog, 0 unparseable (checkpoint_audit.py). Nothing to resume via checkpoints. RENDER RESUME (outside checkpoint scan): VM RESTART #20 ~09:15Z killed the Bannon render nurses + blenders AND the wave3 ONBS render; pairs nurse relaunched 09:17:02 by hook/lane driver (pid 1917, NURSE START logged, alive, rendering 025_tight — NOT relaunched by this run, no duplicate). 4022 nurse had exited 08:02:55 after ALL HALVES COMPLETE, but its encode failed: ./encode.sh Permission denied (exit 126). encode.sh is executable NOW and the 4022/080/100 mp4s were encoded 09:18-09:19 by an unknown party (hook/lane driver); this run verified all 3 mp4s 1920x540 60fps h264 (4022 10.02s, 100 6.97s, 080 1.80s) and re-encoded the 4022 gif (9,695,232 B, 09:23) — the 100.gif is STILL MISSING (ffmpeg "Disk quota exceeded", 6 retries 09:24-09:27, wall closed; mp4 verified intact, hook's encode-all at completion will fill the gif). Frame totals 2,545/2,830 (only 025_tight remains, 4/287 at ~09:27Z — wall flickering, nurse re-walking halves with frame-skip). ONBS colo_M2 render alive again after restart #20 (lane relaunched; on 4F at ~09:26) — the 08:44Z "gone" watch is resolved-alive.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 670a40c2 UNCHANGED since 06:55:40Z — nothing new. Bannon pair-system law text still unlanded (canon-sync PENDING until #625 lands or CI recovers; no competing PR against active lane-2/wiring program).</li>
+<li>STEP 5 friction: failure-alerts.log nothing new (last 2026-10-20). Disk 84% (26G free). Quota wall flickering: OPEN 09:17 (lock + log writes OK, 4022 gif written 09:23), CLOSED again ~09:24-09:27 (100.gif ffmpeg EDQUOT x6; local writes after that point may fail — this run's record lives on main via the Git Data API sync). at-inflate2 DEAD (watchdog-owned, NO blind restart). Disk guardian du scan running (pid 814, since 09:16). VM restart #20 ~09:15Z (uptime 1 min at 09:16:44; the 07:44/08:14/08:44 runs' local log lines never landed, but their sync PRs #1248/#1249/#1250 are all on main).</li>
+<li>STEP 6/7/8: no new thread, no new pulls — Bannon lane 2 owns #628, wiring lane #631, render lane active (025_tight the long pole, ~2h at recent pace if the wall cooperates). Stand down. LOCAL-ONLY sweep: deferred (last full sweep 14:37Z Nov 27; DG clone local-only item lane-owned, carried; quota wall blocks local worktree writes).</li>
+<li>BLOCKED &gt;72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge; Bannon #596 HELD (APEX STEER question + video proof + missing tests); Bannon #625 owner-held; #628 BLOCKED-ci-outage (lane active, head idle ~2h30m — watch); #631 BLOCKED-ci-outage + stacked on #628; DG #97 BLOCKED-ci-outage. Bannon #622 parked behind web-upgrade-&gt;main (#309/#310/#311 owner decisions). Plus carried: TorBox key dead; zrok stable share DOWN; localhost.run 502 (watchdog-owned); disk quota wall (~124G cap, flickering — closed this run after 09:24); wrestling-arcade 404 intermittent; VM restart #20 (~09:15Z). Open owner decisions: PPWA #305 merge (ADRI #305)? PA2D main-comparison run / 7th button? DG CUT 001R V2-or-re-animate? Bannon/DG/WG CI fast-fail outage — who diagnoses? wizard-gang repo gone (404)? TeraBox fg-01.bin pull DEAD — re-launch or wait for owner? NEW: 100.gif missing (wall-blocked, hook fills at completion — no owner action).</li>
+<li>IDLE: last user msg 2026-11-28T03:47:24Z (330 min idle at run start).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-28t0844z-30-min-run">Overnight pipeline — 2026-11-28T08:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-28t0844z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1249 verified LANDED (merge 8d630c0 == tip, parents ca67542 + e549fee, merged 08:27:29Z; the 08:14Z run's sync PR). This run's sync PR (number + merge recorded in next run's addendum).</li>
