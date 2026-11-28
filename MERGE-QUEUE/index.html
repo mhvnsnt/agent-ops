@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-27t2344z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-28t0014z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-28t0014z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-28T00:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-27t2344z-30-min-run" class="md-nav__link">
@@ -15711,6 +15722,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-28t0014z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-28T00:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-27t2344z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -22168,6 +22190,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-28t0014z-30-min-run">Overnight pipeline — 2026-11-28T00:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-28t0014z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: AO #1234 verified LANDED (merge 427b320 == tip 427b320 at sweep). This run's sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 0 lane landings in-window (0 tip moves on any of 15 repos since 23:44Z). 0 new opens, 0 closures. Queue 86 open (live sweep: WH 34 + Bannon 4 + CJ 1 + PPWA 28 + DG 3 + PA3D 2 + GRE 2 + WG 6 + wrestling 1 + BPP 4 + AO 0 + CD 0 + CD2 0 + PA2D 1), 40 blocked (unchanged).</li>
+<li>STEP 1: no merges by this run — only CLEAN PRs are owner-held/draft/do-not-merge (WH #1835 owner-held, CJ #429 owner's call, PPWA #290/#293 owner's call, Bannon #625 owner-held, PA3D #7 do-not-merge, PA2D #9 draft). WH main unchanged (54cf05f); Bannon main unchanged (5b1200d); AO main unchanged (427b320); PA3D main unchanged (e994b99); CJ main unchanged (ffc5b0d). Bannon CI outage CONFIRMED still active: 5 runs 00:18:50Z all failure (Autonomous Build &amp; Verify Loop, no-deletion-guard, BANNON Integration Gate, instruction-gate, pr-clean-merge). WH #1861 draft head MOVED 58ddadf → e2b6839 (lane pushed), still UNSTABLE. DG #96 / GRE #101 / wrestling #25 / WG-storage #8 / WG-voice-pipe #10 / PPWA #304/#305/#306 / BPP #14 PULL-IN-FIRST stragglers carried (checks never ran — dead runner/CI outage). WH #1851 UNSTABLE head 44e8f8a (Lane E, lane owns).</li>
+<li>STEP 2 verify-done (8/8 HOLD, 0 false claims): AO #1234 427b320 == tip; WH #1868 54cf05f == tip; Bannon #624 5b1200d == tip; Bannon #623 72a8801 ancestor (ahead 2, behind 0); PA3D Citadark f8214d46 ancestor of e994b99 (ahead 1); CJ #463 ffc5b0d == tip; DG #95 3ec5afc == tip; Bannon #625 payload re-verified on branch (docs/AUDIT.md blob b220d49, 41,380 B, head d38eac5, PR open/clean/not merged). All compare/PR-API/contents-API verified.</li>
+<li>STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog, 0 unparseable. checkpoint_audit.py (agent-ops/) run: 1051 managed, 0 stale running. Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 2981e774 UNCHANGED since 23:44 baseline — canon-sync nothing new. Bannon pair-system law text still unlanded in Bannon repo (canon-sync PENDING until #625 lands or CI recovers). Daily-note tail since 23:44Z is watchdog passes only (DG live-view, dreamgirl-lane-watchdog, M. Engine supervisor, disk guardian, CN gigaleak pull). DG portrait run: upload card expired ~23:52 CST untapped, Studio asleep on 0.10 credits, 0/72 images — owner payment decision, carried.</li>
+<li>STEP 5 friction: failure-alerts.log nothing new (last 2026-10-20). Disk 83% (26G free). at-inflate2 pid 7636 alive (00:15Z guardian pass, untouched). Blender render lanes ACTIVE (2x blender + render_pair.py, suplex grips — sacred, untouched). Sweep fast-path PARTIAL again (7/15 parsed; 8 re-probed OK via sweep-one-nochecks.sh). Bannon #622 re-verified PARKED: compare 071cab9...main diverged (ahead 141, behind 46) — NOT on main, still behind web-upgrade→main (#309/#310/#311 owner decisions). zrok stable share STILL DOWN (carried, DG watchdog).</li>
+<li>STEP 6/7/8: no new thread, no new pulls — Bannon lane 2 + render lane active; TeraBox fg-01.bin browser pull running (watchdog-owned). Stand down. LOCAL-ONLY sweep: deferred this run (last full sweep 14:37Z).</li>
+<li>BLOCKED &gt;72h (carried + updates): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge; Bannon #596 HELD (APEX STEER question + video proof + missing tests); Bannon #600 HELD (WIP, content landed via Stage 5). NEW: Bannon #625 owner-held (his call to merge — payload verified on branch). Bannon #622 parked behind web-upgrade→main (#309/#310/#311 owner decisions). Plus carried: TorBox key dead; zrok stable share DOWN; localhost.run 502 (watchdog-owned); disk quota wall (~124G cap); wrestling-arcade 404 intermittent; VM restart #15. Open owner decisions: PPWA #305 merge (ADRI #305)? PA2D — main-comparison run for the renderer crash: go-ahead? PA2D — build the 7th button (6 moves + DASH) or accept the 6-button bar? DG CUT 001R — take the v3 rebuild as the episode opener as-is (honestly V2) or re-animate? Bannon/DG/WG CI fast-fail outage — who diagnoses/fixes the repo-wide CI failure? mhvnsnt/wizard-gang repo is gone (404) — deleted/renamed on purpose?</li>
+<li>IDLE: last user msg 2026-11-27T23:03:43Z (71 min idle at run start).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-27t2344z-30-min-run">Overnight pipeline — 2026-11-27T23:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-27t2344z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1233 verified LANDED (merge d03a0a0 == tip d03a0a0 at sweep). This run's sync PR (number + merge recorded in next run's addendum).</li>
