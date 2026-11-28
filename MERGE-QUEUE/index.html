@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-28t0014z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-28t0044z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-28t0044z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-28T00:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-28t0014z-30-min-run" class="md-nav__link">
@@ -15722,6 +15733,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-28t0044z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-28T00:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-28t0014z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -22190,6 +22212,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-28t0044z-30-min-run">Overnight pipeline — 2026-11-28T00:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-28t0044z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: AO #1235 verified LANDED (merge 970584c == tip 970584c at sweep; PR merged=true, parents 427b320 + e74fde3f). This run's sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 1 lane landing verified: Bannon Disk-clear Lane A batch3 — merge c55859f (00:29:08Z), parents 5b1200d + 9a430dc, +940 blobs under docs/lane-records/ (2k26-preextracted-hunt, bannon-dlc-personas, bannon-full-2k26-pull, bannon-hunt-72, bannon-nxt-hunt, joemashups-pull), 0 deletions; commit claims 229 big files / 15,998,498,839 bytes split into 20MB .partNNN pieces with MANIFEST-batch3.tsv / PIECES-batch3.sha256 / REASSEMBLE-batch3.md (940 pieces reconciles with 229 source files). Verified via tree-SHA drill-down (root tree 707395d4 -&gt; bbc3a39a; only docs/ changed; only docs/lane-records/ changed; blobs 6992 -&gt; 7932, +940/-0; compare API 422s on Bannon, tree APIs used instead). Queue 86 open (live sweep: WH 34 + Bannon 4 + CJ 1 + PPWA 28 + DG 3 + PA3D 2 + GRE 2 + WG 6 + wrestling 1 + BPP 4 + AO 0 + CD 0 + CD2 0 + PA2D 1), 40 blocked (unchanged — batch3 was a direct lane merge, never a queued PR item).</li>
+<li>STEP 1: no merges by this run — only CLEAN PRs are owner-held/draft/do-not-merge (WH #1835 owner-held, CJ #429 owner's call, PPWA #290/#293 owner's call, Bannon #625 owner-held, PA3D #7 do-not-merge, PA2D #9 draft). Bannon CI outage CONFIRMED still active: 6 runs 00:41:49–00:45:01Z all failure (BANNON Integrity x2, Integration Gate, deletion-guard, Shipping gate, pr-clean-merge — fired by the batch3 merge). WH #1861 draft head e2b6839 unchanged, still UNSTABLE; WH #1851 UNSTABLE head 44e8f8a unchanged (Lane E, lane owns). PPWA CLEAN: #290/#293 only (owner-held).</li>
+<li>STEP 2 verify-done (9/9 HOLD, 0 false claims): AO #1235 970584c == tip; WH #1868 54cf05f == tip; Bannon #624 5b1200d direct parent of tip c55859f; Bannon #623 72a8801 ancestor; Bannon #620 19f70c1 ancestor; PA3D Citadark f8214d46 ancestor of e994b99 (tip unchanged); CJ #463 ffc5b0d == tip; DG #95 3ec5afc == tip; Bannon #625 payload docs/AUDIT.md blob b220d49c 41,380 B on branch docs/bannon-gap-audit-20261127, PR open CLEAN, NOT merged. All compare/PR-API/contents-API/tree-API verified.</li>
+<li>STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog, 0 unparseable. checkpoint_audit.py (agent-ops/) run: 1051 managed, 0 stale running. Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 2981e774 UNCHANGED since 00:14 baseline — canon-sync nothing new. Bannon pair-system law text still unlanded in Bannon repo (canon-sync PENDING until #625 lands or CI recovers). Daily-note tail since 00:14Z is watchdog passes only (DG live-view, dreamgirl-lane-watchdog, M. Engine supervisor, disk guardian, CN gigaleak pull).</li>
+<li>STEP 5 friction: failure-alerts.log nothing new (last 2026-10-20). Disk 83% (26G free). NEW — at-inflate2 DEAD: pid 7636 (START 23:51:30Z after VM restart #15) progressed to 4.3/55.5GB at 00:42:06Z, then died silently — no error, no DONE in at-inflate2.log (last write 00:42Z); ps aux confirms NO inflate process running as of ~00:58Z; pgrep hits 58842/62510 were transient checker self-matches. at-manifest.json still absent, lane not complete. Watchdog-owned: watchdog relaunches on ~2h cadence (last 23:51:29Z, next ~01:51Z) — NOT restarted by this run (double-driver risk; NEVER touch in-progress work). Flagged for the watchdog/guardian. Blender render lanes ACTIVE (Bannon suplex grips + wave-3 pokespots esaba_C, sacred, untouched). zrok stable share STILL DOWN (carried, DG watchdog). localhost.run 502 (watchdog-owned, carried). Sweep fast-path PARTIAL again (4/15 parsed; 11 re-probed OK via sweep-one-nochecks.sh). Bannon compare API 422 (diff too large) — tree-SHA drill-down used instead. Disk quota wall EDQUOT ACTIVE this run (local writes blocked 5x over 75s + muse.write failed; sync done fully in-memory via stdin, no script/state files written). DB idle query timed out 3x this run (statement timeout) — idle inferred from 00:14Z run's last-user-msg 23:03:43Z (~101 min at run start); chat.read_messages also failing in this run.</li>
+<li>STEP 6/7/8: no new thread, no new pulls — Bannon lane 2 + render lane + disk-clear lane A active; PA3D coordinator #20 wave 3 running; TeraBox fg-01.bin browser pull waiting on owner's sign-in card tap (Bannon chat). Stand down. LOCAL-ONLY sweep: deferred this run (last full sweep 14:37Z).</li>
+<li>BLOCKED &gt;72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge; Bannon #596 HELD (APEX STEER question + video proof + missing tests); Bannon #600 HELD (WIP, content landed via Stage 5). NEW: Bannon #625 owner-held (his call to merge — payload verified on branch). Bannon #622 parked behind web-upgrade→main (#309/#310/#311 owner decisions). Plus carried: TorBox key dead; zrok stable share DOWN; localhost.run 502 (watchdog-owned); disk quota wall (~124G cap); wrestling-arcade 404 intermittent; VM restart #15. Open owner decisions: PPWA #305 merge (ADRI #305)? PA2D — main-comparison run for the renderer crash: go-ahead? PA2D — build the 7th button (6 moves + DASH) or accept the 6-button bar? DG CUT 001R — take the v3 rebuild as the episode opener as-is (honestly V2) or re-animate? Bannon/DG/WG CI fast-fail outage — who diagnoses/fixes the repo-wide CI failure? mhvnsnt/wizard-gang repo is gone (404) — deleted/renamed on purpose?</li>
+<li>IDLE: last user msg 2026-11-27T23:03:43Z per 00:14Z run (db query timed out this run; ~101 min idle at run start).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-28t0014z-30-min-run">Overnight pipeline — 2026-11-28T00:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-28t0014z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1234 verified LANDED (merge 427b320 == tip 427b320 at sweep). This run's sync PR (number + merge recorded in next run's addendum).</li>
