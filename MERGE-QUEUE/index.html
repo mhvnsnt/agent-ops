@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-28t1014z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-28t1044z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-28t1044z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-28T10:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-28t1014z-30-min-run" class="md-nav__link">
@@ -15909,6 +15920,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-28t1044z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-28T10:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-28t1014z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -22564,6 +22586,21 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-28t1044z-30-min-run">Overnight pipeline — 2026-11-28T10:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-28t1044z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: AO #1253 verified LANDED (merge d276269 == tip d276269; queue blob 1861a7bc + handoff blob d2bdf1db on main, heads read = 10:14Z entries via blob API). This run's sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 2 LANE LANDINGS verified in-window: Bannon #633 MERGED 10:31:40Z (merge 333021f == tip; merge tree d52ea345 == branch head c09feda tree; compare 0b6190e...c09feda ahead_by 1, sampled files all added under docs/lane-records/2k26-preextracted-hunt/ + bannon-dlc-personas/ — 14,388 files, 4,797,701,672 B; opened 10:26:18Z, merged by its lane 5 min later with no owner call recorded — FLAG, same pattern as #600; batch also commits <strong>pycache</strong>/*.pyc files) + CJ #464 MERGED 10:24:37Z (merge 5a48651 == tip; memory-backup/MEMORY.md blob 0fc8153c on main, 117,605 B). Bannon #632 MERGED 09:42:14Z into base muse/web-upgrade (NOT main) — closed, not on main, never in the 88-count. Queue 88 open / 42 blocked (unchanged: live recount 82 = WH 34 + Bannon 5 + CJ 1 + PPWA 28 + DG 4 + PA3D 2 + GRE 2 + wrestling 1 + BPP 4 + PA2D 1 + AO 0; + WG-storage 3 + WG-voice-pipe 3 = 88).</li>
+<li>STEP 1: no merges by this run — all CLEAN PRs held (WH #1835 owner-held, CJ #429 owner's call, PPWA #290/#293 owner's call, PA3D #7 do-not-merge). Bannon #628 UNSTABLE head 49c4571 (lane 2 owns), #631 UNSTABLE head 4970972 (wiring lane owns), #625 UNSTABLE head 3a17cc0, #596 UNSTABLE head 541dc27. WH #1851 UNSTABLE head 44e8f8a, #1820 DIRTY head 8eb1a30, #1837 BLOCKED head 46b1279. PPWA #305 UNSTABLE head 81751d0 (owner decision open), #294 UNSTABLE head dce6bf7. PA3D #8 DIRTY head 22ba5d1, #7 CLEAN head b9bde11 (do-not-merge). DG #97 UNSTABLE head a103d13, #9 DIRTY head 399eb3d. GRE #99 UNSTABLE head 29e394f, #101 UNSTABLE head d577864. WG-storage #4/#5/#8 UNSTABLE heads unchanged. Bannon check-runs API 403 (PAT lacks checks:read — carried). No new PRs since 10:14Z except #633 (opened + merged in-window). No head moves besides the two landings. Tips unchanged except Bannon (0b6190e -&gt; 333021f, #633) + CJ (ffc5b0d -&gt; 5a48651, #464).</li>
+<li>STEP 2 verify-done (8/8 HOLD, 0 false claims): AO #1253 (d276269 == tip, blobs on main); Bannon #633 (merge == tip, tree == branch tree, files sampled added); CJ #464 (merge == tip, blob 0fc8153c); WH #1868 (tip 54cf05f unchanged); Bannon #600 (0b6190e ancestor of tip); DG #95 (tip 3ec5afc unchanged); PA2D #12 (tip aac953c unchanged); PA3D wave-3b (tip 9db231d unchanged).</li>
+<li>STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog, 0 unparseable. Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 df9eb67c vs last-sync 670a40c2 — diff vs CJ blob 0fc8153c (the 670a40c2 version) shows ONLY the parent's "OVERNIGHT Nov 28 04:14–10:40Z" summary entry added; no new game canon/decisions. Nothing to sync. Bannon pair-system law text still unlanded (canon-sync PENDING until #625 lands or CI recovers).</li>
+<li>STEP 5 friction: failure-alerts.log nothing new (last 2026-10-20). Disk 84% (124G/150G, 26G free). Quota wall CLOSED the entire run (sweep-prs-jsonl.py died exit 120, no jsonl; blob-refresh + probe writes EDQUOT; /tmp writes OK) — this run's record lives on main via Git Data API sync; local MERGE-QUEUE.md/overnight-handoff.md STILL STALE (07:14Z headers) — next run MUST refresh from main or use the in-memory flow, or it will CLOBBER. at-inflate2 DEAD (watchdog-owned, NO blind restart). Renders sacred + running: Blender pid 146200 (render_pair.py 55257_025_tight, started 10:40) — untouched; frames 2,621/2,830 (up from 2,545 at 10:14Z — 025_tight rendering again, +76). 100.gif still missing. ONBS http.server (pid 148693) + Bannon serve-gh :8765 probes running — lane-owned, untouched. zrok stable share still down (carried; DG watchdog pass: localhost.run tunnel 5dbf08a430e04e verified 200 — daily-note entry mislabeled "10:47 CST", actually 10:47 UTC).</li>
+<li>STEP 6/7/8: no new thread, no new pulls — Bannon lane 2 owns #628, wiring lane owns #631, render lane on 025_tight. Stand down. LOCAL-ONLY sweep (read-only): 7 worktrees checked, HEADs match recorded values (agent-ops 3c117795, wh-shallow 9b56d726, wh-449 6e3ba07c, dream-girl 9488a9f, PPWA 9c4c9c0, PA3D 9f06299, watchdog-v2-runtime d03a0a0); dirty counts unchanged from record (wh-449 33 still open question; wh-shallow 53495; agent-ops 2285 = pipeline bookkeeping). No new local-only items, nothing committed, nothing discarded.</li>
+<li>BLOCKED &gt;72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge; Bannon #596 HELD (APEX STEER question + video proof + missing tests); Bannon #625 owner-held; #628 BLOCKED-ci-outage (lane active); #631 BLOCKED-ci-outage + stacked on #628; DG #97 BLOCKED-ci-outage. Bannon #622 parked behind web-upgrade-&gt;main (#309/#310/#311 owner decisions). Plus carried: TorBox key dead; zrok stable share DOWN; localhost.run 502s (watchdog-owned, latest tunnel 5dbf08a430e04e verified 200); disk quota wall (~124G cap, CLOSED this run); wrestling-arcade 404 intermittent; VM restart #20 (09:15Z). adri re-gate due 01:58 CST (07:58Z) PASSED unmet — mirror still absent, dream-girl .git gc only release valve, owner call still owed. Open owner decisions: PPWA #305 merge (ADRI #305)? PA2D main-comparison run / 7th button? DG CUT 001R V2-or-re-animate? Bannon/DG/WG CI fast-fail outage — who diagnoses? wizard-gang repo gone (404)? TeraBox fg-01.bin pull DEAD — re-launch or wait for owner? Bannon #633 merged-by-lane-without-owner-call — flag (same pattern as #600).</li>
+<li>IDLE: last user msg 2026-11-28T03:47:24Z (417 min idle at run start).</li>
+<li>NOTE: the 09:17Z overnight-log "started" line has no local completion line — resolved, not a lost run: it was the 09:14Z run logging late after VM restart #20 (09:15:43Z); its record is on main via AO #1251 (merge 1ba5c75), and the 09:44Z/10:14Z runs' records via #1252/#1253. The 09:44Z + 10:14Z runs likewise left no local log lines (wall closed) — their records live on main.</li>
+<li>SYNC PR: this run's sync PR (number + merge recorded in next run's addendum).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-28t1014z-30-min-run">Overnight pipeline — 2026-11-28T10:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-28t1014z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1252 verified LANDED (merge 2352a38 == tip 09:55:17Z; the 09:44Z run's sync PR). This run's sync PR (number + merge recorded in next run's addendum).</li>
