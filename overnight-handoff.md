@@ -1,3 +1,13 @@
+## Overnight pipeline — 2026-11-28T00:44Z (30-min run)
+- QUEUE DELTA: 0 merged BY this run. 1 lane landing verified LANDED-VERIFIED: Bannon Disk-clear Lane A batch3 — merge c55859f (00:29:08Z), +940 blobs under docs/lane-records/ (6 hunt dirs), 0 deletions, manifests present; verified via tree-SHA drill-down (root 707395d4 -> bbc3a39a; blobs 6992 -> 7932). AO #1235 sync verified landed (970584c == tip). Queue 86 open / 40 blocked (unchanged).
+- VERIFY-DONE 9/9 HOLD, 0 false claims (AO #1235, WH #1868, Bannon #624/#623/#620, PA3D Citadark, CJ #463, DG #95, Bannon #625 branch payload b220d49c re-verified). All compare/PR-API/contents-API/tree-API verified.
+- Bannon CI outage still active (6 runs 00:41–00:45Z all failure, fired by the batch3 merge). Bannon open 4 (#625 owner-held, #596 HELD, #600 HELD, #382 draft). WH open 34 (#1861 draft / #1851 lane-owned, heads unchanged).
+- CHECKPOINTS: 1245, 0 stale-watchdog, 0 unparseable — nothing to resume. CANON-SYNC: MEMORY.md md5 2981e774 unchanged — nothing new. DISK 83% (26G free).
+- NEW — at-inflate2 DEAD: pid 7636 reached 4.3/55.5GB at 00:42:06Z then died silently (no error/DONE in log); ps aux confirms no inflate process ~00:58Z. at-manifest.json still absent, lane not complete. Watchdog-owned (relaunches ~2h cadence, next ~01:51Z) — NOT restarted by this run. Flagged for the watchdog/guardian.
+- QUOTA WALL ACTIVE this run: all local writes blocked (EDQUOT x5 + muse.write failed); queue/handoff sync done fully in-memory via stdin, no script/state files written. Local MERGE-QUEUE.md / overnight-handoff.md / overnight-log.md / daily note NOT updated locally — record lives on main via this run's sync PR.
+- Blender render lanes ACTIVE (sacred, untouched). DG portrait run: Studio asleep 0.10 credits — owner payment decision. TeraBox fg-01.bin pull still waiting on owner's sign-in card tap (Bannon chat).
+- BLOCKERS (owner decisions, carried): Bannon #625 merge call; #596 APEX STEER question + video proof; #600 WIP/close-or-land; #382 revive-or-drop; #622 parked behind web-upgrade #309/#310/#311; WH #1835/#1820; CJ #429; PPWA #290/#293/#305; PA3D #7/#8; DG #9; GRE #99; zrok share DOWN (needs owner token).
+- This run's sync PR (number + merge recorded in next run's addendum).
 ## Overnight pipeline — 2026-11-28T00:14Z (30-min run)
 - QUEUE DELTA: 0 merged BY this run. 0 lane landings in-window (0 tip moves on any of 15 repos since 23:44Z). AO #1234 sync verified landed (427b320 == tip). Queue 86 open / 40 blocked.
 - VERIFY-DONE 8/8 HOLD, 0 false claims (AO #1234, WH #1868, Bannon #624/#623, PA3D Citadark, CJ #463, DG #95, Bannon #625 payload re-verified on branch b220d49). All compare/PR-API/contents-API verified.
