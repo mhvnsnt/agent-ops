@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-28t0614z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-28t0644z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-28t0644z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-28T06:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-28t0614z-30-min-run" class="md-nav__link">
@@ -15821,6 +15832,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-28t0644z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-28T06:44Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-28t0614z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -22388,6 +22410,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-28t0644z-30-min-run">Overnight pipeline — 2026-11-28T06:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-28t0644z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: AO #1245 verified LANDED (merge bbe7255 == tip 06:26:51Z; MERGE-QUEUE.md blob on main starts with the 06:14Z header, contents API). This run's sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 1 lane landing verified in-window: AO #1245 (06:14Z run's queue sync). Queue 88 open / 42 blocked (unchanged; live recount 88, histogram carried from 06:14Z — no state changes detected on any item).</li>
+<li>STEP 1: no merges by this run — all 6 CLEAN PRs are held (WH #1835 owner-held, CJ #429 owner's call, PA3D #7 do-not-merge, PA2D #9 draft, PPWA #290/#293 owner's call). Bannon #628 head MOVED e7bb31f -&gt; 49c4571 (lane 2 active again: batch4-rest-0-50-a/b pushed 06:44:05Z/06:46:39Z, 50+48 retargeted clips, universal+mixamo) — the 06:14Z "STALLED ~4h55m idle" watch is RESOLVED, lane owns #628, do not touch. #631 head unchanged b3ee994, still UNSTABLE; DG #97 unchanged a103d13. All other tips unchanged (WH 54cf05f, PA3D 5e78e47, CJ ffc5b0d, DG 3ec5afc, PA2D aac953c, AO bbe7255, CD2 7667399, GRE f40f0c0, wrestling c9ff241, CD b7ffff1, WG-storage 2881630, WG-voice-pipe 6093e88, BPP 25a255a, PPWA e56e317). Bannon CI outage CONFIRMED still active: 6 runs failed 06:46:48Z (fired by the #628 push: no-deletion-guard, pr-clean-merge, Shipping gate, deletion-guard, BANNON Integration Gate, BANNON Integrity). No new PRs; old conflicting PRs carried (no blind conflict resolution).</li>
+<li>STEP 2 verify-done (6/6 HOLD, 0 false claims): AO #1245 bbe7255 == tip (contents API); Bannon #600 0b6190e == tip; WH #1868 54cf05f == tip; CJ #463 ffc5b0d == tip; DG #95 3ec5afc == tip; PA2D #12 aac953c == tip. All tip-verified this run.</li>
+<li>STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog, 0 unparseable (checkpoint_audit.py lives at agent-ops/, not tools/). Nothing to resume.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 e1ad8a0d UNCHANGED since 05:44Z baseline — canon-sync nothing new. Bannon pair-system law text still unlanded in Bannon repo (canon-sync PENDING until #625 lands or CI recovers; no competing PR against active lane-2/wiring program).</li>
+<li>STEP 5 friction: failure-alerts.log nothing new (last 2026-10-20). Disk 83% (26G free). Quota wall: this run's lock + log writes succeeded; no wall hit observed this run. at-inflate2 STILL DEAD (no process; watchdog-owned, NO blind restart per guardian 2026-11-23 order). Blender renders sacred + running: 2x blender (PIDs 2729/29981), nurses 1953/1954 alive. New active lane _wave3-pokespots-merge-20261128 (2.8G) — untouched. Sweep fast-path PARTIAL again (7/15 parsed; 8 re-probed OK via sweep-one-nochecks.sh). Bannon check-runs API 403 (PAT lacks checks:read) — Actions runs API used for the CI probe instead.</li>
+<li>STEP 6/7/8: no new thread, no new pulls — Bannon wiring lane owns #631 (stacked on #628); lane 2 owns #628 and is pushing; render lane active; TeraBox fg-01.bin pull still DEAD (restart is owner/main-agent call). Stand down. LOCAL-ONLY sweep (partial, this run): DG clone ep01-puppets-20261115 has 4 modified puppet PNGs (cut001r-v2 derived/padded, mtime 2026-11-22) — lane-owned, carried as LOCAL-ONLY (same item as 06:14Z run). Agent-ops local worktree is the known-stale sparse checkout on merge-queue-sync-20261126T2014Z — sync via Git Data API only, never commit from it (NO-SPARSE-COMMIT law). ConcreteDragon2 clone clean.</li>
+<li>BLOCKED &gt;72h (carried + updates): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge; Bannon #596 HELD (APEX STEER question + video proof + missing tests). Bannon #625 owner-held; #628 BLOCKED-ci-outage (lane active, pushing); #631 BLOCKED-ci-outage + stacked on #628; DG #97 BLOCKED-ci-outage. Bannon #622 parked behind web-upgrade-&gt;main (#309/#310/#311 owner decisions). Plus carried: TorBox key dead; zrok stable share DOWN; localhost.run 502 (watchdog-owned); disk quota wall (~124G cap, flickering); wrestling-arcade 404 intermittent; VM restart #18 (05:19Z). Open owner decisions: PPWA #305 merge (ADRI #305)? PA2D — main-comparison run for the renderer crash: go-ahead? PA2D — build the 7th button (6 moves + DASH) or accept the 6-button bar? DG CUT 001R — take the v3 rebuild as the episode opener as-is (honestly V2) or re-animate? Bannon/DG/WG CI fast-fail outage — who diagnoses/fixes the repo-wide CI failure? mhvnsnt/wizard-gang repo is gone (404) — deleted/renamed on purpose? TeraBox fg-01.bin pull DEAD — re-launch or wait for owner? NEW (guardian): adri staging (880M) + verify (346M) re-gate due after 01:58 CST (07:58Z) — dream-girl .git gc is the only release valve, owner call still owed.</li>
+<li>IDLE: last user msg 2026-11-28T03:47:24Z (177 min idle at run start).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-28t0614z-30-min-run">Overnight pipeline — 2026-11-28T06:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-28t0614z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1243 verified LANDED (merge d40c712 = parent of tip 40b4ac5). AO #1244 verified LANDED (merge 40b4ac5 == tip at sweep). This run's sync PR (number + merge recorded in next run's addendum).</li>
