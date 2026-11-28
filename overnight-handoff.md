@@ -1,3 +1,12 @@
+## Overnight pipeline — 2026-11-28T02:14Z (30-min run)
+- QUEUE DELTA: 0 merged BY this run. 2 lane landings verified LANDED-VERIFIED: Bannon #626 Disk-clear batch3 (merge c55859f, tree bbc3a39a, batch3 manifests on main) + Bannon #627 C3 hips fix (merge 73e6a3f == tip). 1 NEW OPEN: Bannon #628 Lane 2 (451 role-map clips + 8 taunts, +918/-0). Queue 87 open / 41 blocked (+1 open, +1 blocked vs 01:44).
+- Bannon #625 SPARSE-BRANCH REPAIR (this run): branch tree was a sparse checkout (root = docs/ only) — merge would have wiped Bannon main. Re-pointed to 3a17cc0 (main tip + identical AUDIT.md blob b220d49c); diff now +1 file +535/-0; PR MERGEABLE/UNSTABLE, still owner-held, NOT merged. Comment #issuecomment-7232343633.
+- VERIFY-DONE 8/8 HOLD + 1 false-state fixed (#625 sparse tree). AO #1238 sync blobs MATCH main (f96afc7/ae7d383).
+- Bannon CI outage still active (5 runs 02:24:13Z all failure). Bannon open 5 (#625 owner-held repaired, #628 new lane-owned, #596 HELD, #600 HELD, #382 draft). WH #1861 draft head e2b6839 unchanged; WH #1851 head 44e8f8a unchanged.
+- CHECKPOINTS: 1245, 0 stale-watchdog, 0 unparseable — nothing to resume. CANON-SYNC: MEMORY.md md5 2981e774 unchanged — nothing new. Pair-system law still unlanded (pending #625/CI).
+- QUOTA WALL CLOSED the whole run (lock + local log writes failed EDQUOT incl. 60-retry loop 02:16–02:26Z; local overnight-log.md append NOT landed — recorded here instead). Disk 83% (26G free). at-inflate2 DEAD (6th silent death, last progress 00:42:06Z 4.3/55.5 GB) — NO blind restart per guardian 2026-11-23; lane owner must investigate the reaper. Blender render lane + wave3-pokespots lane ACTIVE, untouched. TeraBox fg-01.bin pull FAILED 19:15 CST (owner told, blocked pending his call). localhost.run tunnel regenerated 19:47 CST (200); zrok still DOWN. VM restart #16.
+- FLAGS (carried): TorBox key dead; wrestling-arcade 404 intermittent; approval-cards outage; DG portrait run 0/72, Studio 0.10 credits, owner payment decision.
+
 ## Overnight pipeline — 2026-11-28T01:44Z (30-min run)
 - QUEUE DELTA: 0 merged BY this run. 1 lane landing verified LANDED-VERIFIED: Bannon #626 Disk-clear Lane A batch3 (merge c55859f == tip, 229 big files ~16GB, payload contents-verified on main). AO #1237 sync verified landed (65d84bf == tip). Queue 86 open / 40 blocked (unchanged).
 - VERIFY-DONE 7/7 HOLD, 0 false claims (AO #1237, Bannon #626/#625-branch, WH #1868, PA3D Citadark, CJ #463, DG #95). All compare/PR-API/contents-API verified.
