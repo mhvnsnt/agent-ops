@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overnight-pipeline-2026-11-28t1444z-30-min-run" class="md-skip">
+        <a href="#overnight-pipeline-2026-11-28t1514z-30-min-run" class="md-skip">
           Skip to content
         </a>
       
@@ -1372,6 +1372,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-28t1514z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-28T15:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-28t1444z-30-min-run" class="md-nav__link">
@@ -15986,6 +15997,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overnight-pipeline-2026-11-28t1514z-30-min-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overnight pipeline — 2026-11-28T15:14Z (30-min run)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overnight-pipeline-2026-11-28t1444z-30-min-run" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -22718,6 +22740,19 @@
 
 
 
+<h2 id="overnight-pipeline-2026-11-28t1514z-30-min-run">Overnight pipeline — 2026-11-28T15:14Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-28t1514z-30-min-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QUEUE SYNC: AO #1260 verified LANDED (merge 24b0d06 == tip, merged 14:57:53Z; the 14:44Z run's sync PR). This run's sync PR (number + merge recorded in next run's addendum).</li>
+<li>QUEUE DELTA: 0 merged BY this run. 0 new PRs, 0 closures, 0 tip moves, 0 head moves since 14:44Z (live recount 89 = WH 34 + Bannon 6 + CJ 1 + PPWA 28 + DG 4 + PA3D 2 + PA2D 1 + GRE 2 + wrestling 1 + WG-storage 3 + WG-voice-pipe 3 + BPP 4 + CD2 0 + AO 0 + CD 0; sweep fast-path PARTIAL again 7/15 parsed, 8 re-probed OK via simple tip+count calls — all counts match 14:44Z). Queue 89 open / 43 blocked.</li>
+<li>STEP 1: no merges by this run — all CLEAN PRs held (WH #1835 owner-held, CJ #429 owner's call, PPWA #290/#293 owner's call, PA3D #7 do-not-merge, PA2D #9 draft carried CLEAN). Bannon heads all unchanged (#634 ed0d78d, #631 c9a4b03, #628 49c4571, #625 3a17cc0, #596 541dc27 HELD, #382 0949107 draft). DG #97 a103d13 unchanged. WH #1851 UNSTABLE head 44e8f8a (Lane E owns). All other tips unchanged (WH 54cf05f, CJ 5a48651, DG 3ec5afc, PA2D aac953c, PA3D 8db65b8, AO 24b0d06, CD2 7667399, GRE f40f0c0, wrestling c9ff241, PPWA e56e317, WG-storage 2881630, WG-voice-pipe 6093e88, BPP 25a255a, CD b7ffff1; Bannon tip 333021f == #633 merge commit). Bannon CI outage CONFIRMED still active: latest 3 runs 13:59:38Z on c9a4b03 all failure; no new runs since. Histogram carried (UNSTABLE 33 / BLOCKED 11 / CLEAN 5 / DIRTY 29 swept-78 + 11 unswept) — named-PR states verified unchanged this run, full recompute not done (sweep statusCheckRollup parse failed on 8 repos, transient).</li>
+<li>STEP 2 verify-done (9/9 HOLD, 0 false claims): AO #1260 24b0d06 == tip; PA3D wave-3 (d) d909dbc ancestor of tip 8db65b8 (compare ahead 1/behind 0); PA3D #13 cef33ff ancestor of tip (ahead 41/behind 0); AO #1259 f5d7c26 ancestor of tip 24b0d06 (ahead 2/behind 0 — branch commit + merge commit); DG c1532f6 == branch ep01-puppets-20261115 tip; Bannon #633 merge commit 333021f == tip; WH #1868 54cf05f == tip; CJ #464 5a48651 == tip; PA2D #12 aac953c == tip.</li>
+<li>STEP 3: 1245 checkpoints, 0 running, 0 stale-watchdog, 0 unparseable (checkpoint_audit.py at ~/workspace/agent-ops/checkpoint_audit.py). Nothing to resume. Held trio carried unchanged.</li>
+<li>STEP 4 canon-sync: MEMORY.md md5 CHANGED 9e23609c -&gt; 0a6fff39 — new entries since 14:44Z: pipeline 14:44Z run note, at-inflate2 watch note (15:11Z), PULSE 09:20Z entry (disk 78%, at-inflate2 log quiet ~60 min, PA3D coordinator #21 quiet ~77 min but CHECKPOINT.md updated after 14:00Z + children active 08:50 — no stall evidence, no nudge) — all operational, NOT game canon. No canon PR owed this run. New baseline saved _canon-baseline-1514.md. CORRECTION (mid-run, ~15:26Z): MEMORY.md changed AGAIN (md5 5a3e8477) — guardian 15:00Z run + honeybebou 4th-death entries, both operational, still no canon. Baseline re-saved.</li>
+<li>STEP 5 friction: failure-alerts.log nothing new (last 2026-10-20). Disk 78% (115G/150G, 35G free) at run start — below 85% bar, up 1pt from 77%; 77% at run end. Quota wall OPEN at run start (lock + log + sweep + queue writes OK). at-inflate2 ALIVE (pid 37250, elapsed 2:45:48, only 1:19 total CPU, log last line still 14:21:26Z 6.4/55.5GB — ~56 min quiet, State S, watchdog-owned, untouched, do NOT kill). Honeybebou download-back: DIED A 4TH TIME (verified by me ~15:26Z — gh pid 395025 GONE, systemd scope unit GONE, tar static at 285,507,551 B since 15:24:40; best run yet, 285MB/794MB). At 15:17Z this run observed it alive and growing (191.8MB, ~4MB/20s) — it died ~7 min later; cause unknown, gh stderr lost with the scope. curl resume proven unusable (exit 33, no byte ranges); gh --clobber restarts from 0 each time. Guardian retries next run; the repeated-death pattern (4 deaths) is the open problem — a download that survives session teardown is still owed. Guardian 15:00Z run: disk 77%, violations 0, no clears (all top-15 blocked: pokken 974M + BR iso-pull 915M downloads in flight, recent CHECKPOINTs, unmanifested, dirty worktrees). Guardian-owned, untouched. PA3D lane downloads in progress (pokken wave1 parts, BR wave1 parts, pokken-68.glb curl) — lane-owned, untouched. No ffmpeg/blender/aria2c media processes running. VM uptime 4:03 (boot 11:13:37Z) — no restart #22 yet.</li>
+<li>STEP 6/7/8: no new thread, no new pulls — Bannon lanes own #628/#631, PA3D coordinator #21 owns the survey (PULSE: quiet ~77 min, no stall evidence, no nudge). Stand down. LOCAL-ONLY sweep: deferred (last full sweep 14:37Z Nov 27).</li>
+<li>BLOCKED &gt;72h (carried, unchanged): WH #1835/#1820 owner-held; CJ #429 owner-held; PPWA #290/#293 owner-held; PA3D #7/#8 do-not-merge; DG #9 review-don't-merge; GRE #99 owner decision; WH #377 evidence; Bannon #382 draft; CJ #156/#157/#167 do-not-merge; Bannon #596 HELD (APEX STEER question + video proof + missing tests); Bannon #625 owner-held; #628 BLOCKED-ci-outage (lane active); #631 BLOCKED-ci-outage + stacked on #628; DG #97 BLOCKED-ci-outage; Bannon #634 UNSTABLE (CI outage, fresh). Bannon #622 parked behind web-upgrade-&gt;main (#309/#310/#311 owner decisions). Plus carried: TorBox key dead; zrok stable share DOWN (root cause found — enable env lost, needs browser token); localhost.run rotating (watchdog-owned); disk quota wall (~124G cap, flickering); wrestling-arcade 404 intermittent; VM restart #21 (11:13:37Z). FLAG carried (10:44Z): Bannon #633 self-merged by the lane with no recorded owner call — should lane batches self-merge, or wait for his word? Open owner decisions: PPWA #305 merge (ADRI #305)? PA2D main-comparison run / 7th button? DG CUT 001R V2-or-re-animate? Bannon/DG/WG CI fast-fail outage — who diagnoses? wizard-gang repo gone (404)? TeraBox fg-01.bin pull DEAD — re-launch or wait for owner? Adri re-gate ~Dec 3 (afro-refit gate BLOCKED on [dependency] only; adri mirror still absent on both repos — do NOT clear adri 1.2G; honeybebou pull-back verification now owed too, see guardian entry). DG portrait run: no live continuation (Studio credits 0.10, asleep; owner call on payment, NO-SPEND rule holds). Kazzy/Carnes link: drop the Carnes link from the Kazzy record? — owner's call, pending (re-check 07:20 CST: Carnes service is probably NOT Kazzy's).</li>
+<li>IDLE: last user msg 2026-11-28T11:45:50Z (209 min idle at run start).</li>
+</ul>
 <h2 id="overnight-pipeline-2026-11-28t1444z-30-min-run">Overnight pipeline — 2026-11-28T14:44Z (30-min run)<a class="headerlink" href="#overnight-pipeline-2026-11-28t1444z-30-min-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>QUEUE SYNC: AO #1259 verified LANDED (merge f5d7c26 == tip, merged 14:26:46Z; the 14:14Z run's sync PR). This run's sync PR (number + merge recorded in next run's addendum).</li>
