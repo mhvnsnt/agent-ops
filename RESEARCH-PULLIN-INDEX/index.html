@@ -1874,6 +1874,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#friction-research-upload-resets-rc56-vm-restart-survival-dream-girl-git-17-gb-2026-11-27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Friction research — upload resets rc56 · VM restart survival · dream-girl .git 17 GB (2026-11-27)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -9837,6 +9848,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#friction-research-upload-resets-rc56-vm-restart-survival-dream-girl-git-17-gb-2026-11-27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Friction research — upload resets rc56 · VM restart survival · dream-girl .git 17 GB (2026-11-27)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -11163,6 +11185,38 @@ carries this pass. No live lane touched; nothing stored/moved/deleted.</p>
 <td>Full clone of chimera-roms into /tmp for guard reproduction</td>
 <td>—</td>
 <td>❌ failed live — /tmp is 512 MB tmpfs, clone died ENOSPC; use durable disk or the compare API instead</td>
+</tr>
+</tbody>
+</table>
+<h2 id="friction-research-upload-resets-rc56-vm-restart-survival-dream-girl-git-17-gb-2026-11-27">Friction research — upload resets rc56 · VM restart survival · dream-girl .git 17 GB (2026-11-27)<a class="headerlink" href="#friction-research-upload-resets-rc56-vm-restart-survival-dream-girl-git-17-gb-2026-11-27" title="Permanent link">&para;</a></h2>
+<p>Docs: agent-ops <code>research-friction-20261127/01-upload-resets-rc56.md</code>,
+<code>02-vm-restart-survival.md</code>, <code>03-dreamgirl-git-17g.md</code>. Log:
+<code>FRICTION-RESEARCH-LOG.md</code> 2026-11-27 entry. Research only — no live lane
+touched, nothing stored/moved/deleted. No PR opened from the dirty
+agent-ops workdir (standing precedent) — clean-room clone PR carries it.</p>
+<table>
+<thead>
+<tr>
+<th>Finding / candidate</th>
+<th>Source (license)</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Upload resets rc56 — 2 GB release-asset parts dying at ~12 min (arcade mirror lane, 2026-11-27)</td>
+<td><code>research-friction-20261127/01-upload-resets-rc56.md</code></td>
+<td>📄 <strong>Enforce the decided 100 MB quantum + per-part retry = the fix (QUEUED for CloudDog / arcade-mirror lane)</strong> — GitHub upload API has NO resume (single raw-body POST, no Content-Range); <code>gh release upload</code> has NO retry/resume (manual: only <code>--clobber</code>, which deletes the original on failure; <code>ConcurrentUpload</code> parallelises files, not chunks); at 2.8 MB/s a 100 MB part = 36 s (~5% of the ~12-min reset mode) vs 2 GB = 12.2 min/attempt, 3 failures = 36.6 min wasted, 0 bytes kept; reset is stochastic (one 20.6-min attempt), root cause (proxy/LB/GitHub-side) unverified · <strong>curl bundle PULL IN per part</strong> (<code>--retry 5 --retry-all-errors --retry-connrefused --retry-delay 10 --retry-max-time 900 --speed-limit 100000 --speed-time 60 --max-time 600</code>); <code>--keepalive-time</code> SKIP as a fix (idle-only probes); <code>--http1.1</code> experiment only · <strong>rclone SKIP</strong> (no GitHub backend, re-verified v1.76.0) · <strong>tus SKIP</strong> (no GitHub endpoint to speak to) · <strong>aria2/wget SKIP</strong> (downloaders, no upload verb) · <strong>B2 large-file API QUEUED</strong> (genuinely resumable multipart, parts 5 MB–5 GB; blocked on owner spend call, NO-SPEND law) · <strong>TeraBox programmatic upload QUEUED</strong> (chunked resume via precreate block_list; needs browser-lane cookie capture; license unverified) · <strong>Kaggle SKIP as a store</strong> (resumable CLI exists, Apache 2.0, but auth fragile — legacy-key rotation, OAuth migration pending) · <strong><code>gh</code> as transport per part, never <code>--clobber</code> a verified part</strong>; honest note: no mechanism makes <code>gh</code> inherently more resilient — the 1/1 <code>gh</code> success is one sample</td>
+</tr>
+<tr>
+<td>VM restart survival — DMTCP / CRIU / tmux / cron relaunch (2026-11-27)</td>
+<td><code>research-friction-20261127/02-vm-restart-survival.md</code></td>
+<td>📄 <strong>CRIU SKIP</strong> (GPLv2 fine, but container user-ns lacks init-ns caps; no GPU/device state; TCP restore impossible across container recreate) · <strong>DMTCP QUEUED pilot</strong> (LGPLv3+, no root, images on /home restartable after reboot — but saves compute not sockets, EEVEE unproven, ~GB checkpoints; pilot = small CPU Cycles render only) · <strong>tmux/screen/nohup SKIP</strong> (verified dead on reboot; socket in tmpfs /tmp) · <strong>systemd user units SKIP</strong> (verified unavailable Oct 2026) · <strong>cron/hook relaunch from checkpoint = the answer</strong> (trigger outside VM, state on /home); rule: no work unit &gt;15 min without a durable checkpoint on /home</td>
+</tr>
+<tr>
+<td>Dream-girl <code>.git</code> 17 GB — read-only diagnosis + safe slimming procedure (2026-11-27)</td>
+<td><code>research-friction-20261127/03-dreamgirl-git-17g.md</code></td>
+<td>📄 <strong>gc/repack PULL IN (owner-gated, first step)</strong> — loose pile 11.67 GiB (10,942 files, 96% Nov 14–15) + packs 4.32 GiB; live tree only 1.4G so gc IS the right lever; expected ~0.5–2 GiB + unreachable fraction (UNMEASURED — <code>fsck</code>/<code>count-objects</code> stopped on exec-risk check; hooks are samples-only, go-ahead still owed) · <strong>HEADROOM BLOCK</strong>: in-place gc needs ~14 GiB transient vs ~1 GiB quota headroom — free space first or repack off-disk · <strong><code>gc --aggressive</code> QUEUED</strong> (RAM/OOM risk on 6 GiB VM) · <strong>filter-repo QUEUED</strong> (MIT/GPL parts, 2.47.0; potential ~10–14 GiB but force-push + all clones/worktrees re-clone) · <strong>BFG SKIP</strong> (GPL-3.0, Java 11+, quiet maintenance; filter-repo preferred) · <strong>LFS migrate SKIP</strong> (LFS not in use; rewrite cost + quota exposure) · <strong>partial clone <code>--filter=blob:none</code> + <code>git worktree</code> PULL IN as lane conventions</strong> (no install; prevent +17 GiB per new clone) · <strong>shallow re-clone QUEUED fallback</strong> (deterministic ~15.5 GiB, needs unpushed-work audit) · <strong>"do nothing" REJECTED</strong> (bloat is history+loose, not live HEAD)</td>
 </tr>
 </tbody>
 </table>

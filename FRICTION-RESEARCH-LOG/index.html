@@ -1160,6 +1160,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2026-11-27-2210-cst-vm-restart-survival-process-checkpointrestore-vs-lane-checkpoints-continuous-friction-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-11-27 ~22:10 CST — VM restart survival: process checkpoint/restore vs lane checkpoints (continuous-friction-research)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-11-27-2230-cst-upload-resets-rc56-2-gb-release-asset-parts-dying-at-12-min-arcade-mirror-lane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-11-27 ~22:30 CST — Upload resets rc56: 2 GB release-asset parts dying at ~12 min (arcade mirror lane)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dream-girl-git-17-gb-read-only-diagnosis-2026-11-27-2215-cst" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DREAM-GIRL .GIT 17 GB — READ-ONLY DIAGNOSIS (2026-11-27 ~22:15 CST)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -9651,6 +9684,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2026-11-27-2210-cst-vm-restart-survival-process-checkpointrestore-vs-lane-checkpoints-continuous-friction-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-11-27 ~22:10 CST — VM restart survival: process checkpoint/restore vs lane checkpoints (continuous-friction-research)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-11-27-2230-cst-upload-resets-rc56-2-gb-release-asset-parts-dying-at-12-min-arcade-mirror-lane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-11-27 ~22:30 CST — Upload resets rc56: 2 GB release-asset parts dying at ~12 min (arcade mirror lane)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dream-girl-git-17-gb-read-only-diagnosis-2026-11-27-2215-cst" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DREAM-GIRL .GIT 17 GB — READ-ONLY DIAGNOSIS (2026-11-27 ~22:15 CST)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -10139,6 +10205,26 @@ workdir (only the guardian lane should bless one as a stored-manifest
 basis); no guard workflow edited; no PR touched/labeled/merged; no
 token minted; no zrok/live-view change; no rclone restored. Disk
 freed 0 by design (nothing verified 100%, nothing moved/deleted).</p>
+<h2 id="2026-11-27-2210-cst-vm-restart-survival-process-checkpointrestore-vs-lane-checkpoints-continuous-friction-research">2026-11-27 ~22:10 CST — VM restart survival: process checkpoint/restore vs lane checkpoints (continuous-friction-research)<a class="headerlink" href="#2026-11-27-2210-cst-vm-restart-survival-process-checkpointrestore-vs-lane-checkpoints-continuous-friction-research" title="Permanent link">&para;</a></h2>
+<p><strong>Doc:</strong> <code>research-friction-20261127/02-vm-restart-survival.md</code>. <strong>Problems targeted:</strong> VM restarts ~5×/day (17 counted Nov 26–27), boots ~1–2 h, killing Blender renders, multi-GB inflates (at-inflate2 died 3×), uploads; plus the separate 51-min background-exec cap and a detached relaunch dying in ~4 min. Lane checkpoints already settled (Oct 20) — this pass covered only process-level survival + restart-cause diagnosis.
+<strong>Restart-cause diagnosis (read-only, live 04:08–04:10 UTC Nov 28):</strong> cause is NOT diagnosable in-guest and is host-imposed. Smoking gun: <code>/</code> is an overlay whose upper layer is <code>/run/hatch/overlay/upper</code> and <code>/run</code> is tmpfs — everything outside <code>/home</code> (btrfs, persistent) is wiped every boot by design. <code>journalctl --list-boots</code> shows 1 boot only; <code>wtmp</code> begins at this boot (03:08:29 UTC); no syslog/kern.log/messages; <code>dmesg</code> blocked (EPERM); current boot journal has zero errors (214 lines). <code>systemd-detect-virt</code> → <code>systemd-nspawn</code>, host <code>htch-runtime</code>. No OOM evidence; none could survive anyway. Verdict: stop diagnosing from inside; design for restarts.
+<strong>Verified live this pass:</strong> <code>CONFIG_CHECKPOINT_RESTORE=y</code>; <code>CAP_SYS_ADMIN</code> + <code>CAP_CHECKPOINT_RESTORE</code> present in our effective set, BUT uid 0 maps to host uid 131072 (<code>0 131072 65536</code>) — container-local caps, not init-ns, which CRIU's man page requires for <code>/proc/pid/map_files</code>. Neither <code>criu</code> nor <code>dmtcp</code> nor <code>screen</code> installed; <code>apt-cache policy</code> returns no candidate info. <code>tmux ls</code> → no server (socket in <code>/tmp</code>, tmpfs, wiped at boot). Live Blender renders observed via <code>ps</code> only (pids 40829, 52418), nothing signalled, nothing installed, nothing changed.
+<strong>Verdicts:</strong> CRIU (GPLv2) — SKIP: init-ns caps missing, no binary, no GPU/device state, TCP restore needs same host+IP + a netfilter lock rule that dies with the container recreate. DMTCP (LGPLv3+) — QUEUED pilot only: no root needed, checkpoint images can live on <code>/home</code> and restart after reboot, but it saves compute state NOT sockets (both endpoints must be under DMTCP), EEVEE-under-DMTCP unproven, each checkpoint ~GB on an 83%-full disk, still needs cron/watchdog relaunch. tmux/screen/nohup/setsid — SKIP, verified dead on reboot. systemd user units — SKIP, verified unavailable Oct 2026 ("Failed to connect to bus"). Cron/hook relaunch from checkpoint — the answer: trigger lives outside the VM, state lives on <code>/home</code>.
+<strong>Quantified:</strong> at 8.5 restarts/day, expected rework = interval/2 per restart → 5-min interval ≈ 21 min/day, 15-min ≈ 64 min/day, 30-min ≈ 2.1 h/day, 60-min ≈ 4.3 h/day.
+<strong>Recommended:</strong> no unit of work &gt;15 min without a durable checkpoint on <code>/home</code>; renders per-frame + stage-as-it-lands; inflates per-file manifest resume (never restart-from-zero); transfers resumable only (aria2 / <code>curl -C -</code> / rclone) — no checkpointing tool saves an upload's socket; drivers idempotent, resume-from-manifest on cold start, relaunch via external cron/hook, never a long-lived exec session (51-min cap).
+<strong>Blocked / not done here:</strong> no DMTCP pilot run (needs a lane + an afternoon, CPU Cycles render only); no CRIU install (forbidden by brief + pointless); detached-relaunch 4-min death still an open question for the watchdog owner; no live lane touched, nothing deleted.</p>
+<h2 id="2026-11-27-2230-cst-upload-resets-rc56-2-gb-release-asset-parts-dying-at-12-min-arcade-mirror-lane">2026-11-27 ~22:30 CST — Upload resets rc56: 2 GB release-asset parts dying at ~12 min (arcade mirror lane)<a class="headerlink" href="#2026-11-27-2230-cst-upload-resets-rc56-2-gb-release-asset-parts-dying-at-12-min-arcade-mirror-lane" title="Permanent link">&para;</a></h2>
+<p><strong>Problem:</strong> Pokken part-01 + DX part-00 each failed 3× via curl exit 56 at ~12.4/11.9/12.3 min (one attempt 20.6 min); same lane's part-00 landed via <code>gh</code>. Full doc: <code>~/workspace/agent-ops/research-friction-20261127/01-upload-resets-rc56.md</code>.
+<strong>Verified live this pass:</strong> GitHub upload API has NO resume (single raw-body POST, no Content-Range; 502 can leave a deletable <code>starter</code> asset) — https://docs.github.com/en/rest/releases/assets. <code>gh release upload</code> has NO retry/resume flag (manual: only <code>--clobber</code>, which deletes the original on failure); <code>ConcurrentUpload</code> parallelises <em>files</em>, not chunks within a file. Local <code>gh</code> 2.102.0, curl 8.5.0 (nghttp2). rclone still has no GitHub backend (v1.76.0 notes). tus has no GitHub endpoint to speak to. aria2/wget cannot upload (verified). B2 large-file API is genuinely resumable (parts 5MB–5GB, listParts resume); Kaggle CLI has resumable dataset uploads (Apache 2.0); TeraBox unofficial API has chunked resume via precreate block_list (license unverified).
+<strong>Quantified:</strong> at observed 2.8 MB/s, 100 MB = 36 s/attempt (~5% of the ~12-min reset mode; 83 s at the 1.2 MB/s slow end); 2 GB = 12.2 min/attempt, 3 failed attempts = 36.6 min wasted, 0 bytes kept. 500 MB already failed 3× each (Gumball, Oct). Reset is stochastic (one 20.6-min attempt), not a hard timer — root cause (proxy/LB/GitHub-side) unverified, no proxy logs available.
+<strong>Recommended:</strong> enforce the decided 100 MB quantum on the arcade lane (it is still splitting ~2 GB) + per-part retry loop (≤5 attempts, backoff 10s→120s, <code>--max-time 600</code>, skip-if-verified, delete-<code>starter</code>-then-retry); <code>gh</code> as transport per part, never <code>--clobber</code> on a verified part; curl bundle <code>--retry 5 --retry-all-errors --retry-connrefused --retry-delay 10 --retry-max-time 900 --speed-limit 100000 --speed-time 60</code> per part. <code>--keepalive-time</code> cannot fix an active-transfer reset (idle-only probes); <code>--http1.1</code> is an unproven A/B experiment only. Honest note: docs give no mechanism for <code>gh</code> being inherently more resilient — the 1/1 <code>gh</code> success is one sample, do not conclude <code>gh</code> fixes 2 GB parts.
+<strong>Blocked / not done here:</strong> lane change itself (queued for CloudDog/arcade-mirror integration lane); B2 fallback needs owner spend call (NO-SPEND law); TeraBox programmatic upload needs browser-lane cookie capture; direct read of cli/cli source file failed in browser.open (fetch error) — findings rest on manual + pkg.go.dev; no upload run, no lane touched, nothing deleted.</p>
+<h2 id="dream-girl-git-17-gb-read-only-diagnosis-2026-11-27-2215-cst">DREAM-GIRL .GIT 17 GB — READ-ONLY DIAGNOSIS (2026-11-27 ~22:15 CST)<a class="headerlink" href="#dream-girl-git-17-gb-read-only-diagnosis-2026-11-27-2215-cst" title="Permanent link">&para;</a></h2>
+<p><strong>Problem:</strong> dream-girl workdir 18G, <code>.git</code> 17G; disk guardian 51 consecutive runs at 83% with no clearable candidate; gc gated on owner call + exec-risk go-ahead.
+<strong>Measured (filesystem reads only):</strong> packs 4.32 GiB (8 packs, largest 3.6G Nov 22) + <strong>loose objects 11.67 GiB (10,942 files, 96% dated Nov 14–15 bulk import)</strong>; working tree 1.4G (media 2,572 files / 1.30 GiB) — bloat is history + loose, NOT live HEAD; 77 local branches, 262 remote-tracking, 34 tags; shallow clone (2 boundary commits); no LFS (no <code>.git/lfs</code>, no <code>.gitattributes</code>); a cruft pack (<code>.mtimes</code>, Nov 14 20:31) proves gc ran Nov 14, then the bulk import was never repacked; 5 linked worktrees, 1 stale entry (gecs-song dir missing).
+<strong>Blocked / not done here:</strong> object-level diagnostics (<code>git count-objects</code>, <code>verify-pack</code>, <code>rev-list | cat-file</code>, <code>fsck --unreachable</code>) were STOPPED after the repo's content failed an execution-risk check — unreachable fraction UNKNOWN; hooks are samples-only (lowers risk, go-ahead still owed). No gc/repack/prune/filter-repo run, no <code>.git</code> writes, no deletes, no lane touched, no clone into /tmp.
+<strong>Key finding:</strong> in-place gc needs ~14 GiB transient headroom vs ~1 GiB effective quota headroom — it will most likely die with EDQUOT; free ~15 GiB first, repack off-disk, or use the shallow re-clone route (deterministic ~15.5 GiB). Plain <code>git gc</code> expected win only ~0.5–2 GiB + unreachable fraction; filter-repo potential ~10–14 GiB but force-push + every clone/worktree re-clones (owner decision). BFG skip (GPL-3.0, quiet maintenance); LFS migrate skip (not in use). Partial clone + worktree-only lanes pulled in as conventions.
+<strong>Full doc:</strong> <code>~/workspace/agent-ops/research-friction-20261127/03-dreamgirl-git-17g.md</code> (problem, measurements, options table with sources/licenses, recommended owner-approved procedure with gates).</p>
 
 
 
